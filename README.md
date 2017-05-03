@@ -6,6 +6,6 @@ The PyORBIT code is an implementation and extension of algorithms of the origina
 
 Benchmarking with [PARMILA](http://laacg.lanl.gov/laacg/services/download_PMI.phtml) for MEBT of SNS accelerator gives quite consistent results.
 
-![ParmilaX](images/ParmilaX.png?raw=true)
-![ParmilaY](images/ParmilaX.png)
-![ParmilaZ](images/ParmilaX.png)
+![ParmilaX](images/ParmilaBenchX.png?raw=true)
+![ParmilaY](images/ParmilaBenchY.png)
+![ParmilaZ](images/ParmilaBenchZ.png)
