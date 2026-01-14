@@ -1,0 +1,48 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.cc:
+
+File ExtEffectsContainer.cc
+===========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/trackerrk4``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/trackerrk4/ExtEffectsContainer.cc``)
+------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``ExtEffectsContainer.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.hh`)
+
+- ``cmath``
+
+- ``fstream``
+
+- ``iomanip``
+
+- ``iostream``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+
+
+
+

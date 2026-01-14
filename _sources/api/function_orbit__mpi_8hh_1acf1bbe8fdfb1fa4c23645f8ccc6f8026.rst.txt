@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1acf1bbe8fdfb1fa4c23645f8ccc6f8026:
+
+Function ORBIT_MPI_Get_count
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Get_count(MPI_Status *, MPI_Datatype, int *)
+   :project: PyORBIT3

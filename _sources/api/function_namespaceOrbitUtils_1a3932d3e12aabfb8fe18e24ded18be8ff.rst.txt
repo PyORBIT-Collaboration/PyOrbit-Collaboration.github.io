@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a3932d3e12aabfb8fe18e24ded18be8ff:
+
+Function OrbitUtils::transport_mtrx(Bunch \*, Bunch \*, Matrix \*, int, int, int)
+=================================================================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::transport_mtrx(Bunch *, Bunch *, Matrix *, int, int, int)
+   :project: PyORBIT3

@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1aac3a48131d705393478219b4d653f767:
+
+Function teapot_base::quadfringeIN
+==================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::quadfringeIN(Bunch *, double, int)
+   :project: PyORBIT3

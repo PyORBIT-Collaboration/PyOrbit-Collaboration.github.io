@@ -1,0 +1,70 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.hh:
+
+Program Listing for File SpaceChargeCalc2p5D.hh
+===============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeCalc2p5D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //Calculate the space charge effect of the bunch in the 2.5D
+   
+   #ifndef SC_SPACECHARGE_CALC_2P5D_H
+   #define SC_SPACECHARGE_CALC_2P5D_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "BunchExtremaCalculator.hh"
+   
+   #include "Grid1D.hh"
+   #include "Grid2D.hh"
+   #include "PoissonSolverFFT2D.hh"
+   #include "BaseBoundary2D.hh"
+   
+   using namespace std;
+   
+   class SpaceChargeCalc2p5D: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       SpaceChargeCalc2p5D(int xSize, int ySize, int zSize, double xy_ratio_in);
+   
+       SpaceChargeCalc2p5D(int xSize, int ySize, int zSize);
+   
+       virtual ~SpaceChargeCalc2p5D();
+   
+       void trackBunch(Bunch* bunch, double length, BaseBoundary2D* boundary);
+   
+       Grid2D* getRhoGrid();
+   
+       Grid2D* getPhiGrid();
+   
+       Grid1D* getLongGrid();
+   
+   private:
+    void bunchAnalysis(Bunch* bunch, double& totalMacrosize, BaseBoundary2D* boundary);
+   
+   protected:
+       PoissonSolverFFT2D* poissonSolver;
+       Grid2D* rhoGrid;
+       Grid2D* phiGrid;
+       Grid1D* zGrid;
+       OrbitUtils::BunchExtremaCalculator* bunchExtremaCalc;
+   
+       double xy_ratio;
+   };
+   //end of SC_SPACECHARGE_CALC_2P5D_H
+   #endif

@@ -1,0 +1,60 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.hh:
+
+Program Listing for File EllipseApertureShape.hh
+================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/EllipseApertureShape.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef ELLIPSE_APERTURE_SHAPE_H
+   #define ELLIPSE_APERTURE_SHAPE_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Bunch.hh"
+   #include "BaseApertureShape.hh"
+   
+   using namespace std;
+   
+   //
+   // NAME
+   //
+   //   EllipseApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   
+   
+   class EllipseApertureShape: public BaseApertureShape
+   {
+   public:
+   
+       EllipseApertureShape();
+   
+       virtual ~EllipseApertureShape();
+   
+       int inside(Bunch* bunch, int count);
+   
+       void setHalfAxisX(double x_half_axis);
+   
+       double getHalfAxisX();
+   
+       void setHalfAxisY(double y_half_axis);
+   
+       double getHalfAxisY();
+   
+   protected:
+   
+       double x_half_axis;
+       double y_half_axis;
+   
+   };
+   
+   //end of ELLIPSE_APERTURE_SHAPE_H ifdef
+   #endif

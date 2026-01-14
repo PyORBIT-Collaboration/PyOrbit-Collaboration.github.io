@@ -1,0 +1,50 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.cc:
+
+File BunchExtremaCalculator.cc
+==============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch/BunchExtremaCalculator.cc``)
+----------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BufferStore.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh`)
+
+- ``BunchExtremaCalculator.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``iostream``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+
+
+
+

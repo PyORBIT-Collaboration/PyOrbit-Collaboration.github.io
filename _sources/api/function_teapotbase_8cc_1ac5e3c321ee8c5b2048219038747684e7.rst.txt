@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1ac5e3c321ee8c5b2048219038747684e7:
+
+Function teapot_base::bend4
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::bend4(Bunch *, double)
+   :project: PyORBIT3

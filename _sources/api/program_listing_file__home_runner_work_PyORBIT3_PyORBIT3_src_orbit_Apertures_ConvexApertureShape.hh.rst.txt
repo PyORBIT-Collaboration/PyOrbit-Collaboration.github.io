@@ -1,0 +1,66 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.hh:
+
+Program Listing for File ConvexApertureShape.hh
+===============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/ConvexApertureShape.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CONVEX_APERTURE_SHAPE_H
+   #define CONVEX_APERTURE_SHAPE_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Bunch.hh"
+   #include "BaseApertureShape.hh"
+   
+   using namespace std;
+   
+   //
+   // NAME
+   //
+   //   ConvexApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   
+   
+   class ConvexApertureShape: public BaseApertureShape
+   {
+   public:
+   
+       ConvexApertureShape();
+   
+       virtual ~ConvexApertureShape();
+   
+       int inside(Bunch* bunch, int count);
+   
+       void addPoint(double x, double y);
+   
+       std::vector<double> getPointsX();
+   
+       std::vector<double> getPointsY();
+   
+       void removeAllPoints();
+   
+       int checkAllPoints();
+   
+       int checkOnePoint(int i0, int i1, int i);
+   
+       int checkOnePoint(int i0, int i1, double x, double y);
+   
+   protected:
+   
+       std::vector<double>  convexX;
+       std::vector<double>  convexY;
+   
+   };
+   
+   //end of COMPOSITE_APERTURE_SHAPE_H ifdef
+   #endif

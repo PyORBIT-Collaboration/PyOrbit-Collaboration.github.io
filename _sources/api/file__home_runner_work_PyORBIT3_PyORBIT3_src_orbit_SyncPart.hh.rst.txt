@@ -1,0 +1,93 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh:
+
+File SyncPart.hh
+================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SyncPart.hh``)
+--------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``fstream``
+
+- ``iostream``
+
+- ``map``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+- ``set``
+
+- ``string``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking_linac_tracking.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EnergyAperture.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PhaseAperture.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTuneAnalysis.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTwissAnalysis.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_FieldTracker_FieldTracker.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classSyncPart`
+

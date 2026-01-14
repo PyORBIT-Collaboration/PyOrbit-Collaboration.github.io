@@ -1,0 +1,110 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.hh:
+
+Program Listing for File HarmonicData.hh
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/harmonic_analysis/HarmonicData.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //    HarmonicData.cc
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    04/17/2018
+   //
+   // DESCRIPTION
+   //    Keeps the data y(x) for set of x(i), i=1,Ndata values where each x(i)
+   //    is a phase between -180 to +180 deg.
+   //    It also has parameters of the fitting representation of this y(x) data:
+   //    y_fit(x) = A0 + A1*cos((PI/180.)*(x + phase_shift_1)) +
+   //                    A2*cos((PI/180.)*(2*x + parse_shift_2)) +
+   //                    ...
+   //    with n_harm the maximal harmonic number in the y_fit function.
+   //    This class has a method getSumDiff2 that returns
+   //     sumDiff2 = sum((y(x(i))-y_fit(x(i)))**2, i= 1,Ndata)
+   //
+   //    The fast calculation of the sumDiff2 is the main purpose of this
+   //    class. This value will be used for a fast preliminary analysis
+   //    of the phase scan data of RF cavities with one or few RF gaps.
+   //
+   //    This class is used for the harmonics analysis of the scan data for
+   //    the RF cavities when we measure the phase response from BPMs.
+   //
+   #ifndef ORBIT_UTILS_HARMONICDATA_H
+   #define ORBIT_UTILS_HARMONICDATA_H
+   
+   #include "CppPyWrapper.hh"
+   #include "OU_Function.hh"
+   
+   using namespace std;
+   
+   namespace OrbitUtils{
+   
+       class  HarmonicData : public CppPyWrapper
+       {
+       public:
+           //-----------------------------------------
+           //the public methods of the HarmonicData class
+           //-----------------------------------------
+   
+           HarmonicData(int order_in, Function* inFunc);
+   
+       HarmonicData(HarmonicData* harmonicData);
+   
+           virtual ~HarmonicData();
+   
+           void setOrder(int order_in);
+   
+           int getOrder();
+   
+           void setDataFunction(Function* inFunc);
+   
+           void setParam(int index, double val);
+   
+           double getParam(int index);
+   
+           int dataSize();
+   
+           double valueY(int indexX);
+   
+           double valueErr(int indexX);
+   
+           double valueX(int indexX);
+   
+           double fitValueY(double x);
+   
+           void clean();
+   
+           double sumDiff2();
+   
+           Function* getDataFunction();
+   
+       private:
+   
+           void init(int order_in, Function* inFunc);
+   
+           //------------------------------------------
+           //the private members of the HarmonicData class
+           //------------------------------------------
+   
+           int order;
+   
+           // param_arr = [A0,A1,phase1,A2,phase2, ...]
+           double* param_arr;
+   
+           Function*  dataFunc;
+   
+       };
+   
+   }
+   
+   #endif

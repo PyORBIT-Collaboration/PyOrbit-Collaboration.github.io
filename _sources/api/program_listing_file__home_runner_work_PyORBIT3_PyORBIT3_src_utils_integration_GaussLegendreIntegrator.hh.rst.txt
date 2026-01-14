@@ -1,0 +1,89 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.hh:
+
+Program Listing for File GaussLegendreIntegrator.hh
+===================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration/GaussLegendreIntegrator.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //    GaussLegendreIntegrator.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    01/23/2013
+   //
+   // DESCRIPTION
+   //    The integrator for the Gauss-Legendre schema.
+   //
+   #ifndef ORBIT_UTILS_GAUSS_LEGENDRE_INTEGRATOR_H
+   #define ORBIT_UTILS_GAUSS_LEGENDRE_INTEGRATOR_H
+   
+   #include <iostream>
+   #include <fstream>
+   #include <cstdlib>
+   #include <cmath>
+   
+   #include "CppPyWrapper.hh"
+   
+   #include "OU_Function.hh"
+   #include "OU_SplineCH.hh"
+   
+   using namespace std;
+   
+   namespace OrbitUtils{
+   
+       class  GaussLegendreIntegrator : public CppPyWrapper
+       {
+       public:
+           //-----------------------------------------
+           //the public methods of the GaussLegendreIntegrator class
+           //-----------------------------------------
+   
+           GaussLegendreIntegrator();
+   
+           GaussLegendreIntegrator(int nPoints);
+   
+           GaussLegendreIntegrator(int nPoints, double x_from, double x_to);
+   
+           virtual ~GaussLegendreIntegrator();
+   
+           void setnPoints(int nPoints);
+   
+           int getnPoints();
+   
+           void setLimits(double x_from, double x_to);
+   
+           Function* getPointsAndWeightFunc();
+   
+           double integral(Function* func);
+   
+           double integral(SplineCH* spline);
+   
+       private:
+           //------------------------------------------
+           //the private members of the GaussLegendreIntegrator class
+           //------------------------------------------
+   
+           //the number of integration points
+           int n_int_points;
+   
+           //
+           double x0,x1;
+   
+           //number of pair of (x,y)
+           Function* pw_finc;
+   
+       };
+   
+   }
+   
+   #endif

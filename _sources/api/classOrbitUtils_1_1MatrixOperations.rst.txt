@@ -1,0 +1,17 @@
+.. _exhale_class_classOrbitUtils_1_1MatrixOperations:
+
+Class MatrixOperations
+======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.hh`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::MatrixOperations
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

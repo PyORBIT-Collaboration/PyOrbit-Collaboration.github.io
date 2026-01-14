@@ -1,0 +1,60 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.hh:
+
+File HarmonicData.hh
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/harmonic_analysis``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/harmonic_analysis/HarmonicData.hh``)
+------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+- ``OU_Function.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_Function.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1HarmonicData`
+

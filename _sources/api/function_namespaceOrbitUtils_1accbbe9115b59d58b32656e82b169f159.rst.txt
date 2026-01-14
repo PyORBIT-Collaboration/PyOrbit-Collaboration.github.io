@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1accbbe9115b59d58b32656e82b169f159:
+
+Function OrbitUtils::apply_twiss_weights_for_init_coords
+========================================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::apply_twiss_weights_for_init_coords(Bunch *, int, int, int)
+   :project: PyORBIT3

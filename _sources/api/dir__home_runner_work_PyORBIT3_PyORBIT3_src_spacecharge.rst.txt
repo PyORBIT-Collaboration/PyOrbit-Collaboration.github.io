@@ -1,0 +1,58 @@
+.. _dir__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge:
+
+
+Directory spacecharge
+=====================
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src>` (``/home/runner/work/PyORBIT3/PyORBIT3/src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+*Directory path:* ``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver3D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver3D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT3D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT3D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.hh`
+
+

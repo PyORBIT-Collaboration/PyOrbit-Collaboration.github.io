@@ -1,0 +1,44 @@
+orbit.bunch\_utils.serialize
+============================
+
+.. automodule:: orbit.bunch_utils.serialize
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      TypedDict
+      collect_bunch
+      load_bunch
+      save_bunch
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Any
+      Bunch
+      BunchDict
+      FileHandler
+      NumPyHandler
+      Protocol
+      SyncPartDict
+   
+   
+
+   
+   
+   
+
+
+

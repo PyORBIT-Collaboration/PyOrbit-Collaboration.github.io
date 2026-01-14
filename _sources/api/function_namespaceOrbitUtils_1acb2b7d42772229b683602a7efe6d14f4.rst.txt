@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1acb2b7d42772229b683602a7efe6d14f4:
+
+Function OrbitUtils::copyCoordsToInitCoordsAttr
+===============================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::copyCoordsToInitCoordsAttr(Bunch *)
+   :project: PyORBIT3

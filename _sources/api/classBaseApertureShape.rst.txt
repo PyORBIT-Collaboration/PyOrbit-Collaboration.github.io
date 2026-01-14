@@ -1,0 +1,37 @@
+.. _exhale_class_classBaseApertureShape:
+
+Class BaseApertureShape
+=======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Derived Types
+*************
+
+- ``public CircleApertureShape`` (:ref:`exhale_class_classCircleApertureShape`)
+- ``public CompositeApertureShape`` (:ref:`exhale_class_classCompositeApertureShape`)
+- ``public ConvexApertureShape`` (:ref:`exhale_class_classConvexApertureShape`)
+- ``public EllipseApertureShape`` (:ref:`exhale_class_classEllipseApertureShape`)
+- ``public PyBaseApertureShape`` (:ref:`exhale_class_classPyBaseApertureShape`)
+- ``public RectangularApertureShape`` (:ref:`exhale_class_classRectangularApertureShape`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: BaseApertureShape
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

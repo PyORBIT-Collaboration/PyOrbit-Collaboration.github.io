@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespaceOrbitUtils_1a51ce68d2f5715775558e6ab7e293839d:
+
+Typedef OrbitUtils::PW
+======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.cc`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: OrbitUtils::PW
+   :project: PyORBIT3

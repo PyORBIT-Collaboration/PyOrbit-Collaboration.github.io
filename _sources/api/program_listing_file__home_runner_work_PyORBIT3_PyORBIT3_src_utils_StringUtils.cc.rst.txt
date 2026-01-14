@@ -1,0 +1,38 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_StringUtils.cc:
+
+Program Listing for File StringUtils.cc
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_StringUtils.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/StringUtils.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include "StringUtils.hh"
+   
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace OrbitUtils;
+   
+   int StringUtils::Tokenize(const string& str,vector<string>& tokens,  const string& delimiters)
+   {
+     tokens.clear();
+     // Skip delimiters at beginning.
+     string::size_type lastPos = str.find_first_not_of(delimiters, 0);
+     // Find first "non-delimiter".
+     string::size_type pos     = str.find_first_of(delimiters, lastPos);
+   
+     while (string::npos != pos || string::npos != lastPos)
+       {
+         // Found a token, add it to the vector.
+         tokens.push_back(str.substr(lastPos, pos - lastPos));
+         // Skip delimiters.  Note the "not_of"
+         lastPos = str.find_first_not_of(delimiters, pos);
+         // Find next "non-delimiter"
+         pos = str.find_first_of(delimiters, lastPos);
+       }
+     return tokens.size();
+   }

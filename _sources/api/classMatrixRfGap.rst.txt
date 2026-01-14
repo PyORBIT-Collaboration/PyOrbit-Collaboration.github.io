@@ -1,0 +1,26 @@
+.. _exhale_class_classMatrixRfGap:
+
+Class MatrixRfGap
+=================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_MatrixRfGap.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: MatrixRfGap
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

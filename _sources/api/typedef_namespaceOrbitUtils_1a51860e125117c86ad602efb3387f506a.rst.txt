@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespaceOrbitUtils_1a51860e125117c86ad602efb3387f506a:
+
+Typedef OrbitUtils::MP
+======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: OrbitUtils::MP
+   :project: PyORBIT3

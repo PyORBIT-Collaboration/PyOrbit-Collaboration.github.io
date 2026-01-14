@@ -1,0 +1,53 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh:
+
+File SynchPartRedefinitionZdE.hh
+================================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SynchPartRedefinition``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SynchPartRedefinition/SynchPartRedefinitionZdE.hh``)
+----------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classSynchPartRedefinitionZdE`
+

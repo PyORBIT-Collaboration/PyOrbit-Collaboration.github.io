@@ -1,0 +1,30 @@
+orbit.bunch\_utils.particleidnumber
+===================================
+
+.. automodule:: orbit.bunch_utils.particleidnumber
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Bunch
+      ParticleIdNumber
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,37 @@
+orbit.parsers.madx\_parser
+==========================
+
+.. automodule:: orbit.parsers.madx_parser
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      MADX_LattElement
+      MADX_Parser
+      StringFunctions
+   
+   
+
+   
+   
+   
+
+
+

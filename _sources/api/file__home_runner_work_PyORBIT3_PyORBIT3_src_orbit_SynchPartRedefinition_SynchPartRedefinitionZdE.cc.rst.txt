@@ -1,0 +1,52 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.cc:
+
+File SynchPartRedefinitionZdE.cc
+================================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SynchPartRedefinition``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SynchPartRedefinition/SynchPartRedefinitionZdE.cc``)
+----------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``ParticlesAttributes/ParticleMacroSize.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh`)
+
+- ``SyncPart.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh`)
+
+- ``SynchPartRedefinitionZdE.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``iostream``
+
+
+
+
+

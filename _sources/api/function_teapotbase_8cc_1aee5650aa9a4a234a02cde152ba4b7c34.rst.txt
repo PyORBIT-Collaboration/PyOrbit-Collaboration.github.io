@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1aee5650aa9a4a234a02cde152ba4b7c34:
+
+Function teapot_base::quad1
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::quad1(Bunch *, double, double, int)
+   :project: PyORBIT3

@@ -1,0 +1,54 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.cc:
+
+File LSpaceChargeCalc.cc
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/LSpaceChargeCalc.cc``)
+----------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BufferStore.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh`)
+
+- ``Grid1D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`)
+
+- ``LSpaceChargeCalc.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.hh`)
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``complex`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh`)
+
+- ``fftw3.h``
+
+- ``iostream``
+
+
+
+
+

@@ -1,0 +1,131 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh:
+
+Program Listing for File BaseBoundary2D.hh
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/BaseBoundary2D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef SC_BASE_BOUNDARY_2D_H
+   #define SC_BASE_BOUNDARY_2D_H
+   
+   #include "Grid2D.hh"
+   #include <string>
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   using namespace std;
+   
+   
+   class BaseBoundary2D: public OrbitUtils::CppPyWrapper
+   {
+       public:
+   
+           BaseBoundary2D(int nPoints, int nModes);
+   
+           virtual ~BaseBoundary2D();
+   
+           double getMaxX();
+   
+           double getMinX();
+   
+           double getMaxY();
+   
+           double getMinY();
+   
+           virtual void addBoundaryPotential(Grid2D* rhoGrid,Grid2D*  phiGrid);
+   
+           int getNumberOfPoints();
+   
+           int getNumberOfModes();
+   
+           int isInitialized();
+   
+           double getBoundaryPointX(int i);
+   
+           double getBoundaryPointY(int i);
+   
+         void setBoundaryPoint(int index, double x, double y);
+   
+           void initializeBPs();
+   
+           string getShapeName();
+   
+           int getShapeType();
+   
+           virtual int isInside(double x, double y);
+   
+       public:
+   
+           string NO_SHAPE;
+   
+           const static int IS_INSIDE;
+           const static int IS_OUTSIDE;
+           const static int TO_BE_KILLED;
+   
+           const static double PI;
+   
+       protected:
+   
+           void _gaussjinv(double **a, int n);
+   
+           void lsq_fuctions(double x, double y);
+   
+       protected:
+   
+           string shape_;
+           int shape_type_;
+   
+           //should be set to 1 in the base constructor
+           int no_shape_key_;
+   
+           //x and y sizes for shaped border
+           double xDim_;
+           double yDim_;
+   
+           //initialized - 1 if not it is 0
+           int initialized_;
+   
+           //The limits of the boundary in [m]
+           double xMin_,xMax_;
+           double yMin_,yMax_;
+   
+           //number of points on the boundary
+           int nPoints_;
+   
+   
+           //The arrays with boundary points
+           double* bArrX_;
+           double* bArrY_;
+   
+           //-------------------------------------------
+           //data relaited to the free-space solutions
+           //-------------------------------------------
+           //LSQM array and matrix
+           //2*nModes_+1 - number of functions in LSQM
+   
+           //number of modes in the free-space field
+           int nModes_;
+   
+           double BPrnorm_;
+   
+           double* bnd_phi_arr_;
+   
+           double* lsq_func_vctr_;
+           double* lsq_coef_vctr_;
+   
+           int* ipiv_tmp;
+           int* indxr_tmp;
+           int* indxc_tmp;
+   
+           double** LSQ_matrix_;
+           double** tmp_matrix_;
+   };
+   
+   #endif
+   //endif for SC_BASE_BOUNDARY_2D_H

@@ -1,0 +1,47 @@
+﻿orbit.bunch\_generators
+=======================
+
+.. automodule:: orbit.bunch_generators
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      GaussDist1D
+      GaussDist2D
+      GaussDist3D
+      KVDist1D
+      KVDist2D
+      KVDist3D
+      TwissAnalysis
+      TwissContainer
+      WaterBagDist1D
+      WaterBagDist2D
+      WaterBagDist3D
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.bunch_generators.distribution_generators
+

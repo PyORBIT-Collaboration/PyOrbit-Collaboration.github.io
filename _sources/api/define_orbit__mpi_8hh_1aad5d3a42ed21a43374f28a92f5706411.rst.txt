@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1aad5d3a42ed21a43374f28a92f5706411:
+
+Define MPI_LAND
+===============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_LAND
+   :project: PyORBIT3

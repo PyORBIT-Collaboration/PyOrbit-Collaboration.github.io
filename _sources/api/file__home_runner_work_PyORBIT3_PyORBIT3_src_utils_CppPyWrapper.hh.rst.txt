@@ -1,0 +1,180 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh:
+
+File CppPyWrapper.hh
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/CppPyWrapper.hh``)
+------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Python.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap_slow.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_MatrixRfGap.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF_slow.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF_slow.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseAperture.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CompositeApertureShape.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EnergyAperture.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PhaseAperture.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PyBaseApertureShape.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_RectangularApertureShape.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTuneAnalysis.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTwissAnalysis.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_FieldTracker_FieldTracker.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_LImpedance.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Barrier_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Dual_Harmonic_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Frequency_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Harmonic_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExternalEffects.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_RungeKuttaTracker.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BaseFieldSource.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_Function.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_SplineCH.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_Matrix.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_PhaseVector.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_polynomial_OU_Polynomial.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_statistics_StatMoments2D.hh`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`
+

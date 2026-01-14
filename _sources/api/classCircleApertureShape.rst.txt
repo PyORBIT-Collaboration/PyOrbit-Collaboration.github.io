@@ -1,0 +1,26 @@
+.. _exhale_class_classCircleApertureShape:
+
+Class CircleApertureShape
+=========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public BaseApertureShape`` (:ref:`exhale_class_classBaseApertureShape`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: CircleApertureShape
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

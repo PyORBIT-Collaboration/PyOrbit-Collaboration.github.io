@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a19e82b93bc42cbd336f522625e93ceb4:
+
+Define MPI_PROD
+===============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_PROD
+   :project: PyORBIT3

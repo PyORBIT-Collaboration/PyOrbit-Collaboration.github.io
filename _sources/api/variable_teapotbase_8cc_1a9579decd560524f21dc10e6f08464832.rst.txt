@@ -1,0 +1,14 @@
+.. _exhale_variable_teapotbase_8cc_1a9579decd560524f21dc10e6f08464832:
+
+Variable teapot_base::factorial
+===============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: teapot_base::factorial
+   :project: PyORBIT3

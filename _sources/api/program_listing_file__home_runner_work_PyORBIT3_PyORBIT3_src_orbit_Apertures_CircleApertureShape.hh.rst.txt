@@ -1,0 +1,56 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.hh:
+
+Program Listing for File CircleApertureShape.hh
+===============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/CircleApertureShape.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CIRCULAR_APERTURE_SHAPE_H
+   #define CIRCULAR_APERTURE_SHAPE_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Bunch.hh"
+   #include "BaseApertureShape.hh"
+   
+   using namespace std;
+   
+   //
+   // NAME
+   //
+   //   CircleApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   
+   
+   class CircleApertureShape: public BaseApertureShape
+   {
+   public:
+   
+       CircleApertureShape();
+   
+       virtual ~CircleApertureShape();
+   
+       int inside(Bunch* bunch, int count);
+   
+       void setRadius(double radius);
+   
+       double getRadius();
+   
+   protected:
+   
+       double radius;
+       double radius2;
+   
+   };
+   
+   //end of CIRCULAR_APERTURE_SHAPE_H ifdef
+   #endif

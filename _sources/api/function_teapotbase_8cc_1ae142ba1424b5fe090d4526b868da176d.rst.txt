@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1ae142ba1424b5fe090d4526b868da176d:
+
+Function teapot_base::drift
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::drift(Bunch *, double)
+   :project: PyORBIT3

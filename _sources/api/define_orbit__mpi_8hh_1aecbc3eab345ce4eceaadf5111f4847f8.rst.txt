@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1aecbc3eab345ce4eceaadf5111f4847f8:
+
+Define MPI_MAX_ERROR_STRING
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_MAX_ERROR_STRING
+   :project: PyORBIT3

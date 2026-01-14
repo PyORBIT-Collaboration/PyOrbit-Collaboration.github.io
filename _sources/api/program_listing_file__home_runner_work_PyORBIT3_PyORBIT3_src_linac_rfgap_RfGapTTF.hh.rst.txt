@@ -1,0 +1,52 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF.hh:
+
+Program Listing for File RfGapTTF.hh
+====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap/RfGapTTF.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   
+   #ifndef TTF_RF_GAP_H
+   #define TTF_RF_GAP_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "OU_Polynomial.hh"
+   
+   using namespace std;
+   
+   
+   class RfGapTTF: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+     RfGapTTF();
+   
+     virtual ~RfGapTTF();
+   
+       static void trackBunch(Bunch* bunch, double frequency, double E0L, double phase,
+                              OrbitUtils::Polynomial* Tttf,
+                              OrbitUtils::Polynomial* Sttf,
+                              OrbitUtils::Polynomial* Tpttf,
+                              OrbitUtils::Polynomial* Spttf);
+   
+   };
+   
+   #endif

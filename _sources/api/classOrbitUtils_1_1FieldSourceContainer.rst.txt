@@ -1,0 +1,26 @@
+.. _exhale_class_classOrbitUtils_1_1FieldSourceContainer:
+
+Class FieldSourceContainer
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_FieldSourceContainer.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::BaseFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1BaseFieldSource`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::FieldSourceContainer
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8cc_1acca0521935947cc91011d49a7badaff8:
+
+Function error_base::BendFieldF
+===============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::BendFieldF(Bunch *, double)
+   :project: PyORBIT3

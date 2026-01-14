@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a469ff4771262fad962cd76ad0eeed952:
+
+Function OrbitUtils::trapzd
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::trapzd(float(*)(float, float, float), float, float, int, float, float)
+   :project: PyORBIT3

@@ -1,0 +1,51 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_AtomPopulations.hh:
+
+Program Listing for File AtomPopulations.hh
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_AtomPopulations.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/AtomPopulations.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   MyAttr.hh
+   //
+   // AUTHOR
+   //    T. Gorlov
+   //
+   // CREATED
+   //    07/14/2005
+   //
+   // DESCRIPTION
+   //    A subclass of the particle attributes class. This is container
+   //    for a macrosize of macro-particles in the bunch.
+   //
+   
+   #ifndef POPULATIONS_HH_
+   #define POPULATIONS_HH_
+   
+   #include <string>
+   
+   #include "ParticleAttributes.hh"
+   
+   class AtomPopulations : public ParticleAttributes
+   {
+   public:
+   
+       AtomPopulations(Bunch* bunch, int size_in);
+   
+     ~AtomPopulations();
+   
+   };
+   
+   //
+   // END OF FILE
+   //
+   
+   
+   #endif /*POPULATIONS_HH_*/

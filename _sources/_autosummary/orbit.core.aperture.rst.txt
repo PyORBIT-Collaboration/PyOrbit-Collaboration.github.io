@@ -1,0 +1,36 @@
+orbit.core.aperture
+===================
+
+.. automodule:: orbit.core.aperture
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Aperture
+      BaseAperture
+      CompositeApertureShape
+      ConvexApertureShape
+      EnergyAperture
+      PhaseAperture
+      PrimitiveApertureShape
+      PyBaseApertureShape
+   
+   
+
+   
+   
+   
+
+
+

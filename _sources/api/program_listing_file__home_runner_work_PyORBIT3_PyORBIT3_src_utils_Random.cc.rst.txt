@@ -1,0 +1,45 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_Random.cc:
+
+Program Listing for File Random.cc
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_Random.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/Random.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   Random.cc
+   //
+   // AUTHOR
+   //   S. Cousineau
+   //   Changed by A. Shishlo 2022.02.14
+   //
+   // CREATED
+   //    09/09/2011
+   //
+   // DESCRIPTION
+   //    This class contains a standart c++ method for calculating
+   //    a random number between 0 and 1.
+   
+   #include "Random.hh"
+   #include <random>
+   
+   using namespace OrbitUtils;
+   
+   // By default the random generator is initialized using a random seed (current time)
+   #if !defined(DOXYGEN_SHOULD_SKIP_THIS)
+   std::mt19937 mt(time(0));
+   
+   void Random::seed(int seed){
+       mt.seed(seed);
+   }
+   
+   double Random::ran1(){
+       return ((double) mt() / (mt.max()));
+   }
+   #endif

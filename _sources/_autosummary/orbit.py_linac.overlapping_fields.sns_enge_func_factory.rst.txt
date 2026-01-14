@@ -1,0 +1,36 @@
+orbit.py\_linac.overlapping\_fields.sns\_enge\_func\_factory
+============================================================
+
+.. automodule:: orbit.py_linac.overlapping_fields.sns_enge_func_factory
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      SNS_EngeFunctionFactory
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      EngeFunction
+      SimpleQuadFieldFunc
+   
+   
+
+   
+   
+   
+
+
+

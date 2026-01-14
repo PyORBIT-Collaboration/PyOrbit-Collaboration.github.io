@@ -1,0 +1,74 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc:
+
+File numrecipes.cc
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/numrecipes.cc``)
+-------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``iostream``
+
+- ``numrecipes.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.hh`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae7f531c757562dd654585fb61e30b7ea`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ad577346f5bb31a2d8ad5cb49a9b1ce13`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a950769b4735e0bddabdb7d5302255b32`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a981fd4f32c2c2b592bb8af1fe9965bf9`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a6e6b87592d124ec0f4ee623a9b1387d9`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a928f80ceb953402a05ad68e92478f525`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a469ff4771262fad962cd76ad0eeed952`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1af9d954077516cb7db390ce9d2335a6fd`
+

@@ -1,0 +1,82 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_DipoleFieldSource.hh:
+
+Program Listing for File DipoleFieldSource.hh
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_DipoleFieldSource.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/field_sources/DipoleFieldSource.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   DipoleFieldSource.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    12/25/2020
+   //
+   // DESCRIPTION
+   //    A class is an implementation of ShiftedFieldSource class.
+   //    This class describes dipole magnetic field. It needs dipole sizes
+   //    [m] in three directions and the field strength in [T].
+   //    The center of the dipole is at [0,0,0].
+   //
+   #ifndef DIPOLE_FIELD_SOURCE_H
+   #define DIPOLE_FIELD_SOURCE_H
+   
+   #include "Grid3D.hh"
+   #include "ShiftedFieldSource.hh"
+   
+   namespace OrbitUtils{
+   
+   
+       class DipoleFieldSource : public ShiftedFieldSource
+       {
+           public:
+   
+               DipoleFieldSource();
+   
+               ~DipoleFieldSource();
+   
+               void setSizes(double sizeX, double sizeY, double sizeZ);
+   
+   
+               void getSizes(double& sizeX, double& sizeY, double& sizeZ);
+   
+   
+               void setFields(double fieldX, double fieldY, double fieldZ);
+   
+   
+               void getFields(double& fieldX, double& fieldY, double& fieldZ);
+   
+               virtual void getInnerElectricMagneticField(
+                    double x, double y, double z, double t,
+                      double& E_x, double& E_y, double& E_z,
+                      double& H_x, double& H_y, double& H_z);
+   
+       private:
+   
+           //sizes in [m]
+           double sizeX;
+           double sizeY;
+           double sizeZ;
+   
+           // fields in [T]
+           double fieldX;
+           double fieldY;
+           double fieldZ;
+   
+       };
+   };
+   
+   //
+   // END OF FILE
+   //
+   
+   #endif

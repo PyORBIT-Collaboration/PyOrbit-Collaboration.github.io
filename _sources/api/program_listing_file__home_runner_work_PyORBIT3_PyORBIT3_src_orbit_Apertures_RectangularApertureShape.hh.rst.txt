@@ -1,0 +1,60 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_RectangularApertureShape.hh:
+
+Program Listing for File RectangularApertureShape.hh
+====================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_RectangularApertureShape.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/RectangularApertureShape.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef RECTANGULAR_APERTURE_SHAPE_H
+   #define RECTANGULAR_APERTURE_SHAPE_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Bunch.hh"
+   #include "BaseApertureShape.hh"
+   
+   using namespace std;
+   
+   //
+   // NAME
+   //
+   //   RectangularApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   
+   
+   class RectangularApertureShape: public BaseApertureShape
+   {
+   public:
+   
+       RectangularApertureShape();
+   
+       virtual ~RectangularApertureShape();
+   
+       int inside(Bunch* bunch, int count);
+   
+       void setHalfX(double x_half_size);
+   
+       double getHalfX();
+   
+       void setHalfY(double y_half_size);
+   
+       double getHalfY();
+   
+   protected:
+   
+       double x_half_size;
+       double y_half_size;
+   
+   };
+   
+   //end of RECTANGULAR_APERTURE_SHAPE_H ifdef
+   #endif

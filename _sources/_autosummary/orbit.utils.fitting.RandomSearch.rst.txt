@@ -1,0 +1,30 @@
+orbit.utils.fitting.RandomSearch
+================================
+
+.. automodule:: orbit.utils.fitting.RandomSearch
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      RandomSearchAlgorithm
+      SearchAgorithm
+   
+   
+
+   
+   
+   
+
+
+

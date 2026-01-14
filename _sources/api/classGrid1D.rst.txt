@@ -1,0 +1,26 @@
+.. _exhale_class_classGrid1D:
+
+Class Grid1D
+============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Grid1D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a9f77cd15ada44eafd62d76567488687e:
+
+Function ORBIT_MPI_Intercomm_create
+===================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Intercomm_create(MPI_Comm, int, MPI_Comm, int, int, MPI_Comm *)
+   :project: PyORBIT3

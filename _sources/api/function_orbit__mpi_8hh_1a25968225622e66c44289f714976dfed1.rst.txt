@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a25968225622e66c44289f714976dfed1:
+
+Function ORBIT_MPI_Intercomm_merge
+==================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Intercomm_merge(MPI_Comm, int, MPI_Comm *)
+   :project: PyORBIT3

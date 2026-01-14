@@ -1,0 +1,26 @@
+.. _exhale_class_classOrbitUtils_1_1StatMoments2D:
+
+Class StatMoments2D
+===================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_statistics_StatMoments2D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::StatMoments2D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

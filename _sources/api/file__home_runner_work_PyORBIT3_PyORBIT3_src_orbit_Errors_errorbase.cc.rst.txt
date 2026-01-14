@@ -1,0 +1,108 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc:
+
+File errorbase.cc
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Errors``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Errors/errorbase.cc``)
+----------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``Random.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_Random.hh`)
+
+- ``SyncPart.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``complex`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh`)
+
+- ``cstdlib``
+
+- ``errorbase.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.hh`)
+
+- ``iostream``
+
+- ``teapotbase.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.hh`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_error_base`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_errorbase_8cc_1a97269f6cefebd0d92e49e20232e869e2`
+
+- :ref:`exhale_function_errorbase_8cc_1ab0eca1172dedbb5337aedd015a1056a2`
+
+- :ref:`exhale_function_errorbase_8cc_1a4950ae88470c0496f9781b870a8ffb46`
+
+- :ref:`exhale_function_errorbase_8cc_1afc04d3f12d53a9cc10ad0dee7ccd0018`
+
+- :ref:`exhale_function_errorbase_8cc_1abd6f63f09ed87945faa72388702e494f`
+
+- :ref:`exhale_function_errorbase_8cc_1a67c29be1d225a6cf25fd1ee75cd892c7`
+
+- :ref:`exhale_function_errorbase_8cc_1acca0521935947cc91011d49a7badaff8`
+
+- :ref:`exhale_function_errorbase_8cc_1a6e420436bc36e028c69395d5b2e39cf8`
+
+- :ref:`exhale_function_errorbase_8cc_1a7f13cace07a0c11b37d6ea29cac8ef58`
+
+- :ref:`exhale_function_errorbase_8cc_1abd45e65aa572546db1c43af7073ce218`
+
+- :ref:`exhale_function_errorbase_8cc_1ad66d48303e1dbdcaf31d636b3b042fc8`
+
+- :ref:`exhale_function_errorbase_8cc_1a779d47e41453b1530add4e7b44c5d2ae`
+
+- :ref:`exhale_function_errorbase_8cc_1a3540527c3ad953cbaa7cd7579b485709`
+
+- :ref:`exhale_function_errorbase_8cc_1a9d2ed07b15fc862003a387acbc63cbc9`
+
+- :ref:`exhale_function_errorbase_8cc_1aa225350f2e51ecf71fa86943ee65884b`
+
+- :ref:`exhale_function_errorbase_8cc_1a41baffa7964b8d49917b3894e5fbcbb8`
+
+- :ref:`exhale_function_errorbase_8cc_1a6e240d3a5c2acfdbf1e99573ea9d5478`
+
+- :ref:`exhale_function_errorbase_8cc_1ad7f36dc4ade2aa2acf1ed97d8d5a26e6`
+
+- :ref:`exhale_function_errorbase_8cc_1a5950c0f3947020e0ebd7f77e8e23e43f`
+
+- :ref:`exhale_function_errorbase_8cc_1af936a60bfc11019c883bd9eb61e24870`
+

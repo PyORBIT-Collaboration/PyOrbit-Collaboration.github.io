@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1ad67231996b3460caf10cb03cbd2c3aa1:
+
+Variable OrbitUtils::mycomparator
+=================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::mycomparator
+   :project: PyORBIT3

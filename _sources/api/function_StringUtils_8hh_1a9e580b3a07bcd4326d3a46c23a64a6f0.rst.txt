@@ -1,0 +1,14 @@
+.. _exhale_function_StringUtils_8hh_1a9e580b3a07bcd4326d3a46c23a64a6f0:
+
+Function OrbitUtils::StringUtils::Tokenize
+==========================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_StringUtils.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::StringUtils::Tokenize(const string&, vector<string>&, const string&)
+   :project: PyORBIT3

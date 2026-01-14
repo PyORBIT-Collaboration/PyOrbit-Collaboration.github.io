@@ -1,0 +1,17 @@
+.. _exhale_class_classOrbitUtils_1_1AttributesBucket:
+
+Class AttributesBucket
+======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_AttributesBucket.hh`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::AttributesBucket
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

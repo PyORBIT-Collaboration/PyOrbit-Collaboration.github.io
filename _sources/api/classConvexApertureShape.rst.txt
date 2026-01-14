@@ -1,0 +1,26 @@
+.. _exhale_class_classConvexApertureShape:
+
+Class ConvexApertureShape
+=========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public BaseApertureShape`` (:ref:`exhale_class_classBaseApertureShape`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ConvexApertureShape
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

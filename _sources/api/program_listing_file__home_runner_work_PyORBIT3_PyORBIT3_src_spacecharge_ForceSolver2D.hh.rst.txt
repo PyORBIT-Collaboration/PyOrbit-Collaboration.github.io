@@ -1,0 +1,85 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh:
+
+Program Listing for File ForceSolver2D.hh
+=========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/ForceSolver2D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //The base class for Force Solvers. It defines the interface for solves
+   
+   #ifndef SC_Force_SOLVER_BASE_2D_H
+   #define SC_Force_SOLVER_BASE_2D_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   #include <string>
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Grid2D.hh"
+   
+   using namespace std;
+   
+   
+   class ForceSolver2D: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       ForceSolver2D(int xSize, int ySize);
+   
+     virtual ~ForceSolver2D();
+   
+     int getSizeX();
+   
+     int getSizeY();
+   
+     double getMaxX();
+   
+     double getMinX();
+   
+     double getMaxY();
+   
+     double getMinY();
+   
+     double getStepX();
+   
+     double getStepY();
+   
+     virtual void setGridX(double xMin, double xMax) = 0;
+   
+     virtual void setGridY(double yMin, double yMax) = 0;
+   
+       virtual void findForce(Grid2D* rhoGrid, Grid2D* forceGridX, Grid2D* forceGridY) = 0;
+   
+   protected:
+   
+       //checks that sizes of Grid2D instances are the same as solver
+       void checkSizes(Grid2D* rhoGrid);
+   
+       //should be implemented in subclasses. It should be called in both types of constructors.
+       virtual void init(int xSize, int ySize) = 0;
+   
+   protected:
+   
+     //Grid size
+     int xSize_;
+     int ySize_;
+   
+      //Grid array and parameters
+     double xMin_, xMax_, yMin_, yMax_;
+     double  dx_  ,  dy_;
+   
+   };
+   
+   //end of SC_Force_SOLVER_BASE_2D_H ifdef
+   #endif

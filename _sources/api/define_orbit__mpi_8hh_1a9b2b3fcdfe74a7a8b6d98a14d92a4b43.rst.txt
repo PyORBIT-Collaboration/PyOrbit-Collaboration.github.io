@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a9b2b3fcdfe74a7a8b6d98a14d92a4b43:
+
+Define MPI_UNSIGNED_LONG
+========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_UNSIGNED_LONG
+   :project: PyORBIT3

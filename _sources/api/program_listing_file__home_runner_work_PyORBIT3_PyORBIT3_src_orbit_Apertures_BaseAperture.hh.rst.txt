@@ -1,0 +1,84 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseAperture.hh:
+
+Program Listing for File BaseAperture.hh
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseAperture.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/BaseAperture.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //The base class for BaseApertures. It defines the interface for BaseAperture
+   #ifndef BASE_APERTURE_H
+   #define BASE_APERTURE_H
+   
+   #include "Bunch.hh"
+   #include "BaseApertureShape.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   using namespace std;
+   
+   //
+   // NAME
+   //
+   //   BaseAperture
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   
+   
+   class BaseAperture: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       BaseAperture();
+   
+       virtual ~BaseAperture();
+   
+       BaseApertureShape* getApertureShape();
+   
+       void setApertureShape(BaseApertureShape* apertureShape);
+   
+       void checkBunch(Bunch* bunch, Bunch* lostbunch);
+   
+       int getNumberOfLost();
+   
+       string getName();
+   
+       void setName(string apertureNameIn);
+   
+       double getPosition();
+   
+       void setPosition(double position);
+   
+       void setOnOff(int isActive);
+   
+       int getOnOff();
+   
+   protected:
+   
+       //name of the aperture
+       string apertureName;
+   
+       //Counters
+       int nLost_;
+   
+       //aperture position
+       double pos_;
+   
+       //BaseApertureShape
+       BaseApertureShape* apertureShape;
+   
+       //Info variable defining if the aperture is active or not.
+       //isActive == 1 then it is active otherwise it is not.
+       int isActive;
+   
+   };
+   
+   //end of BASE_APERTURE_H ifdef
+   #endif

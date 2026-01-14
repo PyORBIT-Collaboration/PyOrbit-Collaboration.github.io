@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1ab78c3386b01313fb71d58ec07699267c:
+
+Function ORBIT_MPI_Graph_neighbors_count
+========================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Graph_neighbors_count(MPI_Comm, int, int *)
+   :project: PyORBIT3

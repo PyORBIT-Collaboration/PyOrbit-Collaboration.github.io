@@ -1,0 +1,79 @@
+orbit.aperture.TeapotApertureNode
+=================================
+
+.. currentmodule:: orbit.aperture
+
+.. autoclass:: TeapotApertureNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TeapotApertureNode.__init__
+      ~TeapotApertureNode.addChildNode
+      ~TeapotApertureNode.addParam
+      ~TeapotApertureNode.getActivePartIndex
+      ~TeapotApertureNode.getAllChildren
+      ~TeapotApertureNode.getBodyChildren
+      ~TeapotApertureNode.getChildNodes
+      ~TeapotApertureNode.getFringeFieldFunctionIN
+      ~TeapotApertureNode.getFringeFieldFunctionOUT
+      ~TeapotApertureNode.getLength
+      ~TeapotApertureNode.getName
+      ~TeapotApertureNode.getNodeFringeFieldIN
+      ~TeapotApertureNode.getNodeFringeFieldOUT
+      ~TeapotApertureNode.getNodeTiltIN
+      ~TeapotApertureNode.getNodeTiltOUT
+      ~TeapotApertureNode.getNumberOfBodyChildren
+      ~TeapotApertureNode.getNumberOfChildren
+      ~TeapotApertureNode.getParam
+      ~TeapotApertureNode.getParamsDict
+      ~TeapotApertureNode.getTiltAngle
+      ~TeapotApertureNode.getType
+      ~TeapotApertureNode.getUsageFringeFieldIN
+      ~TeapotApertureNode.getUsageFringeFieldOUT
+      ~TeapotApertureNode.getnParts
+      ~TeapotApertureNode.hasParam
+      ~TeapotApertureNode.initialize
+      ~TeapotApertureNode.keys
+      ~TeapotApertureNode.removeParam
+      ~TeapotApertureNode.reverseOrder
+      ~TeapotApertureNode.reverseOrderNodeSpecific
+      ~TeapotApertureNode.setActivePartIndex
+      ~TeapotApertureNode.setFringeFieldFunctionIN
+      ~TeapotApertureNode.setFringeFieldFunctionOUT
+      ~TeapotApertureNode.setLength
+      ~TeapotApertureNode.setName
+      ~TeapotApertureNode.setParam
+      ~TeapotApertureNode.setParamsDict
+      ~TeapotApertureNode.setPosition
+      ~TeapotApertureNode.setTiltAngle
+      ~TeapotApertureNode.setType
+      ~TeapotApertureNode.setUsageFringeFieldIN
+      ~TeapotApertureNode.setUsageFringeFieldOUT
+      ~TeapotApertureNode.setnParts
+      ~TeapotApertureNode.structureToText
+      ~TeapotApertureNode.track
+      ~TeapotApertureNode.trackActions
+      ~TeapotApertureNode.trackBunch
+      ~TeapotApertureNode.updateParamsDict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TeapotApertureNode.AFTER
+      ~TeapotApertureNode.BEFORE
+      ~TeapotApertureNode.BODY
+      ~TeapotApertureNode.ENTRANCE
+      ~TeapotApertureNode.EXIT
+   
+   

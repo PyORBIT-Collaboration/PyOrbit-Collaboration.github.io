@@ -1,0 +1,36 @@
+orbit.core.collimator
+=====================
+
+.. automodule:: orbit.core.collimator
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      collimateBunch
+      setPosition
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Collimator
+   
+   
+
+   
+   
+   
+
+
+

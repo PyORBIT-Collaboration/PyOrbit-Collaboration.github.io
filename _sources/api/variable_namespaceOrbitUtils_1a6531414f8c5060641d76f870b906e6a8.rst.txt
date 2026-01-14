@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a6531414f8c5060641d76f870b906e6a8:
+
+Variable OrbitUtils::platinum
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::platinum
+   :project: PyORBIT3

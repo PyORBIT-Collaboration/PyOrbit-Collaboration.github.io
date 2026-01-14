@@ -1,0 +1,26 @@
+.. _exhale_class_classTrackerRK4_1_1PyExternalEffects:
+
+Class PyExternalEffects
+=======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_PyExternalEffects.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public TrackerRK4::ExternalEffects`` (:ref:`exhale_class_classTrackerRK4_1_1ExternalEffects`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: TrackerRK4::PyExternalEffects
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

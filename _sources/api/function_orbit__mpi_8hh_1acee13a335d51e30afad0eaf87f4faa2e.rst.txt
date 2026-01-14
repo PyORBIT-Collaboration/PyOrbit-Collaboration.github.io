@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1acee13a335d51e30afad0eaf87f4faa2e:
+
+Function ORBIT_MPI_Comm_rank
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Comm_rank(MPI_Comm, int *)
+   :project: PyORBIT3

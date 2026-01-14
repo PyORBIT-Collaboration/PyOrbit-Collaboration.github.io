@@ -1,0 +1,59 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.hh:
+
+File UniformEllipsoidFieldCalculator.hh
+=======================================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/UniformEllipsoidFieldCalculator.hh``)
+-------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+- ``OU_Function.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_Function.hh`)
+
+- ``cmath``
+
+- ``cstdlib``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classUniformEllipsoidFieldCalculator`
+

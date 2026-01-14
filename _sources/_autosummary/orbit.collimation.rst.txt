@@ -1,0 +1,44 @@
+﻿orbit.collimation
+=================
+
+.. automodule:: orbit.collimation
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addTeapotCollimatorNode
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      TeapotCollimatorNode
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.collimation.TeapotCollimatorNode
+   orbit.collimation.collimationLatticeModifications
+

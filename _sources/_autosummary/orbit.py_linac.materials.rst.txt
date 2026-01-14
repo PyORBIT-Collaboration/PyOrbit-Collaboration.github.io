@@ -1,0 +1,37 @@
+﻿orbit.py\_linac.materials
+=========================
+
+.. automodule:: orbit.py_linac.materials
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      VacuumWindowNode
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.py_linac.materials.VacuumWindowLinacNode
+

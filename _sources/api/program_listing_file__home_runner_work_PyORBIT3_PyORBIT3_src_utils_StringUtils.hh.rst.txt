@@ -1,0 +1,35 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_StringUtils.hh:
+
+Program Listing for File StringUtils.hh
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_StringUtils.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/StringUtils.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef __STRING_UTILS_H_
+   #define __STRING_UTILS_H_
+   
+   #include <string>
+   #include <vector>
+   
+   using namespace std;
+   
+   //=======================================
+   //Usage
+   // int nTokens = StringUtils::Tokenize("....",vector<string>& tokens, ", :<>");
+   //or for space-delimiter
+   //int nTokens = StringUtils::Tokenize("....",vector<string>& tokens);
+   //=======================================
+   
+   
+   namespace OrbitUtils{
+       namespace StringUtils
+       {
+           int Tokenize(const string& str,vector<string>& tokens,  const string& delimiters = " ");
+       };
+   };
+   #endif

@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a928f80ceb953402a05ad68e92478f525:
+
+Function OrbitUtils::rtbis
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::rtbis(float(*)(float, float, float, float), float, float, float, float, float, float)
+   :project: PyORBIT3

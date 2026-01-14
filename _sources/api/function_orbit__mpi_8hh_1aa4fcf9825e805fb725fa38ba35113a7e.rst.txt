@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1aa4fcf9825e805fb725fa38ba35113a7e:
+
+Function ORBIT_MPI_Get_processor_name
+=====================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Get_processor_name(char *, int *)
+   :project: PyORBIT3

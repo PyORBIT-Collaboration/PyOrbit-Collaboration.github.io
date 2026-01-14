@@ -1,0 +1,14 @@
+.. _exhale_typedef_orbit__mpi_8hh_1a2e7770334e9e65834ce3c95dd0c3a50f:
+
+Typedef MPI_Group
+=================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: MPI_Group
+   :project: PyORBIT3

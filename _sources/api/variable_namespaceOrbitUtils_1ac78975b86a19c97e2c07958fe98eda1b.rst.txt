@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1ac78975b86a19c97e2c07958fe98eda1b:
+
+Variable OrbitUtils::z26_elastic
+================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::z26_elastic
+   :project: PyORBIT3

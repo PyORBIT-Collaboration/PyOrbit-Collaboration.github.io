@@ -1,0 +1,31 @@
+orbit.utils.ParamsDictObject
+============================
+
+.. currentmodule:: orbit.utils
+
+.. autoclass:: ParamsDictObject
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ParamsDictObject.__init__
+      ~ParamsDictObject.addParam
+      ~ParamsDictObject.getParam
+      ~ParamsDictObject.getParamsDict
+      ~ParamsDictObject.hasParam
+      ~ParamsDictObject.keys
+      ~ParamsDictObject.removeParam
+      ~ParamsDictObject.setParam
+      ~ParamsDictObject.setParamsDict
+      ~ParamsDictObject.updateParamsDict
+   
+   
+
+   
+   
+   

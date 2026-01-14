@@ -1,0 +1,17 @@
+.. _exhale_struct_structOrbitUtils_1_1MPstr:
+
+Struct MPstr
+============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: OrbitUtils::MPstr
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

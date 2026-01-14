@@ -1,0 +1,65 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_Evolution.hh:
+
+Program Listing for File Evolution.hh
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_Evolution.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/Evolution.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef EVOLUTION_HH_
+   #define EVOLUTION_HH_
+   
+   
+   //
+   // FILE NAME
+   //   MyAttr.hh
+   //
+   // AUTHOR
+   //    T. Gorlov
+   //
+   // CREATED
+   //    07/14/2005
+   //
+   // DESCRIPTION
+   //    A subclass of the particle attributes class. This is container
+   //    for a macrosize of macro-particles in the bunch.
+   //
+   
+   //
+   // INCLUDE FILES
+   //
+   
+   #include <string>
+   
+   //
+   // CLASS NAME
+   //     WaveFunctionAmplitudes
+   //
+   #include "ParticleAttributes.hh"
+   
+   class Evolution : public ParticleAttributes
+   {
+   public:
+     //--------------------------------------
+     //the public methods of the ParticleMacroSize class
+     //--------------------------------------
+   
+       Evolution(Bunch* bunch, int size_in);
+   
+     ~Evolution();
+   
+   };
+   
+   //
+   // END OF FILE
+   //
+   
+   
+   
+   
+   
+   #endif /*EVOLUTION_HH_*/

@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a099a3d089816f1f44625d691019a0dfc:
+
+Function ORBIT_MPI_Group_free
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Group_free(MPI_Group *)
+   :project: PyORBIT3

@@ -1,0 +1,70 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BaseFieldSource.hh:
+
+File BaseFieldSource.hh
+=======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/BaseFieldSource.hh``)
+---------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BaseFieldSource.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_SuperFishFieldSource.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExternalEffects.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_RungeKuttaTracker.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BaseFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_FieldSourceContainer.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_PyBaseFieldSource.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.hh`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1BaseFieldSource`
+

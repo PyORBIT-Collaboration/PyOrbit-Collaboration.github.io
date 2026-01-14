@@ -1,0 +1,77 @@
+.. _exhale_class_classOrbitUtils_1_1CppPyWrapper:
+
+Class CppPyWrapper
+==================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public Aperture`` (:ref:`exhale_class_classAperture`)
+- ``public Barrier_Cav`` (:ref:`exhale_class_classBarrier__Cav`)
+- ``public BaseAperture`` (:ref:`exhale_class_classBaseAperture`)
+- ``public BaseApertureShape`` (:ref:`exhale_class_classBaseApertureShape`)
+- ``public BaseBoundary2D`` (:ref:`exhale_class_classBaseBoundary2D`)
+- ``public BaseRfGap`` (:ref:`exhale_class_classBaseRfGap`)
+- ``public BaseRfGap_slow`` (:ref:`exhale_class_classBaseRfGap__slow`)
+- ``public Bunch`` (:ref:`exhale_class_classBunch`)
+- ``public BunchTuneAnalysis`` (:ref:`exhale_class_classBunchTuneAnalysis`)
+- ``public BunchTwissAnalysis`` (:ref:`exhale_class_classBunchTwissAnalysis`)
+- ``public Collimator`` (:ref:`exhale_class_classCollimator`)
+- ``public Dual_Harmonic_Cav`` (:ref:`exhale_class_classDual__Harmonic__Cav`)
+- ``public EnergyAperture`` (:ref:`exhale_class_classEnergyAperture`)
+- ``public FieldTracker`` (:ref:`exhale_class_classFieldTracker`)
+- ``public Foil`` (:ref:`exhale_class_classFoil`)
+- ``public ForceSolver2D`` (:ref:`exhale_class_classForceSolver2D`)
+- ``public Frequency_Cav`` (:ref:`exhale_class_classFrequency__Cav`)
+- ``public Grid1D`` (:ref:`exhale_class_classGrid1D`)
+- ``public Grid2D`` (:ref:`exhale_class_classGrid2D`)
+- ``public Grid3D`` (:ref:`exhale_class_classGrid3D`)
+- ``public Harmonic_Cav`` (:ref:`exhale_class_classHarmonic__Cav`)
+- ``public LImpedance`` (:ref:`exhale_class_classLImpedance`)
+- ``public LSpaceChargeCalc`` (:ref:`exhale_class_classLSpaceChargeCalc`)
+- ``public MatrixRfGap`` (:ref:`exhale_class_classMatrixRfGap`)
+- ``public OrbitUtils::BaseFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1BaseFieldSource`)
+- ``public OrbitUtils::BunchExtremaCalculator`` (:ref:`exhale_class_classOrbitUtils_1_1BunchExtremaCalculator`)
+- ``public OrbitUtils::Function`` (:ref:`exhale_class_classOrbitUtils_1_1Function`)
+- ``public OrbitUtils::GaussLegendreIntegrator`` (:ref:`exhale_class_classOrbitUtils_1_1GaussLegendreIntegrator`)
+- ``public OrbitUtils::HarmonicData`` (:ref:`exhale_class_classOrbitUtils_1_1HarmonicData`)
+- ``public OrbitUtils::Matrix`` (:ref:`exhale_class_classOrbitUtils_1_1Matrix`)
+- ``public OrbitUtils::PhaseVector`` (:ref:`exhale_class_classOrbitUtils_1_1PhaseVector`)
+- ``public OrbitUtils::Polynomial`` (:ref:`exhale_class_classOrbitUtils_1_1Polynomial`)
+- ``public OrbitUtils::SplineCH`` (:ref:`exhale_class_classOrbitUtils_1_1SplineCH`)
+- ``public OrbitUtils::StatMoments2D`` (:ref:`exhale_class_classOrbitUtils_1_1StatMoments2D`)
+- ``public PhaseAperture`` (:ref:`exhale_class_classPhaseAperture`)
+- ``public PoissonSolver2D`` (:ref:`exhale_class_classPoissonSolver2D`)
+- ``public PoissonSolver3D`` (:ref:`exhale_class_classPoissonSolver3D`)
+- ``public RfGapTTF`` (:ref:`exhale_class_classRfGapTTF`)
+- ``public RfGapTTF_slow`` (:ref:`exhale_class_classRfGapTTF__slow`)
+- ``public RfGapThreePointTTF`` (:ref:`exhale_class_classRfGapThreePointTTF`)
+- ``public RfGapThreePointTTF_slow`` (:ref:`exhale_class_classRfGapThreePointTTF__slow`)
+- ``public SpaceChargeCalc2p5D`` (:ref:`exhale_class_classSpaceChargeCalc2p5D`)
+- ``public SpaceChargeCalc2p5Drb`` (:ref:`exhale_class_classSpaceChargeCalc2p5Drb`)
+- ``public SpaceChargeCalc3D`` (:ref:`exhale_class_classSpaceChargeCalc3D`)
+- ``public SpaceChargeCalcSliceBySlice2D`` (:ref:`exhale_class_classSpaceChargeCalcSliceBySlice2D`)
+- ``public SpaceChargeCalcUnifEllipse`` (:ref:`exhale_class_classSpaceChargeCalcUnifEllipse`)
+- ``public SpaceChargeForceCalc2p5D`` (:ref:`exhale_class_classSpaceChargeForceCalc2p5D`)
+- ``public SynchPartRedefinitionZdE`` (:ref:`exhale_class_classSynchPartRedefinitionZdE`)
+- ``public TImpedance`` (:ref:`exhale_class_classTImpedance`)
+- ``public TrackerRK4::ExternalEffects`` (:ref:`exhale_class_classTrackerRK4_1_1ExternalEffects`)
+- ``public TrackerRK4::RungeKuttaTracker`` (:ref:`exhale_class_classTrackerRK4_1_1RungeKuttaTracker`)
+- ``public UniformEllipsoidFieldCalculator`` (:ref:`exhale_class_classUniformEllipsoidFieldCalculator`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::CppPyWrapper
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

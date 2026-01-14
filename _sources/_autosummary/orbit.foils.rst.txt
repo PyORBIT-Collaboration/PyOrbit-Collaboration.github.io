@@ -1,0 +1,44 @@
+﻿orbit.foils
+===========
+
+.. automodule:: orbit.foils
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addTeapotFoilNode
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      TeapotFoilNode
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.foils.TeapotFoilNode
+   orbit.foils.foilLatticeModifications
+

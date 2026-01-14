@@ -1,0 +1,64 @@
+﻿orbit.py\_linac.lattice\_modifications
+======================================
+
+.. automodule:: orbit.py_linac.lattice_modifications
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      AddMEBTChopperPlatesAperturesToSNS_Lattice
+      AddScrapersAperturesToLattice
+      Add_bend_apertures_to_lattice
+      Add_drift_apertures_to_lattice
+      Add_quad_apertures_to_lattice
+      Add_rfgap_apertures_to_lattice
+      GetLostDistributionArr
+      Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes
+      Replace_BaseRF_Gap_to_AxisField_Nodes
+      Replace_Quads_to_OverlappingQuads_Nodes
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BendFieldNodesModification
+      CoordinateDisplacementNodesModification
+      ErrorForNodesModification
+      LongitudinalDisplacementNodesModification
+      QuadFieldsErrorsDeployment
+      StraightRotationX_NodesModification
+      StraightRotationY_NodesModification
+      StraightRotationZ_NodesModification
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.py_linac.lattice_modifications.apertures_additions_lib
+   orbit.py_linac.lattice_modifications.errors_modifications_lib
+   orbit.py_linac.lattice_modifications.quad_overlap_modifications_lib
+   orbit.py_linac.lattice_modifications.rf_models_modifications_lib
+   orbit.py_linac.lattice_modifications.rf_quad_overlap_modifications_lib
+   orbit.py_linac.lattice_modifications.sns_aperture_additions
+

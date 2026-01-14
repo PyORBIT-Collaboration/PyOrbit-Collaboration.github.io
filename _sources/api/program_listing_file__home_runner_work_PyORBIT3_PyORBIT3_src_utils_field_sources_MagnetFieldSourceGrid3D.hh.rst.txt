@@ -1,0 +1,100 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.hh:
+
+Program Listing for File MagnetFieldSourceGrid3D.hh
+===================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/field_sources/MagnetFieldSourceGrid3D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   MagnetFieldSourceGrid3D.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    12/23/2020
+   //
+   // DESCRIPTION
+   //    A class is an implementation of ShiftedFieldSource class.
+   //    This class contains 3 Grid3D instances with Bx,By,Bz magnetic fields in [T]
+   //    The coordTransform Matrix is (4x4) matrix object that translates the
+   //    spacial coordinates from external coordinates to the inner coordinates
+   //    of each Grid3D. The last raw in coordTransform Matrix is [0,0,0,1], and
+   //    The last column is a [a,b,c,1] where [-a,-b,-c] coordinates of the Grid3D
+   //    origin in the external coordinates system.
+   //    The vector (Bx,By,Bz) transforms back to the external coordinate
+   //    system by coordTransformBack (3x3) matrix.
+   //
+   
+   #ifndef MAGNET_FIELD_SOURCE_GRID3D_H
+   #define MAGNET_FIELD_SOURCE_GRID3D_H
+   
+   #include "Grid3D.hh"
+   #include "ShiftedFieldSource.hh"
+   
+   namespace OrbitUtils{
+   
+   
+       class MagnetFieldSourceGrid3D : public ShiftedFieldSource
+       {
+           public:
+   
+               MagnetFieldSourceGrid3D(Grid3D* BxGrid, Grid3D* ByGrid, Grid3D* BzGrid);
+   
+               ~MagnetFieldSourceGrid3D();
+   
+               Grid3D* getBxGrid();
+   
+               Grid3D* getByGrid();
+   
+               Grid3D* getBzGrid();
+   
+               void setSymmetry(int symmetry_x, int symmetry_y, int symmetry_z);
+   
+               void getSymmetry(int& symmetry_x, int& symmetry_y, int& symmetry_z);
+   
+               void setFieldSignsForQuadrants(int signX, int signY, int signZ, int signBx, int signBy, int signBz);
+   
+               void getFieldSignsForQuadrants(int signX, int signY, int signZ, int& signBx, int& signBy, int& signBz);
+   
+               void setFieldCoeff(double field_coeff);
+   
+               double getFieldCoeff();
+   
+               virtual void getInnerElectricMagneticField(
+                    double x, double y, double z, double t,
+                      double& E_x, double& E_y, double& E_z,
+                      double& H_x, double& H_y, double& H_z);
+   
+       private:
+   
+           Grid3D* BxGrid;
+           Grid3D* ByGrid;
+           Grid3D* BzGrid;
+   
+           int symmetry_x;
+           int symmetry_y;
+           int symmetry_z;
+   
+           int** field_sign_arr;
+   
+           //used to correct Bx,By,Bz fields if we have the same
+           //distributions for Grid3D (identical magnets) with different fields
+           //It will save the memory for us.
+           double field_coeff;
+   
+       };
+   };
+   
+   //
+   // END OF FILE
+   //
+   
+   #endif

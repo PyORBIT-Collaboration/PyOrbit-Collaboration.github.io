@@ -1,0 +1,41 @@
+orbit.space\_charge.sc2dslicebyslice.scLatticeModifications
+===========================================================
+
+.. automodule:: orbit.space_charge.sc2dslicebyslice.scLatticeModifications
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      setSC2DSliceBySliceAccNodes
+      setSC_General_AccNodes
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AccActionsContainer
+      AccLattice
+      AccNode
+      AccNodeBunchTracker
+      Boundary2D
+      SC2DSliceBySlice_AccNode
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,115 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.cc:
+
+File gauss_legendre_points.cc
+=============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration/gauss_legendre_points.cc``)
+---------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``cstdlib``
+
+- ``gauss_legendre_points.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.hh`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structOrbitUtils_1_1PWstr`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ac8f9ebb8a2f977f687a7345dd6f83719`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespaceOrbitUtils_1a51ce68d2f5715775558e6ab7e293839d`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a752f52f3fc93b7d76e418dfe4442c771`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1acf8a6dcde0b278b8672f2b4a71ecf6d4`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a7a7830aab41b82592607deb67c16eadc`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a48015105d601f68640cffab24561a233`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1afb364436fc81370dd51195fbca57db2e`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1addb19f250f118a0ab579d06ec5724331`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a1ba2132cf5ad7e9ae2164f526b3ba521`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2f87656aa61e5104dc6ab909f35e3faa`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1aef35dbe58fe0fa64f9c061bb62fe31bc`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a4fc259255fb0805fde9e9700c78ade17`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a6d7d8a441331107e59a736bcbb771036`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ab16657f2b42531ef220b9cd18fbf337d`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ac02cbcc19a8ede62ce862269d6fe8411`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ab868ba2717e463c3d799a036a707a991`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a594432f177a1c11bc0bc79bb90b16c8d`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1aa16bb0be1777311b6d09004d13c656ca`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a8b4054d106ac41cb446fceaa683bc549`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a71f697901c07e79889de37e77dc7e33c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a50a2f9aabb30d8d8a176917d7b1643c6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1afc615982a1ed88169a2a61e4117522e6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1af6be551e3379dd57bb57627eaa896e48`
+

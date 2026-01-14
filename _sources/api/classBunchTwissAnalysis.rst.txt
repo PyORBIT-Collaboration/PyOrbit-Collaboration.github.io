@@ -1,0 +1,26 @@
+.. _exhale_class_classBunchTwissAnalysis:
+
+Class BunchTwissAnalysis
+========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTwissAnalysis.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: BunchTwissAnalysis
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

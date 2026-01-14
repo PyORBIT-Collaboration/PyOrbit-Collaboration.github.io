@@ -1,0 +1,64 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.cc:
+
+File bessel.cc
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bessel.cc``)
+------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``bessel.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.hh`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab089b0676c18680ac1777434913269f4`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1aa3e92e722df603d7717510fd04bf0445`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a207296a439bcdddd09ca736d0ac9f44d`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a65771e77d0af1cf77d571f890e84cb48`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab2103d120b62ed602171dd38455a5d4b`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a3661bebe8c02a453de43514bfacb5366`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1acb65701eb91467186e12ef06be59cd0c`
+

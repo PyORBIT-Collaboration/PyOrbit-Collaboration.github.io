@@ -1,0 +1,84 @@
+﻿orbit.py\_linac.lattice
+=======================
+
+.. automodule:: orbit.py_linac.lattice
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      GetGlobalQuadGradient
+      GetGlobalQuadGradientDerivative
+      GetGlobalRF_AxisField
+      getAllMagnetsInLattice
+      getAllNodesInLattice
+      getNodeForNameFromWholeLattice
+      getNodePosDictForWholeLattice
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbstractRF_Gap
+      AxisFieldRF_Gap
+      AxisField_and_Quad_RF_Gap
+      BaseLinacNode
+      BaseRF_Gap
+      Bend
+      CircleLinacApertureNode
+      DCorrectorH
+      DCorrectorV
+      Drift
+      EllipseLinacApertureNode
+      LinacAccLattice
+      LinacApertureNode
+      LinacBPM
+      LinacEnergyApertureNode
+      LinacMagnetNode
+      LinacNode
+      LinacPhaseApertureNode
+      LinacTrMatricesController
+      LinacTrMatrixGenNode
+      MarkerLinacNode
+      OverlappingQuadsNode
+      Quad
+      RF_AxisFieldsStore
+      RF_Cavity
+      RectangleLinacApertureNode
+      Sequence
+      Solenoid
+      ThickKick
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.py_linac.lattice.LinacAccLatticeFunc
+   orbit.py_linac.lattice.LinacAccLatticeLib
+   orbit.py_linac.lattice.LinacAccNodes
+   orbit.py_linac.lattice.LinacApertureNodes
+   orbit.py_linac.lattice.LinacDiagnosticsNodes
+   orbit.py_linac.lattice.LinacFieldOverlappingNodes
+   orbit.py_linac.lattice.LinacRfGapNodes
+   orbit.py_linac.lattice.LinacTransportMatrixGenNodes
+

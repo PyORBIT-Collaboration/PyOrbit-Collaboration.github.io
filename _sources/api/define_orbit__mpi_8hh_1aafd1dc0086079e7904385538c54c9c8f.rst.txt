@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1aafd1dc0086079e7904385538c54c9c8f:
+
+Define MPI_DOUBLE
+=================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_DOUBLE
+   :project: PyORBIT3

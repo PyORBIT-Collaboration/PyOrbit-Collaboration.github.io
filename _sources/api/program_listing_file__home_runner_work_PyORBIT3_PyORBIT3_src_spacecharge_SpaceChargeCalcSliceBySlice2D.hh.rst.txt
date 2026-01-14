@@ -1,0 +1,71 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.hh:
+
+Program Listing for File SpaceChargeCalcSliceBySlice2D.hh
+=========================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeCalcSliceBySlice2D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //Calculate the space charge effect of the bunch in 2D slice by slice
+   
+   #ifndef SC_SPACECHARGE_CALC_2P5D_H
+   #define SC_SPACECHARGE_CALC_2P5D_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "BunchExtremaCalculator.hh"
+   
+   #include "Grid3D.hh"
+   #include "PoissonSolverFFT2D.hh"
+   #include "BaseBoundary2D.hh"
+   
+   using namespace std;
+   
+   class SpaceChargeCalcSliceBySlice2D: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       SpaceChargeCalcSliceBySlice2D(int xSize, int ySize, int zSize, double xy_ratio_in);
+   
+       SpaceChargeCalcSliceBySlice2D(int xSize, int ySize, int zSize);
+   
+       virtual ~SpaceChargeCalcSliceBySlice2D();
+   
+       void trackBunch(Bunch* bunch, double length, BaseBoundary2D* boundary);
+   
+       Grid3D* getRhoGrid();
+   
+       Grid3D* getPhiGrid();
+       
+       void longTracking(int useLongTracking);
+       int getLongitudinalTracking();
+   
+   private:
+       void bunchAnalysis(Bunch* bunch, double& totalMacrosize, BaseBoundary2D* boundary);
+       int useLongTracking;    
+   
+   
+   protected:
+       PoissonSolverFFT2D* poissonSolver;
+       Grid3D* rhoGrid3D;
+       Grid3D* phiGrid3D;
+       OrbitUtils::BunchExtremaCalculator* bunchExtremaCalc;
+   
+       double xy_ratio;
+   };
+   //end of SC_SPACECHARGE_CALC_2P5D_H
+   #endif

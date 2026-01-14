@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a204b2bc58c2a28f72981ad3011cd9068:
+
+Function ORBIT_MPI_Group_size
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Group_size(MPI_Group, int *)
+   :project: PyORBIT3

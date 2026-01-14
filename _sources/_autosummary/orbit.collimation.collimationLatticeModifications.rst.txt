@@ -1,0 +1,42 @@
+orbit.collimation.collimationLatticeModifications
+=================================================
+
+.. automodule:: orbit.collimation.collimationLatticeModifications
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addTeapotCollimatorNode
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AccActionsContainer
+      AccLattice
+      AccNode
+      AccNodeBunchTracker
+      DriftTEAPOT
+      LinacDrift
+      TeapotCollimatorNode
+   
+   
+
+   
+   
+   
+
+
+

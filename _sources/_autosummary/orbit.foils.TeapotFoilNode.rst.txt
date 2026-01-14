@@ -1,0 +1,79 @@
+orbit.foils.TeapotFoilNode
+==========================
+
+.. currentmodule:: orbit.foils
+
+.. autoclass:: TeapotFoilNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TeapotFoilNode.__init__
+      ~TeapotFoilNode.addChildNode
+      ~TeapotFoilNode.addParam
+      ~TeapotFoilNode.getActivePartIndex
+      ~TeapotFoilNode.getAllChildren
+      ~TeapotFoilNode.getBodyChildren
+      ~TeapotFoilNode.getChildNodes
+      ~TeapotFoilNode.getFringeFieldFunctionIN
+      ~TeapotFoilNode.getFringeFieldFunctionOUT
+      ~TeapotFoilNode.getLength
+      ~TeapotFoilNode.getName
+      ~TeapotFoilNode.getNodeFringeFieldIN
+      ~TeapotFoilNode.getNodeFringeFieldOUT
+      ~TeapotFoilNode.getNodeTiltIN
+      ~TeapotFoilNode.getNodeTiltOUT
+      ~TeapotFoilNode.getNumberOfBodyChildren
+      ~TeapotFoilNode.getNumberOfChildren
+      ~TeapotFoilNode.getParam
+      ~TeapotFoilNode.getParamsDict
+      ~TeapotFoilNode.getTiltAngle
+      ~TeapotFoilNode.getType
+      ~TeapotFoilNode.getUsageFringeFieldIN
+      ~TeapotFoilNode.getUsageFringeFieldOUT
+      ~TeapotFoilNode.getnParts
+      ~TeapotFoilNode.hasParam
+      ~TeapotFoilNode.initialize
+      ~TeapotFoilNode.keys
+      ~TeapotFoilNode.removeParam
+      ~TeapotFoilNode.reverseOrder
+      ~TeapotFoilNode.reverseOrderNodeSpecific
+      ~TeapotFoilNode.setActivePartIndex
+      ~TeapotFoilNode.setFringeFieldFunctionIN
+      ~TeapotFoilNode.setFringeFieldFunctionOUT
+      ~TeapotFoilNode.setLength
+      ~TeapotFoilNode.setName
+      ~TeapotFoilNode.setParam
+      ~TeapotFoilNode.setParamsDict
+      ~TeapotFoilNode.setScatterChoice
+      ~TeapotFoilNode.setTiltAngle
+      ~TeapotFoilNode.setType
+      ~TeapotFoilNode.setUsageFringeFieldIN
+      ~TeapotFoilNode.setUsageFringeFieldOUT
+      ~TeapotFoilNode.setnParts
+      ~TeapotFoilNode.structureToText
+      ~TeapotFoilNode.track
+      ~TeapotFoilNode.trackActions
+      ~TeapotFoilNode.trackBunch
+      ~TeapotFoilNode.updateParamsDict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TeapotFoilNode.AFTER
+      ~TeapotFoilNode.BEFORE
+      ~TeapotFoilNode.BODY
+      ~TeapotFoilNode.ENTRANCE
+      ~TeapotFoilNode.EXIT
+   
+   

@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a703581dc23026866f846404ea26b8931:
+
+Define MPI_OP_NULL
+==================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_OP_NULL
+   :project: PyORBIT3

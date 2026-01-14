@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a9f71e8ac48281847db488822187e3ad6:
+
+Variable OrbitUtils::z29_inelastic
+==================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::z29_inelastic
+   :project: PyORBIT3

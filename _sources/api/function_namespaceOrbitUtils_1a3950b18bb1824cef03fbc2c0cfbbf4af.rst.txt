@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a3950b18bb1824cef03fbc2c0cfbbf4af:
+
+Function OrbitUtils::bunch_twiss_filtering
+==========================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_TwissFilteringFunctions.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::bunch_twiss_filtering(Bunch *, Bunch *, double, double, double)
+   :project: PyORBIT3

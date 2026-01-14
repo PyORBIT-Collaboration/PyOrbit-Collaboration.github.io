@@ -1,0 +1,61 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleInitialCoordinates.hh:
+
+File ParticleInitialCoordinates.hh
+==================================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/ParticleInitialCoordinates.hh``)
+----------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleInitialCoordinates.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``ParticleAttributes.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_LostParticleAttributes.hh`)
+
+- ``string``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleAttributesFactory.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleInitialCoordinates.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classParticleInitialCoordinates`
+

@@ -1,0 +1,51 @@
+﻿orbit.space\_charge
+===================
+
+.. automodule:: orbit.space_charge
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      setSC_Centered_AccNodes
+      setSC_General_AccNodes
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SC_Base_AccNode
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.space_charge.directforce2p5d
+   orbit.space_charge.sc1d
+   orbit.space_charge.sc2dslicebyslice
+   orbit.space_charge.sc2p5d
+   orbit.space_charge.sc3d
+   orbit.space_charge.scAccNodes
+   orbit.space_charge.scLatticeModifications
+   orbit.space_charge.sccenteredLatticeModifications
+

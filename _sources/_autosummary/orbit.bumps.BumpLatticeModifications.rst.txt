@@ -1,0 +1,42 @@
+orbit.bumps.BumpLatticeModifications
+====================================
+
+.. automodule:: orbit.bumps.BumpLatticeModifications
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addTeapotBumpNode
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AccActionsContainer
+      AccLattice
+      AccNode
+      AccNodeBunchTracker
+      DriftTEAPOT
+      TDTeapotSimpleBumpNode
+      TeapotSimpleBumpNode
+   
+   
+
+   
+   
+   
+
+
+

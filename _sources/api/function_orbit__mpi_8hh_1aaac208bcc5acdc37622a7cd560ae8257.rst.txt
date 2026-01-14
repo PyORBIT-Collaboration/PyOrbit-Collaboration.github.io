@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1aaac208bcc5acdc37622a7cd560ae8257:
+
+Function ORBIT_MPI_Group_incl
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Group_incl(MPI_Group, int, int *, MPI_Group *)
+   :project: PyORBIT3

@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1aeaa6bbc00b8a3fdf5a1cb0767600d3dd:
+
+Function ORBIT_MPI_Finalize()
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Finalize()
+   :project: PyORBIT3

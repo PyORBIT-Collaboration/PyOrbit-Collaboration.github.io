@@ -1,0 +1,60 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.cc:
+
+File Foil.cc
+============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/Foil.cc``)
+-------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Foil.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.hh`)
+
+- ``MaterialInteractions.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.hh`)
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``ParticleInitialCoordinates.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleInitialCoordinates.hh`)
+
+- ``Random.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_Random.hh`)
+
+- ``SyncPart.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cross_sections.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.hh`)
+
+- ``cstdlib``
+
+- ``iostream``
+
+- ``numrecipes.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.hh`)
+
+
+
+
+

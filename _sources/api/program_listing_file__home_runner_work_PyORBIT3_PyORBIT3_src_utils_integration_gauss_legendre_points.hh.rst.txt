@@ -1,0 +1,43 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.hh:
+
+Program Listing for File gauss_legendre_points.hh
+=================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration/gauss_legendre_points.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //    gauss-legendre_points.hh
+   //
+   // CREATED
+   //    03/16/2010
+   //
+   // DESCRIPTION
+   //    Generates points and weights for gauss-legendre integration.
+   #ifndef GAUSS_LEGENDRE_POINTS_H
+   #define GAUSS_LEGENDRE_POINTS_H
+   
+   #include "OU_Function.hh"
+   
+   namespace OrbitUtils{
+   
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
+   
+   void gauss_legendre_generator(int n, double a, double b, OrbitUtils::Function* fn);
+   
+   #ifdef __cplusplus
+   }
+   #endif
+   
+   };
+   
+   
+   #endif

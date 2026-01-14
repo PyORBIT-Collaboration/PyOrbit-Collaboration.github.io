@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1a034cd56a494ee81df10e7f812969a1cd:
+
+Function teapot_base::drifti
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::drifti(Bunch *, int, double)
+   :project: PyORBIT3

@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1af225a70708fa59537d0a2e0e7cc951af:
+
+Define MPI_BOR
+==============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_BOR
+   :project: PyORBIT3

@@ -1,0 +1,52 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.cc:
+
+File MagnetFieldSourceGrid3D.cc
+===============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/field_sources``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/field_sources/MagnetFieldSourceGrid3D.cc``)
+-------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BufferStore.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh`)
+
+- ``MagnetFieldSourceGrid3D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.hh`)
+
+- ``ShiftedFieldSource.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``iostream``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+
+
+
+

@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1aa64ade05a9862b36dd04816c2701d112:
+
+Define MPI_SIMILAR
+==================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_SIMILAR
+   :project: PyORBIT3

@@ -1,0 +1,116 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExternalEffects.cc:
+
+Program Listing for File ExternalEffects.cc
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExternalEffects.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/trackerrk4/ExternalEffects.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   ExternalEffects.cc
+   //
+   // CREATED
+   //    04/18/2008
+   //
+   // DESCRIPTION
+   //    A base class for anything external that acting on the bunch except
+   //    slow changing magnetic and electric fields.
+   //
+   #include "RungeKuttaTracker.hh"
+   #include <iostream>
+   #include <fstream>
+   #include <cstdlib>
+   
+   #include "ExternalEffects.hh"
+   
+   
+   using namespace TrackerRK4;
+   using namespace OrbitUtils;
+   
+   ExternalEffects::ExternalEffects(){
+       name = "empty";
+   
+       rank_setup=0;
+       rank_prepare=0;
+       rank_apply=0;
+       rank_finalize=0;
+   }
+   
+   ExternalEffects::~ExternalEffects(){
+   }
+   
+   void ExternalEffects::setupEffects(Bunch* bunch){
+   }
+   
+   
+   
+   /*it memorizes initial coordinates and impulses before rk step*/
+   void ExternalEffects::prepareEffects(Bunch* bunch, double t){
+   }
+   
+   
+   
+   void ExternalEffects::finalizeEffects(Bunch* bunch){
+   }
+   
+   
+   void ExternalEffects::applyEffectsForEach(
+                                       Bunch* bunch, int index,
+                                       double* y_in_vct, double* y_out_vct,
+                                                                        double t, double t_step,
+                                                                        BaseFieldSource* fieldSource,
+                                                                        RungeKuttaTracker* tracker){
+   }
+   
+   void ExternalEffects::applyEffects(Bunch* bunch,
+                                                                         double t, double t_step,
+                                                                         BaseFieldSource* fieldSource,
+                                                                         RungeKuttaTracker* tracker){
+   }
+   
+   
+   std::string ExternalEffects::getName(){
+       return name;
+   }
+   
+   int ExternalEffects::getRankSetup() {
+       return rank_setup;
+   }
+   
+   int ExternalEffects::getRankPrepare()   {
+       return rank_prepare;
+   }
+   
+   int ExternalEffects::getRankApply() {
+       return rank_apply;
+   }
+   
+   int ExternalEffects::getRankFinalize()  {
+       return rank_finalize;
+   }
+   
+   void ExternalEffects::setRankSetup(int i)   {
+       rank_setup = i;
+   }
+   
+   void ExternalEffects::setRankPrepare(int i) {
+       rank_prepare = i;
+   }
+   
+   void ExternalEffects::setRankApply(int i)   {
+       rank_apply = i;
+   }
+   
+   void ExternalEffects::setRankFinalize(int i)    {
+       rank_finalize = i;
+   }
+   
+   void ExternalEffects::setName(std::string name){
+       this->name = name;
+   }

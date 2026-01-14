@@ -1,0 +1,53 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.hh:
+
+Program Listing for File ParticlesWithIdFunctions.hh
+====================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch/ParticlesWithIdFunctions.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   ParticlesWithIdFunctions.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    09/01/2015
+   //
+   // DESCRIPTION
+   //    A set of functions for bunches with the ParticleIdNumber attribute
+   //
+   
+   #ifndef PARTICLES_WITH_ID_FUNCTIONS_H
+   #define PARTICLES_WITH_ID_FUNCTIONS_H
+   
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   #include "Matrix.hh"
+   
+   namespace OrbitUtils{
+   
+       void bunch_sort_id(Bunch* bunch);
+   
+       int transport_mtrx(Bunch* bunch_in, Bunch* bunch_out, Matrix* A_mtr);
+   
+       int transport_mtrx(Bunch* bunch_in, Bunch* bunch_out, Matrix* A_mtr, int appl_twiss_x, int appl_twiss_y, int appl_twiss_z);
+   
+       void apply_twiss_weights(Bunch* bunch_in, Bunch* bunch_out,int appl_x,int appl_y,int appl_z);
+   
+   };
+   //
+   // END OF FILE
+   //
+   
+   #endif

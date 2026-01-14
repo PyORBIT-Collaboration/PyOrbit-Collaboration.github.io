@@ -1,0 +1,30 @@
+orbit.utils.multiDimArray
+=========================
+
+.. automodule:: orbit.utils.multiDimArray
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      multiDimDoubleArray
+      multiDimIntArray
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

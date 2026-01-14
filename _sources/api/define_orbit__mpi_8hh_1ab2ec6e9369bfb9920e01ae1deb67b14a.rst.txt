@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1ab2ec6e9369bfb9920e01ae1deb67b14a:
+
+Define MPI_BXOR
+===============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_BXOR
+   :project: PyORBIT3

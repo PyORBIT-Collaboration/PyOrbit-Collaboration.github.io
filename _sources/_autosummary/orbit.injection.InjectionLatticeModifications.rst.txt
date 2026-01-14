@@ -1,0 +1,41 @@
+orbit.injection.InjectionLatticeModifications
+=============================================
+
+.. automodule:: orbit.injection.InjectionLatticeModifications
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addTeapotInjectionNode
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AccActionsContainer
+      AccLattice
+      AccNode
+      AccNodeBunchTracker
+      DriftTEAPOT
+      TeapotInjectionNode
+   
+   
+
+   
+   
+   
+
+
+

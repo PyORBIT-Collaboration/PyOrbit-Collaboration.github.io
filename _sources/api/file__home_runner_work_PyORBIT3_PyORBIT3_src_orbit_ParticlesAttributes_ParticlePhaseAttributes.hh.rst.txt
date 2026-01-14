@@ -1,0 +1,53 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticlePhaseAttributes.hh:
+
+File ParticlePhaseAttributes.hh
+===============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/ParticlePhaseAttributes.hh``)
+-------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticlePhaseAttributes.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``ParticleAttributes.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_LostParticleAttributes.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleAttributesFactory.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticlePhaseAttributes.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classParticlePhaseAttributes`
+

@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a248e55efe62ab7ba021822dbe63e2cf2:
+
+Define MPI_DATATYPE_NULL
+========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_DATATYPE_NULL
+   :project: PyORBIT3

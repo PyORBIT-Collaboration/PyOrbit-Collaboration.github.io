@@ -1,0 +1,71 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh:
+
+File SpaceChargeForceCalc2p5D.hh
+================================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeForceCalc2p5D.hh``)
+------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BaseBoundary2D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh`)
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+- ``BunchExtremaCalculator.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.hh`)
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+- ``ForceSolverFFT2D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.hh`)
+
+- ``Grid1D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`)
+
+- ``Grid2D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh`)
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+- ``wrap_mpi_comm.hh``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classSpaceChargeForceCalc2p5D`
+

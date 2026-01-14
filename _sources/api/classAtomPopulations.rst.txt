@@ -1,0 +1,26 @@
+.. _exhale_class_classAtomPopulations:
+
+Class AtomPopulations
+=====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_AtomPopulations.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public ParticleAttributes`` (:ref:`exhale_class_classParticleAttributes`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: AtomPopulations
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

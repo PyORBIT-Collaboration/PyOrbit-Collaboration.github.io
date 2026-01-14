@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a19791236f2490ea410657d944f47560e:
+
+Function ORBIT_MPI_Comm_split
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Comm_split(MPI_Comm, int, int, MPI_Comm *)
+   :project: PyORBIT3

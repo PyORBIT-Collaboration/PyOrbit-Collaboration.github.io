@@ -1,0 +1,117 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_SuperFishFieldSource.hh:
+
+Program Listing for File SuperFishFieldSource.hh
+================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_SuperFishFieldSource.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap/SuperFishFieldSource.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   
+   #ifndef SUPER_FISH_RF_FIELD_SOURCE_H
+   #define SUPER_FISH_RF_FIELD_SOURCE_H
+   
+   #include "BaseFieldSource.hh"
+   #include "Grid2D.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   using namespace std;
+   
+   class SuperFishFieldSource: public OrbitUtils::BaseFieldSource
+   {
+   public:
+   
+     SuperFishFieldSource();
+   
+     virtual ~SuperFishFieldSource();
+   
+       void getElectricMagneticField(
+               double x, double y, double z, double t,
+               double& E_x, double& E_y, double& E_z,
+               double& H_x, double& H_y, double& H_z);
+   
+   
+       void setPhase(double phase);
+   
+       double getPhase();
+   
+       void setFieldCenterPos(double field_center_pos);
+   
+       double getFieldCenterPos();
+   
+       void setFrequency(double frequency);
+   
+       double getFrequency();
+   
+       void setAmplitude(double amplitude);
+   
+       double getAmplitude();
+   
+       double getAvgField();
+   
+       double getLength();
+   
+       void setDirectionZ(int z_direction);
+   
+       int getDirectionZ();
+   
+       void setSymmetry(int symm);
+   
+       int getSymmetry();
+   
+       double getTimeInit();
+   
+       void setTimeInit(double time_init);
+   
+       Grid2D* getGrid2D_Ez();
+   
+       Grid2D* getGrid2D_Er();
+   
+       Grid2D* getGrid2D_H();
+   
+       void setGrid2D_Fields(Grid2D* grid2D_Ez_in,Grid2D* grid2D_Er_in,Grid2D* grid2D_H_in);
+   
+     private:
+   
+           void deleteGrids();
+   
+           //grids 2D for Ez, Er, and H
+           Grid2D* grid2D_Ez;
+           Grid2D* grid2D_Er;
+           Grid2D* grid2D_H;
+   
+           //average z-axis field
+           double avg_ez_field;
+   
+           //initial phase of the field
+           double field_phase;
+   
+           //field center - position of the center of the field
+           double field_center_pos;
+   
+           //z-axis direction could be +- 1
+           int z_direction;
+   
+           //field symmetry around z=0.
+           //symm == 1 means we have only z >= 0 part of the field
+           //symm == 0 no symmetrythe field
+           int symm;
+   
+           // the RF frequency. The unit is Hz.
+           double rf_frequency;
+   
+           //the parameter defines the amplitude of the field
+           double amplitude;
+   
+           //the initial time
+           double time_init;
+   
+   };
+   
+   #endif

@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a4fc259255fb0805fde9e9700c78ade17:
+
+Variable OrbitUtils::w64
+========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::w64
+   :project: PyORBIT3

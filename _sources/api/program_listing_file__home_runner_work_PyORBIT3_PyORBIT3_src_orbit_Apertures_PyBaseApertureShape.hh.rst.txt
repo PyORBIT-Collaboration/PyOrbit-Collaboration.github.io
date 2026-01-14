@@ -1,0 +1,47 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PyBaseApertureShape.hh:
+
+Program Listing for File PyBaseApertureShape.hh
+===============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PyBaseApertureShape.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/PyBaseApertureShape.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef PY_BASE_APERTURE_SHAPE_H
+   #define PY_BASE_APERTURE_SHAPE_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Bunch.hh"
+   #include "BaseApertureShape.hh"
+   
+   using namespace std;
+   
+   //
+   // NAME
+   //
+   //   PyBaseApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   
+   
+   class PyBaseApertureShape: public BaseApertureShape
+   {
+   public:
+   
+       PyBaseApertureShape();
+   
+       virtual ~PyBaseApertureShape();
+   
+       int inside(Bunch* bunch, int count);
+   
+   };
+   
+   //end of PY_BASE_APERTURE_SHAPE_H ifdef
+   #endif

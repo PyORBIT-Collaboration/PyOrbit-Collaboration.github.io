@@ -1,0 +1,55 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh:
+
+Program Listing for File CppPyWrapper.hh
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/CppPyWrapper.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //    CppPyWrapper.hh
+   //
+   // CREATED
+   //    04/22/2003
+   //
+   // DESCRIPTION
+   //    The base class that provides capability to keep the reference to
+   //    the Python class instance that is wrapping the c++ subclassing
+   //    this class.
+   //
+   #ifndef CPP_PY_WRAPPER_H
+   #define CPP_PY_WRAPPER_H
+   
+   #include "Python.h"
+   
+   namespace OrbitUtils{
+   
+   
+       class  CppPyWrapper
+       {
+           public:
+   
+               CppPyWrapper(PyObject* py_wrapperIn);
+   
+               CppPyWrapper();
+   
+               ~CppPyWrapper();
+   
+               void setPyWrapper(PyObject* py_wrapperIn);
+   
+               PyObject* getPyWrapper();
+   
+               private:
+   
+                   PyObject* cpp_py_wrapper;
+   
+       };
+   };
+   
+   #endif

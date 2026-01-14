@@ -1,0 +1,35 @@
+.. _exhale_class_classOrbitUtils_1_1BaseFieldSource:
+
+Class BaseFieldSource
+=====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BaseFieldSource.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Derived Types
+*************
+
+- ``public OrbitUtils::FieldSourceContainer`` (:ref:`exhale_class_classOrbitUtils_1_1FieldSourceContainer`)
+- ``public OrbitUtils::PyBaseFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1PyBaseFieldSource`)
+- ``public OrbitUtils::ShiftedFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1ShiftedFieldSource`)
+- ``public SuperFishFieldSource`` (:ref:`exhale_class_classSuperFishFieldSource`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::BaseFieldSource
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

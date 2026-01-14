@@ -1,0 +1,54 @@
+orbit.utils.fitting
+===================
+
+.. automodule:: orbit.utils.fitting
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BisectionSearchAlgorithm
+      GoldenSectionSearchAlgorithm
+      PolynomialFit
+      RandomSearchAlgorithm
+      ScoreboardActionListener
+      Scorer
+      SearchAgorithm
+      SimplexSearchAlgorithm
+      SolveStopper
+      SolveStopperFactory
+      Solver
+      TrialPoint
+      VariableProxy
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.utils.fitting.BisectionSearch1D
+   orbit.utils.fitting.GoldenSectionSearch1D
+   orbit.utils.fitting.PolynomialFit
+   orbit.utils.fitting.RandomSearch
+   orbit.utils.fitting.SimplexSearch
+   orbit.utils.fitting.Solver_lib
+

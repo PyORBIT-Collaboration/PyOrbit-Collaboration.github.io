@@ -1,0 +1,44 @@
+orbit.space\_charge.sc2dslicebyslice
+====================================
+
+.. automodule:: orbit.space_charge.sc2dslicebyslice
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      setSC2DSliceBySliceAccNodes
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SC2DSliceBySlice_AccNode
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.space_charge.sc2dslicebyslice.scAccNodes
+   orbit.space_charge.sc2dslicebyslice.scLatticeModifications
+

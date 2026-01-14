@@ -1,0 +1,60 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_PyBaseFieldSource.hh:
+
+File PyBaseFieldSource.hh
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/PyBaseFieldSource.hh``)
+-----------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_PyBaseFieldSource.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BaseFieldSource.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BaseFieldSource.hh`)
+
+- ``Python.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_PyBaseFieldSource.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1PyBaseFieldSource`
+

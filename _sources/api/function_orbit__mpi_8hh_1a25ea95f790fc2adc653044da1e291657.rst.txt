@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a25ea95f790fc2adc653044da1e291657:
+
+Function ORBIT_MPI_Comm_set_name
+================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Comm_set_name(MPI_Comm, char *)
+   :project: PyORBIT3

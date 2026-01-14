@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1ada8272dfbece7c79de417f326cf5cc5d:
+
+Function teapot_base::wedgerotate
+=================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::wedgerotate(Bunch *, double, int)
+   :project: PyORBIT3

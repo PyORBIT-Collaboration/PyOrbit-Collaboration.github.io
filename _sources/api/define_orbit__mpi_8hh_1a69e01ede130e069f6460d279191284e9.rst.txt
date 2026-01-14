@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a69e01ede130e069f6460d279191284e9:
+
+Define MPI_MAXLOC
+=================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_MAXLOC
+   :project: PyORBIT3

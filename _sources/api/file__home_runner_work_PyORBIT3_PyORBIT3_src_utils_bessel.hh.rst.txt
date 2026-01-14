@@ -1,0 +1,69 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.hh:
+
+File bessel.hh
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bessel.hh``)
+------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``cmath``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap_slow.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_MatrixRfGap.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF_slow.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF_slow.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Frequency_Cav.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+

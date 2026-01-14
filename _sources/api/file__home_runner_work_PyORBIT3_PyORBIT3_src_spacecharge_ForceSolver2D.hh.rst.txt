@@ -1,0 +1,65 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh:
+
+File ForceSolver2D.hh
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/ForceSolver2D.hh``)
+-------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+- ``Grid2D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh`)
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+- ``string``
+
+- ``wrap_mpi_comm.hh``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.hh`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classForceSolver2D`
+

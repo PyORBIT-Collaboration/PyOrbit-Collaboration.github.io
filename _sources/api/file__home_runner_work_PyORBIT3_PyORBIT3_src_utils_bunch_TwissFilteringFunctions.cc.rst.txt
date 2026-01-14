@@ -1,0 +1,54 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_TwissFilteringFunctions.cc:
+
+File TwissFilteringFunctions.cc
+===============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch/TwissFilteringFunctions.cc``)
+-----------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_TwissFilteringFunctions.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BunchTwissAnalysis.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTwissAnalysis.hh`)
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a3950b18bb1824cef03fbc2c0cfbbf4af`
+

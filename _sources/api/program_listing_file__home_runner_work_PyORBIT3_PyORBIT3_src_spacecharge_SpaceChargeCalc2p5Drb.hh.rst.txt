@@ -1,0 +1,83 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.hh:
+
+Program Listing for File SpaceChargeCalc2p5Drb.hh
+=================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeCalc2p5Drb.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   
+   #ifndef SC_SPACECHARGE_CALC_2P5D_RB_H
+   #define SC_SPACECHARGE_CALC_2P5D_RB_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "BunchExtremaCalculator.hh"
+   
+   #include "Grid1D.hh"
+   #include "Grid2D.hh"
+   #include "PoissonSolverFFT2D.hh"
+   
+   using namespace std;
+   
+   class SpaceChargeCalc2p5Drb: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       SpaceChargeCalc2p5Drb(int xSize, int ySize, int zSize, double xy_ratio_in);
+   
+       SpaceChargeCalc2p5Drb(int xSize, int ySize, int zSize);
+   
+       virtual ~SpaceChargeCalc2p5Drb();
+   
+       void trackBunch(Bunch* bunch, double length, double pipe_radius);
+   
+       Grid2D* getRhoGrid();
+   
+       Grid2D* getPhiGrid();
+   
+       Grid1D* getLongGrid();
+   
+       Grid1D* getLongDerivativeGrid();
+   
+       void setLongAveragingPointsN(int n_points);
+   
+       int getLongAveragingPointsN();
+   
+   private:
+   
+    void bunchAnalysis(Bunch* bunch, double& totalMacrosize, double& x_c, double& y_c, double& a_bunch);
+   
+    void calculateLongDerivative();
+   
+   protected:
+       PoissonSolverFFT2D* poissonSolver;
+       Grid2D* rhoGrid;
+       Grid2D* phiGrid;
+       Grid1D* zGrid;
+       Grid1D* zDerivGrid;
+       OrbitUtils::BunchExtremaCalculator* bunchExtremaCalc;
+   
+       double xy_ratio;
+       int n_long_avg;
+   
+       //auxiliary 5x2 array for Quadratic Curve Fitting
+       double** S_arr;
+   };
+   //end of SC_SPACECHARGE_CALC_2P5D_RB_H
+   #endif

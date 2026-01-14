@@ -1,0 +1,168 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.cc:
+
+Program Listing for File SynchPartRedefinitionZdE.cc
+====================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SynchPartRedefinition/SynchPartRedefinitionZdE.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include "SynchPartRedefinitionZdE.hh"
+   
+   #include <iostream>
+   #include <cmath>
+   #include <cfloat>
+   #include <cstdlib>
+   
+   //#include "Bunch.hh"
+   #include "ParticlesAttributes/ParticleMacroSize.hh"
+   #include "SyncPart.hh"
+   
+   #include "OrbitConst.hh"
+   
+   SynchPartRedefinitionZdE::SynchPartRedefinitionZdE(): CppPyWrapper(NULL)
+   {
+   
+       z_dE_avg_arr = (double* ) malloc (2*sizeof(double));
+       z_dE_avg_arr_MPI = (double* ) malloc (2*sizeof(double));
+   
+       for(int i = 0; i < 2; i++){
+           z_dE_avg_arr[i] = 0.;
+           z_dE_avg_arr_MPI[i] = 0.;
+       }
+   }
+   
+   SynchPartRedefinitionZdE::~SynchPartRedefinitionZdE()
+   {
+       free(z_dE_avg_arr);
+       free(z_dE_avg_arr_MPI);
+   }
+   
+   void SynchPartRedefinitionZdE::analyzeBunch(Bunch* bunch){
+   
+       //initialization
+       for(int i = 0; i < 2; i++){
+           z_dE_avg_arr[i] = 0.;
+           z_dE_avg_arr_MPI[i] = 0.;
+       }
+   
+       int count = 0;
+       double total_macrosize = 0.;
+   
+       bunch->compress();
+       double m_size = 0.;
+       int nParts = bunch->getSize();
+       count += nParts;
+       double** part_coord_arr = bunch->coordArr();
+       int has_msize = bunch->hasParticleAttributes("macrosize");
+       if(has_msize > 0){
+           ParticleMacroSize* macroSizeAttr = (ParticleMacroSize*) bunch->getParticleAttributes("macrosize");
+           double m_size = 0.;
+           for(int ip = 0; ip < nParts; ip++){
+               m_size = macroSizeAttr->macrosize(ip);
+               total_macrosize += m_size;
+               for(int i = 0; i < 2; i++){
+                   z_dE_avg_arr[i] += m_size*part_coord_arr[ip][i+4];
+               }
+           }
+       } else {
+           m_size = 1.0;
+           for(int ip = 0; ip < nParts; ip++){
+               for(int i = 0; i < 2; i++){
+                   z_dE_avg_arr[i] += part_coord_arr[ip][i+4];
+               }
+           }
+           total_macrosize += nParts*m_size;
+       }
+   
+       int count_MPI = 0;
+       ORBIT_MPI_Allreduce(&count,&count_MPI,1,MPI_INT,MPI_SUM,bunch->getMPI_Comm_Local()->comm);
+       count = count_MPI;
+   
+       double total_macrosize_MPI = 0.;
+       ORBIT_MPI_Allreduce(&total_macrosize,&total_macrosize_MPI,1,MPI_DOUBLE,MPI_SUM,bunch->getMPI_Comm_Local()->comm);
+       total_macrosize = total_macrosize_MPI;
+   
+       ORBIT_MPI_Allreduce(z_dE_avg_arr,z_dE_avg_arr_MPI,2,MPI_DOUBLE,MPI_SUM,bunch->getMPI_Comm_Local()->comm);
+   
+       if(fabs(total_macrosize) > 0.){
+           for(int i = 0; i < 2; i++){
+               z_dE_avg_arr[i] = z_dE_avg_arr_MPI[i]/total_macrosize;
+           }
+       }
+   }
+   
+   
+   void SynchPartRedefinitionZdE::centerE(Bunch* bunch){
+       bunch->compress();
+       int nParts = bunch->getSize();
+       analyzeBunch(bunch);
+       double delta_dE = getAvg_dE();
+       shiftE(bunch,delta_dE);
+   }
+   
+   void SynchPartRedefinitionZdE::shiftE(Bunch* bunch,double delta_dE){
+   
+       bunch->compress();
+   
+       int nParts = bunch->getSize();
+   
+       SyncPart* syncPart = bunch->getSyncPart();
+   
+       double mass = syncPart->getMass();
+   
+       double momentum0 = syncPart->getMomentum();
+       double beta0 = syncPart->getBeta();
+       double eKin0 = syncPart->getEnergy();
+   
+       double eKin1 = eKin0 + delta_dE;
+       double momentum1 = syncPart->energyToMomentum(eKin1);
+       syncPart->setMomentum(momentum1);
+       double beta1 = syncPart->getBeta();
+   
+       // the definition of xp = momentumX/momentum_synch_part
+       double x_y_p_coeff = momentum0/momentum1;
+   
+       for(int ip = 0; ip < nParts; ip++){
+           bunch->xp(ip) = x_y_p_coeff*bunch->xp(ip);
+           bunch->yp(ip) = x_y_p_coeff*bunch->yp(ip);
+           bunch->dE(ip) = bunch->dE(ip) - delta_dE;
+       }
+   }
+   
+   void SynchPartRedefinitionZdE::centerZ(Bunch* bunch){
+       bunch->compress();
+       int nParts = bunch->getSize();
+       analyzeBunch(bunch);
+       double delta_z = getAvg_Z();
+       shiftZ(bunch,delta_z);
+   }
+   
+   void SynchPartRedefinitionZdE::shiftZ(Bunch* bunch,double delta_z){
+   
+       bunch->compress();
+   
+       int nParts = bunch->getSize();
+   
+       SyncPart* syncPart = bunch->getSyncPart();
+   
+       double beta = syncPart->getBeta();
+   
+       // the z = c*beta*time (time is the same)
+       double delta_time = delta_z/(OrbitConst::c*beta);
+   
+       for(int ip = 0; ip < nParts; ip++){
+           bunch->z(ip) = bunch->z(ip) + delta_z;
+       }
+   }
+   
+   double SynchPartRedefinitionZdE::getAvg_Z(){
+       return z_dE_avg_arr[0];
+   }
+   
+   double SynchPartRedefinitionZdE::getAvg_dE(){
+       return z_dE_avg_arr[1];
+   }

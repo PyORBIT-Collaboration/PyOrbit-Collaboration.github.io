@@ -1,0 +1,26 @@
+.. _exhale_class_classPoissonSolverFFT2D:
+
+Class PoissonSolverFFT2D
+========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT2D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public PoissonSolver2D`` (:ref:`exhale_class_classPoissonSolver2D`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: PoissonSolverFFT2D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

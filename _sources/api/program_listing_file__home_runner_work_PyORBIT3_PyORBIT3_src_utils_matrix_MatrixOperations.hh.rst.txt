@@ -1,0 +1,40 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.hh:
+
+Program Listing for File MatrixOperations.hh
+============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/matrix/MatrixOperations.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef __MATRIX_OPERATIONS_H_
+   #define __MATRIX_OPERATIONS_H_
+   
+   #include "Matrix.hh"
+   #include "PhaseVector.hh"
+   #include "Bunch.hh"
+   
+   namespace OrbitUtils{
+   
+   
+       class MatrixOperations{
+       public:
+   
+           static int invert(double **a, int n);
+   
+           static int invert(Matrix* matrix);
+   
+           static int mult(PhaseVector* v, Matrix* mtrx, PhaseVector* v_res);
+   
+           static int mult(Matrix* mtrx, PhaseVector* v, PhaseVector* v_res);
+   
+           static int det(Matrix* mtrx_in, double& det);
+   
+           static void track(Bunch* bunch,Matrix* mtrx);
+       };
+   };
+   
+   #endif

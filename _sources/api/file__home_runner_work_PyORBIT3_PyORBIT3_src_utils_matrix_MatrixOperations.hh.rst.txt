@@ -1,0 +1,68 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.hh:
+
+File MatrixOperations.hh
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/matrix``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/matrix/MatrixOperations.hh``)
+-----------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+- ``Matrix.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_Matrix.hh`)
+
+- ``PhaseVector.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_PhaseVector.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1MatrixOperations`
+

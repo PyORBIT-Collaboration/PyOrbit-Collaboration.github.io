@@ -1,0 +1,6 @@
+orbit.diagnostics.profiles
+==========================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autofunction:: profiles

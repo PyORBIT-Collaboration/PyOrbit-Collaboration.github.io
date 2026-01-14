@@ -1,0 +1,55 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh:
+
+Program Listing for File SynchPartRedefinitionZdE.hh
+====================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SynchPartRedefinition/SynchPartRedefinitionZdE.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef SYNCH_PARTICLE_REDEFINITION_H
+   #define SYNCH_PARTICLE_REDEFINITION_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Bunch.hh"
+   
+   using namespace std;
+   
+   
+   class SynchPartRedefinitionZdE: public OrbitUtils::CppPyWrapper
+   {
+       public:
+   
+           SynchPartRedefinitionZdE();
+   
+           virtual ~SynchPartRedefinitionZdE();
+   
+           void analyzeBunch(Bunch* bunch);
+   
+       void centerE(Bunch* bunch);
+   
+       void shiftE(Bunch* bunch,double delta_dE);
+   
+       void centerZ(Bunch* bunch);
+   
+       void shiftZ(Bunch* bunch,double delta_z);
+   
+           double getAvg_Z();
+   
+           double getAvg_dE();
+   
+       private:
+   
+           double* z_dE_avg_arr;
+           double* z_dE_avg_arr_MPI;
+   
+   
+   };
+   
+   #endif
+   //endif for SYNCH_PARTICLE_REDEFINITION_H

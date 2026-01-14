@@ -1,0 +1,47 @@
+orbit.space\_charge.sc1d
+========================
+
+.. automodule:: orbit.space_charge.sc1d
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addLongitudinalSpaceChargeNode
+      addLongitudinalSpaceChargeNodeAsChild
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BetFreqDep_SC1D_AccNode
+      FreqDep_SC1D_AccNode
+      SC1D_AccNode
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.space_charge.sc1d.sc1DNode
+   orbit.space_charge.sc1d.scLatticeModifications
+

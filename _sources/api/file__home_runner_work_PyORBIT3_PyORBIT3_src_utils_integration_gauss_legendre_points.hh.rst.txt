@@ -1,0 +1,55 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.hh:
+
+File gauss_legendre_points.hh
+=============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration/gauss_legendre_points.hh``)
+---------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``OU_Function.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_Function.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+

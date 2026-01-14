@@ -1,0 +1,50 @@
+﻿orbit.impedances
+================
+
+.. automodule:: orbit.impedances
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addImpedanceNode
+      addImpedanceNodeAsChild
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BetFreqDep_LImpedance_Node
+      BetFreqDep_TImpedance_Node
+      FreqDep_LImpedance_Node
+      FreqDep_TImpedance_Node
+      LImpedance_Node
+      TImpedance_Node
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.impedances.ImpedanceLatticeModifications
+   orbit.impedances.ImpedanceNode
+

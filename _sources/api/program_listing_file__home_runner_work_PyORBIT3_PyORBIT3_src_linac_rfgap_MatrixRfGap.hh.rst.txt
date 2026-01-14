@@ -1,0 +1,46 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_MatrixRfGap.hh:
+
+Program Listing for File MatrixRfGap.hh
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_MatrixRfGap.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap/MatrixRfGap.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   
+   #ifndef MATRIX_RF_GAP_H
+   #define MATRIX_RF_GAP_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   using namespace std;
+   
+   
+   class MatrixRfGap: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+     MatrixRfGap();
+   
+     virtual ~MatrixRfGap();
+   
+       static void trackBunch(Bunch* bunch, double frequency, double E0TL, double phase);
+   
+   };
+   
+   #endif

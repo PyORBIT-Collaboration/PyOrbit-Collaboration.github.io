@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1acb65701eb91467186e12ef06be59cd0c:
+
+Function OrbitUtils::BSign
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::BSign(double, double)
+   :project: PyORBIT3

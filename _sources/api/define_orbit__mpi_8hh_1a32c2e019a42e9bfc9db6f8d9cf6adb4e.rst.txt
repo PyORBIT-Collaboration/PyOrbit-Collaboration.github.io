@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a32c2e019a42e9bfc9db6f8d9cf6adb4e:
+
+Define MPI_MAX_PROCESSOR_NAME
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_MAX_PROCESSOR_NAME
+   :project: PyORBIT3

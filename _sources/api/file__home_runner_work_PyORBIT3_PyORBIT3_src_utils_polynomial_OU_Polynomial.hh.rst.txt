@@ -1,0 +1,62 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_polynomial_OU_Polynomial.hh:
+
+File OU_Polynomial.hh
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_polynomial>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/polynomial``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/polynomial/OU_Polynomial.hh``)
+------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_polynomial_OU_Polynomial.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF_slow.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_polynomial_OU_Polynomial.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1Polynomial`
+

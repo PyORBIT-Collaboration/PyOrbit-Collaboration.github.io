@@ -1,0 +1,35 @@
+.. _exhale_class_classOrbitUtils_1_1ShiftedFieldSource:
+
+Class ShiftedFieldSource
+========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::BaseFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1BaseFieldSource`)
+
+
+Derived Types
+*************
+
+- ``public OrbitUtils::DipoleFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1DipoleFieldSource`)
+- ``public OrbitUtils::LoopFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1LoopFieldSource`)
+- ``public OrbitUtils::MagnetFieldSourceGrid3D`` (:ref:`exhale_class_classOrbitUtils_1_1MagnetFieldSourceGrid3D`)
+- ``public OrbitUtils::QuadFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1QuadFieldSource`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::ShiftedFieldSource
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

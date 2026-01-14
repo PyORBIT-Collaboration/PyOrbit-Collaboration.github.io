@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a478ad5d8921456a83559ac35ce1a3b59:
+
+Define MPI_MAX_NAME_STRING
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_MAX_NAME_STRING
+   :project: PyORBIT3

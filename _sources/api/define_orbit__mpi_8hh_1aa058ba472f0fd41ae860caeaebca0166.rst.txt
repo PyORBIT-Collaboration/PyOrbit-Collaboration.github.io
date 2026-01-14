@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1aa058ba472f0fd41ae860caeaebca0166:
+
+Define MPI_SUM
+==============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_SUM
+   :project: PyORBIT3

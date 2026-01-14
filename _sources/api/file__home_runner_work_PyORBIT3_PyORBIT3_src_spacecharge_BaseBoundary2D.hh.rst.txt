@@ -1,0 +1,63 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh:
+
+File BaseBoundary2D.hh
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/BaseBoundary2D.hh``)
+--------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+- ``Grid2D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh`)
+
+- ``string``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classBaseBoundary2D`
+

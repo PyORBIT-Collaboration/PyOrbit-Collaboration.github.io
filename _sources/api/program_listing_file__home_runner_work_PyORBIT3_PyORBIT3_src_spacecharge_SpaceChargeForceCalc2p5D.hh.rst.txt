@@ -1,0 +1,72 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh:
+
+Program Listing for File SpaceChargeForceCalc2p5D.hh
+====================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeForceCalc2p5D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //Calculate the space charge effect of the bunch in the 2.5D
+   
+   #ifndef SC_SPACEFORCECHARGE_CALC_2P5D_H
+   #define SC_SPACEFORCECHARGE_CALC_2P5D_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "BunchExtremaCalculator.hh"
+   
+   #include "Grid1D.hh"
+   #include "Grid2D.hh"
+   #include "ForceSolverFFT2D.hh"
+   #include "BaseBoundary2D.hh"
+   
+   using namespace std;
+   
+   class SpaceChargeForceCalc2p5D: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       SpaceChargeForceCalc2p5D(int xSize, int ySize, int zSize, double xy_ratio_in);
+   
+       SpaceChargeForceCalc2p5D(int xSize, int ySize, int zSize);
+   
+       virtual ~SpaceChargeForceCalc2p5D();
+   
+       void trackBunch(Bunch* bunch, double length);
+   
+       Grid2D* getRhoGrid();
+   
+       Grid2D* getForceGridX();
+   
+       Grid2D* getForceGridY();
+   
+       Grid1D* getLongGrid();
+   
+   private:
+    void bunchAnalysis(Bunch* bunch, double& totalMacrosize);
+   
+   protected:
+       ForceSolverFFT2D* forceSolver;
+       Grid2D* rhoGrid;
+       Grid2D* phiGrid;
+       Grid2D* forceGridX;
+       Grid2D* forceGridY;
+       Grid1D* zGrid;
+       OrbitUtils::BunchExtremaCalculator* bunchExtremaCalc;
+   
+   };
+   //end of SC_SPACEFORCECHARGE_CALC_2P5D_H
+   #endif

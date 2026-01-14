@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8cc_1abd45e65aa572546db1c43af7073ce218:
+
+Function error_base::DipoleKickerOsc
+====================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::DipoleKickerOsc(Bunch *, double, double, double)
+   :project: PyORBIT3

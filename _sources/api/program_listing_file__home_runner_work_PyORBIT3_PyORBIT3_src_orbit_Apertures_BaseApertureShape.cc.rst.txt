@@ -1,0 +1,83 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.cc:
+
+Program Listing for File BaseApertureShape.cc
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/BaseApertureShape.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include "BaseApertureShape.hh"
+   
+   #include <iostream>
+   #include <cmath>
+   #include <cfloat>
+   #include <cstdlib>
+   
+   //
+   // NAME
+   //
+   //   BaseApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   //   BaseApertureShape defines the interface for BaseApertureShape subclasses.
+   //   It decides if particular particle in the bunch is inside the aperture shape.
+   //
+   
+   BaseApertureShape::BaseApertureShape(): CppPyWrapper(NULL)
+   {
+       shapeName = "no_shape";
+       typeName = "no_type";
+       x_center = 0.;
+       y_center = 0.;
+   }
+   
+   BaseApertureShape::~BaseApertureShape()
+   {
+   }
+   
+   int BaseApertureShape::inside(Bunch* bunch, int count)
+   {
+       return 0;
+   }
+   
+   void BaseApertureShape::setCenterX(double x_center)
+   {
+       this->x_center = x_center;
+   }
+   
+   double BaseApertureShape::getCenterX()
+   {
+       return x_center;
+   }
+   
+   void BaseApertureShape::setCenterY(double y_center)
+   {
+       this->y_center = y_center;
+   }
+   
+   double BaseApertureShape::getCenterY()
+   {
+       return y_center;
+   }
+   
+   
+   string BaseApertureShape::getName()
+   {
+       return shapeName;
+   }
+   
+   void BaseApertureShape::setName(string shapeNameIn)
+   {
+       shapeName = shapeNameIn;
+   }
+   
+   string BaseApertureShape::getTypeName()
+   {
+       return typeName;
+   }

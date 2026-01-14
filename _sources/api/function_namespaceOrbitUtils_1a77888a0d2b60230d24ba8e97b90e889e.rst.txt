@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a77888a0d2b60230d24ba8e97b90e889e:
+
+Function OrbitUtils::transport_mtrx_from_init_coords(Bunch \*, Matrix \*)
+=========================================================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::transport_mtrx_from_init_coords(Bunch *, Matrix *)
+   :project: PyORBIT3

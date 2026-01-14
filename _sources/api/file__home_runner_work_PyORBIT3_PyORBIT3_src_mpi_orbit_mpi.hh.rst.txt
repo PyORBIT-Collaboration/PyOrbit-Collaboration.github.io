@@ -1,0 +1,396 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh:
+
+File orbit_mpi.hh
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_mpi>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/mpi``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/mpi/orbit_mpi.hh``)
+-------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Python.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap_slow.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_MatrixRfGap.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF_slow.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF_slow.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_LImpedance.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleAttributes.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Barrier_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Dual_Harmonic_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Frequency_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Harmonic_Cav.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_MatrixGenerator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_PyExternalEffects.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_FieldSourceContainer.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_MathPolynomial.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_Function.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_SplineCH.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_PyBaseFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_TwissFilteringFunctions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_DipoleFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_LoopFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.hh`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_Matrix.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_PhaseVector.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_polynomial_OU_Polynomial.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_statistics_StatMoments2D.hh`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structMPI__Status`
+
+- :ref:`exhale_struct_structpyORBIT__MPI__Comm`
+
+- :ref:`exhale_struct_structpyORBIT__MPI__Datatype`
+
+- :ref:`exhale_struct_structpyORBIT__MPI__Group`
+
+- :ref:`exhale_struct_structpyORBIT__MPI__Op`
+
+- :ref:`exhale_struct_structpyORBIT__MPI__Request`
+
+- :ref:`exhale_struct_structpyORBIT__MPI__Status`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a88d8a4fe5021ee59b3291d29d7a998c9`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1ac45117960db64985a092d67515d24813`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a0ff4ad0ab8d5efdc288d4b9a6c3a7827`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a8d4cb78769527d6c0f85fea324040d62`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1aeb3ba3e444668f7e4b7bdfecdac2cc9a`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a5da1eff2a57d8c26c27153ee40acb269`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a24b2c84f43a02cf8a83734f1cad96eab`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a4633fe24c0b4df3e6c0390b5ea78436f`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a0cd2809887629b17e813a41d5637f46e`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1acee13a335d51e30afad0eaf87f4faa2e`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1afa2f2beac5e6f10fe42add29885436f2`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a12472e2e9e641a1a3ab75f1c0f0d98b5`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a25ea95f790fc2adc653044da1e291657`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a1160df73bb83ccc37f490208e50e92e6`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a19791236f2490ea410657d944f47560e`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a2709cb3c7623065c9acfd44790b062fc`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1aeaa6bbc00b8a3fdf5a1cb0767600d3dd`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a88a4f8f4bc43a7b01a4ce981a9a2f435`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1acf1bbe8fdfb1fa4c23645f8ccc6f8026`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1aa4fcf9825e805fb725fa38ba35113a7e`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a5508fbd2e5b32cdde7d0d232317e97b2`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a3c20bb439a44f86ddc3cd5e9f63eefaa`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a3ff8961d7aca957ec82e85447a9c30f2`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a73ee1378bb73daf36a24ffe94ae4ef12`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1ab78c3386b01313fb71d58ec07699267c`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a91c287f82a160b6e18b5ac4f2edac7ae`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a539e4fc99d1ef260b37d73ef72d9f5bd`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a77a0a0d56a41d6dc4679645a71e11fd5`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1aba90a8fcfd01300ea15ec8a43b608f3f`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a099a3d089816f1f44625d691019a0dfc`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1aaac208bcc5acdc37622a7cd560ae8257`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a1aafb4de63ecba901a5165b691ec22e0`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1ad5a84a819abc3c879fb6d4af83f0105d`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a204b2bc58c2a28f72981ad3011cd9068`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1ad70408c50a717dfa0ced89a6c810c7cb`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a2435e69f420b9246fde091766aba98ba`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1ac04b00a2e3d21ffbe1c7234ab8d77eff`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a75a6dc3bc80a654fa1b99d83e1b07839`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a9f77cd15ada44eafd62d76567488687e`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a25968225622e66c44289f714976dfed1`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a9d371e7171aa7bd02028a9ab7bceca82`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a76986332d61c51b094ab9afa99076029`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1acf248df6f3ab815a6335ee1169798036`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a60acfc2f8766268f7de7c647a9ed9d43`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a74872f6ada77717c6200fbf4b5c0247e`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1abf88136dfa2327dd6cf1de0fe59ae7bd`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aad01846ca8da972658f74b9affe1d5e8`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a89445dffa33bb6aea4d49bab508a3d30`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a4b2be9d70c247bb3d0fa2d68310135ad`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1af225a70708fa59537d0a2e0e7cc951af`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1ab2ec6e9369bfb9920e01ae1deb67b14a`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a5b3d59a5aa038a03f5fee91c426476b9`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1afeb16fd9ffcb668470d46e24fef55080`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1ac521acab90e22ecd11466d7229986673`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a117133520e81a669c853602ac650d9d4`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a5dcc99c598f5bd6968077f68dea4376e`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a2df6a15627583d5e6f5a48550644cbef`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a4089fa2007bede1c392241cb3a5bd5ba`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a248e55efe62ab7ba021822dbe63e2cf2`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aafd1dc0086079e7904385538c54c9c8f`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a44a340eb7b7f8ee6027b48098fa727b9`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a3b8766607a0e4f2d4dd41d5fddcebcde`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a70e1d8fc4527571226fa92031a4843a6`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a95a656541f84f112f0f3b2852ccbc362`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a6beca620f3741bc6c31a36c45828fcd8`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a43ed7cd86d20f84db849adc64a09415e`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aad5d3a42ed21a43374f28a92f5706411`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1ab5b220f368fa90f52cb17dba5ea26e52`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1ae859d7201ac7d6b421dbfa08ba60e7b4`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1abaf437ee14a6510e13cb47f5c63bbbf7`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a89f60bee88d8a8d4df7741623ea58ae1`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a9298cd22fbf7f2ff37909bc0008772b1`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a80d80987b473f4a13b0cc0384eddb51b`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aecbc3eab345ce4eceaadf5111f4847f8`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a478ad5d8921456a83559ac35ce1a3b59`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a32c2e019a42e9bfc9db6f8d9cf6adb4e`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a69e01ede130e069f6460d279191284e9`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aa2fecfa16d35e8fa3894c512a527b73f`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a8fa941be0ff7c437ef4b6ba63f530f38`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a703581dc23026866f846404ea26b8931`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a19e82b93bc42cbd336f522625e93ceb4`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a9e474e5dd7d7e4b3461ba8effc8019f8`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aa64ade05a9862b36dd04816c2701d112`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a004dd3ebf764c8c42e600ae5513e4dbc`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aa058ba472f0fd41ae860caeaebca0166`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1aff6b3ceb2c22396e5eab7f509b3da0dc`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a93e78a1b82329d0439dfd0668ddb39e4`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a89b88391b03a73c2ca5eaeb926b8d1cc`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1ac87ab272940388b59dfd01d5cdfff90a`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a8a26b50ce81c5d801ee83a9ab4d2d32f`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a9b2b3fcdfe74a7a8b6d98a14d92a4b43`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1acdbf7a6bf241b33828d6d38aac098c0f`
+
+- :ref:`exhale_define_orbit__mpi_8hh_1a3869d282031f6ea6b50fdb980b758420`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_orbit__mpi_8hh_1a68c509d4adb3f4a1d6fe3a9b0b87c7b9`
+
+- :ref:`exhale_typedef_orbit__mpi_8hh_1affc17fe964f9f670fb06e09d6134b4ff`
+
+- :ref:`exhale_typedef_orbit__mpi_8hh_1a2e7770334e9e65834ce3c95dd0c3a50f`
+
+- :ref:`exhale_typedef_orbit__mpi_8hh_1a1e6360539c256e76b432da612d0ec399`
+
+- :ref:`exhale_typedef_orbit__mpi_8hh_1a240e9d13a157e03c75e42306b13cd8d8`
+

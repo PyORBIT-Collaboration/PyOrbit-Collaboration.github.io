@@ -1,0 +1,32 @@
+.. _exhale_class_classBaseBoundary2D:
+
+Class BaseBoundary2D
+====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Derived Type
+************
+
+- ``public ShapedBoundary2D`` (:ref:`exhale_class_classShapedBoundary2D`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: BaseBoundary2D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

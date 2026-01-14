@@ -1,0 +1,17 @@
+.. _exhale_struct_structpyORBIT__Object:
+
+Struct pyORBIT_Object
+=====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_main_pyORBIT_Object.hh`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: pyORBIT_Object
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

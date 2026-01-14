@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1ae275e5ddad486f95d9d3ed001b6b1177:
+
+Function teapot_base::wedgedrift
+================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::wedgedrift(Bunch *, double, int)
+   :project: PyORBIT3

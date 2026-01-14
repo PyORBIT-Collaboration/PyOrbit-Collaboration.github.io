@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a44a340eb7b7f8ee6027b48098fa727b9:
+
+Define MPI_FLOAT
+================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_FLOAT
+   :project: PyORBIT3

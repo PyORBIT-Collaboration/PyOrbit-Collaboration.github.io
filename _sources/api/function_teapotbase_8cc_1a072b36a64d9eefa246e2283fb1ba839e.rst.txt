@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1a072b36a64d9eefa246e2283fb1ba839e:
+
+Function teapot_base::delete_factorial
+======================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::delete_factorial()
+   :project: PyORBIT3

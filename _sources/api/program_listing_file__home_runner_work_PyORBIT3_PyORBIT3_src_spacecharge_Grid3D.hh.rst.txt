@@ -1,0 +1,183 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.hh:
+
+Program Listing for File Grid3D.hh
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/Grid3D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //    Grid3D.cc
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    11/05/2010
+   //
+   // DESCRIPTION
+   //    Source code for the class "Grid3D" that is used to operate with 3D arrays
+   //
+   #ifndef SC_GRID3D_HH
+   #define SC_GRID3D_HH
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Grid2D.hh"
+   
+   #include <iostream>
+   #include <cstdlib>
+   
+   class Grid3D: public OrbitUtils::CppPyWrapper
+   {
+   public:
+     //--------------------------------------
+     //the public methods of the Grid3D class
+     //--------------------------------------
+   
+     Grid3D(int nX, int nY, int nZ);
+   
+     virtual ~Grid3D();
+   
+     double*** getArr3D();
+   
+     double**  getSlice2D(int zInd);
+   
+     Grid2D* getGrid2D(int zInd);
+   
+     int getSizeX();
+   
+     int getSizeY();
+   
+     int getSizeZ();
+   
+     double getGridX(int index);
+   
+     double getGridY(int index);
+   
+     double getGridZ(int index);
+   
+     double getStepX();
+   
+     double getStepY();
+   
+     double getStepZ();
+   
+     double getMaxX();
+   
+     double getMinX();
+   
+     double getMaxY();
+   
+     double getMinY();
+   
+     double getMaxZ();
+   
+     double getMinZ();
+   
+     void setGridX(double xMin, double xMax);
+   
+     void setGridY(double yMin, double yMax);
+   
+     void setGridZ(double zMin, double zMax);
+   
+       double getValueOnGrid(int ix, int iy, int iz);
+   
+       void setValue(double value, int ix, int iy, int iz);
+   
+     void setZero();
+   
+     void multiply(double coeff);
+   
+       void setLongWrapping(int isWrapped);
+   
+       int getLongWrapping();
+   
+       void binBunch(Bunch* bunch);
+   
+       void binBunch(Bunch* bunch, double lambda);
+       
+       void binBunchSlice2D(Bunch* bunch);
+       
+       void binValueSlice2D(double macroSize, double x, double y, double z);    
+   
+     void binValue(double macroSize, double x, double y, double z);
+   
+     void calcGradient(double x,double& gradX,
+             double y,double& gradY,
+               double z,double& gradZ);
+   
+     double getValue(double x,double y,double z);
+   
+     double getSum();
+   
+     double getSliceSum(int iZ);
+   
+     double getSliceSum(double z);
+   
+     void synchronizeMPI(pyORBIT_MPI_Comm* pyComm);
+   
+   protected:
+     //---------------------------------------
+     //the protected methods of the Grid3D class
+     //---------------------------------------
+   
+     double calcValueOnX(int iX, int iY, int iZ,
+                         double Wxm,double Wx0,double Wxp);
+   
+     double calcValueOnY(int iX, int iY, int iZ,
+                         double Wym,double Wy0,double Wyp);
+   
+     double calcSheetGradient(int iZ,int iX,int iY,
+                  double xm,double x0,double xp,
+                  double ym,double y0,double yp);
+   
+       void getIndAndFracX(double x, int& ind, double& frac);
+   
+       void getIndAndFracY(double y, int& ind, double& frac);
+   
+     void getGridIndAndFrac(double x, int& xInd, double& xFrac,
+                double y, int& yInd, double& yFrac,
+                double z, int& zInd, double& zFrac);
+   
+   protected:
+     //---------------------------------------
+     //the protected members of the Grid3D class
+     //---------------------------------------
+   
+       //3D array
+     double*** Arr3D;
+   
+     //Grid2D array
+     Grid2D** grid2dArr;
+   
+   // PRIVATE MEMBERS
+   //    Arr3D;           holds set of double on each 3D grid points
+   //    nZ_,nX_,nY_;     number of bins in x,y,z
+   //    xMin_,xMax_,yMin_,yMax_,zMin_,zMax_ - the ranges of 3D Grids
+   //    dx_,dy_,dz_;     the grid steps in x,y,z
+   
+     int nZ_,nX_,nY_;
+     double xMin_,xMax_,yMin_,yMax_,zMin_,zMax_;
+     double dx_, dy_, dz_;
+   
+     //it is equal 0 we do not have longitudinal wrapping
+     //if it is 1 we have wrapping. By default it is 0.
+     int longWrapping;
+   
+   };
+   #endif

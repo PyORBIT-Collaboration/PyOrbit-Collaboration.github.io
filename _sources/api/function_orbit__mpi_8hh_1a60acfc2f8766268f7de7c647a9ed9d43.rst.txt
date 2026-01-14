@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a60acfc2f8766268f7de7c647a9ed9d43:
+
+Function ORBIT_MPI_Wait
+=======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Wait(MPI_Request *, MPI_Status *)
+   :project: PyORBIT3

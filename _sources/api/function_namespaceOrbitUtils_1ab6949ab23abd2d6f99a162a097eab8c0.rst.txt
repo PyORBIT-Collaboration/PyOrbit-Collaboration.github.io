@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1ab6949ab23abd2d6f99a162a097eab8c0:
+
+Function OrbitUtils::get_z
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::get_z(int)
+   :project: PyORBIT3

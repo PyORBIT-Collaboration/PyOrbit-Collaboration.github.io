@@ -1,0 +1,47 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_MatrixGenerator.cc:
+
+File MatrixGenerator.cc
+=======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_teapot>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/teapot``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/teapot/MatrixGenerator.cc``)
+----------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_MatrixGenerator.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``MatrixGenerator.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_MatrixGenerator.hh`)
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_teapot_base`
+

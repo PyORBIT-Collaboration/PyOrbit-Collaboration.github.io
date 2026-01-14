@@ -1,0 +1,30 @@
+.. _dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions:
+
+
+Directory MaterialInteractions
+==============================
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+*Directory path:* ``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.hh`
+
+

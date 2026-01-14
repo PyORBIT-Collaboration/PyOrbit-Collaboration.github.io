@@ -1,0 +1,30 @@
+orbit.utils.phaseOperations
+===========================
+
+.. automodule:: orbit.utils.phaseOperations
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      phaseNearTargetPhase
+      phaseNearTargetPhaseDeg
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

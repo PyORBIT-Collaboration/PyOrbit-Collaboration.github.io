@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1ad44a218d06d340b4e42757a18da4416b:
+
+Function teapot_base::kick
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::kick(Bunch *, double, double, double, int)
+   :project: PyORBIT3

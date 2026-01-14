@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1ac55f0a408bfb206a234d1d21050d51ab:
+
+Function OrbitUtils::get_rho
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::get_rho(int)
+   :project: PyORBIT3

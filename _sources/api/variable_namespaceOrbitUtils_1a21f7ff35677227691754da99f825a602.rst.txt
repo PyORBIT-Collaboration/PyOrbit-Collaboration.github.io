@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a21f7ff35677227691754da99f825a602:
+
+Variable OrbitUtils::aluminum
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::aluminum
+   :project: PyORBIT3

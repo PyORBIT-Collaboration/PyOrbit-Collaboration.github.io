@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a88d8a4fe5021ee59b3291d29d7a998c9:
+
+Function ORBIT_MPI_Allreduce
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Allreduce(void *, void *, int, MPI_Datatype, MPI_Op, MPI_Comm)
+   :project: PyORBIT3

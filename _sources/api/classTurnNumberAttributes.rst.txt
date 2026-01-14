@@ -1,0 +1,26 @@
+.. _exhale_class_classTurnNumberAttributes:
+
+Class TurnNumberAttributes
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_TurnNumberAttributes.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public ParticleAttributes`` (:ref:`exhale_class_classParticleAttributes`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: TurnNumberAttributes
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

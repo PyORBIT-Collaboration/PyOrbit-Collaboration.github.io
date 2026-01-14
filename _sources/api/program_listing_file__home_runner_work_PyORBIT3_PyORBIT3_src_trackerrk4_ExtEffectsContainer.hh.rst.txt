@@ -1,0 +1,73 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.hh:
+
+Program Listing for File ExtEffectsContainer.hh
+===============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/trackerrk4/ExtEffectsContainer.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef EXTEFFECTSCONTAINER_HH_
+   #define EXTEFFECTSCONTAINER_HH_
+   
+   
+   
+   #include "Python.h"
+   
+   #include "ExternalEffects.hh"
+   #include <vector>
+   
+   
+   
+   using namespace TrackerRK4;
+   using namespace OrbitUtils;
+   
+   
+   
+       class  ExtEffectsContainer: public ExternalEffects
+       {
+       public:
+   
+           ExtEffectsContainer();
+   
+           ~ExtEffectsContainer();
+   
+           void AddEffect(ExternalEffects* eff);
+   
+           void setupEffects(Bunch* bunch);
+   
+           /*it prepares initial coordinates and impulses before rk step*/
+           void prepareEffects(Bunch* bunch, double t);
+   
+           void finalizeEffects(Bunch* bunch);
+   
+           void applyEffects(Bunch* bunch,
+               double t, double t_step,
+               BaseFieldSource* fieldSource,
+               RungeKuttaTracker* tracker);
+   
+           void applyEffectsForEach(Bunch* bunch, int index,
+               double* y_in_vct, double* y_out_vct,
+               double t, double t_step,
+               BaseFieldSource* fieldSource,
+               RungeKuttaTracker* tracker);
+   
+           private:
+   
+               vector<ExternalEffects*>    ref;
+               vector<ExternalEffects*>    ref_setup;
+               vector<ExternalEffects*>    ref_prepare;
+               vector<ExternalEffects*>    ref_apply;
+               vector<ExternalEffects*>    ref_finalize;
+   
+       };
+   
+   
+   
+   
+   
+   
+   #endif /*EXTEFFECTSCONTAINER_HH_*/

@@ -1,0 +1,50 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Frequency_Cav.cc:
+
+File Frequency_Cav.cc
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/RFCavities``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/RFCavities/Frequency_Cav.cc``)
+------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Frequency_Cav.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+- ``Frequency_Cav.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Frequency_Cav.hh`)
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``ParticleMacroSize.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh`)
+
+- ``bessel.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.hh`)
+
+- ``cmath``
+
+- ``iostream``
+
+
+
+
+

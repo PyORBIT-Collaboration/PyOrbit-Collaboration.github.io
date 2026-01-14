@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a5da1eff2a57d8c26c27153ee40acb269:
+
+Function ORBIT_MPI_Comm_dup
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Comm_dup(MPI_Comm, MPI_Comm *)
+   :project: PyORBIT3

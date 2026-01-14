@@ -1,0 +1,81 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.hh:
+
+Program Listing for File SpaceChargeCalcUnifEllipse.hh
+======================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeCalcUnifEllipse.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   
+   #ifndef SC_SPACECHARGE_CALC_UNIFORM_ELLIPSE_HH
+   #define SC_SPACECHARGE_CALC_UNIFORM_ELLIPSE_HH
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "UniformEllipsoidFieldCalculator.hh"
+   
+   using namespace std;
+   
+   class SpaceChargeCalcUnifEllipse: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       SpaceChargeCalcUnifEllipse(int nEllipses_in);
+   
+       virtual ~SpaceChargeCalcUnifEllipse();
+   
+       void trackBunch(Bunch* bunch, double length);
+   
+     void bunchAnalysis(Bunch* bunch);
+   
+       void calculateField(double x,  double y,  double z, double& ex, double& ey, double& ez) ;
+   
+       UniformEllipsoidFieldCalculator* getEllipsFieldCalculator(int ellipse_index);
+   
+       int getNEllipses();
+   
+   private:
+   
+   protected:
+   
+       //number of uniform ellipses
+       int nEllipses;
+   
+       //total macrosize
+       double total_macrosize;
+   
+       //parameters of the distribution
+       double x_center, y_center, z_center;
+       double x2_avg, y2_avg, z2_avg;
+     double xMin, xMax, yMin, yMax, zMin, zMax;
+   
+       //sizes of the biggest ellipsoid
+       double a_ellips, b_ellips, c_ellips;
+       double a2_ellips, b2_ellips, c2_ellips;
+   
+       //ellipse calculators
+       UniformEllipsoidFieldCalculator** ellipsoidCalc_arr;
+   
+       //total macrosize in each ellipsoid
+       double* macroSizesEll_arr;
+       double* macroSizesEll_MPI_arr;
+   
+   };
+   //end of SC_SPACECHARGE_CALC_UNIFORM_ELLIPSE_HH
+   #endif

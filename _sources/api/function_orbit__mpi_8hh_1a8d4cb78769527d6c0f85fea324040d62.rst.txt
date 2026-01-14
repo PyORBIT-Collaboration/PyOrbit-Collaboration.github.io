@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a8d4cb78769527d6c0f85fea324040d62:
+
+Function ORBIT_MPI_Comm_compare
+===============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Comm_compare(MPI_Comm, MPI_Comm, int *)
+   :project: PyORBIT3

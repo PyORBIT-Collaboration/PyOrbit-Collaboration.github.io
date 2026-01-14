@@ -1,0 +1,57 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_SuperFishFieldSource.hh:
+
+File SuperFishFieldSource.hh
+============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap/SuperFishFieldSource.hh``)
+--------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_SuperFishFieldSource.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BaseFieldSource.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BaseFieldSource.hh`)
+
+- ``Grid2D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh`)
+
+- ``cmath``
+
+- ``cstdlib``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_SuperFishFieldSource.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classSuperFishFieldSource`
+

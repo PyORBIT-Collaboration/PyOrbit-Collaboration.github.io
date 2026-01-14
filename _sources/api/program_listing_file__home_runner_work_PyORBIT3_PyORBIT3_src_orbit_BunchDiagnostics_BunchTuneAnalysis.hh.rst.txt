@@ -1,0 +1,53 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTuneAnalysis.hh:
+
+Program Listing for File BunchTuneAnalysis.hh
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTuneAnalysis.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/BunchDiagnostics/BunchTuneAnalysis.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef BUNCH_TUNE_ANALYSIS_H
+   #define BUNCH_TUNE_ANALYSIS_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   #include "Bunch.hh"
+   #include "BunchTwissAnalysis.hh"
+   
+   using namespace std;
+   
+   
+   class BunchTuneAnalysis: public OrbitUtils::CppPyWrapper
+   {
+       public:
+   
+           BunchTuneAnalysis();
+   
+           virtual ~BunchTuneAnalysis();
+   
+           void analyzeBunch(Bunch* bunch);
+   
+           //** Assigns Twiss values at location of calculator */
+           void assignTwiss(double bx, double ax, double dx, double dpx, double by, double ay);
+   
+           double getTune(int ic);
+   
+   
+       private:
+           //** Twiss */
+           double betax;
+           double alphax;
+           double etax;
+           double etapx;
+           double betay;
+           double alphay;
+   
+   };
+   
+   #endif
+   //endif for BUNCH_TUNE_ANALYSIS_H

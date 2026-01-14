@@ -1,0 +1,14 @@
+.. _exhale_typedef_orbit__mpi_8hh_1a240e9d13a157e03c75e42306b13cd8d8:
+
+Typedef MPI_Request
+===================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: MPI_Request
+   :project: PyORBIT3

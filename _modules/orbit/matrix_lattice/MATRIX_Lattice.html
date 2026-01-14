@@ -1,0 +1,899 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.matrix_lattice.MATRIX_Lattice &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/matrix_lattice/MATRIX_Lattice';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.matrix_lattice.MATRIX_Lattice</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.matrix_lattice.MATRIX_Lattice</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The general Matrix lattice. The matrices track the bunch as</span>
+<span class="sd">the linear transport elements. It is a base class for TEAPOT_MATRIX_Lattice,</span>
+<span class="sd">but it can be used by itself if user specifies the transport matrices by using</span>
+<span class="sd">addNode(BaseMATRIX). After adding nodes the user has to initialize() the lattice.</span>
+<span class="sd">The initialization will create one turn matrix, but the user can ignore it if</span>
+<span class="sd">the lattice is a linac lattice.</span>
+<span class="sd">The  This class cannot calculate chromaticities.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+
+<span class="c1"># import bunch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.bunch</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bunch</span>
+
+<span class="c1"># import the function that creates multidimensional arrays</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
+
+<span class="c1"># import general accelerator elements and lattice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccLattice</span><span class="p">,</span> <span class="n">AccNode</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="p">,</span> <span class="n">AccNodeBunchTracker</span>
+
+<span class="c1"># import matrix class and generators</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..teapot_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">MatrixGenerator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.orbit_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matrix</span><span class="p">,</span> <span class="n">PhaseVector</span>
+
+<span class="c1"># import the AccNode implementation for a transport matrix</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.BaseMATRIX</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseMATRIX</span>
+
+
+<div class="viewcode-block" id="MATRIX_Lattice"><a class="viewcode-back" href="../../../_autosummary/orbit.matrix_lattice.MATRIX_Lattice.html#orbit.matrix_lattice.MATRIX_Lattice">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MATRIX_Lattice</span><span class="p">(</span><span class="n">AccLattice</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of the AccLattice class. Shell class for the BaseMATRIX nodes collection.</span>
+<span class="sd">    In the beginning the lattcie is empty.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="MATRIX_Lattice.__init__"><a class="viewcode-back" href="../../../_autosummary/orbit.matrix_lattice.MATRIX_Lattice.html#orbit.matrix_lattice.MATRIX_Lattice.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">AccLattice</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">Matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Matrix</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method. Initializes the matrix lattice, child node structures, and calculates</span>
+<span class="sd">        the one turn matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">AccLattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">makeOneTurnMatrix</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">makeOneTurnMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates the one turn matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span>
+        <span class="n">eps_length</span> <span class="o">=</span> <span class="mf">0.00001</span>  <span class="c1"># 10^-6 meter</span>
+
+        <span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">position_old</span> <span class="o">=</span> <span class="n">position</span>
+        <span class="k">for</span> <span class="n">matrixNode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">,</span> <span class="n">BaseMATRIX</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getMatrix</span><span class="p">()</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span><span class="p">)</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">				if(abs(position_old-position) &gt; eps_length):</span>
+<span class="sd">					print position, self.oneTurnMatrix.get(0,6)</span>
+<span class="sd">				position_old = position</span>
+<span class="sd">				position = position + matrixNode.getLength()</span>
+<span class="sd">				&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">makeMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates the one turn matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Matrix</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">for</span> <span class="n">matrixNode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">,</span> <span class="n">BaseMATRIX</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">position</span> <span class="o">&lt;</span> <span class="n">pos</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">Matrix</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getMatrix</span><span class="p">()</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Matrix</span><span class="p">)</span>
+                <span class="n">position</span> <span class="o">=</span> <span class="n">position</span> <span class="o">+</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                <span class="c1"># print position, self.Matrix.get(0,6)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Matrix</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getOneTurnMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the one turn matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRingParametersDict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the dictionary with different ring parametrs</span>
+<span class="sd">        calculated from the one turn transport matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">Etotal</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">momentum</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">mass</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">beta</span> <span class="o">=</span> <span class="n">momentum</span> <span class="o">/</span> <span class="n">Etotal</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">Etotal</span> <span class="o">/</span> <span class="n">mass</span>
+        <span class="n">Ekin</span> <span class="o">=</span> <span class="n">Etotal</span> <span class="o">-</span> <span class="n">mass</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;momentum [GeV/c]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">momentum</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;mass [GeV]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mass</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;Ekin [GeV]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Ekin</span>
+        <span class="c1"># longitudinal params</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="mf">2.99792458e8</span>
+        <span class="n">ring_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+        <span class="n">T</span> <span class="o">=</span> <span class="n">ring_length</span> <span class="o">/</span> <span class="p">(</span><span class="n">beta</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;period [sec]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;frequency [Hz]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">T</span>
+        <span class="c1"># transverse twiss parameters</span>
+        <span class="n">mt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;fractional tune x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;fractional tune y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta x [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta y [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;gamma x [m^-1]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;gamma y [m^-1]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion x [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion y [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">cos_phi_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="n">cos_phi_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">cos_phi_x</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">cos_phi_y</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">1.0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res_dict</span>
+        <span class="n">sign_x</span> <span class="o">=</span> <span class="o">+</span><span class="mf">1.0</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">sign_x</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">abs</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">sign_y</span> <span class="o">=</span> <span class="o">+</span><span class="mf">1.0</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">sign_y</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="nb">abs</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">sin_phi_x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">cos_phi_x</span> <span class="o">*</span> <span class="n">cos_phi_x</span><span class="p">)</span> <span class="o">*</span> <span class="n">sign_x</span>
+        <span class="n">sin_phi_y</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">cos_phi_y</span> <span class="o">*</span> <span class="n">cos_phi_y</span><span class="p">)</span> <span class="o">*</span> <span class="n">sign_y</span>
+        <span class="n">nux</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="n">cos_phi_x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">sign_x</span>
+        <span class="n">nuy</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="n">cos_phi_y</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">sign_y</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;fractional tune x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nux</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;fractional tune y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nuy</span>
+        <span class="c1"># alpha, beta, gamma</span>
+        <span class="n">beta_x</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">sin_phi_x</span>
+        <span class="n">beta_y</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="n">sin_phi_y</span>
+        <span class="n">alpha_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sin_phi_x</span><span class="p">)</span>
+        <span class="n">alpha_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sin_phi_y</span><span class="p">)</span>
+        <span class="n">gamma_x</span> <span class="o">=</span> <span class="o">-</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">sin_phi_x</span>
+        <span class="n">gamma_y</span> <span class="o">=</span> <span class="o">-</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">sin_phi_y</span>
+        <span class="c1"># dispersion and dispersion prime</span>
+        <span class="n">m_coeff</span> <span class="o">=</span> <span class="n">momentum</span> <span class="o">*</span> <span class="n">momentum</span> <span class="o">/</span> <span class="n">Etotal</span>
+        <span class="n">disp_x</span> <span class="o">=</span> <span class="n">m_coeff</span> <span class="o">*</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">disp_y</span> <span class="o">=</span> <span class="n">m_coeff</span> <span class="o">*</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">disp_pr_x</span> <span class="o">=</span> <span class="n">m_coeff</span> <span class="o">*</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">disp_pr_y</span> <span class="o">=</span> <span class="n">m_coeff</span> <span class="o">*</span> <span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alpha_x</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alpha_y</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta x [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">beta_x</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta y [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">beta_y</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;gamma x [m^-1]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gamma_x</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;gamma y [m^-1]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gamma_y</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion x [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">disp_x</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion y [m]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">disp_y</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">disp_pr_x</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">disp_pr_y</span>
+        <span class="c1"># more longitudinal params</span>
+        <span class="n">termx</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">disp_x</span>
+        <span class="n">termxp</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">disp_pr_x</span>
+        <span class="n">termy</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">disp_y</span>
+        <span class="n">termyp</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">disp_pr_y</span>
+        <span class="n">termdE</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">Etotal</span>
+        <span class="n">eta_ring</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">termx</span> <span class="o">+</span> <span class="n">termxp</span> <span class="o">+</span> <span class="n">termy</span> <span class="o">+</span> <span class="n">termyp</span> <span class="o">+</span> <span class="n">termdE</span><span class="p">)</span> <span class="o">/</span> <span class="n">ring_length</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;eta&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">eta_ring</span>
+        <span class="n">alpha_p</span> <span class="o">=</span> <span class="n">eta_ring</span> <span class="o">+</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="n">gamma</span> <span class="o">*</span> <span class="n">gamma</span><span class="p">)</span>
+        <span class="n">sqarg</span> <span class="o">=</span> <span class="n">alpha_p</span>
+        <span class="k">if</span> <span class="n">alpha_p</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">sqarg</span> <span class="o">=</span> <span class="o">-</span><span class="n">alpha_p</span>
+        <span class="n">gamma_trans</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sqarg</span><span class="p">)</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;gamma transition&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gamma_trans</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;transition energy [GeV]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">gamma_trans</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mass</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;momentum compaction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alpha_p</span>
+        <span class="k">return</span> <span class="n">res_dict</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRingTwissDataX</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple ([(position, phase advanceX)/2/pi,...],[(position, alphaX),...],[(position,betaX),...] ).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">)</span>
+        <span class="n">alpha_x</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha x&quot;</span><span class="p">]</span>
+        <span class="n">beta_x</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta x [m]&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_x</span><span class="p">,</span> <span class="n">beta_x</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRingTwissDataY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple ([(position, phase advanceY/2/pi),...],[(position, alphaY),...],[(position,betaY),...] ).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">)</span>
+        <span class="n">alpha_y</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha y&quot;</span><span class="p">]</span>
+        <span class="n">beta_y</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta y [m]&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_y</span><span class="p">,</span> <span class="n">beta_y</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackTwissData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple ([(position, phase advance/2/pi),...], [(position, alpha),...],[(position,beta),...] ).</span>
+<span class="sd">        The tracking starts from the values specified as the initial parameters.</span>
+<span class="sd">        The possible values for direction parameter &quot;x&quot; or &quot;y&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">direction</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;x&quot;</span> <span class="ow">and</span> <span class="n">direction</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">&quot;Class orbit.matrix_lattice.MATRIX_Lattice, method trackTwissData(...): direction should be x or y.&quot;</span><span class="p">)</span>
+        <span class="c1"># track twiss</span>
+        <span class="n">eps_length</span> <span class="o">=</span> <span class="mf">0.00001</span>  <span class="c1"># 10^-6 meter</span>
+        <span class="n">dir_ind</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">direction</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+            <span class="n">dir_ind</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">/</span> <span class="n">beta</span>
+        <span class="n">track_m</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">track_m</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span>
+        <span class="n">track_v</span> <span class="o">=</span> <span class="n">PhaseVector</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">track_v</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+        <span class="n">track_v</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span>
+        <span class="n">track_v</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">pos_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">alpha_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">beta_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># phi is for tune accumulation</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="c1"># phase advance</span>
+        <span class="n">mu_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># count = 0</span>
+        <span class="n">pos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        <span class="n">mu_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+        <span class="n">alpha_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+        <span class="n">beta_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">matrixNode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">,</span> <span class="n">BaseMATRIX</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="c1"># only the main nodes are used, the or-cases deal with markers with zero length</span>
+                <span class="n">mt</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getMatrix</span><span class="p">()</span>
+                <span class="n">ind0</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">dir_ind</span>
+                <span class="n">ind1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">dir_ind</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind1</span><span class="p">)</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind0</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind0</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind1</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind0</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind1</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind0</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind0</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind1</span><span class="p">))</span>
+                <span class="n">alpha_0</span> <span class="o">=</span> <span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">beta_0</span> <span class="o">=</span> <span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">delta_phi</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">beta_0</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind0</span><span class="p">)</span> <span class="o">-</span> <span class="n">alpha_0</span> <span class="o">*</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">)))</span>
+                <span class="n">phi</span> <span class="o">=</span> <span class="n">phi</span> <span class="o">+</span> <span class="n">delta_phi</span>
+                <span class="n">track_v</span> <span class="o">=</span> <span class="n">track_m</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">track_v</span><span class="p">)</span>
+                <span class="n">position</span> <span class="o">=</span> <span class="n">position</span> <span class="o">+</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                <span class="c1"># print position, matrixNode.getParam(&quot;matrix_parent_node_active_index&quot;) == 1</span>
+                <span class="c1"># print position, matrixNode.getName(), track_v.get(1)</span>
+
+                <span class="k">if</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># print position, matrixNode.getName(), track_v.get(1)</span>
+                    <span class="n">pos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+                    <span class="n">alpha_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+                    <span class="n">beta_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+                    <span class="n">mu_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phi</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+            <span class="c1"># count = count + 1</span>
+        <span class="c1"># pack the resulting tuple</span>
+        <span class="n">tune</span> <span class="o">=</span> <span class="n">phi</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+        <span class="n">graph_alpha_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">graph_beta_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">graph_mu_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># print count, len(pos_arr)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">)):</span>
+            <span class="n">graph_mu_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">mu_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+            <span class="n">graph_alpha_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">alpha_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+            <span class="n">graph_beta_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">beta_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">graph_mu_arr</span><span class="p">,</span> <span class="n">graph_alpha_arr</span><span class="p">,</span> <span class="n">graph_beta_arr</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRingDispersionDataX</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple  ([(position, dispX),...],[(position,disp_pX),...] ).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">)</span>
+        <span class="n">disp</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion x [m]&quot;</span><span class="p">]</span>
+        <span class="n">disp_p</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime x&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRingDispersionDataY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple  ([(position, dispY),...],[(position,disp_pY),...] ).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">)</span>
+        <span class="n">disp</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion y [m]&quot;</span><span class="p">]</span>
+        <span class="n">disp_p</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime y&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackDispersionData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple ([(position, disp),...],[(position,disp_p),...] ).</span>
+<span class="sd">        The tracking starts from the values specified as the initial parameters.</span>
+<span class="sd">        The possible values for direction parameter &quot;x&quot; or &quot;y&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">direction</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;x&quot;</span> <span class="ow">and</span> <span class="n">direction</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">&quot;Class orbit.matrix_lattice.MATRIX_Lattice, method trackDispersionData(...): direction should be x or y.&quot;</span><span class="p">)</span>
+        <span class="c1"># track dispersion</span>
+        <span class="n">eps_length</span> <span class="o">=</span> <span class="mf">0.00001</span>  <span class="c1"># 10^-6 meter</span>
+        <span class="n">dir_ind</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">direction</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+            <span class="n">dir_ind</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">track_m</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">track_m</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span>
+        <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">track_v</span> <span class="o">=</span> <span class="n">PhaseVector</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="c1"># kinematics coefficient calculation</span>
+        <span class="n">Etotal</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">momentum</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">mass</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">beta</span> <span class="o">=</span> <span class="n">momentum</span> <span class="o">/</span> <span class="n">Etotal</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">Etotal</span> <span class="o">/</span> <span class="n">mass</span>
+        <span class="n">Ekin</span> <span class="o">=</span> <span class="n">Etotal</span> <span class="o">-</span> <span class="n">mass</span>
+        <span class="n">m_coeff</span> <span class="o">=</span> <span class="n">momentum</span> <span class="o">*</span> <span class="n">momentum</span> <span class="o">/</span> <span class="p">(</span><span class="n">mass</span> <span class="o">+</span> <span class="n">Ekin</span><span class="p">)</span>
+        <span class="n">track_v</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">disp</span><span class="p">)</span>
+        <span class="n">track_v</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">)</span>
+        <span class="n">track_v</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">pos_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">disp_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">disp_p_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># put in array the initial dispersions</span>
+        <span class="c1"># count = 0</span>
+        <span class="n">pos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        <span class="n">disp_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+        <span class="n">disp_p_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">matrixNode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">,</span> <span class="n">BaseMATRIX</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">mt</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getMatrix</span><span class="p">()</span>
+                <span class="n">ind0</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">+</span> <span class="n">dir_ind</span>
+                <span class="n">ind1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">dir_ind</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind0</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind0</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind1</span><span class="p">))</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="n">m_coeff</span><span class="p">)</span>
+                <span class="n">track_m</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="n">m_coeff</span><span class="p">)</span>
+                <span class="n">track_v</span> <span class="o">=</span> <span class="n">track_m</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">track_v</span><span class="p">)</span>
+                <span class="n">position</span> <span class="o">=</span> <span class="n">position</span> <span class="o">+</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                <span class="c1"># only the main nodes are used, the or-cases deal with markers with zero length</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">,</span> <span class="n">BaseMATRIX</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">pos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+                    <span class="n">disp_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+                    <span class="n">disp_p_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_v</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="c1"># pack the resulting tuple</span>
+        <span class="n">graph_disp_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">graph_disp_p_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">)):</span>
+            <span class="n">graph_disp_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">disp_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+            <span class="n">graph_disp_p_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">disp_p_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">graph_disp_arr</span><span class="p">,</span> <span class="n">graph_disp_p_arr</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRingOrbit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple ([(position, x] ).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackOrbit</span><span class="p">(</span><span class="n">z0</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackOrbit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the tuple ([(position, x),...], [(position, y),...] ).</span>
+<span class="sd">        The tracking starts from the values specified as the initial parameters.</span>
+<span class="sd">        z0 fulfill: z0 = Mz0 with M as one turn matrix</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">eps_length</span> <span class="o">=</span> <span class="mf">0.00001</span>  <span class="c1"># 10^-6 meter</span>
+
+        <span class="n">pos_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">orbitX_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">orbitY_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">orbitXP_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">orbitYP_arr</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">pos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+
+        <span class="n">track_o</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+        <span class="n">track_ov</span> <span class="o">=</span> <span class="n">PhaseVector</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">track_ov</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">z0</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">track_ov</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">z0</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">track_ov</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">z0</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">track_ov</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">z0</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">track_ov</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">z0</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">track_ov</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">z0</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+
+        <span class="n">orbitX_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+        <span class="n">orbitY_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">orbitXP_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">orbitYP_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+        <span class="n">position_old</span> <span class="o">=</span> <span class="n">position</span>
+
+        <span class="k">for</span> <span class="n">matrixNode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">,</span> <span class="n">BaseMATRIX</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">position_old</span> <span class="o">-</span> <span class="n">position</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">eps_length</span><span class="p">:</span>
+                    <span class="n">pos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+                    <span class="n">orbitX_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+                    <span class="n">orbitY_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="n">orbitXP_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+                    <span class="n">orbitYP_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+                <span class="n">mt</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getMatrix</span><span class="p">()</span>
+
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+                        <span class="n">track_o</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+                <span class="n">track_ov</span> <span class="o">=</span> <span class="n">track_o</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">track_ov</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+                    <span class="n">tmp</span> <span class="o">=</span> <span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="n">track_ov</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tmp</span> <span class="o">+</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+                <span class="n">position_old</span> <span class="o">=</span> <span class="n">position</span>
+                <span class="n">position</span> <span class="o">=</span> <span class="n">position</span> <span class="o">+</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+
+        <span class="n">pos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        <span class="n">orbitX_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+        <span class="n">orbitY_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">orbitXP_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">orbitYP_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track_ov</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+        <span class="c1"># pack the resulting tuple</span>
+        <span class="n">graph_orbitX_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">graph_orbitY_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">)):</span>
+            <span class="n">graph_orbitX_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">orbitX_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">orbitXP_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+            <span class="n">graph_orbitY_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">orbitY_arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">orbitYP_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">graph_orbitX_arr</span><span class="p">,</span> <span class="n">graph_orbitY_arr</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getSubLattice</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It returns the new MATRIX_Lattice with children with indexes</span>
+<span class="sd">        between index_start and index_stop inclusive</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getSubLattice</span><span class="p">(</span><span class="n">MATRIX_Lattice</span><span class="p">(),</span> <span class="n">index_start</span><span class="p">,</span> <span class="n">index_stop</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">actionContainer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It tracks the bunch through the lattice.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">actionContainer</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">actionContainer</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">(</span><span class="s2">&quot;Bunch Tracking&quot;</span><span class="p">)</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bunch</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">)</span>
+
+        <span class="n">actionContainer</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actionContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span>
+        <span class="n">actionContainer</span><span class="o">.</span><span class="n">removeAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

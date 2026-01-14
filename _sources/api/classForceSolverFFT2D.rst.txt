@@ -1,0 +1,26 @@
+.. _exhale_class_classForceSolverFFT2D:
+
+Class ForceSolverFFT2D
+======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public ForceSolver2D`` (:ref:`exhale_class_classForceSolver2D`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ForceSolverFFT2D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

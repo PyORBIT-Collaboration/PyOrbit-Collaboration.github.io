@@ -1,0 +1,17 @@
+.. _exhale_struct_structOrbitUtils_1_1comparator:
+
+Struct comparator
+=================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: OrbitUtils::comparator
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

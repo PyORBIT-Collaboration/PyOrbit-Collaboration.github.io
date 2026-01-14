@@ -1,0 +1,69 @@
+﻿orbit.errors
+============
+
+.. automodule:: orbit.errors
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addErrorNode
+      addErrorNodeAsChild
+      addErrorNodeAsChild_F
+      addErrorNodeAsChild_I
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AddErrorNode
+      AddErrorSet
+      benddisplacementlf
+      benddisplacementli
+      benddisplacementxf
+      benddisplacementxi
+      benddisplacementyf
+      benddisplacementyi
+      bendfieldf
+      bendfieldi
+      coorddisplacement
+      dipolekicker
+      dipolekickerosc
+      longdisplacement
+      quadkicker
+      quadkickerosc
+      rotationf
+      rotationi
+      straightrotationxsf
+      straightrotationxsi
+      straightrotationxy
+      straightrotationysf
+      straightrotationysi
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.errors.ErrorLatticeModifications
+   orbit.errors.ErrorNode
+

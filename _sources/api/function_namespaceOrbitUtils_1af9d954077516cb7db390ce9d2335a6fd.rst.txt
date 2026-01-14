@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1af9d954077516cb7db390ce9d2335a6fd:
+
+Function OrbitUtils::zbrak
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::zbrak(float(*)(float, float, float, float), float, float, int, float *, float *, int&, float, float, float)
+   :project: PyORBIT3

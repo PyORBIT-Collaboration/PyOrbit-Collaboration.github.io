@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8cc_1a6e240d3a5c2acfdbf1e99573ea9d5478:
+
+Function error_base::StraightRotationXSI
+========================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::StraightRotationXSI(Bunch *, double, double)
+   :project: PyORBIT3

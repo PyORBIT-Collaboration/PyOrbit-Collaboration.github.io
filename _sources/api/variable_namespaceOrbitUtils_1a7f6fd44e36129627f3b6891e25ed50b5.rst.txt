@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a7f6fd44e36129627f3b6891e25ed50b5:
+
+Variable OrbitUtils::tantalum
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::tantalum
+   :project: PyORBIT3

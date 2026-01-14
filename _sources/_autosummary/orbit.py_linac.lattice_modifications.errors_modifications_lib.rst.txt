@@ -1,0 +1,56 @@
+orbit.py\_linac.lattice\_modifications.errors\_modifications\_lib
+=================================================================
+
+.. automodule:: orbit.py_linac.lattice_modifications.errors_modifications_lib
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      MPI_Bcast
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AccNode
+      Bend
+      BendFieldNodesModification
+      CoordinateDisplacementNodesModification
+      DCorrectorH
+      DCorrectorV
+      ErrorCntrlBendField
+      ErrorCntrlCoordDisplacement
+      ErrorCntrlLongitudinalDisplacement
+      ErrorCntrlStraightRotationX
+      ErrorCntrlStraightRotationY
+      ErrorCntrlStraightRotationZ
+      ErrorForNodesModification
+      LongitudinalDisplacementNodesModification
+      NamedObject
+      Quad
+      QuadFieldsErrorsDeployment
+      StraightRotationX_NodesModification
+      StraightRotationY_NodesModification
+      StraightRotationZ_NodesModification
+      TypedObject
+   
+   
+
+   
+   
+   
+
+
+

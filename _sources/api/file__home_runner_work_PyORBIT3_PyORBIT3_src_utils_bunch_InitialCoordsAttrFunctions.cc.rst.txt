@@ -1,0 +1,76 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc:
+
+File InitialCoordsAttrFunctions.cc
+==================================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch/InitialCoordsAttrFunctions.cc``)
+--------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BufferStore.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh`)
+
+- ``BunchTwissAnalysis.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTwissAnalysis.hh`)
+
+- ``InitialCoordsAttrFunctions.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.hh`)
+
+- ``MatrixOperations.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.hh`)
+
+- ``ParticleInitialCoordinates.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleInitialCoordinates.hh`)
+
+- ``ParticleMacroSize.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh`)
+
+- ``algorithm``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+- ``vector``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1accbbe9115b59d58b32656e82b169f159`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1acb2b7d42772229b683602a7efe6d14f4`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae1fd5981372c042ab5b7de7d4e4871af`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a77888a0d2b60230d24ba8e97b90e889e`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a8fb9313b89a6178a6d8cea688c9e0615`
+

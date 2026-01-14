@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1ac8f9ebb8a2f977f687a7345dd6f83719:
+
+Function OrbitUtils::gauss_legendre_generator
+=============================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::gauss_legendre_generator(int, double, double, OrbitUtils::Function *)
+   :project: PyORBIT3

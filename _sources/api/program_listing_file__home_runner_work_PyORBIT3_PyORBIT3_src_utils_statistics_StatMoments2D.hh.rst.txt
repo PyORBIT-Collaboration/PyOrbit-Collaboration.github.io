@@ -1,0 +1,101 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_statistics_StatMoments2D.hh:
+
+Program Listing for File StatMoments2D.hh
+=========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_statistics_StatMoments2D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/statistics/StatMoments2D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef STAT_MOMENTS_2D_H
+   #define STAT_MOMENTS_2D_H
+   
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   using namespace std;
+   
+   
+   namespace OrbitUtils{
+   
+       class StatMoments2D: public CppPyWrapper
+       {
+       public:
+   
+           StatMoments2D();
+   
+           StatMoments2D(int maxOrder);
+   
+           virtual ~StatMoments2D();
+   
+           void setMaxOrder(int maxOrder);
+   
+           int getMaxOrder();
+   
+           void clean();
+   
+           void account(double u, double up);
+   
+           double getStatMoment(int order_u,int order_up);
+   
+           double getStatMomentU(int order_u);
+   
+           double getStatMomentUP(int order_up);
+   
+           double getMinU();
+   
+           double getMaxU();
+   
+           double getMinUP();
+   
+           double getMaxUP();
+   
+           int getCount();
+   
+           void synchronizeMPI(pyORBIT_MPI_Comm* pyComm);
+   
+           double getEmittance();
+   
+           double getAlpha();
+   
+           double getBeta();
+   
+           double getGamma();
+   
+           double getRmsU();
+   
+           double getRmsUP();
+   
+       private:
+   
+           //make arrays
+           void makeArrays();
+   
+       private:
+   
+           //max order
+           int max_order;
+   
+           //number of points counted so far
+           int count;
+   
+           //moments array
+           double** stat_arr;
+   
+           double u_max;
+           double u_min;
+           double up_max;
+           double up_min;
+   
+       };
+   
+   } //end of OrbitUtils{}
+   
+   #endif
+   //endif for STAT_MOMENTS_2D_H

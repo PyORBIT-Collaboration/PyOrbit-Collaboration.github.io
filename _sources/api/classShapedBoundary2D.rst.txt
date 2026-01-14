@@ -1,0 +1,26 @@
+.. _exhale_class_classShapedBoundary2D:
+
+Class ShapedBoundary2D
+======================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public BaseBoundary2D`` (:ref:`exhale_class_classBaseBoundary2D`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ShapedBoundary2D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1ad70408c50a717dfa0ced89a6c810c7cb:
+
+Function ORBIT_MPI_Group_translate_ranks
+========================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Group_translate_ranks(MPI_Group, int, int *, MPI_Group, int *)
+   :project: PyORBIT3

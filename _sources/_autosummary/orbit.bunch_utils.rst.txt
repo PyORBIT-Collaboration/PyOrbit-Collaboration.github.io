@@ -1,0 +1,46 @@
+﻿orbit.bunch\_utils
+==================
+
+.. automodule:: orbit.bunch_utils
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      collect_bunch
+      load_bunch
+      save_bunch
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ParticleIdNumber
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.bunch_utils.particleidnumber
+   orbit.bunch_utils.serialize
+

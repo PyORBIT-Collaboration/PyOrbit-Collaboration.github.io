@@ -1,0 +1,42 @@
+.. _dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures:
+
+
+Directory Apertures
+===================
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+*Directory path:* ``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseAperture.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseAperture.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CompositeApertureShape.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CompositeApertureShape.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EnergyAperture.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EnergyAperture.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PhaseAperture.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PhaseAperture.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PyBaseApertureShape.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PyBaseApertureShape.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_RectangularApertureShape.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_RectangularApertureShape.hh`
+
+

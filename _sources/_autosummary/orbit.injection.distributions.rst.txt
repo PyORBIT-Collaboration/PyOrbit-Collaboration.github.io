@@ -1,0 +1,42 @@
+orbit.injection.distributions
+=============================
+
+.. automodule:: orbit.injection.distributions
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      erf
+      interpolate
+      rootNorm
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ArbitraryLongDist
+      GULongDist
+      SNSESpreadDist
+      SNSESpreadDistPaint
+      UniformLongDist
+      UniformLongDistPaint
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1afbea7f579de306c51d2be871edba8cbf:
+
+Function teapot_base::wedgebendCF
+=================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::wedgebendCF(Bunch *, double, int, double, int, std::vector<int>&, std::vector<double>&, std::vector<int>&, int, int)
+   :project: PyORBIT3

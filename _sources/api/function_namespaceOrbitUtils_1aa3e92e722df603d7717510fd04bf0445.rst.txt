@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1aa3e92e722df603d7717510fd04bf0445:
+
+Function OrbitUtils::bessi0
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::bessi0(double)
+   :project: PyORBIT3

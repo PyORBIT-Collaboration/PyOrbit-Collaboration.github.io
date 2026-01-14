@@ -1,0 +1,46 @@
+orbit.space\_charge.sc3d
+========================
+
+.. automodule:: orbit.space_charge.sc3d
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      setSC3DAccNodes
+      setUniformEllipsesSCAccNodes
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SC3D_AccNode
+      SC_UniformEllipses_AccNode
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.space_charge.sc3d.scAccNodes
+   orbit.space_charge.sc3d.scLatticeModifications
+

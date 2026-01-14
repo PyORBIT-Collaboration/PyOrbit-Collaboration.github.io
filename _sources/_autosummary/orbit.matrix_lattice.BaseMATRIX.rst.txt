@@ -1,0 +1,65 @@
+orbit.matrix\_lattice.BaseMATRIX
+================================
+
+.. currentmodule:: orbit.matrix_lattice
+
+.. autoclass:: BaseMATRIX
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BaseMATRIX.__init__
+      ~BaseMATRIX.addChildNode
+      ~BaseMATRIX.addParam
+      ~BaseMATRIX.getActivePartIndex
+      ~BaseMATRIX.getAllChildren
+      ~BaseMATRIX.getBodyChildren
+      ~BaseMATRIX.getChildNodes
+      ~BaseMATRIX.getLength
+      ~BaseMATRIX.getMatrix
+      ~BaseMATRIX.getName
+      ~BaseMATRIX.getNumberOfBodyChildren
+      ~BaseMATRIX.getNumberOfChildren
+      ~BaseMATRIX.getParam
+      ~BaseMATRIX.getParamsDict
+      ~BaseMATRIX.getType
+      ~BaseMATRIX.getnParts
+      ~BaseMATRIX.hasParam
+      ~BaseMATRIX.initialize
+      ~BaseMATRIX.keys
+      ~BaseMATRIX.removeParam
+      ~BaseMATRIX.reverseOrder
+      ~BaseMATRIX.reverseOrderNodeSpecific
+      ~BaseMATRIX.setActivePartIndex
+      ~BaseMATRIX.setLength
+      ~BaseMATRIX.setName
+      ~BaseMATRIX.setParam
+      ~BaseMATRIX.setParamsDict
+      ~BaseMATRIX.setType
+      ~BaseMATRIX.setnParts
+      ~BaseMATRIX.structureToText
+      ~BaseMATRIX.track
+      ~BaseMATRIX.trackActions
+      ~BaseMATRIX.trackBunch
+      ~BaseMATRIX.updateParamsDict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BaseMATRIX.AFTER
+      ~BaseMATRIX.BEFORE
+      ~BaseMATRIX.BODY
+      ~BaseMATRIX.ENTRANCE
+      ~BaseMATRIX.EXIT
+   
+   

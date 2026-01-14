@@ -1,0 +1,55 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.hh:
+
+File CircleApertureShape.hh
+===========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/CircleApertureShape.hh``)
+-----------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BaseApertureShape.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.hh`)
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CircleApertureShape.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classCircleApertureShape`
+

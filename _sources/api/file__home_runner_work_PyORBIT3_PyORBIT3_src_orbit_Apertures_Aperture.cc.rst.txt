@@ -1,0 +1,54 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.cc:
+
+File Aperture.cc
+================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/Aperture.cc``)
+------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Aperture.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.hh`)
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``ParticleAttributes.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_LostParticleAttributes.hh`)
+
+- ``Random.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_Random.hh`)
+
+- ``SyncPart.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``iostream``
+
+
+
+
+

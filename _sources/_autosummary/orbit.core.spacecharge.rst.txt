@@ -1,0 +1,42 @@
+orbit.core.spacecharge
+======================
+
+.. automodule:: orbit.core.spacecharge
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Boundary2D
+      Grid1D
+      Grid2D
+      Grid3D
+      LSpaceChargeCalc
+      PoissonSolverFFT2D
+      PoissonSolverFFT3D
+      SpaceChargeCalc2p5D
+      SpaceChargeCalc2p5Drb
+      SpaceChargeCalc3D
+      SpaceChargeCalcSliceBySlice2D
+      SpaceChargeCalcUnifEllipse
+      SpaceChargeForceCalc2p5D
+      UniformEllipsoidFieldCalculator
+   
+   
+
+   
+   
+   
+
+
+

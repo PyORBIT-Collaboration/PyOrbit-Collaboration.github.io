@@ -1,0 +1,36 @@
+.. _exhale_class_classParticleAttributes:
+
+Class ParticleAttributes
+========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleAttributes.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public AtomPopulations`` (:ref:`exhale_class_classAtomPopulations`)
+- ``public Evolution`` (:ref:`exhale_class_classEvolution`)
+- ``public LostParticleAttributes`` (:ref:`exhale_class_classLostParticleAttributes`)
+- ``public ParticleIdNumber`` (:ref:`exhale_class_classParticleIdNumber`)
+- ``public ParticleInitialCoordinates`` (:ref:`exhale_class_classParticleInitialCoordinates`)
+- ``public ParticleMacroSize`` (:ref:`exhale_class_classParticleMacroSize`)
+- ``public ParticlePhaseAttributes`` (:ref:`exhale_class_classParticlePhaseAttributes`)
+- ``public TurnNumberAttributes`` (:ref:`exhale_class_classTurnNumberAttributes`)
+- ``public WaveFunctionAmplitudes`` (:ref:`exhale_class_classWaveFunctionAmplitudes`)
+- ``public part_time`` (:ref:`exhale_class_classpart__time`)
+- ``public pq_coordinates`` (:ref:`exhale_class_classpq__coordinates`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ParticleAttributes
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

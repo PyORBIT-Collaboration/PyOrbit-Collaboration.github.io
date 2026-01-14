@@ -1,0 +1,47 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.hh:
+
+Program Listing for File Aperture.hh
+====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_Aperture.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/Aperture.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //The base class for Apertures. It defines the interface for Aperture
+   #ifndef APERTURE_H
+   #define APERTURE_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "Bunch.hh"
+   
+   using namespace std;
+   
+   
+   class Aperture: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       Aperture(int shape, double a, double b, double c, double d, double pos); //(double shape, double size...)
+   
+       void checkBunch(Bunch* bunch, Bunch* lostbunch);
+   
+       void setPosition(double position);
+   
+   protected:
+   
+       //Counters
+       int nLost;
+   
+       //Aperture parameters
+       int shape_;
+       double a_, b_, c_, d_, pos_;
+       //int ma_, shape_;
+   
+   };
+   
+   //end of APERTURE_H ifdef
+   #endif

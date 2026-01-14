@@ -1,0 +1,22 @@
+.. _dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition:
+
+
+Directory SynchPartRedefinition
+===============================
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+*Directory path:* ``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/SynchPartRedefinition``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh`
+
+

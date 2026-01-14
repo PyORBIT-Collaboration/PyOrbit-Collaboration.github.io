@@ -1,0 +1,66 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.hh:
+
+Program Listing for File BunchExtremaCalculator.hh
+==================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch/BunchExtremaCalculator.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   BunchExtremaCalculator.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    10/11/2010
+   //
+   // DESCRIPTION
+   //    A class calculates the extrema of the particles coordinates in the bunch.
+   //
+   
+   #ifndef BUNCH_EXTREMA_CALCULATIONS_H
+   #define BUNCH_EXTREMA_CALCULATIONS_H
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   namespace OrbitUtils{
+   
+   
+       class BunchExtremaCalculator : public CppPyWrapper
+       {
+           public:
+   
+               BunchExtremaCalculator();
+   
+               ~BunchExtremaCalculator();
+   
+               void getExtremaXYZ(Bunch* bunch,
+                   double& xMin, double& xMax,
+                   double& yMin, double& yMax,
+                   double& zMin, double& zMax);
+   
+               void getExtremaXpYpdE(Bunch* bunch,
+               double& xpMin, double& xpMax,
+               double& ypMin, double& ypMax,
+               double& dE_Min, double& dE_Max);
+   
+               void getExtremaZ(Bunch* bunch,
+                   double& zMin, double& zMax);
+   
+               void getExtremaR(Bunch* bunch, double& rMax);
+   
+       };
+   };
+   //
+   // END OF FILE
+   //
+   
+   #endif

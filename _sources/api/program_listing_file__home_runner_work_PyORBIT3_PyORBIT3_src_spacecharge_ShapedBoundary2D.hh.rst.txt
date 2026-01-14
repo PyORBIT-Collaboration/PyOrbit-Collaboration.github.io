@@ -1,0 +1,46 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.hh:
+
+Program Listing for File ShapedBoundary2D.hh
+============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/ShapedBoundary2D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef SC_SHAPED_BOUNDARY_2D_H
+   #define SC_SHAPED_BOUNDARY_2D_H
+   
+   #include "Grid2D.hh"
+   #include <string>
+   
+   #include "BaseBoundary2D.hh"
+   
+   using namespace std;
+   
+   
+   class ShapedBoundary2D: public BaseBoundary2D
+   {
+       public:
+   
+           ShapedBoundary2D(int nPoints, int nModes, string shape, double xDim, double yDim);
+   
+           virtual ~ShapedBoundary2D();
+   
+         int impactPoint(double x,  double y,  double z,
+                           double px, double py, double pz,
+                           double* r_v,double* n_v);
+   
+           int isInside(double x, double y);
+   
+       protected:
+   
+           double r_circle_;
+           double a_ellipse_,b_ellipse_;
+           double a_rect_,b_rect_;
+   };
+   
+   #endif
+   //endif for SC_SHAPED_BOUNDARY_2D_H

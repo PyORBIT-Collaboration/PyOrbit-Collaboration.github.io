@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a2c9f50b688a2958a32948ba7fe552dc9:
+
+Variable OrbitUtils::carbon
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::carbon
+   :project: PyORBIT3

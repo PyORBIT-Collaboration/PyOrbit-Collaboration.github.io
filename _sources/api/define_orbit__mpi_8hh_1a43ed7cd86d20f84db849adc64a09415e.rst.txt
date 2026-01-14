@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a43ed7cd86d20f84db849adc64a09415e:
+
+Define MPI_INT
+==============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_INT
+   :project: PyORBIT3

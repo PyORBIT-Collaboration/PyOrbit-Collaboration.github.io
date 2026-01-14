@@ -1,0 +1,42 @@
+orbit.py\_linac.materials.VacuumWindowLinacNode
+===============================================
+
+.. automodule:: orbit.py_linac.materials.VacuumWindowLinacNode
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AccActionsContainer
+      AccNode
+      AccNodeBunchTracker
+      BaseLinacNode
+      Collimator
+      NamedObject
+      ParamsDictObject
+      VacuumWindowNode
+   
+   
+
+   
+   
+   
+
+
+

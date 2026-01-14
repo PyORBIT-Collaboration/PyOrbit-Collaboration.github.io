@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File teapotbase.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc.html">Program Listing for File teapotbase.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">File teapotbase.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="file-teapotbase-cc">
+<span id="file-home-runner-work-pyorbit3-pyorbit3-src-teapot-teapotbase-cc"></span><h1>File teapotbase.cc<a class="headerlink" href="#file-teapotbase-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_PyORBIT3_PyORBIT3_src_teapot.html#dir-home-runner-work-pyorbit3-pyorbit3-src-teapot"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/teapot</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-pyorbit3-pyorbit3-src-teapot-teapotbase-cc" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/teapot/teapotbase.cc</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id4">Functions</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id5">Variables</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-pyorbit3-pyorbit3-src-teapot-teapotbase-cc">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/teapot/teapotbase.cc</span></code>)<a class="headerlink" href="#definition-home-runner-work-pyorbit3-pyorbit3-src-teapot-teapotbase-cc" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc.html">Program Listing for File teapotbase.cc</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Bunch.hh</span></code> (<a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh.html#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-bunch-hh"><span class="std std-ref">File Bunch.hh</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OrbitConst.hh</span></code> (<a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh.html#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-orbitconst-hh"><span class="std std-ref">File OrbitConst.hh</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SyncPart.hh</span></code> (<a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh.html#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-syncpart-hh"><span class="std std-ref">File SyncPart.hh</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complex</span></code> (<a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh.html#file-home-runner-work-pyorbit3-pyorbit3-src-utils-tcomplex-hh"><span class="std std-ref">File tcomplex.hh</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teapotbase.hh</span></code> (<a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.hh.html#file-home-runner-work-pyorbit3-pyorbit3-src-teapot-teapotbase-hh"><span class="std std-ref">File teapotbase.hh</span></a>)</p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_teapot_base.html#namespace-teapot-base"><span class="std std-ref">Namespace teapot_base</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1adffb68e851f6ec1da7f7adc830ecf5f8.html#exhale-function-teapotbase-8cc-1adffb68e851f6ec1da7f7adc830ecf5f8"><span class="std std-ref">Function teapot_base::bend1</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a1c4d21e2e63e3d9ea646177e6657c27c.html#exhale-function-teapotbase-8cc-1a1c4d21e2e63e3d9ea646177e6657c27c"><span class="std std-ref">Function teapot_base::bend2</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a1065133200c0978c81c7e22b8d7b550d.html#exhale-function-teapotbase-8cc-1a1065133200c0978c81c7e22b8d7b550d"><span class="std std-ref">Function teapot_base::bend3</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1ac5e3c321ee8c5b2048219038747684e7.html#exhale-function-teapotbase-8cc-1ac5e3c321ee8c5b2048219038747684e7"><span class="std std-ref">Function teapot_base::bend4</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a0de934fef29a74410af91fe649c7aa12.html#exhale-function-teapotbase-8cc-1a0de934fef29a74410af91fe649c7aa12"><span class="std std-ref">Function teapot_base::bendfringeIN</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a663553aef54c825752910f35d740fb5c.html#exhale-function-teapotbase-8cc-1a663553aef54c825752910f35d740fb5c"><span class="std std-ref">Function teapot_base::bendfringeOUT</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a072b36a64d9eefa246e2283fb1ba839e.html#exhale-function-teapotbase-8cc-1a072b36a64d9eefa246e2283fb1ba839e"><span class="std std-ref">Function teapot_base::delete_factorial</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1ae142ba1424b5fe090d4526b868da176d.html#exhale-function-teapotbase-8cc-1ae142ba1424b5fe090d4526b868da176d"><span class="std std-ref">Function teapot_base::drift</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a034cd56a494ee81df10e7f812969a1cd.html#exhale-function-teapotbase-8cc-1a034cd56a494ee81df10e7f812969a1cd"><span class="std std-ref">Function teapot_base::drifti</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a53760d5cd0cd3adef36f4dea04245045.html#exhale-function-teapotbase-8cc-1a53760d5cd0cd3adef36f4dea04245045"><span class="std std-ref">Function teapot_base::init_factorial</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1ad44a218d06d340b4e42757a18da4416b.html#exhale-function-teapotbase-8cc-1ad44a218d06d340b4e42757a18da4416b"><span class="std std-ref">Function teapot_base::kick</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a01513544310ee9bed268f9dd85b2e307.html#exhale-function-teapotbase-8cc-1a01513544310ee9bed268f9dd85b2e307"><span class="std std-ref">Function teapot_base::multp</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a2d159a9e6f3e171f80065dc9d6e968b4.html#exhale-function-teapotbase-8cc-1a2d159a9e6f3e171f80065dc9d6e968b4"><span class="std std-ref">Function teapot_base::multpfringeIN</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a4eb75f6d37c06684f79dc20d0c89b04d.html#exhale-function-teapotbase-8cc-1a4eb75f6d37c06684f79dc20d0c89b04d"><span class="std std-ref">Function teapot_base::multpfringeOUT</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a6a12035ca87514a88e0ff4f52fd503dc.html#exhale-function-teapotbase-8cc-1a6a12035ca87514a88e0ff4f52fd503dc"><span class="std std-ref">Function teapot_base::multpi</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1aee5650aa9a4a234a02cde152ba4b7c34.html#exhale-function-teapotbase-8cc-1aee5650aa9a4a234a02cde152ba4b7c34"><span class="std std-ref">Function teapot_base::quad1</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1af51e7636ca7cbf6878028cbc2986bc54.html#exhale-function-teapotbase-8cc-1af51e7636ca7cbf6878028cbc2986bc54"><span class="std std-ref">Function teapot_base::quad2</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a2de4b93b136aef367df2206c1cdb1a22.html#exhale-function-teapotbase-8cc-1a2de4b93b136aef367df2206c1cdb1a22"><span class="std std-ref">Function teapot_base::quad3</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1aac3a48131d705393478219b4d653f767.html#exhale-function-teapotbase-8cc-1aac3a48131d705393478219b4d653f767"><span class="std std-ref">Function teapot_base::quadfringeIN</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1aebbd433526f355f037da16cad128862e.html#exhale-function-teapotbase-8cc-1aebbd433526f355f037da16cad128862e"><span class="std std-ref">Function teapot_base::quadfringeOUT</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a5a295ede9c71b93ef92aa727b24b967a.html#exhale-function-teapotbase-8cc-1a5a295ede9c71b93ef92aa727b24b967a"><span class="std std-ref">Function teapot_base::RingRF</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a92949b38fe1cbbf28cde756d5fc2fd08.html#exhale-function-teapotbase-8cc-1a92949b38fe1cbbf28cde756d5fc2fd08"><span class="std std-ref">Function teapot_base::rotatexy</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a114828c580fdd26ac6b3ee3006ee2381.html#exhale-function-teapotbase-8cc-1a114828c580fdd26ac6b3ee3006ee2381"><span class="std std-ref">Function teapot_base::soln</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a1469ee3d933eaa77ff986d3bf5d7dcb3.html#exhale-function-teapotbase-8cc-1a1469ee3d933eaa77ff986d3bf5d7dcb3"><span class="std std-ref">Function teapot_base::wedgebend</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1afbea7f579de306c51d2be871edba8cbf.html#exhale-function-teapotbase-8cc-1afbea7f579de306c51d2be871edba8cbf"><span class="std std-ref">Function teapot_base::wedgebendCF</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1ae275e5ddad486f95d9d3ed001b6b1177.html#exhale-function-teapotbase-8cc-1ae275e5ddad486f95d9d3ed001b6b1177"><span class="std std-ref">Function teapot_base::wedgedrift</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1ada8272dfbece7c79de417f326cf5cc5d.html#exhale-function-teapotbase-8cc-1ada8272dfbece7c79de417f326cf5cc5d"><span class="std std-ref">Function teapot_base::wedgerotate</span></a></p></li>
+<li><p><a class="reference internal" href="function_teapotbase_8cc_1a9d938e2d44727838dc7777ad35d18501.html#exhale-function-teapotbase-8cc-1a9d938e2d44727838dc7777ad35d18501"><span class="std std-ref">Function teapot_base::wrapbunch</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_teapotbase_8cc_1a9579decd560524f21dc10e6f08464832.html#exhale-variable-teapotbase-8cc-1a9579decd560524f21dc10e6f08464832"><span class="std std-ref">Variable teapot_base::factorial</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-home-runner-work-pyorbit3-pyorbit3-src-teapot-teapotbase-cc">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/teapot/teapotbase.cc</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#includes">Includes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/api/file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

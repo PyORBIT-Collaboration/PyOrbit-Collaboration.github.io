@@ -1,0 +1,51 @@
+﻿orbit.teapot
+============
+
+.. automodule:: orbit.teapot
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BaseTEAPOT
+      BendTEAPOT
+      DriftTEAPOT
+      FringeFieldTEAPOT
+      KickTEAPOT
+      MultipoleTEAPOT
+      NodeTEAPOT
+      QuadTEAPOT
+      RingRFTEAPOT
+      SolenoidTEAPOT
+      TEAPOT_Lattice
+      TEAPOT_MATRIX_Lattice
+      TEAPOT_Ring
+      TiltTEAPOT
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.teapot.teapot
+   orbit.teapot.teapot_matrix_lattice
+

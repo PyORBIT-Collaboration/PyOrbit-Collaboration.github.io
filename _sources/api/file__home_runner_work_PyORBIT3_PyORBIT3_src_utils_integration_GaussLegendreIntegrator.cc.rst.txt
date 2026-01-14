@@ -1,0 +1,48 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.cc:
+
+File GaussLegendreIntegrator.cc
+===============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/integration/GaussLegendreIntegrator.cc``)
+-----------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``GaussLegendreIntegrator.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.hh`)
+
+- ``OU_Function.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_Function.hh`)
+
+- ``OU_SplineCH.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_SplineCH.hh`)
+
+- ``gauss_legendre_points.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_gauss_legendre_points.hh`)
+
+- ``iomanip``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+
+
+
+

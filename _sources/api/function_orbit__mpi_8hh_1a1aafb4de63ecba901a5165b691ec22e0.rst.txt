@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a1aafb4de63ecba901a5165b691ec22e0:
+
+Function ORBIT_MPI_Group_intersection
+=====================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Group_intersection(MPI_Group, MPI_Group, MPI_Group *)
+   :project: PyORBIT3

@@ -1,0 +1,69 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh:
+
+File TImpedance.hh
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Impedances``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Impedances/TImpedance.hh``)
+---------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+- ``BunchExtremaCalculator.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.hh`)
+
+- ``CppPyWrapper.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_CppPyWrapper.hh`)
+
+- ``Grid1D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`)
+
+- ``cmath``
+
+- ``complex`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh`)
+
+- ``cstdlib``
+
+- ``fftw3.h``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+- ``wrap_mpi_comm.hh``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.cc`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classTImpedance`
+

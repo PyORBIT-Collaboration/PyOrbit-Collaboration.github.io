@@ -1,0 +1,66 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking_linac_tracking.cc:
+
+File linac_tracking.cc
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/tracking``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/tracking/linac_tracking.cc``)
+-----------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking_linac_tracking.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``SyncPart.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh`)
+
+- ``complex`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_linac_tracking`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_linac__tracking_8cc_1a165318874eebef205c2e5b05125164c8`
+
+- :ref:`exhale_function_linac__tracking_8cc_1a48186f6e4346b8fc54b8f84045d37a81`
+
+- :ref:`exhale_function_linac__tracking_8cc_1ad6212e73cef0fbdce186fa04ec96b8f9`
+
+- :ref:`exhale_function_linac__tracking_8cc_1aeec1a8e3a9ceacd9477bc1b8cb1da9cc`
+
+- :ref:`exhale_function_linac__tracking_8cc_1a07e3c98eecf5fbba9f082f67341c451e`
+

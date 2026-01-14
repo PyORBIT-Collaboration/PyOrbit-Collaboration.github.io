@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1a5a295ede9c71b93ef92aa727b24b967a:
+
+Function teapot_base::RingRF
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::RingRF(Bunch *, double, int, double, double, int)
+   :project: PyORBIT3

@@ -1,0 +1,54 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_LImpedance.cc:
+
+File LImpedance.cc
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Impedances``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Impedances/LImpedance.cc``)
+---------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_LImpedance.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BufferStore.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh`)
+
+- ``Grid1D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh`)
+
+- ``LImpedance.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_LImpedance.hh`)
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``complex`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh`)
+
+- ``fftw3.h``
+
+- ``iostream``
+
+
+
+
+

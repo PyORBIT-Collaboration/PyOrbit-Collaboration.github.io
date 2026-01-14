@@ -1,0 +1,82 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_AttributesBucket.hh:
+
+Program Listing for File AttributesBucket.hh
+============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_AttributesBucket.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/AttributesBucket.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   AttributesBucket.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    12/14/2005
+   //
+   // DESCRIPTION
+   //    A class for collection of int and double attributes in the dictionary.
+   
+   #ifndef ATTRIBUTES_BUCKET_H
+   #define ATTRIBUTES_BUCKET_H
+   
+   #include <string>
+   #include <map>
+   #include <vector>
+   
+   namespace OrbitUtils{
+   
+   
+   
+       class AttributesBucket
+       {
+           //--------------------------------------
+           //the public methods of the AttributesBucket class
+           //--------------------------------------
+       public:
+   
+           AttributesBucket();
+   
+           ~AttributesBucket();
+   
+           int intVal(const std::string attName);
+   
+           double doubleVal(const std::string attName);
+   
+           int intVal(const std::string attName, int val);
+   
+           double doubleVal(const std::string attName, double val);
+   
+           int hasIntAttribute(const std::string attName);
+   
+           int hasDoubleAttribute(const std::string attName);
+   
+           void getIntAttributeNames(std::vector<std::string>& names);
+   
+           void getDoubleAttributeNames(std::vector<std::string>& names);
+   
+           void addTo(AttributesBucket* bckt);
+   
+           void clear();
+   
+           //-----------------------------------
+           //  DATA MEMBERS
+           //-----------------------------------
+   
+       private:
+   
+           std::map<std::string,int> intAttrMap;
+           std::map<std::string,double> doubleAttrMap;
+   
+       };
+   
+   };
+   
+   #endif

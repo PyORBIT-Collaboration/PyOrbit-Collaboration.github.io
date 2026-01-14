@@ -1,0 +1,26 @@
+.. _exhale_class_classCollimator:
+
+Class Collimator
+================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Collimator
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

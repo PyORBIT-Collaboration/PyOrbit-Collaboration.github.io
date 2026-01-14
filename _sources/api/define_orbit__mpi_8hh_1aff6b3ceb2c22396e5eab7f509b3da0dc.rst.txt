@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1aff6b3ceb2c22396e5eab7f509b3da0dc:
+
+Define MPI_UNDEFINED
+====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_UNDEFINED
+   :project: PyORBIT3

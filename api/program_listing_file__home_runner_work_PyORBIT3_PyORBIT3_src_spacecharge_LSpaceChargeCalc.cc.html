@@ -1,0 +1,692 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File LSpaceChargeCalc.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.cc';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File LSpaceChargeCalc.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File LSpaceChargeCalc.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-lspacechargecalc-cc">
+<span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-lspacechargecalc-cc"></span><h1>Program Listing for File LSpaceChargeCalc.cc<a class="headerlink" href="#program-listing-for-file-lspacechargecalc-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.cc.html#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-lspacechargecalc-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/LSpaceChargeCalc.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// FILE NAME</span>
+<span class="c1">//   LSpaceCharge.cc</span>
+<span class="c1">//</span>
+<span class="c1">//   05/30/12</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Calculate the effects of longitudinal space charge and impedance</span>
+<span class="c1">//   on the bunch (1D) using impedance formulation</span>
+<span class="c1">//</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Grid1D.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BufferStore.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;LSpaceChargeCalc.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;complex&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cfloat&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;complex&gt;</span>
+
+<span class="c1">//FFTW library header</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;fftw3.h&quot;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
+
+
+<span class="n">LSpaceChargeCalc</span><span class="o">::</span><span class="n">LSpaceChargeCalc</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">b_a_in</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">length_in</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nMacrosMin_in</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">useSpaceCharge_in</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nBins_in</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">CppPyWrapper</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">b_a</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">b_a_in</span><span class="p">;</span>
+<span class="w">  </span><span class="n">length</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">length_in</span><span class="p">;</span>
+<span class="w">  </span><span class="n">nMacrosMin</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nMacrosMin_in</span><span class="p">;</span>
+<span class="w">  </span><span class="n">useSpaceCharge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">useSpaceCharge_in</span><span class="p">;</span>
+<span class="w">  </span><span class="n">nBins</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="n">nBins_in</span><span class="p">;</span>
+<span class="w">  </span><span class="n">zGrid</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Grid1D</span><span class="p">(</span><span class="n">nBins</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">_fftmagnitude</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+<span class="w">  </span><span class="n">_fftphase</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+<span class="w">  </span><span class="n">_z</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+<span class="w">  </span><span class="n">_chi</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+<span class="w">  </span><span class="c1">//---------------------------</span>
+<span class="w">  </span><span class="c1">// _zImped_n size was increased by 1 to avoid crash due to</span>
+<span class="w">  </span><span class="c1">// assignment in LSpaceChargeCalc::assignImpedanceValue(...)</span>
+<span class="w">  </span><span class="c1">// to _zImped_n[n + 1] element. This should be resolved later.</span>
+<span class="w">  </span><span class="c1">//----------------------------</span>
+<span class="w">  </span><span class="n">_zImped_n</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">[</span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">_fftmagnitude</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_fftphase</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_z</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_chi</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_zImped_n</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">_in</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">fftw_complex</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">fftw_malloc</span><span class="p">(</span><span class="n">nBins</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">fftw_complex</span><span class="p">));</span>
+<span class="w">  </span><span class="n">_out</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">fftw_complex</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">fftw_malloc</span><span class="p">(</span><span class="n">nBins</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">fftw_complex</span><span class="p">));</span>
+<span class="w">  </span><span class="n">_plan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fftw_plan_dft_1d</span><span class="p">(</span><span class="n">nBins</span><span class="p">,</span><span class="w"> </span><span class="n">_in</span><span class="p">,</span><span class="w">  </span><span class="n">_out</span><span class="p">,</span><span class="w"> </span><span class="n">FFTW_FORWARD</span><span class="p">,</span><span class="w"> </span><span class="n">FFTW_ESTIMATE</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="n">LSpaceChargeCalc</span><span class="o">::~</span><span class="n">LSpaceChargeCalc</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">zGrid</span><span class="o">-&gt;</span><span class="n">getPyWrapper</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Py_DECREF</span><span class="p">(</span><span class="n">zGrid</span><span class="o">-&gt;</span><span class="n">getPyWrapper</span><span class="p">());</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">zGrid</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">_fftmagnitude</span><span class="p">;</span>
+<span class="w">  </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">_fftphase</span><span class="p">;</span>
+<span class="w">  </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">_z</span><span class="p">;</span>
+<span class="w">  </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">_chi</span><span class="p">;</span>
+<span class="w">  </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">_zImped_n</span><span class="p">;</span>
+<span class="w">  </span><span class="n">fftw_free</span><span class="p">(</span><span class="n">_in</span><span class="p">);</span>
+<span class="w">  </span><span class="n">fftw_free</span><span class="p">(</span><span class="n">_out</span><span class="p">);</span>
+<span class="w">  </span><span class="n">fftw_destroy_plan</span><span class="p">(</span><span class="n">_plan</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LSpaceChargeCalc</span><span class="o">::</span><span class="n">assignImpedanceValue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">imag</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">_zImped_n</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="n">imag</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LSpaceChargeCalc</span><span class="o">::</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">nPartsGlobal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSizeGlobal</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">nPartsGlobal</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nMacrosMin</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="c1">// Bin the particles</span>
+
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">zmin</span><span class="p">,</span><span class="w"> </span><span class="n">zmax</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">realPart</span><span class="p">,</span><span class="w"> </span><span class="n">imagPart</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">bunchExtremaCalc</span><span class="o">-&gt;</span><span class="n">getExtremaZ</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">zmin</span><span class="p">,</span><span class="w"> </span><span class="n">zmax</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">zextra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">zmax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zmin</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">zmax</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">zextra</span><span class="p">;</span>
+<span class="w">  </span><span class="n">zmin</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">zmax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="w">  </span><span class="n">zGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zmin</span><span class="p">,</span><span class="w"> </span><span class="n">zmax</span><span class="p">);</span>
+<span class="w">  </span><span class="n">zGrid</span><span class="o">-&gt;</span><span class="n">setZero</span><span class="p">();</span>
+<span class="w">  </span><span class="n">zGrid</span><span class="o">-&gt;</span><span class="n">binBunchSmoothedByParticle</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">  </span><span class="n">zGrid</span><span class="o">-&gt;</span><span class="n">synchronizeMPI</span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getMPI_Comm_Local</span><span class="p">());</span>
+
+<span class="c1">// FFT the beam density</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nBins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">_in</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zGrid</span><span class="o">-&gt;</span><span class="n">getValueOnGrid</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_in</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">fftw_execute</span><span class="p">(</span><span class="n">_plan</span><span class="p">);</span>
+
+<span class="c1">// Find the magnitude and phase</span>
+
+<span class="w">  </span><span class="n">_fftmagnitude</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_out</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">nBins</span><span class="p">;</span>
+<span class="w">  </span><span class="n">_fftphase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">realPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_out</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">nBins</span><span class="p">);</span>
+<span class="w">    </span><span class="n">imagPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_out</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">nBins</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_fftmagnitude</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">realPart</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">realPart</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">imagPart</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">imagPart</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_fftphase</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atan2</span><span class="p">(</span><span class="n">imagPart</span><span class="p">,</span><span class="n">realPart</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="c1">// Space charge contribution to impedance</span>
+
+<span class="w">  </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+
+<span class="c1">// Set zero if useSpaceCharge = 0</span>
+
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">zSpaceCharge_n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="c1">// Otherwise, set positive since space charge is capacitive (Chao convention)</span>
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">useSpaceCharge</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">mu_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.</span><span class="n">e</span><span class="mo">-07</span><span class="p">;</span><span class="w"> </span><span class="c1">// permeability of free space</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">_z_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mu_0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">zSpaceCharge_n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_z_0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="n">b_a</span><span class="p">))</span><span class="w"> </span><span class="o">/</span>
+<span class="w">                     </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">getGamma</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">getGamma</span><span class="p">());</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">realPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">real</span><span class="p">(</span><span class="n">_zImped_n</span><span class="p">[</span><span class="n">n</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">imagPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">imag</span><span class="p">(</span><span class="n">_zImped_n</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zSpaceCharge_n</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_z</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">realPart</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">realPart</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">imagPart</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">imagPart</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_chi</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atan2</span><span class="p">(</span><span class="n">imagPart</span><span class="p">,</span><span class="w"> </span><span class="n">realPart</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="c1">// Convert charge to current for a single macroparticle per unit bin length</span>
+
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">charge2current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getCharge</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getMacroSize</span><span class="p">()</span><span class="w"> </span><span class="o">*</span>
+<span class="w">                          </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">elementary_charge_MKS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">()</span><span class="w"> </span><span class="o">*</span>
+<span class="w">                          </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">nBins</span><span class="p">);</span>
+
+<span class="c1">// Calculate and add the kick to macroparticles</span>
+
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">kick</span><span class="p">,</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+
+<span class="c1">// Convert particle longitudinal coordinate to phi</span>
+
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">philocal</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+<span class="w">    </span><span class="n">philocal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">;</span>
+
+<span class="c1">// Handle cases where the longitudinal coordinate is</span>
+<span class="c1">// outside of the user-specified length</span>
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">philocal</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">)</span><span class="w"> </span><span class="n">philocal</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">philocal</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">)</span><span class="w"> </span><span class="n">philocal</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_kick</span><span class="p">(</span><span class="n">philocal</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">-1e-9</span><span class="p">)</span><span class="w"> </span><span class="o">*</span>
+<span class="w">              </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getCharge</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">charge2current</span><span class="p">;</span>
+<span class="w">  </span><span class="n">coords</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dE</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//    LSpaceChargeCalc::_kick</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//    Calculates the longitudinal space charge and impedance kick</span>
+<span class="c1">//    to a macroparticle</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//    angle - the phase angle of the particle (rad)</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//    kick</span>
+<span class="c1">//</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">LSpaceChargeCalc</span><span class="o">::</span><span class="n">_kick</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="c1">// n=0 term has no impact (constant in phi)</span>
+<span class="c1">// f(phi) = _FFTMagnitude(1) + sum (n = 2 -&gt; N / 2) of</span>
+<span class="c1">//          [2 * _FFTMagnitude(i) * cos(phi * (n - 1) +</span>
+<span class="c1">//          _FFTPhase(n) + _chi(n))]</span>
+
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">kick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">cosArg</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nBins</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">cosArg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">_fftphase</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">_chi</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+<span class="w">    </span><span class="n">kick</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_fftmagnitude</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_z</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">cosArg</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">kick</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/api/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8cc_1ad66d48303e1dbdcaf31d636b3b042fc8:
+
+Function error_base::LongDisplacement
+=====================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::LongDisplacement(Bunch *, double)
+   :project: PyORBIT3

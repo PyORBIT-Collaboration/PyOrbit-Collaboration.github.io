@@ -1,0 +1,57 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF.hh:
+
+Program Listing for File RfGapThreePointTTF.hh
+==============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap/RfGapThreePointTTF.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   
+   #ifndef THREE_POINTS_RF_GAP_H
+   #define THREE_POINTS_RF_GAP_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   using namespace std;
+   
+   
+   class RfGapThreePointTTF: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+     RfGapThreePointTTF();
+   
+     virtual ~RfGapThreePointTTF();
+   
+       static void trackBunch(Bunch* bunch, double dz, double Em, double E0, double Ep, double rf_frequency, double phase);
+   
+       static double Tttf(double dz, double a, double b, double kappa);
+   
+       static double Sttf(double dz, double a, double b, double kappa);
+   
+       static double Tpttf(double dz, double a, double b, double kappa);
+   
+       static double Spttf(double dz, double a, double b, double kappa);
+   
+     private:
+   
+   };
+   
+   #endif

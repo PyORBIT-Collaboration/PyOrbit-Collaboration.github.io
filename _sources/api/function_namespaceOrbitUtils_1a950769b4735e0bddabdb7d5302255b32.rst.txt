@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a950769b4735e0bddabdb7d5302255b32:
+
+Function OrbitUtils::fstep
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::fstep(float, float, float, float)
+   :project: PyORBIT3

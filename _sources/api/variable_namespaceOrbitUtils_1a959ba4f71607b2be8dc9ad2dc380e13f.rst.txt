@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a959ba4f71607b2be8dc9ad2dc380e13f:
+
+Variable OrbitUtils::energy
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::energy
+   :project: PyORBIT3

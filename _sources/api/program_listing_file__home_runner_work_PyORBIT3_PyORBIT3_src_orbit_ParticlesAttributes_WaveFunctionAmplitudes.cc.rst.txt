@@ -1,0 +1,41 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_WaveFunctionAmplitudes.cc:
+
+Program Listing for File WaveFunctionAmplitudes.cc
+==================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_WaveFunctionAmplitudes.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/WaveFunctionAmplitudes.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //  WaveFunctionAmplitudes.cc
+   //
+   // AUTHOR
+   //    T. Gorlov
+   //
+   // CREATED
+   //    07/19/2005
+   //
+   // DESCRIPTION
+   //    A subclass of a ParticleAttributes class
+   //
+   //
+   
+   #include "../Bunch.hh"
+   #include "WaveFunctionAmplitudes.hh"
+   
+   WaveFunctionAmplitudes::WaveFunctionAmplitudes(Bunch* bunch, int size_in):
+     ParticleAttributes(bunch, size_in)
+   {
+     cl_name_ = "Amplitudes";
+     attrDescr = "Ampls";
+   }
+   
+   WaveFunctionAmplitudes::~WaveFunctionAmplitudes()
+   {
+   }

@@ -1,0 +1,36 @@
+orbit.core.foil
+===============
+
+.. automodule:: orbit.core.foil
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      traverseFoilFullScatter
+      traverseFoilSimpleScatter
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Foil
+   
+   
+
+   
+   
+   
+
+
+

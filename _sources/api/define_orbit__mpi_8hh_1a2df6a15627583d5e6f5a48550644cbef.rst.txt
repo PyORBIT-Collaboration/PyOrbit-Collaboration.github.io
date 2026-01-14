@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a2df6a15627583d5e6f5a48550644cbef:
+
+Define MPI_COMM_WORLD
+=====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_COMM_WORLD
+   :project: PyORBIT3

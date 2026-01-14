@@ -1,0 +1,100 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh:
+
+File BufferStore.hh
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/BufferStore.hh``)
+-----------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh.rst
+
+
+
+
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_LImpedance.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_DipoleFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_LoopFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_Matrix.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_statistics_StatMoments2D.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1BufferStore`
+

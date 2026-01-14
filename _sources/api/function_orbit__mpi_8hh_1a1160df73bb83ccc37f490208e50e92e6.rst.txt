@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a1160df73bb83ccc37f490208e50e92e6:
+
+Function ORBIT_MPI_Comm_size
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Comm_size(MPI_Comm, int *)
+   :project: PyORBIT3

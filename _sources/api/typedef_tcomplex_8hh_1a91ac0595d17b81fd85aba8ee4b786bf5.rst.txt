@@ -1,0 +1,14 @@
+.. _exhale_typedef_tcomplex_8hh_1a91ac0595d17b81fd85aba8ee4b786bf5:
+
+Typedef tcomplex
+================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: tcomplex
+   :project: PyORBIT3

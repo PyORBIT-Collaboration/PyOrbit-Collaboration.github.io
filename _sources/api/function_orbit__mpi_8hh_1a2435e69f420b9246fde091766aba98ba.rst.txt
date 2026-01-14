@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a2435e69f420b9246fde091766aba98ba:
+
+Function ORBIT_MPI_Group_union
+==============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Group_union(MPI_Group, MPI_Group, MPI_Group *)
+   :project: PyORBIT3

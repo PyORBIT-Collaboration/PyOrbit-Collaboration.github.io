@@ -1,0 +1,38 @@
+orbit.py\_linac.overlapping\_fields.overlapping\_quad\_fields\_lib
+==================================================================
+
+.. automodule:: orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbstractQuadFieldSourceFunction
+      AxisFieldRF_Gap
+      AxisField_and_Quad_RF_Gap
+      BaseLinacNode
+      Drift
+      EngeFunction
+      Function
+      PMQ_Trace3D_Function
+      Quad
+      SimpleQuadFieldFunc
+   
+   
+
+   
+   
+   
+
+
+

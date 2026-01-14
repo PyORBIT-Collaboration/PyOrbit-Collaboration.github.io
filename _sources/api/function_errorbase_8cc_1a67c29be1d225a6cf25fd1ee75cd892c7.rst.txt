@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8cc_1a67c29be1d225a6cf25fd1ee75cd892c7:
+
+Function error_base::BendDisplacementYI
+=======================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::BendDisplacementYI(Bunch *, double)
+   :project: PyORBIT3

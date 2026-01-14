@@ -1,0 +1,139 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh:
+
+Program Listing for File Grid1D.hh
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/Grid1D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef SC_GRID_1D_H
+   #define SC_GRID_1D_H
+   
+   // MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   // ORBIT bunch
+   #include "Bunch.hh"
+   
+   // pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   using namespace std;
+   
+   
+   class Grid1D:public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+     Grid1D(int zSize);
+   
+     Grid1D(int zSize, double length);
+   
+     Grid1D(int zSize, double zMin, double zMax);
+   
+     virtual ~Grid1D();
+   
+     void setGridZ(double zMin, double zMax);
+   
+     double* getArr();
+   
+     double getMinZ();
+   
+     double getMaxZ();
+   
+     int getSizeZ();
+   
+     double getSum();
+   
+     double getStepZ();
+   
+     double getGridZ(int index);
+   
+     int isInside(double z);
+   
+     void setZero();
+   
+     void multiply(double coeff);
+   
+     void setValue(double value, int iZ);
+   
+     double getValueOnGrid(int iZ);
+   
+     double getValue(double z);
+   
+     double getValueSmoothed(double z);
+   
+     void binBunch(Bunch* bunch);
+   
+     void binBunch(Bunch* bunch, int axis_ind);
+   
+     void binBunchSmoothed(Bunch* bunch);
+   
+     void binBunchSmoothed(Bunch* bunch, int axis_ind);
+   
+     void binBunchByParticle(Bunch* bunch);
+   
+     void binBunchByParticle(Bunch* bunch, int axis_ind);
+   
+     void binBunchSmoothedByParticle(Bunch* bunch);
+   
+     void binBunchSmoothedByParticle(Bunch* bunch, int axis_ind);
+   
+     void binBunchMoment(int propindex, Bunch* bunch, double* Moment);
+   
+     void binBunchSmoothedMoment(int propindex, Bunch* bunch, double* Moment);
+   
+     void binValue(double value, double z);
+   
+     void binValueSmoothed(double value, double z);
+   
+     void binMoment(double value, double z, double* Moment);
+   
+     void binMomentSmoothed(double value, double z, double* Moment);
+   
+     void calcGradient(double z, double& ez);
+   
+     void calcGradientSmoothed(double z, double& ez);
+   
+     void synchronizeMPI(pyORBIT_MPI_Comm* comm);
+   
+   private:
+   
+     void init();
+   
+     void getIndAndWZ(double z,
+                      int& ind0  , int& indp,
+                      double& Wz0, double& Wzp);
+   
+     void getIndAndWZSmoothed(double z,
+                              int& indm   , int& ind0   , int& indp   ,
+                              double& Wzm , double& Wz0 , double& Wzp ,
+                              double& dWzm, double& dWz0, double& dWzp);
+   
+   
+     void getBinIndAndWZSmoothed(double z,
+                              int& indm   , int& ind0   , int& indp   ,
+                              double& Wzm , double& Wz0 , double& Wzp ,
+                              double& dWzm, double& dWz0, double& dWzp);
+   
+   protected:
+   
+     double* arr_;
+   
+     int zSize_;
+   
+     double dz_;
+   
+     double zMin_, zMax_;
+   };
+   
+   
+   #endif

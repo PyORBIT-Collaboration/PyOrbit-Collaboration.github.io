@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a0eaaec4745f0a27996e5a726969406da:
+
+Function OrbitUtils::get_radlength
+==================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::get_radlength(int)
+   :project: PyORBIT3

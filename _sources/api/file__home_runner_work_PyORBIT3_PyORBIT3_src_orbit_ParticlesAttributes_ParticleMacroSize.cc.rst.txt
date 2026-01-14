@@ -1,0 +1,40 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.cc:
+
+File ParticleMacroSize.cc
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/ParticleMacroSize.cc``)
+-------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``../Bunch.hh``
+
+- ``ParticleMacroSize.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh`)
+
+
+
+
+

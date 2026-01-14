@@ -1,0 +1,58 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.hh:
+
+File errorbase.hh
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Errors``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Errors/errorbase.hh``)
+----------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Bunch.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_error_base`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_errorbase_8hh_1ad187b828ef3cd35ea22e319824529179`
+

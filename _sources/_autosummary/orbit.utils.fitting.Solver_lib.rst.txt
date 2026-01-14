@@ -1,0 +1,50 @@
+orbit.utils.fitting.Solver\_lib
+===============================
+
+.. automodule:: orbit.utils.fitting.Solver_lib
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ComboStopper
+      MaxAccuracyStopper
+      MaxIterationStopper
+      MaxTimeStopper
+      NamedObject
+      ParamsDictObject
+      RunForeverStopper
+      Scoreboard
+      ScoreboardActionListener
+      Scorer
+      SearchAgorithm
+      SolveStopper
+      SolveStopperFactory
+      Solver
+      TrialPoint
+      VariableProxy
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1ae36314bfa71f499018ed7cb956b3e125:
+
+Function OrbitUtils::bunch_sort_id
+==================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::bunch_sort_id(Bunch *)
+   :project: PyORBIT3

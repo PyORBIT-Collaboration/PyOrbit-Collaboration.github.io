@@ -1,0 +1,70 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.hh:
+
+Program Listing for File Collimator.hh
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/Collimator.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //The base class for Collimators. It defines the interface for collimator
+   #ifndef COLLIMATOR_H
+   #define COLLIMATOR_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "Bunch.hh"
+   
+   using namespace std;
+   
+   
+   class Collimator: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       Collimator(double length, int ma,
+                         double density_fac, int shape,
+                                       double a, double b, double c, double d, double angle, double pos);
+   
+       void collimateBunch(Bunch* bunch, Bunch* lostbunch);
+   
+       void setPosition(double position);
+   
+   
+   private:
+   
+       int checkCollFlag(double x, double y);
+   
+       int driftParticle(int coll_flag, double& zrl, double length, double* coords, SyncPart* syncpart);
+   
+       double getDirection(double* coords, SyncPart* syncpart);
+   
+       double getPFactor(double* coords, SyncPart* syncpart);
+   
+       double getBeta(double* coords, SyncPart* syncpart);
+   
+       double getP(double* coords, SyncPart* syncpart);
+   
+       void checkStep(double rl, double radlengthfac, double& stepsize, double* coords, SyncPart* syncpart);
+   
+       void takeStep(Bunch* bunch, Bunch* lostbunch, double* coords, SyncPart* syncpart, double z, double a, double density, double stepsize, double& zrl, double& rl, int& coll_flag, int ip);
+   
+       void loseParticle(Bunch* bunch, Bunch* lostbunch, int ip, int& nLost, int& coll_flag, double& zrl);
+   
+   protected:
+   
+       //Counters
+       int nHits;
+       int nLost;
+   
+       //Collimator parameters
+       double length_, density_fac_, a_, b_, c_, d_, angle_, pos_;
+       int ma_, shape_;
+   
+   };
+   
+   //end of COLLIMATOR_H ifdef
+   #endif

@@ -1,0 +1,17 @@
+.. _exhale_class_classMaterialInteractions:
+
+Class MaterialInteractions
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.hh`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: MaterialInteractions
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

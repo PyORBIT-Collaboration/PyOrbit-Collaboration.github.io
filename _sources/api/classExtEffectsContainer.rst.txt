@@ -1,0 +1,26 @@
+.. _exhale_class_classExtEffectsContainer:
+
+Class ExtEffectsContainer
+=========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public TrackerRK4::ExternalEffects`` (:ref:`exhale_class_classTrackerRK4_1_1ExternalEffects`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ExtEffectsContainer
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

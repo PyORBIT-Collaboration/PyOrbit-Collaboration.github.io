@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a8fa941be0ff7c437ef4b6ba63f530f38:
+
+Define MPI_MINLOC
+=================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_MINLOC
+   :project: PyORBIT3

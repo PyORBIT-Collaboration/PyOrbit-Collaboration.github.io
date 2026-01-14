@@ -1,0 +1,26 @@
+.. _exhale_class_classSpaceChargeForceCalc2p5D:
+
+Class SpaceChargeForceCalc2p5D
+==============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: SpaceChargeForceCalc2p5D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

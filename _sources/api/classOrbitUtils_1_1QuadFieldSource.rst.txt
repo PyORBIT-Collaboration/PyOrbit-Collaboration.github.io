@@ -1,0 +1,26 @@
+.. _exhale_class_classOrbitUtils_1_1QuadFieldSource:
+
+Class QuadFieldSource
+=====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::ShiftedFieldSource`` (:ref:`exhale_class_classOrbitUtils_1_1ShiftedFieldSource`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitUtils::QuadFieldSource
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

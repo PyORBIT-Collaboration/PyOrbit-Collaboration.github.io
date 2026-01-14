@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a981fd4f32c2c2b592bb8af1fe9965bf9:
+
+Function OrbitUtils::qsimp
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::qsimp(float(*)(float, float, float), float, float, float, float)
+   :project: PyORBIT3

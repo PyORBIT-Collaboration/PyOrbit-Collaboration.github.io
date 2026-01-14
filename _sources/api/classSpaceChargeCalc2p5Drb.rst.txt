@@ -1,0 +1,26 @@
+.. _exhale_class_classSpaceChargeCalc2p5Drb:
+
+Class SpaceChargeCalc2p5Drb
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: SpaceChargeCalc2p5Drb
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

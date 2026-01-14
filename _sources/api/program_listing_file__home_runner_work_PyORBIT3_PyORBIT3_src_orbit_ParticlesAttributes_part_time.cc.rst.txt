@@ -1,0 +1,42 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_part_time.cc:
+
+Program Listing for File part_time.cc
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_part_time.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/part_time.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   MyAttr.cc
+   //
+   // AUTHOR
+   //    T. Gorlov
+   //
+   // CREATED
+   //    07/19/2005
+   //
+   // DESCRIPTION
+   //    A subclass of a ParticleAttributes class
+   //    to keep macrosize parameter for each particle.
+   //
+   //
+   
+   #include "../Bunch.hh"
+   #include "part_time.hh"
+   
+   part_time::part_time(Bunch* bunch, int size_in):
+     ParticleAttributes(bunch,size_in)
+   {
+     cl_name_ = "part_time";
+     attrDescr = "time";
+   }
+   
+   part_time::~part_time()
+   {
+   }

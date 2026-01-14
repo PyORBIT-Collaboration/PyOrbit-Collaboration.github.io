@@ -1,0 +1,70 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.hh:
+
+Program Listing for File BaseApertureShape.hh
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_BaseApertureShape.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/BaseApertureShape.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //The base class for BaseApertureShapes. It defines the interface for BaseApertureShape
+   #ifndef BASE_APERTURE_SHAPE_H
+   #define BASE_APERTURE_SHAPE_H
+   
+   #include "Bunch.hh"
+   #include "BaseApertureShape.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   
+   using namespace std;
+   
+   //
+   // NAME
+   //
+   //   BaseApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   
+   
+   class BaseApertureShape: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       BaseApertureShape();
+   
+       virtual ~BaseApertureShape();
+   
+       virtual int inside(Bunch* bunch, int count);
+   
+       void setCenterX(double x_center);
+   
+       double getCenterX();
+   
+       void setCenterY(double y_center);
+   
+       double getCenterY();
+   
+       string getName();
+   
+       void setName(string shapeName);
+   
+       string getTypeName();
+   
+   protected:
+   
+       string shapeName;
+   
+       string typeName;
+   
+       double x_center, y_center;
+   
+   };
+   
+   //end of BASE_APERTURE_SHAPE_H ifdef
+   #endif

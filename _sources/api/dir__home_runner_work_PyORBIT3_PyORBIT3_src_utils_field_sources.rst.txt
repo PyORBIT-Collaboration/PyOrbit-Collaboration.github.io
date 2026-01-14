@@ -1,0 +1,30 @@
+.. _dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources:
+
+
+Directory field_sources
+=======================
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+*Directory path:* ``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/field_sources``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_DipoleFieldSource.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_DipoleFieldSource.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_LoopFieldSource.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_LoopFieldSource.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.hh`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.cc`
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.hh`
+
+

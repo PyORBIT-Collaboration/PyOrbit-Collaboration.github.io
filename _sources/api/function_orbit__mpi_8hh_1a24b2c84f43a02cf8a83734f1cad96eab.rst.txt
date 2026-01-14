@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a24b2c84f43a02cf8a83734f1cad96eab:
+
+Function ORBIT_MPI_Comm_free
+============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Comm_free(MPI_Comm *)
+   :project: PyORBIT3

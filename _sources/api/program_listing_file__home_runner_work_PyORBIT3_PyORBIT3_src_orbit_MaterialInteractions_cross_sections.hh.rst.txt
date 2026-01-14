@@ -1,0 +1,38 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.hh:
+
+Program Listing for File cross_sections.hh
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/cross_sections.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //    cross_sections.hh
+   //
+   // CREATED
+   //    09/13/2011
+   //
+   // DESCRIPTION
+   //   Energy dependent elastic scattering cross sections for ~GeV protons on
+   //   various materials.
+   #ifndef CROSS_SECTIONS_H
+   #define CROSS_SECTIONS_H
+   
+   namespace OrbitUtils{
+   
+       double get_z(int ma);
+       double get_a(int ma);
+       double get_rho(int ma);
+       double get_radlength(int ma);
+       double get_elastic_crosssection(double energyrequest, int ma_index);
+       double get_inelastic_crosssection(double energyrequest, int ma_index);
+   
+   }
+   
+   #endif

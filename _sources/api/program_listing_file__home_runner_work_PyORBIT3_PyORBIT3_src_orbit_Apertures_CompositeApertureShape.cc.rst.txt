@@ -1,0 +1,74 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CompositeApertureShape.cc:
+
+Program Listing for File CompositeApertureShape.cc
+==================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CompositeApertureShape.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/CompositeApertureShape.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include "CompositeApertureShape.hh"
+   
+   #include <iostream>
+   #include <cmath>
+   #include <cfloat>
+   #include <cstdlib>
+   
+   //
+   // NAME
+   //
+   //   CompositeApertureShape
+   //
+   // AUTHOR:
+   //   Andrei Shishlo October 2022
+   //
+   //   CompositeApertureShape is an implementation of BaseApertureShape class
+   //   to represent a logical union of several shapes dtored in collection.
+   //   To get "isinside" method result 1 (Yes) this class will go through
+   //   all BaseApertureShape class instances in the collection and
+   //   should get 1 from at least one shape.
+   //
+   
+   CompositeApertureShape::CompositeApertureShape(): BaseApertureShape()
+   {
+           shapeName = "composite";
+           typeName = "composite";
+   }
+   
+   CompositeApertureShape::~CompositeApertureShape()
+   {
+       int n_shapes = apertureShapes.size();
+       for(int ind = 0; ind < n_shapes; ind++){
+           if(apertureShapes[ind]->getPyWrapper() != NULL){
+               Py_XDECREF((PyObject*) apertureShapes[ind]->getPyWrapper());
+           }
+       }
+   }
+   
+   int CompositeApertureShape::inside(Bunch* bunch, int count){
+       int n_shapes = apertureShapes.size();
+       if(n_shapes == 0){
+           return 0;
+       }
+       for(int ind = 0; ind < n_shapes; ind++){
+           int isIn = apertureShapes[ind]->inside(bunch,count);
+           if(isIn > 0){;
+               return 1;
+           }
+       }
+       return 0;
+   }
+   
+   void CompositeApertureShape::addApertureShape(BaseApertureShape* apertureShape)
+   {
+       apertureShapes.push_back(apertureShape);
+       Py_INCREF((PyObject*) apertureShape->getPyWrapper());
+   }
+   
+   std::vector<BaseApertureShape*> CompositeApertureShape::getApertureShape()
+   {
+       return apertureShapes;
+   }

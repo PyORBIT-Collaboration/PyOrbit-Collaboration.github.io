@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1a6e6b87592d124ec0f4ee623a9b1387d9:
+
+Function OrbitUtils::rfunc
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::rfunc(float, float, float)
+   :project: PyORBIT3

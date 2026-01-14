@@ -1,0 +1,75 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_PhaseVector.hh:
+
+Program Listing for File PhaseVector.hh
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_PhaseVector.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/matrix/PhaseVector.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   PhaseVector.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    03/12/2008
+   //
+   // DESCRIPTION
+   //     A class for a plain double values vector.
+   //
+   
+   #ifndef PHASE_VECTOR_H
+   #define PHASE_VECTOR_H
+   
+   #include "CppPyWrapper.hh"
+   
+   namespace OrbitUtils{
+   
+   
+       class PhaseVector : public CppPyWrapper
+       {
+           public:
+   
+               PhaseVector(int n);
+   
+               PhaseVector(PhaseVector* vIn);
+   
+               ~PhaseVector();
+   
+               double* getArray();
+   
+               int size();
+   
+               void zero();
+   
+               double& value(int i);
+   
+               int copyTo(PhaseVector* vIn);
+   
+               int add(double val);
+   
+               int add(PhaseVector* mtrx);
+   
+               double norm();
+   
+               int mult(double val);
+   
+               double dot(PhaseVector* vctr);
+   
+           private:
+   
+               int n;
+   
+               double* v;
+   
+       };
+   };
+   
+   #endif

@@ -1,0 +1,81 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_Matrix.hh:
+
+Program Listing for File Matrix.hh
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_Matrix.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/matrix/Matrix.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   Matrix.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    03/12/2008
+   //
+   // DESCRIPTION
+   //    A class for plain NxM matrices with double values.
+   //
+   
+   #ifndef PLAIN_MATRIX_H
+   #define PLAIN_MATRIX_H
+   
+   #include "CppPyWrapper.hh"
+   
+   namespace OrbitUtils{
+   
+   
+       class Matrix : public CppPyWrapper
+       {
+           public:
+   
+               Matrix(int n, int m);
+   
+               Matrix(Matrix* mtrx);
+   
+               ~Matrix();
+   
+               double** getArray();
+   
+               int rows();
+   
+               int columns();
+               double& value(int i, int j);
+   
+               int copyTo(Matrix* m_child);
+   
+               void transpose();
+   
+               int unit();
+   
+               void zero();
+   
+               int add(double val);
+   
+               int add(Matrix* mtrx);
+   
+               int mult(double val);
+   
+               int mult(Matrix* mtrx);
+   
+           private:
+   
+               int n,m;
+   
+               double** a;
+   
+       };
+   };
+   //
+   // END OF FILE
+   //
+   
+   #endif

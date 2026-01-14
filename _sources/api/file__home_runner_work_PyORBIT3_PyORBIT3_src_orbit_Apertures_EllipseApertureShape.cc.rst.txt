@@ -1,0 +1,46 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.cc:
+
+File EllipseApertureShape.cc
+============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/EllipseApertureShape.cc``)
+------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``EllipseApertureShape.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EllipseApertureShape.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``iostream``
+
+
+
+
+

@@ -1,0 +1,17 @@
+.. _exhale_class_classParticleAttributesFactory:
+
+Class ParticleAttributesFactory
+===============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleAttributesFactory.hh`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ParticleAttributesFactory
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

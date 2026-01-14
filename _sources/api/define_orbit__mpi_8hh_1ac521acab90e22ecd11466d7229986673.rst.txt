@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1ac521acab90e22ecd11466d7229986673:
+
+Define MPI_CHAR
+===============
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_CHAR
+   :project: PyORBIT3

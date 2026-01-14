@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1a92949b38fe1cbbf28cde756d5fc2fd08:
+
+Function teapot_base::rotatexy
+==============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::rotatexy(Bunch *, double)
+   :project: PyORBIT3

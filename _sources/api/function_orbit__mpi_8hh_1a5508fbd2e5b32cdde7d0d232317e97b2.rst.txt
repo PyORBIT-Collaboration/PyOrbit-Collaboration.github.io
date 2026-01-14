@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a5508fbd2e5b32cdde7d0d232317e97b2:
+
+Function ORBIT_MPI_Graph_create
+===============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Graph_create(MPI_Comm, int, int *, int *, int, MPI_Comm *)
+   :project: PyORBIT3

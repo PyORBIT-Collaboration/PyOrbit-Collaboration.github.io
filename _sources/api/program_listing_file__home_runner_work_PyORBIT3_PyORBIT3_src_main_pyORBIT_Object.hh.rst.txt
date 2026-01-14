@@ -1,0 +1,46 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_main_pyORBIT_Object.hh:
+
+Program Listing for File pyORBIT_Object.hh
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_main_pyORBIT_Object.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/main/pyORBIT_Object.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //    pyORBIT_Object.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    06/08/2007
+   //
+   // DESCRIPTION
+   //    The wrapper around any pointer to the ORBIT C++ class instance.
+   //
+   
+   #ifndef PY_ORBIT_OBJECT_H
+   #define PY_ORBIT_OBJECT_H
+   
+   #include "structmember.h"
+   
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
+   
+    typedef struct {
+      PyObject_HEAD
+      void* cpp_obj;
+    } pyORBIT_Object;
+   
+   #ifdef __cplusplus
+   }
+   #endif
+   
+   #endif

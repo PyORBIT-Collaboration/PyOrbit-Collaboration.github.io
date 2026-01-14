@@ -1,0 +1,14 @@
+.. _exhale_variable_namespaceOrbitUtils_1a28b4ac019402842ae8f606a6cdbc8a04:
+
+Variable OrbitUtils::copper
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: OrbitUtils::copper
+   :project: PyORBIT3

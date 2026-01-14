@@ -1,0 +1,14 @@
+.. _exhale_function_linac__tracking_8cc_1aeec1a8e3a9ceacd9477bc1b8cb1da9cc:
+
+Function linac_tracking::linac_quad2
+====================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking_linac_tracking.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: linac_tracking::linac_quad2(Bunch *, double)
+   :project: PyORBIT3

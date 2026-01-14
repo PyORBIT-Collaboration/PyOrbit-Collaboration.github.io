@@ -1,0 +1,20 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh:
+
+Program Listing for File tcomplex.hh
+====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_tcomplex.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/tcomplex.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //This is a macro-defenition of the complex type
+   #ifndef ORBIT_UTILS_TCOMPLEX_
+   #define ORBIT_UTILS_TCOMPLEX_
+   
+   #include <complex>
+   typedef std::complex<double>    tcomplex;
+   
+   #endif /*ORBIT_UTILS_TCOMPLEX_*/

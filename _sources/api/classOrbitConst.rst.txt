@@ -1,0 +1,17 @@
+.. _exhale_class_classOrbitConst:
+
+Class OrbitConst
+================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OrbitConst
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,139 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc:
+
+File cross_sections.cc
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/cross_sections.cc``)
+-----------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cross_sections.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.hh`)
+
+- ``cstdlib``
+
+- ``iostream``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structOrbitUtils_1_1MPstr`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae37ff2ff17879651bc374aa5583b64d5`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a0c8d7d5bcd2b2537f47848febb410f89`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab254309b7520ca41d6bd1991a79b6a05`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a0eaaec4745f0a27996e5a726969406da`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ac55f0a408bfb206a234d1d21050d51ab`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab6949ab23abd2d6f99a162a097eab8c0`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespaceOrbitUtils_1a51860e125117c86ad602efb3387f506a`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a21f7ff35677227691754da99f825a602`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2c9f50b688a2958a32948ba7fe552dc9`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a28b4ac019402842ae8f606a6cdbc8a04`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a959ba4f71607b2be8dc9ad2dc380e13f`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a072af0745f0ef74fbfd4b77be4428d22`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ac440342922a616f1614a7558b1371796`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a6531414f8c5060641d76f870b906e6a8`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a7f6fd44e36129627f3b6891e25ed50b5`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ab217f36d76df79c54df1ab94a462051c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a440f511ebd475c1cb39fc59f98daa636`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2828a114b8b7d0ffb0e49778373f0a22`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ac78975b86a19c97e2c07958fe98eda1b`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a7fe9e8b790b3864634debbcb67e824d6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a33059d62d2818898be74ad7a656c5a84`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a9f71e8ac48281847db488822187e3ad6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a1a13e9cc5abb11ea1557a3abc16fa11e`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1acb8a3dbff1ff92ca7ff8e39cd87b20e9`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a8bab1fa05170095349f98e9f4885ace4`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2ec4dfae351e7f95b609c8df6249a72c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a467b1f3514f1a8a4b5a71deb421edf9c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ad68d3af9bf8ba53df7e72be49936dee0`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a21a98c4ffda7bfcae5d0882f6ced2820`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a719403b91510ae60f8c0a4885196155f`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a158b7c759c7dc7e57af5ef9adab43051`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a58d6a894b5a3cfa1f13b769b927a6048`
+

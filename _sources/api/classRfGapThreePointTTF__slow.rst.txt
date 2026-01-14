@@ -1,0 +1,26 @@
+.. _exhale_class_classRfGapThreePointTTF__slow:
+
+Class RfGapThreePointTTF_slow
+=============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF_slow.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: RfGapThreePointTTF_slow
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

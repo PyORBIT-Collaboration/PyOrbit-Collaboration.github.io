@@ -1,0 +1,45 @@
+orbit.py\_linac.lattice.LinacFieldOverlappingNodes
+==================================================
+
+.. automodule:: orbit.py_linac.lattice.LinacFieldOverlappingNodes
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      orbitFinalize
+      phaseNearTargetPhase
+      phaseNearTargetPhaseDeg
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbstractRF_Gap
+      AxisField_and_Quad_RF_Gap
+      BaseLinacNode
+      Drift
+      Function
+      OverlappingQuadsNode
+      Quad
+      RfGapThreePointTTF
+      RfGapThreePointTTF_slow
+   
+   
+
+   
+   
+   
+
+
+

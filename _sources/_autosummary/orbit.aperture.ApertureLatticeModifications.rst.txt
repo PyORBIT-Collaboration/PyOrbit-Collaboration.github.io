@@ -1,0 +1,43 @@
+orbit.aperture.ApertureLatticeModifications
+===========================================
+
+.. automodule:: orbit.aperture.ApertureLatticeModifications
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addTeapotApertureNode
+      orbitFinalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AccActionsContainer
+      AccLattice
+      AccNode
+      AccNodeBunchTracker
+      Aperture
+      DriftTEAPOT
+      LinacDrift
+      TeapotApertureNode
+   
+   
+
+   
+   
+   
+
+
+

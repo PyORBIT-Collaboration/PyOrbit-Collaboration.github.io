@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1ad577346f5bb31a2d8ad5cb49a9b1ce13:
+
+Function OrbitUtils::bessj1(float)
+==================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_numrecipes.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::bessj1(float)
+   :project: PyORBIT3

@@ -1,0 +1,60 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.hh:
+
+File QuadFieldSource.hh
+=======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/field_sources``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/field_sources/QuadFieldSource.hh``)
+-----------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.hh.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Grid3D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.hh`)
+
+- ``ShiftedFieldSource.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.hh`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.cc`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOrbitUtils_1_1QuadFieldSource`
+

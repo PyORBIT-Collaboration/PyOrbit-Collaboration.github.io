@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8hh_1ad187b828ef3cd35ea22e319824529179:
+
+Function error_base::drifti
+===========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::drifti(Bunch *, int, double)
+   :project: PyORBIT3

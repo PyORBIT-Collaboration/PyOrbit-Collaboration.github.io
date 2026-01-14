@@ -1,0 +1,26 @@
+.. _exhale_class_classSynchPartRedefinitionZdE:
+
+Class SynchPartRedefinitionZdE
+==============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SynchPartRedefinition_SynchPartRedefinitionZdE.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: SynchPartRedefinitionZdE
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

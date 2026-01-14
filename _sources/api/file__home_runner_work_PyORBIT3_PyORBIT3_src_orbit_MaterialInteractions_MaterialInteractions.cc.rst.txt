@@ -1,0 +1,52 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.cc:
+
+File MaterialInteractions.cc
+============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/MaterialInteractions.cc``)
+-----------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``MaterialInteractions.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_MaterialInteractions.hh`)
+
+- ``OrbitConst.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_OrbitConst.hh`)
+
+- ``Random.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_Random.hh`)
+
+- ``bessel.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bessel.hh`)
+
+- ``cfloat``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``iostream``
+
+
+
+
+

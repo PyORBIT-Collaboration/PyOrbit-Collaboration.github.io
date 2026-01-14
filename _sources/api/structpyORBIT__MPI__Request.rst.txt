@@ -1,0 +1,17 @@
+.. _exhale_struct_structpyORBIT__MPI__Request:
+
+Struct pyORBIT_MPI_Request
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: pyORBIT_MPI_Request
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

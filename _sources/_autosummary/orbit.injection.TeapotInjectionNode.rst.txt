@@ -1,0 +1,79 @@
+orbit.injection.TeapotInjectionNode
+===================================
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: TeapotInjectionNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TeapotInjectionNode.__init__
+      ~TeapotInjectionNode.addChildNode
+      ~TeapotInjectionNode.addParam
+      ~TeapotInjectionNode.getActivePartIndex
+      ~TeapotInjectionNode.getAllChildren
+      ~TeapotInjectionNode.getBodyChildren
+      ~TeapotInjectionNode.getChildNodes
+      ~TeapotInjectionNode.getFringeFieldFunctionIN
+      ~TeapotInjectionNode.getFringeFieldFunctionOUT
+      ~TeapotInjectionNode.getLength
+      ~TeapotInjectionNode.getName
+      ~TeapotInjectionNode.getNodeFringeFieldIN
+      ~TeapotInjectionNode.getNodeFringeFieldOUT
+      ~TeapotInjectionNode.getNodeTiltIN
+      ~TeapotInjectionNode.getNodeTiltOUT
+      ~TeapotInjectionNode.getNumberOfBodyChildren
+      ~TeapotInjectionNode.getNumberOfChildren
+      ~TeapotInjectionNode.getParam
+      ~TeapotInjectionNode.getParamsDict
+      ~TeapotInjectionNode.getTiltAngle
+      ~TeapotInjectionNode.getType
+      ~TeapotInjectionNode.getUsageFringeFieldIN
+      ~TeapotInjectionNode.getUsageFringeFieldOUT
+      ~TeapotInjectionNode.getnParts
+      ~TeapotInjectionNode.hasParam
+      ~TeapotInjectionNode.initialize
+      ~TeapotInjectionNode.keys
+      ~TeapotInjectionNode.removeParam
+      ~TeapotInjectionNode.reverseOrder
+      ~TeapotInjectionNode.reverseOrderNodeSpecific
+      ~TeapotInjectionNode.setActivePartIndex
+      ~TeapotInjectionNode.setFringeFieldFunctionIN
+      ~TeapotInjectionNode.setFringeFieldFunctionOUT
+      ~TeapotInjectionNode.setLength
+      ~TeapotInjectionNode.setName
+      ~TeapotInjectionNode.setParam
+      ~TeapotInjectionNode.setParamsDict
+      ~TeapotInjectionNode.setTiltAngle
+      ~TeapotInjectionNode.setType
+      ~TeapotInjectionNode.setUsageFringeFieldIN
+      ~TeapotInjectionNode.setUsageFringeFieldOUT
+      ~TeapotInjectionNode.setnParts
+      ~TeapotInjectionNode.setnparts
+      ~TeapotInjectionNode.structureToText
+      ~TeapotInjectionNode.track
+      ~TeapotInjectionNode.trackActions
+      ~TeapotInjectionNode.trackBunch
+      ~TeapotInjectionNode.updateParamsDict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TeapotInjectionNode.AFTER
+      ~TeapotInjectionNode.BEFORE
+      ~TeapotInjectionNode.BODY
+      ~TeapotInjectionNode.ENTRANCE
+      ~TeapotInjectionNode.EXIT
+   
+   

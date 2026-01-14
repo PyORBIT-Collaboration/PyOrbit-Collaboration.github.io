@@ -1,0 +1,826 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File linac_tracking.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking_linac_tracking.cc';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File linac_tracking.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File linac_tracking.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-linac-tracking-cc">
+<span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-linac-tracking-linac-tracking-cc"></span><h1>Program Listing for File linac_tracking.cc<a class="headerlink" href="#program-listing-for-file-linac-tracking-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking_linac_tracking.cc.html#file-home-runner-work-pyorbit3-pyorbit3-src-linac-tracking-linac-tracking-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/linac/tracking/linac_tracking.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// FILE NAME</span>
+<span class="c1">//   linac_tracking.cc</span>
+<span class="c1">//</span>
+<span class="c1">// AUTHOR</span>
+<span class="c1">//   Andrei Shishlo, ORNL, shishlo@ornl.gov</span>
+<span class="c1">//   2017.01.24</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Define elementary functions for tracking through</span>
+<span class="c1">//   specific linac accelerator elements without using</span>
+<span class="c1">//   TEAPOT algorithms. It is necessary for the cases</span>
+<span class="c1">//   with a huge energy spread in the bunch.</span>
+<span class="c1">//</span>
+
+<span class="c1">//</span>
+<span class="c1">// Include files</span>
+<span class="c1">//</span>
+
+<span class="c1">//</span>
+<span class="c1">// Local Functions:</span>
+<span class="c1">//</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Bunch.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SyncPart.hh&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;complex&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">linac_tracking</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// NAME</span>
+<span class="w">    </span><span class="c1">//   linac_drift</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// DESCRIPTION</span>
+<span class="w">    </span><span class="c1">//   Drifts a particle bunch. Length &lt; 0 is not allowed.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// PARAMETERS</span>
+<span class="w">    </span><span class="c1">//   bunch = reference to the macro-particle bunch</span>
+<span class="w">    </span><span class="c1">//   length = length of the drift</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// RETURNS</span>
+<span class="w">    </span><span class="c1">//   Nothing</span>
+<span class="w">    </span><span class="c1">//</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">linac_drift</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">v_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">beta_s</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beta1_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">beta_s</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">delta_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">v_s</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">delta_tc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">delta_t</span><span class="o">*</span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">setTime</span><span class="p">(</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta_t</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Ekin_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMomentum</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p2_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_s</span><span class="o">*</span><span class="n">p_s</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Ekin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Etotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p_z2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//coordinate array [part. index][x,xp,y,yp,z,dE]</span>
+<span class="w">        </span><span class="c1">//sqrt(fabs(p_z2)) - fabs function is a protection for case when xp and yp are too big for dE</span>
+<span class="w">        </span><span class="c1">//It means the particles are nonphysical and simulations do not make sense</span>
+<span class="w">        </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">            </span><span class="n">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">            </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">            </span><span class="n">Ekin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin_s</span><span class="o">+</span><span class="n">dE</span><span class="p">;</span>
+<span class="w">            </span><span class="n">Etotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mass</span><span class="p">;</span>
+<span class="w">            </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin</span><span class="o">*</span><span class="p">(</span><span class="n">Etotal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mass</span><span class="p">);</span>
+<span class="w">            </span><span class="n">beta_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">xp</span><span class="o">*</span><span class="n">p_s</span><span class="p">)</span><span class="o">/</span><span class="n">Etotal</span><span class="p">;</span>
+<span class="w">            </span><span class="n">beta_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">yp</span><span class="o">*</span><span class="n">p_s</span><span class="p">)</span><span class="o">/</span><span class="n">Etotal</span><span class="p">;</span>
+<span class="w">            </span><span class="n">p_z2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">xp</span><span class="o">*</span><span class="n">xp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yp</span><span class="o">*</span><span class="n">yp</span><span class="p">)</span><span class="o">*</span><span class="n">p2_s</span><span class="p">;</span>
+<span class="w">            </span><span class="n">beta_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">p_z2</span><span class="p">))</span><span class="o">/</span><span class="n">Etotal</span><span class="p">;</span>
+<span class="w">            </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">beta_x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">delta_tc</span><span class="p">;</span>
+<span class="w">            </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">beta_y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">delta_tc</span><span class="p">;</span>
+<span class="w">            </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">beta_z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">beta_s</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">delta_tc</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// NAME</span>
+<span class="w">    </span><span class="c1">//   linac_quad1</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// DESCRIPTION</span>
+<span class="w">    </span><span class="c1">//   Quadrupole element one: linear transport matrix for linac</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// PARAMETERS</span>
+<span class="w">    </span><span class="c1">//   bunch  = reference to the macro-particle bunch</span>
+<span class="w">    </span><span class="c1">//   length = length of transport</span>
+<span class="w">    </span><span class="c1">//   kq = quadrupole field strength [m^(-2)]</span>
+<span class="w">    </span><span class="c1">//   kq = G/(B*rho) B*rho = 3.33564*P0/charge [T*m] where P0 in GeV/c</span>
+<span class="w">    </span><span class="c1">//   G = dB/dr [T/m] quad gradient</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// RETURNS</span>
+<span class="w">    </span><span class="c1">//   Nothing</span>
+<span class="w">    </span><span class="c1">//</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">linac_quad1</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">kq</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">useCharge</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">kq</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getCharge</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">linac_drift</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="n">length</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x_init</span><span class="p">,</span><span class="w"> </span><span class="n">xp_init</span><span class="p">,</span><span class="w"> </span><span class="n">y_init</span><span class="p">,</span><span class="w"> </span><span class="n">yp_init</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="p">,</span><span class="w"> </span><span class="n">kqlength</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">cx</span><span class="p">,</span><span class="w"> </span><span class="n">sx</span><span class="p">,</span><span class="w"> </span><span class="n">cy</span><span class="p">,</span><span class="w"> </span><span class="n">sy</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">m11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">m12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">m21</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">m22</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">m33</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">m34</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">m43</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">m44</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beta1_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">beta_s</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">v_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">beta_s</span><span class="p">;</span>
+
+<span class="w">         </span><span class="kt">double</span><span class="w"> </span><span class="n">delta_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">v_s</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">delta_tc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">delta_t</span><span class="o">*</span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">setTime</span><span class="p">(</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta_t</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">         </span><span class="c1">// ==== B*rho = 3.335640952*momentum/charge [T*m] if momentum in GeV/c ===</span>
+<span class="w">         </span><span class="kt">double</span><span class="w"> </span><span class="n">dB_dr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kq</span><span class="o">*</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getB_Rho</span><span class="p">();</span>
+
+<span class="w">         </span><span class="kt">double</span><span class="w"> </span><span class="n">mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Ekin_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMomentum</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p2_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_s</span><span class="o">*</span><span class="n">p_s</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Ekin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Etotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p_z2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//coordinate array [part. index][x,xp,y,yp,z,dE]</span>
+<span class="w">    </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">kqc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">             </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">            </span><span class="n">Ekin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin_s</span><span class="o">+</span><span class="n">dE</span><span class="p">;</span>
+<span class="w">            </span><span class="n">Etotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mass</span><span class="p">;</span>
+<span class="w">            </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin</span><span class="o">*</span><span class="p">(</span><span class="n">Ekin</span><span class="o">+</span><span class="mf">2.0</span><span class="o">*</span><span class="n">mass</span><span class="p">);</span>
+<span class="w">            </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">kqc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dB_dr</span><span class="o">/</span><span class="p">(</span><span class="mf">3.335640952</span><span class="o">*</span><span class="n">p</span><span class="o">/</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getCharge</span><span class="p">());</span>
+<span class="w">            </span><span class="n">beta_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">/</span><span class="n">Etotal</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">sqrt_kq</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">kqc</span><span class="p">));</span>
+<span class="w">        </span><span class="n">kqlength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">kqc</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">sx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cosh</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">sy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sinh</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">m21</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="p">;</span>
+<span class="w">            </span><span class="n">m43</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cosh</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">sx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sinh</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">sy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">kqlength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">m21</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="p">;</span>
+<span class="w">            </span><span class="n">m43</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">m11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cx</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sx</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m22</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cx</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m33</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cy</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m34</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sy</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt_kq</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m44</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cy</span><span class="p">;</span>
+
+<span class="w">         </span><span class="n">xp_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">yp_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="w">        </span><span class="c1">// coeff = p_s/p</span>
+<span class="w">          </span><span class="n">coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_s</span><span class="o">/</span><span class="n">p</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">x_init</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">xp_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xp_init</span><span class="o">*</span><span class="n">coeff</span><span class="p">;</span>
+<span class="w">        </span><span class="n">y_init</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">yp_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yp_init</span><span class="o">*</span><span class="n">coeff</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">x_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m11</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">xp_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m12</span><span class="p">;</span>
+<span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m21</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">xp_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m22</span><span class="p">)</span><span class="o">/</span><span class="n">coeff</span><span class="p">;</span>
+<span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">y_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m33</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yp_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m34</span><span class="p">;</span>
+<span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m43</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yp_init</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m44</span><span class="p">)</span><span class="o">/</span><span class="n">coeff</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">beta_z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">beta_s</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">delta_tc</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// NAME</span>
+<span class="w">  </span><span class="c1">//  linac_ quad2</span>
+<span class="w">  </span><span class="c1">//</span>
+<span class="w">  </span><span class="c1">// DESCRIPTION</span>
+<span class="w">  </span><span class="c1">//   Quadrupole element two: nonlinear piece for linac</span>
+<span class="w">  </span><span class="c1">//</span>
+<span class="w">  </span><span class="c1">// PARAMETERS</span>
+<span class="w">  </span><span class="c1">//   bunch  = reference to the macro-particle bunch</span>
+<span class="w">  </span><span class="c1">//   length = length of the element</span>
+<span class="w">  </span><span class="c1">//</span>
+<span class="w">  </span><span class="c1">// RETURNS</span>
+<span class="w">  </span><span class="c1">//   Nothing</span>
+<span class="w">  </span><span class="c1">//</span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">linac_quad2</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">//there are no non-linear components</span>
+<span class="w">  </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="c1">// NAME</span>
+<span class="w">    </span><span class="c1">//   linac_quad3</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// DESCRIPTION</span>
+<span class="w">    </span><span class="c1">//   Quadrupole element 3: longitudinal field component of the quad field</span>
+<span class="w">    </span><span class="c1">//   Bz(x,y,z) = x*y*dG(z)/dz</span>
+<span class="w">    </span><span class="c1">//   This function performs the transverse kicks correction, so the length</span>
+<span class="w">    </span><span class="c1">//   is just a parameter.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// PARAMETERS</span>
+<span class="w">    </span><span class="c1">//   bunch  = reference to the macro-particle bunch</span>
+<span class="w">    </span><span class="c1">//   length = length of transport</span>
+<span class="w">    </span><span class="c1">//   G = dB/dr [T/m] quad gradient</span>
+<span class="w">    </span><span class="c1">//   0.299792458 = (1/v_light) * 10^9</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// RETURNS</span>
+<span class="w">    </span><span class="c1">//   Nothing</span>
+<span class="w">    </span><span class="c1">//</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">linac_quad3</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dB_dz</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">charge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getCharge</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">dB_dz</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">charge</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//momentum in GeV/c</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">momentum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMomentum</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">kick_coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.299792458</span><span class="o">*</span><span class="n">charge</span><span class="o">*</span><span class="n">dB_dz</span><span class="o">*</span><span class="n">length</span><span class="o">/</span><span class="n">momentum</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//coordinate array [part. index][x,xp,y,yp,z,dE]</span>
+<span class="w">    </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">coef_xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">coef_xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kick_coeff</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w">  </span><span class="o">+=</span><span class="w">  </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">coef_xy</span><span class="p">;</span>
+<span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w">  </span><span class="o">+=</span><span class="w"> </span><span class="o">-</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">coef_xy</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="c1">// NAME</span>
+<span class="c1">//   kick</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Kicks a particle bunch</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//   bunch = reference to the macro-particle bunch</span>
+<span class="c1">//   kx = strength of the horizontal kick in rad</span>
+<span class="c1">//   ky = strength of the vertical kick in rad</span>
+<span class="c1">//   kE = strength of the energy kick in GeV</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   Nothing</span>
+<span class="c1">//</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">kick</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">kx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ky</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">kE</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">useCharge</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Ekin_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMomentum</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p2_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_s</span><span class="o">*</span><span class="n">p_s</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">p_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Ekin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//coordinate array [part. index][x,xp,y,yp,z,dE]</span>
+<span class="w">        </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">kx</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">                </span><span class="n">Ekin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin_s</span><span class="o">+</span><span class="n">dE</span><span class="p">;</span>
+<span class="w">                </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin</span><span class="o">*</span><span class="p">(</span><span class="n">Ekin</span><span class="o">+</span><span class="mf">2.0</span><span class="o">*</span><span class="n">mass</span><span class="p">);</span>
+<span class="w">                </span><span class="n">p_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">p2_s</span><span class="p">);</span>
+<span class="w">                </span><span class="n">coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_s</span><span class="o">/</span><span class="n">p_z</span><span class="p">;</span>
+<span class="w">                </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">kx</span><span class="o">*</span><span class="n">coeff</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">ky</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">                </span><span class="n">Ekin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin_s</span><span class="o">+</span><span class="n">dE</span><span class="p">;</span>
+<span class="w">                </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ekin</span><span class="o">*</span><span class="p">(</span><span class="n">Ekin</span><span class="o">+</span><span class="mf">2.0</span><span class="o">*</span><span class="n">mass</span><span class="p">);</span>
+<span class="w">                </span><span class="n">p_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">p2_s</span><span class="p">);</span>
+<span class="w">                </span><span class="n">coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_s</span><span class="o">/</span><span class="n">p_z</span><span class="p">;</span>
+<span class="w">                </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ky</span><span class="o">*</span><span class="n">coeff</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">kE</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">kE</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span><span class="w">  </span><span class="c1">//end of namespace linac_tracking</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/api/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_tracking_linac_tracking.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

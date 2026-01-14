@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8cc_1a3540527c3ad953cbaa7cd7579b485709:
+
+Function error_base::QuadKickerOsc
+==================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::QuadKickerOsc(Bunch *, double, double, double)
+   :project: PyORBIT3

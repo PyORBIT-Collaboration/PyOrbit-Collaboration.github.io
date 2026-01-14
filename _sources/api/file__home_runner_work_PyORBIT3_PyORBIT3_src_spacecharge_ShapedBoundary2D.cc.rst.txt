@@ -1,0 +1,42 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.cc:
+
+File ShapedBoundary2D.cc
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/ShapedBoundary2D.cc``)
+----------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``ShapedBoundary2D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.hh`)
+
+- ``cfloat``
+
+- ``iostream``
+
+
+
+
+

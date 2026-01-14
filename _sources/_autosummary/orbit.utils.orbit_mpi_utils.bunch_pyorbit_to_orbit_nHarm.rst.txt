@@ -1,0 +1,6 @@
+orbit.utils.orbit\_mpi\_utils.bunch\_pyorbit\_to\_orbit\_nHarm
+==============================================================
+
+.. currentmodule:: orbit.utils.orbit_mpi_utils
+
+.. autofunction:: bunch_pyorbit_to_orbit_nHarm

@@ -1,0 +1,52 @@
+﻿orbit.kickernodes
+=================
+
+.. automodule:: orbit.kickernodes
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      addTeapotKickerNode
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SquareRootWaveform
+      TeapotXKickerNode
+      TeapotYKickerNode
+      XKicker
+      YKicker
+      flatTopWaveform
+      rootTWaveform
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orbit.kickernodes.KickerLatticeModifications
+   orbit.kickernodes.TeapotKickerNode
+   orbit.kickernodes.kicker
+   orbit.kickernodes.waveforms
+

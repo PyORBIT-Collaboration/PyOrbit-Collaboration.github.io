@@ -1,0 +1,39 @@
+orbit.core.orbit\_utils
+=======================
+
+.. automodule:: orbit.core.orbit_utils
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BunchExtremaCalculator
+      FieldSourceContainer
+      Function
+      GaussLegendreIntegrator
+      HarmonicData
+      Matrix
+      PhaseVector
+      Polynomial
+      PyBaseFieldSource
+      SplineCH
+      StatMoments2D
+   
+   
+
+   
+   
+   
+
+
+

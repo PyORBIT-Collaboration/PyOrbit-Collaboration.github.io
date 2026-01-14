@@ -1,0 +1,14 @@
+.. _exhale_function_errorbase_8cc_1aa225350f2e51ecf71fa86943ee65884b:
+
+Function error_base::RotationI
+==============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Errors_errorbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: error_base::RotationI(Bunch *, double, double, double, double, std::string, std::string)
+   :project: PyORBIT3

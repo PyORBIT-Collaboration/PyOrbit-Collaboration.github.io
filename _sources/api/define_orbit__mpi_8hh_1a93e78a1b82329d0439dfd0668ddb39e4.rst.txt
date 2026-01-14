@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a93e78a1b82329d0439dfd0668ddb39e4:
+
+Define MPI_UNDEFINED_RANK
+=========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_UNDEFINED_RANK
+   :project: PyORBIT3

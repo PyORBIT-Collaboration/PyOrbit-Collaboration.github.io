@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1ac45117960db64985a092d67515d24813:
+
+Function ORBIT_MPI_Barrier
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Barrier(MPI_Comm)
+   :project: PyORBIT3

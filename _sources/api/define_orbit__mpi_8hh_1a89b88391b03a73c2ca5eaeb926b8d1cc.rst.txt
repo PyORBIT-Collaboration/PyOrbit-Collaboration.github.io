@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a89b88391b03a73c2ca5eaeb926b8d1cc:
+
+Define MPI_UNEQUAL
+==================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_UNEQUAL
+   :project: PyORBIT3

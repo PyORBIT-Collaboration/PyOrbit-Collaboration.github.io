@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__mpi_8hh_1a75a6dc3bc80a654fa1b99d83e1b07839:
+
+Function ORBIT_MPI_Initialized
+==============================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ORBIT_MPI_Initialized(int *)
+   :project: PyORBIT3

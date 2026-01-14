@@ -1,0 +1,32 @@
+.. _exhale_class_classPoissonSolver3D:
+
+Class PoissonSolver3D
+=====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver3D.hh`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public OrbitUtils::CppPyWrapper`` (:ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`)
+
+
+Derived Type
+************
+
+- ``public PoissonSolverFFT3D`` (:ref:`exhale_class_classPoissonSolverFFT3D`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: PoissonSolver3D
+   :project: PyORBIT3
+   :members:
+   :protected-members:
+   :undoc-members:

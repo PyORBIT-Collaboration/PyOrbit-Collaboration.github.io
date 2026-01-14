@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1ae1fd5981372c042ab5b7de7d4e4871af:
+
+Function OrbitUtils::swapInitCoordsAttrAndCoords
+================================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::swapInitCoordsAttrAndCoords(Bunch *)
+   :project: PyORBIT3

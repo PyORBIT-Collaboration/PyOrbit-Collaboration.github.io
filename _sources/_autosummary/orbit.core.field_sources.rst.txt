@@ -1,0 +1,32 @@
+orbit.core.field\_sources
+=========================
+
+.. automodule:: orbit.core.field_sources
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DipoleFieldSource
+      LoopFieldSource
+      MagnetFieldSourceGrid3D
+      QuadFieldSource
+   
+   
+
+   
+   
+   
+
+
+

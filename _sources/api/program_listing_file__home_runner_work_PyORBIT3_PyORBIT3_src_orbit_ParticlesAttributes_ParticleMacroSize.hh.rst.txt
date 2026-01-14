@@ -1,0 +1,55 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh:
+
+Program Listing for File ParticleMacroSize.hh
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/ParticlesAttributes/ParticleMacroSize.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   //
+   // FILE NAME
+   //   ParticleMacroSize.hh
+   //
+   // AUTHOR
+   //    A. Shishlo
+   //
+   // CREATED
+   //    07/14/2005
+   //
+   // DESCRIPTION
+   //    A subclass of the particle attributes class. This is container
+   //    for a macrosize of macro-particles in the bunch.
+   //
+   #ifndef PARTICLE_MACROSIZE_H
+   #define PARTICLE_MACROSIZE_H
+   
+   #include "../../mpi/orbit_mpi.hh"
+   
+   #include "ParticleAttributes.hh"
+   
+   #include <string>
+   
+   class ParticleMacroSize : public ParticleAttributes
+   {
+   public:
+     //--------------------------------------
+     //the public methods of the ParticleMacroSize class
+     //--------------------------------------
+   
+     ParticleMacroSize(Bunch* bunch);
+     ~ParticleMacroSize();
+   
+     double& macrosize(int particle_index);
+   
+   };
+   
+   //
+   // END OF FILE
+   //
+   
+   #endif

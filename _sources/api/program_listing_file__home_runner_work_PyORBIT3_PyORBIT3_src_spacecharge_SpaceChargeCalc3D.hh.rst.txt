@@ -1,0 +1,92 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.hh:
+
+Program Listing for File SpaceChargeCalc3D.hh
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeCalc3D.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   
+   #ifndef SC_SPACECHARGE_CALC_3D_H
+   #define SC_SPACECHARGE_CALC_3D_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "BunchExtremaCalculator.hh"
+   
+   #include "Grid3D.hh"
+   #include "PoissonSolverFFT3D.hh"
+   
+   using namespace std;
+   
+   class SpaceChargeCalc3D: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       SpaceChargeCalc3D(int xSize, int ySize, int zSize);
+   
+       virtual ~SpaceChargeCalc3D();
+   
+       void trackBunch(Bunch* bunch, double length);
+   
+       Grid3D* getRhoGrid();
+   
+       Grid3D* getPhiGrid();
+   
+       void setRatioLimit(double ratio_limit_in);
+   
+       double getRatioLimit();
+   
+       void setNumberOfExternalBunches(int nBunches);
+   
+       void setFrequencyOfBunches(double frequency);
+   
+       int getNumberOfExternalBunches();
+   
+       double getFrequencyOfBunches();
+   
+   private:
+   
+       void bunchAnalysis(Bunch* bunch);
+   
+       void wrappedBunchAnalysis(Bunch* bunch);
+   
+   protected:
+       PoissonSolverFFT3D* poissonSolver;
+       Grid3D* rhoGrid;
+       Grid3D* phiGrid;
+       OrbitUtils::BunchExtremaCalculator* bunchExtremaCalc;
+   
+       double xy_ratio;
+       double xz_ratio;
+   
+       //------------ratio change limit ----------
+       //If the shape (x to y and x to z ratios) of 3D region changes more than this
+       //limit then we have to change shape and recalculate Green Functions in the Poisson solver
+       double ratio_limit;
+   
+       //Number of bunches from both sides that should be taken into account.
+       //It defines the how many components we will add to Green function.
+       //This number will be an even number.
+       int nBunches_;
+   
+       //The frequency of the bunch arrivals in Hz. It defines by the RFQ frequency.
+       double frequency_;
+   };
+   //end of SC_SPACECHARGE_CALC_3D_H
+   #endif

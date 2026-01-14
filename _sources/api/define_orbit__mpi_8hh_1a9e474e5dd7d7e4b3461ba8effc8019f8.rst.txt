@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a9e474e5dd7d7e4b3461ba8effc8019f8:
+
+Define MPI_SHORT
+================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_SHORT
+   :project: PyORBIT3

@@ -1,0 +1,67 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.hh:
+
+Program Listing for File Foil.hh
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Foil.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/Foil.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   //The base class for Foils. It defines the interface for collimator
+   #ifndef FOIL_H
+   #define FOIL_H
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "Bunch.hh"
+   
+   using namespace std;
+   
+   
+   class Foil: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+       Foil(double xmin, double xmax, double ymin, double ymax, double thick);
+   
+       void traverseFoilFullScatter(Bunch* bunch, Bunch* lostbunch);
+   
+       void traverseFoilSimpleScatter(Bunch* bunch);
+   
+   
+   private:
+   
+       int checkFoilFlag(double x, double y);
+   
+       double getDirection(double* coords, SyncPart* syncpart);
+   
+       double getPFactor(double* coords, SyncPart* syncpart);
+   
+       double getBeta(double* coords, SyncPart* syncpart);
+   
+       double getP(double* coords, SyncPart* syncpart);
+   
+       void takeStep(Bunch* bunch, Bunch* lostbunch, double* coords, SyncPart* syncpart, double z, double a, double density, double stepsize, double& zrl, double& rl, int& coll_flag, int ip);
+   
+       void loseParticle(Bunch* bunch, Bunch* lostbunch, int ip, int& nLost, int& coll_flag, double& zrl);
+   
+       void driftParticle(double* coords, SyncPart* syncpart, double length);
+   
+   protected:
+   
+       //Counters
+       int nHits;
+       int nLost;
+   
+       //Foil parameters
+       double xmin_, xmax_, ymin_, ymax_, thick_;
+       int ma_;
+       double length_;
+   
+   };
+   
+   //end of FOIL_H ifdef
+   #endif

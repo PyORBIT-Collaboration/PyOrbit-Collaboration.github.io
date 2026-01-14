@@ -1,0 +1,14 @@
+.. _exhale_typedef_orbit__mpi_8hh_1affc17fe964f9f670fb06e09d6134b4ff:
+
+Typedef MPI_Datatype
+====================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: MPI_Datatype
+   :project: PyORBIT3

@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceOrbitUtils_1ab254309b7520ca41d6bd1991a79b6a05:
+
+Function OrbitUtils::get_inelastic_crosssection
+===============================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_cross_sections.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OrbitUtils::get_inelastic_crosssection(double, int)
+   :project: PyORBIT3

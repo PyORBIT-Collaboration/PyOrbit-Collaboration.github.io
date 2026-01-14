@@ -1,0 +1,30 @@
+orbit.utils.fitting.SimplexSearch
+=================================
+
+.. automodule:: orbit.utils.fitting.SimplexSearch
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SearchAgorithm
+      SimplexSearchAlgorithm
+   
+   
+
+   
+   
+   
+
+
+

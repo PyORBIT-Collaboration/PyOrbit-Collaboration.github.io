@@ -1,0 +1,14 @@
+.. _exhale_define_orbit__mpi_8hh_1a3b8766607a0e4f2d4dd41d5fddcebcde:
+
+Define MPI_GRAPH
+================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPI_GRAPH
+   :project: PyORBIT3

@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1a4eb75f6d37c06684f79dc20d0c89b04d:
+
+Function teapot_base::multpfringeOUT
+====================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::multpfringeOUT(Bunch *, int, double, int, int)
+   :project: PyORBIT3

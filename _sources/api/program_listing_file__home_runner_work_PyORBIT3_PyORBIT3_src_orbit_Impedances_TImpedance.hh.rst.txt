@@ -1,0 +1,114 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh:
+
+Program Listing for File TImpedance.hh
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Impedances/TImpedance.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   // Calculate the transverse impedance effect on the bunch
+   
+   #ifndef TIMPEDANCE_H
+   #define TIMPEDANCE_H
+   
+   //MPI Function Wrappers
+   #include "orbit_mpi.hh"
+   #include "wrap_mpi_comm.hh"
+   
+   #include <cstdlib>
+   #include <cmath>
+   #include <complex>
+   
+   //ORBIT bunch
+   #include "Bunch.hh"
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "BunchExtremaCalculator.hh"
+   #include "Grid1D.hh"
+   
+   //FFTW library header
+   #include "fftw3.h"
+   
+   using namespace std;
+   
+   class TImpedance: public OrbitUtils::CppPyWrapper
+   {
+   public:
+   
+     TImpedance(double length,
+                int nMacrosMin,
+                int nBins,
+                int useX,
+                int useY);
+   
+     virtual ~TImpedance();
+   
+     void assignLatFuncs(double qX, double alphaX, double betaX,
+                         double qY, double alphaY, double betaY);
+   
+     void assignImpedanceX(int n,
+                           double realp,
+                           double imagp,
+                           double realm,
+                           double imagm);
+   
+     void assignImpedanceY(int n,
+                           double realp,
+                           double imagp,
+                           double realm,
+                           double imagm);
+   
+     void trackBunch(Bunch* bunch);
+   
+     void _prepareToKick();
+   
+     double _kick(double macrophase);
+   
+     double _length;
+     int _nMacrosMin;
+     int _nBins;
+     int _useX;
+     int _useY;
+   
+     double _qX;
+     double _alphaX;
+     double _betaX;
+     double _qY;
+     double _alphaY;
+     double _betaY;
+     double _charge2TKick;
+     int _Turns;
+     Grid1D* zGrid;
+     OrbitUtils::BunchExtremaCalculator* bunchExtremaCalc;
+   
+     double* _xCentroid;
+     double* _xpCentroid;
+     double* _yCentroid;
+     double* _ypCentroid;
+     double* _phiCount;
+     std::complex<double>* _zXImped_nplus;
+     std::complex<double>* _zXImped_nminus;
+     std::complex<double>* _zYImped_nplus;
+     std::complex<double>* _zYImped_nminus;
+     std::complex<double>* _FFTResult1;
+     std::complex<double>* _FFTResult2;
+   
+     double _q;
+     double _alpha;
+     double _beta;
+     double* _Centroid;
+     double* _pCentroid;
+     std::complex<double>* _zImped_nplus;
+     std::complex<double>* _zImped_nminus;
+   
+     fftw_complex* _in;
+     fftw_complex* _out;
+     fftw_plan _plan;
+   };
+   //end of TIMPEDANCE_H
+   #endif

@@ -1,0 +1,67 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EnergyAperture.hh:
+
+Program Listing for File EnergyAperture.hh
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_EnergyAperture.hh>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/EnergyAperture.hh``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef ENERGY_APERTURE_H
+   #define ENERGY_APERTURE_H
+   //
+   // NAME
+   //
+   //   EnergyAperture::EnergyAperture
+   //
+   // Author: A. Shishlo
+   // Date: 03/29/2017
+   //
+   // DESCRIPTION
+   //   Constructs an aperture for the energy (relative to synch. part.) variable.
+   //
+   // PARAMETERS
+   //   The class will remove particles (and put them into lost_bunch) from
+   //   the bunch whose energy (relative to synch. part.) is outside the specified min and
+   //   max values. This class mostly is intended to be used in linacs.
+   //   The energy is in GeV.
+   //
+   
+   //pyORBIT utils
+   #include "CppPyWrapper.hh"
+   #include "Bunch.hh"
+   
+   using namespace std;
+   
+   class EnergyAperture: public OrbitUtils::CppPyWrapper
+   {
+     public:
+   
+     EnergyAperture();
+   
+     void setEnergyLimits(double minEnergy, double maxEnergy);
+   
+     double getMinEnergy();
+   
+     double getMaxEnergy();
+   
+     void setPosition(double position);
+   
+     double getPosition();
+   
+     void checkBunch(Bunch* bunch, Bunch* lostbunch);
+   
+   
+     protected:
+       //EnergyAperture parameters
+       double minEnergy_;
+       double maxEnergy_;
+       double pos_;
+   
+   };
+   
+   //end of ENERGY_APERTURE_H ifdef
+   #endif

@@ -1,0 +1,14 @@
+.. _exhale_function_teapotbase_8cc_1a114828c580fdd26ac6b3ee3006ee2381:
+
+Function teapot_base::soln
+==========================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_teapotbase.cc`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: teapot_base::soln(Bunch *, double, double, int)
+   :project: PyORBIT3
