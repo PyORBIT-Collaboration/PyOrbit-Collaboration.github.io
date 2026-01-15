@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.py_linac.lattice.LinacTransportMatrixGenNodes &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../_cpp_api/pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../_cpp_api/pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac.lattice.LinacTransportMatrixGenNodes</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.py_linac.lattice.LinacTransportMatrixGenNodes</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="c1"># --------------------------------------------------------</span>
+<span class="c1"># Linac Accelerator Nodes for Transport Matrices generation</span>
+<span class="c1"># These nodes are using the Initial Coordinates particles Attributes.</span>
+<span class="c1"># Each node (if it is not the first one) calculates the transport matrix</span>
+<span class="c1"># between the previous node and itself.</span>
+<span class="c1"># The matrix is a 7x7 matrix that transforms the initial particles</span>
+<span class="c1"># coordinates to the final ones that are in the bunch.</span>
+<span class="c1"># --------------------------------------------------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># import the finalization function</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
+
+<span class="c1"># import general accelerator elements and lattice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccLattice</span><span class="p">,</span> <span class="n">AccNode</span><span class="p">,</span> <span class="n">AccActionsContainer</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">MarkerLinacNode</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.orbit_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">bunch_utils_functions</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.orbit_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matrix</span>
+
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LinacTrMatrixGenNode</span><span class="p">(</span><span class="n">MarkerLinacNode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Linac Accelerator Nodes for Transport Matrices generation.</span>
+<span class="sd">    These nodes are using thethe Initial Coordinates particles Attrubutes.</span>
+<span class="sd">    Each node (if it is not the first one) calculates the transport matrix</span>
+<span class="sd">    between the previous node and itself.</span>
+<span class="sd">    The matrix is a 7x7 matrix that transforms the initial particles</span>
+<span class="sd">    coordinates to the final ones that are in the bu</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trMatricesController</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;TrMatrixGen&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;TrMatrixGen&quot;</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">+=</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">trMatricesController</span><span class="o">.</span><span class="n">getCount</span><span class="p">())</span>
+        <span class="n">MarkerLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMatricesController</span> <span class="o">=</span> <span class="n">trMatricesController</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span> <span class="o">=</span> <span class="n">trMatricesController</span><span class="o">.</span><span class="n">getCount</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_z</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relativistic_beta</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relativistic_gamma</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="c1"># --------------------------------------</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMtrx</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+        <span class="c1"># --------------------------------------</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMatricesController</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.setInternalIndex"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.setInternalIndex">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setInternalIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ind</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the index of the TrMatrxGenNode in the controller</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span> <span class="o">=</span> <span class="n">ind</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getTrMatricesController"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTrMatricesController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the LinacTrMatricesController that keeps the references to the TrMatrxGenNodes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatricesController</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getTwissWeightUse"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissWeightUse">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTwissWeightUse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns (use_x,use,use_z) tuple where use_{} == 1 means the Twiss weights will be used.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res_arr</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">res_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">res_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_z</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">res_arr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">res_arr</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.setTwissWeightUse"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.setTwissWeightUse">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setTwissWeightUse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">use_twiss_weight_x</span><span class="p">,</span> <span class="n">use_twiss_weight_y</span><span class="p">,</span> <span class="n">use_twiss_weight_z</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets (use_x,use,use_z) tuple where use_{} == 1 means the Twiss weights will be used.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_z</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">use_twiss_weight_x</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_x</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">use_twiss_weight_y</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_y</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">use_twiss_weight_z</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_z</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.track"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relativistic_beta</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">beta</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relativistic_gamma</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">gamma</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trMtrx</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span>
+            <span class="n">bunch_utils_functions</span><span class="o">.</span><span class="n">copyCoordsToInitCoordsAttr</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bunch_utils_functions</span><span class="o">.</span><span class="n">transportMtrxFromInitCoords</span><span class="p">(</span>
+                <span class="n">bunch</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">trMtrx</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_x</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_y</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">use_twiss_weight_z</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.trackDesign"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method does nothing for the aperture case.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getBeta"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getBeta">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBeta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns relativistic beta at this node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">relativistic_beta</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getGamma"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getGamma">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getGamma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns relativistic gamma at this node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">relativistic_gamma</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getTransportMatrix"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTransportMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return transport matrix (7x7).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMtrx</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getDetXYZ"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getDetXYZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDetXYZ</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trMtrx</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the determinants of the transformations in (x,y,z) directions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">trMtrx</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">trMtrx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMtrx</span>
+        <span class="n">det_x</span> <span class="o">=</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">det_y</span> <span class="o">=</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">det_z</span> <span class="o">=</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">trMtrx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">det_x</span><span class="p">,</span> <span class="n">det_y</span><span class="p">,</span> <span class="n">det_z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getNormDetXYZ"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getNormDetXYZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNormDetXYZ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the normalized determinants of the transformations in (x,y,z) directions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="p">(</span><span class="n">node0</span><span class="p">,</span> <span class="n">node1</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getTwoNodes</span><span class="p">()</span>
+        <span class="n">beta_in</span> <span class="o">=</span> <span class="n">node0</span><span class="o">.</span><span class="n">getBeta</span><span class="p">()</span>
+        <span class="n">beta_out</span> <span class="o">=</span> <span class="n">node1</span><span class="o">.</span><span class="n">getBeta</span><span class="p">()</span>
+        <span class="n">gamma_in</span> <span class="o">=</span> <span class="n">node0</span><span class="o">.</span><span class="n">getGamma</span><span class="p">()</span>
+        <span class="n">gamma_out</span> <span class="o">=</span> <span class="n">node1</span><span class="o">.</span><span class="n">getGamma</span><span class="p">()</span>
+        <span class="n">gb_in</span> <span class="o">=</span> <span class="n">beta_in</span> <span class="o">*</span> <span class="n">gamma_in</span>
+        <span class="n">gb_out</span> <span class="o">=</span> <span class="n">beta_out</span> <span class="o">*</span> <span class="n">gamma_out</span>
+        <span class="p">(</span><span class="n">det_x</span><span class="p">,</span> <span class="n">det_y</span><span class="p">,</span> <span class="n">det_z</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getDetXYZ</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trMtrx</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">gb_out</span> <span class="o">/</span> <span class="n">gb_in</span><span class="p">)</span> <span class="o">*</span> <span class="n">det_x</span><span class="p">,</span>
+            <span class="p">(</span><span class="n">gb_out</span> <span class="o">/</span> <span class="n">gb_in</span><span class="p">)</span> <span class="o">*</span> <span class="n">det_y</span><span class="p">,</span>
+            <span class="p">(</span><span class="n">beta_in</span> <span class="o">/</span> <span class="n">beta_out</span><span class="p">)</span> <span class="o">*</span> <span class="n">det_z</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.getTwoNodes"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwoNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTwoNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns two LinacTrMatrixGenNode nodes. The transport matrix is between these nodes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">node0</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">node0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatricesController</span><span class="o">.</span><span class="n">getNode</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">node1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatricesController</span><span class="o">.</span><span class="n">getNode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">node0</span><span class="p">,</span> <span class="n">node1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatrixGenNode.printMatrix"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatrixGenNode.html#orbit.py_linac.lattice.LinacTrMatrixGenNode.printMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">printMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Print the matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">name0</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">name0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatricesController</span><span class="o">.</span><span class="n">getNode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+        <span class="n">name1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatricesController</span><span class="o">.</span><span class="n">getNode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trMtrxNode_ind</span><span class="p">)</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----Transport matrix--- from name0=&quot;</span><span class="p">,</span> <span class="n">name0</span><span class="p">,</span> <span class="s2">&quot; to name1=&quot;</span><span class="p">,</span> <span class="n">name1</span><span class="p">)</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMtrx</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;m(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)=&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">%12.5g</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="LinacTrMatricesController"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LinacTrMatricesController</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    LinacTrMatricesController keeps the references to the LinacTrMatrixGenNode</span>
+<span class="sd">    instances.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="LinacTrMatricesController.getCount"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.getCount">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getCount</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatricesController.getNode"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.getNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ind</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="LinacTrMatricesController.addNode"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.addNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trMatrxNode</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trMatrxNode</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatricesController.getNodes"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.getNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span></div>
+
+<div class="viewcode-block" id="LinacTrMatricesController.init"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.init">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># --- place nodes in the right order</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span><span class="p">)):</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span><span class="p">[</span><span class="n">node_ind</span><span class="p">]</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">setInternalIndex</span><span class="p">(</span><span class="n">node_ind</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatricesController.addTrMatrixGenNodes"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.addTrMatrixGenNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addTrMatrixGenNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accLattice</span><span class="p">,</span> <span class="n">node_or_nodes</span><span class="p">,</span> <span class="n">place</span><span class="o">=</span><span class="n">MarkerLinacNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds the LinacTrMatrixGenNode to the nodes as child nodes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">node_or_nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">node_or_nodes</span><span class="p">:</span>
+                <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node_or_nodes</span><span class="p">)</span>
+        <span class="c1"># -----------------------------</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+            <span class="n">trMatrxGenNode</span> <span class="o">=</span> <span class="n">LinacTrMatrixGenNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:trMatrx&quot;</span><span class="p">)</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">trMatrxGenNode</span><span class="p">,</span> <span class="n">place</span><span class="p">)</span>
+        <span class="c1"># ----- set up the position of the TrMatrix nodes</span>
+        <span class="n">actions</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">accNodeExitAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Nonbound function. Sets the position of the TrMatrix nodes.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">LinacTrMatrixGenNode</span><span class="p">):</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;path_length&quot;</span><span class="p">]</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+
+        <span class="n">actions</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">accNodeExitAction</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span>
+        <span class="n">accLattice</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trMatrxNodes</span></div>
+
+<div class="viewcode-block" id="LinacTrMatricesController.addTrMatrixGenNodesAtEntrance"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.addTrMatrixGenNodesAtEntrance">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addTrMatrixGenNodesAtEntrance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accLattice</span><span class="p">,</span> <span class="n">node_or_nodes</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds the LinacTrMatrixGenNode to the nodes as child nodes at the entrance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addTrMatrixGenNodes</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">node_or_nodes</span><span class="p">,</span> <span class="n">MarkerLinacNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacTrMatricesController.addTrMatrixGenNodesAtExit"><a class="viewcode-back" href="../../../../_api/orbit.py_linac.lattice.LinacTrMatricesController.html#orbit.py_linac.lattice.LinacTrMatricesController.addTrMatrixGenNodesAtExit">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addTrMatrixGenNodesAtExit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accLattice</span><span class="p">,</span> <span class="n">node_or_nodes</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds the LinacTrMatrixGenNode to the nodes as child nodes at the exit.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addTrMatrixGenNodes</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">node_or_nodes</span><span class="p">,</span> <span class="n">MarkerLinacNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+addTeapotDiagnosticsNodeAsChild
+===============================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autofunction:: addTeapotDiagnosticsNodeAsChild

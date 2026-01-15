@@ -1,0 +1,23 @@
+ErrorCntrlStraightRotationZ
+===========================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorCntrlStraightRotationZ
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorCntrlStraightRotationZ.getEntanceNodeRotationAngle
+      ~ErrorCntrlStraightRotationZ.getExitNodeRotationAngle
+      ~ErrorCntrlStraightRotationZ.getRotationAngle
+      ~ErrorCntrlStraightRotationZ.setRotationAngle
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getEntanceNodeRotationAngle
+   .. automethod:: getExitNodeRotationAngle
+   .. automethod:: getRotationAngle
+   .. automethod:: setRotationAngle

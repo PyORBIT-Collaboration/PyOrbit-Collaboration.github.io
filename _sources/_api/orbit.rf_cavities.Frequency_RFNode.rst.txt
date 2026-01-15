@@ -1,0 +1,19 @@
+Frequency_RFNode
+================
+
+.. currentmodule:: orbit.rf_cavities
+
+.. autoclass:: Frequency_RFNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Frequency_RFNode.track
+      ~Frequency_RFNode.trackBunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track
+   .. automethod:: trackBunch

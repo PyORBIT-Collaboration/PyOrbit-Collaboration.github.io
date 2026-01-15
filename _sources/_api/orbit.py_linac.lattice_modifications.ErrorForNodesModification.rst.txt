@@ -1,0 +1,23 @@
+ErrorForNodesModification
+=========================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autoclass:: ErrorForNodesModification
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorForNodesModification.addLatticeNodes
+      ~ErrorForNodesModification.getErrorControllers
+      ~ErrorForNodesModification.getLatticeNodes
+      ~ErrorForNodesModification.updateErrorParameters
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addLatticeNodes
+   .. automethod:: getErrorControllers
+   .. automethod:: getLatticeNodes
+   .. automethod:: updateErrorParameters

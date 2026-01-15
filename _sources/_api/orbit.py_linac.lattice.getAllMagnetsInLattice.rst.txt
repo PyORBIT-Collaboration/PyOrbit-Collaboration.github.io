@@ -1,0 +1,6 @@
+getAllMagnetsInLattice
+======================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autofunction:: getAllMagnetsInLattice

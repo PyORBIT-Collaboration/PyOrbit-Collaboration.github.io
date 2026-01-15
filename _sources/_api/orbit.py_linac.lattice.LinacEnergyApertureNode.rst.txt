@@ -1,0 +1,29 @@
+LinacEnergyApertureNode
+=======================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacEnergyApertureNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacEnergyApertureNode.getDesignKinEnergy
+      ~LinacEnergyApertureNode.getMinMaxEnergy
+      ~LinacEnergyApertureNode.getNumberOfLostParticles
+      ~LinacEnergyApertureNode.setMinMaxEnergy
+      ~LinacEnergyApertureNode.setPosition
+      ~LinacEnergyApertureNode.track
+      ~LinacEnergyApertureNode.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getDesignKinEnergy
+   .. automethod:: getMinMaxEnergy
+   .. automethod:: getNumberOfLostParticles
+   .. automethod:: setMinMaxEnergy
+   .. automethod:: setPosition
+   .. automethod:: track
+   .. automethod:: trackDesign

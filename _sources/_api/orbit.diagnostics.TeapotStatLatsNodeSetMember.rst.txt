@@ -1,0 +1,27 @@
+TeapotStatLatsNodeSetMember
+===========================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: TeapotStatLatsNodeSetMember
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotStatLatsNodeSetMember.activate
+      ~TeapotStatLatsNodeSetMember.deactivate
+      ~TeapotStatLatsNodeSetMember.resetFile
+      ~TeapotStatLatsNodeSetMember.setLatticeLength
+      ~TeapotStatLatsNodeSetMember.setPosition
+      ~TeapotStatLatsNodeSetMember.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: activate
+   .. automethod:: deactivate
+   .. automethod:: resetFile
+   .. automethod:: setLatticeLength
+   .. automethod:: setPosition
+   .. automethod:: track

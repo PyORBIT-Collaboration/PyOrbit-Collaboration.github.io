@@ -1,0 +1,6 @@
+Add_bend_apertures_to_lattice
+=============================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autofunction:: Add_bend_apertures_to_lattice

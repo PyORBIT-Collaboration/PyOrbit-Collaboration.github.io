@@ -1,0 +1,23 @@
+ErrorCntrlBendField
+===================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorCntrlBendField
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorCntrlBendField.getEntanceNodeParameters
+      ~ErrorCntrlBendField.getExitNodeParameters
+      ~ErrorCntrlBendField.getRelativeFieldChange
+      ~ErrorCntrlBendField.setRelativeFieldChange
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getEntanceNodeParameters
+   .. automethod:: getExitNodeParameters
+   .. automethod:: getRelativeFieldChange
+   .. automethod:: setRelativeFieldChange

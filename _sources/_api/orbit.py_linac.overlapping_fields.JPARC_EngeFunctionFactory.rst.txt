@@ -1,0 +1,6 @@
+JPARC_EngeFunctionFactory
+=========================
+
+.. currentmodule:: orbit.py_linac.overlapping_fields
+
+.. autofunction:: JPARC_EngeFunctionFactory

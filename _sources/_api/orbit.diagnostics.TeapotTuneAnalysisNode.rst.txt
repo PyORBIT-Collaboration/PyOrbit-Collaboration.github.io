@@ -1,0 +1,23 @@
+TeapotTuneAnalysisNode
+======================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: TeapotTuneAnalysisNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotTuneAnalysisNode.assignTwiss
+      ~TeapotTuneAnalysisNode.setLatticeLength
+      ~TeapotTuneAnalysisNode.setPosition
+      ~TeapotTuneAnalysisNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: assignTwiss
+   .. automethod:: setLatticeLength
+   .. automethod:: setPosition
+   .. automethod:: track

@@ -1,0 +1,7 @@
+RectangleLinacApertureNode
+==========================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: RectangleLinacApertureNode
+   :show-inheritance:

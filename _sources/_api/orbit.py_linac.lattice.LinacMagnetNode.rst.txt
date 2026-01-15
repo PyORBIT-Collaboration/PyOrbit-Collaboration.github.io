@@ -1,0 +1,39 @@
+LinacMagnetNode
+===============
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacMagnetNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacMagnetNode.getField
+      ~LinacMagnetNode.getFringeFieldFunctionIN
+      ~LinacMagnetNode.getFringeFieldFunctionOUT
+      ~LinacMagnetNode.getNodeFringeFieldIN
+      ~LinacMagnetNode.getNodeFringeFieldOUT
+      ~LinacMagnetNode.getUsageFringeFieldIN
+      ~LinacMagnetNode.getUsageFringeFieldOUT
+      ~LinacMagnetNode.setField
+      ~LinacMagnetNode.setFringeFieldFunctionIN
+      ~LinacMagnetNode.setFringeFieldFunctionOUT
+      ~LinacMagnetNode.setUsageFringeFieldIN
+      ~LinacMagnetNode.setUsageFringeFieldOUT
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getField
+   .. automethod:: getFringeFieldFunctionIN
+   .. automethod:: getFringeFieldFunctionOUT
+   .. automethod:: getNodeFringeFieldIN
+   .. automethod:: getNodeFringeFieldOUT
+   .. automethod:: getUsageFringeFieldIN
+   .. automethod:: getUsageFringeFieldOUT
+   .. automethod:: setField
+   .. automethod:: setFringeFieldFunctionIN
+   .. automethod:: setFringeFieldFunctionOUT
+   .. automethod:: setUsageFringeFieldIN
+   .. automethod:: setUsageFringeFieldOUT

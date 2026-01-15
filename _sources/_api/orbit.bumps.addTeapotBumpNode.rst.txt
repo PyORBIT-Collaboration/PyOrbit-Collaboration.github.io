@@ -1,0 +1,6 @@
+addTeapotBumpNode
+=================
+
+.. currentmodule:: orbit.bumps
+
+.. autofunction:: addTeapotBumpNode

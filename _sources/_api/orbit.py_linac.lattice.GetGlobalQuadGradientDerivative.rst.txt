@@ -1,0 +1,6 @@
+GetGlobalQuadGradientDerivative
+===============================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autofunction:: GetGlobalQuadGradientDerivative

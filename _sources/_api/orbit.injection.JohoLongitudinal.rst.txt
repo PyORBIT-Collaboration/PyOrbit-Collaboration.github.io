@@ -1,0 +1,17 @@
+JohoLongitudinal
+================
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: JohoLongitudinal
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~JohoLongitudinal.getCoordinates
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates

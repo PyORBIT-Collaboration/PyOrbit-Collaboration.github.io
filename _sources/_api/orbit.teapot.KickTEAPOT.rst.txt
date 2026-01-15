@@ -1,0 +1,21 @@
+KickTEAPOT
+==========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: KickTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~KickTEAPOT.initialize
+      ~KickTEAPOT.setWaveform
+      ~KickTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: initialize
+   .. automethod:: setWaveform
+   .. automethod:: track

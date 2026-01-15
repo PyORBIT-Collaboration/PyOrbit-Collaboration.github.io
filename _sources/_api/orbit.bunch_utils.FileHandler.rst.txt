@@ -1,0 +1,19 @@
+FileHandler
+===========
+
+.. currentmodule:: orbit.bunch_utils
+
+.. autoclass:: FileHandler
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~FileHandler.read
+      ~FileHandler.write
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: read
+   .. automethod:: write

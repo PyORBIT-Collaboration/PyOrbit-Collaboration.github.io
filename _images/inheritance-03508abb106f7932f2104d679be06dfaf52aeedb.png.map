@@ -1,0 +1,10 @@
+<map id="inheritancef4a8bb6002" name="inheritancef4a8bb6002">
+<area shape="rect" id="node1" href="../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice" target="_top" title="Class. The accelerator lattice class contains child nodes." alt="" coords="191,5,279,33"/>
+<area shape="rect" id="node8" href="../_api/orbit.matrix_lattice.MATRIX_Lattice.html#orbit.matrix_lattice.MATRIX_Lattice" target="_top" title="The subclass of the AccLattice class. Shell class for the BaseMATRIX nodes collection." alt="" coords="348,5,470,33"/>
+<area shape="rect" id="node2" href="../_api/orbit.utils.NamedObject.html#orbit.utils.NamedObject" target="_top" title="Class. An object that has a name." alt="" coords="19,57,129,85"/>
+<area shape="rect" id="node4" href="../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode" target="_top" title="Class. Base class of the accelerator nodes hierarchy." alt="" coords="196,57,274,85"/>
+<area shape="rect" id="node3" href="../_api/orbit.utils.TypedObject.html#orbit.utils.TypedObject" target="_top" title="Class. Object that has a type." alt="" coords="23,5,125,33"/>
+<area shape="rect" id="node6" href="../_api/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker" target="_top" title="Class. Base class of the accelerator nodes that track the pyORBIT bunch." alt="" coords="327,57,491,85"/>
+<area shape="rect" id="node5" href="../_api/orbit.utils.ParamsDictObject.html#orbit.utils.ParamsDictObject" target="_top" title="Class. Object that has a parameters dictionary." alt="" coords="5,109,143,137"/>
+<area shape="rect" id="node7" href="../_api/orbit.matrix_lattice.BaseMATRIX.html#orbit.matrix_lattice.BaseMATRIX" target="_top" title="The base abstract class of the BaseMATRIX accelerator lattice elements hierarchy." alt="" coords="539,57,643,85"/>
+</map>

@@ -1,0 +1,17 @@
+XKicker
+=======
+
+.. currentmodule:: orbit.kickernodes
+
+.. autoclass:: XKicker
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~XKicker.kick
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: kick

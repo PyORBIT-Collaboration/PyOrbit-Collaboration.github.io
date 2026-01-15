@@ -1,0 +1,6 @@
+SNS_EngeFunctionFactory
+=======================
+
+.. currentmodule:: orbit.py_linac.overlapping_fields
+
+.. autofunction:: SNS_EngeFunctionFactory

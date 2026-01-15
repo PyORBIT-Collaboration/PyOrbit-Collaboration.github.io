@@ -1,0 +1,43 @@
+SAD_Parser
+==========
+
+.. currentmodule:: orbit.parsers
+
+.. autoclass:: SAD_Parser
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~SAD_Parser.SADFilePath
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SAD_Parser.getSAD_Elements
+      ~SAD_Parser.getSAD_ElementsDict
+      ~SAD_Parser.getSAD_Lines
+      ~SAD_Parser.getSAD_LinesDict
+      ~SAD_Parser.getSAD_Variables
+      ~SAD_Parser.getSAD_VariablesDict
+      ~SAD_Parser.getUnknownLines
+      ~SAD_Parser.initialize
+      ~SAD_Parser.parse
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: SADFilePath
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getSAD_Elements
+   .. automethod:: getSAD_ElementsDict
+   .. automethod:: getSAD_Lines
+   .. automethod:: getSAD_LinesDict
+   .. automethod:: getSAD_Variables
+   .. automethod:: getSAD_VariablesDict
+   .. automethod:: getUnknownLines
+   .. automethod:: initialize
+   .. automethod:: parse

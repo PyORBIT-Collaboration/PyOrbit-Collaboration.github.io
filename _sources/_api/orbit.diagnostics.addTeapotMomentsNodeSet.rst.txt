@@ -1,0 +1,6 @@
+addTeapotMomentsNodeSet
+=======================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autofunction:: addTeapotMomentsNodeSet

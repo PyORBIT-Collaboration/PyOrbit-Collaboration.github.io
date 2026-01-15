@@ -1,0 +1,6 @@
+collect_bunch
+=============
+
+.. currentmodule:: orbit.bunch_utils
+
+.. autofunction:: collect_bunch

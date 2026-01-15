@@ -1,0 +1,19 @@
+Moments
+=======
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: Moments
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Moments.closeMoments
+      ~Moments.writeMoments
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: closeMoments
+   .. automethod:: writeMoments

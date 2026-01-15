@@ -1,0 +1,6 @@
+addTeapotFoilNode
+=================
+
+.. currentmodule:: orbit.foils
+
+.. autofunction:: addTeapotFoilNode

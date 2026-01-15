@@ -1,0 +1,23 @@
+TeapotMomentsNode
+=================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: TeapotMomentsNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotMomentsNode.closeMoments
+      ~TeapotMomentsNode.setLatticeLength
+      ~TeapotMomentsNode.setPosition
+      ~TeapotMomentsNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: closeMoments
+   .. automethod:: setLatticeLength
+   .. automethod:: setPosition
+   .. automethod:: track

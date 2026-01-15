@@ -1,0 +1,59 @@
+AxisField_and_Quad_RF_Gap
+=========================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: AxisField_and_Quad_RF_Gap
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AxisField_and_Quad_RF_Gap.addQuad
+      ~AxisField_and_Quad_RF_Gap.getAxisFieldRF_Gap
+      ~AxisField_and_Quad_RF_Gap.getBaseRF_Gap
+      ~AxisField_and_Quad_RF_Gap.getEzFiled
+      ~AxisField_and_Quad_RF_Gap.getEzFiledInternal
+      ~AxisField_and_Quad_RF_Gap.getPhaseVsPositionFuncion
+      ~AxisField_and_Quad_RF_Gap.getPosAndQuad_Arr
+      ~AxisField_and_Quad_RF_Gap.getQuads
+      ~AxisField_and_Quad_RF_Gap.getRF_Cavity
+      ~AxisField_and_Quad_RF_Gap.getTotalField
+      ~AxisField_and_Quad_RF_Gap.getTotalFieldDerivative
+      ~AxisField_and_Quad_RF_Gap.getUseLongitudinalFieldOfQuad
+      ~AxisField_and_Quad_RF_Gap.getZ_Min_Max
+      ~AxisField_and_Quad_RF_Gap.getZ_Step
+      ~AxisField_and_Quad_RF_Gap.isNodeInReversedLattice
+      ~AxisField_and_Quad_RF_Gap.reverseOrderNodeSpecific
+      ~AxisField_and_Quad_RF_Gap.setLinacTracker
+      ~AxisField_and_Quad_RF_Gap.setUseLongitudinalFieldOfQuad
+      ~AxisField_and_Quad_RF_Gap.setZ_Min_Max
+      ~AxisField_and_Quad_RF_Gap.setZ_Step
+      ~AxisField_and_Quad_RF_Gap.track
+      ~AxisField_and_Quad_RF_Gap.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addQuad
+   .. automethod:: getAxisFieldRF_Gap
+   .. automethod:: getBaseRF_Gap
+   .. automethod:: getEzFiled
+   .. automethod:: getEzFiledInternal
+   .. automethod:: getPhaseVsPositionFuncion
+   .. automethod:: getPosAndQuad_Arr
+   .. automethod:: getQuads
+   .. automethod:: getRF_Cavity
+   .. automethod:: getTotalField
+   .. automethod:: getTotalFieldDerivative
+   .. automethod:: getUseLongitudinalFieldOfQuad
+   .. automethod:: getZ_Min_Max
+   .. automethod:: getZ_Step
+   .. automethod:: isNodeInReversedLattice
+   .. automethod:: reverseOrderNodeSpecific
+   .. automethod:: setLinacTracker
+   .. automethod:: setUseLongitudinalFieldOfQuad
+   .. automethod:: setZ_Min_Max
+   .. automethod:: setZ_Step
+   .. automethod:: track
+   .. automethod:: trackDesign

@@ -1,0 +1,25 @@
+Optics
+======
+
+.. currentmodule:: orbit.matching
+
+.. autoclass:: Optics
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Optics.add
+      ~Optics.get_element
+      ~Optics.get_length
+      ~Optics.print_line
+      ~Optics.readtwiss_teapot
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: add
+   .. automethod:: get_element
+   .. automethod:: get_length
+   .. automethod:: print_line
+   .. automethod:: readtwiss_teapot

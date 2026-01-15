@@ -1,0 +1,19 @@
+TeapotFoilNode
+==============
+
+.. currentmodule:: orbit.foils
+
+.. autoclass:: TeapotFoilNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotFoilNode.setScatterChoice
+      ~TeapotFoilNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setScatterChoice
+   .. automethod:: track

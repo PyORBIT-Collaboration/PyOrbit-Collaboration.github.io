@@ -1,0 +1,17 @@
+Solenoid
+========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: Solenoid
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Solenoid.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

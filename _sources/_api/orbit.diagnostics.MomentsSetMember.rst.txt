@@ -1,0 +1,19 @@
+MomentsSetMember
+================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: MomentsSetMember
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MomentsSetMember.resetFile
+      ~MomentsSetMember.writeMoments
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: resetFile
+   .. automethod:: writeMoments

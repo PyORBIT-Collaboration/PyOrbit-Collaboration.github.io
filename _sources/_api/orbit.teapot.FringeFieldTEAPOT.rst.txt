@@ -1,0 +1,25 @@
+FringeFieldTEAPOT
+=================
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: FringeFieldTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~FringeFieldTEAPOT.getFringeFieldFunction
+      ~FringeFieldTEAPOT.getUsage
+      ~FringeFieldTEAPOT.setFringeFieldFunction
+      ~FringeFieldTEAPOT.setUsage
+      ~FringeFieldTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getFringeFieldFunction
+   .. automethod:: getUsage
+   .. automethod:: setFringeFieldFunction
+   .. automethod:: setUsage
+   .. automethod:: track

@@ -1,0 +1,6 @@
+addTeapotKickerNode
+===================
+
+.. currentmodule:: orbit.kickernodes
+
+.. autofunction:: addTeapotKickerNode

@@ -1,0 +1,21 @@
+SimpleQuadFieldFunc
+===================
+
+.. currentmodule:: orbit.py_linac.overlapping_fields
+
+.. autoclass:: SimpleQuadFieldFunc
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SimpleQuadFieldFunc.getFuncDerivative
+      ~SimpleQuadFieldFunc.getFuncValue
+      ~SimpleQuadFieldFunc.getLimitsZ
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getFuncDerivative
+   .. automethod:: getFuncValue
+   .. automethod:: getLimitsZ

@@ -1,0 +1,23 @@
+CoordinateDisplacementNodesModification
+=======================================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autoclass:: CoordinateDisplacementNodesModification
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CoordinateDisplacementNodesModification.getCoordinateDisplacementParameters
+      ~CoordinateDisplacementNodesModification.setDisplacementParameter
+      ~CoordinateDisplacementNodesModification.setGaussDistributedDisplacementParameter
+      ~CoordinateDisplacementNodesModification.updateErrorParameters
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinateDisplacementParameters
+   .. automethod:: setDisplacementParameter
+   .. automethod:: setGaussDistributedDisplacementParameter
+   .. automethod:: updateErrorParameters

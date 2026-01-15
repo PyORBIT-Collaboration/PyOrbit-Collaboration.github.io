@@ -1,0 +1,19 @@
+FieldTracker
+============
+
+.. currentmodule:: orbit.fieldtracker
+
+.. autoclass:: FieldTracker
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~FieldTracker.setPathVariable
+      ~FieldTracker.trackBunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setPathVariable
+   .. automethod:: trackBunch

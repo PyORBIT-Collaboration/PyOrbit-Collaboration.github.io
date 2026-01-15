@@ -1,0 +1,27 @@
+TIME_DEP_Lattice
+================
+
+.. currentmodule:: orbit.time_dep
+
+.. autoclass:: TIME_DEP_Lattice
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TIME_DEP_Lattice.setLatticeOrder
+      ~TIME_DEP_Lattice.setParam
+      ~TIME_DEP_Lattice.setTimeDepNode
+      ~TIME_DEP_Lattice.setTimeDepStrength
+      ~TIME_DEP_Lattice.setTurns
+      ~TIME_DEP_Lattice.trackBunchTurns
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setLatticeOrder
+   .. automethod:: setParam
+   .. automethod:: setTimeDepNode
+   .. automethod:: setTimeDepStrength
+   .. automethod:: setTurns
+   .. automethod:: trackBunchTurns

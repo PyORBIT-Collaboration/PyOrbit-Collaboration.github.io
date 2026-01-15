@@ -1,0 +1,19 @@
+StatLats
+========
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: StatLats
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~StatLats.closeStatLats
+      ~StatLats.writeStatLats
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: closeStatLats
+   .. automethod:: writeStatLats

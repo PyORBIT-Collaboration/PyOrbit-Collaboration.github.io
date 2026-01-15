@@ -1,6 +1,0 @@
-orbit.utils.orbit\_mpi\_utils.bunch\_pyorbit\_to\_orbit
-=======================================================
-
-.. currentmodule:: orbit.utils.orbit_mpi_utils
-
-.. autofunction:: bunch_pyorbit_to_orbit

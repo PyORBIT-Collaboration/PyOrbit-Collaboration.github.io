@@ -1,0 +1,27 @@
+BendFieldNodesModification
+==========================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autoclass:: BendFieldNodesModification
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BendFieldNodesModification.addBend
+      ~BendFieldNodesModification.addBends
+      ~BendFieldNodesModification.getRelativeFieldChange
+      ~BendFieldNodesModification.setGaussDistributedRelativeFieldError
+      ~BendFieldNodesModification.setRelativeFieldChange
+      ~BendFieldNodesModification.updateErrorParameters
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addBend
+   .. automethod:: addBends
+   .. automethod:: getRelativeFieldChange
+   .. automethod:: setGaussDistributedRelativeFieldError
+   .. automethod:: setRelativeFieldChange
+   .. automethod:: updateErrorParameters

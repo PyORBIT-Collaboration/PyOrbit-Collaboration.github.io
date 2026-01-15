@@ -1,0 +1,17 @@
+ErrorStraightRotationXNode
+==========================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorStraightRotationXNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorStraightRotationXNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

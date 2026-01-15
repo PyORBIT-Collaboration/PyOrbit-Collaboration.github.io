@@ -1,0 +1,6 @@
+getNodeForNameFromWholeLattice
+==============================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autofunction:: getNodeForNameFromWholeLattice

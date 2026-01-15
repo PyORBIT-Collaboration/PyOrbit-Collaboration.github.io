@@ -1,0 +1,6 @@
+addTeapotStatLatsNodeSet
+========================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autofunction:: addTeapotStatLatsNodeSet

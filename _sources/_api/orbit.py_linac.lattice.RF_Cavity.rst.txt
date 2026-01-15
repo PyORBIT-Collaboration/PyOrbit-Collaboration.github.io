@@ -1,0 +1,67 @@
+RF_Cavity
+=========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: RF_Cavity
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RF_Cavity.addRF_GapNode
+      ~RF_Cavity.getAmp
+      ~RF_Cavity.getAvgGapPhase
+      ~RF_Cavity.getAvgGapPhaseDeg
+      ~RF_Cavity.getDesignAmp
+      ~RF_Cavity.getDesignArrivalTime
+      ~RF_Cavity.getDesignPhase
+      ~RF_Cavity.getFirstGapEntranceDesignPhase
+      ~RF_Cavity.getFirstGapEntrancePhase
+      ~RF_Cavity.getFrequency
+      ~RF_Cavity.getPhase
+      ~RF_Cavity.getPosition
+      ~RF_Cavity.getRF_GapNodes
+      ~RF_Cavity.getUsePhaseAtEntrance
+      ~RF_Cavity.isDesignSetUp
+      ~RF_Cavity.removeAllGapNodes
+      ~RF_Cavity.reverseOrder
+      ~RF_Cavity.setAmp
+      ~RF_Cavity.setDesignArrivalTime
+      ~RF_Cavity.setDesignSetUp
+      ~RF_Cavity.setFirstGapEntranceDesignPhase
+      ~RF_Cavity.setFirstGapEntrancePhase
+      ~RF_Cavity.setFrequency
+      ~RF_Cavity.setPhase
+      ~RF_Cavity.setPosition
+      ~RF_Cavity.setUsePhaseAtEntrance
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addRF_GapNode
+   .. automethod:: getAmp
+   .. automethod:: getAvgGapPhase
+   .. automethod:: getAvgGapPhaseDeg
+   .. automethod:: getDesignAmp
+   .. automethod:: getDesignArrivalTime
+   .. automethod:: getDesignPhase
+   .. automethod:: getFirstGapEntranceDesignPhase
+   .. automethod:: getFirstGapEntrancePhase
+   .. automethod:: getFrequency
+   .. automethod:: getPhase
+   .. automethod:: getPosition
+   .. automethod:: getRF_GapNodes
+   .. automethod:: getUsePhaseAtEntrance
+   .. automethod:: isDesignSetUp
+   .. automethod:: removeAllGapNodes
+   .. automethod:: reverseOrder
+   .. automethod:: setAmp
+   .. automethod:: setDesignArrivalTime
+   .. automethod:: setDesignSetUp
+   .. automethod:: setFirstGapEntranceDesignPhase
+   .. automethod:: setFirstGapEntrancePhase
+   .. automethod:: setFrequency
+   .. automethod:: setPhase
+   .. automethod:: setPosition
+   .. automethod:: setUsePhaseAtEntrance

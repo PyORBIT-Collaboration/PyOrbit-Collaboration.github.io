@@ -1,0 +1,6 @@
+AddMEBTChopperPlatesAperturesToSNS_Lattice
+==========================================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autofunction:: AddMEBTChopperPlatesAperturesToSNS_Lattice

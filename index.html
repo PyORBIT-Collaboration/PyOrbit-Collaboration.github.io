@@ -30,6 +30,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
   
@@ -152,7 +153,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -272,7 +273,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -355,6 +356,7 @@ document.write(`
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributor Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#building-the-docs">Building the Docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-static-pages">Creating Static Pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#documenting-python-code">Documenting Python Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#documenting-c-code">Documenting C++ Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#for-maintainers">For Maintainers</a></li>
@@ -366,45 +368,16 @@ document.write(`
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.aperture.html">orbit.aperture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.bumps.html">orbit.bumps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.bunch_generators.html">orbit.bunch_generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.bunch_utils.html">orbit.bunch_utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.collimation.html">orbit.collimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.core.html">orbit.core</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.diagnostics.html">orbit.diagnostics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.errors.html">orbit.errors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.foils.html">orbit.foils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.impedances.html">orbit.impedances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.injection.html">orbit.injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.kickernodes.html">orbit.kickernodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.lattice.html">orbit.lattice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.matching.html">orbit.matching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.matrix_lattice.html">orbit.matrix_lattice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.orbit_correction.html">orbit.orbit_correction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.parsers.html">orbit.parsers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.py_linac.errors.html">orbit.py_linac.errors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.py_linac.lattice.html">orbit.py_linac.lattice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.py_linac.lattice_modifications.html">orbit.py_linac.lattice_modifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.py_linac.linac_parsers.html">orbit.py_linac.linac_parsers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.py_linac.materials.html">orbit.py_linac.materials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.py_linac.orbit_correction.html">orbit.py_linac.orbit_correction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.py_linac.overlapping_fields.html">orbit.py_linac.overlapping_fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.rf_cavities.html">orbit.rf_cavities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.space_charge.html">orbit.space_charge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.teapot.html">orbit.teapot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.teapot_base.html">orbit.teapot_base</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.time_dep.html">orbit.time_dep</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/orbit.utils.html">orbit.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#orbit-aperture">orbit.aperture</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api/pyorbit_root.html">C++ API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/pyorbit_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/pyorbit_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/pyorbit_root.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/pyorbit_root.html#variables">Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/pyorbit_root.html#defines">Defines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/pyorbit_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_cpp_api/pyorbit_root.html">C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_cpp_api/pyorbit_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_cpp_api/pyorbit_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_cpp_api/pyorbit_root.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_cpp_api/pyorbit_root.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_cpp_api/pyorbit_root.html#defines">Defines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_cpp_api/pyorbit_root.html#typedefs">Typedefs</a></li>
 </ul>
 </li>
 </ul>

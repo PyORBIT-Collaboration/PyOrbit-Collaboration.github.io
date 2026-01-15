@@ -1,0 +1,19 @@
+NamedObject
+===========
+
+.. currentmodule:: orbit.utils
+
+.. autoclass:: NamedObject
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NamedObject.getName
+      ~NamedObject.setName
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getName
+   .. automethod:: setName

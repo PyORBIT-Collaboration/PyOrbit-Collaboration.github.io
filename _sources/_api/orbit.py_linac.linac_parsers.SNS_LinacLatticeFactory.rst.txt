@@ -1,0 +1,41 @@
+SNS_LinacLatticeFactory
+=======================
+
+.. currentmodule:: orbit.py_linac.linac_parsers
+
+.. autoclass:: SNS_LinacLatticeFactory
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SNS_LinacLatticeFactory.filterSequences_and_OptionalCheck
+      ~SNS_LinacLatticeFactory.getLinacAccLattice
+      ~SNS_LinacLatticeFactory.getLinacAccLatticeFromDA
+      ~SNS_LinacLatticeFactory.getMaxDriftLength
+      ~SNS_LinacLatticeFactory.makeDA_bend
+      ~SNS_LinacLatticeFactory.makeDA_dcorrH
+      ~SNS_LinacLatticeFactory.makeDA_dcorrV
+      ~SNS_LinacLatticeFactory.makeDA_marker
+      ~SNS_LinacLatticeFactory.makeDA_quad
+      ~SNS_LinacLatticeFactory.makeDA_rf_gap
+      ~SNS_LinacLatticeFactory.makeDAforAccSeq
+      ~SNS_LinacLatticeFactory.makeDataAdaptorforLinacLattice
+      ~SNS_LinacLatticeFactory.setMaxDriftLength
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: filterSequences_and_OptionalCheck
+   .. automethod:: getLinacAccLattice
+   .. automethod:: getLinacAccLatticeFromDA
+   .. automethod:: getMaxDriftLength
+   .. automethod:: makeDA_bend
+   .. automethod:: makeDA_dcorrH
+   .. automethod:: makeDA_dcorrV
+   .. automethod:: makeDA_marker
+   .. automethod:: makeDA_quad
+   .. automethod:: makeDA_rf_gap
+   .. automethod:: makeDAforAccSeq
+   .. automethod:: makeDataAdaptorforLinacLattice
+   .. automethod:: setMaxDriftLength

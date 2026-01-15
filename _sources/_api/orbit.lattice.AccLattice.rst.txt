@@ -1,0 +1,65 @@
+AccLattice
+==========
+
+.. currentmodule:: orbit.lattice
+
+.. autoclass:: AccLattice
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~AccLattice.AFTER
+      ~AccLattice.BEFORE
+      ~AccLattice.BODY
+      ~AccLattice.ENTRANCE
+      ~AccLattice.EXIT
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AccLattice.addNode
+      ~AccLattice.getLength
+      ~AccLattice.getNodeForName
+      ~AccLattice.getNodeIndex
+      ~AccLattice.getNodePositionsDict
+      ~AccLattice.getNodes
+      ~AccLattice.getNodesForName
+      ~AccLattice.getNodesForSubstring
+      ~AccLattice.getNodesOfClass
+      ~AccLattice.getSubLattice
+      ~AccLattice.initialize
+      ~AccLattice.isInitialized
+      ~AccLattice.reverseOrder
+      ~AccLattice.setNodes
+      ~AccLattice.structureToText
+      ~AccLattice.trackActions
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: AFTER
+   .. autoattribute:: BEFORE
+   .. autoattribute:: BODY
+   .. autoattribute:: ENTRANCE
+   .. autoattribute:: EXIT
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addNode
+   .. automethod:: getLength
+   .. automethod:: getNodeForName
+   .. automethod:: getNodeIndex
+   .. automethod:: getNodePositionsDict
+   .. automethod:: getNodes
+   .. automethod:: getNodesForName
+   .. automethod:: getNodesForSubstring
+   .. automethod:: getNodesOfClass
+   .. automethod:: getSubLattice
+   .. automethod:: initialize
+   .. automethod:: isInitialized
+   .. automethod:: reverseOrder
+   .. automethod:: setNodes
+   .. automethod:: structureToText
+   .. automethod:: trackActions

@@ -1,0 +1,6 @@
+getAllNodesInLattice
+====================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autofunction:: getAllNodesInLattice

@@ -1,0 +1,21 @@
+DCorrectorH
+===========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: DCorrectorH
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DCorrectorH.getField
+      ~DCorrectorH.setField
+      ~DCorrectorH.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getField
+   .. automethod:: setField
+   .. automethod:: track

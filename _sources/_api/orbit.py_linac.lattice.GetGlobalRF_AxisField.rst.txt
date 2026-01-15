@@ -1,0 +1,6 @@
+GetGlobalRF_AxisField
+=====================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autofunction:: GetGlobalRF_AxisField

@@ -1,0 +1,27 @@
+TeapotMomentsNodeSetMember
+==========================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: TeapotMomentsNodeSetMember
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotMomentsNodeSetMember.activate
+      ~TeapotMomentsNodeSetMember.deactivate
+      ~TeapotMomentsNodeSetMember.resetFile
+      ~TeapotMomentsNodeSetMember.setLatticeLength
+      ~TeapotMomentsNodeSetMember.setPosition
+      ~TeapotMomentsNodeSetMember.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: activate
+   .. automethod:: deactivate
+   .. automethod:: resetFile
+   .. automethod:: setLatticeLength
+   .. automethod:: setPosition
+   .. automethod:: track

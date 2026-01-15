@@ -1,0 +1,19 @@
+orbit
+=====
+
+.. currentmodule:: orbit.orbit_correction
+
+.. autoclass:: orbit
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~orbit.get_orbit
+      ~orbit.offset
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_orbit
+   .. automethod:: offset

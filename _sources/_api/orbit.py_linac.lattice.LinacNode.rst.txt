@@ -1,0 +1,23 @@
+LinacNode
+=========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacNode.getNodeTiltIN
+      ~LinacNode.getNodeTiltOUT
+      ~LinacNode.getTiltAngle
+      ~LinacNode.setTiltAngle
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getNodeTiltIN
+   .. automethod:: getNodeTiltOUT
+   .. automethod:: getTiltAngle
+   .. automethod:: setTiltAngle

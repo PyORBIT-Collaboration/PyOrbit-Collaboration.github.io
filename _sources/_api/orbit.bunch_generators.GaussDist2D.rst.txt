@@ -1,0 +1,19 @@
+GaussDist2D
+===========
+
+.. currentmodule:: orbit.bunch_generators
+
+.. autoclass:: GaussDist2D
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GaussDist2D.getCoordinates
+      ~GaussDist2D.getTwissContainers
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates
+   .. automethod:: getTwissContainers

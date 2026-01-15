@@ -1,0 +1,23 @@
+InjectParts
+===========
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: InjectParts
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~InjectParts.addInjectedParticle
+      ~InjectParts.addLostParticle
+      ~InjectParts.addParticles
+      ~InjectParts.setnparts
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addInjectedParticle
+   .. automethod:: addLostParticle
+   .. automethod:: addParticles
+   .. automethod:: setnparts

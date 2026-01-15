@@ -1,0 +1,49 @@
+TrajectoryCorrection
+====================
+
+.. currentmodule:: orbit.py_linac.orbit_correction
+
+.. autoclass:: TrajectoryCorrection
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TrajectoryCorrection.calculateTrajectory
+      ~TrajectoryCorrection.cleanBPM_Nodes
+      ~TrajectoryCorrection.cleanQuad_Nodes
+      ~TrajectoryCorrection.correctTrajectory
+      ~TrajectoryCorrection.getBPMs
+      ~TrajectoryCorrection.getDCHs
+      ~TrajectoryCorrection.getDCVs
+      ~TrajectoryCorrection.getQuadTransverseBPMs
+      ~TrajectoryCorrection.getQuads
+      ~TrajectoryCorrection.getTransverseBPMforBPM
+      ~TrajectoryCorrection.getTransverseBPMs
+      ~TrajectoryCorrection.makeOneParticleBunch
+      ~TrajectoryCorrection.setBPMs
+      ~TrajectoryCorrection.setDCHs
+      ~TrajectoryCorrection.setDCVs
+      ~TrajectoryCorrection.setQuads
+      ~TrajectoryCorrection.setStartStopNodes
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calculateTrajectory
+   .. automethod:: cleanBPM_Nodes
+   .. automethod:: cleanQuad_Nodes
+   .. automethod:: correctTrajectory
+   .. automethod:: getBPMs
+   .. automethod:: getDCHs
+   .. automethod:: getDCVs
+   .. automethod:: getQuadTransverseBPMs
+   .. automethod:: getQuads
+   .. automethod:: getTransverseBPMforBPM
+   .. automethod:: getTransverseBPMs
+   .. automethod:: makeOneParticleBunch
+   .. automethod:: setBPMs
+   .. automethod:: setDCHs
+   .. automethod:: setDCVs
+   .. automethod:: setQuads
+   .. automethod:: setStartStopNodes

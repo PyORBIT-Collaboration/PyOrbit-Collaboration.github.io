@@ -29,6 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists/css/tree_view.css" />
   
@@ -150,7 +151,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -266,7 +267,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -367,18 +368,18 @@ document.write(`
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccActionsContainer</span><span class="p">,</span> <span class="n">AccNode</span>
 
 
-<div class="viewcode-block" id="AccNodeBunchTracker"><a class="viewcode-back" href="../../../_autosummary/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccNodeBunchTracker</span><span class="p">(</span><span class="n">AccNode</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNodeBunchTracker"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccNodeBunchTracker</span><span class="p">(</span><span class="n">AccNode</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Class. Base class of the accelerator nodes that track the pyORBIT bunch.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="AccNodeBunchTracker.__init__"><a class="viewcode-back" href="../../../_autosummary/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;bunch tracker&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;bunch tracker&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Constructor. Creates an empty bunch tracker accelerator node.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">AccNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">type_in</span><span class="p">)</span></div>
+        <span class="n">AccNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">type_in</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">actionContainer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNodeBunchTracker.trackBunch"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">actionContainer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        It tracks the bunch through the AccNodeBunchTracker instance.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -392,14 +393,14 @@ document.write(`
 
         <span class="n">actionContainer</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actionContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span>
-        <span class="n">actionContainer</span><span class="o">.</span><span class="n">removeAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
+        <span class="n">actionContainer</span><span class="o">.</span><span class="n">removeAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNodeBunchTracker.track"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        It is tracking the bunch through the element. Each element</span>
 <span class="sd">        should implement this method.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span></div>
+        <span class="k">pass</span></div></div>
 </pre></div>
 
                 </article>

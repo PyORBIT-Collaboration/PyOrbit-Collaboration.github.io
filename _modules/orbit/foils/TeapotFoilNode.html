@@ -29,6 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists/css/tree_view.css" />
   
@@ -150,7 +151,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -266,7 +267,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -384,12 +385,12 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.foil</span><span class="w"> </span><span class="kn">import</span> <span class="n">Foil</span>
 
 
-<div class="viewcode-block" id="TeapotFoilNode"><a class="viewcode-back" href="../../../_autosummary/orbit.foils.TeapotFoilNode.html#orbit.foils.TeapotFoilNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotFoilNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotFoilNode"><a class="viewcode-back" href="../../../_api/orbit.foils.TeapotFoilNode.html#orbit.foils.TeapotFoilNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotFoilNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The foil node class for TEAPOT lattice</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TeapotFoilNode.__init__"><a class="viewcode-back" href="../../../_autosummary/orbit.foils.TeapotFoilNode.html#orbit.foils.TeapotFoilNode.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="n">thick</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foil no name&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="n">thick</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foil no name&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Constructor. Creates the Foil TEAPOT element.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -398,9 +399,9 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;foil teapot&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="c1"># The user choice of scattering routine. Defualt (0) is full scatter</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scatterChoice</span> <span class="o">=</span> <span class="mi">0</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scatterChoice</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotFoilNode.track"><a class="viewcode-back" href="../../../_api/orbit.foils.TeapotFoilNode.html#orbit.foils.TeapotFoilNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The foil-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -410,10 +411,10 @@ document.write(`
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scatterChoice</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">foil</span><span class="o">.</span><span class="n">traverseFoilFullScatter</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">foil</span><span class="o">.</span><span class="n">traverseFoilSimpleScatter</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foil</span><span class="o">.</span><span class="n">traverseFoilSimpleScatter</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setScatterChoice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">choice</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scatterChoice</span> <span class="o">=</span> <span class="n">choice</span></div>
+<div class="viewcode-block" id="TeapotFoilNode.setScatterChoice"><a class="viewcode-back" href="../../../_api/orbit.foils.TeapotFoilNode.html#orbit.foils.TeapotFoilNode.setScatterChoice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setScatterChoice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">choice</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scatterChoice</span> <span class="o">=</span> <span class="n">choice</span></div></div>
 </pre></div>
 
                 </article>

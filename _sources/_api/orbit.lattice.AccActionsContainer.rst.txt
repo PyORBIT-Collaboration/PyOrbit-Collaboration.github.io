@@ -1,0 +1,41 @@
+AccActionsContainer
+===================
+
+.. currentmodule:: orbit.lattice
+
+.. autoclass:: AccActionsContainer
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~AccActionsContainer.AFTER
+      ~AccActionsContainer.BEFORE
+      ~AccActionsContainer.BODY
+      ~AccActionsContainer.ENTRANCE
+      ~AccActionsContainer.EXIT
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AccActionsContainer.addAction
+      ~AccActionsContainer.getActions
+      ~AccActionsContainer.performActions
+      ~AccActionsContainer.removeAction
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: AFTER
+   .. autoattribute:: BEFORE
+   .. autoattribute:: BODY
+   .. autoattribute:: ENTRANCE
+   .. autoattribute:: EXIT
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addAction
+   .. automethod:: getActions
+   .. automethod:: performActions
+   .. automethod:: removeAction

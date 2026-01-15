@@ -1,0 +1,17 @@
+UniformLongDist
+===============
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: UniformLongDist
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~UniformLongDist.getCoordinates
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates

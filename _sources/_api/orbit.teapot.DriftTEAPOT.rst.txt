@@ -1,0 +1,17 @@
+DriftTEAPOT
+===========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: DriftTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DriftTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

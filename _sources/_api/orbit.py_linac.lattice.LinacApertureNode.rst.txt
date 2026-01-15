@@ -1,0 +1,27 @@
+LinacApertureNode
+=================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacApertureNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacApertureNode.getBaseAperture
+      ~LinacApertureNode.getNumberOfLostParticles
+      ~LinacApertureNode.setName
+      ~LinacApertureNode.setPosition
+      ~LinacApertureNode.track
+      ~LinacApertureNode.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getBaseAperture
+   .. automethod:: getNumberOfLostParticles
+   .. automethod:: setName
+   .. automethod:: setPosition
+   .. automethod:: track
+   .. automethod:: trackDesign

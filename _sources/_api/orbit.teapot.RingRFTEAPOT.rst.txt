@@ -1,0 +1,21 @@
+RingRFTEAPOT
+============
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: RingRFTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RingRFTEAPOT.addRF
+      ~RingRFTEAPOT.initialize
+      ~RingRFTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addRF
+   .. automethod:: initialize
+   .. automethod:: track

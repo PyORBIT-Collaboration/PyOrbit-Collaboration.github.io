@@ -1,0 +1,6 @@
+multiDimIntArray
+================
+
+.. currentmodule:: orbit.utils
+
+.. autofunction:: multiDimIntArray

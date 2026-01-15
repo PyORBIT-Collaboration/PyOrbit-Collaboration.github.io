@@ -1,0 +1,21 @@
+AccErrorNode
+============
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: AccErrorNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AccErrorNode.setErrorControllerParamFunc
+      ~AccErrorNode.track
+      ~AccErrorNode.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setErrorControllerParamFunc
+   .. automethod:: track
+   .. automethod:: trackDesign

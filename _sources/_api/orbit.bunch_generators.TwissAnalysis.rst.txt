@@ -1,0 +1,29 @@
+TwissAnalysis
+=============
+
+.. currentmodule:: orbit.bunch_generators
+
+.. autoclass:: TwissAnalysis
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TwissAnalysis.account
+      ~TwissAnalysis.getAvgU_UP
+      ~TwissAnalysis.getMaxU_UP
+      ~TwissAnalysis.getMinU_UP
+      ~TwissAnalysis.getRmsU_UP
+      ~TwissAnalysis.getTwiss
+      ~TwissAnalysis.init
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: account
+   .. automethod:: getAvgU_UP
+   .. automethod:: getMaxU_UP
+   .. automethod:: getMinU_UP
+   .. automethod:: getRmsU_UP
+   .. automethod:: getTwiss
+   .. automethod:: init

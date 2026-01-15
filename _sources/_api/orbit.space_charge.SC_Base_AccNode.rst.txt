@@ -1,0 +1,31 @@
+SC_Base_AccNode
+===============
+
+.. currentmodule:: orbit.space_charge
+
+.. autoclass:: SC_Base_AccNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SC_Base_AccNode.getCalculationOn
+      ~SC_Base_AccNode.getCalculator
+      ~SC_Base_AccNode.getLengthOfSC
+      ~SC_Base_AccNode.isRFGap
+      ~SC_Base_AccNode.setCalculationOn
+      ~SC_Base_AccNode.setLengthOfSC
+      ~SC_Base_AccNode.track
+      ~SC_Base_AccNode.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCalculationOn
+   .. automethod:: getCalculator
+   .. automethod:: getLengthOfSC
+   .. automethod:: isRFGap
+   .. automethod:: setCalculationOn
+   .. automethod:: setLengthOfSC
+   .. automethod:: track
+   .. automethod:: trackDesign

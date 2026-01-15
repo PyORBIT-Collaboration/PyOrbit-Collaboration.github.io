@@ -1,0 +1,45 @@
+MATRIX_Lattice
+==============
+
+.. currentmodule:: orbit.matrix_lattice
+
+.. autoclass:: MATRIX_Lattice
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MATRIX_Lattice.getOneTurnMatrix
+      ~MATRIX_Lattice.getRingDispersionDataX
+      ~MATRIX_Lattice.getRingDispersionDataY
+      ~MATRIX_Lattice.getRingOrbit
+      ~MATRIX_Lattice.getRingParametersDict
+      ~MATRIX_Lattice.getRingTwissDataX
+      ~MATRIX_Lattice.getRingTwissDataY
+      ~MATRIX_Lattice.getSubLattice
+      ~MATRIX_Lattice.initialize
+      ~MATRIX_Lattice.makeMatrix
+      ~MATRIX_Lattice.makeOneTurnMatrix
+      ~MATRIX_Lattice.trackBunch
+      ~MATRIX_Lattice.trackDispersionData
+      ~MATRIX_Lattice.trackOrbit
+      ~MATRIX_Lattice.trackTwissData
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getOneTurnMatrix
+   .. automethod:: getRingDispersionDataX
+   .. automethod:: getRingDispersionDataY
+   .. automethod:: getRingOrbit
+   .. automethod:: getRingParametersDict
+   .. automethod:: getRingTwissDataX
+   .. automethod:: getRingTwissDataY
+   .. automethod:: getSubLattice
+   .. automethod:: initialize
+   .. automethod:: makeMatrix
+   .. automethod:: makeOneTurnMatrix
+   .. automethod:: trackBunch
+   .. automethod:: trackDispersionData
+   .. automethod:: trackOrbit
+   .. automethod:: trackTwissData

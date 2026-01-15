@@ -1,0 +1,43 @@
+OverlappingQuadsNode
+====================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: OverlappingQuadsNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~OverlappingQuadsNode.addQuad
+      ~OverlappingQuadsNode.getCentersOfField
+      ~OverlappingQuadsNode.getQuads
+      ~OverlappingQuadsNode.getTotalField
+      ~OverlappingQuadsNode.getTotalFieldDerivative
+      ~OverlappingQuadsNode.getUseLongitudinalFieldOfQuad
+      ~OverlappingQuadsNode.getZ_Min_Max
+      ~OverlappingQuadsNode.getZ_Step
+      ~OverlappingQuadsNode.initialize
+      ~OverlappingQuadsNode.isNodeInReversedLattice
+      ~OverlappingQuadsNode.reverseOrderNodeSpecific
+      ~OverlappingQuadsNode.setUseLongitudinalFieldOfQuad
+      ~OverlappingQuadsNode.setZ_Step
+      ~OverlappingQuadsNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addQuad
+   .. automethod:: getCentersOfField
+   .. automethod:: getQuads
+   .. automethod:: getTotalField
+   .. automethod:: getTotalFieldDerivative
+   .. automethod:: getUseLongitudinalFieldOfQuad
+   .. automethod:: getZ_Min_Max
+   .. automethod:: getZ_Step
+   .. automethod:: initialize
+   .. automethod:: isNodeInReversedLattice
+   .. automethod:: reverseOrderNodeSpecific
+   .. automethod:: setUseLongitudinalFieldOfQuad
+   .. automethod:: setZ_Step
+   .. automethod:: track

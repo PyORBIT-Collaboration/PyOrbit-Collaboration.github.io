@@ -1,0 +1,31 @@
+BaseLinacNode
+=============
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: BaseLinacNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BaseLinacNode.getPosition
+      ~BaseLinacNode.getSequence
+      ~BaseLinacNode.isRFGap
+      ~BaseLinacNode.setLinacTracker
+      ~BaseLinacNode.setPosition
+      ~BaseLinacNode.setSequence
+      ~BaseLinacNode.trackDesign
+      ~BaseLinacNode.trackDesignBunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getPosition
+   .. automethod:: getSequence
+   .. automethod:: isRFGap
+   .. automethod:: setLinacTracker
+   .. automethod:: setPosition
+   .. automethod:: setSequence
+   .. automethod:: trackDesign
+   .. automethod:: trackDesignBunch

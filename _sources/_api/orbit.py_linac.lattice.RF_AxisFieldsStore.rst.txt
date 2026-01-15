@@ -1,0 +1,33 @@
+RF_AxisFieldsStore
+==================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: RF_AxisFieldsStore
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~RF_AxisFieldsStore.static_axis_field_dict
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RF_AxisFieldsStore.addAxisField
+      ~RF_AxisFieldsStore.addAxisFieldsForAccSeq
+      ~RF_AxisFieldsStore.getAxisFieldFunction
+      ~RF_AxisFieldsStore.getSize
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: static_axis_field_dict
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addAxisField
+   .. automethod:: addAxisFieldsForAccSeq
+   .. automethod:: getAxisFieldFunction
+   .. automethod:: getSize

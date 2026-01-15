@@ -1,0 +1,11 @@
+<map id="inheritance6f8475dd62" name="inheritance6f8475dd62">
+<area shape="rect" id="node1" href="../_api/orbit.parsers.Field_Parser3D.html#orbit.parsers.Field_Parser3D" target="_top" title="3D field parser" alt="" coords="20,421,138,449"/>
+<area shape="rect" id="node2" href="../_api/orbit.parsers.MADX_LattElement.html#orbit.parsers.MADX_LattElement" target="_top" title="Class. Represents an arbitrary element in the lattice" alt="" coords="5,369,153,397"/>
+<area shape="rect" id="node3" href="../_api/orbit.parsers.MADX_Parser.html#orbit.parsers.MADX_Parser" target="_top" title="MADX parser" alt="" coords="25,317,133,345"/>
+<area shape="rect" id="node4" href="../_api/orbit.parsers.MAD_LattElement.html#orbit.parsers.MAD_LattElement" target="_top" title="Class. Represents an arbitrary element in the lattice" alt="" coords="10,265,148,293"/>
+<area shape="rect" id="node5" href="../_api/orbit.parsers.MAD_LattLine.html#orbit.parsers.MAD_LattLine" target="_top" title="Class. Represents an arbitrary line in the lattice." alt="" coords="23,213,135,241"/>
+<area shape="rect" id="node6" href="../_api/orbit.parsers.MAD_Parser.html#orbit.parsers.MAD_Parser" target="_top" title="MAD parser" alt="" coords="29,161,129,189"/>
+<area shape="rect" id="node7" href="../_api/orbit.parsers.SAD_LattElement.html#orbit.parsers.SAD_LattElement" target="_top" title="An Arbitrary Element in the Lattice" alt="" coords="11,109,147,137"/>
+<area shape="rect" id="node8" href="../_api/orbit.parsers.SAD_LattLine.html#orbit.parsers.SAD_LattLine" target="_top" title="An Arbitrary Line in the Lattice." alt="" coords="25,57,133,85"/>
+<area shape="rect" id="node9" href="../_api/orbit.parsers.SAD_Parser.html#orbit.parsers.SAD_Parser" target="_top" title="SAD parser" alt="" coords="31,5,127,33"/>
+</map>

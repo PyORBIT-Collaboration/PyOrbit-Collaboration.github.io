@@ -1,0 +1,43 @@
+NodeTEAPOT
+==========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: NodeTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NodeTEAPOT.getFringeFieldFunctionIN
+      ~NodeTEAPOT.getFringeFieldFunctionOUT
+      ~NodeTEAPOT.getNodeFringeFieldIN
+      ~NodeTEAPOT.getNodeFringeFieldOUT
+      ~NodeTEAPOT.getNodeTiltIN
+      ~NodeTEAPOT.getNodeTiltOUT
+      ~NodeTEAPOT.getTiltAngle
+      ~NodeTEAPOT.getUsageFringeFieldIN
+      ~NodeTEAPOT.getUsageFringeFieldOUT
+      ~NodeTEAPOT.setFringeFieldFunctionIN
+      ~NodeTEAPOT.setFringeFieldFunctionOUT
+      ~NodeTEAPOT.setTiltAngle
+      ~NodeTEAPOT.setUsageFringeFieldIN
+      ~NodeTEAPOT.setUsageFringeFieldOUT
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getFringeFieldFunctionIN
+   .. automethod:: getFringeFieldFunctionOUT
+   .. automethod:: getNodeFringeFieldIN
+   .. automethod:: getNodeFringeFieldOUT
+   .. automethod:: getNodeTiltIN
+   .. automethod:: getNodeTiltOUT
+   .. automethod:: getTiltAngle
+   .. automethod:: getUsageFringeFieldIN
+   .. automethod:: getUsageFringeFieldOUT
+   .. automethod:: setFringeFieldFunctionIN
+   .. automethod:: setFringeFieldFunctionOUT
+   .. automethod:: setTiltAngle
+   .. automethod:: setUsageFringeFieldIN
+   .. automethod:: setUsageFringeFieldOUT

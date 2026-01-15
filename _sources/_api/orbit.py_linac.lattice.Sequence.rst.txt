@@ -1,0 +1,43 @@
+Sequence
+========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: Sequence
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Sequence.addNode
+      ~Sequence.addRF_Cavity
+      ~Sequence.getLength
+      ~Sequence.getLinacAccLattice
+      ~Sequence.getNodes
+      ~Sequence.getPosition
+      ~Sequence.getRF_Cavities
+      ~Sequence.getRF_Cavity
+      ~Sequence.removeAllNodes
+      ~Sequence.reverseOrder
+      ~Sequence.setLength
+      ~Sequence.setLinacAccLattice
+      ~Sequence.setNodes
+      ~Sequence.setPosition
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addNode
+   .. automethod:: addRF_Cavity
+   .. automethod:: getLength
+   .. automethod:: getLinacAccLattice
+   .. automethod:: getNodes
+   .. automethod:: getPosition
+   .. automethod:: getRF_Cavities
+   .. automethod:: getRF_Cavity
+   .. automethod:: removeAllNodes
+   .. automethod:: reverseOrder
+   .. automethod:: setLength
+   .. automethod:: setLinacAccLattice
+   .. automethod:: setNodes
+   .. automethod:: setPosition

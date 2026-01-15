@@ -1,0 +1,7 @@
+MarkerLinacNode
+===============
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: MarkerLinacNode
+   :show-inheritance:

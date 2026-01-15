@@ -1,0 +1,21 @@
+TiltTEAPOT
+==========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: TiltTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TiltTEAPOT.getTiltAngle
+      ~TiltTEAPOT.setTiltAngle
+      ~TiltTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getTiltAngle
+   .. automethod:: setTiltAngle
+   .. automethod:: track

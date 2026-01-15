@@ -1,0 +1,17 @@
+SNSESpreadDist
+==============
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: SNSESpreadDist
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SNSESpreadDist.getCoordinates
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates

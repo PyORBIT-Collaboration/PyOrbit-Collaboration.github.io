@@ -1,0 +1,19 @@
+TypedObject
+===========
+
+.. currentmodule:: orbit.utils
+
+.. autoclass:: TypedObject
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TypedObject.getType
+      ~TypedObject.setType
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getType
+   .. automethod:: setType

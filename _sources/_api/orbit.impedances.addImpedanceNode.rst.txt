@@ -1,0 +1,6 @@
+addImpedanceNode
+================
+
+.. currentmodule:: orbit.impedances
+
+.. autofunction:: addImpedanceNode

@@ -1,0 +1,27 @@
+ErrorCntrlStraightRotationX
+===========================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorCntrlStraightRotationX
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorCntrlStraightRotationX.getBaseLength
+      ~ErrorCntrlStraightRotationX.getEntanceNodeRotationParams
+      ~ErrorCntrlStraightRotationX.getExitNodeRotationParams
+      ~ErrorCntrlStraightRotationX.getRotationAngle
+      ~ErrorCntrlStraightRotationX.setBaseLength
+      ~ErrorCntrlStraightRotationX.setRotationAngle
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getBaseLength
+   .. automethod:: getEntanceNodeRotationParams
+   .. automethod:: getExitNodeRotationParams
+   .. automethod:: getRotationAngle
+   .. automethod:: setBaseLength
+   .. automethod:: setRotationAngle

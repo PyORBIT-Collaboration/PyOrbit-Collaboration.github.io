@@ -1,0 +1,6 @@
+addTeapotCollimatorNode
+=======================
+
+.. currentmodule:: orbit.collimation
+
+.. autofunction:: addTeapotCollimatorNode

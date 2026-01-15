@@ -1,0 +1,6 @@
+setSC_General_AccNodes
+======================
+
+.. currentmodule:: orbit.space_charge
+
+.. autofunction:: setSC_General_AccNodes

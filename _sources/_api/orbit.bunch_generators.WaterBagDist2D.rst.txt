@@ -1,0 +1,19 @@
+WaterBagDist2D
+==============
+
+.. currentmodule:: orbit.bunch_generators
+
+.. autoclass:: WaterBagDist2D
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~WaterBagDist2D.getCoordinates
+      ~WaterBagDist2D.getTwissContainers
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates
+   .. automethod:: getTwissContainers

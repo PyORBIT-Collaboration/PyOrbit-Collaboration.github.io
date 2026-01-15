@@ -29,6 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists/css/tree_view.css" />
   
@@ -150,7 +151,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -266,7 +267,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -376,7 +377,7 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">..lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccActionsContainer</span>
 
 
-<div class="viewcode-block" id="AccNode"><a class="viewcode-back" href="../../../_autosummary/orbit.lattice.AccNode.html#orbit.lattice.AccNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccNode</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">,</span> <span class="n">ParamsDictObject</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccNode</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">,</span> <span class="n">ParamsDictObject</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Class. Base class of the accelerator nodes hierarchy.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -388,7 +389,7 @@ document.write(`
     <span class="n">BEFORE</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BEFORE</span>
     <span class="n">AFTER</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">AFTER</span>
 
-<div class="viewcode-block" id="AccNode.__init__"><a class="viewcode-back" href="../../../_autosummary/orbit.lattice.AccNode.html#orbit.lattice.AccNode.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;generic&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;generic&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Constructor. Creates an empty accelerator node.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -412,9 +413,9 @@ document.write(`
         <span class="c1"># (before and after each part) of nodes</span>
         <span class="c1"># ------------------------------------------------</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span> <span class="o">=</span> <span class="p">[[],</span> <span class="p">[[[],</span> <span class="p">[]]],</span> <span class="p">[]]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_setPartsLengthEvenly</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__nParts</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setPartsLengthEvenly</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__nParts</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setnParts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.setnParts"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.setnParts">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setnParts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Sets the number of body parts of the node.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -432,15 +433,15 @@ document.write(`
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;n children =&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getNumberOfChildren</span><span class="p">())</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_setPartsLengthEvenly</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getnParts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getnParts"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getnParts">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getnParts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns the number of body parts in the node.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nParts</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nParts</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.setLength"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.setLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Sets the physical length of a node or a</span>
 <span class="sd">        part if index &gt; 0.</span>
@@ -453,30 +454,30 @@ document.write(`
             <span class="k">return</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">=</span> <span class="n">L</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_setPartsLengthEvenly</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__nParts</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getLength"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns the physical length of a node or a</span>
 <span class="sd">        part if index &gt; 0.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lengthArr</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__length</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__length</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getActivePartIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getActivePartIndex"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getActivePartIndex">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getActivePartIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns the active part index of the node.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__activePartIndex</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__activePartIndex</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setActivePartIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">activePartIndex</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.setActivePartIndex"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.setActivePartIndex">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setActivePartIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">activePartIndex</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Sets the active part index of the node.</span>
 <span class="sd">        Please, use this method with cautions, because it was not</span>
 <span class="sd">        intended for a routine use.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__activePartIndex</span> <span class="o">=</span> <span class="n">activePartIndex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__activePartIndex</span> <span class="o">=</span> <span class="n">activePartIndex</span></div>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_setPartsLengthEvenly</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -504,14 +505,14 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">__lengthArr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nParts</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="n">AccNode</span><span class="o">.</span><span class="n">BODY</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([[],</span> <span class="p">[]])</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.initialize"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.initialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Abstract method. Must be implemented if the length</span>
 <span class="sd">        distribution of body parts is not uniform.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getNumberOfChildren"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getNumberOfChildren">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the total number of direct children</span>
 <span class="sd">        of this accelerator node.</span>
@@ -520,9 +521,9 @@ document.write(`
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="mi">1</span><span class="p">])):</span>
             <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
             <span class="n">nChildren</span> <span class="o">=</span> <span class="n">nChildren</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">nChildren</span>
+        <span class="k">return</span> <span class="n">nChildren</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfBodyChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getNumberOfBodyChildren"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getNumberOfBodyChildren">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfBodyChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the total number of direct childrens of this</span>
 <span class="sd">        accelerator node that are inside the element,</span>
@@ -532,9 +533,9 @@ document.write(`
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="mi">1</span><span class="p">])):</span>
             <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
             <span class="n">nChildren</span> <span class="o">=</span> <span class="n">nChildren</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">nChildren</span>
+        <span class="k">return</span> <span class="n">nChildren</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">addChildNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="n">part_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">place_in_part</span><span class="o">=</span><span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.addChildNode"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.addChildNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addChildNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="n">part_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">place_in_part</span><span class="o">=</span><span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Adds a child node to the list defined by place and</span>
 <span class="sd">        (maybe) part index and place in the part (before or after).</span>
@@ -558,9 +559,9 @@ document.write(`
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
                 <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
             <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="n">place</span><span class="p">][</span><span class="n">part_index</span><span class="p">][</span><span class="n">place_in_part</span><span class="p">]</span>
-        <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getChildNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="n">part_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">place_in_part</span><span class="o">=</span><span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getChildNodes"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getChildNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getChildNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="n">part_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">place_in_part</span><span class="o">=</span><span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns a list of all children specified by place and</span>
 <span class="sd">        (maybe) part index and place in the part (before or after).</span>
@@ -570,9 +571,9 @@ document.write(`
             <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="n">place</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="n">place</span><span class="p">][</span><span class="n">part_index</span><span class="p">][</span><span class="n">place_in_part</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">nodes</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getBodyChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getBodyChildren"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getBodyChildren">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBodyChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the array of direct childrens of this</span>
 <span class="sd">        accelerator node that are inside the element,</span>
@@ -583,9 +584,9 @@ document.write(`
             <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
             <span class="n">nodes</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">nodes</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">nodes</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getAllChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.getAllChildren"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.getAllChildren">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getAllChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        It returns the list of all children of this node.</span>
 <span class="sd">        The list includes children at entance, in body, and at exit.</span>
@@ -594,9 +595,9 @@ document.write(`
         <span class="n">nodes</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
         <span class="n">nodes</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getBodyChildren</span><span class="p">()</span>
         <span class="n">nodes</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">nodes</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.reverseOrder"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.reverseOrder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This method is used for a lattice reversal and a bunch backtracking.</span>
 <span class="sd">        This method will reverse the order of the children nodes and their</span>
@@ -623,17 +624,17 @@ document.write(`
                 <span class="n">node</span><span class="o">.</span><span class="n">reverseOrderNodeSpecific</span><span class="p">()</span>
             <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childNodesArr</span><span class="p">[</span><span class="n">AccNode</span><span class="o">.</span><span class="n">BODY</span><span class="p">][</span><span class="n">iPart</span><span class="p">][</span><span class="n">AccNode</span><span class="o">.</span><span class="n">AFTER</span><span class="p">]:</span>
                 <span class="n">node</span><span class="o">.</span><span class="n">reverseOrderNodeSpecific</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reverseOrderNodeSpecific</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reverseOrderNodeSpecific</span><span class="p">()</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrderNodeSpecific</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.reverseOrderNodeSpecific"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.reverseOrderNodeSpecific">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrderNodeSpecific</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This method is used for a lattice reversal and a bunch backtracking</span>
 <span class="sd">        This is a node type specific method. Here it is empty. It should be</span>
 <span class="sd">        redefined in the subclasses.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">structureToText</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">txt_shift</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="AccNode.structureToText"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.structureToText">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">structureToText</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">txt_shift</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This method write the structure of the node to the text variable recursively.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -665,9 +666,9 @@ document.write(`
             <span class="n">txt</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">structureToText</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">txt_shift</span> <span class="o">+</span> <span class="n">txt_shift_local</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
         <span class="n">txt</span> <span class="o">+=</span> <span class="n">txt_shift</span> <span class="o">+</span> <span class="s2">&quot;==== END of AccNode = &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
         <span class="n">txt</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="k">return</span> <span class="n">txt</span>
+        <span class="k">return</span> <span class="n">txt</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">trackActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{}):</span>
+<div class="viewcode-block" id="AccNode.trackActions"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode.trackActions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{}):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Tracks the actions through the accelerator node.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -717,7 +718,7 @@ document.write(`
         <span class="c1"># start EXIT</span>
         <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
         <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;parentNode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parentNode</span>
-        <span class="n">actionsContainer</span><span class="o">.</span><span class="n">performActions</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span></div>
+        <span class="n">actionsContainer</span><span class="o">.</span><span class="n">performActions</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span></div></div>
 </pre></div>
 
                 </article>

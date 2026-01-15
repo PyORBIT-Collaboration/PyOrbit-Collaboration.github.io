@@ -1,0 +1,31 @@
+MAD_Parser
+==========
+
+.. currentmodule:: orbit.parsers
+
+.. autoclass:: MAD_Parser
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MAD_Parser.getMAD_Elements
+      ~MAD_Parser.getMAD_ElementsDict
+      ~MAD_Parser.getMAD_Lines
+      ~MAD_Parser.getMAD_LinesDict
+      ~MAD_Parser.getMAD_Variables
+      ~MAD_Parser.getMAD_VariablesDict
+      ~MAD_Parser.initialize
+      ~MAD_Parser.parse
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getMAD_Elements
+   .. automethod:: getMAD_ElementsDict
+   .. automethod:: getMAD_Lines
+   .. automethod:: getMAD_LinesDict
+   .. automethod:: getMAD_Variables
+   .. automethod:: getMAD_VariablesDict
+   .. automethod:: initialize
+   .. automethod:: parse

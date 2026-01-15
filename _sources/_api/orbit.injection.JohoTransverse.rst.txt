@@ -1,0 +1,17 @@
+JohoTransverse
+==============
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: JohoTransverse
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~JohoTransverse.getCoordinates
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates

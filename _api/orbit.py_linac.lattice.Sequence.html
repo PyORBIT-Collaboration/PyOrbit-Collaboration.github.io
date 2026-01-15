@@ -1,0 +1,909 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sequence &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_api/orbit.py_linac.lattice.Sequence';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BaseRF_Gap" href="orbit.py_linac.lattice.BaseRF_Gap.html" />
+    <link rel="prev" title="RF_Cavity" href="orbit.py_linac.lattice.RF_Cavity.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../_cpp_api/pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../_cpp_api/pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.aperture.html">orbit.aperture</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.aperture.Aperture.html">Aperture</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.bumps.html">orbit.bumps</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bumps.addTeapotBumpNode.html">addTeapotBumpNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bumps.TeapotSimpleBumpNode.html">TeapotSimpleBumpNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bumps.TDTeapotSimpleBumpNode.html">TDTeapotSimpleBumpNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bumps.simpleBump.html">simpleBump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bumps.close_orbit_bumps.html">close_orbit_bumps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bumps.TDsimpleBump.html">TDsimpleBump</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.bunch_generators.html">orbit.bunch_generators</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.TwissContainer.html">TwissContainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.TwissAnalysis.html">TwissAnalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.GaussDist1D.html">GaussDist1D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.GaussDist2D.html">GaussDist2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.GaussDist3D.html">GaussDist3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.KVDist1D.html">KVDist1D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.KVDist2D.html">KVDist2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.KVDist3D.html">KVDist3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.WaterBagDist1D.html">WaterBagDist1D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.WaterBagDist2D.html">WaterBagDist2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_generators.WaterBagDist3D.html">WaterBagDist3D</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.bunch_utils.html">orbit.bunch_utils</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_utils.collect_bunch.html">collect_bunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_utils.save_bunch.html">save_bunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_utils.load_bunch.html">load_bunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_utils.ParticleIdNumber.html">ParticleIdNumber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_utils.BunchDict.html">BunchDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_utils.FileHandler.html">FileHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.bunch_utils.NumPyHandler.html">NumPyHandler</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.collimation.html">orbit.collimation</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.collimation.addTeapotCollimatorNode.html">addTeapotCollimatorNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.collimation.TeapotCollimatorNode.html">TeapotCollimatorNode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/orbit.core.html">orbit.core</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.diagnostics.html">orbit.diagnostics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.addTeapotDiagnosticsNode.html">addTeapotDiagnosticsNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.addTeapotDiagnosticsNodeAsChild.html">addTeapotDiagnosticsNodeAsChild</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.addTeapotStatLatsNodeSet.html">addTeapotStatLatsNodeSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.addTeapotMomentsNodeSet.html">addTeapotMomentsNodeSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.profiles.html">profiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.StatLats.html">StatLats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.StatLatsSetMember.html">StatLatsSetMember</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.TeapotStatLatsNode.html">TeapotStatLatsNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.TeapotStatLatsNodeSetMember.html">TeapotStatLatsNodeSetMember</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.Moments.html">Moments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.MomentsSetMember.html">MomentsSetMember</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.TeapotMomentsNode.html">TeapotMomentsNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.TeapotMomentsNodeSetMember.html">TeapotMomentsNodeSetMember</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.diagnostics.TeapotTuneAnalysisNode.html">TeapotTuneAnalysisNode</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.errors.html">orbit.errors</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.errors.addErrorNode.html">addErrorNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.errors.addErrorNodeAsChild.html">addErrorNodeAsChild</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.errors.addErrorNodeAsChild_I.html">addErrorNodeAsChild_I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.errors.addErrorNodeAsChild_F.html">addErrorNodeAsChild_F</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.fieldtracker.html">orbit.fieldtracker</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.fieldtracker.FieldTracker.html">FieldTracker</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.foils.html">orbit.foils</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.foils.addTeapotFoilNode.html">addTeapotFoilNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.foils.TeapotFoilNode.html">TeapotFoilNode</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.impedances.html">orbit.impedances</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.impedances.addImpedanceNode.html">addImpedanceNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.impedances.addImpedanceNodeAsChild.html">addImpedanceNodeAsChild</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.injection.html">orbit.injection</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.addTeapotInjectionNode.html">addTeapotInjectionNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.TeapotInjectionNode.html">TeapotInjectionNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.InjectParts.html">InjectParts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.JohoTransverse.html">JohoTransverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.JohoLongitudinal.html">JohoLongitudinal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.UniformLongDist.html">UniformLongDist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.UniformLongDistPaint.html">UniformLongDistPaint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.GULongDist.html">GULongDist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.SNSESpreadDist.html">SNSESpreadDist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.SNSESpreadDistPaint.html">SNSESpreadDistPaint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.injection.ArbitraryLongDist.html">ArbitraryLongDist</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.kickernodes.html">orbit.kickernodes</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.addTeapotKickerNode.html">addTeapotKickerNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.TeapotXKickerNode.html">TeapotXKickerNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.TeapotYKickerNode.html">TeapotYKickerNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.rootTWaveform.html">rootTWaveform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.flatTopWaveform.html">flatTopWaveform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.SquareRootWaveform.html">SquareRootWaveform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.XKicker.html">XKicker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.kickernodes.YKicker.html">YKicker</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.lattice.html">orbit.lattice</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.lattice.AccActionsContainer.html">AccActionsContainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.lattice.AccNode.html">AccNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.lattice.AccLattice.html">AccLattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.lattice.AccNodeBunchTracker.html">AccNodeBunchTracker</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.matching.html">orbit.matching</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.matching.Optics.html">Optics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.matching.EnvelopeSolver.html">EnvelopeSolver</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.matrix_lattice.html">orbit.matrix_lattice</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.matrix_lattice.MATRIX_Lattice.html">MATRIX_Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.matrix_lattice.BaseMATRIX.html">BaseMATRIX</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.orbit_correction.html">orbit.orbit_correction</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.orbit_correction.orbit.html">orbit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.orbit_correction.correction.html">correction</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.parsers.html">orbit.parsers</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.MAD_Parser.html">MAD_Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.MAD_LattElement.html">MAD_LattElement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.MAD_LattLine.html">MAD_LattLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.MADX_Parser.html">MADX_Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.MADX_LattElement.html">MADX_LattElement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.SAD_Parser.html">SAD_Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.SAD_LattElement.html">SAD_LattElement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.SAD_LattLine.html">SAD_LattLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.parsers.Field_Parser3D.html">Field_Parser3D</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../modules/orbit.py_linac.html">orbit.py_linac</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.AccErrorNode.html">AccErrorNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorLongitudinalDisplacementNode.html">ErrorLongitudinalDisplacementNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorCoordDisplacementNode.html">ErrorCoordDisplacementNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorBendFieldNode.html">ErrorBendFieldNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorStraightRotationZNode.html">ErrorStraightRotationZNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorStraightRotationXNode.html">ErrorStraightRotationXNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorStraightRotationYNode.html">ErrorStraightRotationYNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.BaseErrorController.html">BaseErrorController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement.html">ErrorCntrlLongitudinalDisplacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorCntrlCoordDisplacement.html">ErrorCntrlCoordDisplacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorCntrlBendField.html">ErrorCntrlBendField</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorCntrlStraightRotationZ.html">ErrorCntrlStraightRotationZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorCntrlStraightRotationX.html">ErrorCntrlStraightRotationX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.errors.ErrorCntrlStraightRotationY.html">ErrorCntrlStraightRotationY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.GetGlobalQuadGradient.html">GetGlobalQuadGradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.GetGlobalQuadGradientDerivative.html">GetGlobalQuadGradientDerivative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.GetGlobalRF_AxisField.html">GetGlobalRF_AxisField</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.getNodeForNameFromWholeLattice.html">getNodeForNameFromWholeLattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.getNodePosDictForWholeLattice.html">getNodePosDictForWholeLattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.getAllNodesInLattice.html">getAllNodesInLattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.getAllMagnetsInLattice.html">getAllMagnetsInLattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacAccLattice.html">LinacAccLattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.BaseLinacNode.html">BaseLinacNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacNode.html">LinacNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacMagnetNode.html">LinacMagnetNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.MarkerLinacNode.html">MarkerLinacNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.Drift.html">Drift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.Quad.html">Quad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.AbstractRF_Gap.html">AbstractRF_Gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.DCorrectorH.html">DCorrectorH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.DCorrectorV.html">DCorrectorV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.ThickKick.html">ThickKick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.Bend.html">Bend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.Solenoid.html">Solenoid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacApertureNode.html">LinacApertureNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.CircleLinacApertureNode.html">CircleLinacApertureNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.EllipseLinacApertureNode.html">EllipseLinacApertureNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.RectangleLinacApertureNode.html">RectangleLinacApertureNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacPhaseApertureNode.html">LinacPhaseApertureNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacEnergyApertureNode.html">LinacEnergyApertureNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.RF_Cavity.html">RF_Cavity</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.BaseRF_Gap.html">BaseRF_Gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.AxisFieldRF_Gap.html">AxisFieldRF_Gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.RF_AxisFieldsStore.html">RF_AxisFieldsStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.html">AxisField_and_Quad_RF_Gap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.OverlappingQuadsNode.html">OverlappingQuadsNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacTrMatrixGenNode.html">LinacTrMatrixGenNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacTrMatricesController.html">LinacTrMatricesController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice.LinacBPM.html">LinacBPM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.Add_quad_apertures_to_lattice.html">Add_quad_apertures_to_lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.Add_bend_apertures_to_lattice.html">Add_bend_apertures_to_lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.Add_rfgap_apertures_to_lattice.html">Add_rfgap_apertures_to_lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.GetLostDistributionArr.html">GetLostDistributionArr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.AddScrapersAperturesToLattice.html">AddScrapersAperturesToLattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.Add_drift_apertures_to_lattice.html">Add_drift_apertures_to_lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.AddMEBTChopperPlatesAperturesToSNS_Lattice.html">AddMEBTChopperPlatesAperturesToSNS_Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.Replace_BaseRF_Gap_to_AxisField_Nodes.html">Replace_BaseRF_Gap_to_AxisField_Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes.html">Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.Replace_Quads_to_OverlappingQuads_Nodes.html">Replace_Quads_to_OverlappingQuads_Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.ErrorForNodesModification.html">ErrorForNodesModification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification.html">CoordinateDisplacementNodesModification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.BendFieldNodesModification.html">BendFieldNodesModification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification.html">LongitudinalDisplacementNodesModification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification.html">StraightRotationZ_NodesModification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification.html">StraightRotationX_NodesModification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification.html">StraightRotationY_NodesModification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment.html">QuadFieldsErrorsDeployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.html">SNS_LinacLatticeFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.linac_parsers.JPARC_LinacLatticeFactory.html">JPARC_LinacLatticeFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.materials.VacuumWindowNode.html">VacuumWindowNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.orbit_correction.TransverseBPM.html">TransverseBPM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.orbit_correction.TrajectoryCorrection.html">TrajectoryCorrection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.overlapping_fields.SNS_EngeFunctionFactory.html">SNS_EngeFunctionFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.overlapping_fields.JPARC_EngeFunctionFactory.html">JPARC_EngeFunctionFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.overlapping_fields.EngeFunction.html">EngeFunction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction.html">AbstractQuadFieldSourceFunction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc.html">SimpleQuadFieldFunc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function.html">PMQ_Trace3D_Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis.html">RF_AxisFieldAnalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.html">SuperFish_3D_RF_FieldReader</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.rf_cavities.html">orbit.rf_cavities</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.rf_cavities.addRFNode.html">addRFNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.rf_cavities.Frequency_RFNode.html">Frequency_RFNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.rf_cavities.Harmonic_RFNode.html">Harmonic_RFNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.rf_cavities.BRhoDep_Harmonic_RFNode.html">BRhoDep_Harmonic_RFNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode.html">SyncPhaseDep_Harmonic_RFNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.rf_cavities.Barrier_RFNode.html">Barrier_RFNode</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.space_charge.html">orbit.space_charge</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.space_charge.setSC_General_AccNodes.html">setSC_General_AccNodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.space_charge.setSC_Centered_AccNodes.html">setSC_Centered_AccNodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.space_charge.SC_Base_AccNode.html">SC_Base_AccNode</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.teapot.html">orbit.teapot</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.TEAPOT_Lattice.html">TEAPOT_Lattice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.TEAPOT_Ring.html">TEAPOT_Ring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.BaseTEAPOT.html">BaseTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.DriftTEAPOT.html">DriftTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.BunchWrapTEAPOT.html">BunchWrapTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.BendTEAPOT.html">BendTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.QuadTEAPOT.html">QuadTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.MultipoleTEAPOT.html">MultipoleTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.SolenoidTEAPOT.html">SolenoidTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.KickTEAPOT.html">KickTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.RingRFTEAPOT.html">RingRFTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.FringeFieldTEAPOT.html">FringeFieldTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.TiltTEAPOT.html">TiltTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.NodeTEAPOT.html">NodeTEAPOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot.TEAPOT_MATRIX_Lattice.html">TEAPOT_MATRIX_Lattice</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.teapot_base.html">orbit.teapot_base</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.teapot_base.MatrixGenerator.html">MatrixGenerator</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.time_dep.html">orbit.time_dep</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.time_dep.TIME_DEP_Lattice.html">TIME_DEP_Lattice</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/orbit.utils.html">orbit.utils</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.multiDimDoubleArray.html">multiDimDoubleArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.multiDimIntArray.html">multiDimIntArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.orbitFinalize.html">orbitFinalize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.phaseNearTargetPhase.html">phaseNearTargetPhase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.phaseNearTargetPhaseDeg.html">phaseNearTargetPhaseDeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.NamedObject.html">NamedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.TypedObject.html">TypedObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbit.utils.ParamsDictObject.html">ParamsDictObject</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../modules.html" class="nav-link">Modules</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../modules/orbit.py_linac.html" class="nav-link">orbit.py_linac</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Sequence</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="sequence">
+<h1>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.py_linac.lattice.</span></span><span class="sig-name descname"><span class="pre">Sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'none'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="orbit.utils.NamedObject.html#orbit.utils.NamedObject" title="orbit.utils.NamedObject.NamedObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">orbit.utils.NamedObject.NamedObject</span></code></a>, <a class="reference internal" href="orbit.utils.ParamsDictObject.html#orbit.utils.ParamsDictObject" title="orbit.utils.ParamsDictObject.ParamsDictObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">orbit.utils.ParamsDictObject.ParamsDictObject</span></code></a></p>
+<p>This is the class to keep refernces to AccNodes that constitute the accelerator sequence.</p>
+<p class="rubric">Methods Summary</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.addNode" title="orbit.py_linac.lattice.Sequence.addNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addNode</span></code></a>(node[, index])</p></td>
+<td><p>Adds the Linac Node to the sequence.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.addRF_Cavity" title="orbit.py_linac.lattice.Sequence.addRF_Cavity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addRF_Cavity</span></code></a>(cav)</p></td>
+<td><p>Adds the RF cavity to the list inside this sequence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.getLength" title="orbit.py_linac.lattice.Sequence.getLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLength</span></code></a>()</p></td>
+<td><p>Returns the total length of the sequence [m].</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.getLinacAccLattice" title="orbit.py_linac.lattice.Sequence.getLinacAccLattice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLinacAccLattice</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.getNodes" title="orbit.py_linac.lattice.Sequence.getNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNodes</span></code></a>()</p></td>
+<td><p>Returns the array with Linac Nodes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.getPosition" title="orbit.py_linac.lattice.Sequence.getPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPosition</span></code></a>()</p></td>
+<td><p>Returns the position of the sequence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.getRF_Cavities" title="orbit.py_linac.lattice.Sequence.getRF_Cavities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRF_Cavities</span></code></a>()</p></td>
+<td><p>Returns the array with RF cavities.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.getRF_Cavity" title="orbit.py_linac.lattice.Sequence.getRF_Cavity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRF_Cavity</span></code></a>(name)</p></td>
+<td><p>Returns the cavity instance according to the name</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.removeAllNodes" title="orbit.py_linac.lattice.Sequence.removeAllNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeAllNodes</span></code></a>()</p></td>
+<td><p>Removes all nodes from the sequence.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.reverseOrder" title="orbit.py_linac.lattice.Sequence.reverseOrder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reverseOrder</span></code></a>()</p></td>
+<td><p>Reverse order of nodes and RF cavities in sequence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.setLength" title="orbit.py_linac.lattice.Sequence.setLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLength</span></code></a>(length)</p></td>
+<td><p>Sets the total length of the sequence [m].</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.setLinacAccLattice" title="orbit.py_linac.lattice.Sequence.setLinacAccLattice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLinacAccLattice</span></code></a>(lattice)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.setNodes" title="orbit.py_linac.lattice.Sequence.setNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNodes</span></code></a>(linacNodes)</p></td>
+<td><p>Set a new set of Linac Nodes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.Sequence.setPosition" title="orbit.py_linac.lattice.Sequence.setPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPosition</span></code></a>(pos)</p></td>
+<td><p>Sets the position of the sequence.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.addNode">
+<span class="sig-name descname"><span class="pre">addNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.addNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.addNode" title="Permalink to this definition">#</a></dt>
+<dd><p>Adds the Linac Node to the sequence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.addRF_Cavity">
+<span class="sig-name descname"><span class="pre">addRF_Cavity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cav</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.addRF_Cavity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.addRF_Cavity" title="Permalink to this definition">#</a></dt>
+<dd><p>Adds the RF cavity to the list inside this sequence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.getLength">
+<span class="sig-name descname"><span class="pre">getLength</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.getLength"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.getLength" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the total length of the sequence [m].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.getLinacAccLattice">
+<span class="sig-name descname"><span class="pre">getLinacAccLattice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.getLinacAccLattice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.getLinacAccLattice" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.getNodes">
+<span class="sig-name descname"><span class="pre">getNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.getNodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.getNodes" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the array with Linac Nodes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.getPosition">
+<span class="sig-name descname"><span class="pre">getPosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.getPosition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.getPosition" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the position of the sequence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.getRF_Cavities">
+<span class="sig-name descname"><span class="pre">getRF_Cavities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.getRF_Cavities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.getRF_Cavities" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the array with RF cavities.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.getRF_Cavity">
+<span class="sig-name descname"><span class="pre">getRF_Cavity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.getRF_Cavity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.getRF_Cavity" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the cavity instance according to the name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.removeAllNodes">
+<span class="sig-name descname"><span class="pre">removeAllNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.removeAllNodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.removeAllNodes" title="Permalink to this definition">#</a></dt>
+<dd><p>Removes all nodes from the sequence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.reverseOrder">
+<span class="sig-name descname"><span class="pre">reverseOrder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.reverseOrder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.reverseOrder" title="Permalink to this definition">#</a></dt>
+<dd><p>Reverse order of nodes and RF cavities in sequence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.setLength">
+<span class="sig-name descname"><span class="pre">setLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.setLength"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.setLength" title="Permalink to this definition">#</a></dt>
+<dd><p>Sets the total length of the sequence [m].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.setLinacAccLattice">
+<span class="sig-name descname"><span class="pre">setLinacAccLattice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lattice</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.setLinacAccLattice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.setLinacAccLattice" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.setNodes">
+<span class="sig-name descname"><span class="pre">setNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">linacNodes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.setNodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.setNodes" title="Permalink to this definition">#</a></dt>
+<dd><p>Set a new set of Linac Nodes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.Sequence.setPosition">
+<span class="sig-name descname"><span class="pre">setPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/orbit/py_linac/lattice/LinacAccLatticeLib.html#Sequence.setPosition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.Sequence.setPosition" title="Permalink to this definition">#</a></dt>
+<dd><p>Sets the position of the sequence.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="orbit.py_linac.lattice.RF_Cavity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">RF_Cavity</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="orbit.py_linac.lattice.BaseRF_Gap.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">BaseRF_Gap</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/_api/orbit.py_linac.lattice.Sequence.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

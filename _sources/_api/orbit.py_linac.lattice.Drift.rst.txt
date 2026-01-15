@@ -1,0 +1,17 @@
+Drift
+=====
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: Drift
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Drift.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

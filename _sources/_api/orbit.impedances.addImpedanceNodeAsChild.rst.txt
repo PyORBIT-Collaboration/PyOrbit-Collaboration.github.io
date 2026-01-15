@@ -1,0 +1,6 @@
+addImpedanceNodeAsChild
+=======================
+
+.. currentmodule:: orbit.impedances
+
+.. autofunction:: addImpedanceNodeAsChild

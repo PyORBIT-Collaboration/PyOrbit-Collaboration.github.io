@@ -1,0 +1,53 @@
+AxisFieldRF_Gap
+===============
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: AxisFieldRF_Gap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~AxisFieldRF_Gap.static_test_bunch
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AxisFieldRF_Gap.calculate_first_part_phase
+      ~AxisFieldRF_Gap.getAxisFieldFunction
+      ~AxisFieldRF_Gap.getEzFiled
+      ~AxisFieldRF_Gap.getPhaseVsPositionFuncion
+      ~AxisFieldRF_Gap.getRF_Cavity
+      ~AxisFieldRF_Gap.getZ_Min_Max
+      ~AxisFieldRF_Gap.getZ_Step
+      ~AxisFieldRF_Gap.readAxisFieldFile
+      ~AxisFieldRF_Gap.setAxisFieldFunction
+      ~AxisFieldRF_Gap.setLinacTracker
+      ~AxisFieldRF_Gap.setZ_Min_Max
+      ~AxisFieldRF_Gap.setZ_Step
+      ~AxisFieldRF_Gap.track
+      ~AxisFieldRF_Gap.trackDesign
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: static_test_bunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calculate_first_part_phase
+   .. automethod:: getAxisFieldFunction
+   .. automethod:: getEzFiled
+   .. automethod:: getPhaseVsPositionFuncion
+   .. automethod:: getRF_Cavity
+   .. automethod:: getZ_Min_Max
+   .. automethod:: getZ_Step
+   .. automethod:: readAxisFieldFile
+   .. automethod:: setAxisFieldFunction
+   .. automethod:: setLinacTracker
+   .. automethod:: setZ_Min_Max
+   .. automethod:: setZ_Step
+   .. automethod:: track
+   .. automethod:: trackDesign

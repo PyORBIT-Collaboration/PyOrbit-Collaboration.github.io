@@ -1,0 +1,17 @@
+TeapotSimpleBumpNode
+====================
+
+.. currentmodule:: orbit.bumps
+
+.. autoclass:: TeapotSimpleBumpNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotSimpleBumpNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

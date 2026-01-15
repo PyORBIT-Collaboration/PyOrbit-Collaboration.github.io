@@ -1,0 +1,7 @@
+BaseTEAPOT
+==========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: BaseTEAPOT
+   :show-inheritance:

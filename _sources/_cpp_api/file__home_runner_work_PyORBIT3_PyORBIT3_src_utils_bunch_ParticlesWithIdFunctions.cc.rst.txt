@@ -1,0 +1,88 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc:
+
+File ParticlesWithIdFunctions.cc
+================================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/utils/bunch/ParticlesWithIdFunctions.cc``)
+------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BufferStore.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_BufferStore.hh`)
+
+- ``BunchTwissAnalysis.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_BunchDiagnostics_BunchTwissAnalysis.hh`)
+
+- ``MatrixOperations.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.hh`)
+
+- ``ParticleIdNumber.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleIdNumber.hh`)
+
+- ``ParticleMacroSize.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh`)
+
+- ``ParticlesWithIdFunctions.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.hh`)
+
+- ``algorithm``
+
+- ``orbit_mpi.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh`)
+
+- ``vector``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structOrbitUtils_1_1comparator`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a9204cb94cb26186f7a111765c6c9d1bd`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae36314bfa71f499018ed7cb956b3e125`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a3932d3e12aabfb8fe18e24ded18be8ff`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a998732605bed18a2bb8d14df8a458de3`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ad67231996b3460caf10cb03cbd2c3aa1`
+

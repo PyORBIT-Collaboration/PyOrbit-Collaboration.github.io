@@ -1,0 +1,37 @@
+MADX_Parser
+===========
+
+.. currentmodule:: orbit.parsers
+
+.. autoclass:: MADX_Parser
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MADX_Parser.calculateVariables
+      ~MADX_Parser.collect_madx_lines
+      ~MADX_Parser.getSequenceList
+      ~MADX_Parser.getSequenceName
+      ~MADX_Parser.makeAperture
+      ~MADX_Parser.makeDrift
+      ~MADX_Parser.makeMultiPols
+      ~MADX_Parser.parse
+      ~MADX_Parser.parseElem
+      ~MADX_Parser.parseParameters
+      ~MADX_Parser.recalculateParameters
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calculateVariables
+   .. automethod:: collect_madx_lines
+   .. automethod:: getSequenceList
+   .. automethod:: getSequenceName
+   .. automethod:: makeAperture
+   .. automethod:: makeDrift
+   .. automethod:: makeMultiPols
+   .. automethod:: parse
+   .. automethod:: parseElem
+   .. automethod:: parseParameters
+   .. automethod:: recalculateParameters

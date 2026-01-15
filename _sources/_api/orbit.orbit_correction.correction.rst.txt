@@ -1,0 +1,31 @@
+correction
+==========
+
+.. currentmodule:: orbit.orbit_correction
+
+.. autoclass:: correction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~correction.cos_function
+      ~correction.find_elements
+      ~correction.get_solution_x
+      ~correction.get_solution_y
+      ~correction.get_x
+      ~correction.optimzation_function
+      ~correction.orbit_corr
+      ~correction.sin_function
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: cos_function
+   .. automethod:: find_elements
+   .. automethod:: get_solution_x
+   .. automethod:: get_solution_y
+   .. automethod:: get_x
+   .. automethod:: optimzation_function
+   .. automethod:: orbit_corr
+   .. automethod:: sin_function

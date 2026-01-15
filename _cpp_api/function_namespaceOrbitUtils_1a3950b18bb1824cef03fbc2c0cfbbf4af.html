@@ -1,0 +1,1580 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Function OrbitUtils::bunch_twiss_filtering &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_cpp_api/function_namespaceOrbitUtils_1a3950b18bb1824cef03fbc2c0cfbbf4af';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function OrbitUtils::copyCoordsToInitCoordsAttr" href="function_namespaceOrbitUtils_1acb2b7d42772229b683602a7efe6d14f4.html" />
+    <link rel="prev" title="Function OrbitUtils::bunch_sort_id" href="function_namespaceOrbitUtils_1ae36314bfa71f499018ed7cb956b3e125.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_EllipticalIntegrals.html">Namespace EllipticalIntegrals</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_error_base.html">Namespace error_base</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_linac_tracking.html">Namespace linac_tracking</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_OrbitUtils.html">Namespace OrbitUtils</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_OrbitUtils__StringUtils.html">Namespace OrbitUtils::StringUtils</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_std.html">Namespace std</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_teapot_base.html">Namespace teapot_base</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="namespace_TrackerRK4.html">Namespace TrackerRK4</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structMPI__Status.html">Struct MPI_Status</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structOrbitUtils_1_1comparator.html">Struct comparator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structOrbitUtils_1_1MPstr.html">Struct MPstr</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structOrbitUtils_1_1PWstr.html">Struct PWstr</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structpyORBIT__MPI__Comm.html">Struct pyORBIT_MPI_Comm</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structpyORBIT__MPI__Datatype.html">Struct pyORBIT_MPI_Datatype</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structpyORBIT__MPI__Group.html">Struct pyORBIT_MPI_Group</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structpyORBIT__MPI__Op.html">Struct pyORBIT_MPI_Op</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structpyORBIT__MPI__Request.html">Struct pyORBIT_MPI_Request</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structpyORBIT__MPI__Status.html">Struct pyORBIT_MPI_Status</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="structpyORBIT__Object.html">Struct pyORBIT_Object</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classAperture.html">Class Aperture</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classAtomPopulations.html">Class AtomPopulations</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBarrier__Cav.html">Class Barrier_Cav</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBaseAperture.html">Class BaseAperture</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBaseApertureShape.html">Class BaseApertureShape</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBaseBoundary2D.html">Class BaseBoundary2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBaseRfGap.html">Class BaseRfGap</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBaseRfGap__slow.html">Class BaseRfGap_slow</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBunch.html">Class Bunch</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBunchTuneAnalysis.html">Class BunchTuneAnalysis</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classBunchTwissAnalysis.html">Class BunchTwissAnalysis</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classCircleApertureShape.html">Class CircleApertureShape</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classCollimator.html">Class Collimator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classCompositeApertureShape.html">Class CompositeApertureShape</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classConvexApertureShape.html">Class ConvexApertureShape</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classDual__Harmonic__Cav.html">Class Dual_Harmonic_Cav</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classEllipseApertureShape.html">Class EllipseApertureShape</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classEnergyAperture.html">Class EnergyAperture</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classEvolution.html">Class Evolution</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classExtEffectsContainer.html">Class ExtEffectsContainer</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classFieldTracker.html">Class FieldTracker</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classFoil.html">Class Foil</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classForceSolver2D.html">Class ForceSolver2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classForceSolverFFT2D.html">Class ForceSolverFFT2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classFrequency__Cav.html">Class Frequency_Cav</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classGrid1D.html">Class Grid1D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classGrid2D.html">Class Grid2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classGrid3D.html">Class Grid3D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classHarmonic__Cav.html">Class Harmonic_Cav</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classLImpedance.html">Class LImpedance</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classLostParticleAttributes.html">Class LostParticleAttributes</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classLSpaceChargeCalc.html">Class LSpaceChargeCalc</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classMaterialInteractions.html">Class MaterialInteractions</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classMatrixRfGap.html">Class MatrixRfGap</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitConst.html">Class OrbitConst</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1AttributesBucket.html">Class AttributesBucket</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1BaseFieldSource.html">Class BaseFieldSource</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1BufferStore.html">Class BufferStore</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1BunchExtremaCalculator.html">Class BunchExtremaCalculator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1CppPyWrapper.html">Class CppPyWrapper</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1DipoleFieldSource.html">Class DipoleFieldSource</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1FieldSourceContainer.html">Class FieldSourceContainer</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1Function.html">Class Function</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1GaussLegendreIntegrator.html">Class GaussLegendreIntegrator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1HarmonicData.html">Class HarmonicData</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1LoopFieldSource.html">Class LoopFieldSource</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1MagnetFieldSourceGrid3D.html">Class MagnetFieldSourceGrid3D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1MathPolynomial.html">Class MathPolynomial</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1Matrix.html">Class Matrix</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1MatrixOperations.html">Class MatrixOperations</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1PhaseVector.html">Class PhaseVector</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1Polynomial.html">Class Polynomial</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1PyBaseFieldSource.html">Class PyBaseFieldSource</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1QuadFieldSource.html">Class QuadFieldSource</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1Random.html">Class Random</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1ShiftedFieldSource.html">Class ShiftedFieldSource</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1SplineCH.html">Class SplineCH</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classOrbitUtils_1_1StatMoments2D.html">Class StatMoments2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classpart__time.html">Class part_time</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classParticleAttributes.html">Class ParticleAttributes</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classParticleAttributesFactory.html">Class ParticleAttributesFactory</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classParticleIdNumber.html">Class ParticleIdNumber</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classParticleInitialCoordinates.html">Class ParticleInitialCoordinates</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classParticleMacroSize.html">Class ParticleMacroSize</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classParticlePhaseAttributes.html">Class ParticlePhaseAttributes</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classPhaseAperture.html">Class PhaseAperture</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classPoissonSolver2D.html">Class PoissonSolver2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classPoissonSolver3D.html">Class PoissonSolver3D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classPoissonSolverFFT2D.html">Class PoissonSolverFFT2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classPoissonSolverFFT3D.html">Class PoissonSolverFFT3D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classpq__coordinates.html">Class pq_coordinates</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classPyBaseApertureShape.html">Class PyBaseApertureShape</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classRectangularApertureShape.html">Class RectangularApertureShape</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classRfGapThreePointTTF.html">Class RfGapThreePointTTF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classRfGapThreePointTTF__slow.html">Class RfGapThreePointTTF_slow</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classRfGapTTF.html">Class RfGapTTF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classRfGapTTF__slow.html">Class RfGapTTF_slow</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classShapedBoundary2D.html">Class ShapedBoundary2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSpaceChargeCalc2p5D.html">Class SpaceChargeCalc2p5D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSpaceChargeCalc2p5Drb.html">Class SpaceChargeCalc2p5Drb</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSpaceChargeCalc3D.html">Class SpaceChargeCalc3D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSpaceChargeCalcSliceBySlice2D.html">Class SpaceChargeCalcSliceBySlice2D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSpaceChargeCalcUnifEllipse.html">Class SpaceChargeCalcUnifEllipse</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSpaceChargeForceCalc2p5D.html">Class SpaceChargeForceCalc2p5D</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSuperFishFieldSource.html">Class SuperFishFieldSource</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSynchPartRedefinitionZdE.html">Class SynchPartRedefinitionZdE</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classSyncPart.html">Class SyncPart</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classteapot__base_1_1MatrixGenerator.html">Class MatrixGenerator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classTImpedance.html">Class TImpedance</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classTrackerRK4_1_1ExternalEffects.html">Class ExternalEffects</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classTrackerRK4_1_1PyExternalEffects.html">Class PyExternalEffects</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classTrackerRK4_1_1RungeKuttaTracker.html">Class RungeKuttaTracker</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classTurnNumberAttributes.html">Class TurnNumberAttributes</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classUniformEllipsoidFieldCalculator.html">Class UniformEllipsoidFieldCalculator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="classWaveFunctionAmplitudes.html">Class WaveFunctionAmplitudes</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_elliptint_8hh_1ac2a052b3f9ac6fa4219804788b2e2d41.html">Function EllipticalIntegrals::elle</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_elliptint_8hh_1ad71f6910a986829539803de7746042ca.html">Function EllipticalIntegrals::ellf</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_elliptint_8hh_1acf7e5f10f028c39f66b6d21998612296.html">Function EllipticalIntegrals::ellpi</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_elliptint_8hh_1a838b523c4492eac8c53e4905ac35d7b5.html">Function EllipticalIntegrals::rc</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_elliptint_8hh_1a03a8a39a30aba152230d99fe4f4fd69d.html">Function EllipticalIntegrals::rd</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_elliptint_8hh_1a99a9bced61d800fb982c6a9efead160f.html">Function EllipticalIntegrals::rf</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_elliptint_8hh_1addbc57a0f1054e5768de2b1e6c09c450.html">Function EllipticalIntegrals::rj</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a97269f6cefebd0d92e49e20232e869e2.html">Function error_base::BendDisplacementLF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1ab0eca1172dedbb5337aedd015a1056a2.html">Function error_base::BendDisplacementLI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a4950ae88470c0496f9781b870a8ffb46.html">Function error_base::BendDisplacementXF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1afc04d3f12d53a9cc10ad0dee7ccd0018.html">Function error_base::BendDisplacementXI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1abd6f63f09ed87945faa72388702e494f.html">Function error_base::BendDisplacementYF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a67c29be1d225a6cf25fd1ee75cd892c7.html">Function error_base::BendDisplacementYI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1acca0521935947cc91011d49a7badaff8.html">Function error_base::BendFieldF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a6e420436bc36e028c69395d5b2e39cf8.html">Function error_base::BendFieldI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a7f13cace07a0c11b37d6ea29cac8ef58.html">Function error_base::CoordDisplacement</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1abd45e65aa572546db1c43af7073ce218.html">Function error_base::DipoleKickerOsc</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8hh_1ad187b828ef3cd35ea22e319824529179.html">Function error_base::drifti</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1ad66d48303e1dbdcaf31d636b3b042fc8.html">Function error_base::LongDisplacement</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a779d47e41453b1530add4e7b44c5d2ae.html">Function error_base::QuadKicker</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a3540527c3ad953cbaa7cd7579b485709.html">Function error_base::QuadKickerOsc</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a9d2ed07b15fc862003a387acbc63cbc9.html">Function error_base::RotationF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1aa225350f2e51ecf71fa86943ee65884b.html">Function error_base::RotationI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a41baffa7964b8d49917b3894e5fbcbb8.html">Function error_base::StraightRotationXSF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a6e240d3a5c2acfdbf1e99573ea9d5478.html">Function error_base::StraightRotationXSI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1ad7f36dc4ade2aa2acf1ed97d8d5a26e6.html">Function error_base::StraightRotationXY</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1a5950c0f3947020e0ebd7f77e8e23e43f.html">Function error_base::StraightRotationYSF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_errorbase_8cc_1af936a60bfc11019c883bd9eb61e24870.html">Function error_base::StraightRotationYSI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_linac__tracking_8cc_1a165318874eebef205c2e5b05125164c8.html">Function linac_tracking::kick</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_linac__tracking_8cc_1a48186f6e4346b8fc54b8f84045d37a81.html">Function linac_tracking::linac_drift</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_linac__tracking_8cc_1ad6212e73cef0fbdce186fa04ec96b8f9.html">Function linac_tracking::linac_quad1</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_linac__tracking_8cc_1aeec1a8e3a9ceacd9477bc1b8cb1da9cc.html">Function linac_tracking::linac_quad2</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_linac__tracking_8cc_1a07e3c98eecf5fbba9f082f67341c451e.html">Function linac_tracking::linac_quad3</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a88d8a4fe5021ee59b3291d29d7a998c9.html">Function ORBIT_MPI_Allreduce</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1ac45117960db64985a092d67515d24813.html">Function ORBIT_MPI_Barrier</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a0ff4ad0ab8d5efdc288d4b9a6c3a7827.html">Function ORBIT_MPI_Bcast</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a8d4cb78769527d6c0f85fea324040d62.html">Function ORBIT_MPI_Comm_compare</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1aeb3ba3e444668f7e4b7bdfecdac2cc9a.html">Function ORBIT_MPI_Comm_create</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a5da1eff2a57d8c26c27153ee40acb269.html">Function ORBIT_MPI_Comm_dup</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a24b2c84f43a02cf8a83734f1cad96eab.html">Function ORBIT_MPI_Comm_free</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a4633fe24c0b4df3e6c0390b5ea78436f.html">Function ORBIT_MPI_Comm_get_name</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a0cd2809887629b17e813a41d5637f46e.html">Function ORBIT_MPI_Comm_group</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1acee13a335d51e30afad0eaf87f4faa2e.html">Function ORBIT_MPI_Comm_rank</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1afa2f2beac5e6f10fe42add29885436f2.html">Function ORBIT_MPI_Comm_remote_group</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a12472e2e9e641a1a3ab75f1c0f0d98b5.html">Function ORBIT_MPI_Comm_remote_size</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a25ea95f790fc2adc653044da1e291657.html">Function ORBIT_MPI_Comm_set_name</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a1160df73bb83ccc37f490208e50e92e6.html">Function ORBIT_MPI_Comm_size</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a19791236f2490ea410657d944f47560e.html">Function ORBIT_MPI_Comm_split</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a2709cb3c7623065c9acfd44790b062fc.html">Function ORBIT_MPI_Comm_test_inter</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1aeaa6bbc00b8a3fdf5a1cb0767600d3dd.html">Function ORBIT_MPI_Finalize()</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a88a4f8f4bc43a7b01a4ce981a9a2f435.html">Function ORBIT_MPI_Finalize(const char *)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1acf1bbe8fdfb1fa4c23645f8ccc6f8026.html">Function ORBIT_MPI_Get_count</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1aa4fcf9825e805fb725fa38ba35113a7e.html">Function ORBIT_MPI_Get_processor_name</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a5508fbd2e5b32cdde7d0d232317e97b2.html">Function ORBIT_MPI_Graph_create</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a3c20bb439a44f86ddc3cd5e9f63eefaa.html">Function ORBIT_MPI_Graph_get</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a3ff8961d7aca957ec82e85447a9c30f2.html">Function ORBIT_MPI_Graph_map</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a73ee1378bb73daf36a24ffe94ae4ef12.html">Function ORBIT_MPI_Graph_neighbors</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1ab78c3386b01313fb71d58ec07699267c.html">Function ORBIT_MPI_Graph_neighbors_count</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a91c287f82a160b6e18b5ac4f2edac7ae.html">Function ORBIT_MPI_Graphdims_get</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a539e4fc99d1ef260b37d73ef72d9f5bd.html">Function ORBIT_MPI_Group_compare</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a77a0a0d56a41d6dc4679645a71e11fd5.html">Function ORBIT_MPI_Group_difference</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1aba90a8fcfd01300ea15ec8a43b608f3f.html">Function ORBIT_MPI_Group_excl</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a099a3d089816f1f44625d691019a0dfc.html">Function ORBIT_MPI_Group_free</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1aaac208bcc5acdc37622a7cd560ae8257.html">Function ORBIT_MPI_Group_incl</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a1aafb4de63ecba901a5165b691ec22e0.html">Function ORBIT_MPI_Group_intersection</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1ad5a84a819abc3c879fb6d4af83f0105d.html">Function ORBIT_MPI_Group_rank</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a204b2bc58c2a28f72981ad3011cd9068.html">Function ORBIT_MPI_Group_size</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1ad70408c50a717dfa0ced89a6c810c7cb.html">Function ORBIT_MPI_Group_translate_ranks</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a2435e69f420b9246fde091766aba98ba.html">Function ORBIT_MPI_Group_union</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1ac04b00a2e3d21ffbe1c7234ab8d77eff.html">Function ORBIT_MPI_Init</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a75a6dc3bc80a654fa1b99d83e1b07839.html">Function ORBIT_MPI_Initialized</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a9f77cd15ada44eafd62d76567488687e.html">Function ORBIT_MPI_Intercomm_create</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a25968225622e66c44289f714976dfed1.html">Function ORBIT_MPI_Intercomm_merge</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a9d371e7171aa7bd02028a9ab7bceca82.html">Function ORBIT_MPI_Probe</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a76986332d61c51b094ab9afa99076029.html">Function ORBIT_MPI_Recv</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1acf248df6f3ab815a6335ee1169798036.html">Function ORBIT_MPI_Send</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a60acfc2f8766268f7de7c647a9ed9d43.html">Function ORBIT_MPI_Wait</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1a74872f6ada77717c6200fbf4b5c0247e.html">Function ORBIT_MPI_Wtick</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_orbit__mpi_8hh_1abf88136dfa2327dd6cf1de0fe59ae7bd.html">Function ORBIT_MPI_Wtime</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a9204cb94cb26186f7a111765c6c9d1bd.html">Function OrbitUtils::apply_twiss_weights</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1accbbe9115b59d58b32656e82b169f159.html">Function OrbitUtils::apply_twiss_weights_for_init_coords</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ab089b0676c18680ac1777434913269f4.html">Function OrbitUtils::bessi</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1aa3e92e722df603d7717510fd04bf0445.html">Function OrbitUtils::bessi0</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a207296a439bcdddd09ca736d0ac9f44d.html">Function OrbitUtils::bessi1</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a65771e77d0af1cf77d571f890e84cb48.html">Function OrbitUtils::bessj</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ae7f531c757562dd654585fb61e30b7ea.html">Function OrbitUtils::bessj0(float)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ab2103d120b62ed602171dd38455a5d4b.html">Function OrbitUtils::bessj0(double)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ad577346f5bb31a2d8ad5cb49a9b1ce13.html">Function OrbitUtils::bessj1(float)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a3661bebe8c02a453de43514bfacb5366.html">Function OrbitUtils::bessj1(double)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1acb65701eb91467186e12ef06be59cd0c.html">Function OrbitUtils::BSign</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ae36314bfa71f499018ed7cb956b3e125.html">Function OrbitUtils::bunch_sort_id</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Function OrbitUtils::bunch_twiss_filtering</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1acb2b7d42772229b683602a7efe6d14f4.html">Function OrbitUtils::copyCoordsToInitCoordsAttr</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a950769b4735e0bddabdb7d5302255b32.html">Function OrbitUtils::fstep</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ac8f9ebb8a2f977f687a7345dd6f83719.html">Function OrbitUtils::gauss_legendre_generator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ae37ff2ff17879651bc374aa5583b64d5.html">Function OrbitUtils::get_a</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a0c8d7d5bcd2b2537f47848febb410f89.html">Function OrbitUtils::get_elastic_crosssection</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ab254309b7520ca41d6bd1991a79b6a05.html">Function OrbitUtils::get_inelastic_crosssection</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a0eaaec4745f0a27996e5a726969406da.html">Function OrbitUtils::get_radlength</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ac55f0a408bfb206a234d1d21050d51ab.html">Function OrbitUtils::get_rho</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ab6949ab23abd2d6f99a162a097eab8c0.html">Function OrbitUtils::get_z</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a981fd4f32c2c2b592bb8af1fe9965bf9.html">Function OrbitUtils::qsimp</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a6e6b87592d124ec0f4ee623a9b1387d9.html">Function OrbitUtils::rfunc</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a928f80ceb953402a05ad68e92478f525.html">Function OrbitUtils::rtbis</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_StringUtils_8hh_1a9e580b3a07bcd4326d3a46c23a64a6f0.html">Function OrbitUtils::StringUtils::Tokenize</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1ae1fd5981372c042ab5b7de7d4e4871af.html">Function OrbitUtils::swapInitCoordsAttrAndCoords</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a998732605bed18a2bb8d14df8a458de3.html">Function OrbitUtils::transport_mtrx(Bunch *, Bunch *, Matrix *)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a3932d3e12aabfb8fe18e24ded18be8ff.html">Function OrbitUtils::transport_mtrx(Bunch *, Bunch *, Matrix *, int, int, int)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a77888a0d2b60230d24ba8e97b90e889e.html">Function OrbitUtils::transport_mtrx_from_init_coords(Bunch *, Matrix *)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a8fb9313b89a6178a6d8cea688c9e0615.html">Function OrbitUtils::transport_mtrx_from_init_coords(Bunch *, Matrix *, int, int, int)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1a469ff4771262fad962cd76ad0eeed952.html">Function OrbitUtils::trapzd</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceOrbitUtils_1af9d954077516cb7db390ce9d2335a6fd.html">Function OrbitUtils::zbrak</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1adffb68e851f6ec1da7f7adc830ecf5f8.html">Function teapot_base::bend1</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a1c4d21e2e63e3d9ea646177e6657c27c.html">Function teapot_base::bend2</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a1065133200c0978c81c7e22b8d7b550d.html">Function teapot_base::bend3</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1ac5e3c321ee8c5b2048219038747684e7.html">Function teapot_base::bend4</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a0de934fef29a74410af91fe649c7aa12.html">Function teapot_base::bendfringeIN</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a663553aef54c825752910f35d740fb5c.html">Function teapot_base::bendfringeOUT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a072b36a64d9eefa246e2283fb1ba839e.html">Function teapot_base::delete_factorial</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1ae142ba1424b5fe090d4526b868da176d.html">Function teapot_base::drift</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a034cd56a494ee81df10e7f812969a1cd.html">Function teapot_base::drifti</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a53760d5cd0cd3adef36f4dea04245045.html">Function teapot_base::init_factorial</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1ad44a218d06d340b4e42757a18da4416b.html">Function teapot_base::kick</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a01513544310ee9bed268f9dd85b2e307.html">Function teapot_base::multp</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a2d159a9e6f3e171f80065dc9d6e968b4.html">Function teapot_base::multpfringeIN</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a4eb75f6d37c06684f79dc20d0c89b04d.html">Function teapot_base::multpfringeOUT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a6a12035ca87514a88e0ff4f52fd503dc.html">Function teapot_base::multpi</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1aee5650aa9a4a234a02cde152ba4b7c34.html">Function teapot_base::quad1</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1af51e7636ca7cbf6878028cbc2986bc54.html">Function teapot_base::quad2</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a2de4b93b136aef367df2206c1cdb1a22.html">Function teapot_base::quad3</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1aac3a48131d705393478219b4d653f767.html">Function teapot_base::quadfringeIN</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1aebbd433526f355f037da16cad128862e.html">Function teapot_base::quadfringeOUT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a5a295ede9c71b93ef92aa727b24b967a.html">Function teapot_base::RingRF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a92949b38fe1cbbf28cde756d5fc2fd08.html">Function teapot_base::rotatexy</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a114828c580fdd26ac6b3ee3006ee2381.html">Function teapot_base::soln</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a1469ee3d933eaa77ff986d3bf5d7dcb3.html">Function teapot_base::wedgebend</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1afbea7f579de306c51d2be871edba8cbf.html">Function teapot_base::wedgebendCF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1ae275e5ddad486f95d9d3ed001b6b1177.html">Function teapot_base::wedgedrift</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1ada8272dfbece7c79de417f326cf5cc5d.html">Function teapot_base::wedgerotate</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="function_teapotbase_8cc_1a9d938e2d44727838dc7777ad35d18501.html">Function teapot_base::wrapbunch</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a21f7ff35677227691754da99f825a602.html">Variable OrbitUtils::aluminum</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a2c9f50b688a2958a32948ba7fe552dc9.html">Variable OrbitUtils::carbon</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a28b4ac019402842ae8f606a6cdbc8a04.html">Variable OrbitUtils::copper</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a959ba4f71607b2be8dc9ad2dc380e13f.html">Variable OrbitUtils::energy</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a072af0745f0ef74fbfd4b77be4428d22.html">Variable OrbitUtils::iron</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ac440342922a616f1614a7558b1371796.html">Variable OrbitUtils::lead</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ad67231996b3460caf10cb03cbd2c3aa1.html">Variable OrbitUtils::mycomparator</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a6531414f8c5060641d76f870b906e6a8.html">Variable OrbitUtils::platinum</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a752f52f3fc93b7d76e418dfe4442c771.html">Variable OrbitUtils::pws</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a7f6fd44e36129627f3b6891e25ed50b5.html">Variable OrbitUtils::tantalum</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ab217f36d76df79c54df1ab94a462051c.html">Variable OrbitUtils::tungstun</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1acf8a6dcde0b278b8672f2b4a71ecf6d4.html">Variable OrbitUtils::w1024</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a7a7830aab41b82592607deb67c16eadc.html">Variable OrbitUtils::w128</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a48015105d601f68640cffab24561a233.html">Variable OrbitUtils::w16</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1afb364436fc81370dd51195fbca57db2e.html">Variable OrbitUtils::w2</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1addb19f250f118a0ab579d06ec5724331.html">Variable OrbitUtils::w256</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a1ba2132cf5ad7e9ae2164f526b3ba521.html">Variable OrbitUtils::w32</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a2f87656aa61e5104dc6ab909f35e3faa.html">Variable OrbitUtils::w4</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1aef35dbe58fe0fa64f9c061bb62fe31bc.html">Variable OrbitUtils::w512</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a4fc259255fb0805fde9e9700c78ade17.html">Variable OrbitUtils::w64</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a6d7d8a441331107e59a736bcbb771036.html">Variable OrbitUtils::w8</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ab16657f2b42531ef220b9cd18fbf337d.html">Variable OrbitUtils::z1024</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ac02cbcc19a8ede62ce862269d6fe8411.html">Variable OrbitUtils::z128</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a440f511ebd475c1cb39fc59f98daa636.html">Variable OrbitUtils::z13_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a2828a114b8b7d0ffb0e49778373f0a22.html">Variable OrbitUtils::z13_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ab868ba2717e463c3d799a036a707a991.html">Variable OrbitUtils::z16</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a594432f177a1c11bc0bc79bb90b16c8d.html">Variable OrbitUtils::z2</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1aa16bb0be1777311b6d09004d13c656ca.html">Variable OrbitUtils::z256</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ac78975b86a19c97e2c07958fe98eda1b.html">Variable OrbitUtils::z26_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a7fe9e8b790b3864634debbcb67e824d6.html">Variable OrbitUtils::z26_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a33059d62d2818898be74ad7a656c5a84.html">Variable OrbitUtils::z29_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a9f71e8ac48281847db488822187e3ad6.html">Variable OrbitUtils::z29_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a8b4054d106ac41cb446fceaa683bc549.html">Variable OrbitUtils::z32</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a71f697901c07e79889de37e77dc7e33c.html">Variable OrbitUtils::z4</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a50a2f9aabb30d8d8a176917d7b1643c6.html">Variable OrbitUtils::z512</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1afc615982a1ed88169a2a61e4117522e6.html">Variable OrbitUtils::z64</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a1a13e9cc5abb11ea1557a3abc16fa11e.html">Variable OrbitUtils::z6_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1acb8a3dbff1ff92ca7ff8e39cd87b20e9.html">Variable OrbitUtils::z6_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a8bab1fa05170095349f98e9f4885ace4.html">Variable OrbitUtils::z73_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a2ec4dfae351e7f95b609c8df6249a72c.html">Variable OrbitUtils::z73_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a467b1f3514f1a8a4b5a71deb421edf9c.html">Variable OrbitUtils::z74_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1ad68d3af9bf8ba53df7e72be49936dee0.html">Variable OrbitUtils::z74_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a21a98c4ffda7bfcae5d0882f6ced2820.html">Variable OrbitUtils::z78_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a719403b91510ae60f8c0a4885196155f.html">Variable OrbitUtils::z78_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1af6be551e3379dd57bb57627eaa896e48.html">Variable OrbitUtils::z8</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a158b7c759c7dc7e57af5ef9adab43051.html">Variable OrbitUtils::z82_elastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_namespaceOrbitUtils_1a58d6a894b5a3cfa1f13b769b927a6048.html">Variable OrbitUtils::z82_inelastic</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="variable_teapotbase_8cc_1a9579decd560524f21dc10e6f08464832.html">Variable teapot_base::factorial</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aad01846ca8da972658f74b9affe1d5e8.html">Define MPI_ANY_SOURCE</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a89445dffa33bb6aea4d49bab508a3d30.html">Define MPI_ANY_TAG</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a4b2be9d70c247bb3d0fa2d68310135ad.html">Define MPI_BAND</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1af225a70708fa59537d0a2e0e7cc951af.html">Define MPI_BOR</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1ab2ec6e9369bfb9920e01ae1deb67b14a.html">Define MPI_BXOR</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a5b3d59a5aa038a03f5fee91c426476b9.html">Define MPI_BYTE</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1afeb16fd9ffcb668470d46e24fef55080.html">Define MPI_CART</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1ac521acab90e22ecd11466d7229986673.html">Define MPI_CHAR</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a117133520e81a669c853602ac650d9d4.html">Define MPI_COMM_NULL</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a5dcc99c598f5bd6968077f68dea4376e.html">Define MPI_COMM_SELF</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a2df6a15627583d5e6f5a48550644cbef.html">Define MPI_COMM_WORLD</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a4089fa2007bede1c392241cb3a5bd5ba.html">Define MPI_CONGRUENT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a248e55efe62ab7ba021822dbe63e2cf2.html">Define MPI_DATATYPE_NULL</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aafd1dc0086079e7904385538c54c9c8f.html">Define MPI_DOUBLE</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a44a340eb7b7f8ee6027b48098fa727b9.html">Define MPI_FLOAT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a3b8766607a0e4f2d4dd41d5fddcebcde.html">Define MPI_GRAPH</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a70e1d8fc4527571226fa92031a4843a6.html">Define MPI_GROUP_EMPTY</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a95a656541f84f112f0f3b2852ccbc362.html">Define MPI_GROUP_NULL</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a6beca620f3741bc6c31a36c45828fcd8.html">Define MPI_IDENT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a43ed7cd86d20f84db849adc64a09415e.html">Define MPI_INT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aad5d3a42ed21a43374f28a92f5706411.html">Define MPI_LAND</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1ab5b220f368fa90f52cb17dba5ea26e52.html">Define MPI_LONG</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1ae859d7201ac7d6b421dbfa08ba60e7b4.html">Define MPI_LONG_DOUBLE</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1abaf437ee14a6510e13cb47f5c63bbbf7.html">Define MPI_LONG_LONG_INT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a89f60bee88d8a8d4df7741623ea58ae1.html">Define MPI_LOR</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a9298cd22fbf7f2ff37909bc0008772b1.html">Define MPI_LXOR</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a80d80987b473f4a13b0cc0384eddb51b.html">Define MPI_MAX</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aecbc3eab345ce4eceaadf5111f4847f8.html">Define MPI_MAX_ERROR_STRING</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a478ad5d8921456a83559ac35ce1a3b59.html">Define MPI_MAX_NAME_STRING</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a32c2e019a42e9bfc9db6f8d9cf6adb4e.html">Define MPI_MAX_PROCESSOR_NAME</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a69e01ede130e069f6460d279191284e9.html">Define MPI_MAXLOC</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aa2fecfa16d35e8fa3894c512a527b73f.html">Define MPI_MIN</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a8fa941be0ff7c437ef4b6ba63f530f38.html">Define MPI_MINLOC</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a703581dc23026866f846404ea26b8931.html">Define MPI_OP_NULL</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a19e82b93bc42cbd336f522625e93ceb4.html">Define MPI_PROD</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a9e474e5dd7d7e4b3461ba8effc8019f8.html">Define MPI_SHORT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aa64ade05a9862b36dd04816c2701d112.html">Define MPI_SIMILAR</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a004dd3ebf764c8c42e600ae5513e4dbc.html">Define MPI_SUCCESS</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aa058ba472f0fd41ae860caeaebca0166.html">Define MPI_SUM</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1aff6b3ceb2c22396e5eab7f509b3da0dc.html">Define MPI_UNDEFINED</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a93e78a1b82329d0439dfd0668ddb39e4.html">Define MPI_UNDEFINED_RANK</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a89b88391b03a73c2ca5eaeb926b8d1cc.html">Define MPI_UNEQUAL</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1ac87ab272940388b59dfd01d5cdfff90a.html">Define MPI_UNSIGNED</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a8a26b50ce81c5d801ee83a9ab4d2d32f.html">Define MPI_UNSIGNED_CHAR</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a9b2b3fcdfe74a7a8b6d98a14d92a4b43.html">Define MPI_UNSIGNED_LONG</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1acdbf7a6bf241b33828d6d38aac098c0f.html">Define MPI_UNSIGNED_SHORT</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="define_orbit__mpi_8hh_1a3869d282031f6ea6b50fdb980b758420.html">Define USE_MPI</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_orbit__mpi_8hh_1a68c509d4adb3f4a1d6fe3a9b0b87c7b9.html">Typedef MPI_Comm</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_orbit__mpi_8hh_1affc17fe964f9f670fb06e09d6134b4ff.html">Typedef MPI_Datatype</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_orbit__mpi_8hh_1a2e7770334e9e65834ce3c95dd0c3a50f.html">Typedef MPI_Group</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_orbit__mpi_8hh_1a1e6360539c256e76b432da612d0ec399.html">Typedef MPI_Op</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_orbit__mpi_8hh_1a240e9d13a157e03c75e42306b13cd8d8.html">Typedef MPI_Request</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_namespaceOrbitUtils_1a51860e125117c86ad602efb3387f506a.html">Typedef OrbitUtils::MP</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_namespaceOrbitUtils_1a51ce68d2f5715775558e6ab7e293839d.html">Typedef OrbitUtils::PW</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="typedef_tcomplex_8hh_1a91ac0595d17b81fd85aba8ee4b786bf5.html">Typedef tcomplex</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="pyorbit_root.html" class="nav-link">C++ API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Function OrbitUtils::bunch_twiss_filtering</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="function-orbitutils-bunch-twiss-filtering">
+<span id="exhale-function-namespaceorbitutils-1a3950b18bb1824cef03fbc2c0cfbbf4af"></span><h1>Function OrbitUtils::bunch_twiss_filtering<a class="headerlink" href="#function-orbitutils-bunch-twiss-filtering" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_TwissFilteringFunctions.cc.html#file-home-runner-work-pyorbit3-pyorbit3-src-utils-bunch-twissfilteringfunctions-cc"><span class="std std-ref">File TwissFilteringFunctions.cc</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10OrbitUtils21bunch_twiss_filteringEP5BunchP5Bunchddd">
+<span id="_CPPv3N10OrbitUtils21bunch_twiss_filteringEP5BunchP5Bunchddd"></span><span id="_CPPv2N10OrbitUtils21bunch_twiss_filteringEP5BunchP5Bunchddd"></span><span id="OrbitUtils::bunch_twiss_filtering__BunchP.BunchP.double.double.double"></span><span class="target" id="namespaceOrbitUtils_1a3950b18bb1824cef03fbc2c0cfbbf4af"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">bunch_twiss_filtering</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classBunch.html#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch_in</span></span>, <a class="reference internal" href="classBunch.html#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch_bad</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">coeff_x</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">coeff_y</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">coeff_z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10OrbitUtils21bunch_twiss_filteringEP5BunchP5Bunchddd" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><a class="reference internal" href="classBunch.html#classBunch"><span class="std std-ref">Bunch</span></a> filtering according to the Twiss parameters. bunch_in is the input bunch, and bunch_bad collects the macro-particles that are exluded from the initial bunch. The coefficients are from 0 to infinity and define the limit for the ratio (gamma*x^2+2*alpha*x*xp+beta*xp^2)/(2*emittance) The function returns the total number of removed particles. </p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="function_namespaceOrbitUtils_1ae36314bfa71f499018ed7cb956b3e125.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Function OrbitUtils::bunch_sort_id</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="function_namespaceOrbitUtils_1acb2b7d42772229b683602a7efe6d14f4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Function OrbitUtils::copyCoordsToInitCoordsAttr</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-documentation">Function Documentation</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/_cpp_api/function_namespaceOrbitUtils_1a3950b18bb1824cef03fbc2c0cfbbf4af.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+LinacPhaseApertureNode
+======================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacPhaseApertureNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacPhaseApertureNode.getMinMaxPhase
+      ~LinacPhaseApertureNode.getNumberOfLostParticles
+      ~LinacPhaseApertureNode.getRfFrequency
+      ~LinacPhaseApertureNode.setMinMaxPhase
+      ~LinacPhaseApertureNode.setPosition
+      ~LinacPhaseApertureNode.setRfFrequency
+      ~LinacPhaseApertureNode.track
+      ~LinacPhaseApertureNode.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getMinMaxPhase
+   .. automethod:: getNumberOfLostParticles
+   .. automethod:: getRfFrequency
+   .. automethod:: setMinMaxPhase
+   .. automethod:: setPosition
+   .. automethod:: setRfFrequency
+   .. automethod:: track
+   .. automethod:: trackDesign

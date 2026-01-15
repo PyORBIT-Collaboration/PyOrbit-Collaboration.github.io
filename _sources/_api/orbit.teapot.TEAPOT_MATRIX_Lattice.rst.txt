@@ -1,0 +1,43 @@
+TEAPOT_MATRIX_Lattice
+=====================
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: TEAPOT_MATRIX_Lattice
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TEAPOT_MATRIX_Lattice.getChromaticitiesXY
+      ~TEAPOT_MATRIX_Lattice.getKinEnergy
+      ~TEAPOT_MATRIX_Lattice.getRingDispersionDataX
+      ~TEAPOT_MATRIX_Lattice.getRingDispersionDataY
+      ~TEAPOT_MATRIX_Lattice.getRingMatrix
+      ~TEAPOT_MATRIX_Lattice.getRingOrbit
+      ~TEAPOT_MATRIX_Lattice.getRingParametersDict
+      ~TEAPOT_MATRIX_Lattice.getRingTwissDataX
+      ~TEAPOT_MATRIX_Lattice.getRingTwissDataY
+      ~TEAPOT_MATRIX_Lattice.getTransferDispersionDataX
+      ~TEAPOT_MATRIX_Lattice.getTransferDispersionDataY
+      ~TEAPOT_MATRIX_Lattice.getTransferTwissDataX
+      ~TEAPOT_MATRIX_Lattice.getTransferTwissDataY
+      ~TEAPOT_MATRIX_Lattice.rebuild
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getChromaticitiesXY
+   .. automethod:: getKinEnergy
+   .. automethod:: getRingDispersionDataX
+   .. automethod:: getRingDispersionDataY
+   .. automethod:: getRingMatrix
+   .. automethod:: getRingOrbit
+   .. automethod:: getRingParametersDict
+   .. automethod:: getRingTwissDataX
+   .. automethod:: getRingTwissDataY
+   .. automethod:: getTransferDispersionDataX
+   .. automethod:: getTransferDispersionDataY
+   .. automethod:: getTransferTwissDataX
+   .. automethod:: getTransferTwissDataY
+   .. automethod:: rebuild

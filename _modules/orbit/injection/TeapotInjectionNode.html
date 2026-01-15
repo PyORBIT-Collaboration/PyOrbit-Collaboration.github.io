@@ -29,6 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists/css/tree_view.css" />
   
@@ -150,7 +151,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -266,7 +267,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -384,28 +385,28 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">InjectParts</span>
 
 
-<div class="viewcode-block" id="TeapotInjectionNode"><a class="viewcode-back" href="../../../_autosummary/orbit.injection.TeapotInjectionNode.html#orbit.injection.TeapotInjectionNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotInjectionNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotInjectionNode"><a class="viewcode-back" href="../../../_api/orbit.injection.TeapotInjectionNode.html#orbit.injection.TeapotInjectionNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotInjectionNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The injection node class for TEAPOT lattice</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TeapotInjectionNode.__init__"><a class="viewcode-back" href="../../../_autosummary/orbit.injection.TeapotInjectionNode.html#orbit.injection.TeapotInjectionNode.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nparts</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">,</span> <span class="n">foilparams</span><span class="p">,</span> <span class="n">xDistFunc</span><span class="p">,</span> <span class="n">yDistFunc</span><span class="p">,</span> <span class="n">lDistFun</span><span class="p">,</span> <span class="n">nmaxmacroparticles</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;injection&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nparts</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">,</span> <span class="n">foilparams</span><span class="p">,</span> <span class="n">xDistFunc</span><span class="p">,</span> <span class="n">yDistFunc</span><span class="p">,</span> <span class="n">lDistFun</span><span class="p">,</span> <span class="n">nmaxmacroparticles</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;injection&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Constructor. Creates the Injection TEAPOT element.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">injectparts</span> <span class="o">=</span> <span class="n">InjectParts</span><span class="p">(</span><span class="n">nparts</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">,</span> <span class="n">foilparams</span><span class="p">,</span> <span class="n">xDistFunc</span><span class="p">,</span> <span class="n">yDistFunc</span><span class="p">,</span> <span class="n">lDistFun</span><span class="p">,</span> <span class="n">nmaxmacroparticles</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;Injection&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotInjectionNode.track"><a class="viewcode-back" href="../../../_api/orbit.injection.TeapotInjectionNode.html#orbit.injection.TeapotInjectionNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The injection-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">injectparts</span><span class="o">.</span><span class="n">addParticles</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">injectparts</span><span class="o">.</span><span class="n">addParticles</span><span class="p">()</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setnparts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nparts</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">injectparts</span><span class="o">.</span><span class="n">setnparts</span><span class="p">(</span><span class="n">nparts</span><span class="p">)</span></div>
+<div class="viewcode-block" id="TeapotInjectionNode.setnparts"><a class="viewcode-back" href="../../../_api/orbit.injection.TeapotInjectionNode.html#orbit.injection.TeapotInjectionNode.setnparts">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setnparts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nparts</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">injectparts</span><span class="o">.</span><span class="n">setnparts</span><span class="p">(</span><span class="n">nparts</span><span class="p">)</span></div></div>
 </pre></div>
 
                 </article>

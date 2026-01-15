@@ -1,0 +1,17 @@
+JPARC_LinacLatticeFactory
+=========================
+
+.. currentmodule:: orbit.py_linac.linac_parsers
+
+.. autoclass:: JPARC_LinacLatticeFactory
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~JPARC_LinacLatticeFactory.filterSequences_and_OptionalCheck
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: filterSequences_and_OptionalCheck

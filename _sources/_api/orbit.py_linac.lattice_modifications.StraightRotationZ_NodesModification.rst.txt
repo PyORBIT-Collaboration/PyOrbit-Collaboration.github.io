@@ -1,0 +1,23 @@
+StraightRotationZ_NodesModification
+===================================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autoclass:: StraightRotationZ_NodesModification
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~StraightRotationZ_NodesModification.getRotationAngle
+      ~StraightRotationZ_NodesModification.setGaussDistributedAngle
+      ~StraightRotationZ_NodesModification.setRotationAngle
+      ~StraightRotationZ_NodesModification.updateErrorParameters
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getRotationAngle
+   .. automethod:: setGaussDistributedAngle
+   .. automethod:: setRotationAngle
+   .. automethod:: updateErrorParameters

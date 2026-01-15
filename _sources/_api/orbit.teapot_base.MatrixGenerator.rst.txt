@@ -1,0 +1,27 @@
+MatrixGenerator
+===============
+
+.. currentmodule:: orbit.teapot_base
+
+.. autoclass:: MatrixGenerator
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MatrixGenerator.calcChromCoeff
+      ~MatrixGenerator.calculateMatrix
+      ~MatrixGenerator.getStep
+      ~MatrixGenerator.initBunch
+      ~MatrixGenerator.initBunchChromCoeff
+      ~MatrixGenerator.setStep
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calcChromCoeff
+   .. automethod:: calculateMatrix
+   .. automethod:: getStep
+   .. automethod:: initBunch
+   .. automethod:: initBunchChromCoeff
+   .. automethod:: setStep

@@ -1,0 +1,49 @@
+LinacAccLattice
+===============
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacAccLattice
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacAccLattice.addSequence
+      ~LinacAccLattice.getNodeForPosition
+      ~LinacAccLattice.getNodesOfClass
+      ~LinacAccLattice.getNodesOfClasses
+      ~LinacAccLattice.getQuads
+      ~LinacAccLattice.getRF_Cavities
+      ~LinacAccLattice.getRF_Cavity
+      ~LinacAccLattice.getRF_Gaps
+      ~LinacAccLattice.getSequence
+      ~LinacAccLattice.getSequences
+      ~LinacAccLattice.getSubLattice
+      ~LinacAccLattice.initialize
+      ~LinacAccLattice.reverseOrder
+      ~LinacAccLattice.setLinacTracker
+      ~LinacAccLattice.trackActions
+      ~LinacAccLattice.trackBunch
+      ~LinacAccLattice.trackDesignBunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addSequence
+   .. automethod:: getNodeForPosition
+   .. automethod:: getNodesOfClass
+   .. automethod:: getNodesOfClasses
+   .. automethod:: getQuads
+   .. automethod:: getRF_Cavities
+   .. automethod:: getRF_Cavity
+   .. automethod:: getRF_Gaps
+   .. automethod:: getSequence
+   .. automethod:: getSequences
+   .. automethod:: getSubLattice
+   .. automethod:: initialize
+   .. automethod:: reverseOrder
+   .. automethod:: setLinacTracker
+   .. automethod:: trackActions
+   .. automethod:: trackBunch
+   .. automethod:: trackDesignBunch

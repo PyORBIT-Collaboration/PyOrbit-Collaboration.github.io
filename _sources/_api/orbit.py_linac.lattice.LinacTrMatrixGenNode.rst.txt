@@ -1,0 +1,41 @@
+LinacTrMatrixGenNode
+====================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacTrMatrixGenNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacTrMatrixGenNode.getBeta
+      ~LinacTrMatrixGenNode.getDetXYZ
+      ~LinacTrMatrixGenNode.getGamma
+      ~LinacTrMatrixGenNode.getNormDetXYZ
+      ~LinacTrMatrixGenNode.getTrMatricesController
+      ~LinacTrMatrixGenNode.getTransportMatrix
+      ~LinacTrMatrixGenNode.getTwissWeightUse
+      ~LinacTrMatrixGenNode.getTwoNodes
+      ~LinacTrMatrixGenNode.printMatrix
+      ~LinacTrMatrixGenNode.setInternalIndex
+      ~LinacTrMatrixGenNode.setTwissWeightUse
+      ~LinacTrMatrixGenNode.track
+      ~LinacTrMatrixGenNode.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getBeta
+   .. automethod:: getDetXYZ
+   .. automethod:: getGamma
+   .. automethod:: getNormDetXYZ
+   .. automethod:: getTrMatricesController
+   .. automethod:: getTransportMatrix
+   .. automethod:: getTwissWeightUse
+   .. automethod:: getTwoNodes
+   .. automethod:: printMatrix
+   .. automethod:: setInternalIndex
+   .. automethod:: setTwissWeightUse
+   .. automethod:: track
+   .. automethod:: trackDesign

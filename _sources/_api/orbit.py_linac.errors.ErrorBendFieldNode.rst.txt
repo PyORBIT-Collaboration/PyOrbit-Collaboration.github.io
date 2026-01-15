@@ -1,0 +1,17 @@
+ErrorBendFieldNode
+==================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorBendFieldNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorBendFieldNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

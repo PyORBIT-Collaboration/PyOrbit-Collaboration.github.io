@@ -1,0 +1,7 @@
+EllipseLinacApertureNode
+========================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: EllipseLinacApertureNode
+   :show-inheritance:

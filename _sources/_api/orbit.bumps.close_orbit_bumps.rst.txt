@@ -1,0 +1,37 @@
+close_orbit_bumps
+=================
+
+.. currentmodule:: orbit.bumps
+
+.. autoclass:: close_orbit_bumps
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~close_orbit_bumps.cos_function
+      ~close_orbit_bumps.find_kicks
+      ~close_orbit_bumps.get_constraints
+      ~close_orbit_bumps.get_lattice_tune
+      ~close_orbit_bumps.get_start_value
+      ~close_orbit_bumps.get_variables
+      ~close_orbit_bumps.get_x
+      ~close_orbit_bumps.get_xp
+      ~close_orbit_bumps.lattice_function
+      ~close_orbit_bumps.optimzation_function
+      ~close_orbit_bumps.sin_function
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: cos_function
+   .. automethod:: find_kicks
+   .. automethod:: get_constraints
+   .. automethod:: get_lattice_tune
+   .. automethod:: get_start_value
+   .. automethod:: get_variables
+   .. automethod:: get_x
+   .. automethod:: get_xp
+   .. automethod:: lattice_function
+   .. automethod:: optimzation_function
+   .. automethod:: sin_function

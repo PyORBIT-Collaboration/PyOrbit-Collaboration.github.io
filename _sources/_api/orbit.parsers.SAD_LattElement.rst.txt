@@ -1,0 +1,31 @@
+SAD_LattElement
+===============
+
+.. currentmodule:: orbit.parsers
+
+.. autoclass:: SAD_LattElement
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SAD_LattElement.addParameter
+      ~SAD_LattElement.getElements
+      ~SAD_LattElement.getName
+      ~SAD_LattElement.getParameter
+      ~SAD_LattElement.getParameters
+      ~SAD_LattElement.getType
+      ~SAD_LattElement.hasParameter
+      ~SAD_LattElement.setType
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addParameter
+   .. automethod:: getElements
+   .. automethod:: getName
+   .. automethod:: getParameter
+   .. automethod:: getParameters
+   .. automethod:: getType
+   .. automethod:: hasParameter
+   .. automethod:: setType

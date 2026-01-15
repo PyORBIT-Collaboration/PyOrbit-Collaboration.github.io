@@ -1,0 +1,27 @@
+MAD_LattLine
+============
+
+.. currentmodule:: orbit.parsers
+
+.. autoclass:: MAD_LattLine
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MAD_LattLine.addItem
+      ~MAD_LattLine.getElements
+      ~MAD_LattLine.getItems
+      ~MAD_LattLine.getLinesDict
+      ~MAD_LattLine.getName
+      ~MAD_LattLine.getType
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addItem
+   .. automethod:: getElements
+   .. automethod:: getItems
+   .. automethod:: getLinesDict
+   .. automethod:: getName
+   .. automethod:: getType

@@ -1,0 +1,23 @@
+ErrorCntrlLongitudinalDisplacement
+==================================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorCntrlLongitudinalDisplacement
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorCntrlLongitudinalDisplacement.getEntanceNodeShiftLength
+      ~ErrorCntrlLongitudinalDisplacement.getExitNodeShiftLength
+      ~ErrorCntrlLongitudinalDisplacement.getShiftLength
+      ~ErrorCntrlLongitudinalDisplacement.setShiftLength
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getEntanceNodeShiftLength
+   .. automethod:: getExitNodeShiftLength
+   .. automethod:: getShiftLength
+   .. automethod:: setShiftLength

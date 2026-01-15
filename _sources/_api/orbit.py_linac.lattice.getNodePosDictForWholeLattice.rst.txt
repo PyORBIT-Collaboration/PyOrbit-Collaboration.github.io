@@ -1,0 +1,6 @@
+getNodePosDictForWholeLattice
+=============================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autofunction:: getNodePosDictForWholeLattice

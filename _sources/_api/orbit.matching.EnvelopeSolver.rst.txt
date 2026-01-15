@@ -1,0 +1,37 @@
+EnvelopeSolver
+==============
+
+.. currentmodule:: orbit.matching
+
+.. autoclass:: EnvelopeSolver
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EnvelopeSolver.Dfunc_odeint
+      ~EnvelopeSolver.entropy_rate
+      ~EnvelopeSolver.envelope_odeint
+      ~EnvelopeSolver.func_fsolve
+      ~EnvelopeSolver.func_odeint
+      ~EnvelopeSolver.func_smooth
+      ~EnvelopeSolver.match_root
+      ~EnvelopeSolver.match_smooth
+      ~EnvelopeSolver.match_twiss
+      ~EnvelopeSolver.phase_advance
+      ~EnvelopeSolver.phase_analytic
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: Dfunc_odeint
+   .. automethod:: entropy_rate
+   .. automethod:: envelope_odeint
+   .. automethod:: func_fsolve
+   .. automethod:: func_odeint
+   .. automethod:: func_smooth
+   .. automethod:: match_root
+   .. automethod:: match_smooth
+   .. automethod:: match_twiss
+   .. automethod:: phase_advance
+   .. automethod:: phase_analytic

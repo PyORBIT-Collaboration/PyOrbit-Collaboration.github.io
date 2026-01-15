@@ -1,0 +1,31 @@
+RF_AxisFieldAnalysis
+====================
+
+.. currentmodule:: orbit.py_linac.rf_field_readers
+
+.. autoclass:: RF_AxisFieldAnalysis
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RF_AxisFieldAnalysis.dumpTTFandFitting
+      ~RF_AxisFieldAnalysis.dumpTransitTimeTables
+      ~RF_AxisFieldAnalysis.gapCentersAnalysis
+      ~RF_AxisFieldAnalysis.getNormilizedSpline
+      ~RF_AxisFieldAnalysis.getTTPandSSP_Values
+      ~RF_AxisFieldAnalysis.makePlynomialFittings
+      ~RF_AxisFieldAnalysis.makeTransitTimeTables
+      ~RF_AxisFieldAnalysis.rootAnalysis
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: dumpTTFandFitting
+   .. automethod:: dumpTransitTimeTables
+   .. automethod:: gapCentersAnalysis
+   .. automethod:: getNormilizedSpline
+   .. automethod:: getTTPandSSP_Values
+   .. automethod:: makePlynomialFittings
+   .. automethod:: makeTransitTimeTables
+   .. automethod:: rootAnalysis

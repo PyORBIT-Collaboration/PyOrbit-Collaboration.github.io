@@ -1,0 +1,17 @@
+UniformLongDistPaint
+====================
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: UniformLongDistPaint
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~UniformLongDistPaint.getCoordinates
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates

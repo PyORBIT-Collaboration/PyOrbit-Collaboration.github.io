@@ -1,0 +1,6 @@
+Replace_Quads_to_OverlappingQuads_Nodes
+=======================================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autofunction:: Replace_Quads_to_OverlappingQuads_Nodes

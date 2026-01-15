@@ -1,0 +1,19 @@
+TeapotInjectionNode
+===================
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: TeapotInjectionNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotInjectionNode.setnparts
+      ~TeapotInjectionNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setnparts
+   .. automethod:: track

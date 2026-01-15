@@ -1,0 +1,25 @@
+ArbitraryLongDist
+=================
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: ArbitraryLongDist
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ArbitraryLongDist.getCoord
+      ~ArbitraryLongDist.getCoordinates
+      ~ArbitraryLongDist.getProbInt
+      ~ArbitraryLongDist.phasetoz
+      ~ArbitraryLongDist.reset
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoord
+   .. automethod:: getCoordinates
+   .. automethod:: getProbInt
+   .. automethod:: phasetoz
+   .. automethod:: reset

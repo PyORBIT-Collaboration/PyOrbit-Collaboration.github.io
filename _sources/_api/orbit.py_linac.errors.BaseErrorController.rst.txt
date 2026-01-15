@@ -1,0 +1,41 @@
+BaseErrorController
+===================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: BaseErrorController
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BaseErrorController.cleanParentNodes
+      ~BaseErrorController.getEntanceNode
+      ~BaseErrorController.getEntanceNodeParameters
+      ~BaseErrorController.getEntanceNodeParent
+      ~BaseErrorController.getExitNode
+      ~BaseErrorController.getExitNodeParameters
+      ~BaseErrorController.getExitNodeParent
+      ~BaseErrorController.getLattice
+      ~BaseErrorController.getShortTypeName
+      ~BaseErrorController.setEntanceNodeParent
+      ~BaseErrorController.setExitNodeParent
+      ~BaseErrorController.setLattice
+      ~BaseErrorController.setOneNodeParent
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: cleanParentNodes
+   .. automethod:: getEntanceNode
+   .. automethod:: getEntanceNodeParameters
+   .. automethod:: getEntanceNodeParent
+   .. automethod:: getExitNode
+   .. automethod:: getExitNodeParameters
+   .. automethod:: getExitNodeParent
+   .. automethod:: getLattice
+   .. automethod:: getShortTypeName
+   .. automethod:: setEntanceNodeParent
+   .. automethod:: setExitNodeParent
+   .. automethod:: setLattice
+   .. automethod:: setOneNodeParent

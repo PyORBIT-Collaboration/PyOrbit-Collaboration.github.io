@@ -1,0 +1,19 @@
+SolenoidTEAPOT
+==============
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: SolenoidTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SolenoidTEAPOT.setWaveform
+      ~SolenoidTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setWaveform
+   .. automethod:: track

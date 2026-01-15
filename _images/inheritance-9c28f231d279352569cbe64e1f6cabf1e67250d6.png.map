@@ -1,0 +1,8 @@
+<map id="inheritanceab845aea0d" name="inheritanceab845aea0d">
+<area shape="rect" id="node1" href="../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode" target="_top" title="Class. Base class of the accelerator nodes hierarchy." alt="" coords="191,57,269,85"/>
+<area shape="rect" id="node5" href="../_api/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker" target="_top" title="Class. Base class of the accelerator nodes that track the pyORBIT bunch." alt="" coords="317,57,481,85"/>
+<area shape="rect" id="node2" href="../_api/orbit.utils.NamedObject.html#orbit.utils.NamedObject" target="_top" title="Class. An object that has a name." alt="" coords="19,5,129,33"/>
+<area shape="rect" id="node3" href="../_api/orbit.utils.TypedObject.html#orbit.utils.TypedObject" target="_top" title="Class. Object that has a type." alt="" coords="23,57,125,85"/>
+<area shape="rect" id="node4" href="../_api/orbit.utils.ParamsDictObject.html#orbit.utils.ParamsDictObject" target="_top" title="Class. Object that has a parameters dictionary." alt="" coords="5,109,143,137"/>
+<area shape="rect" id="node6" href="../_api/orbit.space_charge.SC_Base_AccNode.html#orbit.space_charge.SC_Base_AccNode" target="_top" title="The subclass of the AccNodeBunchTracker class. It is a base class for SC nodes. It uses the c++ space charge calculator to calculate the ." alt="" coords="529,57,671,85"/>
+</map>

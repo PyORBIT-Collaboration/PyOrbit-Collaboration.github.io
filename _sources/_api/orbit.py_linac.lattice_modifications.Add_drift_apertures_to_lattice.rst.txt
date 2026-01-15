@@ -1,0 +1,6 @@
+Add_drift_apertures_to_lattice
+==============================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autofunction:: Add_drift_apertures_to_lattice

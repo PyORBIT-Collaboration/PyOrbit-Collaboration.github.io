@@ -1,0 +1,19 @@
+Aperture
+========
+
+.. currentmodule:: orbit.aperture
+
+.. autoclass:: Aperture
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Aperture.checkBunch
+      ~Aperture.setPosition
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: checkBunch
+   .. automethod:: setPosition

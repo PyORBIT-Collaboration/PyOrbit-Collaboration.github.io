@@ -1,0 +1,47 @@
+BaseRF_Gap
+==========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: BaseRF_Gap
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BaseRF_Gap.getBetaMinMax
+      ~BaseRF_Gap.getGapPhase
+      ~BaseRF_Gap.getRF_Cavity
+      ~BaseRF_Gap.getTTF_Polynimials
+      ~BaseRF_Gap.initialize
+      ~BaseRF_Gap.isFirstRFGap
+      ~BaseRF_Gap.setAsFirstRFGap
+      ~BaseRF_Gap.setBetaMinMax
+      ~BaseRF_Gap.setCppGapModel
+      ~BaseRF_Gap.setGapPhase
+      ~BaseRF_Gap.setLinacTracker
+      ~BaseRF_Gap.setRF_Cavity
+      ~BaseRF_Gap.setnParts
+      ~BaseRF_Gap.track
+      ~BaseRF_Gap.trackDesign
+      ~BaseRF_Gap.ttf_track_bunch__
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getBetaMinMax
+   .. automethod:: getGapPhase
+   .. automethod:: getRF_Cavity
+   .. automethod:: getTTF_Polynimials
+   .. automethod:: initialize
+   .. automethod:: isFirstRFGap
+   .. automethod:: setAsFirstRFGap
+   .. automethod:: setBetaMinMax
+   .. automethod:: setCppGapModel
+   .. automethod:: setGapPhase
+   .. automethod:: setLinacTracker
+   .. automethod:: setRF_Cavity
+   .. automethod:: setnParts
+   .. automethod:: track
+   .. automethod:: trackDesign
+   .. automethod:: ttf_track_bunch__

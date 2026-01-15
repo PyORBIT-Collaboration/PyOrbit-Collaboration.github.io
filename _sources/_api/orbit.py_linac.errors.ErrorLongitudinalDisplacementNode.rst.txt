@@ -1,0 +1,17 @@
+ErrorLongitudinalDisplacementNode
+=================================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorLongitudinalDisplacementNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorLongitudinalDisplacementNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

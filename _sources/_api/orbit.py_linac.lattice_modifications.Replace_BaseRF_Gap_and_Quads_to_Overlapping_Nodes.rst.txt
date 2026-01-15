@@ -1,0 +1,6 @@
+Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes
+=================================================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autofunction:: Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes

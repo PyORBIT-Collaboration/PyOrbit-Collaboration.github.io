@@ -1,0 +1,7 @@
+TEAPOT_Ring
+===========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: TEAPOT_Ring
+   :show-inheritance:

@@ -1,0 +1,19 @@
+Harmonic_RFNode
+===============
+
+.. currentmodule:: orbit.rf_cavities
+
+.. autoclass:: Harmonic_RFNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Harmonic_RFNode.track
+      ~Harmonic_RFNode.trackBunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track
+   .. automethod:: trackBunch

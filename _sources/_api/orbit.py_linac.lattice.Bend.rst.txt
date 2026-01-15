@@ -1,0 +1,19 @@
+Bend
+====
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: Bend
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Bend.initialize
+      ~Bend.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: initialize
+   .. automethod:: track

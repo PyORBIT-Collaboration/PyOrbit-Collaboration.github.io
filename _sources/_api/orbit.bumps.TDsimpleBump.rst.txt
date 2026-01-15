@@ -1,0 +1,19 @@
+TDsimpleBump
+============
+
+.. currentmodule:: orbit.bumps
+
+.. autoclass:: TDsimpleBump
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TDsimpleBump.bump
+      ~TDsimpleBump.getLength
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: bump
+   .. automethod:: getLength

@@ -1,0 +1,19 @@
+BaseMATRIX
+==========
+
+.. currentmodule:: orbit.matrix_lattice
+
+.. autoclass:: BaseMATRIX
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BaseMATRIX.getMatrix
+      ~BaseMATRIX.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getMatrix
+   .. automethod:: track

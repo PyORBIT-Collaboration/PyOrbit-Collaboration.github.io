@@ -1,0 +1,17 @@
+ErrorStraightRotationZNode
+==========================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorStraightRotationZNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorStraightRotationZNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

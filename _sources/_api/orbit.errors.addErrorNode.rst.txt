@@ -1,0 +1,6 @@
+addErrorNode
+============
+
+.. currentmodule:: orbit.errors
+
+.. autofunction:: addErrorNode

@@ -1,0 +1,6 @@
+addErrorNodeAsChild_I
+=====================
+
+.. currentmodule:: orbit.errors
+
+.. autofunction:: addErrorNodeAsChild_I

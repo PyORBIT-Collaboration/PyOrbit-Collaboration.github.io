@@ -1,0 +1,19 @@
+Barrier_RFNode
+==============
+
+.. currentmodule:: orbit.rf_cavities
+
+.. autoclass:: Barrier_RFNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Barrier_RFNode.track
+      ~Barrier_RFNode.trackBunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track
+   .. automethod:: trackBunch

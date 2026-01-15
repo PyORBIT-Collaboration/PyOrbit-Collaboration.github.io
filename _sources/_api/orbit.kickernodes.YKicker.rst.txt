@@ -1,0 +1,17 @@
+YKicker
+=======
+
+.. currentmodule:: orbit.kickernodes
+
+.. autoclass:: YKicker
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~YKicker.kick
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: kick

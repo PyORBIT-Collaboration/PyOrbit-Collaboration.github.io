@@ -1,0 +1,23 @@
+ErrorCntrlCoordDisplacement
+===========================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorCntrlCoordDisplacement
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorCntrlCoordDisplacement.getDisplacementParameters
+      ~ErrorCntrlCoordDisplacement.getEntanceNodeParameters
+      ~ErrorCntrlCoordDisplacement.getExitNodeParameters
+      ~ErrorCntrlCoordDisplacement.setDisplacementParameter
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getDisplacementParameters
+   .. automethod:: getEntanceNodeParameters
+   .. automethod:: getExitNodeParameters
+   .. automethod:: setDisplacementParameter

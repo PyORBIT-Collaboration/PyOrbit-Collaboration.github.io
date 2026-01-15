@@ -1,0 +1,31 @@
+MADX_LattElement
+================
+
+.. currentmodule:: orbit.parsers
+
+.. autoclass:: MADX_LattElement
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MADX_LattElement.addParameter
+      ~MADX_LattElement.getElements
+      ~MADX_LattElement.getName
+      ~MADX_LattElement.getParameter
+      ~MADX_LattElement.getParameters
+      ~MADX_LattElement.getType
+      ~MADX_LattElement.hasParameter
+      ~MADX_LattElement.setType
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addParameter
+   .. automethod:: getElements
+   .. automethod:: getName
+   .. automethod:: getParameter
+   .. automethod:: getParameters
+   .. automethod:: getType
+   .. automethod:: hasParameter
+   .. automethod:: setType

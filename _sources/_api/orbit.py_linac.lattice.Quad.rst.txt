@@ -1,0 +1,25 @@
+Quad
+====
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: Quad
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Quad.getField
+      ~Quad.getTotalField
+      ~Quad.initialize
+      ~Quad.setField
+      ~Quad.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getField
+   .. automethod:: getTotalField
+   .. automethod:: initialize
+   .. automethod:: setField
+   .. automethod:: track

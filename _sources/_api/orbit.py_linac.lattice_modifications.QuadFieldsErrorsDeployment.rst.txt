@@ -1,0 +1,25 @@
+QuadFieldsErrorsDeployment
+==========================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autoclass:: QuadFieldsErrorsDeployment
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~QuadFieldsErrorsDeployment.addQuad
+      ~QuadFieldsErrorsDeployment.addQuads
+      ~QuadFieldsErrorsDeployment.restoreFields
+      ~QuadFieldsErrorsDeployment.setGaussDistributedRealtiveErrorToGroup
+      ~QuadFieldsErrorsDeployment.setGaussDistributedRealtiveErrors
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addQuad
+   .. automethod:: addQuads
+   .. automethod:: restoreFields
+   .. automethod:: setGaussDistributedRealtiveErrorToGroup
+   .. automethod:: setGaussDistributedRealtiveErrors

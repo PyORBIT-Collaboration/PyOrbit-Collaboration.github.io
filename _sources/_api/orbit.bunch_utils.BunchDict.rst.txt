@@ -1,0 +1,7 @@
+BunchDict
+=========
+
+.. currentmodule:: orbit.bunch_utils
+
+.. autoclass:: BunchDict
+   :show-inheritance:

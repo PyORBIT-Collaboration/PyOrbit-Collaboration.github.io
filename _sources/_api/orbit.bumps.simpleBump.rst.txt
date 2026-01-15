@@ -1,0 +1,19 @@
+simpleBump
+==========
+
+.. currentmodule:: orbit.bumps
+
+.. autoclass:: simpleBump
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~simpleBump.bump
+      ~simpleBump.getLength
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: bump
+   .. automethod:: getLength

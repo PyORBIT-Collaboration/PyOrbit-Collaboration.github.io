@@ -1,0 +1,19 @@
+KVDist3D
+========
+
+.. currentmodule:: orbit.bunch_generators
+
+.. autoclass:: KVDist3D
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~KVDist3D.getCoordinates
+      ~KVDist3D.getTwissContainers
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates
+   .. automethod:: getTwissContainers

@@ -1,0 +1,6 @@
+setSC_Centered_AccNodes
+=======================
+
+.. currentmodule:: orbit.space_charge
+
+.. autofunction:: setSC_Centered_AccNodes

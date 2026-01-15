@@ -1,0 +1,17 @@
+SquareRootWaveform
+==================
+
+.. currentmodule:: orbit.kickernodes
+
+.. autoclass:: SquareRootWaveform
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SquareRootWaveform.getStrength
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getStrength

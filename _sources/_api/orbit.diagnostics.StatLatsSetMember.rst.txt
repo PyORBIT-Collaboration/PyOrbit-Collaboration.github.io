@@ -1,0 +1,21 @@
+StatLatsSetMember
+=================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: StatLatsSetMember
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~StatLatsSetMember.closeStatLats
+      ~StatLatsSetMember.resetFile
+      ~StatLatsSetMember.writeStatLats
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: closeStatLats
+   .. automethod:: resetFile
+   .. automethod:: writeStatLats

@@ -1,0 +1,17 @@
+SNSESpreadDistPaint
+===================
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: SNSESpreadDistPaint
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SNSESpreadDistPaint.getCoordinates
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates

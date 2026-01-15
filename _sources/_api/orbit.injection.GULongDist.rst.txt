@@ -1,0 +1,17 @@
+GULongDist
+==========
+
+.. currentmodule:: orbit.injection
+
+.. autoclass:: GULongDist
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GULongDist.getCoordinates
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates

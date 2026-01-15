@@ -1,0 +1,27 @@
+ThickKick
+=========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: ThickKick
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ThickKick.getFieldBx
+      ~ThickKick.getFieldBy
+      ~ThickKick.initialize
+      ~ThickKick.setFieldBx
+      ~ThickKick.setFieldBy
+      ~ThickKick.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getFieldBx
+   .. automethod:: getFieldBy
+   .. automethod:: initialize
+   .. automethod:: setFieldBx
+   .. automethod:: setFieldBy
+   .. automethod:: track

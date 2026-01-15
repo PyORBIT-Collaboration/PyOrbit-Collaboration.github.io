@@ -1,0 +1,17 @@
+rootTWaveform
+=============
+
+.. currentmodule:: orbit.kickernodes
+
+.. autoclass:: rootTWaveform
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~rootTWaveform.getStrength
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getStrength

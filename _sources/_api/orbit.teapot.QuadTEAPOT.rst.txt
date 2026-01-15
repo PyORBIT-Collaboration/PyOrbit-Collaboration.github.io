@@ -1,0 +1,21 @@
+QuadTEAPOT
+==========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: QuadTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~QuadTEAPOT.initialize
+      ~QuadTEAPOT.setWaveform
+      ~QuadTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: initialize
+   .. automethod:: setWaveform
+   .. automethod:: track

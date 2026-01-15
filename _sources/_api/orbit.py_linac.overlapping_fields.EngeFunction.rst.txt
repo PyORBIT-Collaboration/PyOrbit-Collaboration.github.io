@@ -1,0 +1,37 @@
+EngeFunction
+============
+
+.. currentmodule:: orbit.py_linac.overlapping_fields
+
+.. autoclass:: EngeFunction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EngeFunction.getCuttOffZ
+      ~EngeFunction.getFuncDerivative
+      ~EngeFunction.getFuncValue
+      ~EngeFunction.getLimitsZ
+      ~EngeFunction.getNumberOfPoints
+      ~EngeFunction.setAcceptanceDiameter
+      ~EngeFunction.setCutOffLevel
+      ~EngeFunction.setCutOffZ
+      ~EngeFunction.setEngeCoefficients
+      ~EngeFunction.setLength
+      ~EngeFunction.setNumberOfPoints
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCuttOffZ
+   .. automethod:: getFuncDerivative
+   .. automethod:: getFuncValue
+   .. automethod:: getLimitsZ
+   .. automethod:: getNumberOfPoints
+   .. automethod:: setAcceptanceDiameter
+   .. automethod:: setCutOffLevel
+   .. automethod:: setCutOffZ
+   .. automethod:: setEngeCoefficients
+   .. automethod:: setLength
+   .. automethod:: setNumberOfPoints

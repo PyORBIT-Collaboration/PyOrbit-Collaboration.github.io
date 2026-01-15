@@ -1,0 +1,23 @@
+LongitudinalDisplacementNodesModification
+=========================================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autoclass:: LongitudinalDisplacementNodesModification
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LongitudinalDisplacementNodesModification.getShiftLength
+      ~LongitudinalDisplacementNodesModification.setGaussDistributedShiftLength
+      ~LongitudinalDisplacementNodesModification.setShiftLength
+      ~LongitudinalDisplacementNodesModification.updateErrorParameters
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getShiftLength
+   .. automethod:: setGaussDistributedShiftLength
+   .. automethod:: setShiftLength
+   .. automethod:: updateErrorParameters

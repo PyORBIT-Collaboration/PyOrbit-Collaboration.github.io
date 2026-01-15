@@ -1,0 +1,29 @@
+TwissContainer
+==============
+
+.. currentmodule:: orbit.bunch_generators
+
+.. autoclass:: TwissContainer
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TwissContainer.getAlphaBetaEmitt
+      ~TwissContainer.getAlphaBetaGammaEmitt
+      ~TwissContainer.getNormalizedH
+      ~TwissContainer.getUP_Max
+      ~TwissContainer.getU_Max
+      ~TwissContainer.getU_UP
+      ~TwissContainer.setEmittance
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getAlphaBetaEmitt
+   .. automethod:: getAlphaBetaGammaEmitt
+   .. automethod:: getNormalizedH
+   .. automethod:: getUP_Max
+   .. automethod:: getU_Max
+   .. automethod:: getU_UP
+   .. automethod:: setEmittance

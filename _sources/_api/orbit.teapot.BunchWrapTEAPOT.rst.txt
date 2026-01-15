@@ -1,0 +1,17 @@
+BunchWrapTEAPOT
+===============
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: BunchWrapTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BunchWrapTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

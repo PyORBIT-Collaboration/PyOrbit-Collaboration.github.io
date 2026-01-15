@@ -29,6 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/collapsible-lists/css/tree_view.css" />
   
@@ -150,7 +151,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -266,7 +267,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="../../../_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -375,7 +376,7 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">..lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccNode</span>
 
 
-<div class="viewcode-block" id="AccLattice"><a class="viewcode-back" href="../../../_autosummary/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccLattice</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccLattice</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Class. The accelerator lattice class contains child nodes.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -387,7 +388,7 @@ document.write(`
     <span class="n">BEFORE</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BEFORE</span>
     <span class="n">AFTER</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">AFTER</span>
 
-<div class="viewcode-block" id="AccLattice.__init__"><a class="viewcode-back" href="../../../_autosummary/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Constructor. Creates an empty accelerator lattice.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -396,9 +397,9 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__isInitialized</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__children</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__childPositions</span> <span class="o">=</span> <span class="p">{}</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__childPositions</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.initialize"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.initialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Initializes the lattice and child node structures.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -442,15 +443,15 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actions</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__childPositions</span> <span class="o">=</span> <span class="n">posn</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__isInitialized</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__isInitialized</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">isInitialized</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.isInitialized"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.isInitialized">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isInitialized</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns the initialization status (True or False).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__isInitialized</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__isInitialized</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">addNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.addNode"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.addNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Adds a child node into the lattice. If the user</span>
 <span class="sd">        specifies the index &gt;= 0 the element will be inserted in</span>
@@ -461,23 +462,23 @@ document.write(`
                 <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">__isInitialized</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__isInitialized</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getNodes"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns a list of all children</span>
 <span class="sd">        of the first level in the lattice.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">childrenNodes</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.setNodes"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.setNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">childrenNodes</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Set up a new list of all children</span>
 <span class="sd">        of the first level in the lattice.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__children</span> <span class="o">=</span> <span class="n">childrenNodes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__children</span> <span class="o">=</span> <span class="n">childrenNodes</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNodeForName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getNodeForName"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getNodeForName">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodeForName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns the node with certain name.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -501,9 +502,9 @@ document.write(`
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Please use getNodesForName method instead.&quot;</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesForName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getNodesForName"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getNodesForName">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesForName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns nodes with a certain name.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -511,9 +512,9 @@ document.write(`
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">nodes</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesOfClass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_of_node</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getNodesOfClass"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getNodesOfClass">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesOfClass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_of_node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns nodes off a certain class.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -521,9 +522,9 @@ document.write(`
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">class_of_node</span><span class="p">):</span>
                 <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">nodes</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesForSubstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub</span><span class="p">,</span> <span class="n">no_sub</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getNodesForSubstring"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getNodesForSubstring">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesForSubstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub</span><span class="p">,</span> <span class="n">no_sub</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns nodes with names each of them has the certain substring.</span>
 <span class="sd">        It is also possible to specify the unwanted substring as no_sub parameter.</span>
@@ -536,29 +537,29 @@ document.write(`
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">no_sub</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">nodes</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNodeIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getNodeIndex"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getNodeIndex">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodeIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns the index of the node in the upper level of the lattice children-nodes.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">node</span><span class="p">)</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getNodePositionsDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getNodePositionsDict"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getNodePositionsDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodePositionsDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns a dictionary of</span>
 <span class="sd">        {node:(start position, stop position)}</span>
 <span class="sd">        tuples for all children of the first level in the lattice.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childPositions</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__childPositions</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.getLength"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Returns the physical length of the lattice.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__length</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__length</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.reverseOrder"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.reverseOrder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This method is used for a lattice reversal and a bunch backtracking.</span>
 <span class="sd">        This method will reverse the order of the children nodes. It will</span>
@@ -567,9 +568,9 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="p">:</span>
             <span class="n">node</span><span class="o">.</span><span class="n">reverseOrder</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">structureToText</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.structureToText"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.structureToText">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">structureToText</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the text with the lattice structure.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -579,7 +580,7 @@ document.write(`
             <span class="n">txt</span> <span class="o">+=</span> <span class="n">node</span><span class="o">.</span><span class="n">structureToText</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
         <span class="n">txt</span> <span class="o">+=</span> <span class="s2">&quot;==== STOP  ==== Lattice =&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;  L=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
         <span class="n">txt</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="k">return</span> <span class="n">txt</span>
+        <span class="k">return</span> <span class="n">txt</span></div>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getSubLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accLatticeNew</span><span class="p">,</span> <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -598,7 +599,7 @@ document.write(`
         <span class="n">accLatticeNew</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">accLatticeNew</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">getSubLattice</span><span class="p">(</span>
+<div class="viewcode-block" id="AccLattice.getSubLattice"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.getSubLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getSubLattice</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
         <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
@@ -609,9 +610,9 @@ document.write(`
 <span class="sd">        subclasses of AccLattice should override this method to replace</span>
 <span class="sd">        AccLattice() constructor by the sub-class type constructor</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getSubLattice</span><span class="p">(</span><span class="n">AccLattice</span><span class="p">(),</span> <span class="n">index_start</span><span class="p">,</span> <span class="n">index_stop</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getSubLattice</span><span class="p">(</span><span class="n">AccLattice</span><span class="p">(),</span> <span class="n">index_start</span><span class="p">,</span> <span class="n">index_stop</span><span class="p">)</span></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">trackActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="AccLattice.trackActions"><a class="viewcode-back" href="../../../_api/orbit.lattice.AccLattice.html#orbit.lattice.AccLattice.trackActions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method. Tracks the actions through all nodes in the lattice. The indexes are inclusive.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -626,7 +627,7 @@ document.write(`
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__children</span><span class="p">[</span><span class="n">index_start</span> <span class="p">:</span> <span class="n">index_stop</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
             <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
             <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;parentNode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
-            <span class="n">node</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span></div>
+            <span class="n">node</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span></div></div>
 </pre></div>
 
                 </article>

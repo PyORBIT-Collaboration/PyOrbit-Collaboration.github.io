@@ -1,0 +1,35 @@
+AbstractRF_Gap
+==============
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: AbstractRF_Gap
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AbstractRF_Gap.getGapPhase
+      ~AbstractRF_Gap.getRF_Cavity
+      ~AbstractRF_Gap.initialize
+      ~AbstractRF_Gap.isFirstRFGap
+      ~AbstractRF_Gap.isRFGap
+      ~AbstractRF_Gap.setAsFirstRFGap
+      ~AbstractRF_Gap.setGapPhase
+      ~AbstractRF_Gap.setRF_Cavity
+      ~AbstractRF_Gap.track
+      ~AbstractRF_Gap.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getGapPhase
+   .. automethod:: getRF_Cavity
+   .. automethod:: initialize
+   .. automethod:: isFirstRFGap
+   .. automethod:: isRFGap
+   .. automethod:: setAsFirstRFGap
+   .. automethod:: setGapPhase
+   .. automethod:: setRF_Cavity
+   .. automethod:: track
+   .. automethod:: trackDesign

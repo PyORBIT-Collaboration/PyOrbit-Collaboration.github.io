@@ -1,0 +1,23 @@
+TeapotStatLatsNode
+==================
+
+.. currentmodule:: orbit.diagnostics
+
+.. autoclass:: TeapotStatLatsNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotStatLatsNode.closeStatLats
+      ~TeapotStatLatsNode.setLatticeLength
+      ~TeapotStatLatsNode.setPosition
+      ~TeapotStatLatsNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: closeStatLats
+   .. automethod:: setLatticeLength
+   .. automethod:: setPosition
+   .. automethod:: track

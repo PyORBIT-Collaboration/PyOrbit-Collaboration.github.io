@@ -1,0 +1,17 @@
+TeapotYKickerNode
+=================
+
+.. currentmodule:: orbit.kickernodes
+
+.. autoclass:: TeapotYKickerNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotYKickerNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

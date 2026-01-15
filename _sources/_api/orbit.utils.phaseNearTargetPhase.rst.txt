@@ -1,0 +1,6 @@
+phaseNearTargetPhase
+====================
+
+.. currentmodule:: orbit.utils
+
+.. autofunction:: phaseNearTargetPhase

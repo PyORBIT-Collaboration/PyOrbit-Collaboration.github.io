@@ -1,0 +1,6 @@
+addTeapotInjectionNode
+======================
+
+.. currentmodule:: orbit.injection
+
+.. autofunction:: addTeapotInjectionNode

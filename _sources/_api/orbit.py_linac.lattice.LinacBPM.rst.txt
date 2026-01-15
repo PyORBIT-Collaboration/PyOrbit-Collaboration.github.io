@@ -1,0 +1,47 @@
+LinacBPM
+========
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacBPM
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacBPM.analyzeBunch
+      ~LinacBPM.dumpPhaseHistorgam
+      ~LinacBPM.getAmplitude
+      ~LinacBPM.getAvgPhase
+      ~LinacBPM.getAvgX
+      ~LinacBPM.getAvgY
+      ~LinacBPM.getFourierAmplitude
+      ~LinacBPM.getFourierPhase
+      ~LinacBPM.getFrequency
+      ~LinacBPM.getNormalizationCoefficient
+      ~LinacBPM.getPeakPhase
+      ~LinacBPM.getPhaseRMS
+      ~LinacBPM.getSynchPhase
+      ~LinacBPM.setFrequency
+      ~LinacBPM.setNormalizationCoefficient
+      ~LinacBPM.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: analyzeBunch
+   .. automethod:: dumpPhaseHistorgam
+   .. automethod:: getAmplitude
+   .. automethod:: getAvgPhase
+   .. automethod:: getAvgX
+   .. automethod:: getAvgY
+   .. automethod:: getFourierAmplitude
+   .. automethod:: getFourierPhase
+   .. automethod:: getFrequency
+   .. automethod:: getNormalizationCoefficient
+   .. automethod:: getPeakPhase
+   .. automethod:: getPhaseRMS
+   .. automethod:: getSynchPhase
+   .. automethod:: setFrequency
+   .. automethod:: setNormalizationCoefficient
+   .. automethod:: track

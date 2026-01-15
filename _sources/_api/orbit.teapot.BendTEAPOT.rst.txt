@@ -1,0 +1,19 @@
+BendTEAPOT
+==========
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: BendTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BendTEAPOT.initialize
+      ~BendTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: initialize
+   .. automethod:: track

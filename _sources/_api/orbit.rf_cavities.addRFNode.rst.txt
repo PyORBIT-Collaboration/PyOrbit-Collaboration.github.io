@@ -1,0 +1,6 @@
+addRFNode
+=========
+
+.. currentmodule:: orbit.rf_cavities
+
+.. autofunction:: addRFNode

@@ -1,0 +1,19 @@
+TeapotCollimatorNode
+====================
+
+.. currentmodule:: orbit.collimation
+
+.. autoclass:: TeapotCollimatorNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TeapotCollimatorNode.setPosition
+      ~TeapotCollimatorNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: setPosition
+   .. automethod:: track

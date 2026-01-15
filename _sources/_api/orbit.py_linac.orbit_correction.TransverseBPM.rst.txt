@@ -1,0 +1,21 @@
+TransverseBPM
+=============
+
+.. currentmodule:: orbit.py_linac.orbit_correction
+
+.. autoclass:: TransverseBPM
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TransverseBPM.getCoordinates
+      ~TransverseBPM.track
+      ~TransverseBPM.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCoordinates
+   .. automethod:: track
+   .. automethod:: trackDesign

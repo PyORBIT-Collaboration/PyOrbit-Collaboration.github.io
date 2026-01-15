@@ -1,0 +1,31 @@
+LinacTrMatricesController
+=========================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: LinacTrMatricesController
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinacTrMatricesController.addNode
+      ~LinacTrMatricesController.addTrMatrixGenNodes
+      ~LinacTrMatricesController.addTrMatrixGenNodesAtEntrance
+      ~LinacTrMatricesController.addTrMatrixGenNodesAtExit
+      ~LinacTrMatricesController.getCount
+      ~LinacTrMatricesController.getNode
+      ~LinacTrMatricesController.getNodes
+      ~LinacTrMatricesController.init
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addNode
+   .. automethod:: addTrMatrixGenNodes
+   .. automethod:: addTrMatrixGenNodesAtEntrance
+   .. automethod:: addTrMatrixGenNodesAtExit
+   .. automethod:: getCount
+   .. automethod:: getNode
+   .. automethod:: getNodes
+   .. automethod:: init

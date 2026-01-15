@@ -1,0 +1,25 @@
+PMQ_Trace3D_Function
+====================
+
+.. currentmodule:: orbit.py_linac.overlapping_fields
+
+.. autoclass:: PMQ_Trace3D_Function
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PMQ_Trace3D_Function.getFuncDerivative
+      ~PMQ_Trace3D_Function.getFuncValue
+      ~PMQ_Trace3D_Function.getLimitsZ
+      ~PMQ_Trace3D_Function.getPMQ_FuncValue
+      ~PMQ_Trace3D_Function.pmq_func
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getFuncDerivative
+   .. automethod:: getFuncValue
+   .. automethod:: getLimitsZ
+   .. automethod:: getPMQ_FuncValue
+   .. automethod:: pmq_func

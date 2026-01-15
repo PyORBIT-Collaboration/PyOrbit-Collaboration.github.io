@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File SpaceChargeCalc3D.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_cpp_api/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.cc';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        Modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pyorbit_root.html">
+                        C++ API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File SpaceChargeCalc3D.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File SpaceChargeCalc3D.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-spacechargecalc3d-cc">
+<span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargecalc3d-cc"></span><h1>Program Listing for File SpaceChargeCalc3D.cc<a class="headerlink" href="#program-listing-for-file-spacechargecalc3d-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.cc.html#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargecalc3d-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/SpaceChargeCalc3D.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// FILE NAME</span>
+<span class="c1">//   SpaceChargeCalc3D.cc</span>
+<span class="c1">//</span>
+<span class="c1">// AUTHOR</span>
+<span class="c1">//    A. Shishlo</span>
+<span class="c1">//</span>
+<span class="c1">// Created:</span>
+<span class="c1">//   12/03/10</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">// This class calculates the space charge kicks for bunch using 3D Poisson Solver.</span>
+<span class="c1">// The solver implements FFT convolution algorithm to calculate the potential in</span>
+<span class="c1">// the coordinate system where the bunch is resting. The solver is not parallel in the</span>
+<span class="c1">// sense of efficiency, but it is working correctly, and particles can are distributed</span>
+<span class="c1">// among CPUs (not by the solver).</span>
+<span class="c1">//</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Grid3D.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;PoissonSolverFFT3D.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SpaceChargeCalc3D.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BufferStore.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cfloat&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
+
+<span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">SpaceChargeCalc3D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">xSize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ySize</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">zSize</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">CppPyWrapper</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">xy_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xz_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">poissonSolver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PoissonSolverFFT3D</span><span class="p">(</span><span class="n">xSize</span><span class="p">,</span><span class="w"> </span><span class="n">ySize</span><span class="p">,</span><span class="w"> </span><span class="n">zSize</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">xy_ratio</span><span class="p">,</span><span class="w"> </span><span class="n">xy_ratio</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.</span><span class="o">/</span><span class="n">xy_ratio</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="o">/</span><span class="n">xy_ratio</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.</span><span class="o">/</span><span class="n">xz_ratio</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="o">/</span><span class="n">xz_ratio</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Grid3D</span><span class="p">(</span><span class="n">xSize</span><span class="p">,</span><span class="w"> </span><span class="n">ySize</span><span class="p">,</span><span class="w"> </span><span class="n">zSize</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridX</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">(),</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">());</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridY</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">(),</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxY</span><span class="p">());</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinZ</span><span class="p">(),</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxZ</span><span class="p">());</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Grid3D</span><span class="p">(</span><span class="n">xSize</span><span class="p">,</span><span class="w"> </span><span class="n">ySize</span><span class="p">,</span><span class="w"> </span><span class="n">zSize</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridX</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">(),</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">());</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridY</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">(),</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxY</span><span class="p">());</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinZ</span><span class="p">(),</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxZ</span><span class="p">());</span>
+<span class="w">    </span><span class="n">bunchExtremaCalc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BunchExtremaCalculator</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//------------ratio change limit ----------</span>
+<span class="w">    </span><span class="c1">//If the shape (x to y and x to z ratios) of 3D region changes more than this</span>
+<span class="w">    </span><span class="c1">//limit then we have to change shape and recalculate Green Functions in the Poisson solver</span>
+<span class="w">    </span><span class="n">ratio_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//Number of bunches from both sides that should be taken into account for space charge.</span>
+<span class="w">    </span><span class="n">nBunches_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// The frequency of the bunch arrivals in Hz. It defines by the RFQ frequency.</span>
+<span class="w">    </span><span class="c1">// The non-zero is setup by default to avoid division on zero</span>
+<span class="w">    </span><span class="n">frequency_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">402.5e+6</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">SpaceChargeCalc3D</span><span class="o">::~</span><span class="n">SpaceChargeCalc3D</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">poissonSolver</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getPyWrapper</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">){</span>
+<span class="w">        </span><span class="n">Py_DECREF</span><span class="p">(</span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getPyWrapper</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">rhoGrid</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getPyWrapper</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">){</span>
+<span class="w">        </span><span class="n">Py_DECREF</span><span class="p">(</span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getPyWrapper</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">phiGrid</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">bunchExtremaCalc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Grid3D</span><span class="o">*</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">getRhoGrid</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">rhoGrid</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Grid3D</span><span class="o">*</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">getPhiGrid</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">phiGrid</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">setNumberOfExternalBunches</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nBunches</span><span class="p">){</span>
+<span class="w">    </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">setNumberOfExternalBunches</span><span class="p">(</span><span class="n">nBunches</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">setFrequencyOfBunches</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">frequency</span><span class="p">){</span>
+<span class="w">    </span><span class="n">frequency_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frequency</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">getNumberOfExternalBunches</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getNumberOfExternalBunches</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">getFrequencyOfBunches</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">frequency_</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nPartsGlobal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSizeGlobal</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">nPartsGlobal</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//calculate max and min of X,Y,Z, bin paricles and set up limits for rhoGrid, phiGrid</span>
+<span class="w">    </span><span class="c1">//and bin the particles from the bunch into the rhoGrid</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nExtBunches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getNumberOfExternalBunches</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">nExtBunches</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">wrappedBunchAnalysis</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bunchAnalysis</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//calculate phiGrid with potential. The z-coordinate is in the center of mass coordinate system</span>
+<span class="w">    </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">findPotential</span><span class="p">(</span><span class="n">rhoGrid</span><span class="p">,</span><span class="n">phiGrid</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getGamma</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//distance between bunches in the center of mass of the bunch</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">lambda_cm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">gamma</span><span class="o">/</span><span class="n">frequency_</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">trans_factor</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">length</span><span class="o">*</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getClassicalRadius</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">long_factor</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">length</span><span class="o">*</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getClassicalRadius</span><span class="p">()</span><span class="o">*</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">ex</span><span class="p">,</span><span class="n">ey</span><span class="p">,</span><span class="n">ez</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">z_center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getMaxZ</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getMinZ</span><span class="p">())</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z_center</span><span class="p">)</span><span class="o">*</span><span class="n">gamma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z_center</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">nExtBunches</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">remainder</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">lambda_cm</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">calcGradient</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ex</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">ey</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">ez</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//std::cout&lt;&lt;&quot;debug ip=&quot;&lt;&lt;i&lt;&lt;&quot; x=&quot;&lt;&lt;x&lt;&lt;&quot; y=&quot;&lt;&lt;y&lt;&lt;&quot; z=&quot;&lt;&lt;z&lt;&lt;&quot; ex=&quot;&lt;&lt;ex&lt;&lt;&quot; ey=&quot;&lt;&lt;ey&lt;&lt;&quot; ez=&quot;&lt;&lt;ez&lt;&lt;&quot; rho_z=&quot;&lt;&lt; zGrid-&gt;getValue(z) &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="c1">//calculate momentum kicks</span>
+<span class="w">        </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">xp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">-</span><span class="n">ex</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">trans_factor</span><span class="p">;</span>
+<span class="w">        </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">yp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">-</span><span class="n">ey</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">trans_factor</span><span class="p">;</span>
+<span class="w">        </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">dE</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">-</span><span class="n">ez</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">long_factor</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">bunchAnalysis</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">center</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xMin</span><span class="p">,</span><span class="w"> </span><span class="n">xMax</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">,</span><span class="w"> </span><span class="n">zMin</span><span class="p">,</span><span class="w"> </span><span class="n">zMax</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">bunchExtremaCalc</span><span class="o">-&gt;</span><span class="n">getExtremaXYZ</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">xMin</span><span class="p">,</span><span class="w"> </span><span class="n">xMax</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">,</span><span class="w"> </span><span class="n">zMin</span><span class="p">,</span><span class="w"> </span><span class="n">zMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//we are not going to account for neighboring bunches here</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setLongWrapping</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setLongWrapping</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//we will work in the center of the mass of the bunch.</span>
+<span class="w">  </span><span class="c1">//We have to shrink the longitudinal size</span>
+<span class="w">    </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getGamma</span><span class="p">();</span>
+<span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">*</span><span class="n">gamma</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//check if the beam size is not zero</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">xMin</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">xMax</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">yMin</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">yMax</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">zMin</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">zMax</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;SpaceChargeCalc3D::bunchAnalysis(bunch)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The bunch min and max sizes are wrong! Cannot calculate space charge!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;x min =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xMin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot; max=&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xMax</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;y min =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yMin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot; max=&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yMax</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;z min =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">zMin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot; max=&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">zMax</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop.&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xy_ratio_beam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">xMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">yMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">yMin</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xz_ratio_beam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">xMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//first we have to decide if there is a need to change</span>
+<span class="w">    </span><span class="c1">//the ratio of x,y,z grid sizes in the Poisson Solver</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">changeRationInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">ratio_limit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xy_ratio_beam</span><span class="o">/</span><span class="n">xy_ratio</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">ratio_limit</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">xy_ratio_beam</span><span class="o">/</span><span class="n">xy_ratio</span><span class="w"> </span><span class="o">||</span>
+<span class="w">         </span><span class="n">ratio_limit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xz_ratio_beam</span><span class="o">/</span><span class="n">xz_ratio</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">ratio_limit</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">xz_ratio_beam</span><span class="o">/</span><span class="n">xz_ratio</span><span class="p">){</span>
+<span class="w">          </span><span class="n">changeRationInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//The change in shape of the bunch is too big, and we have to change</span>
+<span class="w">    </span><span class="c1">//the shape of  the Poisson Solver grid. It will involve a recalculation of</span>
+<span class="w">    </span><span class="c1">//Green functions and will take some time.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">changeRationInfo</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<span class="w">        </span><span class="n">xy_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xy_ratio_beam</span><span class="p">;</span>
+<span class="w">        </span><span class="n">xz_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xz_ratio_beam</span><span class="p">;</span>
+<span class="w">        </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">setGridXYZ</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">xMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,(</span><span class="n">xMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,</span><span class="o">-</span><span class="p">(</span><span class="n">yMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">yMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,(</span><span class="n">yMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">yMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,</span><span class="o">-</span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//now we have to define the sizes of 3D grids for charge density and potential</span>
+<span class="w">    </span><span class="c1">//The shape is defined by the Poisson Solver grid, and they should cover all particles</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">scale_coeff_x</span><span class="p">,</span><span class="n">scale_coeff_y</span><span class="p">,</span><span class="n">scale_coeff_z</span><span class="p">;</span>
+<span class="w">    </span><span class="n">scale_coeff_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">xMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">());</span>
+<span class="w">    </span><span class="n">scale_coeff_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">yMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">yMin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxY</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">());</span>
+<span class="w">    </span><span class="n">scale_coeff_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxZ</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinZ</span><span class="p">());</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">scale_coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scale_coeff_x</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">scale_coeff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scale_coeff_y</span><span class="p">)</span><span class="w"> </span><span class="n">scale_coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scale_coeff_y</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">scale_coeff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scale_coeff_z</span><span class="p">)</span><span class="w"> </span><span class="n">scale_coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scale_coeff_z</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">xMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">())</span><span class="o">*</span><span class="n">scale_coeff</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridX</span><span class="p">(</span><span class="n">xMin</span><span class="p">,</span><span class="n">xMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridX</span><span class="p">(</span><span class="n">xMin</span><span class="p">,</span><span class="n">xMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">yMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxY</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">())</span><span class="o">*</span><span class="n">scale_coeff</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridY</span><span class="p">(</span><span class="n">yMin</span><span class="p">,</span><span class="n">yMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridY</span><span class="p">(</span><span class="n">yMin</span><span class="p">,</span><span class="n">yMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//for binning we have to use real longitudinal coordinates</span>
+<span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMaxZ</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">getMinZ</span><span class="p">())</span><span class="o">*</span><span class="n">scale_coeff</span><span class="o">/</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">gamma</span><span class="p">);</span>
+<span class="w">    </span><span class="n">zMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//bin rho&amp;z Bunch to the Grid</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setZero</span><span class="p">();</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">binBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">synchronizeMPI</span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getMPI_Comm_Local</span><span class="p">());</span>
+
+<span class="w">    </span><span class="c1">//after binning we have to move to the the center of mass of the bunch</span>
+<span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">*</span><span class="n">gamma</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">wrappedBunchAnalysis</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">center</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xMin</span><span class="p">,</span><span class="w"> </span><span class="n">xMax</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">,</span><span class="w"> </span><span class="n">zMin</span><span class="p">,</span><span class="w"> </span><span class="n">zMax</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">bunchExtremaCalc</span><span class="o">-&gt;</span><span class="n">getExtremaXYZ</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">xMin</span><span class="p">,</span><span class="w"> </span><span class="n">xMax</span><span class="p">,</span><span class="w"> </span><span class="n">yMin</span><span class="p">,</span><span class="w"> </span><span class="n">yMax</span><span class="p">,</span><span class="w"> </span><span class="n">zMin</span><span class="p">,</span><span class="w"> </span><span class="n">zMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//we will account for neighboring bunches here</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setLongWrapping</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setLongWrapping</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//we will work in the center of the mass of the bunch.</span>
+<span class="w">  </span><span class="c1">//We have to shrink the longitudinal size</span>
+<span class="w">    </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getGamma</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+<span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//distance between bunches in the laboratory system</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">lambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="o">*</span><span class="n">beta</span><span class="o">/</span><span class="n">frequency_</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//distance between bunches in the center of mass of the bunch</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">lambda_cm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">gamma</span><span class="o">/</span><span class="n">frequency_</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">zMax</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">lambda</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">zMin</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">lambda</span><span class="o">/</span><span class="mi">2</span><span class="p">){</span>
+<span class="w">        </span><span class="c1">// extension should not change the results at all. It just changes the grid size.</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">extension_coeff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0001</span><span class="p">;</span>
+<span class="w">        </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extension_coeff</span><span class="o">*</span><span class="n">lambda</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="n">zMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">        </span><span class="n">zMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//check if the beam size is not zero</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">xMin</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">xMax</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">yMin</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">yMax</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">zMin</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">zMax</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;SpaceChargeCalc3D::wrappedBunchAnalysis(bunch)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The bunch min and max sizes are wrong! Cannot calculate space charge!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;x min =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xMin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot; max=&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xMax</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;y min =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yMin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot; max=&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yMax</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;z min =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">zMin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot; max=&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">zMax</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop.&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridX</span><span class="p">(</span><span class="n">xMin</span><span class="p">,</span><span class="n">xMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridX</span><span class="p">(</span><span class="n">xMin</span><span class="p">,</span><span class="n">xMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridY</span><span class="p">(</span><span class="n">yMin</span><span class="p">,</span><span class="n">yMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridY</span><span class="p">(</span><span class="n">yMin</span><span class="p">,</span><span class="n">yMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//bin rho&amp;z Bunch to the Grid</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setZero</span><span class="p">();</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">binBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="n">lambda</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">synchronizeMPI</span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getMPI_Comm_Local</span><span class="p">());</span>
+
+<span class="w">    </span><span class="c1">//after binning we have to rescale the z-coordinate to the center-of-mass system</span>
+<span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">zMax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zMin</span><span class="p">)</span><span class="o">*</span><span class="n">gamma</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">setGridZ</span><span class="p">(</span><span class="n">zMin</span><span class="p">,</span><span class="n">zMax</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//now we set the sizes of the Poisson Solver grids and</span>
+<span class="w">    </span><span class="c1">//calculate Green function FFT inside it</span>
+<span class="w">    </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">setSpacingOfExternalBunches</span><span class="p">(</span><span class="n">lambda_cm</span><span class="p">);</span>
+<span class="w">    </span><span class="n">poissonSolver</span><span class="o">-&gt;</span><span class="n">setGridXYZ</span><span class="p">(</span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">(),</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">(),</span>
+<span class="w">                                  </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">(),</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMaxY</span><span class="p">(),</span>
+<span class="w">                                  </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinZ</span><span class="p">(),</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMaxZ</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">setRatioLimit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">ratio_limit_in</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ratio_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ratio_limit_in</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">SpaceChargeCalc3D</span><span class="o">::</span><span class="n">getRatioLimit</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ratio_limit</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/_cpp_api/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

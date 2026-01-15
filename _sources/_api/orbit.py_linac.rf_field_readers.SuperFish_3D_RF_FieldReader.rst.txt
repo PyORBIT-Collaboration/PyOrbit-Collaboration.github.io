@@ -1,0 +1,27 @@
+SuperFish_3D_RF_FieldReader
+===========================
+
+.. currentmodule:: orbit.py_linac.rf_field_readers
+
+.. autoclass:: SuperFish_3D_RF_FieldReader
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SuperFish_3D_RF_FieldReader.getAxisEz
+      ~SuperFish_3D_RF_FieldReader.getDataArray
+      ~SuperFish_3D_RF_FieldReader.getNumberStepsR
+      ~SuperFish_3D_RF_FieldReader.getNumberStepsZ
+      ~SuperFish_3D_RF_FieldReader.makeGrid2DFileds_EzErH
+      ~SuperFish_3D_RF_FieldReader.readFile
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getAxisEz
+   .. automethod:: getDataArray
+   .. automethod:: getNumberStepsR
+   .. automethod:: getNumberStepsZ
+   .. automethod:: makeGrid2DFileds_EzErH
+   .. automethod:: readFile

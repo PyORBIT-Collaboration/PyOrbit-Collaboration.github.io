@@ -1,0 +1,67 @@
+AccNode
+=======
+
+.. currentmodule:: orbit.lattice
+
+.. autoclass:: AccNode
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~AccNode.AFTER
+      ~AccNode.BEFORE
+      ~AccNode.BODY
+      ~AccNode.ENTRANCE
+      ~AccNode.EXIT
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AccNode.addChildNode
+      ~AccNode.getActivePartIndex
+      ~AccNode.getAllChildren
+      ~AccNode.getBodyChildren
+      ~AccNode.getChildNodes
+      ~AccNode.getLength
+      ~AccNode.getNumberOfBodyChildren
+      ~AccNode.getNumberOfChildren
+      ~AccNode.getnParts
+      ~AccNode.initialize
+      ~AccNode.reverseOrder
+      ~AccNode.reverseOrderNodeSpecific
+      ~AccNode.setActivePartIndex
+      ~AccNode.setLength
+      ~AccNode.setnParts
+      ~AccNode.structureToText
+      ~AccNode.trackActions
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: AFTER
+   .. autoattribute:: BEFORE
+   .. autoattribute:: BODY
+   .. autoattribute:: ENTRANCE
+   .. autoattribute:: EXIT
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addChildNode
+   .. automethod:: getActivePartIndex
+   .. automethod:: getAllChildren
+   .. automethod:: getBodyChildren
+   .. automethod:: getChildNodes
+   .. automethod:: getLength
+   .. automethod:: getNumberOfBodyChildren
+   .. automethod:: getNumberOfChildren
+   .. automethod:: getnParts
+   .. automethod:: initialize
+   .. automethod:: reverseOrder
+   .. automethod:: reverseOrderNodeSpecific
+   .. automethod:: setActivePartIndex
+   .. automethod:: setLength
+   .. automethod:: setnParts
+   .. automethod:: structureToText
+   .. automethod:: trackActions

@@ -1,0 +1,6 @@
+GetLostDistributionArr
+======================
+
+.. currentmodule:: orbit.py_linac.lattice_modifications
+
+.. autofunction:: GetLostDistributionArr

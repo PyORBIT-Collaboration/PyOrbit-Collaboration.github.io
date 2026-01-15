@@ -1,0 +1,29 @@
+Field_Parser3D
+==============
+
+.. currentmodule:: orbit.parsers
+
+.. autoclass:: Field_Parser3D
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Field_Parser3D.checkGrid
+      ~Field_Parser3D.checkLimits
+      ~Field_Parser3D.getCoordinates
+      ~Field_Parser3D.getGridSize
+      ~Field_Parser3D.getLimits
+      ~Field_Parser3D.getRange
+      ~Field_Parser3D.parse
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: checkGrid
+   .. automethod:: checkLimits
+   .. automethod:: getCoordinates
+   .. automethod:: getGridSize
+   .. automethod:: getLimits
+   .. automethod:: getRange
+   .. automethod:: parse

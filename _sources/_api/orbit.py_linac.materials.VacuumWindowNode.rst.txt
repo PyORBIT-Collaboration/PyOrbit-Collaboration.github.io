@@ -1,0 +1,25 @@
+VacuumWindowNode
+================
+
+.. currentmodule:: orbit.py_linac.materials
+
+.. autoclass:: VacuumWindowNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~VacuumWindowNode.getDensityfactor
+      ~VacuumWindowNode.getMaterial
+      ~VacuumWindowNode.setPosition
+      ~VacuumWindowNode.track
+      ~VacuumWindowNode.trackDesign
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getDensityfactor
+   .. automethod:: getMaterial
+   .. automethod:: setPosition
+   .. automethod:: track
+   .. automethod:: trackDesign

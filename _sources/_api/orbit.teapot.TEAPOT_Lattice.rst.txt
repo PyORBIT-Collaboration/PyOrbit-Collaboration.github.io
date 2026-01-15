@@ -1,0 +1,29 @@
+TEAPOT_Lattice
+==============
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: TEAPOT_Lattice
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TEAPOT_Lattice.getSubLattice
+      ~TEAPOT_Lattice.getUseRealCharge
+      ~TEAPOT_Lattice.initialize
+      ~TEAPOT_Lattice.readMAD
+      ~TEAPOT_Lattice.readMADX
+      ~TEAPOT_Lattice.setUseRealCharge
+      ~TEAPOT_Lattice.trackBunch
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getSubLattice
+   .. automethod:: getUseRealCharge
+   .. automethod:: initialize
+   .. automethod:: readMAD
+   .. automethod:: readMADX
+   .. automethod:: setUseRealCharge
+   .. automethod:: trackBunch

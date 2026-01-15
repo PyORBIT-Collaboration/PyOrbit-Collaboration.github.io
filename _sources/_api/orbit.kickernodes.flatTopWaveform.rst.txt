@@ -1,0 +1,17 @@
+flatTopWaveform
+===============
+
+.. currentmodule:: orbit.kickernodes
+
+.. autoclass:: flatTopWaveform
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~flatTopWaveform.getStrength
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getStrength

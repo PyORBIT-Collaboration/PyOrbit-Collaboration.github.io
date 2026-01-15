@@ -1,0 +1,19 @@
+NumPyHandler
+============
+
+.. currentmodule:: orbit.bunch_utils
+
+.. autoclass:: NumPyHandler
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NumPyHandler.read
+      ~NumPyHandler.write
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: read
+   .. automethod:: write

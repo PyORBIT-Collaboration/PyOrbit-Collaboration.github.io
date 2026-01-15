@@ -1,0 +1,17 @@
+ErrorCoordDisplacementNode
+==========================
+
+.. currentmodule:: orbit.py_linac.errors
+
+.. autoclass:: ErrorCoordDisplacementNode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ErrorCoordDisplacementNode.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: track

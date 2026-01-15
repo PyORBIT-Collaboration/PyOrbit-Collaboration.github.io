@@ -1,0 +1,7 @@
+CircleLinacApertureNode
+=======================
+
+.. currentmodule:: orbit.py_linac.lattice
+
+.. autoclass:: CircleLinacApertureNode
+   :show-inheritance:

@@ -1,0 +1,21 @@
+AbstractQuadFieldSourceFunction
+===============================
+
+.. currentmodule:: orbit.py_linac.overlapping_fields
+
+.. autoclass:: AbstractQuadFieldSourceFunction
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~AbstractQuadFieldSourceFunction.getFuncDerivative
+      ~AbstractQuadFieldSourceFunction.getFuncValue
+      ~AbstractQuadFieldSourceFunction.getLimitsZ
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getFuncDerivative
+   .. automethod:: getFuncValue
+   .. automethod:: getLimitsZ

@@ -1,0 +1,21 @@
+MultipoleTEAPOT
+===============
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: MultipoleTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MultipoleTEAPOT.initialize
+      ~MultipoleTEAPOT.setWaveform
+      ~MultipoleTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: initialize
+   .. automethod:: setWaveform
+   .. automethod:: track

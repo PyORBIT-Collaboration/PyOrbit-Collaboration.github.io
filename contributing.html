@@ -30,6 +30,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css" />
   
@@ -153,7 +154,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -273,7 +274,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="api/pyorbit_root.html">
+                      <a class="nav-link nav-internal" href="_cpp_api/pyorbit_root.html">
                         C++ API
                       </a>
                     </li>
@@ -381,6 +382,32 @@ make<span class="w"> </span>html
 </div>
 <p>You can view the documentation in your browser by opening <code class="docutils literal notranslate"><span class="pre">docs/build/html/index.html</span></code>.</p>
 </section>
+<section id="creating-static-pages">
+<h2>Creating Static Pages<a class="headerlink" href="#creating-static-pages" title="Permalink to this headline">#</a></h2>
+<p>Simple pages may be written in Markdown  or <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText</a> and stored in the <code class="docutils literal notranslate"><span class="pre">doc/source/</span></code> directory.
+Markdown support is enabled via the MyST parser extension, refer to the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/typography.html">MyST syntax guide</a>
+for more information related to composition of Markdown documents.
+Add the file to a <code class="docutils literal notranslate"><span class="pre">toc</span></code> block in the <code class="docutils literal notranslate"><span class="pre">doc/source/index.rst</span></code> in order for it be included in the main documentation.</p>
+<ol class="arabic simple">
+<li><p>Create your document containing useful information under <code class="docutils literal notranslate"><span class="pre">doc/source/useful_info.md</span></code>.</p></li>
+</ol>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>&lt;!-- doc/source/useful_info.md --&gt;
+
+<span class="gh"># Useful Information</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Add the file to a <code class="docutils literal notranslate"><span class="pre">toc</span></code> block in the <code class="docutils literal notranslate"><span class="pre">doc/source/index.rst</span></code>.</p></li>
+</ol>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+
+   useful_info
+</pre></div>
+</div>
+<p>:::{tip}
+If you want to create a hierarchical structure of pages, add the subdirectory to the <code class="docutils literal notranslate"><span class="pre">doc/source/</span></code> directory and add the file to a <code class="docutils literal notranslate"><span class="pre">toc</span></code> block in the parent file.
+:::</p>
+</section>
 <section id="documenting-python-code">
 <h2>Documenting Python Code<a class="headerlink" href="#documenting-python-code" title="Permalink to this headline">#</a></h2>
 <section id="where-to-add-documentation">
@@ -479,7 +506,7 @@ Use Parameters with a table-like list; include types and optional default values
 via an Action (<a class="reference external" href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a>) defined in <a class="reference external" href="https://github.com/PyORBIT-Collaboration/PyORBIT3/blob/main/.github/workflows/docs.yml">PyORBIT-Collaboration/PyORBIT3/.github/workflow/docs.yml</a>.
 The action requires a <a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys">Deploy Key</a> to be added to the PyORBIT-Collaboration/PyORBIT-Collaboration.github.io repository
 as well as a <a class="reference external" href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication">Secret</a> to be created in the PyORBIT-Collaboration/PyORBIT3 repository.
-Refer to the <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-deploy-to-external-repository-external_repository">instructions for deploying to an external repository</a> for more details.</p>
+Refer to the <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-deploy-to-external-repository-external_repository">instructions for deploying to an external repository</a> and <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#tips-and-faq">Create SSH Deploy Key</a> for more details.</p>
 </section>
 </section>
 
@@ -531,6 +558,7 @@ Refer to the <a class="reference external" href="https://github.com/peaceiris/ac
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-docs">Building the Docs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-static-pages">Creating Static Pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-python-code">Documenting Python Code</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-add-documentation">Where to add documentation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docstring-format">Docstring format</a></li>

@@ -1,0 +1,17 @@
+ParticleIdNumber
+================
+
+.. currentmodule:: orbit.bunch_utils
+
+.. autoclass:: ParticleIdNumber
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ParticleIdNumber.addParticleIdNumbers
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: addParticleIdNumbers
