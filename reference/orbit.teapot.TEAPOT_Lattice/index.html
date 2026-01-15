@@ -699,11 +699,27 @@ TEAPOT has the ability to read MAD files.</p>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_Lattice.getSubLattice">
 <span class="sig-name descname"><span class="pre">getSubLattice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot/#TEAPOT_Lattice.getSubLattice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_Lattice.getSubLattice" title="Permalink to this definition">#</a></dt>
 <dd><p>It returns the new TEAPOT_Lattice with children with indexes
 between index_start and index_stop inclusive</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index_start</strong> (<em>int</em>) – </p></li>
+<li><p><strong>index_stop</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -736,6 +752,12 @@ between index_start and index_stop inclusive</p>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>mad_file_name</strong> (<em>str</em>) – </p></li>
+<li><p><strong>lineName</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
 </dl>
 </dd></dl>
 
@@ -746,6 +768,12 @@ between index_start and index_stop inclusive</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>madx_file_name</strong> (<em>str</em>) – </p></li>
+<li><p><strong>seqName</strong> (<em>str</em>) – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -758,6 +786,9 @@ between index_start and index_stop inclusive</p>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>useCharge</strong> (<em>int</em>) – </p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -768,6 +799,15 @@ between index_start and index_stop inclusive</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>bunch</strong> (<em>Bunch</em>) – </p></li>
+<li><p><strong>paramsDict</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>actionContainer</strong> (<a class="reference internal" href="../orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer" title="orbit.lattice.AccActionsContainer.AccActionsContainer"><em>orbit.lattice.AccActionsContainer.AccActionsContainer</em></a>) – </p></li>
+<li><p><strong>index_start</strong> (<em>str</em>) – </p></li>
+<li><p><strong>index_stop</strong> (<em>str</em>) – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
