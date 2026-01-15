@@ -1,0 +1,967 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.rf_cavities.RFNode &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/rf_cavities/RFNode';</script>
+    <link rel="index" title="Index" href="../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.rf_cavities.RFNode</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.rf_cavities.RFNode</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module. Includes classes for RF accelerator nodes.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="c1"># import teapot drift class</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.teapot</span><span class="w"> </span><span class="kn">import</span> <span class="n">DriftTEAPOT</span>
+
+<span class="c1"># import RF cavity classes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.rfcavities</span><span class="w"> </span><span class="kn">import</span> <span class="n">Frequency_Cav</span><span class="p">,</span> <span class="n">Harmonic_Cav</span><span class="p">,</span> <span class="n">Barrier_Cav</span><span class="p">,</span> <span class="n">Dual_Harmonic_Cav</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Base_RFNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;base_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates Base RF Cavity TEAPOT element.</span>
+<span class="sd">        It will never be called.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;base rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="c1"># self..trackBunch(bunch)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="c1"># self..trackBunch(bunch)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span>
+
+
+<div class="viewcode-block" id="Frequency_RFNode"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Frequency_RFNode/#orbit.rf_cavities.Frequency_RFNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Frequency_RFNode</span><span class="p">(</span><span class="n">Base_RFNode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">RFFreq</span><span class="p">,</span> <span class="n">RFE0TL</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;frequency_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates Frequency</span>
+<span class="sd">        RF Cavity TEAPOT element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Base_RFNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequencynode</span> <span class="o">=</span> <span class="n">Frequency_Cav</span><span class="p">(</span><span class="n">RFFreq</span><span class="p">,</span> <span class="n">RFE0TL</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;frequency rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Frequency_RFNode.trackBunch"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Frequency_RFNode/#orbit.rf_cavities.Frequency_RFNode.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequencynode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div>
+
+<div class="viewcode-block" id="Frequency_RFNode.track"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Frequency_RFNode/#orbit.rf_cavities.Frequency_RFNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequencynode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div></div>
+
+
+<div class="viewcode-block" id="Harmonic_RFNode"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Harmonic_RFNode/#orbit.rf_cavities.Harmonic_RFNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Harmonic_RFNode</span><span class="p">(</span><span class="n">Base_RFNode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;harmonic_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates Harmonic</span>
+<span class="sd">        RF Cavity TEAPOT element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Base_RFNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span> <span class="o">=</span> <span class="n">Harmonic_Cav</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;harmonic rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Harmonic_RFNode.trackBunch"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Harmonic_RFNode/#orbit.rf_cavities.Harmonic_RFNode.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div>
+
+<div class="viewcode-block" id="Harmonic_RFNode.track"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Harmonic_RFNode/#orbit.rf_cavities.Harmonic_RFNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Dual_Harmonic_RFNode</span><span class="p">(</span><span class="n">Base_RFNode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RatioRFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RatioVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">,</span> <span class="n">RFPhase2</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;harmonic_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates Harmonic</span>
+<span class="sd">        RF Cavity TEAPOT element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Base_RFNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dualharmonicnode</span> <span class="o">=</span> <span class="n">Dual_Harmonic_Cav</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RatioRFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RatioVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">,</span> <span class="n">RFPhase2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;dual harmonic rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dualharmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dualharmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span>
+
+
+<div class="viewcode-block" id="BRhoDep_Harmonic_RFNode"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.BRhoDep_Harmonic_RFNode/#orbit.rf_cavities.BRhoDep_Harmonic_RFNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BRhoDep_Harmonic_RFNode</span><span class="p">(</span><span class="n">Base_RFNode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">accelDict</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;brho_timedep_harmonic_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates BRho Time Dependent</span>
+<span class="sd">        Harmonic RF Cavity TEAPOT element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Base_RFNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Z2Phi</span> <span class="o">=</span> <span class="n">ZtoPhi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span> <span class="o">=</span> <span class="n">accelDict</span>
+        <span class="n">gammaTrans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;gammaTrans&quot;</span><span class="p">]</span>
+        <span class="n">RFHNum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFHNum&quot;</span><span class="p">]</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">BRho_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;BRho&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhase&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">mass</span><span class="p">()</span>
+        <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">gamma</span><span class="p">()</span>
+        <span class="n">keold</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
+        <span class="n">eold</span> <span class="o">=</span> <span class="n">keold</span> <span class="o">+</span> <span class="n">mass</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhase_tuple</span><span class="p">)</span>
+        <span class="n">BRho</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">BRho_tuple</span><span class="p">)</span>
+        <span class="n">pcnew</span> <span class="o">=</span> <span class="mf">0.299792458</span> <span class="o">*</span> <span class="n">charge</span> <span class="o">*</span> <span class="n">BRho</span>
+        <span class="n">enew</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pcnew</span> <span class="o">*</span> <span class="n">pcnew</span> <span class="o">+</span> <span class="n">mass</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span>
+        <span class="n">kenew</span> <span class="o">=</span> <span class="n">enew</span> <span class="o">-</span> <span class="n">mass</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">(</span><span class="n">kenew</span><span class="p">)</span>
+        <span class="n">dESync</span> <span class="o">=</span> <span class="n">enew</span> <span class="o">-</span> <span class="n">eold</span>
+        <span class="n">Zsync</span> <span class="o">=</span> <span class="n">syncZ</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">gammaTrans</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">charge</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">)</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">z</span><span class="p">(</span><span class="n">Zsync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span> <span class="o">=</span> <span class="n">Harmonic_Cav</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;harmonic rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BRhoDep_Harmonic_RFNode.trackBunch"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.BRhoDep_Harmonic_RFNode/#orbit.rf_cavities.BRhoDep_Harmonic_RFNode.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">gammaTrans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;gammaTrans&quot;</span><span class="p">]</span>
+        <span class="n">RFHNum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFHNum&quot;</span><span class="p">]</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">BRho_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;BRho&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhase&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">mass</span><span class="p">()</span>
+        <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">gamma</span><span class="p">()</span>
+        <span class="n">keold</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
+        <span class="n">eold</span> <span class="o">=</span> <span class="n">keold</span> <span class="o">+</span> <span class="n">mass</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhase_tuple</span><span class="p">)</span>
+        <span class="n">BRho</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">BRho_tuple</span><span class="p">)</span>
+        <span class="n">pcnew</span> <span class="o">=</span> <span class="mf">0.299792458</span> <span class="o">*</span> <span class="n">charge</span> <span class="o">*</span> <span class="n">BRho</span>
+        <span class="n">enew</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pcnew</span> <span class="o">*</span> <span class="n">pcnew</span> <span class="o">+</span> <span class="n">mass</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span>
+        <span class="n">kenew</span> <span class="o">=</span> <span class="n">enew</span> <span class="o">-</span> <span class="n">mass</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">(</span><span class="n">kenew</span><span class="p">)</span>
+        <span class="n">dESync</span> <span class="o">=</span> <span class="n">enew</span> <span class="o">-</span> <span class="n">eold</span>
+        <span class="n">ZtoPhi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z2Phi</span>
+        <span class="n">Zsync</span> <span class="o">=</span> <span class="n">syncZ</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">gammaTrans</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">charge</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">)</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">z</span><span class="p">(</span><span class="n">Zsync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">dESync</span><span class="p">(</span><span class="n">dESync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFVoltage</span><span class="p">(</span><span class="n">RFVoltage</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFPhase</span><span class="p">(</span><span class="n">RFPhase</span><span class="p">)</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div>
+
+<div class="viewcode-block" id="BRhoDep_Harmonic_RFNode.track"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.BRhoDep_Harmonic_RFNode/#orbit.rf_cavities.BRhoDep_Harmonic_RFNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">gammaTrans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;gammaTrans&quot;</span><span class="p">]</span>
+        <span class="n">RFHNum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFHNum&quot;</span><span class="p">]</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">BRho_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;BRho&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhase&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">mass</span><span class="p">()</span>
+        <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">gamma</span><span class="p">()</span>
+        <span class="n">keold</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
+        <span class="n">eold</span> <span class="o">=</span> <span class="n">keold</span> <span class="o">+</span> <span class="n">mass</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhase_tuple</span><span class="p">)</span>
+        <span class="n">BRho</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">BRho_tuple</span><span class="p">)</span>
+        <span class="n">pcnew</span> <span class="o">=</span> <span class="mf">0.299792458</span> <span class="o">*</span> <span class="n">charge</span> <span class="o">*</span> <span class="n">BRho</span>
+        <span class="n">enew</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pcnew</span> <span class="o">*</span> <span class="n">pcnew</span> <span class="o">+</span> <span class="n">mass</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span>
+        <span class="n">kenew</span> <span class="o">=</span> <span class="n">enew</span> <span class="o">-</span> <span class="n">mass</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">(</span><span class="n">kenew</span><span class="p">)</span>
+        <span class="n">dESync</span> <span class="o">=</span> <span class="n">enew</span> <span class="o">-</span> <span class="n">eold</span>
+        <span class="n">ZtoPhi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z2Phi</span>
+        <span class="n">Zsync</span> <span class="o">=</span> <span class="n">syncZ</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">gammaTrans</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">charge</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">)</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">z</span><span class="p">(</span><span class="n">Zsync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">dESync</span><span class="p">(</span><span class="n">dESync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFVoltage</span><span class="p">(</span><span class="n">RFVoltage</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFPhase</span><span class="p">(</span><span class="n">RFPhase</span><span class="p">)</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div></div>
+
+
+<div class="viewcode-block" id="SyncPhaseDep_Harmonic_RFNode"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode/#orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">SyncPhaseDep_Harmonic_RFNode</span><span class="p">(</span><span class="n">Base_RFNode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">accelDict</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;syncphase_timedep_harmonic_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates SyncPhase Time Dependent</span>
+<span class="sd">        Harmonic RF Cavity TEAPOT element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Base_RFNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Z2Phi</span> <span class="o">=</span> <span class="n">ZtoPhi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span> <span class="o">=</span> <span class="n">accelDict</span>
+        <span class="n">gammaTrans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;gammaTrans&quot;</span><span class="p">]</span>
+        <span class="n">RFHNum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFHNum&quot;</span><span class="p">]</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">SyncPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;SyncPhase&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhase&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">gamma</span><span class="p">()</span>
+        <span class="n">keold</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhase_tuple</span><span class="p">)</span>
+        <span class="n">SyncPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">SyncPhase_tuple</span><span class="p">)</span>
+        <span class="n">dESync</span> <span class="o">=</span> <span class="n">charge</span> <span class="o">*</span> <span class="n">RFVoltage</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">RFHNum</span> <span class="o">*</span> <span class="n">SyncPhase</span> <span class="o">+</span> <span class="n">RFPhase</span><span class="p">)</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+        <span class="n">kenew</span> <span class="o">=</span> <span class="n">keold</span> <span class="o">+</span> <span class="n">dESync</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">(</span><span class="n">kenew</span><span class="p">)</span>
+        <span class="n">Zsync</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">SyncPhase</span> <span class="o">/</span> <span class="p">(</span><span class="mf">180.0</span> <span class="o">*</span> <span class="n">ZtoPhi</span><span class="p">)</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">z</span><span class="p">(</span><span class="n">Zsync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span> <span class="o">=</span> <span class="n">Harmonic_Cav</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;harmonic rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SyncPhaseDep_Harmonic_RFNode.trackBunch"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode/#orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">gammaTrans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;gammaTrans&quot;</span><span class="p">]</span>
+        <span class="n">RFHNum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFHNum&quot;</span><span class="p">]</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">SyncPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;SyncPhase&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhase&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">gamma</span><span class="p">()</span>
+        <span class="n">keold</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhase_tuple</span><span class="p">)</span>
+        <span class="n">SyncPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">SyncPhase_tuple</span><span class="p">)</span>
+        <span class="n">dESync</span> <span class="o">=</span> <span class="n">charge</span> <span class="o">*</span> <span class="n">RFVoltage</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">RFHNum</span> <span class="o">*</span> <span class="n">SyncPhase</span> <span class="o">+</span> <span class="n">RFPhase</span><span class="p">)</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+        <span class="n">kenew</span> <span class="o">=</span> <span class="n">keold</span> <span class="o">+</span> <span class="n">dESync</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">(</span><span class="n">kenew</span><span class="p">)</span>
+        <span class="n">ZtoPhi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z2Phi</span>
+        <span class="n">Zsync</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">SyncPhase</span> <span class="o">/</span> <span class="p">(</span><span class="mf">180.0</span> <span class="o">*</span> <span class="n">ZtoPhi</span><span class="p">)</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">z</span><span class="p">(</span><span class="n">Zsync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">dESync</span><span class="p">(</span><span class="n">dESync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFVoltage</span><span class="p">(</span><span class="n">RFVoltage</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFPhase</span><span class="p">(</span><span class="n">RFPhase</span><span class="p">)</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div>
+
+<div class="viewcode-block" id="SyncPhaseDep_Harmonic_RFNode.track"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode/#orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">gammaTrans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;gammaTrans&quot;</span><span class="p">]</span>
+        <span class="n">RFHNum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFHNum&quot;</span><span class="p">]</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">SyncPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;SyncPhase&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhase_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhase&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">gamma</span><span class="p">()</span>
+        <span class="n">keold</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhase_tuple</span><span class="p">)</span>
+        <span class="n">SyncPhase</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">SyncPhase_tuple</span><span class="p">)</span>
+        <span class="n">dESync</span> <span class="o">=</span> <span class="n">charge</span> <span class="o">*</span> <span class="n">RFVoltage</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">RFHNum</span> <span class="o">*</span> <span class="n">SyncPhase</span> <span class="o">+</span> <span class="n">RFPhase</span><span class="p">)</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+        <span class="n">kenew</span> <span class="o">=</span> <span class="n">keold</span> <span class="o">+</span> <span class="n">dESync</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">(</span><span class="n">kenew</span><span class="p">)</span>
+        <span class="n">ZtoPhi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z2Phi</span>
+        <span class="n">Zsync</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">SyncPhase</span> <span class="o">/</span> <span class="p">(</span><span class="mf">180.0</span> <span class="o">*</span> <span class="n">ZtoPhi</span><span class="p">)</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">z</span><span class="p">(</span><span class="n">Zsync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">dESync</span><span class="p">(</span><span class="n">dESync</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFVoltage</span><span class="p">(</span><span class="n">RFVoltage</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">RFPhase</span><span class="p">(</span><span class="n">RFPhase</span><span class="p">)</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonicnode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div></div>
+
+
+<div class="viewcode-block" id="Barrier_RFNode"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Barrier_RFNode/#orbit.rf_cavities.Barrier_RFNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Barrier_RFNode</span><span class="p">(</span><span class="n">Base_RFNode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhasep</span><span class="p">,</span> <span class="n">RFPhasem</span><span class="p">,</span> <span class="n">dRFPhasep</span><span class="p">,</span> <span class="n">dRFPhasem</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;barrier_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates Barrier</span>
+<span class="sd">        RF Cavity TEAPOT element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Base_RFNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span> <span class="o">=</span> <span class="n">Barrier_Cav</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhasep</span><span class="p">,</span> <span class="n">RFPhasem</span><span class="p">,</span> <span class="n">dRFPhasep</span><span class="p">,</span> <span class="n">dRFPhasem</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;barrier rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Barrier_RFNode.trackBunch"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Barrier_RFNode/#orbit.rf_cavities.Barrier_RFNode.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div>
+
+<div class="viewcode-block" id="Barrier_RFNode.track"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.Barrier_RFNode/#orbit.rf_cavities.Barrier_RFNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span></div></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TimeDep_Barrier_RFNode</span><span class="p">(</span><span class="n">Base_RFNode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">accelDict</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;syncphase_timedep_harmonic_rfnode&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Creates SyncPhase Time Dependent</span>
+<span class="sd">        Harmonic RF Cavity TEAPOT element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Base_RFNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span> <span class="o">=</span> <span class="n">accelDict</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhasep_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhasep&quot;</span><span class="p">]</span>
+        <span class="n">RFPhasem_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhasem&quot;</span><span class="p">]</span>
+        <span class="n">dRFPhasep_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;dRFPhasep&quot;</span><span class="p">]</span>
+        <span class="n">dRFPhasem_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;dRFPhasem&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhasep</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhasep_tuple</span><span class="p">)</span>
+        <span class="n">RFPhasem</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhasem_tuple</span><span class="p">)</span>
+        <span class="n">dRFPhasep</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">dRFPhasep_tuple</span><span class="p">)</span>
+        <span class="n">dRFPhasem</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">dRFPhasem_tuple</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span> <span class="o">=</span> <span class="n">Barrier_Cav</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhasep</span><span class="p">,</span> <span class="n">RFPhasem</span><span class="p">,</span> <span class="n">dRFPhasep</span><span class="p">,</span> <span class="n">dRFPhasem</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;barrier rf node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhasep_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhasep&quot;</span><span class="p">]</span>
+        <span class="n">RFPhasem_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhasem&quot;</span><span class="p">]</span>
+        <span class="n">dRFPhasep_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;dRFPhasep&quot;</span><span class="p">]</span>
+        <span class="n">dRFPhasem_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;dRFPhasem&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhasep</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhasep_tuple</span><span class="p">)</span>
+        <span class="n">RFPhasem</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhasem_tuple</span><span class="p">)</span>
+        <span class="n">dRFPhasep</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">dRFPhasep_tuple</span><span class="p">)</span>
+        <span class="n">dRFPhasem</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">dRFPhasem_tuple</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">RFVoltage</span><span class="p">(</span><span class="n">RFVoltage</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">RFPhasep</span><span class="p">(</span><span class="n">RFPhasep</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">RFPhasem</span><span class="p">(</span><span class="n">RFPhasem</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">dRFPhasep</span><span class="p">(</span><span class="n">dRFPhasep</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">dRFPhasem</span><span class="p">(</span><span class="n">dRFPhasem</span><span class="p">)</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The rfcavity-teapot class implementation of the</span>
+<span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">n_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;n_tuple&quot;</span><span class="p">]</span>
+        <span class="n">time_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+        <span class="n">RFVoltage_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFVoltage&quot;</span><span class="p">]</span>
+        <span class="n">RFPhasep_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhasep&quot;</span><span class="p">]</span>
+        <span class="n">RFPhasem_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;RFPhasem&quot;</span><span class="p">]</span>
+        <span class="n">dRFPhasep_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;dRFPhasep&quot;</span><span class="p">]</span>
+        <span class="n">dRFPhasem_tuple</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localDict</span><span class="p">[</span><span class="s2">&quot;dRFPhasem&quot;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">RFVoltage</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFVoltage_tuple</span><span class="p">)</span>
+        <span class="n">RFPhasep</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhasep_tuple</span><span class="p">)</span>
+        <span class="n">RFPhasem</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">RFPhasem_tuple</span><span class="p">)</span>
+        <span class="n">dRFPhasep</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">dRFPhasep_tuple</span><span class="p">)</span>
+        <span class="n">dRFPhasem</span> <span class="o">=</span> <span class="n">interp</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">time_tuple</span><span class="p">,</span> <span class="n">dRFPhasem_tuple</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">RFVoltage</span><span class="p">(</span><span class="n">RFVoltage</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">RFPhasep</span><span class="p">(</span><span class="n">RFPhasep</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">RFPhasem</span><span class="p">(</span><span class="n">RFPhasem</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">dRFPhasep</span><span class="p">(</span><span class="n">dRFPhasep</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">dRFPhasem</span><span class="p">(</span><span class="n">dRFPhasem</span><span class="p">)</span>
+        <span class="c1"># put the track method here:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">barriernode</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug tracking the bunch through the rf node = &quot;,\</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; part ind = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">(),</span> <span class="s2">&quot; length = &quot;</span><span class="p">,</span> <span class="n">length</span>
+        <span class="c1"># print &quot;time = &quot;, time</span>
+        <span class="c1"># print &quot;RFVoltage = &quot;, RFVoltage</span>
+        <span class="c1"># print &quot;RFPhaseplus = &quot;, RFPhasep + dRFPhasep, RFPhasep - dRFPhasep</span>
+        <span class="c1"># print &quot;RFPhasemnus = &quot;, RFPhasem - dRFPhasem, RFPhasem + dRFPhasem</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n_tuple</span><span class="p">,</span> <span class="n">x_tuple</span><span class="p">,</span> <span class="n">y_tuple</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Linear interpolation: Given n-tuple + 1 points,</span>
+<span class="sd">    x_tuple and y_tuple, routine finds y = y_tuple</span>
+<span class="sd">    at x in x_tuple. Assumes x_tuple is increasing array.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">x_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">y</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">x_tuple</span><span class="p">[</span><span class="n">n_tuple</span><span class="p">]:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y_tuple</span><span class="p">[</span><span class="n">n_tuple</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">y</span>
+    <span class="n">dxp</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_tuple</span><span class="p">):</span>
+        <span class="n">dxm</span> <span class="o">=</span> <span class="n">dxp</span>
+        <span class="n">dxp</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x_tuple</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">dxmp</span> <span class="o">=</span> <span class="n">dxm</span> <span class="o">*</span> <span class="n">dxp</span>
+        <span class="k">if</span> <span class="n">dxmp</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">dxp</span> <span class="o">*</span> <span class="n">y_tuple</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">dxm</span> <span class="o">*</span> <span class="n">y_tuple</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">dxm</span> <span class="o">-</span> <span class="n">dxp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">syncZ</span><span class="p">(</span><span class="n">ZtoPhi</span><span class="p">,</span> <span class="n">gammaTrans</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">charge</span><span class="p">,</span> <span class="n">dESync</span><span class="p">,</span> <span class="n">RFHNum</span><span class="p">,</span> <span class="n">RFVoltage</span><span class="p">,</span> <span class="n">RFPhase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates position of synchronous particle.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Zsync</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dESync</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">charge</span> <span class="o">*</span> <span class="n">RFVoltage</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Zsync</span>
+    <span class="n">PhaseTot</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">asin</span><span class="p">(</span><span class="n">dESync</span> <span class="o">/</span> <span class="p">(</span><span class="n">charge</span> <span class="o">*</span> <span class="n">RFVoltage</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">gamma</span> <span class="o">&gt;</span> <span class="n">gammaTrans</span> <span class="ow">and</span> <span class="n">gammaTrans</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">PhaseTot</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">PhaseTot</span>
+    <span class="n">Zsync</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">PhaseTot</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">RFPhase</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">RFHNum</span> <span class="o">*</span> <span class="n">ZtoPhi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Zsync</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<map id="inheritancec44aa1bd53" name="inheritancec44aa1bd53">
+<area shape="rect" id="node1" href="../orbit.lattice.AccNode/#orbit.lattice.AccNode" target="_top" title="Class. Base class of the accelerator nodes hierarchy." alt="" coords="188,100,260,125"/>
+<area shape="rect" id="node5" href="../orbit.lattice.AccNodeBunchTracker/#orbit.lattice.AccNodeBunchTracker" target="_top" title="Class. Base class of the accelerator nodes that track the pyORBIT bunch." alt="" coords="304,100,454,125"/>
+<area shape="rect" id="node2" href="../orbit.utils.NamedObject/#orbit.utils.NamedObject" target="_top" title="Class. An object that has a name." alt="" coords="24,52,125,78"/>
+<area shape="rect" id="node3" href="../orbit.utils.TypedObject/#orbit.utils.TypedObject" target="_top" title="Class. Object that has a type." alt="" coords="28,100,121,125"/>
+<area shape="rect" id="node4" href="../orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject" target="_top" title="Class. Object that has a parameters dictionary." alt="" coords="12,148,137,173"/>
+<area shape="rect" id="node6" href="../orbit.py_linac.lattice.BaseLinacNode/#orbit.py_linac.lattice.BaseLinacNode" target="_top" title="The base abstract class of the linac accelerator elements hierarchy." alt="" coords="498,100,609,125"/>
+<area shape="rect" id="node8" href="../orbit.py_linac.orbit_correction.TransverseBPM/#orbit.py_linac.orbit_correction.TransverseBPM" target="_top" title="BPM node for transverse position report" alt="" coords="653,100,763,125"/>
+<area shape="rect" id="node7" href="../orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection" target="_top" title="Class to perform correction of the trajectory in the linac type lattice" alt="" coords="5,5,144,30"/>
+</map>

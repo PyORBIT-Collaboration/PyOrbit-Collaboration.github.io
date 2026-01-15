@@ -1,0 +1,1075 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.py_linac.lattice.LinacAccLatticeLib &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/py_linac/lattice/LinacAccLatticeLib';</script>
+    <link rel="index" title="Index" href="../../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac.lattice.LinacAccLatticeLib</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.py_linac.lattice.LinacAccLatticeLib</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The general Linac Accelerator lattice. It is a subclass of the Acclattice.</span>
+<span class="sd">It tracks the bunch through the linac accelerator nodes. In addition to the</span>
+<span class="sd">usual accelerator lattice it has the sequences and RF cavities. The sequences and</span>
+<span class="sd">RF cavities are containers for accelerator nodes (seqencies) and RF gaps.</span>
+<span class="sd">The Sequence class is used to keep iformation about positions of elements that are inside.</span>
+<span class="sd">The Cavity class keeps the refernce to RF gaps and a value of the cavity amplitude.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="c1"># import the utilities</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span><span class="p">,</span> <span class="n">NamedObject</span><span class="p">,</span> <span class="n">ParamsDictObject</span><span class="p">,</span> <span class="n">phaseNearTargetPhase</span>
+
+<span class="c1"># import general accelerator elements and lattice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccLattice</span><span class="p">,</span> <span class="n">AccNode</span><span class="p">,</span> <span class="n">AccActionsContainer</span>
+
+<span class="c1"># import acc. nodes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice.LinacAccNodes</span><span class="w"> </span><span class="kn">import</span> <span class="n">Quad</span><span class="p">,</span> <span class="n">AbstractRF_Gap</span><span class="p">,</span> <span class="n">MarkerLinacNode</span>
+
+<span class="c1"># import orbit Bunch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.bunch</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bunch</span>
+
+
+<div class="viewcode-block" id="LinacAccLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LinacAccLattice</span><span class="p">(</span><span class="n">AccLattice</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of the AccLattice class. In the beginning the lattcie is empty.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">AccLattice</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__sequences</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="LinacAccLattice.initialize"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.initialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method. Initializes the linac lattice, child node structures, and calculates</span>
+<span class="sd">        the one turn matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">AccLattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="c1"># -----add Sequences that are referenced from the AccNodes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__sequences</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="n">seq</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">seq</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__sequences</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__sequences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+        <span class="c1"># ------define sequences&#39; position and length (position of the beginning of the sequence)</span>
+        <span class="n">seqs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getSequences</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">seqs</span><span class="p">:</span>
+            <span class="n">nodes</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">node_start</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">node_last</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">pos_start</span><span class="p">,</span> <span class="n">pos_tmp</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()[</span><span class="n">node_start</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">pos_tmp</span><span class="p">,</span> <span class="n">pos_stop</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()[</span><span class="n">node_last</span><span class="p">]</span>
+            <span class="n">seq</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos_start</span><span class="p">)</span>
+            <span class="n">seq</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">pos_stop</span> <span class="o">-</span> <span class="n">pos_start</span><span class="p">)</span>
+            <span class="c1"># ---- define position parameter for nodes - position are realtive to start of the sequence</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">pos_node_start</span><span class="p">,</span> <span class="n">pos_node_end</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()[</span><span class="n">node</span><span class="p">]</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">pos_node_start</span> <span class="o">+</span> <span class="n">pos_node_end</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="n">pos_start</span><span class="p">)</span>
+        <span class="c1"># ------add RF cavities that are in referenced from the AccNodes (RF gaps)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">AbstractRF_Gap</span><span class="p">):</span>
+                <span class="n">rf_cavity</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">rf_cavity</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;LinacAccLattice.initialize() - Problem with RF gap!&quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;RF gap=&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; does not have the parent RF cavity!&quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">rf_cavity</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rf_cavity</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.setLinacTracker"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.setLinacTracker">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method will switch tracker module to the linac specific traker</span>
+<span class="sd">        for each node on the first level.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">setLinacTracker</span><span class="p">(</span><span class="n">switch</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.reverseOrder"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.reverseOrder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is used for a lattice reversal and a bunch backtracking.</span>
+<span class="sd">        This method will reverse the order of the children nodes. It will</span>
+<span class="sd">        apply the reverse recursively to the all children nodes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">AccLattice</span><span class="o">.</span><span class="n">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getSequences</span><span class="p">()</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="n">seqs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getSequences</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">seqs</span><span class="p">:</span>
+            <span class="n">seq</span><span class="o">.</span><span class="n">reverseOrder</span><span class="p">()</span>
+        <span class="c1"># ---- reverse order of RF gaps in the RF Cavities and change the first RF gap assignment</span>
+        <span class="k">for</span> <span class="n">rf_cavity</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRF_Cavities</span><span class="p">():</span>
+            <span class="n">rf_cavity</span><span class="o">.</span><span class="n">reverseOrder</span><span class="p">()</span>
+        <span class="c1"># ---- now initialization of the lattice</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+        <span class="c1"># ------ the positions of the nodes inside sequences will be defined by their positions</span>
+        <span class="c1"># ------ inside their order in the AccLattice. It is necessary for the reverse order</span>
+        <span class="c1"># ------ operation.</span>
+        <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">seqs</span><span class="p">:</span>
+            <span class="n">pos_seq_start</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span>
+            <span class="n">nodes</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">pos_start</span><span class="p">,</span> <span class="n">pos_stop</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setPosition</span><span class="p">((</span><span class="n">pos_start</span> <span class="o">+</span> <span class="n">pos_stop</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="n">pos_seq_start</span><span class="p">)</span>
+            <span class="n">nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">seq</span><span class="o">.</span><span class="n">setNodes</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		for seq in seqs:</span>
+<span class="sd">			for node in nodes:</span>
+<span class="sd">				(pos_start,pos_stop) = node_pos_dict[node]</span>
+<span class="sd">				print &quot;debug node=&quot;,node.getName(),&quot; (pos_start,pos_stop)=&quot;,(pos_start,pos_stop),&quot; L=&quot;,node.getLength()</span>
+<span class="sd">		&quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getSubLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getSubLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getSubLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It returns the new LinacAccLattice with children with indexes</span>
+<span class="sd">        between index_start and index_stop inclusive.</span>
+<span class="sd">        UNFORTUNATELY: At this moment it is not possible because the lattice has</span>
+<span class="sd">        RF gap with unique references to RF cavities and Sequences which are</span>
+<span class="sd">        bidirectional.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The getSubLattice method of LinacAccLattice!&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;That is not possible to get a sub-lattice for LinacAccLattice.&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Use the trackBunch method with start and end indexes.&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getSubLattice</span><span class="p">(</span><span class="n">LinacAccLattice</span><span class="p">(),</span> <span class="n">index_start</span><span class="p">,</span> <span class="n">index_stop</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.trackActions"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.trackActions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method. Tracks the actions through all nodes in the lattice. The indexes are inclusive.</span>
+<span class="sd">        The method from the parent class was overloaded to provide the ability to stop tracking</span>
+<span class="sd">        if necessary. In the linac, the synchronous particle could start to move backwards in the lattice</span>
+<span class="sd">        because of the RF parameters are far away from the design values (acceptance scans).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;lattice&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;actions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">actionsContainer</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;stop tracking&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="s2">&quot;path_length&quot;</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">):</span>
+            <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;path_length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">if</span> <span class="n">index_start</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">index_start</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">index_stop</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">index_stop</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">())</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">index_start</span> <span class="p">:</span> <span class="n">index_stop</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;stop tracking&quot;</span><span class="p">]:</span>
+                <span class="k">break</span>
+            <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+            <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;parentNode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actionsContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.trackBunch"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">actionContainer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It tracks the bunch through the lattice.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">actionContainer</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">actionContainer</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">(</span><span class="s2">&quot;Bunch Tracking&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">paramsDict</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bunch</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">)</span>
+
+        <span class="n">actionContainer</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actionContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">,</span> <span class="n">index_start</span><span class="p">,</span> <span class="n">index_stop</span><span class="p">)</span>
+        <span class="n">actionContainer</span><span class="o">.</span><span class="n">removeAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.trackDesignBunch"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.trackDesignBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesignBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_in</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">actionContainer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This will track the design bunch through the linac and set up RF Cavities times of</span>
+<span class="sd">        arrivals.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">actionContainer</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">actionContainer</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">(</span><span class="s2">&quot;Design Bunch Tracking&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">paramsDict</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">Bunch</span><span class="p">()</span>
+        <span class="n">bunch_in</span><span class="o">.</span><span class="n">copyEmptyBunchTo</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bunch</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="n">localParamsDict</span><span class="p">):</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">localParamsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">trackDesign</span><span class="p">(</span><span class="n">localParamsDict</span><span class="p">)</span>
+
+        <span class="n">actionContainer</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">trackDesign</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">actionContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">,</span> <span class="n">index_start</span><span class="p">,</span> <span class="n">index_stop</span><span class="p">)</span>
+        <span class="n">actionContainer</span><span class="o">.</span><span class="n">removeAction</span><span class="p">(</span><span class="n">trackDesign</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">bunch</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getRF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getRF_Cavity">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the cavity instance according to the name&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">cav</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">cav</span><span class="o">.</span><span class="n">getName</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">cav</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getRF_Cavities"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getRF_Cavities">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the array with RF cavities.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.addSequence"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.addSequence">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addSequence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__sequences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The LinacAccLattice, method addSequence(seq)!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;seq is not a subclass of Sequence.&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getSequence"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getSequence">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getSequence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the sequence instance according to the name&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__sequences</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">seq</span><span class="o">.</span><span class="n">getName</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">seq</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getSequences"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getSequences">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getSequences</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the array with sequences.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__sequences</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getQuads"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getQuads">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getQuads</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the list of all quads or just quads belong to a particular sequence.&quot;&quot;&quot;</span>
+        <span class="n">quads</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">seq</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">()</span> <span class="o">==</span> <span class="n">seq</span><span class="p">:</span>
+                        <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">quads</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getNodesOfClass"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getNodesOfClass">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesOfClass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Class</span><span class="p">,</span> <span class="n">seq_names</span><span class="o">=</span><span class="p">[]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of all nodes which are instances of Class</span>
+<span class="sd">        or these nodes which are also belong to a particular sequence.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nSeqs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq_names</span><span class="p">)</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">nSeqs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Class</span><span class="p">):</span>
+                    <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">seq_name</span> <span class="ow">in</span> <span class="n">seq_names</span><span class="p">:</span>
+                <span class="n">accSeq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getSequence</span><span class="p">(</span><span class="n">seq_name</span><span class="p">)</span>
+                <span class="n">seq_nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">seq_nodes</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Class</span><span class="p">):</span>
+                        <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getNodesOfClasses"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getNodesOfClasses">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodesOfClasses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Classes</span><span class="p">,</span> <span class="n">seq_names</span><span class="o">=</span><span class="p">[]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of all nodes which are instances of any Class in Classes array</span>
+<span class="sd">        or these nodes which are also belong to a particular sequence.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nSeqs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq_names</span><span class="p">)</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">nSeqs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+                <span class="n">info</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">for</span> <span class="n">Class</span> <span class="ow">in</span> <span class="n">Classes</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Class</span><span class="p">):</span>
+                        <span class="n">info</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">if</span> <span class="n">info</span><span class="p">:</span>
+                    <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">seq_name</span> <span class="ow">in</span> <span class="n">seq_names</span><span class="p">:</span>
+                <span class="n">accSeq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getSequence</span><span class="p">(</span><span class="n">seq_name</span><span class="p">)</span>
+                <span class="n">seq_nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">seq_nodes</span><span class="p">:</span>
+                    <span class="n">info</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="k">for</span> <span class="n">Class</span> <span class="ow">in</span> <span class="n">Classes</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Class</span><span class="p">):</span>
+                            <span class="n">info</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">if</span> <span class="n">info</span><span class="p">:</span>
+                        <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getRF_Gaps"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getRF_Gaps">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Gaps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rf_cav</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the list of all RF gaps or just gaps belong to a particular RF cavity.&quot;&quot;&quot;</span>
+        <span class="n">gaps</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">AbstractRF_Gap</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">rf_cav</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">gaps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">()</span> <span class="o">==</span> <span class="n">rf_cav</span><span class="p">:</span>
+                        <span class="n">gaps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">gaps</span></div>
+
+<div class="viewcode-block" id="LinacAccLattice.getNodeForPosition"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice.getNodeForPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodeForPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It is a convenience method. It returns the node which</span>
+<span class="sd">        coordinates cover the z-position.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+        <span class="n">index0</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">index1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="p">(</span><span class="n">posBefore0</span><span class="p">,</span> <span class="n">posAfter0</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">index0</span><span class="p">]]</span>
+        <span class="p">(</span><span class="n">posBefore1</span><span class="p">,</span> <span class="n">posAfter1</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">index1</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;=</span> <span class="n">posBefore0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">index0</span><span class="p">],</span> <span class="n">index0</span><span class="p">,</span> <span class="n">posBefore0</span><span class="p">,</span> <span class="n">posAfter0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">z</span> <span class="o">&gt;=</span> <span class="n">posAfter1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">index1</span><span class="p">],</span> <span class="n">index1</span><span class="p">,</span> <span class="n">posBefore1</span><span class="p">,</span> <span class="n">posAfter1</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">index0</span> <span class="o">!=</span> <span class="n">index1</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index0</span> <span class="o">+</span> <span class="n">index1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+            <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">index</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">posBefore</span><span class="p">:</span>
+                <span class="n">index1</span> <span class="o">=</span> <span class="n">index</span>
+                <span class="p">(</span><span class="n">posBefore1</span><span class="p">,</span> <span class="n">posAfter1</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">index1</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="n">posAfter</span><span class="p">:</span>
+                <span class="n">index0</span> <span class="o">=</span> <span class="n">index</span>
+                <span class="p">(</span><span class="n">posBefore0</span><span class="p">,</span> <span class="n">posAfter0</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">index0</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="n">z</span> <span class="o">&gt;=</span> <span class="n">posBefore</span> <span class="ow">and</span> <span class="n">z</span> <span class="o">&lt;=</span> <span class="n">posAfter</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">z</span> <span class="o">&gt;=</span> <span class="n">posBefore0</span> <span class="ow">and</span> <span class="n">z</span> <span class="o">&lt;=</span> <span class="n">posAfter0</span><span class="p">:</span>
+                <span class="n">index</span> <span class="o">=</span> <span class="n">index0</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">z</span> <span class="o">&gt;=</span> <span class="n">posBefore1</span> <span class="ow">and</span> <span class="n">z</span> <span class="o">&lt;=</span> <span class="n">posAfter1</span><span class="p">:</span>
+                <span class="n">index</span> <span class="o">=</span> <span class="n">index1</span>
+                <span class="k">break</span>
+        <span class="c1"># -------------------------------------------</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span></div></div>
+
+
+<span class="c1"># ----------------------------------------------------------------</span>
+<span class="c1"># Classes that are specific for the linac model</span>
+<span class="c1"># ----------------------------------------------------------------</span>
+
+
+<div class="viewcode-block" id="RF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">RF_Cavity</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">ParamsDictObject</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is the class to keep refernces to the RF Gaps which are BaseLinacNode</span>
+<span class="sd">    subclasses. This class does not belong to the AccNodes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">):</span>
+        <span class="n">NamedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">ParamsDictObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># ---- firstGapEntrancePhase is used by gaps instead of phase in the case</span>
+        <span class="c1"># ---- of non-zero length gaps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__firstGapEntrancePhase</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__firstGapEntranceDesignPhase</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;phase&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;amp&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;designPhase&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;designAmp&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;designArrivalTime&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;isDesignSetUp&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="c1">#---- This parameter is only for RF gap types with </span>
+        <span class="c1">#---- the continuous RF fields on the axis of the cavity.</span>
+        <span class="c1">#---- If usePhaseAtEntrance = False we will use the phase at the center</span>
+        <span class="c1">#---- of RF gap as for a standard cavity representations as a set </span>
+        <span class="c1">#---- of zero-length RF gaps.</span>
+        <span class="c1">#---- If usePhaseAtEntrance = False we use the phase at the entrance</span>
+        <span class="c1">#---- of the cavity.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">usePhaseAtEntrance</span> <span class="o">=</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="RF_Cavity.setDesignSetUp"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setDesignSetUp">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setDesignSetUp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">designOnOf</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the design set up information (True,False).&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;isDesignSetUp&quot;</span><span class="p">,</span> <span class="n">designOnOf</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.isDesignSetUp"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.isDesignSetUp">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isDesignSetUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the design set up information (True,False).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;isDesignSetUp&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.setDesignArrivalTime"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setDesignArrivalTime">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setDesignArrivalTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the design arrival time for the first RF gap.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;designArrivalTime&quot;</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getDesignArrivalTime"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getDesignArrivalTime">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDesignArrivalTime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the design arrival time for the first RF gap.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;designArrivalTime&quot;</span><span class="p">)</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_setDesignPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the design phase for the first RF gap. This method is called from the design tracking.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;designPhase&quot;</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RF_Cavity.getDesignPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getDesignPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDesignPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the design phase for the first RF gap.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;designPhase&quot;</span><span class="p">)</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_setDesignAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Amp</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the design Amp for the RF cavity. This method is called from the design tracking.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;designAmp&quot;</span><span class="p">,</span> <span class="n">Amp</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RF_Cavity.getDesignAmp"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getDesignAmp">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDesignAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the design Amp for the RF cavity.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;designAmp&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.setPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the phase for the first RF gap.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;phase&quot;</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the phase for the first RF gap.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;phase&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.setFirstGapEntrancePhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setFirstGapEntrancePhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setFirstGapEntrancePhase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the phase at the first gap entrance if Length_of_gap &gt; 0.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__firstGapEntrancePhase</span> <span class="o">=</span> <span class="n">phase</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getFirstGapEntrancePhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getFirstGapEntrancePhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFirstGapEntrancePhase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the phase at the first gap entrance if Length_of_gap &gt; 0.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__firstGapEntrancePhase</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.setFirstGapEntranceDesignPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setFirstGapEntranceDesignPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setFirstGapEntranceDesignPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the design phase at the first gap entrance if Length_of_gap &gt; 0.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__firstGapEntranceDesignPhase</span> <span class="o">=</span> <span class="n">phase</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getFirstGapEntranceDesignPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getFirstGapEntranceDesignPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFirstGapEntranceDesignPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the design phase at the first gap entrance if Length_of_gap &gt; 0.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__firstGapEntranceDesignPhase</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.setAmp"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setAmp">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Amp</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the Amp for RF cavity.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;amp&quot;</span><span class="p">,</span> <span class="n">Amp</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getAmp"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getAmp">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getAmp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the Amp for RF cavity.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;amp&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.setFrequency"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setFrequency">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setFrequency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the frequency in Hz.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getFrequency"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getFrequency">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFrequency</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the frequency in Hz.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;frequency&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.setPosition"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the position of the RF cavity in the sequence.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getPosition"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the position of the RF cavity in the sequence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.addRF_GapNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.addRF_GapNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addRF_GapNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rfGap</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds the rf gap to the cavity.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rfGap</span><span class="p">)</span>
+        <span class="n">rfGap</span><span class="o">.</span><span class="n">setRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">rfGap</span><span class="o">.</span><span class="n">setAsFirstRFGap</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rfGap</span><span class="o">.</span><span class="n">setAsFirstRFGap</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getAvgGapPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getAvgGapPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getAvgGapPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns average phase for all RF gaps in the cavity&quot;&quot;&quot;</span>
+        <span class="n">avg_phase</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">phase</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">phaseNearTargetPhase</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">getGapPhase</span><span class="p">(),</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">rfGap</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">:</span>
+            <span class="n">phase_new</span> <span class="o">=</span> <span class="n">phaseNearTargetPhase</span><span class="p">(</span><span class="n">rfGap</span><span class="o">.</span><span class="n">getGapPhase</span><span class="p">(),</span> <span class="n">phase</span><span class="p">)</span>
+            <span class="n">avg_phase</span> <span class="o">+=</span> <span class="n">phase_new</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">phase_new</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">avg_phase</span> <span class="o">/=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">avg_phase</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getAvgGapPhaseDeg"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getAvgGapPhaseDeg">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getAvgGapPhaseDeg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns average phase in degrees for all RF gaps in the cavity&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getAvgGapPhase</span><span class="p">()</span> <span class="o">*</span> <span class="mf">180.0</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span></div>
+        
+<div class="viewcode-block" id="RF_Cavity.setUsePhaseAtEntrance"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.setUsePhaseAtEntrance">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setUsePhaseAtEntrance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">usePhaseAtEntrance</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This parameter is only for RF gap types with the continuous RF fields </span>
+<span class="sd">        on the axis of the cavity.</span>
+<span class="sd">        If usePhaseAtEntrance = False we will use the phase at the center</span>
+<span class="sd">        of 1 st RF gap as for a standard cavity representations as a set </span>
+<span class="sd">        of zero-length RF gaps.</span>
+<span class="sd">        If usePhaseAtEntrance = False we use the phase at the entrance</span>
+<span class="sd">        of the cavity.</span>
+<span class="sd">        By default it is False. Switching to True will change cavity phase and</span>
+<span class="sd">        all longitudinal dynamics calculations. You should calculate and set</span>
+<span class="sd">        of the cavity phase before the bunch tracking. And, of course, you </span>
+<span class="sd">        should start with the trackDesignBunch(...) lattice method. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">usePhaseAtEntrance</span> <span class="o">=</span> <span class="n">usePhaseAtEntrance</span></div>
+        
+<div class="viewcode-block" id="RF_Cavity.getUsePhaseAtEntrance"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getUsePhaseAtEntrance">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getUsePhaseAtEntrance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns the usePhaseAtEntrance parameter of the cavity &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">usePhaseAtEntrance</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.removeAllGapNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.removeAllGapNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">removeAllGapNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove all rf gaps from this cavity.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.getRF_GapNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.getRF_GapNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_GapNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the array with rf gaps.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span></div>
+
+<div class="viewcode-block" id="RF_Cavity.reverseOrder"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_Cavity/#orbit.py_linac.lattice.RF_Cavity.reverseOrder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reverse order of RF gaps in the cavity.</span>
+<span class="sd">        The first gap should become the last and vice versa.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">n_gaps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n_gaps</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">setAsFirstRFGap</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_gaps</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="o">.</span><span class="n">setAsFirstRFGap</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">rfGap</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">:</span>
+            <span class="n">gap_phase</span> <span class="o">=</span> <span class="n">rfGap</span><span class="o">.</span><span class="n">getGapPhase</span><span class="p">()</span>
+            <span class="n">gap_phase</span> <span class="o">=</span> <span class="n">gap_phase</span> <span class="o">+</span> <span class="n">rfGap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+            <span class="n">gap_phase</span> <span class="o">=</span> <span class="o">-</span><span class="n">gap_phase</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+            <span class="n">gap_phase</span> <span class="o">=</span> <span class="n">phaseNearTargetPhase</span><span class="p">(</span><span class="n">gap_phase</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="n">rfGap</span><span class="o">.</span><span class="n">setGapPhase</span><span class="p">(</span><span class="n">gap_phase</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setPhase</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rfGaps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">getGapPhase</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setDesignSetUp</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Sequence"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Sequence</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">ParamsDictObject</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is the class to keep refernces to AccNodes that constitute the accelerator sequence.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">):</span>
+        <span class="n">NamedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">ParamsDictObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;linacAccLattice&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Sequence.setLinacAccLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.setLinacAccLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLinacAccLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattice</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;linacAccLattice&quot;</span><span class="p">,</span> <span class="n">lattice</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.getLinacAccLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.getLinacAccLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLinacAccLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;linacAccLattice&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.addNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.addNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds the Linac Node to the sequence.&quot;&quot;&quot;</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.getNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.getNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the array with Linac Nodes.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span></div>
+
+<div class="viewcode-block" id="Sequence.removeAllNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.removeAllNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">removeAllNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Removes all nodes from the sequence.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+<div class="viewcode-block" id="Sequence.setNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.setNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">linacNodes</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set a new set of Linac Nodes.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span> <span class="o">=</span> <span class="n">linacNodes</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.addRF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.addRF_Cavity">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cav</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds the RF cavity to the list inside this sequence.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cav</span><span class="p">,</span> <span class="n">RF_Cavity</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cav</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Sequence class , method addRF_Cavity(cav)!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;cav is not a subclass of RF_Cavity.&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.getRF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.getRF_Cavity">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the cavity instance according to the name&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">cav</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">cav</span><span class="o">.</span><span class="n">getName</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">cav</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Sequence.getRF_Cavities"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.getRF_Cavities">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the array with RF cavities.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span></div>
+
+<div class="viewcode-block" id="Sequence.setPosition"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the position of the sequence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.getPosition"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.getPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the position of the sequence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;position&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.getLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.getLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the total length of the sequence [m].</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.setLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.setLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the total length of the sequence [m].</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.reverseOrder"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.Sequence/#orbit.py_linac.lattice.Sequence.reverseOrder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reverse order of nodes and RF cavities in sequence.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__linacNodes</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rfCavities</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span></div></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1088 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File RungeKuttaTracker.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_RungeKuttaTracker.cc';</script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File RungeKuttaTracker.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File RungeKuttaTracker.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-rungekuttatracker-cc">
+<span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-trackerrk4-rungekuttatracker-cc"></span><h1>Program Listing for File RungeKuttaTracker.cc<a class="headerlink" href="#program-listing-for-file-rungekuttatracker-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_RungeKuttaTracker.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-trackerrk4-rungekuttatracker-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/trackerrk4/RungeKuttaTracker.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// FILE NAME</span>
+<span class="c1">//   RungeKuttaTracker.cc</span>
+<span class="c1">//</span>
+<span class="c1">// CREATED</span>
+<span class="c1">//    04/18/2008</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//    A class that tracks relativistic particles in external magnetic</span>
+<span class="c1">//    and electric fields by using 4-th order Runge Kutta method.</span>
+<span class="c1">//    The possible external interaction with something</span>
+<span class="c1">//    else (e.r. laser field) can be introduced.</span>
+<span class="c1">//</span>
+<span class="c1">//</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;RungeKuttaTracker.hh&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">TrackerRK4</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
+
+<span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">RungeKuttaTracker</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">lengthIn</span><span class="p">){</span>
+
+<span class="w">    </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lengthIn</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">c_light</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//spatial eps in [m]</span>
+<span class="w">    </span><span class="n">eps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.000001</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//initial number of steps</span>
+<span class="w">    </span><span class="n">n_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">    </span><span class="n">n_steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_init</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">t_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//set a*x + b*y + c*z + d = 0 equations for entrance and exit planes</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+
+
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">length</span><span class="o">/</span><span class="mf">2.0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">length</span><span class="o">/</span><span class="mf">2.0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+<span class="n">RungeKuttaTracker</span><span class="o">::~</span><span class="n">RungeKuttaTracker</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">;</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">plExitV</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">setSpatialEps</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">eps</span><span class="p">){</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">eps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eps</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">getSpatialEps</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">eps</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">getTimeStep</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">t_step</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">setInitialStepsNumber</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n_init</span><span class="p">){</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">n_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_init</span><span class="p">;</span>
+<span class="w">    </span><span class="n">n_steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_init</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">getInitialStepsNumber</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n_init</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">getStepsNumber</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n_steps</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">setLength</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">){</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">getLength</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">setEntrPlane</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">){</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">setExitPlane</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">){</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">getEntrPlane</span><span class="p">(</span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">d</span><span class="p">){</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">getExitPlane</span><span class="p">(</span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">d</span><span class="p">){</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">BaseFieldSource</span><span class="o">*</span><span class="w"> </span><span class="n">fieldSource</span><span class="p">,</span><span class="w"> </span><span class="n">ExternalEffects</span><span class="o">*</span><span class="w"> </span><span class="n">extEff</span><span class="p">){</span>
+<span class="w">    </span><span class="n">n_steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_init</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="o">*</span><span class="n">n_steps</span><span class="p">;</span>
+<span class="w">    </span><span class="n">charge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getCharge</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mass2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mass</span><span class="o">*</span><span class="n">mass</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+<span class="w">    </span><span class="n">t_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="o">/</span><span class="p">(</span><span class="n">n_steps</span><span class="o">*</span><span class="n">c_light</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">());</span>
+<span class="w">    </span><span class="c1">//find the entrance point for syncPart</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">cross_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                     </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPY</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                     </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPZ</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">cross_t</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">&quot;RungeKuttaTracker::trackBunch - syncPart cannot cross the entrance plane.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">cross_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getY</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getZ</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">/</span><span class="n">cross_t</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">//these are coordinates of the syncPart entrance through the entrance plane plEntrV[0...3]</span>
+<span class="w">    </span><span class="n">y_init_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cross_t</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">y_init_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cross_t</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPY</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">y_init_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cross_t</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPZ</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getZ</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//std::cout&lt;&lt;&quot;debug sync part x0=&quot;&lt;&lt;syncPart-&gt;getX()&lt;&lt;&quot; y0=&quot;&lt;&lt;syncPart-&gt;getY()&lt;&lt;&quot; z0=&quot;&lt;&lt;syncPart-&gt;getZ()&lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cout&lt;&lt;&quot;debug entry     x0=&quot;&lt;&lt;y_init_vct[0]&lt;&lt;&quot; y0=&quot;&lt;&lt;y_init_vct[1]&lt;&lt;&quot; z0=&quot;&lt;&lt;y_init_vct[2]&lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">setXYZ</span><span class="p">(</span><span class="n">y_init_vct</span><span class="p">);</span>
+<span class="w">    </span><span class="n">y_init_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">y_init_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">y_init_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPZ</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//this is a time when synch particle crosses the entrance plane</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t_sync_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t_previous_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="w">    </span><span class="c1">//step size definition from synch. particle</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t_st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_step</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug length [m]=&quot;&lt;&lt; length &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug c_light=&quot;&lt;&lt; c_light &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug beta=&quot;&lt;&lt; syncPart-&gt;getBeta() &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug time step [sec]=&quot;&lt;&lt; t_st &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">step_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">iN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">iN</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">iN</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug start loop iN=&quot; &lt;&lt;iN&lt;&lt;&quot; time step=&quot;&lt;&lt;t_st&lt;&lt;&quot;  nMax=&quot;&lt;&lt;nMax&lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="n">nMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nMax</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_init_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_init_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">step_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug is before exit=&quot;&lt;&lt; isBeforeExit(y_out_vct) &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">isBeforeExit</span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">)){</span>
+<span class="w">            </span><span class="n">step_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">step_count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">//std::cerr&lt;&lt;&quot;debug step=&quot;&lt;&lt; step_count &lt;&lt;&quot; r=&quot; &lt;&lt; y_in_vct[0] &lt;&lt;&quot; &quot;&lt;&lt; y_in_vct[1] &lt;&lt;&quot; &quot;&lt;&lt; y_in_vct[2] &lt;&lt;&quot;  nMax =&quot;&lt;&lt;nMax&lt;&lt;std::endl;</span>
+<span class="w">      </span><span class="c1">//std::cerr&lt;&lt;&quot;debug  &quot;&lt;&lt; step_count &lt;&lt;&quot;   &quot; &lt;&lt; y_in_vct[0] &lt;&lt;&quot; &quot;&lt;&lt; y_in_vct[1] &lt;&lt;&quot; &quot;&lt;&lt; y_in_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="n">rk4Step</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">t_st</span><span class="p">,</span><span class="n">fieldSource</span><span class="p">);</span>
+<span class="w">            </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t_st</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">step_count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nMax</span><span class="p">){</span>
+<span class="w">                </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">&quot;RungeKuttaTracker::trackBunch - syncPart cannot exit outside.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug Exit Pl=&quot; &lt;&lt; plExitV[0] &lt;&lt;&quot; &quot;&lt;&lt; plExitV[1] &lt;&lt;&quot; &quot;&lt;&lt; plExitV[2]&lt;&lt;&quot; &quot;&lt;&lt; plExitV[3] &lt;&lt;&quot; step_count=&quot;&lt;&lt;step_count&lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="c1">//interpolate the crossing point</span>
+<span class="w">        </span><span class="n">cross_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                  </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                  </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">cross_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                    </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">/</span><span class="n">cross_t</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">y_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cross_t</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">t_sync_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t_st</span><span class="o">*</span><span class="p">(</span><span class="n">cross_t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug final r=&quot; &lt;&lt; y_final_vct[0] &lt;&lt;&quot; &quot;&lt;&lt; y_final_vct[1] &lt;&lt;&quot; &quot;&lt;&lt; y_final_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug final p=&quot; &lt;&lt; y_final_vct[3] &lt;&lt;&quot; &quot;&lt;&lt; y_final_vct[4] &lt;&lt;&quot; &quot;&lt;&lt; y_final_vct[5] &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">iN</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                </span><span class="n">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">y_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">y_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">//the spatial difference</span>
+<span class="w">            </span><span class="n">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">diff</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">//std::cerr&lt;&lt;&quot;debug spatial diff=&quot; &lt;&lt;diff&lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="c1">//add the time difference</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">p_out_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">y_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">+</span><span class="n">y_final_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">y_final_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="n">y_final_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">y_final_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">            </span><span class="n">diff</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t_sync_final</span><span class="o">-</span><span class="n">t_previous_final</span><span class="p">)</span><span class="o">*</span><span class="n">c_light</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p_out_2</span><span class="o">/</span><span class="p">(</span><span class="n">mass2</span><span class="o">+</span><span class="n">p_out_2</span><span class="p">));</span>
+<span class="w">            </span><span class="c1">//std::cerr&lt;&lt;&quot;debug with time diff=&quot; &lt;&lt;diff&lt;&lt;&quot; eps=&quot;&lt;&lt;eps&lt;&lt;&quot; step_count=&quot;&lt;&lt;step_count&lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="n">t_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_st</span><span class="p">;</span>
+<span class="w">            </span><span class="n">n_steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">step_count</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">diff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">eps</span><span class="p">){</span>
+<span class="w">                </span><span class="c1">//that is enough!</span>
+<span class="w">                </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                    </span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">//remember the last one</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">t_st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_st</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="n">t_previous_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_sync_final</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">nMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="o">*</span><span class="n">step_count</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug track of synch part FINALIZED =======================&quot; &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">setTime</span><span class="p">(</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t_sync_final</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug time step [sec]=&quot;&lt;&lt; t_step &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug spatial eps    =&quot;&lt;&lt; eps &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug number of steps=&quot;&lt;&lt; n_steps &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug t_sync_final=&quot;&lt;&lt; t_sync_final &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+<span class="w">    </span><span class="c1">//performs the necessary actions before tracking</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">setupEffects</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+<span class="w">    </span><span class="c1">//move from x, x&#39;, y, y&#39;, z, dE to x,px,y,py,z,pz</span>
+<span class="w">    </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">compress</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">partCoordArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_sync_start_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_norm_sync_start_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_sync_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_norm_sync_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">r_sync_start_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">r_sync_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">v_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="c1">//set up start parameters for syncPart</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">v_sync_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_sync_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">energy_sync_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pSyncPart_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMomentum</span><span class="p">();</span>
+<span class="w">    </span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalXX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalXY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalXZ</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalYX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalYY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalYZ</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug orts nx=&quot;&lt;&lt; nx_start_vct[0] &lt;&lt;&quot; &quot; &lt;&lt; nx_start_vct[1] &lt;&lt;&quot; &quot; &lt;&lt; nx_start_vct[2]&lt;&lt;&quot; &quot;  &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug orts ny=&quot;&lt;&lt; ny_start_vct[0] &lt;&lt;&quot; &quot; &lt;&lt; ny_start_vct[1] &lt;&lt;&quot; &quot; &lt;&lt; ny_start_vct[2]&lt;&lt;&quot; &quot;  &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="n">p_sync_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">p_sync_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">p_sync_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPZ</span><span class="p">();</span>
+<span class="w">    </span><span class="n">p_norm_sync_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_sync_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">pSyncPart_start</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p_norm_sync_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_sync_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">pSyncPart_start</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p_norm_sync_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_sync_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">pSyncPart_start</span><span class="p">;</span>
+<span class="w">    </span><span class="n">r_sync_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">r_sync_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">r_sync_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getZ</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//set up the new SyncParticle coordinates</span>
+<span class="w">    </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">setXYZ</span><span class="p">(</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">setPXYZ</span><span class="p">(</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">y_sync_final_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">v_sync_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">energy_sync_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pSyncPart_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getMomentum</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta_sync_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">();</span>
+<span class="w">    </span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalXX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalXY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalXZ</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalYX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalYY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getNormalYZ</span><span class="p">();</span>
+<span class="w">    </span><span class="n">p_sync_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">p_sync_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">p_sync_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getPZ</span><span class="p">();</span>
+<span class="w">    </span><span class="n">p_norm_sync_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_sync_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">pSyncPart_final</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p_norm_sync_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_sync_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">pSyncPart_final</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p_norm_sync_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_sync_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">pSyncPart_final</span><span class="p">;</span>
+<span class="w">    </span><span class="n">r_sync_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getX</span><span class="p">();</span>
+<span class="w">    </span><span class="n">r_sync_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getY</span><span class="p">();</span>
+<span class="w">    </span><span class="n">r_sync_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getZ</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pz_along</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">enrg_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_part2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">yp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">px_xp_coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xp_coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">nParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">ip</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">ip</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">        </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">        </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">        </span><span class="c1">// Transformations here are the subject of the meaning of x&#39; and y&#39; and</span>
+<span class="w">        </span><span class="c1">// how they are related to the transverse momentum of particles.</span>
+<span class="w">        </span><span class="c1">// Here we use these transformations to comply to the Drift element of the TEAPOT.</span>
+<span class="w">        </span><span class="c1">// At the end of the loop we have to do backward transformations.</span>
+<span class="w">        </span><span class="n">enrg_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">energy_sync_start</span><span class="o">+</span><span class="n">dE</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p_part2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enrg_part</span><span class="o">*</span><span class="p">(</span><span class="n">enrg_part</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">mass</span><span class="p">);</span>
+<span class="w">        </span><span class="n">p_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">p_part2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">xp_coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">dE</span><span class="o">/</span><span class="p">(</span><span class="n">pSyncPart_start</span><span class="o">*</span><span class="n">beta_sync_start</span><span class="p">));</span>
+<span class="w">        </span><span class="n">xp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">xp</span><span class="o">*</span><span class="n">xp_coef</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">yp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">yp</span><span class="o">*</span><span class="n">xp_coef</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">pz_along</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">p_part2</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">xp2</span><span class="o">+</span><span class="n">yp2</span><span class="p">));</span>
+<span class="w">        </span><span class="n">px_xp_coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pz_along</span><span class="o">*</span><span class="n">xp_coef</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//find the transverse (relative to the synch. particle moment) moment vector</span>
+<span class="w">        </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">px_xp_coef</span><span class="o">*</span><span class="p">(</span><span class="n">xp</span><span class="o">*</span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yp</span><span class="o">*</span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">px_xp_coef</span><span class="o">*</span><span class="p">(</span><span class="n">xp</span><span class="o">*</span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yp</span><span class="o">*</span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">px_xp_coef</span><span class="o">*</span><span class="p">(</span><span class="n">xp</span><span class="o">*</span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yp</span><span class="o">*</span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pz_along</span><span class="o">*</span><span class="n">p_norm_sync_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pz_along</span><span class="o">*</span><span class="n">p_norm_sync_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pz_along</span><span class="o">*</span><span class="n">p_norm_sync_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="c1">//now absolute position</span>
+<span class="w">        </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_sync_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_sync_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_sync_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">nx_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">ny_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">enrg_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">momentumToEnergy</span><span class="p">(</span><span class="n">p_part</span><span class="p">);</span>
+<span class="w">        </span><span class="n">v_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">enrg_part</span><span class="p">;</span>
+<span class="w">        </span><span class="n">v_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">enrg_part</span><span class="p">;</span>
+<span class="w">        </span><span class="n">v_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">enrg_part</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//t_start has been used, we can use it again</span>
+<span class="w">        </span><span class="c1">//find the entrance point and time</span>
+<span class="w">        </span><span class="n">cross_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">v_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">v_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">v_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">t_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                    </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">/</span><span class="n">cross_t</span><span class="p">;</span>
+<span class="w">        </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_start</span><span class="o">*</span><span class="n">v_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_start</span><span class="o">*</span><span class="n">v_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_start</span><span class="o">*</span><span class="n">v_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug t_start=&quot;&lt;&lt; t_start &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="n">t_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_start</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">/</span><span class="n">v_sync_start</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug r_sync_start=&quot;&lt;&lt; r_sync_start_vct[0] &lt;&lt;&quot; &quot;&lt;&lt; r_sync_start_vct[1] &lt;&lt;&quot; &quot;&lt;&lt; r_sync_start_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug p_sync_start=&quot;&lt;&lt; p_sync_start_vct[0]&lt;&lt;&quot; &quot;&lt;&lt; p_sync_start_vct[1]&lt;&lt;&quot; &quot;&lt;&lt; p_sync_start_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug r_start=&quot;&lt;&lt; r_start_vct[0]&lt;&lt;&quot; &quot;&lt;&lt; r_start_vct[1]&lt;&lt;&quot; &quot;&lt;&lt; r_start_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;debug p_start=&quot;&lt;&lt; p_start_vct[0]&lt;&lt;&quot; &quot;&lt;&lt; p_start_vct[1]&lt;&lt;&quot; &quot;&lt;&lt; p_start_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="c1">//start tracking</span>
+<span class="w">        </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_start_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">step_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_start</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">isBeforeExit</span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">flag</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">            </span><span class="n">step_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">step_count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">rk4Step</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">t_step</span><span class="p">,</span><span class="n">fieldSource</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">//place to account for external effeects</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">applyEffectsForEach</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">,</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">t_step</span><span class="p">,</span><span class="w"> </span><span class="n">fieldSource</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="w">            </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t_step</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">step_count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nMax</span><span class="p">){</span>
+<span class="w">                </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">&quot;RungeKuttaTracker::trackBunch - particle cannot exit outside.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">flag</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="c1">//interpolate the crossing point</span>
+<span class="w">            </span><span class="n">cross_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                      </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                      </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">            </span><span class="n">cross_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                          </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                          </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">/</span><span class="n">cross_t</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                </span><span class="n">r_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cross_t</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">                </span><span class="c1">//std::cerr&lt;&lt;&quot;debug r_vct[&quot;&lt;&lt; i&lt;&lt;&quot;]=&quot;&lt;&lt; r_final_vct[i]&lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                </span><span class="n">p_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cross_t</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">])</span><span class="o">+</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">                </span><span class="c1">//std::cerr&lt;&lt;&quot;debug p_vct[&quot;&lt;&lt; i&lt;&lt;&quot;]=&quot;&lt;&lt; p_final_vct[i]&lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">//for(int i = 0; i &lt; 6; i++){</span>
+<span class="w">            </span><span class="c1">//  std::cerr&lt;&lt;&quot;debug p_sync[&quot;&lt;&lt; i&lt;&lt;&quot;]=&quot;&lt;&lt; y_sync_final_vct[i]&lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="c1">//}</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                </span><span class="n">r_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r_sync_final_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">t_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t_step</span><span class="o">*</span><span class="p">(</span><span class="n">cross_t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">//std::cerr&lt;&lt;&quot;debug t_final=&quot;&lt;&lt; t_final &lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="c1">//tracking is finished, let&#39;s put final coordinates</span>
+<span class="w">            </span><span class="n">p_part2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">            </span><span class="n">p_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">p_part2</span><span class="p">);</span>
+<span class="w">            </span><span class="n">enrg_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">momentumToEnergy</span><span class="p">(</span><span class="n">p_part</span><span class="p">);</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enrg_part</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">energy_sync_final</span><span class="p">;</span>
+<span class="w">            </span><span class="n">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">pz_along</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">p_part2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xp</span><span class="o">*</span><span class="n">xp</span><span class="w"> </span><span class="o">-</span><span class="n">yp</span><span class="o">*</span><span class="n">yp</span><span class="p">);</span>
+<span class="w">            </span><span class="n">xp_coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="n">pSyncPart_final</span><span class="o">*</span><span class="n">beta_sync_final</span><span class="p">))</span><span class="o">/</span><span class="n">pz_along</span><span class="p">;</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xp</span><span class="o">*</span><span class="n">xp_coef</span><span class="p">;</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yp</span><span class="o">*</span><span class="n">xp_coef</span><span class="p">;</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                   </span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                   </span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">nx_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                     </span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                     </span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ny_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">t_final</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t_sync_final</span><span class="p">))</span><span class="o">*</span><span class="n">v_sync_final</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                    </span><span class="p">(</span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">p_norm_sync_final_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                     </span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">p_norm_sync_final_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                     </span><span class="n">r_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">p_norm_sync_final_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+<span class="w">    </span><span class="c1">//performs the necessary actions after tracking</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">finalizeEffects</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+<span class="w">    </span><span class="c1">//remove the dead particles</span>
+<span class="w">    </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">compress</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">track</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="kt">double</span><span class="w"> </span><span class="n">t_begin</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t_period</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t_step_in</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">BaseFieldSource</span><span class="o">*</span><span class="w"> </span><span class="n">fieldSource</span><span class="p">,</span><span class="w"> </span><span class="n">ExternalEffects</span><span class="o">*</span><span class="w"> </span><span class="n">extEff</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+<span class="w">    </span><span class="c1">//performs the necessary actions before tracking</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">setupEffects</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+
+<span class="w">    </span><span class="n">charge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getCharge</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mass2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mass</span><span class="o">*</span><span class="n">mass</span><span class="p">;</span>
+<span class="w">    </span><span class="n">n_steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">t_period</span><span class="o">/</span><span class="n">t_step_in</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">n_steps</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span><span class="w"> </span><span class="n">n_steps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span>
+<span class="w">    </span><span class="n">t_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_period</span><span class="o">/</span><span class="n">n_steps</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">vpt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">partCoordArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_begin</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n_steps</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+
+<span class="w">        </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_begin</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="n">t_step</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">prepareEffects</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">nParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">ip</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">ip</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">flag</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">flag</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">                </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isOutside</span><span class="p">(</span><span class="n">y_in_vct</span><span class="p">)){</span>
+<span class="w">                    </span><span class="n">rk4Step</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">t_step</span><span class="p">,</span><span class="n">fieldSource</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">vpt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mass2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">vpt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="n">t_step</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vpt</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vpt</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vpt</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vpt</span><span class="o">*</span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">              </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">              </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">              </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">              </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">              </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">              </span><span class="n">partCoordArr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">applyEffectsForEach</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="n">y_in_vct</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">y_out_vct</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">t_step</span><span class="p">,</span><span class="w"> </span><span class="n">fieldSource</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">//apply the external effects</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">applyEffects</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">t_step</span><span class="p">,</span><span class="w"> </span><span class="n">fieldSource</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+<span class="w">    </span><span class="c1">//performs the necessary actions after tracking</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">extEff</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">extEff</span><span class="o">-&gt;</span><span class="n">finalizeEffects</span><span class="p">(</span><span class="n">bunch</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//------------------------------------------------</span>
+<span class="p">}</span>
+
+
+
+<span class="c1">//--------------------------------------------------</span>
+<span class="c1">// private methods of the RungeKuttaTracker class</span>
+<span class="c1">//--------------------------------------------------</span>
+
+<span class="c1">//return 0 if it is outside of both planes and 1 otherwise</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">isOutside</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resEntr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resExit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">resEntr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">resExit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">isOutside</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resEntr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resExit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">resEntr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">resExit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">isAfterEntrance</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resEntr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">resEntr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">isAfterEntrance</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resEntr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">*</span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plEntrV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">resEntr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">isBeforeExit</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resExit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">resExit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">isBeforeExit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">resExit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">*</span><span class="n">plExitV</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plExitV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">resExit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">rk4Step</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t_st</span><span class="p">,</span><span class="w"> </span><span class="n">BaseFieldSource</span><span class="o">*</span><span class="w"> </span><span class="n">fieldSource</span><span class="p">){</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">y_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">calculateRightSideODE</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">fieldSource</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">k1_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_st</span><span class="o">*</span><span class="n">ff_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k1_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">calculateRightSideODE</span><span class="p">(</span><span class="n">t</span><span class="o">+</span><span class="n">t_st</span><span class="o">*</span><span class="mf">0.5</span><span class="p">,</span><span class="n">fieldSource</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">k2_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_st</span><span class="o">*</span><span class="n">ff_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k2_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">calculateRightSideODE</span><span class="p">(</span><span class="n">t</span><span class="o">+</span><span class="n">t_st</span><span class="o">*</span><span class="mf">0.5</span><span class="p">,</span><span class="n">fieldSource</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">k3_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_st</span><span class="o">*</span><span class="n">ff_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k3_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">calculateRightSideODE</span><span class="p">(</span><span class="n">t</span><span class="o">+</span><span class="n">t_st</span><span class="p">,</span><span class="n">fieldSource</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">k4_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_st</span><span class="o">*</span><span class="n">ff_vct</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="n">y_out_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">y_in_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">k1_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">k2_vct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k3_vct</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k4_vct</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mf">6.0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">RungeKuttaTracker</span><span class="o">::</span><span class="n">calculateRightSideODE</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">BaseFieldSource</span><span class="o">*</span><span class="w"> </span><span class="n">fieldSource</span><span class="p">){</span>
+<span class="w">    </span><span class="n">fieldSource</span><span class="o">-&gt;</span><span class="n">getElectricMagneticField</span><span class="p">(</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">t</span><span class="p">,</span>
+<span class="w">                                            </span><span class="n">e_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">e_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">e_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+<span class="w">                                                                                  </span><span class="n">b_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug E=&quot; &lt;&lt; e_vct[0] &lt;&lt;&quot; &quot;&lt;&lt; e_vct[1] &lt;&lt;&quot; &quot;&lt;&lt; e_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug B=&quot; &lt;&lt; b_vct[0] &lt;&lt;&quot; &quot;&lt;&lt; b_vct[1] &lt;&lt;&quot; &quot;&lt;&lt; b_vct[2] &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mass2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">    </span><span class="n">coef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">coef</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//std::cerr&lt;&lt;&quot;debug coef=&quot; &lt;&lt; coef &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">coef</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">coef</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">coef</span><span class="p">;</span>
+<span class="w">    </span><span class="n">coef</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">charge</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="p">(</span><span class="n">charge</span><span class="o">*</span><span class="n">e_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coef</span><span class="o">*</span><span class="p">(</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]));</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="p">(</span><span class="n">charge</span><span class="o">*</span><span class="n">e_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coef</span><span class="o">*</span><span class="p">(</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]));</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_light</span><span class="o">*</span><span class="p">(</span><span class="n">charge</span><span class="o">*</span><span class="n">e_vct</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coef</span><span class="o">*</span><span class="p">(</span><span class="n">y_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">b_vct</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="mf">1.0e+9</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">/</span><span class="mf">1.0e+9</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ff_vct</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">/</span><span class="mf">1.0e+9</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_RungeKuttaTracker.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

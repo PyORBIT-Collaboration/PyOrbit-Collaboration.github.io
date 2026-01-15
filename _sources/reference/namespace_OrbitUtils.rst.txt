@@ -1,0 +1,268 @@
+
+.. _namespace_OrbitUtils:
+
+Namespace OrbitUtils
+====================
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+Detailed Description
+--------------------
+
+This is a class based on a singleton pattern that keeps sets of one dimensional arrays. They will be used in MPI data exchanges.
+
+This class is a methods to create random numbers
+
+The Moments1D class calculates the arbitrary moments of the (u,up) distribution. It is used by other classes to calculate Twiss paraemeters etc.
+
+The string utilits collection. 
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_OrbitUtils__StringUtils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structOrbitUtils_1_1comparator`
+
+- :ref:`exhale_struct_structOrbitUtils_1_1MPstr`
+
+- :ref:`exhale_struct_structOrbitUtils_1_1PWstr`
+
+- :ref:`exhale_class_classOrbitUtils_1_1AttributesBucket`
+
+- :ref:`exhale_class_classOrbitUtils_1_1BaseFieldSource`
+
+- :ref:`exhale_class_classOrbitUtils_1_1BufferStore`
+
+- :ref:`exhale_class_classOrbitUtils_1_1BunchExtremaCalculator`
+
+- :ref:`exhale_class_classOrbitUtils_1_1CppPyWrapper`
+
+- :ref:`exhale_class_classOrbitUtils_1_1DipoleFieldSource`
+
+- :ref:`exhale_class_classOrbitUtils_1_1FieldSourceContainer`
+
+- :ref:`exhale_class_classOrbitUtils_1_1Function`
+
+- :ref:`exhale_class_classOrbitUtils_1_1GaussLegendreIntegrator`
+
+- :ref:`exhale_class_classOrbitUtils_1_1HarmonicData`
+
+- :ref:`exhale_class_classOrbitUtils_1_1LoopFieldSource`
+
+- :ref:`exhale_class_classOrbitUtils_1_1MagnetFieldSourceGrid3D`
+
+- :ref:`exhale_class_classOrbitUtils_1_1MathPolynomial`
+
+- :ref:`exhale_class_classOrbitUtils_1_1Matrix`
+
+- :ref:`exhale_class_classOrbitUtils_1_1MatrixOperations`
+
+- :ref:`exhale_class_classOrbitUtils_1_1PhaseVector`
+
+- :ref:`exhale_class_classOrbitUtils_1_1Polynomial`
+
+- :ref:`exhale_class_classOrbitUtils_1_1PyBaseFieldSource`
+
+- :ref:`exhale_class_classOrbitUtils_1_1QuadFieldSource`
+
+- :ref:`exhale_class_classOrbitUtils_1_1Random`
+
+- :ref:`exhale_class_classOrbitUtils_1_1ShiftedFieldSource`
+
+- :ref:`exhale_class_classOrbitUtils_1_1SplineCH`
+
+- :ref:`exhale_class_classOrbitUtils_1_1StatMoments2D`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a9204cb94cb26186f7a111765c6c9d1bd`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1accbbe9115b59d58b32656e82b169f159`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab089b0676c18680ac1777434913269f4`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1aa3e92e722df603d7717510fd04bf0445`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a207296a439bcdddd09ca736d0ac9f44d`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a65771e77d0af1cf77d571f890e84cb48`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab2103d120b62ed602171dd38455a5d4b`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae7f531c757562dd654585fb61e30b7ea`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a3661bebe8c02a453de43514bfacb5366`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ad577346f5bb31a2d8ad5cb49a9b1ce13`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1acb65701eb91467186e12ef06be59cd0c`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae36314bfa71f499018ed7cb956b3e125`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a3950b18bb1824cef03fbc2c0cfbbf4af`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1acb2b7d42772229b683602a7efe6d14f4`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a950769b4735e0bddabdb7d5302255b32`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ac8f9ebb8a2f977f687a7345dd6f83719`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae37ff2ff17879651bc374aa5583b64d5`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a0c8d7d5bcd2b2537f47848febb410f89`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab254309b7520ca41d6bd1991a79b6a05`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a0eaaec4745f0a27996e5a726969406da`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ac55f0a408bfb206a234d1d21050d51ab`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ab6949ab23abd2d6f99a162a097eab8c0`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a981fd4f32c2c2b592bb8af1fe9965bf9`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a6e6b87592d124ec0f4ee623a9b1387d9`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a928f80ceb953402a05ad68e92478f525`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1ae1fd5981372c042ab5b7de7d4e4871af`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a998732605bed18a2bb8d14df8a458de3`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a3932d3e12aabfb8fe18e24ded18be8ff`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a77888a0d2b60230d24ba8e97b90e889e`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a8fb9313b89a6178a6d8cea688c9e0615`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a469ff4771262fad962cd76ad0eeed952`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1af9d954077516cb7db390ce9d2335a6fd`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespaceOrbitUtils_1a51860e125117c86ad602efb3387f506a`
+
+- :ref:`exhale_typedef_namespaceOrbitUtils_1a51ce68d2f5715775558e6ab7e293839d`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a21f7ff35677227691754da99f825a602`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2c9f50b688a2958a32948ba7fe552dc9`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a28b4ac019402842ae8f606a6cdbc8a04`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a959ba4f71607b2be8dc9ad2dc380e13f`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a072af0745f0ef74fbfd4b77be4428d22`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ac440342922a616f1614a7558b1371796`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ad67231996b3460caf10cb03cbd2c3aa1`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a6531414f8c5060641d76f870b906e6a8`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a752f52f3fc93b7d76e418dfe4442c771`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a7f6fd44e36129627f3b6891e25ed50b5`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ab217f36d76df79c54df1ab94a462051c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1acf8a6dcde0b278b8672f2b4a71ecf6d4`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a7a7830aab41b82592607deb67c16eadc`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a48015105d601f68640cffab24561a233`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1afb364436fc81370dd51195fbca57db2e`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1addb19f250f118a0ab579d06ec5724331`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a1ba2132cf5ad7e9ae2164f526b3ba521`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2f87656aa61e5104dc6ab909f35e3faa`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1aef35dbe58fe0fa64f9c061bb62fe31bc`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a4fc259255fb0805fde9e9700c78ade17`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a6d7d8a441331107e59a736bcbb771036`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ab16657f2b42531ef220b9cd18fbf337d`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ac02cbcc19a8ede62ce862269d6fe8411`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a440f511ebd475c1cb39fc59f98daa636`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2828a114b8b7d0ffb0e49778373f0a22`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ab868ba2717e463c3d799a036a707a991`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a594432f177a1c11bc0bc79bb90b16c8d`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1aa16bb0be1777311b6d09004d13c656ca`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ac78975b86a19c97e2c07958fe98eda1b`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a7fe9e8b790b3864634debbcb67e824d6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a33059d62d2818898be74ad7a656c5a84`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a9f71e8ac48281847db488822187e3ad6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a8b4054d106ac41cb446fceaa683bc549`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a71f697901c07e79889de37e77dc7e33c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a50a2f9aabb30d8d8a176917d7b1643c6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1afc615982a1ed88169a2a61e4117522e6`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a1a13e9cc5abb11ea1557a3abc16fa11e`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1acb8a3dbff1ff92ca7ff8e39cd87b20e9`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a8bab1fa05170095349f98e9f4885ace4`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a2ec4dfae351e7f95b609c8df6249a72c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a467b1f3514f1a8a4b5a71deb421edf9c`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1ad68d3af9bf8ba53df7e72be49936dee0`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a21a98c4ffda7bfcae5d0882f6ced2820`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a719403b91510ae60f8c0a4885196155f`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1af6be551e3379dd57bb57627eaa896e48`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a158b7c759c7dc7e57af5ef9adab43051`
+
+- :ref:`exhale_variable_namespaceOrbitUtils_1a58d6a894b5a3cfa1f13b769b927a6048`

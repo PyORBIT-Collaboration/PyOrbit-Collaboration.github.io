@@ -1,0 +1,1266 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File Collimator.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.cc';</script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File Collimator.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File Collimator.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-collimator-cc">
+<span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-orbit-materialinteractions-collimator-cc"></span><h1>Program Listing for File Collimator.cc<a class="headerlink" href="#program-listing-for-file-collimator-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-materialinteractions-collimator-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/MaterialInteractions/Collimator.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MaterialInteractions.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Collimator.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SyncPart.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;cross_sections.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;numrecipes.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Random.hh&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cfloat&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ParticleInitialCoordinates.hh&quot;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
+
+<span class="c1">// Constructor</span>
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::Collimator</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Constructs a collimator</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//   length: length in m</span>
+<span class="c1">//   ma:     material number. (0=carbon, 1=aluminum, 2=iron, 3=copper, 4=tantalum, 5=tungstun,</span>
+<span class="c1">//           6=platinum, 7=lead, ma&gt;=8 = black absorber)</span>
+<span class="c1">//   density_fac: density factor (for materials mixed with air or water). 1.0 for pure.</span>
+<span class="c1">//   shape:  shape of the collimator: 1=circle, 2=ellipse, 3=one sided</span>
+<span class="c1">//           flat, 4=two sided flat, 5=rectangular (outside is collimator),</span>
+<span class="c1">//           6=rectangular (inside is collimator).</span>
+<span class="c1">//   a:      depending on shape, either (shape = 1) radius,</span>
+<span class="c1">//           (shape = 2) semimajor axis, (shape = 3) distance to</span>
+<span class="c1">//           flat edge, (shape = 4) minimum edge, (shape=5 or 6)</span>
+<span class="c1">//           minimum horizontal edge.</span>
+<span class="c1">//   b:      depending on shape, either (1) radius, (2) semimajor axis,</span>
+<span class="c1">//           (3) zero  (4) maximum edge (5) (shape=5 or 6) maximum</span>
+<span class="c1">//           horizontal edge.</span>
+<span class="c1">//   c:      minimum vertical edge (used only in shapes 5 or 6)</span>
+<span class="c1">//   d:      maximum vertical edge (used only in shapes 5 or 6)</span>
+<span class="c1">//   angle:  tilt angle of collimator.</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   int.</span>
+<span class="c1">//</span>
+
+<span class="n">Collimator</span><span class="o">::</span><span class="n">Collimator</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ma</span><span class="p">,</span>
+<span class="w">                       </span><span class="kt">double</span><span class="w"> </span><span class="n">density_fac</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">shape</span><span class="p">,</span>
+<span class="w">                       </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">CppPyWrapper</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">length_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ma_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ma</span><span class="p">;</span>
+<span class="w">    </span><span class="n">shape_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape</span><span class="p">;</span>
+<span class="w">    </span><span class="n">density_fac_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density_fac</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="n">b_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">c_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="n">d_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="w">    </span><span class="n">angle_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">angle</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pos_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">collimateBunch</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">coll_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">lastArg</span><span class="p">,</span><span class="w"> </span><span class="n">trackit</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">nAvogadro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.022045e23</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">random</span><span class="p">,</span><span class="w"> </span><span class="n">choice</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">dlength</span><span class="p">,</span><span class="w"> </span><span class="n">meanfreepath</span><span class="p">,</span><span class="w"> </span><span class="n">b_pN</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">rl</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">,</span><span class="w"> </span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">smallstep</span><span class="p">,</span><span class="w"> </span><span class="n">radlengthfac</span><span class="p">,</span><span class="w"> </span><span class="n">directionfac</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">dp_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">dp_y</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">thx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">thy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncPart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSyncPart</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length_</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dlength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.0e-4</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">radlength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_radlength</span><span class="p">(</span><span class="n">ma_</span><span class="p">);</span>
+<span class="w">    </span><span class="n">radlengthfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radlength</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">density_fac_</span><span class="p">;</span>
+<span class="w">    </span><span class="n">smallstep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radlengthfac</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_z</span><span class="p">(</span><span class="n">ma_</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_a</span><span class="p">(</span><span class="n">ma_</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">density</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_rho</span><span class="p">(</span><span class="n">ma_</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">eff_density</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">density_fac_</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">62.</span><span class="p">)</span><span class="w"> </span><span class="n">b_pN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6666667</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="mf">62.</span><span class="p">)</span><span class="w"> </span><span class="n">b_pN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">60.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3333333</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">compress</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">m_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ip</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">ip</span><span class="o">++</span><span class="p">){</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">zrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="w">        </span><span class="n">coll_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">checkCollFlag</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">2</span><span class="p">]);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">coll_flag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">ma_</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="n">loseParticle</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">nLost</span><span class="p">,</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">zrl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+
+<span class="w">            </span><span class="c1">//If not inside collimator, drift until the end or entry to the collimator, whichever comes first.</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">coll_flag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">zrl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">coll_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">driftParticle</span><span class="p">(</span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">//If in the collimator, tally the hit and start tracking</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">coll_flag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">//Lose it for black absorber</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">ma_</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">8</span><span class="p">){</span>
+<span class="w">                    </span><span class="n">loseParticle</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">nLost</span><span class="p">,</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">nHits</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">                </span><span class="c1">//Check for black absorber.</span>
+
+<span class="w">                </span><span class="n">directionfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDirection</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                </span><span class="n">rl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zrl</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">directionfac</span><span class="p">;</span>
+
+<span class="w">                </span><span class="c1">//stepsize = rl;</span>
+
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getBeta</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getP</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0136</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">radlengthfac</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">pfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getPFactor</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">ecross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_elastic_crosssection</span><span class="p">((</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]),</span><span class="w"> </span><span class="n">ma_</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">icross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_inelastic_crosssection</span><span class="p">((</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]),</span><span class="w"> </span><span class="n">ma_</span><span class="p">);</span>
+
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">rcross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaterialInteractions</span><span class="o">::</span><span class="n">ruthScattJackson</span><span class="p">(</span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">eff_density</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">pfac</span><span class="p">,</span><span class="w"> </span><span class="n">thx</span><span class="p">,</span><span class="w"> </span><span class="n">thy</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">totcross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ecross</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">icross</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rcross</span><span class="p">;</span>
+<span class="w">                </span><span class="n">meanfreepath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_a</span><span class="p">(</span><span class="n">ma_</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">((</span><span class="n">nAvogadro</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">eff_density</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">totcross</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.0e-28</span><span class="p">));</span>
+<span class="w">                </span><span class="n">stepsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">meanfreepath</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="n">Random</span><span class="o">::</span><span class="n">ran1</span><span class="p">());</span>
+
+<span class="w">                </span><span class="n">Collimator</span><span class="o">::</span><span class="n">checkStep</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="w"> </span><span class="n">radlengthfac</span><span class="p">,</span><span class="w"> </span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">stepsize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">smallstep</span><span class="p">)</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">smallstep</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">stepsize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">rl</span><span class="p">){</span><span class="w"> </span><span class="c1">//Take the step but no nuclear scattering event</span>
+<span class="w">                    </span><span class="n">stepsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dlength</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">Collimator</span><span class="o">::</span><span class="n">checkStep</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="w"> </span><span class="n">radlengthfac</span><span class="p">,</span><span class="w"> </span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">stepsize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">smallstep</span><span class="p">)</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">smallstep</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">Collimator</span><span class="o">::</span><span class="n">takeStep</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">eff_density</span><span class="p">,</span><span class="w"> </span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">,</span><span class="w"> </span><span class="n">rl</span><span class="p">,</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">);</span>
+
+
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="k">else</span><span class="p">{</span><span class="w"> </span><span class="c1">//Take the step and allow nuclear scatter</span>
+<span class="w">                    </span><span class="n">Collimator</span><span class="o">::</span><span class="n">takeStep</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">eff_density</span><span class="p">,</span><span class="w"> </span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">,</span><span class="w"> </span><span class="n">rl</span><span class="p">,</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">);</span>
+
+<span class="w">                    </span><span class="c1">//If it still exists after MCS and energy loss, nuclear scatter</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">coll_flag</span><span class="o">==</span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">zrl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">                        </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getBeta</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getP</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0136</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">radlengthfac</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">pfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getPFactor</span><span class="p">(</span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">],</span><span class="w"> </span><span class="n">syncPart</span><span class="p">);</span>
+
+<span class="w">                        </span><span class="n">ecross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_elastic_crosssection</span><span class="p">((</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]),</span><span class="w"> </span><span class="n">ma_</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">icross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">get_inelastic_crosssection</span><span class="p">((</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]),</span><span class="w"> </span><span class="n">ma_</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">rcross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaterialInteractions</span><span class="o">::</span><span class="n">ruthScattJackson</span><span class="p">(</span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">eff_density</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">pfac</span><span class="p">,</span><span class="w"> </span><span class="n">thx</span><span class="p">,</span><span class="w"> </span><span class="n">thy</span><span class="p">);</span>
+
+<span class="w">                        </span><span class="n">totcross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ecross</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">icross</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rcross</span><span class="p">;</span>
+
+<span class="w">                        </span><span class="kt">double</span><span class="w"> </span><span class="n">e_frac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ecross</span><span class="o">/</span><span class="n">totcross</span><span class="p">;</span>
+<span class="w">                        </span><span class="kt">double</span><span class="w"> </span><span class="n">i_frac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">icross</span><span class="o">/</span><span class="n">totcross</span><span class="p">;</span>
+<span class="w">                        </span><span class="kt">double</span><span class="w"> </span><span class="n">r_frac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcross</span><span class="o">/</span><span class="n">totcross</span><span class="p">;</span>
+<span class="w">                        </span><span class="n">choice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Random</span><span class="o">::</span><span class="n">ran1</span><span class="p">();</span>
+
+<span class="w">                        </span><span class="c1">// Nuclear Elastic Scattering</span>
+<span class="w">                        </span><span class="k">if</span><span class="p">((</span><span class="n">choice</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">e_frac</span><span class="p">))</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="k">if</span><span class="p">((</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.4</span><span class="p">)</span>
+<span class="w">                            </span><span class="p">{</span>
+<span class="w">                                </span><span class="n">t</span><span class="o">=</span><span class="n">MaterialInteractions</span><span class="o">::</span><span class="n">elastic_t</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                            </span><span class="k">if</span><span class="p">((</span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.4</span><span class="p">)</span>
+<span class="w">                            </span><span class="p">{</span>
+<span class="w">                                </span><span class="n">t</span><span class="o">=-</span><span class="n">log</span><span class="p">(</span><span class="n">Random</span><span class="o">::</span><span class="n">ran1</span><span class="p">())</span><span class="o">/</span><span class="n">b_pN</span><span class="p">;</span>
+<span class="w">                            </span><span class="p">}</span>
+
+<span class="w">                            </span><span class="n">MaterialInteractions</span><span class="o">::</span><span class="n">momentumKick</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">dp_x</span><span class="p">,</span><span class="w"> </span><span class="n">dp_y</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dp_x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">                            </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dp_y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+
+<span class="w">                        </span><span class="c1">// Rutherford Coulomb scattering</span>
+<span class="w">                        </span><span class="k">if</span><span class="p">((</span><span class="n">choice</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">e_frac</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i_frac</span><span class="p">)))</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">rcross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaterialInteractions</span><span class="o">::</span><span class="n">ruthScattJackson</span><span class="p">(</span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">eff_density</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">pfac</span><span class="p">,</span><span class="w"> </span><span class="n">thx</span><span class="p">,</span><span class="w"> </span><span class="n">thy</span><span class="p">);</span>
+
+<span class="w">                            </span><span class="kt">double</span><span class="w"> </span><span class="n">xpfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">                            </span><span class="kt">double</span><span class="w"> </span><span class="n">ypfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+
+<span class="w">                            </span><span class="kt">double</span><span class="w"> </span><span class="n">anglex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atan</span><span class="p">(</span><span class="n">xpfac</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">thx</span><span class="p">;</span>
+<span class="w">                            </span><span class="kt">double</span><span class="w"> </span><span class="n">angley</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atan</span><span class="p">(</span><span class="n">ypfac</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">thy</span><span class="p">;</span>
+
+<span class="w">                            </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tan</span><span class="p">(</span><span class="n">anglex</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">                            </span><span class="n">part_coord_arr</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tan</span><span class="p">(</span><span class="n">angley</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+
+<span class="w">                        </span><span class="c1">// Nuclear Inelastic absorption</span>
+<span class="w">                        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">i_frac</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">choice</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">1.</span><span class="p">))</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">loseParticle</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">nLost</span><span class="p">,</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">);</span>
+<span class="w">                        </span><span class="p">}</span>
+
+<span class="w">                    </span><span class="p">}</span>
+
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Update synchronous particle, compress bunch</span>
+
+<span class="w">    </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">compress</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">newtime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="o">/</span><span class="p">(</span><span class="w"> </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">getBeta</span><span class="p">()</span><span class="o">*</span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">c</span><span class="w"> </span><span class="p">);</span>
+<span class="w">    </span><span class="n">syncPart</span><span class="o">-&gt;</span><span class="n">setTime</span><span class="p">(</span><span class="n">newtime</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::checkCollFlag</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Checks to see if a particle is located inside a collimator.  Returns</span>
+<span class="c1">//   1 if the particle is in the collimator, 0 if it isn&#39;t.</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//   x:      x coordinate of particle.</span>
+<span class="c1">//   y:      y coordinate of particle.</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   int.</span>
+<span class="c1">//</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">checkCollFlag</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">angle_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length_</span><span class="p">;</span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">((</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">((</span><span class="n">pow</span><span class="p">(</span><span class="n">xtemp</span><span class="o">/</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)</span><span class="o">+</span><span class="n">pow</span><span class="p">(</span><span class="n">ytemp</span><span class="o">/</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">1.</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">xtemp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w">  </span><span class="n">a</span><span class="w"> </span><span class="o">||</span>
+<span class="w">           </span><span class="n">xtemp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">b</span><span class="w"> </span><span class="o">||</span>
+<span class="w">           </span><span class="n">ytemp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w">  </span><span class="n">c</span><span class="w"> </span><span class="o">||</span>
+<span class="w">           </span><span class="n">ytemp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">d</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">6</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">           </span><span class="n">xtemp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w">  </span><span class="n">b</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">           </span><span class="n">ytemp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w">  </span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">           </span><span class="n">ytemp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w">  </span><span class="n">d</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::driftParticle</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Drifts a particle until it either drifts beyond collimator length or enters</span>
+<span class="c1">//   collimator aperture.</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//   coll_flag: flag for in or out of collimator</span>
+<span class="c1">//   zrl:    remaining length</span>
+<span class="c1">//   length: length of collimator</span>
+<span class="c1">//   coords: particle coordinates</span>
+<span class="c1">//   syncpart: the relevant synchronous particle</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   int.</span>
+<span class="c1">//</span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">driftParticle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">zrl</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncpart</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">eps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0e-8</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">dlength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.0e-4</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.001</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="p">((</span><span class="n">coll_flag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">zrl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">stepsize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.</span><span class="p">)</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">stepsize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zrl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">eps</span><span class="p">)</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dlength</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">pfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getPFactor</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">        </span><span class="n">coords</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">        </span><span class="n">zrl</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">stepsize</span><span class="p">;</span>
+<span class="w">        </span><span class="n">coll_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">checkCollFlag</span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">gamma2i</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getGamma</span><span class="p">()</span><span class="o">*</span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getGamma</span><span class="p">());</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">phifac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="p">(</span><span class="n">pfac</span><span class="mf">-1.0</span><span class="p">)</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">pfac</span><span class="mf">-1.0</span><span class="p">)</span><span class="o">*</span><span class="w"> </span><span class="n">gamma2i</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">phifac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">phifac</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">pfac</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">pfac</span><span class="mf">-1.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gamma2i</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">        </span><span class="n">coords</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">phifac</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">coll_flag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                  </span><span class="n">nHits</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::getDirection</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Gets the normalized unit vector direction of particle momentum</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//</span>
+<span class="c1">//   coords: particle coordinates</span>
+<span class="c1">//   syncpart: the relevant synchronous particle</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   int.</span>
+<span class="c1">//</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getDirection</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncpart</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getPFactor</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xpfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">ypfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">directionfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">xpfac</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">xpfac</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ypfac</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ypfac</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">directionfac</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::checkStep</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Checks to make sure that the randomly generated step size isn&#39;t too</span>
+<span class="c1">//   large (See Catalan-Lasheras, PhD thesis, p 52).  The model is based</span>
+<span class="c1">//   on the K2 collimation code written by Jean Bernard Jeanneret.</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//</span>
+<span class="c1">//   s:   Length of collimator remaining</span>
+<span class="c1">//   stepsize: Randomly generated step</span>
+<span class="c1">//   angle:  tilt angle of collimator.</span>
+<span class="c1">//   coords: particle coordinates</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   Nothing</span>
+<span class="c1">//</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">checkStep</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radlengthfac</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncpart</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getBeta</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getP</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0136</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">radlengthfac</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">angle_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape_</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length_</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">px</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x2</span><span class="o">=</span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nb</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">xb1</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">xb2</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">solution</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">smax</span><span class="o">=</span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">xacc</span><span class="o">=</span><span class="mf">.001</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">r_o</span><span class="p">,</span><span class="w"> </span><span class="n">pr_o</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="n">theta_o</span><span class="p">,</span><span class="w">  </span><span class="n">x_ellipse</span><span class="p">,</span><span class="w"> </span><span class="n">y_ellipse</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xtemp</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">ytemp</span><span class="o">=</span><span class="n">y</span><span class="p">;</span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mf">0.</span><span class="p">)</span><span class="w"> </span><span class="n">r_o</span><span class="o">=</span><span class="mf">10000.</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">arg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ytemp</span><span class="o">/</span><span class="n">xtemp</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">theta_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atan</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">theta_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="o">+</span><span class="n">atan</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+<span class="w">        </span><span class="n">y_ellipse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta_o</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">pow</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta_o</span><span class="p">)</span><span class="o">/</span><span class="n">b</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)));</span>
+<span class="w">        </span><span class="n">x_ellipse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">y_ellipse</span><span class="o">/</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">));</span>
+<span class="w">        </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">xtemp</span><span class="o">*</span><span class="n">xtemp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ytemp</span><span class="o">*</span><span class="n">ytemp</span><span class="p">)</span><span class="w"> </span><span class="o">-</span>
+<span class="w">        </span><span class="n">sqrt</span><span class="p">(</span><span class="n">x_ellipse</span><span class="o">*</span><span class="n">x_ellipse</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_ellipse</span><span class="o">*</span><span class="n">y_ellipse</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="o">&lt;=</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="o">&lt;=</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">xtemp</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">){</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="o">&lt;=</span><span class="n">a</span><span class="p">){</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&lt;=</span><span class="n">c</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">r_o</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">((</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">((</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">));</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&gt;=</span><span class="n">d</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">r_o</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">((</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">((</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">));</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&gt;=</span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ytemp</span><span class="o">&lt;=</span><span class="n">d</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">xtemp</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">){</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&lt;=</span><span class="n">c</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">r_o</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">((</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">((</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">));</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&gt;=</span><span class="n">d</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">r_o</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">((</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">((</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">));</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&gt;=</span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ytemp</span><span class="o">&lt;=</span><span class="n">d</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&lt;=</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">ytemp</span><span class="o">&gt;=</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape</span><span class="o">==</span><span class="mi">6</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">xtemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ytemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">r_o</span><span class="o">=</span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">r_o</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">))</span><span class="w"> </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">xtemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">r_o</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">))</span><span class="w"> </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">r_o</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="p">))</span><span class="w"> </span><span class="n">r_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ytemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">pr_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">px</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">py</span><span class="p">)</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">xb1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">xb2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">zbrak</span><span class="p">(</span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">fstep</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">xb1</span><span class="p">,</span><span class="w"> </span><span class="n">xb2</span><span class="p">,</span><span class="w"> </span><span class="n">nb</span><span class="p">,</span><span class="w"> </span><span class="n">r_o</span><span class="p">,</span><span class="w"> </span><span class="n">pr_o</span><span class="p">,</span><span class="w"> </span><span class="n">theta</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">nb</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">rtbis</span><span class="p">(</span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">fstep</span><span class="p">,</span><span class="w"> </span><span class="n">xb1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">xb2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">xacc</span><span class="p">,</span><span class="w"> </span><span class="n">r_o</span><span class="p">,</span><span class="w"> </span><span class="n">pr_o</span><span class="p">,</span><span class="w"> </span><span class="n">theta</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">solution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mf">100000.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">nb</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">])</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">smax</span><span class="o">=</span><span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">smax</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">smax</span><span class="p">){</span>
+
+<span class="w">     </span><span class="n">stepsize</span><span class="o">=</span><span class="n">smax</span><span class="p">;</span>
+
+<span class="w">     </span><span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::getPFac</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Gets the fractional deviation from sync part momentum (1 +dp/p)</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//</span>
+<span class="c1">//   coords: particle coordinates</span>
+<span class="c1">//   syncpart: the relevant synchronous particle</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   double.</span>
+<span class="c1">//</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getPFactor</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncpart</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">P_sync</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">energyToMomentum</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">T_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">E_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T_part</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">P_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">E_part</span><span class="o">*</span><span class="n">E_part</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">M</span><span class="o">*</span><span class="n">M</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">P_part</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">P_sync</span><span class="p">)</span><span class="o">/</span><span class="n">P_sync</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dp</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">pfac</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::getBeta</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Gets current beta for particle</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//</span>
+<span class="c1">//   coords: particle coordinates</span>
+<span class="c1">//   syncpart: the relevant synchronous particle</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   double.</span>
+<span class="c1">//</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getBeta</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncpart</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">T_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">E_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T_part</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">((</span><span class="n">E_part</span><span class="o">*</span><span class="n">E_part</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="p">))</span><span class="o">/</span><span class="n">E_part</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">beta</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::getP</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Gets current momentum of particle</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//</span>
+<span class="c1">//   coords: particle coordinates</span>
+<span class="c1">//   syncpart: the relevant synchronous particle</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   double.</span>
+<span class="c1">//</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getP</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncpart</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getMass</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">T_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">E_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T_part</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">((</span><span class="n">E_part</span><span class="o">*</span><span class="n">E_part</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">p_part</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::takeStep</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Takes a step in the collimator, allows MCS and ionization energy loss.</span>
+<span class="c1">//   Loses the particle if the energy is too low and updates the tracking params.</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//</span>
+<span class="c1">//   coords:    particle coordinates</span>
+<span class="c1">//   syncpart:  the relevant synchronous particle</span>
+<span class="c1">//   z:         z number of material</span>
+<span class="c1">//   a:         a number of material</span>
+<span class="c1">//   density:   density of material already corrected by density factor</span>
+<span class="c1">//   stepsize:  the stepsize to be taken</span>
+<span class="c1">//   zrl:       remaining collimator length in the z direction</span>
+<span class="c1">//   rl:        remaining collimator length in the direction of particle momentum</span>
+<span class="c1">//   coll_flag: flag for in or out of the collimator.</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   Nothing</span>
+<span class="c1">//</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">takeStep</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">SyncPart</span><span class="o">*</span><span class="w"> </span><span class="n">syncpart</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">density</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">zrl</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rl</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ip</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getBeta</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getP</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getPFactor</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">MaterialInteractions</span><span class="o">::</span><span class="n">mcsJackson</span><span class="p">(</span><span class="n">stepsize</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">density</span><span class="p">,</span><span class="w"> </span><span class="n">beta</span><span class="p">,</span><span class="w"> </span><span class="n">pfac</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaterialInteractions</span><span class="o">::</span><span class="n">ionEnergyLoss</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">dE</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">density</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stepsize</span><span class="p">;</span><span class="w"> </span><span class="c1">//Factors for units m-&gt;cm and MeV-&gt;GeV</span>
+<span class="w">    </span><span class="n">coords</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dE</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">((</span><span class="n">coords</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">syncpart</span><span class="o">-&gt;</span><span class="n">getEnergy</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.02</span><span class="p">){</span>
+<span class="w">        </span><span class="n">Collimator</span><span class="o">::</span><span class="n">loseParticle</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">nLost</span><span class="p">,</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="n">zrl</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">directionfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">getDirection</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="w"> </span><span class="n">syncpart</span><span class="p">);</span>
+<span class="w">        </span><span class="n">zrl</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">stepsize</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">directionfac</span><span class="p">;</span>
+<span class="w">        </span><span class="n">rl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zrl</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">directionfac</span><span class="p">;</span>
+<span class="w">        </span><span class="n">coll_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">checkCollFlag</span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">//</span>
+<span class="c1">// NAME</span>
+<span class="c1">//</span>
+<span class="c1">//   Collimator::loseParticle</span>
+<span class="c1">//</span>
+<span class="c1">// DESCRIPTION</span>
+<span class="c1">//   Lose the particle from the alive bunch and add it to the lost bunch.</span>
+<span class="c1">//   If the alive bunch has particle atributes Particle Ids or Initial</span>
+<span class="c1">//   Coordinates, the lost particle atributes will be copied to the lost bunch.</span>
+<span class="c1">//</span>
+<span class="c1">// PARAMETERS</span>
+<span class="c1">//   coords: particle coordinates</span>
+<span class="c1">//   bunch: the primary bunch</span>
+<span class="c1">//   lostbunch: the lost bunch</span>
+<span class="c1">//   nLost:     the number of lost particles in this collimator</span>
+<span class="c1">//   coll_flag: flag for if particle is still in collimator (and alive)</span>
+<span class="c1">//   zrt:       remaining length in z the particle has in collimator</span>
+<span class="c1">//</span>
+<span class="c1">// RETURNS</span>
+<span class="c1">//   nothing.</span>
+<span class="c1">//</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">loseParticle</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">,</span><span class="w"> </span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">lostbunch</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nLost</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">coll_flag</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">zrl</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">lostbunch</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">){</span>
+
+<span class="w">        </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">addParticle</span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="n">coords</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="mi">5</span><span class="p">]);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">lost_part_ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">hasParticleAttributes</span><span class="p">(</span><span class="s">&quot;LostParticleAttributes&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">part_attr_dict</span><span class="p">;</span>
+<span class="w">            </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">addParticleAttributes</span><span class="p">(</span><span class="s">&quot;LostParticleAttributes&quot;</span><span class="p">,</span><span class="n">part_attr_dict</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">//absolute position in lattice where particle is lost</span>
+<span class="w">        </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">getParticleAttributes</span><span class="p">(</span><span class="s">&quot;LostParticleAttributes&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">attValue</span><span class="p">(</span><span class="n">lost_part_ind</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">length_</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zrl</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">hasParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleIdNumber&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">hasParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleIdNumber&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">part_attr_dict</span><span class="p">;</span>
+<span class="w">                </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">addParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleIdNumber&quot;</span><span class="p">,</span><span class="n">part_attr_dict</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">getParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleIdNumber&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">attValue</span><span class="p">(</span><span class="n">lost_part_ind</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleIdNumber&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">attValue</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">hasParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleInitialCoordinates&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">hasParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleInitialCoordinates&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">part_attr_dict</span><span class="p">;</span>
+<span class="w">                </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">addParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleInitialCoordinates&quot;</span><span class="p">,</span><span class="n">part_attr_dict</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">ParticleInitialCoordinates</span><span class="o">*</span><span class="w"> </span><span class="n">partAttr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ParticleInitialCoordinates</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleInitialCoordinates&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ParticleInitialCoordinates</span><span class="o">*</span><span class="w"> </span><span class="n">partAttr_lost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ParticleInitialCoordinates</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">getParticleAttributes</span><span class="p">(</span><span class="s">&quot;ParticleInitialCoordinates&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">){</span>
+<span class="w">                </span><span class="n">partAttr_lost</span><span class="o">-&gt;</span><span class="n">attValue</span><span class="p">(</span><span class="n">lost_part_ind</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partAttr</span><span class="o">-&gt;</span><span class="n">attValue</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">hasParticleAttributes</span><span class="p">(</span><span class="s">&quot;TurnNumber&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">hasParticleAttributes</span><span class="p">(</span><span class="s">&quot;TurnNumber&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">part_attr_dict</span><span class="p">;</span>
+<span class="w">                </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">addParticleAttributes</span><span class="p">(</span><span class="s">&quot;TurnNumber&quot;</span><span class="p">,</span><span class="n">part_attr_dict</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">attr_name_str</span><span class="p">(</span><span class="s">&quot;TurnNumber&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="o">*</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getBunchAttributeInt</span><span class="p">(</span><span class="n">attr_name_str</span><span class="p">);</span>
+<span class="w">            </span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">getParticleAttributes</span><span class="p">(</span><span class="s">&quot;TurnNumber&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">attValue</span><span class="p">(</span><span class="n">lostbunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turn</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">deleteParticleFast</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+<span class="w">    </span><span class="n">nLost</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="n">coll_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">zrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-1.</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Collimator</span><span class="o">::</span><span class="n">setPosition</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">position</span><span class="p">){</span>
+<span class="w">    </span><span class="n">pos_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_MaterialInteractions_Collimator.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

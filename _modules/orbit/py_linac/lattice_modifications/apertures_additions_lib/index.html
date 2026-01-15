@@ -1,0 +1,710 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.py_linac.lattice_modifications.apertures_additions_lib &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/py_linac/lattice_modifications/apertures_additions_lib';</script>
+    <link rel="index" title="Index" href="../../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac.lattice_modifications.apertures_additions_lib</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.py_linac.lattice_modifications.apertures_additions_lib</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="c1"># --------------------------------------------------------------</span>
+<span class="c1"># Function to add the aperture class instances to the linac lattice,</span>
+<span class="c1"># and a function to create the array with aperture nodes and losses.</span>
+<span class="c1"># --------------------------------------------------------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinacApertureNode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">Quad</span><span class="p">,</span> <span class="n">Drift</span><span class="p">,</span> <span class="n">Bend</span><span class="p">,</span> <span class="n">BaseRF_Gap</span><span class="p">,</span> <span class="n">AxisFieldRF_Gap</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">OverlappingQuadsNode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AxisField_and_Quad_RF_Gap</span>
+
+
+<div class="viewcode-block" id="Add_quad_apertures_to_lattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.Add_quad_apertures_to_lattice/#orbit.py_linac.lattice_modifications.Add_quad_apertures_to_lattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">Add_quad_apertures_to_lattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">aprtNodes</span><span class="o">=</span><span class="p">[]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function will add Aperture nodes at the entrance and exit of quads.</span>
+<span class="sd">    It returns the list of Aperture nodes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+    <span class="n">quads</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesOfClasses</span><span class="p">([</span><span class="n">Quad</span><span class="p">,</span> <span class="n">OverlappingQuadsNode</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">quads</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+                <span class="n">shape</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">)</span>
+                <span class="n">a</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span>
+                <span class="n">node_name</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+                <span class="n">apertureNodeBefore</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">)</span>
+                <span class="n">apertureNodeAfter</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span>
+                <span class="n">apertureNodeBefore</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:AprtIn&quot;</span><span class="p">)</span>
+                <span class="n">apertureNodeAfter</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:AprtOut&quot;</span><span class="p">)</span>
+                <span class="n">apertureNodeBefore</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+                <span class="n">apertureNodeAfter</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNodeBefore</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNodeAfter</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span>
+                <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNodeBefore</span><span class="p">)</span>
+                <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNodeAfter</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">OverlappingQuadsNode</span><span class="p">):</span>
+            <span class="c1"># place to add aperture for the overlapping fields quads</span>
+            <span class="n">nParts</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
+            <span class="n">simple_quads</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getQuads</span><span class="p">()</span>
+            <span class="n">quad_centers</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getCentersOfField</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">node_start_pos</span><span class="p">,</span> <span class="n">node_end_pos</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="n">pos_part_arr</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">for</span> <span class="n">part_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParts</span><span class="p">):</span>
+                <span class="n">pos_part_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">part_ind</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">quad_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">simple_quads</span><span class="p">)):</span>
+                <span class="n">quad</span> <span class="o">=</span> <span class="n">simple_quads</span><span class="p">[</span><span class="n">quad_ind</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+                    <span class="n">shape</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">)</span>
+                    <span class="n">a</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span>
+                    <span class="n">quad_name</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">length</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                    <span class="n">pos_z</span> <span class="o">=</span> <span class="n">quad_centers</span><span class="p">[</span><span class="n">quad_ind</span><span class="p">]</span>
+                    <span class="n">posBefore</span> <span class="o">=</span> <span class="n">pos_z</span> <span class="o">-</span> <span class="n">length</span> <span class="o">/</span> <span class="mf">2.0</span>
+                    <span class="n">posAfter</span> <span class="o">=</span> <span class="n">pos_z</span> <span class="o">+</span> <span class="n">length</span> <span class="o">/</span> <span class="mf">2.0</span>
+                    <span class="k">for</span> <span class="n">part_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">posBefore</span> <span class="o">&gt;=</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="n">part_ind</span><span class="p">]</span> <span class="ow">and</span> <span class="n">posBefore</span> <span class="o">&lt;</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="n">part_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+                            <span class="n">apertureNodeBefore</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posBefore</span> <span class="o">+</span> <span class="n">node_start_pos</span><span class="p">)</span>
+                            <span class="n">apertureNodeBefore</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">quad_name</span> <span class="o">+</span> <span class="s2">&quot;:AprtIn&quot;</span><span class="p">)</span>
+                            <span class="n">apertureNodeBefore</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+                            <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNodeBefore</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BODY</span><span class="p">,</span> <span class="n">part_ind</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">)</span>
+                            <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNodeBefore</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">posAfter</span> <span class="o">&gt;</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="n">part_ind</span><span class="p">]</span> <span class="ow">and</span> <span class="n">posAfter</span> <span class="o">&lt;=</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="n">part_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+                            <span class="n">apertureNodeAfter</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posAfter</span> <span class="o">+</span> <span class="n">node_start_pos</span><span class="p">)</span>
+                            <span class="n">apertureNodeAfter</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">quad_name</span> <span class="o">+</span> <span class="s2">&quot;:AprtOut&quot;</span><span class="p">)</span>
+                            <span class="n">apertureNodeAfter</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+                            <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNodeAfter</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BODY</span><span class="p">,</span> <span class="n">part_ind</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">AFTER</span><span class="p">)</span>
+                            <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNodeAfter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">aprtNodes</span></div>
+
+
+<div class="viewcode-block" id="Add_bend_apertures_to_lattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.Add_bend_apertures_to_lattice/#orbit.py_linac.lattice_modifications.Add_bend_apertures_to_lattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">Add_bend_apertures_to_lattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">aprtNodes</span><span class="o">=</span><span class="p">[],</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.25</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function will add Aperture nodes at the bend nodes of the lattice if they</span>
+<span class="sd">    have aperture parameters.</span>
+<span class="sd">    The distance between aperture nodes is defined by the step input parameter</span>
+<span class="sd">    (in meters).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+    <span class="n">bends</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesOfClasses</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">Bend</span><span class="p">,</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bends</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">aprtNodes</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">bends</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture_x&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture_y&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">)</span>
+            <span class="n">a_x</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture_x&quot;</span><span class="p">)</span>
+            <span class="n">a_y</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture_y&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">shape</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">node_name</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="n">nParts</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">posBefore</span>
+            <span class="n">pos_part_arr</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">part_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParts</span><span class="p">):</span>
+                <span class="n">pos_part_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">part_ind</span><span class="p">)</span>
+            <span class="n">run_path</span> <span class="o">=</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">run_path_old</span> <span class="o">=</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">step</span>
+            <span class="k">for</span> <span class="n">part_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParts</span><span class="p">):</span>
+                <span class="n">run_path</span> <span class="o">=</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="n">part_ind</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">run_path</span> <span class="o">&gt;=</span> <span class="n">run_path_old</span> <span class="o">+</span> <span class="n">step</span><span class="p">:</span>
+                    <span class="n">apertureNode</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a_x</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a_y</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">run_path</span><span class="p">)</span>
+                    <span class="n">aprt_name</span> <span class="o">=</span> <span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">part_ind</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:Aprt&quot;</span>
+                    <span class="k">if</span> <span class="n">nParts</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">aprt_name</span> <span class="o">=</span> <span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:Aprt&quot;</span>
+                    <span class="n">apertureNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">aprt_name</span><span class="p">)</span>
+                    <span class="n">apertureNode</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BODY</span><span class="p">,</span> <span class="n">part_ind</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">)</span>
+                    <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">)</span>
+                    <span class="n">run_path_old</span> <span class="o">=</span> <span class="n">run_path</span>
+    <span class="k">return</span> <span class="n">aprtNodes</span></div>
+
+
+<div class="viewcode-block" id="Add_rfgap_apertures_to_lattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.Add_rfgap_apertures_to_lattice/#orbit.py_linac.lattice_modifications.Add_rfgap_apertures_to_lattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">Add_rfgap_apertures_to_lattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">aprtNodes</span><span class="o">=</span><span class="p">[]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function will add Aperture nodes at the entrance and exit of RF gap.</span>
+<span class="sd">    It returns the list of Aperture nodes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+    <span class="n">rfgaps</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesOfClasses</span><span class="p">([</span><span class="n">BaseRF_Gap</span><span class="p">,</span> <span class="n">AxisFieldRF_Gap</span><span class="p">,</span> <span class="n">AxisField_and_Quad_RF_Gap</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">rfgaps</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">)</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span>
+            <span class="n">node_name</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="n">apertureNodeBefore</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">)</span>
+            <span class="n">apertureNodeAfter</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span>
+            <span class="n">apertureNodeBefore</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:AprtIn&quot;</span><span class="p">)</span>
+            <span class="n">apertureNodeAfter</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:AprtOut&quot;</span><span class="p">)</span>
+            <span class="n">apertureNodeBefore</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+            <span class="n">apertureNodeAfter</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNodeBefore</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNodeAfter</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span>
+            <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNodeBefore</span><span class="p">)</span>
+            <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNodeAfter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">aprtNodes</span></div>
+
+
+<div class="viewcode-block" id="Add_drift_apertures_to_lattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.Add_drift_apertures_to_lattice/#orbit.py_linac.lattice_modifications.Add_drift_apertures_to_lattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">Add_drift_apertures_to_lattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">pos_start</span><span class="p">,</span> <span class="n">pos_end</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">aperture_d</span><span class="p">,</span> <span class="n">aprtNodes</span><span class="o">=</span><span class="p">[]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function will add Aperture nodes at the drift nodes of the lattice between</span>
+<span class="sd">    positions pos_start and pos_end with the minimal distance of &#39;step&#39; between</span>
+<span class="sd">    aperture nodes. The shape of this apertures defines here is always shape=1</span>
+<span class="sd">    which means a circle with the diameter = aperture_d in meters.</span>
+<span class="sd">    It returns the list of Aperture nodes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">aperture_d</span>
+    <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+    <span class="n">drifts</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesOfClasses</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">Drift</span><span class="p">,</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">drifts</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">aprtNodes</span>
+    <span class="c1"># ---- run_path = posBefore in (posBefore, posAfter) = node_pos_dict[node]</span>
+    <span class="n">run_path</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">drifts</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">run_path_old</span> <span class="o">=</span> <span class="n">run_path</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">step</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">drifts</span><span class="p">:</span>
+        <span class="n">node_name</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+        <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">posBefore</span> <span class="o">&gt;</span> <span class="n">pos_end</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">nParts</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">posBefore</span>
+        <span class="n">pos_part_arr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">part_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParts</span><span class="p">):</span>
+            <span class="n">pos_part_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">part_ind</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">part_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParts</span><span class="p">):</span>
+            <span class="n">run_path</span> <span class="o">=</span> <span class="n">pos_part_arr</span><span class="p">[</span><span class="n">part_ind</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">run_path</span> <span class="o">&gt;=</span> <span class="n">pos_start</span> <span class="ow">and</span> <span class="n">run_path</span> <span class="o">&lt;=</span> <span class="n">pos_end</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">run_path</span> <span class="o">&gt;=</span> <span class="n">run_path_old</span> <span class="o">+</span> <span class="n">step</span><span class="p">:</span>
+                    <span class="n">apertureNode</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">run_path</span><span class="p">)</span>
+                    <span class="n">aprt_name</span> <span class="o">=</span> <span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">part_ind</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:Aprt&quot;</span>
+                    <span class="k">if</span> <span class="n">nParts</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">aprt_name</span> <span class="o">=</span> <span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:Aprt&quot;</span>
+                    <span class="n">apertureNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">aprt_name</span><span class="p">)</span>
+                    <span class="n">apertureNode</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BODY</span><span class="p">,</span> <span class="n">part_ind</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">)</span>
+                    <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">)</span>
+                    <span class="n">run_path_old</span> <span class="o">=</span> <span class="n">run_path</span>
+    <span class="k">return</span> <span class="n">aprtNodes</span></div>
+
+
+<div class="viewcode-block" id="AddScrapersAperturesToLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.AddScrapersAperturesToLattice/#orbit.py_linac.lattice_modifications.AddScrapersAperturesToLattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">AddScrapersAperturesToLattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">node_name</span><span class="p">,</span> <span class="n">x_size</span><span class="p">,</span> <span class="n">y_size</span><span class="p">,</span> <span class="n">aprtNodes</span><span class="o">=</span><span class="p">[]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function will add the rectangular Aperture node (shape=3) at the node with a particular name.</span>
+<span class="sd">    Parameters x_size and y_size are full horizontal and vertical sizes of the aperture.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesForName</span><span class="p">(</span><span class="n">node_name</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+    <span class="n">apertureNode</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">x_size</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">y_size</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">)</span>
+    <span class="n">apertureNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:Aprt&quot;</span><span class="p">)</span>
+    <span class="n">apertureNode</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
+    <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">)</span>
+    <span class="n">aprtNodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">aprtNodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">aprtNodes</span></div>
+
+
+<div class="viewcode-block" id="GetLostDistributionArr"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.GetLostDistributionArr/#orbit.py_linac.lattice_modifications.GetLostDistributionArr">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">GetLostDistributionArr</span><span class="p">(</span><span class="n">aprtNodes</span><span class="p">,</span> <span class="n">bunch_lost</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function returns the array with [aptrNode,sum_of_losses]</span>
+<span class="sd">    The sum_of_losses is a number of particles or the sum of macro sizes if the</span>
+<span class="sd">    particle attribute &quot;macrosize&quot; is defined.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lossDist_arr</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">aprtPos_arr</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># --- first we will sort apertures according to the position</span>
+    <span class="n">aprtNodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">aprtNodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">aprt_node</span> <span class="ow">in</span> <span class="n">aprtNodes</span><span class="p">:</span>
+        <span class="n">aprtPos_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aprt_node</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span>
+        <span class="n">loss_sum</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">lossDist_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">aprt_node</span><span class="p">,</span> <span class="n">loss_sum</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">aprtPos_arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">lossDist_arr</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">indexFindF</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">ind_start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">ind_stop</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This function will find the index of nearest to pos point in  pos_arr&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">ind_start</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ind_stop</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ind_start</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">ind_stop</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">indexFindF</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">ind_start</span><span class="p">,</span> <span class="n">ind_stop</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ind_start</span> <span class="o">-</span> <span class="n">ind_stop</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">dist0</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">ind_start</span><span class="p">]</span> <span class="o">-</span> <span class="n">pos</span><span class="p">)</span>
+            <span class="n">dist1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">[</span><span class="n">ind_stop</span><span class="p">]</span> <span class="o">-</span> <span class="n">pos</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">dist0</span> <span class="o">&lt;=</span> <span class="n">dist1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ind_start</span>
+            <span class="k">return</span> <span class="n">ind_stop</span>
+        <span class="n">ind_mdl</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ind_start</span> <span class="o">+</span> <span class="n">ind_stop</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pos_arr</span><span class="p">[</span><span class="n">ind_start</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="ow">and</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">pos_arr</span><span class="p">[</span><span class="n">ind_mdl</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">indexFindF</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">ind_start</span><span class="p">,</span> <span class="n">ind_mdl</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">indexFindF</span><span class="p">(</span><span class="n">pos_arr</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">ind_mdl</span><span class="p">,</span> <span class="n">ind_stop</span><span class="p">)</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="n">has_macrosize_partAttr</span> <span class="o">=</span> <span class="n">bunch_lost</span><span class="o">.</span><span class="n">hasPartAttr</span><span class="p">(</span><span class="s2">&quot;macrosize&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">bunch_lost</span><span class="o">.</span><span class="n">hasPartAttr</span><span class="p">(</span><span class="s2">&quot;LostParticleAttributes&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">lossDist_arr</span>
+    <span class="n">macroSize</span> <span class="o">=</span> <span class="n">bunch_lost</span><span class="o">.</span><span class="n">macroSize</span><span class="p">()</span>
+    <span class="n">nParticles</span> <span class="o">=</span> <span class="n">bunch_lost</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParticles</span><span class="p">):</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">bunch_lost</span><span class="o">.</span><span class="n">partAttrValue</span><span class="p">(</span><span class="s2">&quot;LostParticleAttributes&quot;</span><span class="p">,</span> <span class="n">ind</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">aprtPos_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">aprtPos_arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">aprtPos_arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="k">continue</span>
+        <span class="n">pos_ind</span> <span class="o">=</span> <span class="n">indexFindF</span><span class="p">(</span><span class="n">aprtPos_arr</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">has_macrosize_partAttr</span><span class="p">:</span>
+            <span class="n">macroSize</span> <span class="o">=</span> <span class="n">bunch_lost</span><span class="o">.</span><span class="n">partAttrValue</span><span class="p">(</span><span class="s2">&quot;macrosize&quot;</span><span class="p">,</span> <span class="n">ind</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">lossDist_arr</span><span class="p">[</span><span class="n">pos_ind</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">macroSize</span>
+            <span class="k">continue</span>
+        <span class="n">lossDist_arr</span><span class="p">[</span><span class="n">pos_ind</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="n">lossDist_arr</span></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

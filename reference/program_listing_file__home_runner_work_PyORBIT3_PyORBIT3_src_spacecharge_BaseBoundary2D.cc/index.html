@@ -1,0 +1,908 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File BaseBoundary2D.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.cc';</script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File BaseBoundary2D.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File BaseBoundary2D.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-baseboundary2d-cc">
+<span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-baseboundary2d-cc"></span><h1>Program Listing for File BaseBoundary2D.cc<a class="headerlink" href="#program-listing-for-file-baseboundary2d-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-baseboundary2d-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/BaseBoundary2D.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BaseBoundary2D.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cfloat&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">IS_INSIDE</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">IS_OUTSIDE</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">TO_BE_KILLED</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrbitConst</span><span class="o">::</span><span class="n">PI</span><span class="p">;</span>
+
+
+<span class="c1">// Constructor</span>
+<span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">BaseBoundary2D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nPoints</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nModes</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">CppPyWrapper</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="n">initialized_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">xMin_</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xMax_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yMin_</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yMax_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">BPrnorm_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">shape_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;noshape&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">NO_SHAPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape_</span><span class="p">;</span>
+<span class="w">    </span><span class="n">shape_type_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">no_shape_key_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xDim_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yDim_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//number of points on the boundary</span>
+<span class="w">    </span><span class="n">nPoints_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nPoints</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//number of modes in the free-space field</span>
+<span class="w">    </span><span class="n">nModes_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nModes</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//The arrays with boundary points</span>
+<span class="w">    </span><span class="n">bArrX_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nPoints_</span><span class="p">];</span>
+<span class="w">    </span><span class="n">bArrY_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nPoints_</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">bArrX_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">            </span><span class="n">bArrY_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">nPoints_</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;BaseBoundary2D::BaseBoundary2D - CONSTRUCTOR &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Boundary class will not work because &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 2*nModes_+1 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; nPoints_    = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w">    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Number of points has to be increased.&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop.&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">bnd_phi_arr_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nPoints_</span><span class="p">];</span>
+
+<span class="w">  </span><span class="n">lsq_func_vctr_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="n">lsq_coef_vctr_</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lsq_coef_vctr_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">indxc_tmp</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="n">indxr_tmp</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="n">ipiv_tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="w">  </span><span class="n">tmp_matrix_</span><span class="w"> </span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">tmp_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">LSQ_matrix_</span><span class="w"> </span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LSQ_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="p">[</span><span class="n">nPoints_</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="c1">// Destructor</span>
+<span class="n">BaseBoundary2D</span><span class="o">::~</span><span class="n">BaseBoundary2D</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">bArrX_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">bArrX_</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">bArrY_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">bArrY_</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">//delete LSQM related arrays</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">bnd_phi_arr_</span><span class="p">;</span>
+<span class="w">  </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">lsq_func_vctr_</span><span class="p">;</span>
+<span class="w">  </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">lsq_coef_vctr_</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">ipiv_tmp</span><span class="p">;</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">indxr_tmp</span><span class="p">;</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">indxc_tmp</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">tmp_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">tmp_matrix_</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">LSQ_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">LSQ_matrix_</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">//std::cerr &lt;&lt; &quot;debug Destructor BaseBoundary2D was done.   !!!! \n&quot;;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getMaxX</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">xMax_</span><span class="p">;}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getMinX</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">xMin_</span><span class="p">;}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getMaxY</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">yMax_</span><span class="p">;}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getMinY</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">yMin_</span><span class="p">;}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getNumberOfPoints</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nPoints_</span><span class="p">;}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getNumberOfModes</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nModes_</span><span class="p">;}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">isInitialized</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">initialized_</span><span class="p">;}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">isInside</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">isIns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IS_OUTSIDE</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">xMin_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xMax_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">yMin_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">yMax_</span><span class="p">){</span>
+<span class="w">        </span><span class="n">isIns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">isIns</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getBoundaryPointX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">bArrX_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getBoundaryPointY</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">bArrY_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">setBoundaryPoint</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">){</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">no_shape_key_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;BaseBoundary2D::setBoundaryPoint(...) &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; You can not do this! The shape has been defined already! &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; shape = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">shape_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; x size = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xDim_</span><span class="w">    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; y size = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yDim_</span><span class="w">    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop.&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="n">bArrX_</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="n">bArrY_</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">initialized_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">initializeBPs</span><span class="p">(){</span>
+<span class="w">    </span><span class="n">xMin_</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xMax_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yMin_</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yMax_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bArrX_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bArrY_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xMin_</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">xMin_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">xMax_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">xMax_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">yMin_</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="n">yMin_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">yMax_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="n">yMax_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">BPrnorm_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">((</span><span class="n">xMin_</span><span class="o">-</span><span class="n">xMax_</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">xMin_</span><span class="o">-</span><span class="n">xMax_</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">yMin_</span><span class="o">-</span><span class="n">yMax_</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">yMin_</span><span class="o">-</span><span class="n">yMax_</span><span class="p">));</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">tmp_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}}</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w">  </span><span class="n">iBp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">iBp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">iBp</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="n">lsq_fuctions</span><span class="p">(</span><span class="n">bArrX_</span><span class="p">[</span><span class="n">iBp</span><span class="p">],</span><span class="n">bArrY_</span><span class="p">[</span><span class="n">iBp</span><span class="p">]);</span>
+<span class="w">     </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">tmp_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<span class="w">     </span><span class="p">}}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">//inverse matrix</span>
+<span class="w">  </span><span class="n">_gaussjinv</span><span class="p">(</span><span class="n">tmp_matrix_</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w">     </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LSQ_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">lsq_fuctions</span><span class="p">(</span><span class="n">bArrX_</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">bArrY_</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">LSQ_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">tmp_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}}</span>
+
+<span class="w">    </span><span class="c1">//boundary is initialized</span>
+<span class="w">    </span><span class="n">initialized_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">string</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getShapeName</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">shape_</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">getShapeType</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">shape_type_</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">_gaussjinv</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">**</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">//    Taken from Nrecipes and slightly modified.</span>
+<span class="w">    </span><span class="c1">//   Get matrix A(nxn) and transform it into A^(-1).</span>
+<span class="w">    </span><span class="c1">//   Outputs error if A^(-1) doesn&#39;t exist</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">indxc</span><span class="p">,</span><span class="o">*</span><span class="n">indxr</span><span class="p">,</span><span class="o">*</span><span class="n">ipiv</span><span class="p">;</span><span class="w">  </span><span class="c1">// indexr and indexc track column permutation</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="n">icol</span><span class="p">,</span><span class="n">irow</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">ll</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">big</span><span class="p">,</span><span class="n">dum</span><span class="p">,</span><span class="n">pivinv</span><span class="p">,</span><span class="n">temp</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">icol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">irow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">indxc</span><span class="o">=</span><span class="w"> </span><span class="n">indxc_tmp</span><span class="p">;</span>
+<span class="w">    </span><span class="n">indxr</span><span class="o">=</span><span class="w"> </span><span class="n">indxr_tmp</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ipiv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipiv_tmp</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">ipiv</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">big</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// Looking for pivot</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ipiv</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ipiv</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">])</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">big</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">big</span><span class="o">=</span><span class="n">fabs</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]);</span>
+<span class="w">                        </span><span class="n">irow</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+<span class="w">                        </span><span class="n">icol</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ipiv</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">                        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Boundary2D::Boundary2D - _gaussjinv&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Matrix A^(-1) does not_eq exist!&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop 0.&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">                </span><span class="p">};</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="o">++</span><span class="p">(</span><span class="n">ipiv</span><span class="p">[</span><span class="n">icol</span><span class="p">]);</span>
+<span class="w">            </span><span class="c1">// Pivot found - interchanging rows</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">irow</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">icol</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">l</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">l</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">irow</span><span class="p">][</span><span class="n">l</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">a</span><span class="p">[</span><span class="n">irow</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">icol</span><span class="p">][</span><span class="n">l</span><span class="p">];</span>
+<span class="w">                    </span><span class="n">a</span><span class="p">[</span><span class="n">icol</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">indxr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">irow</span><span class="p">;</span>
+<span class="w">            </span><span class="n">indxc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">icol</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">icol</span><span class="p">][</span><span class="n">icol</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">                    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Boundary2D::Boundary2D - _gaussjinv&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Matrix A^(-1) does not_eq exist!&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop 1.&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">pivinv</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="n">a</span><span class="p">[</span><span class="n">icol</span><span class="p">][</span><span class="n">icol</span><span class="p">];</span>
+<span class="w">            </span><span class="n">a</span><span class="p">[</span><span class="n">icol</span><span class="p">][</span><span class="n">icol</span><span class="p">]</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">l</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">l</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">icol</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">pivinv</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">ll</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">ll</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">icol</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">dum</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">ll</span><span class="p">][</span><span class="n">icol</span><span class="p">];</span>
+<span class="w">                </span><span class="n">a</span><span class="p">[</span><span class="n">ll</span><span class="p">][</span><span class="n">icol</span><span class="p">]</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">l</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">l</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">ll</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">icol</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="o">*</span><span class="n">dum</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="n">n</span><span class="mi">-1</span><span class="p">;</span><span class="n">l</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">l</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">indxr</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">indxc</span><span class="p">[</span><span class="n">l</span><span class="p">])</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">indxr</span><span class="p">[</span><span class="n">l</span><span class="p">]];</span>
+<span class="w">            </span><span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">indxr</span><span class="p">[</span><span class="n">l</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">indxc</span><span class="p">[</span><span class="n">l</span><span class="p">]];</span>
+<span class="w">            </span><span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">indxc</span><span class="p">[</span><span class="n">l</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">lsq_fuctions</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="n">r2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">     </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">     </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">r2</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">sin_f</span><span class="p">,</span><span class="n">cos_f</span><span class="p">,</span><span class="w"> </span><span class="n">sin_f0</span><span class="p">,</span><span class="n">cos_f0</span><span class="p">,</span><span class="w"> </span><span class="n">sin_f1</span><span class="p">,</span><span class="n">cos_f1</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">rfac</span><span class="p">,</span><span class="n">rj</span><span class="p">;</span>
+<span class="w">  </span><span class="n">sin_f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="o">/</span><span class="n">r</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cos_f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="n">r</span><span class="p">;</span>
+<span class="w">  </span><span class="n">sin_f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin_f</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cos_f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos_f</span><span class="p">;</span>
+<span class="w">  </span><span class="n">rfac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">BPrnorm_</span><span class="p">;</span>
+<span class="w">  </span><span class="n">rj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nModes_</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">rj</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">rfac</span><span class="p">;</span>
+<span class="w">    </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">rj</span><span class="o">*</span><span class="n">cos_f0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">rj</span><span class="o">*</span><span class="n">sin_f0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">sin_f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin_f</span><span class="o">*</span><span class="n">cos_f0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cos_f</span><span class="o">*</span><span class="n">sin_f0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cos_f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos_f</span><span class="o">*</span><span class="n">cos_f0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sin_f</span><span class="o">*</span><span class="n">sin_f0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">sin_f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin_f1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cos_f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos_f1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">BaseBoundary2D</span><span class="o">::</span><span class="n">addBoundaryPotential</span><span class="p">(</span><span class="n">Grid2D</span><span class="o">*</span><span class="w"> </span><span class="n">rhoGrid</span><span class="p">,</span><span class="n">Grid2D</span><span class="o">*</span><span class="w">  </span><span class="n">phiGrid</span><span class="p">){</span>
+
+<span class="w">    </span><span class="c1">//check initialization</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">initialized_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;BaseBoundary2D (or subclass) addBoundaryPotential(...):&quot;</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The boundary was not initialized! Call initializeBPs() method!&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop. </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="c1">//check that the boundary is inside the grids</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">xMin_</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xMax_</span><span class="w"> </span><span class="o">||</span>
+<span class="w">            </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">yMin_</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMaxY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">yMax_</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;BaseBoundary2D (or subclass) addBoundaryPotential(...):&quot;</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The some boundary points are outside the grids:&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;boundary xMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xMin_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;boundary xMax =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xMax_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;boundary yMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yMin_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;boundary yMax =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yMax_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid xMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid yMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid xMax =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid yMax =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMaxY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop. </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//check that grids are the same</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getSizeX</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getSizeX</span><span class="p">()</span><span class="w"> </span><span class="o">||</span>
+<span class="w">            </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getSizeY</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getSizeY</span><span class="p">()</span><span class="w"> </span><span class="o">||</span>
+<span class="w">          </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getStepX</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getStepX</span><span class="p">()</span><span class="w"> </span><span class="o">||</span>
+<span class="w">            </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getStepY</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getStepY</span><span class="p">()</span><span class="w"> </span><span class="o">||</span>
+<span class="w">            </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">()</span><span class="w">  </span><span class="o">!=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">()</span><span class="w">  </span><span class="o">||</span>
+<span class="w">            </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">()</span><span class="w">  </span><span class="o">!=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">()){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;BaseBoundary2D (or subclass) addBoundaryPotential(...):&quot;</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The rho and phi grid sizes are different &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid x bins =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getSizeX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid y bins =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getSizeY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;phiGrid x bins =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getSizeX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;phiGrid y bins =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getSizeY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid dx =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getStepX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid dy =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getStepY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;phiGrid dx =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getStepX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;phiGrid dy =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getStepY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid xMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;rhoGrid yMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rhoGrid</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;phiGrid xMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;phiGrid yMin =&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getMinY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">                                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop. </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">bnd_phi_arr_</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="p">(</span><span class="n">bArrX_</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">bArrY_</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lsq_coef_vctr_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">     </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints_</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">lsq_coef_vctr_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">LSQ_matrix_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">bnd_phi_arr_</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">         </span><span class="c1">//std::cout&lt;&lt;&quot;debug i=&quot;&lt;&lt;i&lt;&lt;&quot; coef=&quot;&lt;&lt;lsq_coef_vctr_[i]&lt;&lt;std::endl;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">phi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">phi_arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getArr</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getSizeX</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nx</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getSizeY</span><span class="p">();</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ny</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">phi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">//std::cout&lt;&lt;&quot;debug ================= i=&quot;&lt;&lt;i&lt;&lt;&quot;  j=&quot;&lt;&lt; j &lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="n">lsq_fuctions</span><span class="p">(</span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getGridX</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">phiGrid</span><span class="o">-&gt;</span><span class="n">getGridY</span><span class="p">(</span><span class="n">j</span><span class="p">));</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">nModes_</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                </span><span class="n">phi</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">lsq_coef_vctr_</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">lsq_func_vctr_</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<span class="w">                </span><span class="c1">//std::cout&lt;&lt;&quot;debug k=&quot;&lt;&lt;k&lt;&lt;&quot; coef=&quot;&lt;&lt;lsq_coef_vctr_[k]&lt;&lt;&quot; func=&quot;&lt;&lt;lsq_func_vctr_[k]&lt;&lt;std::endl;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">phi_arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w">  </span><span class="n">phi</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">//std::cout&lt;&lt;&quot;debug phi=&quot;&lt;&lt;phi&lt;&lt;std::endl;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_BaseBoundary2D.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

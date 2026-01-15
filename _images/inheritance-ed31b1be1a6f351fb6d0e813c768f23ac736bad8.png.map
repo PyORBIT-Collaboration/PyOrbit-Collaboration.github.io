@@ -1,9 +1,0 @@
-<map id="inheritanced09899a5c3" name="inheritanced09899a5c3">
-<area shape="rect" id="node1" href="../_api/orbit.lattice.AccNode.html#orbit.lattice.AccNode" target="_top" title="Class. Base class of the accelerator nodes hierarchy." alt="" coords="170,51,239,76"/>
-<area shape="rect" id="node5" href="../_api/orbit.lattice.AccNodeBunchTracker.html#orbit.lattice.AccNodeBunchTracker" target="_top" title="Class. Base class of the accelerator nodes that track the pyORBIT bunch." alt="" coords="282,51,428,76"/>
-<area shape="rect" id="node2" href="../_api/orbit.utils.NamedObject.html#orbit.utils.NamedObject" target="_top" title="Class. An object that has a name." alt="" coords="17,5,115,29"/>
-<area shape="rect" id="node3" href="../_api/orbit.utils.TypedObject.html#orbit.utils.TypedObject" target="_top" title="Class. Object that has a type." alt="" coords="21,51,111,76"/>
-<area shape="rect" id="node4" href="../_api/orbit.utils.ParamsDictObject.html#orbit.utils.ParamsDictObject" target="_top" title="Class. Object that has a parameters dictionary." alt="" coords="5,97,127,122"/>
-<area shape="rect" id="node6" href="../_api/orbit.py_linac.lattice.BaseLinacNode.html#orbit.py_linac.lattice.BaseLinacNode" target="_top" title="The base abstract class of the linac accelerator elements hierarchy." alt="" coords="471,51,579,76"/>
-<area shape="rect" id="node7" href="../_api/orbit.py_linac.materials.VacuumWindowNode.html#orbit.py_linac.materials.VacuumWindowNode" target="_top" title="The vacuum window node class for linac lattice" alt="" coords="622,51,763,76"/>
-</map>

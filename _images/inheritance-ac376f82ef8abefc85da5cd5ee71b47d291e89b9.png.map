@@ -1,0 +1,6 @@
+<map id="inheritancea8a39bf745" name="inheritancea8a39bf745">
+<area shape="rect" id="node1" href="../orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction/#orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction" target="_top" title="It is an abstract class describing the quadrupole magnetic" alt="" coords="5,57,245,85"/>
+<area shape="rect" id="node2" href="../orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction" target="_top" title="The Enge function with parameters from Berz&#39;s paper" alt="" coords="325,5,433,33"/>
+<area shape="rect" id="node3" href="../orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function" target="_top" title="The PMQ Function is a represenatation of the field of permanent quad" alt="" coords="293,57,465,85"/>
+<area shape="rect" id="node4" href="../orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc/#orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc" target="_top" title="It is an implementation of the QuadFieldSourceFunction class for" alt="" coords="298,109,460,137"/>
+</map>

@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File ShapedBoundary2D.cc &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.cc';</script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Program Listing for File ShapedBoundary2D.cc</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Program Listing for File ShapedBoundary2D.cc</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-shapedboundary2d-cc">
+<span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-shapedboundary2d-cc"></span><h1>Program Listing for File ShapedBoundary2D.cc<a class="headerlink" href="#program-listing-for-file-shapedboundary2d-cc" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-shapedboundary2d-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/spacecharge/ShapedBoundary2D.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ShapedBoundary2D.hh&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cfloat&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
+
+<span class="n">ShapedBoundary2D</span><span class="o">::</span><span class="n">ShapedBoundary2D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nPoints</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nModes</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">shape</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">xDim</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">yDim</span><span class="p">)</span><span class="o">:</span>
+<span class="w">           </span><span class="n">BaseBoundary2D</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="p">((</span><span class="kt">int</span><span class="p">)(</span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">)),</span><span class="n">nModes</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">nPoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNumberOfPoints</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">shape_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xDim_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xDim</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yDim_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yDim</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">r_circle_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">  </span><span class="n">a_ellipse_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">b_ellipse_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">a_rect_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">b_rect_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">shape_type_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">shape_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Circle&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">r_circle_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xDim</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">shape_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Ellipse&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">a_ellipse_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xDim</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">b_ellipse_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yDim</span><span class="o">/</span><span class="mi">2</span><span class="p">;}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">shape_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Rectangle&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">a_rect_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xDim</span><span class="p">;</span><span class="w"> </span><span class="n">b_rect_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yDim</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ShapedBoundary2D::ShapedBoundary2D - CONSTRUCTOR &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Boundary class will not work because the shape parameter should be &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Circle or Ellipse or Rectangle&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop.&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">xDim_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">yDim_</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ShapedBoundary2D::ShapedBoundary2D - CONSTRUCTOR &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; The Circle should have the same x and y sizes. &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; xDimension = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xDim_</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; yDimension = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">yDim_</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Stop.&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//after initializing we have to put this key to 0</span>
+<span class="w">    </span><span class="n">no_shape_key_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//initialize circle</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_circle_</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="n">nPoints</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r_circle_</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="n">nPoints</span><span class="p">);</span>
+<span class="w">            </span><span class="n">setBoundaryPoint</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//initialize ellipse</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">ds</span><span class="p">,</span><span class="n">denom</span><span class="p">,</span><span class="n">resid</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">dtheta</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">a_ellipse_</span><span class="o">*</span><span class="n">b_ellipse_</span><span class="p">)</span><span class="o">/</span><span class="n">nPoints</span><span class="p">;</span>
+<span class="w">        </span><span class="n">resid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">theta_arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="n">nPoints</span><span class="p">];</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">resid</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1.0e-08</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resid</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">-1.0e-08</span><span class="p">){</span>
+<span class="w">            </span><span class="n">denom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_ellipse_</span><span class="p">;</span>
+<span class="w">            </span><span class="n">dtheta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ds</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">denom</span><span class="p">;</span>
+<span class="w">            </span><span class="n">th</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dtheta</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.</span><span class="p">;</span>
+<span class="w">            </span><span class="n">theta_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">denom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_ellipse_</span><span class="o">*</span><span class="n">b_ellipse_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a_ellipse_</span><span class="o">*</span><span class="n">a_ellipse_</span><span class="o">-</span><span class="n">b_ellipse_</span><span class="o">*</span><span class="n">b_ellipse_</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">);</span>
+<span class="w">        </span><span class="n">denom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">denom</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dtheta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ds</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">denom</span><span class="p">;</span>
+<span class="w">        </span><span class="n">theta_arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theta_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dtheta</span><span class="p">;</span>
+<span class="w">        </span><span class="n">th</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dtheta</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">            </span><span class="n">resid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theta_arr</span><span class="p">[</span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">PI</span><span class="o">/</span><span class="mf">2.</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ds</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">theta_arr</span><span class="p">[</span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">]);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">theta_arr</span><span class="p">[</span><span class="n">nPoints</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">theta_arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="n">theta_arr</span><span class="p">[</span><span class="n">nPoints</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">theta_arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_ellipse_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">theta_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_ellipse_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">theta_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">setBoundaryPoint</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">theta_arr</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//initialize rectangle</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_rect_</span><span class="o">/</span><span class="p">(</span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_rect_</span><span class="o">/</span><span class="p">(</span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="n">a_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="n">dx</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">setBoundaryPoint</span><span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="n">dy</span><span class="p">;</span>
+<span class="w">            </span><span class="n">setBoundaryPoint</span><span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="n">dx</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">b_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">            </span><span class="n">setBoundaryPoint</span><span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nPoints</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">a_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="n">b_rect_</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="n">dy</span><span class="p">;</span>
+<span class="w">            </span><span class="n">setBoundaryPoint</span><span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//end of initialization</span>
+<span class="w">    </span><span class="n">initializeBPs</span><span class="p">();</span>
+<span class="w">    </span><span class="n">no_shape_key_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">ShapedBoundary2D</span><span class="o">::~</span><span class="n">ShapedBoundary2D</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">ShapedBoundary2D</span><span class="o">::</span><span class="n">impactPoint</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">,</span>
+<span class="w">                                  </span><span class="kt">double</span><span class="w"> </span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">py</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pz</span><span class="p">,</span>
+<span class="w">                                    </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">r_v</span><span class="p">,</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">n_v</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// NOTICE: in the rectangle case, we could remove corner and boundary plane</span>
+<span class="w">    </span><span class="c1">// conditions if we found out they would not change results so much.</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">time_impact</span><span class="o">=</span><span class="mf">-1.0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">r_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span><span class="w">    </span><span class="n">r_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">;</span><span class="w">    </span><span class="n">r_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">z</span><span class="p">;</span>
+<span class="w">  </span><span class="n">n_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span><span class="w">  </span><span class="n">n_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span><span class="w">  </span><span class="n">n_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">//we consider the particle outside of the boundary</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">isIns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isInside</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isIns</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">IS_OUTSIDE</span><span class="p">){</span>
+
+<span class="w">    </span><span class="c1">//Circle-------------------------------------------------</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">c1</span><span class="o">=</span><span class="n">px</span><span class="o">*</span><span class="n">px</span><span class="o">+</span><span class="n">py</span><span class="o">*</span><span class="n">py</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">px</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">py</span><span class="p">,</span><span class="w"> </span><span class="n">c3</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="o">-</span><span class="n">r_circle_</span><span class="o">*</span><span class="n">r_circle_</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c2</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">c1</span><span class="o">*</span><span class="n">c3</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">TO_BE_KILLED</span><span class="p">;}</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">t1</span><span class="o">=</span><span class="p">(</span><span class="n">c2</span><span class="o">+</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c2</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">c1</span><span class="o">*</span><span class="n">c3</span><span class="p">))</span><span class="o">/</span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span><span class="o">=</span><span class="p">(</span><span class="n">c2</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c2</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">c1</span><span class="o">*</span><span class="n">c3</span><span class="p">))</span><span class="o">/</span><span class="n">c1</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">t1</span><span class="o">&gt;=</span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">t2</span><span class="o">&gt;=</span><span class="mf">0.0</span><span class="p">){</span>
+<span class="w">                </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t2</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="w">                </span><span class="c1">//std::cout &lt;&lt;&quot;the particle may have inward momentum \n&quot;;</span>
+<span class="w">                </span><span class="c1">//std::cout &lt;&lt;&quot;Please check &#39;&quot;&lt;&lt;t1*t2&lt;&lt;&quot;&#39; be positive \n&quot;;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">TO_BE_KILLED</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
+<span class="w">      </span><span class="n">n_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="o">/</span><span class="n">norm</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="o">/</span><span class="n">norm</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//-------------------------------------------------------</span>
+
+<span class="w">    </span><span class="c1">//Ellipse------------------------------------------------</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">px</span><span class="o">/</span><span class="n">a_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">py</span><span class="o">/</span><span class="n">b_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">px</span><span class="o">/</span><span class="n">pow</span><span class="p">(</span><span class="n">a_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">py</span><span class="o">/</span><span class="n">pow</span><span class="p">(</span><span class="n">b_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">c3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">a_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">b_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c2</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">c1</span><span class="o">*</span><span class="n">c3</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">TO_BE_KILLED</span><span class="p">;}</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">t1</span><span class="o">=</span><span class="p">(</span><span class="n">c2</span><span class="o">+</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c2</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">c1</span><span class="o">*</span><span class="n">c3</span><span class="p">))</span><span class="o">/</span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span><span class="o">=</span><span class="p">(</span><span class="n">c2</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c2</span><span class="o">*</span><span class="n">c2</span><span class="o">-</span><span class="n">c1</span><span class="o">*</span><span class="n">c3</span><span class="p">))</span><span class="o">/</span><span class="n">c1</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">t1</span><span class="o">&gt;=</span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">t2</span><span class="o">&gt;=</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t2</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="w">                </span><span class="c1">//std::cout &lt;&lt;&quot;the particle may have inward momentum \n&quot;;</span>
+<span class="w">                </span><span class="c1">//std::cout &lt;&lt;&quot;Please check &#39;&quot;&lt;&lt;t1*t2&lt;&lt;&quot;&#39; be positive \n&quot;;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">TO_BE_KILLED</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">b_ellipse_</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">a_ellipse_</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
+<span class="w">      </span><span class="n">n_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">pow</span><span class="p">(</span><span class="n">b_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="n">norm</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">pow</span><span class="p">(</span><span class="n">a_ellipse_</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">/</span><span class="n">norm</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//-------------------------------------------------------</span>
+
+<span class="w">    </span><span class="c1">//Rectangle----------------------------------------------</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">){</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_rect_</span><span class="p">,</span><span class="n">W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_rect_</span><span class="p">;</span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span><span class="n">t3</span><span class="p">,</span><span class="n">t4</span><span class="p">,</span><span class="w"> </span><span class="n">ry1</span><span class="p">,</span><span class="n">ry2</span><span class="p">,</span><span class="n">rx3</span><span class="p">,</span><span class="n">rx4</span><span class="p">;</span>
+<span class="w">      </span><span class="n">t1</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="p">)</span><span class="o">/</span><span class="n">px</span><span class="p">;</span><span class="w">      </span><span class="n">ry1</span><span class="o">=</span><span class="n">y</span><span class="o">-</span><span class="n">t1</span><span class="o">*</span><span class="n">py</span><span class="p">;</span>
+<span class="w">      </span><span class="n">t2</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="p">)</span><span class="o">/</span><span class="n">px</span><span class="p">;</span><span class="w">      </span><span class="n">ry2</span><span class="o">=</span><span class="n">y</span><span class="o">-</span><span class="n">t2</span><span class="o">*</span><span class="n">py</span><span class="p">;</span>
+<span class="w">      </span><span class="n">t3</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="p">)</span><span class="o">/</span><span class="n">py</span><span class="p">;</span><span class="w">      </span><span class="n">rx3</span><span class="o">=</span><span class="n">x</span><span class="o">-</span><span class="n">t3</span><span class="o">*</span><span class="n">px</span><span class="p">;</span>
+<span class="w">      </span><span class="n">t4</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="p">)</span><span class="o">/</span><span class="n">py</span><span class="p">;</span><span class="w">      </span><span class="n">rx4</span><span class="o">=</span><span class="n">x</span><span class="o">-</span><span class="n">t4</span><span class="o">*</span><span class="n">px</span><span class="p">;</span>
+
+<span class="w">      </span><span class="c1">//      std::cout&lt;&lt;&quot;debug (t1,t2,t3,t4)= (&quot;</span>
+<span class="w">      </span><span class="c1">//           &lt;&lt;t1&lt;&lt;&quot;,&quot;&lt;&lt;t2&lt;&lt;&quot;,&quot;&lt;&lt;t3&lt;&lt;&quot;,&quot;&lt;&lt;t4&lt;&lt;&quot;) \n&quot;;</span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">eps</span><span class="o">=</span><span class="mf">1.</span><span class="n">E</span><span class="mi">-10</span><span class="p">;</span><span class="w"> </span><span class="c1">//to define corners and planes of the boundary</span>
+
+<span class="w">      </span><span class="c1">//the particle is at a corner</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="mf">-0.5</span><span class="o">*</span><span class="n">L</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="mf">-0.5</span><span class="o">*</span><span class="n">W</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">){</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">TO_BE_KILLED</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="c1">//the particle is on a boundary plane</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ry1</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">px</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="n">time_impact</span><span class="w"> </span><span class="o">=</span><span class="n">t1</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ry2</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">px</span><span class="o">&lt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="n">time_impact</span><span class="w"> </span><span class="o">=</span><span class="n">t2</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t3</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">rx3</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">py</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="n">time_impact</span><span class="w"> </span><span class="o">=</span><span class="n">t3</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t4</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">rx4</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">py</span><span class="o">&lt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="n">time_impact</span><span class="w"> </span><span class="o">=</span><span class="n">t4</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ry1</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">px</span><span class="o">&lt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ry2</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">px</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t3</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">rx3</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">py</span><span class="o">&lt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">t4</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">rx4</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">py</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">else</span><span class="p">{</span>
+<span class="w">                </span><span class="c1">//the particle locates outside boundary</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">t1</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ry1</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="p">){</span><span class="n">time_impact</span><span class="o">=</span><span class="n">t1</span><span class="p">;}</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">t2</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">ry2</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">W</span><span class="p">){</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">time_impact</span><span class="o">&lt;=</span><span class="mf">0.0</span><span class="p">){</span><span class="w">       </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t2</span><span class="p">;}</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">time_impact</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t2</span><span class="p">){</span><span class="w">       </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t2</span><span class="p">;}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">t3</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">rx3</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="p">){</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">time_impact</span><span class="o">&lt;=</span><span class="mf">0.0</span><span class="p">){</span><span class="w">       </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t3</span><span class="p">;}</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">time_impact</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t3</span><span class="p">){</span><span class="w">       </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t3</span><span class="p">;}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">t4</span><span class="o">&gt;</span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">rx4</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="o">*</span><span class="n">L</span><span class="p">){</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">time_impact</span><span class="o">&lt;=</span><span class="mf">0.0</span><span class="p">){</span><span class="w">       </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t4</span><span class="p">;}</span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">time_impact</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t4</span><span class="p">){</span><span class="w">       </span><span class="n">time_impact</span><span class="o">=</span><span class="n">t4</span><span class="p">;}</span>
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="c1">//the particle came from a corner</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t3</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">                    </span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t4</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">                </span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t3</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">                </span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t4</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">){</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">TO_BE_KILLED</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="c1">//      std::cout&lt;&lt;&quot;debug time_impact= (&quot;&lt;&lt;time_impact&lt;&lt;&quot;) \n&quot;;</span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">time_impact</span><span class="o">&lt;</span><span class="mf">0.0</span><span class="p">){</span>
+<span class="w">                </span><span class="c1">// std::cout&lt;&lt;&quot;the particle has inward momentum \n&quot;;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TO_BE_KILLED</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="p">){</span><span class="n">n_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mf">-1.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t2</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="p">){</span><span class="n">n_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t3</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="p">){</span><span class="n">n_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mf">-1.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;}</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">time_impact</span><span class="o">-</span><span class="n">t4</span><span class="p">)</span><span class="o">&lt;</span><span class="n">eps</span><span class="p">){</span><span class="n">n_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="n">n_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;}</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//-------------------------------------------------------</span>
+
+<span class="w">    </span><span class="c1">//positive &quot;time_impact&quot; means that the particle goes outward</span>
+<span class="w">    </span><span class="n">r_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_impact</span><span class="o">*</span><span class="n">px</span><span class="p">;</span>
+<span class="w">    </span><span class="n">r_v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_impact</span><span class="o">*</span><span class="n">py</span><span class="p">;</span>
+<span class="w">    </span><span class="n">r_v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_impact</span><span class="o">*</span><span class="n">pz</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">IS_OUTSIDE</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">else</span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">ShapedBoundary2D</span><span class="o">::</span><span class="n">isInside</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">isIns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IS_OUTSIDE</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">r_circle_</span><span class="o">*</span><span class="n">r_circle_</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">isIns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">;</span>
+<span class="w">    </span><span class="n">xx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="n">a_ellipse_</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="o">/</span><span class="n">b_ellipse_</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">xx</span><span class="o">*</span><span class="n">xx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yy</span><span class="o">*</span><span class="n">yy</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">isIns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shape_type_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">a_rect_</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">b_rect_</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">isIns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IS_INSIDE</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">isIns</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ShapedBoundary2D.cc.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

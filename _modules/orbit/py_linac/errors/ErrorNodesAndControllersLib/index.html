@@ -1,0 +1,1104 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.py_linac.errors.ErrorNodesAndControllersLib &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/py_linac/errors/ErrorNodesAndControllersLib';</script>
+    <link rel="index" title="Index" href="../../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac.errors.ErrorNodesAndControllersLib</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.py_linac.errors.ErrorNodesAndControllersLib</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module is a collection of Error Nodes and Controller Classes. Controller are not</span>
+<span class="sd">subclasses of AccNode, and they are not part of the lattice. They resemble the</span>
+<span class="sd">Linac Cavities as controlling structure for RF gaps. The gaps are real nodes</span>
+<span class="sd">in the lattice, and Cavities perform synchronisation of time arrivals and</span>
+<span class="sd">field amplitudes in RF gaps. The Error Controller Classes keep references for</span>
+<span class="sd">two error nodes: first at the entrance of error applied part of the lattice (or node)</span>
+<span class="sd">and the second at the exit. For example, if we apply offset to a part of the lattice,</span>
+<span class="sd">we will shift particles&#39; coordinates transversly by some amount at the beginning</span>
+<span class="sd">of this part and back at the exit.</span>
+
+<span class="sd">The elementary operations are performed by functions from error_base</span>
+<span class="sd">implemented in C++.</span>
+
+<span class="sd">/scr/orbit/Errors/errorbase.cc</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="c1"># import the finalization function</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">NamedObject</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypedObject</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParamsDictObject</span>
+
+<span class="c1"># import general accelerator elements and lattice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccNode</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="p">,</span> <span class="n">AccNodeBunchTracker</span>
+
+<span class="c1"># import teapot base functions from wrapper around C++ functions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.teapot_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">TPB</span>
+
+<span class="c1"># import error packages from C++</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">CoordDisplacement</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">LongDisplacement</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">StraightRotationXY</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">StraightRotationXSI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">StraightRotationXSF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">StraightRotationYSI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">StraightRotationYSF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendFieldI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendFieldF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendDisplacementXI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendDisplacementXF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendDisplacementYI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendDisplacementYF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendDisplacementLI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BendDisplacementLF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">RotationI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">RotationF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">DipoleKickerOsc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuadKicker</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.error_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuadKickerOsc</span>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1">#     Error Nodes classes. All of them should be sub-classes</span>
+<span class="c1">#     of AccErrorNode class. User will not create these nodes</span>
+<span class="c1">#     directly, They will created by sub-classes of BaseErrorController</span>
+<span class="c1">#     class.</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+
+
+<div class="viewcode-block" id="AccErrorNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.AccErrorNode/#orbit.py_linac.errors.AccErrorNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccErrorNode</span><span class="p">(</span><span class="n">AccNodeBunchTracker</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is an abstract base class for Error nodes hierarchy. The sub-classes</span>
+<span class="sd">    should implement track(self, paramsDict) method. Usually it will be</span>
+<span class="sd">    call to /scr/orbit/Errors/errorbase.cc functions with parameters</span>
+<span class="sd">    provided by the controller class through</span>
+<span class="sd">    self.error_controller_params_func call.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;Base_Error_Controller&quot;</span><span class="p">):</span>
+        <span class="n">AccNodeBunchTracker</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">type_in</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="AccErrorNode.setErrorControllerParamFunc"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.AccErrorNode/#orbit.py_linac.errors.AccErrorNode.setErrorControllerParamFunc">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_controller_params_func</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the callable object error_controller_params_func from the</span>
+<span class="sd">        error node controller.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span> <span class="o">=</span> <span class="n">error_controller_params_func</span></div>
+
+<div class="viewcode-block" id="AccErrorNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.AccErrorNode/#orbit.py_linac.errors.AccErrorNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It is tracking the bunch through the node. Each subclass</span>
+<span class="sd">        should implement this method. errorCntrl will provide</span>
+<span class="sd">        parameters for tracking.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">error_controller_params_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="AccErrorNode.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.AccErrorNode/#orbit.py_linac.errors.AccErrorNode.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">actionContainer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It tracks the design bunch through the AccErrorNode instance - does nothing.</span>
+<span class="sd">        The existence of this method allows to use this class in the Linac type</span>
+<span class="sd">        lattice in addition to the Teapot lattices.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorLongitudinalDisplacementNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorLongitudinalDisplacementNode/#orbit.py_linac.errors.ErrorLongitudinalDisplacementNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorLongitudinalDisplacementNode</span><span class="p">(</span><span class="n">AccErrorNode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of AccErrorNode. It can shift the bunch longitudinally by using a drift</span>
+<span class="sd">    TEAPOT function. This node is used to simulate longitudinal shift of lattice</span>
+<span class="sd">    elements. The shift length is provided by the controller&#39;s</span>
+<span class="sd">    error_controller_params_func. This function return shift_length for the entrance</span>
+<span class="sd">    node and -shift_length for the exit one.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">AccErrorNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorLongitudinalDisplacementNode&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ErrorLongitudinalDisplacementNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorLongitudinalDisplacementNode/#orbit.py_linac.errors.ErrorLongitudinalDisplacementNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs shift_length TEAPOT drift tracking.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">shift_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span><span class="p">()</span>
+        <span class="n">LongDisplacement</span><span class="p">(</span><span class="n">bunc</span><span class="p">,</span> <span class="n">shift_length</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorCoordDisplacementNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCoordDisplacementNode/#orbit.py_linac.errors.ErrorCoordDisplacementNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorCoordDisplacementNode</span><span class="p">(</span><span class="n">AccErrorNode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of AccErrorNode. It can shift any of 6 coordinates by specified</span>
+<span class="sd">    value. The parameters are provided by the controller&#39;s error_controller_params_func</span>
+<span class="sd">    callable method reference.</span>
+<span class="sd">    The shift could be performed for (dx, dxp, dy, dyp, dz, dE), default values are 0.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">AccErrorNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorCoordDisplacementNode&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ErrorCoordDisplacementNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCoordDisplacementNode/#orbit.py_linac.errors.ErrorCoordDisplacementNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs (dx, dxp, dy, dyp, dz, dE) shift with CoordDisplacement function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dxp</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dyp</span><span class="p">,</span> <span class="n">dz</span><span class="p">,</span> <span class="n">dE</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span><span class="p">()</span>
+        <span class="n">CoordDisplacement</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dxp</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dyp</span><span class="p">,</span> <span class="n">dz</span><span class="p">,</span> <span class="n">dE</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorBendFieldNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorBendFieldNode/#orbit.py_linac.errors.ErrorBendFieldNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorBendFieldNode</span><span class="p">(</span><span class="n">AccErrorNode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of AccErrorNode. It changes of the energy of each particle</span>
+<span class="sd">    in the bunch to emulate the relative change of the magnetic field of the</span>
+<span class="sd">    bend. deltaB/B = deltaP/P = (1/beta)^2*deltaE/E</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">AccErrorNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorBendFieldNode&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ErrorBendFieldNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorBendFieldNode/#orbit.py_linac.errors.ErrorBendFieldNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs deltaE energy shift with CoordDisplacement function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">syncPart</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span>
+        <span class="n">e_total</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span> <span class="o">+</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">mass</span><span class="p">()</span>
+        <span class="n">beta</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">beta</span><span class="p">()</span>
+        <span class="n">relative_field_change</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span><span class="p">()</span>
+        <span class="n">deltaE</span> <span class="o">=</span> <span class="n">relative_field_change</span> <span class="o">*</span> <span class="n">beta</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">e_total</span>
+        <span class="n">CoordDisplacement</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">deltaE</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorStraightRotationZNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorStraightRotationZNode/#orbit.py_linac.errors.ErrorStraightRotationZNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorStraightRotationZNode</span><span class="p">(</span><span class="n">AccErrorNode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of AccErrorNode. It describes the rotation around z-axis</span>
+<span class="sd">    by a certain angle. The angle parameter is provided by the controller&#39;s</span>
+<span class="sd">    error_controller_params_func. This function return angle for the entrance</span>
+<span class="sd">    node and -angle for the exit one.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">AccErrorNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorStraightRotationZNode&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ErrorStraightRotationZNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorStraightRotationZNode/#orbit.py_linac.errors.ErrorStraightRotationZNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs rotation by TEAPOT error_base StraightRotationZ function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span><span class="p">()</span>
+        <span class="n">StraightRotationXY</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorStraightRotationXNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorStraightRotationXNode/#orbit.py_linac.errors.ErrorStraightRotationXNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorStraightRotationXNode</span><span class="p">(</span><span class="n">AccErrorNode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of AccErrorNode. It describes the rotation around x-axis</span>
+<span class="sd">    by a certain angle. The angle parameter is provided by the controller&#39;s</span>
+<span class="sd">    error_controller_params_func. This function return angle,length, and direction</span>
+<span class="sd">    of the node/nodes that are rotated for the entrance node and for the exit one.</span>
+<span class="sd">    The rotation is performed by StraightRotationYSI and StraightRotationYSF</span>
+<span class="sd">    error_base TEAPOT functions for the entrance (Init) and exit (Final)</span>
+<span class="sd">    error nodes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">AccErrorNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorStraightRotationXNode&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ErrorStraightRotationXNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorStraightRotationXNode/#orbit.py_linac.errors.ErrorStraightRotationXNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs rotation by TEAPOT error_base StraightRotationYSI and</span>
+<span class="sd">        StraightRotationYSF functions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">direction</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">StraightRotationYSI</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">direction</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">StraightRotationYSF</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;ErrorStraightRotationXNode - no direction parameter for the rotation!&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;direction=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorStraightRotationYNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorStraightRotationYNode/#orbit.py_linac.errors.ErrorStraightRotationYNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorStraightRotationYNode</span><span class="p">(</span><span class="n">AccErrorNode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The subclass of AccErrorNode. It describes the rotation around y-axis</span>
+<span class="sd">    by a certain angle. The angle parameter is provided by the controller&#39;s</span>
+<span class="sd">    error_controller_params_func. This function return angle,length, and direction</span>
+<span class="sd">    of the node/nodes that are rotated for the entrance node and for the exit one.</span>
+<span class="sd">    The rotation is performed by StraightRotationXSI and StraightRotationXSF</span>
+<span class="sd">    error_base TEAPOT functions for the entrance (Init) and exit (Final)</span>
+<span class="sd">    error nodes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">AccErrorNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorStraightRotationYNode&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ErrorStraightRotationYNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorStraightRotationYNode/#orbit.py_linac.errors.ErrorStraightRotationYNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs rotation by TEAPOT error_base StraightRotationXSI and</span>
+<span class="sd">        StraightRotationXSF functions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controller_params_func</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">direction</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">StraightRotationXSI</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">direction</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">StraightRotationXSF</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;ErrorStraightRotationYNode - no direction parameter for the rotation!&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;direction=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div></div>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1">#     Error Control classes. All of them should be sub-classes</span>
+<span class="c1">#     of BaseErrorController class. The Error Controller Classes keep</span>
+<span class="c1">#     references for two error nodes: first at the entrance of error</span>
+<span class="c1">#     applied part of the lattice (or node) and the second at the exit.</span>
+<span class="c1">#     The Error Control classes implement two functions</span>
+<span class="c1">#     getEntanceNodeParameters() and getExitNodeParameters() that return</span>
+<span class="c1">#     parameters for Error Nodes. The Error Control classes also keep</span>
+<span class="c1">#     the reference to the parent Node/Nodes (real lattice nodes - like</span>
+<span class="c1">#     quads,bends, RF gaps etc.) of the Error nodes.</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+
+
+<div class="viewcode-block" id="BaseErrorController"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BaseErrorController</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">,</span> <span class="n">ParamsDictObject</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The base class for Error Controllers. It keeps the reference to start and stop</span>
+<span class="sd">    lattice nodes. The transformation function is defined by  self.entranceErrorAccNode,</span>
+<span class="sd">    and backward transformation is defined by  self.exitErrorAccNode which are set up as</span>
+<span class="sd">    children of two (or just one) entrance and exit lattice nodes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;Base_Error_Controller&quot;</span><span class="p">):</span>
+        <span class="n">NamedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">TypedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_in</span><span class="p">)</span>
+        <span class="n">ParamsDictObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="c1"># --------------------------------------</span>
+        <span class="c1"># ---- entrance and exit Error AccNodes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNodeParent</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNodeParent</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accLattice</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="BaseErrorController.getShortTypeName"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getShortTypeName">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getShortTypeName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the short type name that will be included into the error node name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.getEntanceNodeParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getEntanceNodeParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns tuple with parameters for entranceAccNode.</span>
+<span class="sd">        This method should be implemented by sub-classes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.getExitNodeParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getExitNodeParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns tuple with parameters for exitAccNode.</span>
+<span class="sd">        This method should be implemented by sub-classes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.setLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.setLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accLattice</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the lattice.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accLattice</span> <span class="o">=</span> <span class="n">accLattice</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.getLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the reference to the lattice.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">accLattice</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.getEntanceNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getEntanceNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the lattice entrance (start) node for errors application.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.getExitNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getExitNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the lattice exit (stop) node for errors application.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.setEntanceNodeParent"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.setEntanceNodeParent">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setEntanceNodeParent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entranceAccNodeParent</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set up the entrance (start) lattice node for error effects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNodeParent</span> <span class="o">=</span> <span class="n">entranceAccNodeParent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="s2">&quot;ErrNode:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">+</span> <span class="s2">&quot;:Entr:&quot;</span> <span class="o">+</span> <span class="n">entranceAccNodeParent</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNodeParent</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.setExitNodeParent"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.setExitNodeParent">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setExitNodeParent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exitAccNodeParent</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set up the exit (stop) lattice node for error effects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNodeParent</span> <span class="o">=</span> <span class="n">exitAccNodeParent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="s2">&quot;ErrNode:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">+</span> <span class="s2">&quot;:Exit:&quot;</span> <span class="o">+</span> <span class="n">exitAccNodeParent</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNodeParent</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.setOneNodeParent"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.setOneNodeParent">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setOneNodeParent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accNodeParent</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        If we apply error transformation only for one lattice node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setEntanceNodeParent</span><span class="p">(</span><span class="n">accNodeParent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setExitNodeParent</span><span class="p">(</span><span class="n">accNodeParent</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.getEntanceNodeParent"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getEntanceNodeParent">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeParent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the entrance (start) lattice node for error effects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNodeParent</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.getExitNodeParent"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.getExitNodeParent">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeParent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the exit (stop) lattice node for error effects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNodeParent</span></div>
+
+<div class="viewcode-block" id="BaseErrorController.cleanParentNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.BaseErrorController/#orbit.py_linac.errors.BaseErrorController.cleanParentNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">cleanParentNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Removes children representing error nodes from the parent node or nodes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNodeParent</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNodeParent</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNodeParent</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNodeParent</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorCntrlLongitudinalDisplacement"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement/#orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorCntrlLongitudinalDisplacement</span><span class="p">(</span><span class="n">BaseErrorController</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subclass of BaseErrorController. It defines the error controller for</span>
+<span class="sd">    longitudinal shift Error node.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">BaseErrorController</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorCntrlLongitudinalDisplacement&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">=</span> <span class="s2">&quot;LongDisp&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorLongitudinalDisplacementNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorLongitudinalDisplacementNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeShiftLength</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getExitNodeShiftLength</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<div class="viewcode-block" id="ErrorCntrlLongitudinalDisplacement.getEntanceNodeShiftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement/#orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement.getEntanceNodeShiftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns shift-length parameter for entrance Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlLongitudinalDisplacement.getExitNodeShiftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement/#orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement.getExitNodeShiftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns shift-length parameter for exit Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlLongitudinalDisplacement.setShiftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement/#orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement.setShiftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shift_length</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the shift-length parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span> <span class="o">=</span> <span class="n">shift_length</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlLongitudinalDisplacement.getShiftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement/#orbit.py_linac.errors.ErrorCntrlLongitudinalDisplacement.getShiftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the shift-length parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorCntrlCoordDisplacement"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlCoordDisplacement/#orbit.py_linac.errors.ErrorCntrlCoordDisplacement">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorCntrlCoordDisplacement</span><span class="p">(</span><span class="n">BaseErrorController</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subclass of BaseErrorController. It defines the error controller for</span>
+<span class="sd">    shift transformations. User can shift any of 6 coordiantes</span>
+<span class="sd">    (dx, dxp, dy, dyp, dz, dE). The values of shfing parameters are defined by</span>
+<span class="sd">    setDisplacementParameter(self,key,value) method with &quot;dx&quot;,&quot;dxp&quot;,&quot;dy&quot;,&quot;dyp&quot;,</span>
+<span class="sd">    &quot;dz&quot;,&quot;dE&quot; keys.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">BaseErrorController</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorCntrlCoordDisplacement&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">=</span> <span class="s2">&quot;CoordDisp&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorCoordDisplacementNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorCoordDisplacementNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeParameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getExitNodeParameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;dx&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dxp&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dy&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dyp&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dz&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dE&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
+
+<div class="viewcode-block" id="ErrorCntrlCoordDisplacement.getEntanceNodeParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlCoordDisplacement/#orbit.py_linac.errors.ErrorCntrlCoordDisplacement.getEntanceNodeParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns tuple with parameters for ErrorCoordDisplacementNode tracking</span>
+<span class="sd">        at the entrance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dx&quot;</span><span class="p">]</span>
+        <span class="n">dxp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dxp&quot;</span><span class="p">]</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dy&quot;</span><span class="p">]</span>
+        <span class="n">dyp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dyp&quot;</span><span class="p">]</span>
+        <span class="n">dz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dz&quot;</span><span class="p">]</span>
+        <span class="n">dE</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dE&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dxp</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dyp</span><span class="p">,</span> <span class="n">dz</span><span class="p">,</span> <span class="n">dE</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlCoordDisplacement.getExitNodeParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlCoordDisplacement/#orbit.py_linac.errors.ErrorCntrlCoordDisplacement.getExitNodeParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns tuple with parameters for ErrorCoordDisplacementNode tracking</span>
+<span class="sd">        at the exit.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dx&quot;</span><span class="p">]</span>
+        <span class="n">dxp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dxp&quot;</span><span class="p">]</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dy&quot;</span><span class="p">]</span>
+        <span class="n">dyp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dyp&quot;</span><span class="p">]</span>
+        <span class="n">dz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dz&quot;</span><span class="p">]</span>
+        <span class="n">dE</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dE&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">dx</span><span class="p">,</span> <span class="o">-</span><span class="n">dxp</span><span class="p">,</span> <span class="o">-</span><span class="n">dy</span><span class="p">,</span> <span class="o">-</span><span class="n">dyp</span><span class="p">,</span> <span class="o">-</span><span class="n">dz</span><span class="p">,</span> <span class="o">-</span><span class="n">dE</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlCoordDisplacement.setDisplacementParameter"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlCoordDisplacement/#orbit.py_linac.errors.ErrorCntrlCoordDisplacement.setDisplacementParameter">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setDisplacementParameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets one of the parameters for keys &quot;dx&quot;,&quot;dxp&quot;,&quot;dy&quot;,&quot;dyp&quot;,&quot;dz&quot;,&quot;dE&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlCoordDisplacement.getDisplacementParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlCoordDisplacement/#orbit.py_linac.errors.ErrorCntrlCoordDisplacement.getDisplacementParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDisplacementParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the (dx, dxp, dy, dyp, dz, dE) parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeParameters</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorCntrlBendField"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlBendField/#orbit.py_linac.errors.ErrorCntrlBendField">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorCntrlBendField</span><span class="p">(</span><span class="n">BaseErrorController</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subclass of BaseErrorController. It defines the error controller for</span>
+<span class="sd">    bend field. User specifies the relative change in the bend magnetic</span>
+<span class="sd">    field.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">BaseErrorController</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorCntrlBendField&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">=</span> <span class="s2">&quot;BendFieldNoise&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorBendFieldNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorBendFieldNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeParameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getExitNodeParameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<div class="viewcode-block" id="ErrorCntrlBendField.getEntanceNodeParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlBendField/#orbit.py_linac.errors.ErrorCntrlBendField.getEntanceNodeParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the realtive change in the bend field at the entrance node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlBendField.getExitNodeParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlBendField/#orbit.py_linac.errors.ErrorCntrlBendField.getExitNodeParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the realtive change in the bend field at the entrance node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlBendField.setRelativeFieldChange"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlBendField/#orbit.py_linac.errors.ErrorCntrlBendField.setRelativeFieldChange">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRelativeFieldChange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relative_field_change</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the realtive change in the bend field.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span> <span class="o">=</span> <span class="n">relative_field_change</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlBendField.getRelativeFieldChange"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlBendField/#orbit.py_linac.errors.ErrorCntrlBendField.getRelativeFieldChange">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRelativeFieldChange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the realtive change in the bend field.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeParameters</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationZ"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationZ/#orbit.py_linac.errors.ErrorCntrlStraightRotationZ">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorCntrlStraightRotationZ</span><span class="p">(</span><span class="n">BaseErrorController</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subclass of BaseErrorController. It defines the error controller for</span>
+<span class="sd">    the rotation around z-axis Error node.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">BaseErrorController</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorCntrlStraightRotationZ&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">=</span> <span class="s2">&quot;RotZ&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorStraightRotationZNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorStraightRotationZNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeRotationAngle</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getExitNodeRotationAngle</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationZ.getEntanceNodeRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationZ/#orbit.py_linac.errors.ErrorCntrlStraightRotationZ.getEntanceNodeRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns angle parameter for entrance Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationZ.getExitNodeRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationZ/#orbit.py_linac.errors.ErrorCntrlStraightRotationZ.getExitNodeRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns angle parameter for exit Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationZ.setRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationZ/#orbit.py_linac.errors.ErrorCntrlStraightRotationZ.setRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the angle parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationZ.getRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationZ/#orbit.py_linac.errors.ErrorCntrlStraightRotationZ.getRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the angle parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationX"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorCntrlStraightRotationX</span><span class="p">(</span><span class="n">BaseErrorController</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subclass of BaseErrorController. It defines the error controller for</span>
+<span class="sd">    the rotation around x-axis Error node.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">BaseErrorController</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorCntrlStraightRotationX&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">=</span> <span class="s2">&quot;RotX&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorStraightRotationXNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorStraightRotationXNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeRotationParams</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getExitNodeRotationParams</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationX.getEntanceNodeRotationParams"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX.getEntanceNodeRotationParams">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeRotationParams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns angle, base_length, and direction parameters for entrance Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationX.getExitNodeRotationParams"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX.getExitNodeRotationParams">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeRotationParams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns angle, base_length, and direction parameters for exit Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationX.setRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX.setRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the angle parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationX.getRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX.getRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the angle parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationX.setBaseLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX.setBaseLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setBaseLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base_length</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the base base_length parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span> <span class="o">=</span> <span class="n">base_length</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationX.getBaseLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX.getBaseLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBaseLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the base base_length parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span></div></div>
+
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationY"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorCntrlStraightRotationY</span><span class="p">(</span><span class="n">BaseErrorController</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subclass of BaseErrorController. It defines the error controller for</span>
+<span class="sd">    the rotation around y-axis Error node.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
+        <span class="n">BaseErrorController</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;ErrorCntrlStraightRotationY&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">short_type_name</span> <span class="o">=</span> <span class="s2">&quot;RotY&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorStraightRotationYNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span> <span class="o">=</span> <span class="n">ErrorStraightRotationYNode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entranceErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEntanceNodeRotationParams</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exitErrorAccNode</span><span class="o">.</span><span class="n">setErrorControllerParamFunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getExitNodeRotationParams</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationY.getEntanceNodeRotationParams"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY.getEntanceNodeRotationParams">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEntanceNodeRotationParams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns angle, base_length, and direction parameters for entrance Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationY.getExitNodeRotationParams"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY.getExitNodeRotationParams">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getExitNodeRotationParams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns angle, base_length, and direction parameters for exit Error node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationY.setRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY.setRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the angle parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationY.getRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY.getRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the angle parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationY.setBaseLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY.setBaseLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setBaseLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base_length</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the base base_length parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span> <span class="o">=</span> <span class="n">base_length</span></div>
+
+<div class="viewcode-block" id="ErrorCntrlStraightRotationY.getBaseLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY.getBaseLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBaseLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the base base_length parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_length</span></div></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

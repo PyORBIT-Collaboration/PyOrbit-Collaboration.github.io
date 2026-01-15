@@ -1,0 +1,20 @@
+<map id="inheritance428b75cf62" name="inheritance428b75cf62">
+<area shape="rect" id="node1" href="../orbit.lattice.AccNode/#orbit.lattice.AccNode" target="_top" title="Class. Base class of the accelerator nodes hierarchy." alt="" coords="142,345,194,363"/>
+<area shape="rect" id="node5" href="../orbit.lattice.AccNodeBunchTracker/#orbit.lattice.AccNodeBunchTracker" target="_top" title="Class. Base class of the accelerator nodes that track the pyORBIT bunch." alt="" coords="225,345,333,363"/>
+<area shape="rect" id="node2" href="../orbit.utils.NamedObject/#orbit.utils.NamedObject" target="_top" title="Class. An object that has a name." alt="" coords="21,311,93,329"/>
+<area shape="rect" id="node3" href="../orbit.utils.TypedObject/#orbit.utils.TypedObject" target="_top" title="Class. Object that has a type." alt="" coords="24,345,90,363"/>
+<area shape="rect" id="node4" href="../orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject" target="_top" title="Class. Object that has a parameters dictionary." alt="" coords="12,379,102,397"/>
+<area shape="rect" id="node7" href="../orbit.teapot.BaseTEAPOT/#orbit.teapot.BaseTEAPOT" target="_top" title="The base abstract class of the TEAPOT accelerator elements hierarchy." alt="" coords="365,345,433,363"/>
+<area shape="rect" id="node6" href="../orbit.injection.ArbitraryLongDist/#orbit.injection.ArbitraryLongDist" target="_top" title="This class generates longitudinal distribution coordinates" alt="" coords="13,277,102,295"/>
+<area shape="rect" id="node9" href="../orbit.teapot.NodeTEAPOT/#orbit.teapot.NodeTEAPOT" target="_top" title="NodeTEAPOT" alt="" coords="465,345,534,363"/>
+<area shape="rect" id="node8" href="../orbit.teapot.DriftTEAPOT/#orbit.teapot.DriftTEAPOT" target="_top" title="Drift TEAPOT element." alt="" coords="566,345,632,363"/>
+<area shape="rect" id="node16" href="../orbit.injection.TeapotInjectionNode/#orbit.injection.TeapotInjectionNode" target="_top" title="The injection node class for TEAPOT lattice" alt="" coords="663,345,764,363"/>
+<area shape="rect" id="node10" href="../orbit.injection.GULongDist/#orbit.injection.GULongDist" target="_top" title="This class generates random intial longitudinal coordinates for a" alt="" coords="25,242,89,261"/>
+<area shape="rect" id="node11" href="../orbit.injection.InjectParts/#orbit.injection.InjectParts" target="_top" title="This routine injects particles into a bunch with user specified distribution" alt="" coords="28,208,86,226"/>
+<area shape="rect" id="node12" href="../orbit.injection.JohoLongitudinal/#orbit.injection.JohoLongitudinal" target="_top" title="This class has the Joho distribution function generators in each plane." alt="" coords="15,174,100,192"/>
+<area shape="rect" id="node13" href="../orbit.injection.JohoTransverse/#orbit.injection.JohoTransverse" target="_top" title="This class has the Joho distribution function generators in each plane." alt="" coords="18,140,96,158"/>
+<area shape="rect" id="node14" href="../orbit.injection.SNSESpreadDist/#orbit.injection.SNSESpreadDist" target="_top" title="Class for generating random initial particle coordinates for a" alt="" coords="16,106,99,124"/>
+<area shape="rect" id="node15" href="../orbit.injection.SNSESpreadDistPaint/#orbit.injection.SNSESpreadDistPaint" target="_top" title="This class generates time&#45;dependent SNSESpreadDistPaint distribution" alt="" coords="5,72,109,90"/>
+<area shape="rect" id="node17" href="../orbit.injection.UniformLongDist/#orbit.injection.UniformLongDist" target="_top" title="This class generates uniform longitudinal distribution coordinates" alt="" coords="14,38,100,56"/>
+<area shape="rect" id="node18" href="../orbit.injection.UniformLongDistPaint/#orbit.injection.UniformLongDistPaint" target="_top" title="This class generates time dependent uniform longitudinal distribution &#160;&#160;&#160;&#160;coordinates according to user&#45;defined (mathematical) functions for &#160;&#160;&#160;&#160;zmin and zmax" alt="" coords="4,4,111,22"/>
+</map>

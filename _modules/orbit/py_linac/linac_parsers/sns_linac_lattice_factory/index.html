@@ -1,0 +1,1080 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.py_linac.linac_parsers.sns_linac_lattice_factory &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/py_linac/linac_parsers/sns_linac_lattice_factory';</script>
+    <link rel="index" title="Index" href="../../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac.linac_parsers.sns_linac_lattice_factory</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.py_linac.linac_parsers.sns_linac_lattice_factory</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The SNS Linac Lattice Factory generates the Linac Accelerator Lattice from the information</span>
+<span class="sd">inside of the XML input file. This structure of this file is specific for the SNS.</span>
+<span class="sd">Users from other facilities can use the same XML files with the same structure, but if they</span>
+<span class="sd">need something else they can create their own Factory for different structure.</span>
+<span class="sd">Here we use XmlDataAdaptor to parse the XML file.</span>
+<span class="sd">The SNS Linac Lattice Factory uses a predefined set of Linac Acc Elements.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="c1"># import the XmlDataAdaptor XML parser</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils.xml</span><span class="w"> </span><span class="kn">import</span> <span class="n">XmlDataAdaptor</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinacAccLattice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinacAccNodes</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseLinacNode</span><span class="p">,</span> <span class="n">LinacNode</span><span class="p">,</span> <span class="n">LinacMagnetNode</span><span class="p">,</span> <span class="n">MarkerLinacNode</span><span class="p">,</span> <span class="n">Drift</span><span class="p">,</span> <span class="n">Quad</span><span class="p">,</span> <span class="n">AbstractRF_Gap</span><span class="p">,</span> <span class="n">Bend</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">DCorrectorH</span><span class="p">,</span> <span class="n">DCorrectorV</span><span class="p">,</span> <span class="n">ThickKick</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">Solenoid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">RF_Cavity</span><span class="p">,</span> <span class="n">Sequence</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseRF_Gap</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.materials</span><span class="w"> </span><span class="kn">import</span> <span class="n">VacuumWindowNode</span>
+
+<span class="c1"># import general accelerator elements</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccNode</span>
+
+<span class="c1"># import pyORBIT Python utilities classes for objects with names, types, and dictionary parameters</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
+
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">SNS_LinacLatticeFactory</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The SNS Linac Lattice Factory generates the Linac Accelerator Lattice</span>
+<span class="sd">    from the XML file of the specific structure.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># We need to compare positions, lengths etc. This is our delta in [m]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">zeroDistance</span> <span class="o">=</span> <span class="mf">0.00001</span>
+        <span class="c1"># The maximal length of the drift. It will be devided if it is more than that.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.setMaxDriftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.setMaxDriftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setMaxDriftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxDriftLength</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the maximal drift length that is used for</span>
+<span class="sd">        the purpose of the space charge calculations and diagnostics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span> <span class="o">=</span> <span class="n">maxDriftLength</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.getMaxDriftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.getMaxDriftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMaxDriftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the maximal drift length that is used for the purpose</span>
+<span class="sd">        of the space charge calculations and diagnostics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.getLinacAccLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.getLinacAccLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLinacAccLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">xml_file_name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the linac accelerator lattice for specified sequence names and for a specified XML file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The SNS_LinacLatticeFactory method getLinacAccLattice(names,xml_file_name): you have to specify the names array!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="c1"># ----- let&#39;s parse the XML file</span>
+        <span class="n">acc_da</span> <span class="o">=</span> <span class="n">XmlDataAdaptor</span><span class="o">.</span><span class="n">adaptorForFile</span><span class="p">(</span><span class="n">xml_file_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLinacAccLatticeFromDA</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">acc_da</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.getLinacAccLatticeFromDA"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.getLinacAccLatticeFromDA">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLinacAccLatticeFromDA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">acc_da</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the linac accelerator lattice for specified sequence names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The SNS_LinacLatticeFactory method getLinacAccLatticeFromDA(names,): you have to specify the names array!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="c1"># ----- let&#39;s parse the XML DataAdaptor</span>
+        <span class="n">accSeq_da_arr</span> <span class="o">=</span> <span class="n">acc_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">()</span>
+        <span class="c1"># -----let&#39;s filter and check that the names in good order</span>
+        <span class="n">accSeq_da_arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filterSequences_and_OptionalCheck</span><span class="p">(</span><span class="n">accSeq_da_arr</span><span class="p">,</span> <span class="n">names</span><span class="p">)</span>
+        <span class="c1"># ----make linac lattice</span>
+        <span class="n">linacAccLattice</span> <span class="o">=</span> <span class="n">LinacAccLattice</span><span class="p">(</span><span class="n">acc_da</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+
+        <span class="c1"># There are the folowing possible types of elements in the linac tree:</span>
+        <span class="c1"># QUAD - quadrupole</span>
+        <span class="c1"># RFGAP - RF Gap</span>
+        <span class="c1"># DCH - horizontal dipole corrector</span>
+        <span class="c1"># DCV - vertical dipole corrector</span>
+        <span class="c1"># Marker - anything else with the length equals to 0</span>
+        <span class="c1"># Before putting enerything into the linacAccLattice we will create sequences</span>
+        <span class="c1"># with all nodes.</span>
+        <span class="c1"># ----------------------------------------------------------------------</span>
+        <span class="c1"># The DRIFTS will be generated additionally and put into right places</span>
+        <span class="c1"># ----------------------------------------------------------------------</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">positionComp</span><span class="p">(</span><span class="n">node_da</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">node_da</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span>
+
+        <span class="n">accSeqs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">accRF_Cavs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">seqPosition</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">for</span> <span class="n">seq_da</span> <span class="ow">in</span> <span class="n">accSeq_da_arr</span><span class="p">:</span>
+            <span class="c1"># print &quot;debug === seq=&quot;,seq_da.getName()</span>
+            <span class="n">accSeq</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">seq_da</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+            <span class="n">accSeq</span><span class="o">.</span><span class="n">setLinacAccLattice</span><span class="p">(</span><span class="n">linacAccLattice</span><span class="p">)</span>
+            <span class="n">accSeq</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">seq_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">))</span>
+            <span class="n">accSeq</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">seqPosition</span><span class="p">)</span>
+            <span class="n">seqPosition</span> <span class="o">=</span> <span class="n">seqPosition</span> <span class="o">+</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+            <span class="c1"># ---- BPM frequnecy for this sequence ----</span>
+            <span class="k">if</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;bpmFrequency&quot;</span><span class="p">):</span>
+                <span class="n">bpmFrequency</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;bpmFrequency&quot;</span><span class="p">)</span>
+                <span class="n">accSeq</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;bpmFrequency&quot;</span><span class="p">,</span> <span class="n">bpmFrequency</span><span class="p">)</span>
+            <span class="c1"># -----------------------------------------</span>
+            <span class="n">accSeqs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accSeq</span><span class="p">)</span>
+            <span class="c1"># ---- create RF Cavities</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;Cavities&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">cavs_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;Cavities&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">cav_da_arr</span> <span class="o">=</span> <span class="n">cavs_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;Cavity&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">cav_da</span> <span class="ow">in</span> <span class="n">cav_da_arr</span><span class="p">:</span>
+                    <span class="n">frequency</span> <span class="o">=</span> <span class="n">cav_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;frequency&quot;</span><span class="p">)</span>
+                    <span class="n">cav_amp</span> <span class="o">=</span> <span class="n">cav_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;ampl&quot;</span><span class="p">)</span>
+                    <span class="n">cav_name</span> <span class="o">=</span> <span class="n">cav_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+                    <span class="n">cav_pos</span> <span class="o">=</span> <span class="n">cav_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span>
+                    <span class="n">cav</span> <span class="o">=</span> <span class="n">RF_Cavity</span><span class="p">(</span><span class="n">cav_name</span><span class="p">)</span>
+                    <span class="n">cav</span><span class="o">.</span><span class="n">setAmp</span><span class="p">(</span><span class="n">cav_amp</span><span class="p">)</span>
+                    <span class="n">cav</span><span class="o">.</span><span class="n">setFrequency</span><span class="p">(</span><span class="n">frequency</span><span class="p">)</span>
+                    <span class="n">cav</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">cav_pos</span><span class="p">)</span>
+                    <span class="n">accSeq</span><span class="o">.</span><span class="n">addRF_Cavity</span><span class="p">(</span><span class="n">cav</span><span class="p">)</span>
+            <span class="c1"># ----------------------------</span>
+            <span class="c1"># node_da_arr - array of nodes. These nodes are not AccNodes. They are XmlDataAdaptor class instances</span>
+            <span class="n">node_da_arr</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;accElement&quot;</span><span class="p">)</span>
+            <span class="c1"># put nodes in order according to the position in the sequence</span>
+            <span class="k">for</span> <span class="n">node_da</span> <span class="ow">in</span> <span class="n">node_da_arr</span><span class="p">:</span>
+                <span class="n">node_da</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">))</span>
+            <span class="n">node_da_arr</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">positionComp</span><span class="p">)</span>
+            <span class="c1"># thinNodes - array of accNode nodes with zero length</span>
+            <span class="c1"># They can be positioned inside the thick nodes, and this will be done at the end</span>
+            <span class="c1"># of this method</span>
+            <span class="n">thinNodes</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">node_da</span> <span class="ow">in</span> <span class="n">node_da_arr</span><span class="p">:</span>
+                <span class="n">params_da</span> <span class="o">=</span> <span class="n">node_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;parameters&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">node_type</span> <span class="o">=</span> <span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span>
+                <span class="n">node_length</span> <span class="o">=</span> <span class="n">node_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">)</span>
+                <span class="n">node_pos</span> <span class="o">=</span> <span class="n">node_da</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span>
+                <span class="c1"># ------------QUAD-----------------</span>
+                <span class="k">if</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;QUAD&quot;</span><span class="p">:</span>
+                    <span class="n">accNode</span> <span class="o">=</span> <span class="n">Quad</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">node_length</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">):</span>
+                        <span class="c1"># accNode.setParam(&quot;poles&quot;,[int(x) for x in eval(params_da.stringValue(&quot;poles&quot;))])</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">intArrayValue</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">):</span>
+                        <span class="c1"># accNode.setParam(&quot;kls&quot;, [x for x in eval(params_da.stringValue(&quot;kls&quot;))])</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleArrayValue</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">):</span>
+                        <span class="c1"># accNode.setParam(&quot;skews&quot;,[int(x) for x in eval(params_da.stringValue(&quot;skews&quot;))])</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">intArrayValue</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span><span class="p">:</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">-</span> <span class="mf">1.0e-12</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">intValue</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">))</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">))</span>
+                    <span class="c1"># ---- possible parameters for PMQ description of the in Trace3D style</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;radIn&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;radOut&quot;</span><span class="p">):</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;radIn&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;radIn&quot;</span><span class="p">))</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;radOut&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;radOut&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_pos</span><span class="p">)</span>
+                    <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                <span class="c1"># ------------BEND-----------------</span>
+                <span class="k">elif</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;BEND&quot;</span><span class="p">:</span>
+                    <span class="n">accNode</span> <span class="o">=</span> <span class="n">Bend</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">):</span>
+                        <span class="c1"># accNode.setParam(&quot;poles&quot;,[int(x) for x in eval(params_da.stringValue(&quot;poles&quot;))])</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">intArrayValue</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">):</span>
+                        <span class="c1"># accNode.setParam(&quot;kls&quot;, [x for x in eval(params_da.stringValue(&quot;kls&quot;))])</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleArrayValue</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">):</span>
+                        <span class="c1"># accNode.setParam(&quot;skews&quot;,[int(x) for x in eval(params_da.stringValue(&quot;skews&quot;))])</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">intArrayValue</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;ea1&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;ea1&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;ea2&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;ea2&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;theta&quot;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="p">(</span>
+                        <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;aperture_x&quot;</span><span class="p">)</span>
+                        <span class="ow">and</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;aperture_y&quot;</span><span class="p">)</span>
+                        <span class="ow">and</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">)</span>
+                    <span class="p">):</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">intValue</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">))</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;aperture_x&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;aperture_x&quot;</span><span class="p">))</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;aperture_y&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;aperture_y&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">node_length</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span><span class="p">:</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">accNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">-</span> <span class="mf">1.0e-12</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_pos</span><span class="p">)</span>
+                    <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;SOLENOID&quot;</span><span class="p">:</span>
+                    <span class="n">accNode</span> <span class="o">=</span> <span class="n">Solenoid</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">node_length</span><span class="p">)</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_pos</span><span class="p">)</span>
+                    <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                <span class="c1"># ------------RF_Gap-----------------</span>
+                <span class="k">elif</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;RFGAP&quot;</span><span class="p">:</span>
+                    <span class="n">accNode</span> <span class="o">=</span> <span class="n">BaseRF_Gap</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;E0TL&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;E0TL&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;gap_phase&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;phase&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;EzFile&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;EzFile&quot;</span><span class="p">))</span>
+                    <span class="n">cav_name</span> <span class="o">=</span> <span class="n">params_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;cavity&quot;</span><span class="p">)</span>
+                    <span class="n">cav</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">(</span><span class="n">cav_name</span><span class="p">)</span>
+                    <span class="n">cav</span><span class="o">.</span><span class="n">addRF_GapNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">accNode</span><span class="o">.</span><span class="n">isFirstRFGap</span><span class="p">():</span>
+                        <span class="n">cav</span><span class="o">.</span><span class="n">setPhase</span><span class="p">(</span><span class="n">accNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;gap_phase&quot;</span><span class="p">))</span>
+                    <span class="c1"># ---- TTFs parameters</span>
+                    <span class="n">ttfs_da</span> <span class="o">=</span> <span class="n">node_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;TTFs&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">beta_min</span> <span class="o">=</span> <span class="n">ttfs_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;beta_min&quot;</span><span class="p">)</span>
+                    <span class="n">beta_max</span> <span class="o">=</span> <span class="n">ttfs_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;beta_max&quot;</span><span class="p">)</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;beta_min&quot;</span><span class="p">,</span> <span class="n">beta_min</span><span class="p">)</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;beta_max&quot;</span><span class="p">,</span> <span class="n">beta_max</span><span class="p">)</span>
+                    <span class="p">(</span><span class="n">polyT</span><span class="p">,</span> <span class="n">polyS</span><span class="p">,</span> <span class="n">polyTp</span><span class="p">,</span> <span class="n">polySp</span><span class="p">)</span> <span class="o">=</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getTTF_Polynimials</span><span class="p">()</span>
+                    <span class="n">polyT_da</span> <span class="o">=</span> <span class="n">ttfs_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;polyT&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">polyS_da</span> <span class="o">=</span> <span class="n">ttfs_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;polyS&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">polyTp_da</span> <span class="o">=</span> <span class="n">ttfs_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;polyTP&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">polySp_da</span> <span class="o">=</span> <span class="n">ttfs_da</span><span class="o">.</span><span class="n">childAdaptors</span><span class="p">(</span><span class="s2">&quot;polySP&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">polyT</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="n">polyT_da</span><span class="o">.</span><span class="n">intValue</span><span class="p">(</span><span class="s2">&quot;order&quot;</span><span class="p">))</span>
+                    <span class="n">polyS</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="n">polyS_da</span><span class="o">.</span><span class="n">intValue</span><span class="p">(</span><span class="s2">&quot;order&quot;</span><span class="p">))</span>
+                    <span class="n">polyTp</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="n">polyTp_da</span><span class="o">.</span><span class="n">intValue</span><span class="p">(</span><span class="s2">&quot;order&quot;</span><span class="p">))</span>
+                    <span class="n">polySp</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="n">polySp_da</span><span class="o">.</span><span class="n">intValue</span><span class="p">(</span><span class="s2">&quot;order&quot;</span><span class="p">))</span>
+                    <span class="c1"># ---- actually these polynomials are functions of kappa =  2*PI*Freq/(c*beta)</span>
+                    <span class="c1"># ---- but we will use these parameters to keep beta</span>
+                    <span class="n">polyT</span><span class="o">.</span><span class="n">minX</span><span class="p">(</span><span class="n">beta_min</span><span class="p">)</span>
+                    <span class="n">polyT</span><span class="o">.</span><span class="n">maxX</span><span class="p">(</span><span class="n">beta_max</span><span class="p">)</span>
+                    <span class="n">polyS</span><span class="o">.</span><span class="n">minX</span><span class="p">(</span><span class="n">beta_min</span><span class="p">)</span>
+                    <span class="n">polyS</span><span class="o">.</span><span class="n">maxX</span><span class="p">(</span><span class="n">beta_max</span><span class="p">)</span>
+                    <span class="n">polyTp</span><span class="o">.</span><span class="n">minX</span><span class="p">(</span><span class="n">beta_min</span><span class="p">)</span>
+                    <span class="n">polyTp</span><span class="o">.</span><span class="n">maxX</span><span class="p">(</span><span class="n">beta_max</span><span class="p">)</span>
+                    <span class="n">polySp</span><span class="o">.</span><span class="n">minX</span><span class="p">(</span><span class="n">beta_min</span><span class="p">)</span>
+                    <span class="n">polySp</span><span class="o">.</span><span class="n">maxX</span><span class="p">(</span><span class="n">beta_max</span><span class="p">)</span>
+                    <span class="n">coef_arr</span> <span class="o">=</span> <span class="n">polyT_da</span><span class="o">.</span><span class="n">doubleArrayValue</span><span class="p">(</span><span class="s2">&quot;pcoefs&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">coef_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coef_arr</span><span class="p">)):</span>
+                        <span class="n">polyT</span><span class="o">.</span><span class="n">coefficient</span><span class="p">(</span><span class="n">coef_ind</span><span class="p">,</span> <span class="n">coef_arr</span><span class="p">[</span><span class="n">coef_ind</span><span class="p">])</span>
+                    <span class="n">coef_arr</span> <span class="o">=</span> <span class="n">polyS_da</span><span class="o">.</span><span class="n">doubleArrayValue</span><span class="p">(</span><span class="s2">&quot;pcoefs&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">coef_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coef_arr</span><span class="p">)):</span>
+                        <span class="n">polyS</span><span class="o">.</span><span class="n">coefficient</span><span class="p">(</span><span class="n">coef_ind</span><span class="p">,</span> <span class="n">coef_arr</span><span class="p">[</span><span class="n">coef_ind</span><span class="p">])</span>
+                    <span class="n">coef_arr</span> <span class="o">=</span> <span class="n">polyTp_da</span><span class="o">.</span><span class="n">doubleArrayValue</span><span class="p">(</span><span class="s2">&quot;pcoefs&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">coef_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coef_arr</span><span class="p">)):</span>
+                        <span class="n">polyTp</span><span class="o">.</span><span class="n">coefficient</span><span class="p">(</span><span class="n">coef_ind</span><span class="p">,</span> <span class="n">coef_arr</span><span class="p">[</span><span class="n">coef_ind</span><span class="p">])</span>
+                    <span class="n">coef_arr</span> <span class="o">=</span> <span class="n">polySp_da</span><span class="o">.</span><span class="n">doubleArrayValue</span><span class="p">(</span><span class="s2">&quot;pcoefs&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">coef_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coef_arr</span><span class="p">)):</span>
+                        <span class="n">polySp</span><span class="o">.</span><span class="n">coefficient</span><span class="p">(</span><span class="n">coef_ind</span><span class="p">,</span> <span class="n">coef_arr</span><span class="p">[</span><span class="n">coef_ind</span><span class="p">])</span>
+                    <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">intValue</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">))</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_pos</span><span class="p">)</span>
+                    <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                <span class="c1"># ------------THICK KICK-----------------</span>
+                <span class="k">elif</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;THICK_KICK&quot;</span><span class="p">:</span>
+                    <span class="n">accNode</span> <span class="o">=</span> <span class="n">ThickKick</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;Bx&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;Bx&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;By&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;By&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">node_length</span><span class="p">)</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_pos</span><span class="p">)</span>
+                    <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;VACWIN&quot;</span><span class="p">:</span>
+                    <span class="n">material_index</span> <span class="o">=</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;material_index&quot;</span><span class="p">)</span>
+                    <span class="n">density_factor</span> <span class="o">=</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;density_factor&quot;</span><span class="p">)</span>
+                    <span class="n">accNode</span> <span class="o">=</span> <span class="n">VacuumWindowNode</span><span class="p">(</span><span class="n">node_length</span><span class="p">,</span> <span class="n">material_index</span><span class="p">,</span> <span class="n">density_factor</span><span class="p">,</span> <span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">),</span> <span class="n">node_pos</span><span class="p">)</span>
+                    <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">node_length</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The LinacLatticeFactory method getLinacAccLattice(names): there is a strange element!&quot;</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;name=&quot;</span> <span class="o">+</span> <span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;type=&quot;</span> <span class="o">+</span> <span class="n">node_type</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;length(should be 0.)=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">node_length</span><span class="p">)</span>
+                        <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                    <span class="c1"># ------ thin nodes analysis</span>
+                    <span class="n">accNode</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="k">if</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;DCV&quot;</span> <span class="ow">or</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;DCH&quot;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;DCV&quot;</span><span class="p">:</span>
+                            <span class="n">accNode</span> <span class="o">=</span> <span class="n">DCorrectorV</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                        <span class="k">if</span> <span class="n">node_type</span> <span class="o">==</span> <span class="s2">&quot;DCH&quot;</span><span class="p">:</span>
+                            <span class="n">accNode</span> <span class="o">=</span> <span class="n">DCorrectorH</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                        <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;effLength&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;effLength&quot;</span><span class="p">))</span>
+                        <span class="k">if</span> <span class="n">params_da</span><span class="o">.</span><span class="n">hasAttribute</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">):</span>
+                            <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">params_da</span><span class="o">.</span><span class="n">doubleValue</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">))</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">accNode</span> <span class="o">=</span> <span class="n">MarkerLinacNode</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+                    <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_pos</span><span class="p">)</span>
+                    <span class="n">thinNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+            <span class="c1"># ----- assign the thin nodes that are inside the thick nodes</span>
+            <span class="n">unusedThinNodes</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">thinNode</span> <span class="ow">in</span> <span class="n">thinNodes</span><span class="p">:</span>
+                <span class="n">thinNode_pos</span> <span class="o">=</span> <span class="n">thinNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span>
+                <span class="n">isInside</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">for</span> <span class="n">accNode</span> <span class="ow">in</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+                    <span class="n">length</span> <span class="o">=</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                        <span class="n">pos</span> <span class="o">=</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">thinNode_pos</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="n">thinNode_pos</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">+</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">):</span>
+                            <span class="n">isInside</span> <span class="o">=</span> <span class="kc">True</span>
+                            <span class="n">delta_pos</span> <span class="o">=</span> <span class="n">thinNode_pos</span> <span class="o">-</span> <span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+                            <span class="n">s_path</span> <span class="o">=</span> <span class="mf">0.0</span>
+                            <span class="n">part_ind_in</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+                            <span class="k">for</span> <span class="n">part_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">accNode</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()):</span>
+                                <span class="n">part_ind_in</span> <span class="o">=</span> <span class="n">part_ind</span>
+                                <span class="n">s_path</span> <span class="o">+=</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">part_ind</span><span class="p">)</span>
+                                <span class="k">if</span> <span class="n">delta_pos</span> <span class="o">&lt;=</span> <span class="n">s_path</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">zeroDistance</span><span class="p">:</span>
+                                    <span class="k">break</span>
+                            <span class="n">accNode</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">thinNode</span><span class="p">,</span> <span class="n">place</span><span class="o">=</span><span class="n">AccNode</span><span class="o">.</span><span class="n">BODY</span><span class="p">,</span> <span class="n">part_index</span><span class="o">=</span><span class="n">part_ind_in</span><span class="p">,</span> <span class="n">place_in_part</span><span class="o">=</span><span class="n">AccNode</span><span class="o">.</span><span class="n">AFTER</span><span class="p">)</span>
+                            <span class="n">thinNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">s_path</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">isInside</span><span class="p">:</span>
+                    <span class="n">unusedThinNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thinNode</span><span class="p">)</span>
+            <span class="n">thinNodes</span> <span class="o">=</span> <span class="n">unusedThinNodes</span>
+            <span class="n">newAccNodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[:]</span> <span class="o">+</span> <span class="n">thinNodes</span>
+            <span class="n">newAccNodes</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">positionComp</span><span class="p">)</span>
+            <span class="n">accSeq</span><span class="o">.</span><span class="n">setNodes</span><span class="p">(</span><span class="n">newAccNodes</span><span class="p">)</span>
+            <span class="c1"># insert the drifts ======================start ===========================</span>
+            <span class="c1"># -----now check the integrety quads and rf_gaps should not overlap</span>
+            <span class="c1"># -----and create drifts</span>
+            <span class="n">copyAccNodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[:]</span>
+            <span class="n">firstNode</span> <span class="o">=</span> <span class="n">copyAccNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">lastNode</span> <span class="o">=</span> <span class="n">copyAccNodes</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">copyAccNodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">driftNodes_before</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">driftNodes_after</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="c1"># insert the drift before the first element if its half length less than its position</span>
+            <span class="k">if</span> <span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">firstNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="n">firstNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">))</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">zeroDistance</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">firstNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">&gt;</span> <span class="n">firstNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">):</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The LinacLatticeFactory method getLinacAccLattice(names): the first node is too long!&quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;name=&quot;</span> <span class="o">+</span> <span class="n">firstNode</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;type=&quot;</span> <span class="o">+</span> <span class="n">firstNode</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;length=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">firstNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;pos=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">firstNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">))</span>
+                    <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">driftNodes</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="n">driftLength</span> <span class="o">=</span> <span class="n">firstNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">firstNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span>
+                    <span class="n">nDrifts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">driftLength</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="n">driftLength</span> <span class="o">=</span> <span class="n">driftLength</span> <span class="o">/</span> <span class="n">nDrifts</span>
+                    <span class="k">for</span> <span class="n">idrift</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nDrifts</span><span class="p">):</span>
+                        <span class="n">drift</span> <span class="o">=</span> <span class="n">Drift</span><span class="p">(</span><span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:START:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idrift</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:drift&quot;</span><span class="p">)</span>
+                        <span class="n">drift</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">driftLength</span><span class="p">)</span>
+                        <span class="n">drift</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="mf">0.0</span> <span class="o">+</span> <span class="n">drift</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">idrift</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">))</span>
+                        <span class="n">driftNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">drift</span><span class="p">)</span>
+                    <span class="n">driftNodes_before</span> <span class="o">=</span> <span class="n">driftNodes</span>
+            <span class="c1"># insert the drift after the last element if its half length less + position is less then the sequence length</span>
+            <span class="k">if</span> <span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">lastNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">zeroDistance</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getLength</span><span class="p">():</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The LinacLatticeFactory method getLinacAccLattice(names): the last node is too long!&quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;name=&quot;</span> <span class="o">+</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;type=&quot;</span> <span class="o">+</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;length=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lastNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;pos=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lastNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">))</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;sequence name=&quot;</span> <span class="o">+</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;sequence length=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accSeq</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+                    <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">driftNodes</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="n">driftLength</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">lastNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+                    <span class="n">nDrifts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">driftLength</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="n">driftLength</span> <span class="o">=</span> <span class="n">driftLength</span> <span class="o">/</span> <span class="n">nDrifts</span>
+                    <span class="k">for</span> <span class="n">idrift</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nDrifts</span><span class="p">):</span>
+                        <span class="n">drift</span> <span class="o">=</span> <span class="n">Drift</span><span class="p">(</span><span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idrift</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:drift&quot;</span><span class="p">)</span>
+                        <span class="n">drift</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">driftLength</span><span class="p">)</span>
+                        <span class="n">drift</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">lastNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="n">drift</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">idrift</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">))</span>
+                        <span class="n">driftNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">drift</span><span class="p">)</span>
+                    <span class="n">driftNodes_after</span> <span class="o">=</span> <span class="n">driftNodes</span>
+            <span class="c1"># now move on and generate drifts between (i,i+1) nodes from copyAccNodes</span>
+            <span class="n">newAccNodes</span> <span class="o">=</span> <span class="n">driftNodes_before</span>
+            <span class="k">for</span> <span class="n">node_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">copyAccNodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">accNode0</span> <span class="o">=</span> <span class="n">copyAccNodes</span><span class="p">[</span><span class="n">node_ind</span><span class="p">]</span>
+                <span class="n">newAccNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accNode0</span><span class="p">)</span>
+                <span class="n">accNode1</span> <span class="o">=</span> <span class="n">copyAccNodes</span><span class="p">[</span><span class="n">node_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="n">dist</span> <span class="o">=</span> <span class="n">accNode1</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">accNode1</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="n">accNode0</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">accNode0</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The LinacLatticeFactory method getLinacAccLattice(names): two nodes are overlapping!&quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;sequence name=&quot;</span> <span class="o">+</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="n">msg</span>
+                        <span class="o">+</span> <span class="s2">&quot;node 0 name=&quot;</span>
+                        <span class="o">+</span> <span class="n">accNode0</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                        <span class="o">+</span> <span class="s2">&quot; pos=&quot;</span>
+                        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accNode0</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">))</span>
+                        <span class="o">+</span> <span class="s2">&quot; L=&quot;</span>
+                        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accNode0</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+                    <span class="p">)</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="n">msg</span>
+                        <span class="o">+</span> <span class="s2">&quot;node 1 name=&quot;</span>
+                        <span class="o">+</span> <span class="n">accNode1</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                        <span class="o">+</span> <span class="s2">&quot; pos=&quot;</span>
+                        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accNode1</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">))</span>
+                        <span class="o">+</span> <span class="s2">&quot; L=&quot;</span>
+                        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">accNode1</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+                    <span class="p">)</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">dist</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">zeroDistance</span><span class="p">:</span>
+                    <span class="n">driftNodes</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="n">nDrifts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dist</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxDriftLength</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="n">driftLength</span> <span class="o">=</span> <span class="n">dist</span> <span class="o">/</span> <span class="n">nDrifts</span>
+                    <span class="k">for</span> <span class="n">idrift</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nDrifts</span><span class="p">):</span>
+                        <span class="n">drift</span> <span class="o">=</span> <span class="n">Drift</span><span class="p">(</span><span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">accNode0</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idrift</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:drift&quot;</span><span class="p">)</span>
+                        <span class="n">drift</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">driftLength</span><span class="p">)</span>
+                        <span class="n">drift</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">accNode0</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">accNode0</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">drift</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">idrift</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">))</span>
+                        <span class="n">driftNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">drift</span><span class="p">)</span>
+                    <span class="n">newAccNodes</span> <span class="o">+=</span> <span class="n">driftNodes</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">pass</span>
+            <span class="n">newAccNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lastNode</span><span class="p">)</span>
+            <span class="n">newAccNodes</span> <span class="o">+=</span> <span class="n">driftNodes_after</span>
+            <span class="n">accSeq</span><span class="o">.</span><span class="n">setNodes</span><span class="p">(</span><span class="n">newAccNodes</span><span class="p">)</span>
+            <span class="c1"># insert the drifts ======================stop ===========================</span>
+            <span class="c1"># add all AccNodes to the linac lattice</span>
+            <span class="k">for</span> <span class="n">accNode</span> <span class="ow">in</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
+                <span class="n">linacAccLattice</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+        <span class="c1"># ------- finalize the lattice construction</span>
+        <span class="n">linacAccLattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">linacAccLattice</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.filterSequences_and_OptionalCheck"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.filterSequences_and_OptionalCheck">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">filterSequences_and_OptionalCheck</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accSeq_da_arr</span><span class="p">,</span> <span class="n">names</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method will filter the sequences according to names list</span>
+<span class="sd">        and check the order of sequences in names.</span>
+<span class="sd">        All sequences should be in the right order. For SNS linac is</span>
+<span class="sd">        just a linac. It returns the filtered array with data adapters</span>
+<span class="sd">        with the names in the names array.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">seqencesLocal</span> <span class="o">=</span> <span class="n">accSeq_da_arr</span>
+        <span class="n">seqencesLocalNames</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">seq_da</span> <span class="ow">in</span> <span class="n">seqencesLocal</span><span class="p">:</span>
+            <span class="n">seqencesLocalNames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq_da</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">ind_old</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="n">seqencesLocalNames</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">ind</span> <span class="o">!=</span> <span class="p">(</span><span class="n">ind_old</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The LinacLatticeFactory method getLinacAccLattice(names): sequence names array is wrong!&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;existing names=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">seqencesLocalNames</span><span class="p">)</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;sequence names=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+                <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="n">ind_old</span> <span class="o">=</span> <span class="n">ind</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">ind_start</span> <span class="o">=</span> <span class="n">seqencesLocalNames</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">accSeq_da_arr</span> <span class="o">=</span> <span class="n">accSeq_da_arr</span><span class="p">[</span><span class="n">ind_start</span> <span class="p">:</span> <span class="n">ind_start</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">accSeq_da_arr</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDataAdaptorforLinacLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDataAdaptorforLinacLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDataAdaptorforLinacLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">linacAccLattice</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method generates and returns the accelerator data adaptor</span>
+<span class="sd">        for the accelerator lattice.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">acc_da</span> <span class="o">=</span> <span class="n">XmlDataAdaptor</span><span class="p">(</span><span class="n">linacAccLattice</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">accSeqs</span> <span class="o">=</span> <span class="n">linacAccLattice</span><span class="o">.</span><span class="n">getSequences</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">accSeq</span> <span class="ow">in</span> <span class="n">accSeqs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">makeDAforAccSeq</span><span class="p">(</span><span class="n">acc_da</span><span class="p">,</span> <span class="n">accSeq</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">acc_da</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDAforAccSeq"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDAforAccSeq">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDAforAccSeq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">acc_da</span><span class="p">,</span> <span class="n">accSeq</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method adds the accelerator sequence data to accelerator data adaptor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">seq_da</span> <span class="o">=</span> <span class="n">acc_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">seq_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;bpmFrequency&quot;</span><span class="p">):</span>
+            <span class="n">seq_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;bpmFrequency&quot;</span><span class="p">,</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;bpmFrequency&quot;</span><span class="p">))</span>
+        <span class="c1"># ----------------------------------</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">makeDA_quad</span><span class="p">(</span><span class="n">seq_da</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Bend</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">makeDA_bend</span><span class="p">(</span><span class="n">seq_da</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">DCorrectorH</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">makeDA_dcorrH</span><span class="p">(</span><span class="n">seq_da</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">DCorrectorV</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">makeDA_dcorrV</span><span class="p">(</span><span class="n">seq_da</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">BaseRF_Gap</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">makeDA_rf_gap</span><span class="p">(</span><span class="n">seq_da</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">MarkerLinacNode</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">makeDA_marker</span><span class="p">(</span><span class="n">seq_da</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+                <span class="k">continue</span>
+        <span class="c1"># ----------------------------------</span>
+        <span class="n">rf_cavs</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getRF_Cavities</span><span class="p">()</span>
+        <span class="n">cavs_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;Cavities&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">cav</span> <span class="ow">in</span> <span class="n">rf_cavs</span><span class="p">:</span>
+            <span class="n">cav_da</span> <span class="o">=</span> <span class="n">cavs_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;Cavity&quot;</span><span class="p">)</span>
+            <span class="n">cav_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;ampl&quot;</span><span class="p">,</span> <span class="n">cav</span><span class="o">.</span><span class="n">getAmp</span><span class="p">())</span>
+            <span class="n">cav_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span> <span class="n">cav</span><span class="o">.</span><span class="n">getFrequency</span><span class="p">())</span>
+            <span class="n">cav_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">cav</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+            <span class="n">cav_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">cav</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDA_quad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDA_quad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDA_quad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_da</span><span class="p">,</span> <span class="n">quad</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method will fill out the DataAdaptor for a quad linac accelerator node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">quad_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;accElement&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span> <span class="o">=</span> <span class="n">quad_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;parameters&quot;</span><span class="p">)</span>
+        <span class="n">quad_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+        <span class="n">quad_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">quad_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%9.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">quad</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">quad_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;QUAD&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDA_bend"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDA_bend">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDA_bend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_da</span><span class="p">,</span> <span class="n">bend</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method will fill out the DataAdaptor for a bend linac accelerator node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bend_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;accElement&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span> <span class="o">=</span> <span class="n">bend_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;parameters&quot;</span><span class="p">)</span>
+        <span class="n">bend_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;BEND&quot;</span><span class="p">)</span>
+        <span class="n">bend_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">bend_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%9.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">bend</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">bend_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;theta&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">bend</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;ea1&quot;</span><span class="p">):</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;ea1&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;ea1&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">bend</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;ea2&quot;</span><span class="p">):</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;ea2&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;ea2&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">bend</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">bend</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;aperture_x&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture_x&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;aperture_y&quot;</span><span class="p">,</span> <span class="n">bend</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture_y&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDA_dcorrH"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDA_dcorrH">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDA_dcorrH</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_da</span><span class="p">,</span> <span class="n">dcorr</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method will fill out the DataAdaptor for a DCorrectorH linac accelerator node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dcorr_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;accElement&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span> <span class="o">=</span> <span class="n">dcorr_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;parameters&quot;</span><span class="p">)</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%9.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;DCH&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">))</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;effLength&quot;</span><span class="p">,</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;effLength&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDA_dcorrV"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDA_dcorrV">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDA_dcorrV</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_da</span><span class="p">,</span> <span class="n">dcorr</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method will fill out the DataAdaptor for a DCorrectorV linac accelerator node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dcorr_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;accElement&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span> <span class="o">=</span> <span class="n">dcorr_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;parameters&quot;</span><span class="p">)</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%9.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">dcorr_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;DCV&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">))</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;effLength&quot;</span><span class="p">,</span> <span class="n">dcorr</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;effLength&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDA_marker"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDA_marker">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDA_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_da</span><span class="p">,</span> <span class="n">marker</span><span class="p">):</span>
+        <span class="n">marker_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;accElement&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span> <span class="o">=</span> <span class="n">marker_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;parameters&quot;</span><span class="p">)</span>
+        <span class="n">marker_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">marker_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">marker_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%9.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">marker</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">marker_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;MARKER&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SNS_LinacLatticeFactory.makeDA_rf_gap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory.makeDA_rf_gap">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeDA_rf_gap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_da</span><span class="p">,</span> <span class="n">rf_gap</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method will fill out the DataAdaptor for a RF Gap linac accelerator node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rf_gap_da</span> <span class="o">=</span> <span class="n">seq_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;accElement&quot;</span><span class="p">)</span>
+        <span class="n">rf_gap_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">rf_gap_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">rf_gap_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%9.6f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">rf_gap_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;RFGAP&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span> <span class="o">=</span> <span class="n">rf_gap_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;parameters&quot;</span><span class="p">)</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">))</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;E0TL&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;E0TL&quot;</span><span class="p">))</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;EzFile&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;EzFile&quot;</span><span class="p">))</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;cavity&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)))</span>
+        <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;phase&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%7.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;gap_phase&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mf">180.0</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">))</span>
+            <span class="n">params_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">))</span>
+        <span class="n">rf_gap_ttfs_da</span> <span class="o">=</span> <span class="n">rf_gap_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="s2">&quot;TTFs&quot;</span><span class="p">)</span>
+        <span class="n">rf_gap_ttfs_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;beta_max&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;beta_max&quot;</span><span class="p">))</span>
+        <span class="n">rf_gap_ttfs_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;beta_min&quot;</span><span class="p">,</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;beta_min&quot;</span><span class="p">))</span>
+
+        <span class="c1"># ---------------------------------------------</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">make_poly_da</span><span class="p">(</span><span class="n">node_name</span><span class="p">,</span> <span class="n">ttfs_da</span><span class="p">,</span> <span class="n">poly</span><span class="p">):</span>
+            <span class="n">poly_da</span> <span class="o">=</span> <span class="n">ttfs_da</span><span class="o">.</span><span class="n">createChild</span><span class="p">(</span><span class="n">node_name</span><span class="p">)</span>
+            <span class="n">poly_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;order&quot;</span><span class="p">,</span> <span class="n">poly</span><span class="o">.</span><span class="n">order</span><span class="p">())</span>
+            <span class="n">coefs</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">poly</span><span class="o">.</span><span class="n">order</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">coefs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">poly</span><span class="o">.</span><span class="n">coefficient</span><span class="p">(</span><span class="n">ind</span><span class="p">))</span>
+            <span class="n">poly_da</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;pcoefs&quot;</span><span class="p">,</span> <span class="n">coefs</span><span class="p">)</span>
+
+        <span class="c1"># ---------------------------------------------</span>
+        <span class="p">(</span><span class="n">polyT</span><span class="p">,</span> <span class="n">polyS</span><span class="p">,</span> <span class="n">polyTp</span><span class="p">,</span> <span class="n">polySp</span><span class="p">)</span> <span class="o">=</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getTTF_Polynimials</span><span class="p">()</span>
+        <span class="n">make_poly_da</span><span class="p">(</span><span class="s2">&quot;polyT&quot;</span><span class="p">,</span> <span class="n">rf_gap_ttfs_da</span><span class="p">,</span> <span class="n">polyT</span><span class="p">)</span>
+        <span class="n">make_poly_da</span><span class="p">(</span><span class="s2">&quot;polyS&quot;</span><span class="p">,</span> <span class="n">rf_gap_ttfs_da</span><span class="p">,</span> <span class="n">polyS</span><span class="p">)</span>
+        <span class="n">make_poly_da</span><span class="p">(</span><span class="s2">&quot;polyTP&quot;</span><span class="p">,</span> <span class="n">rf_gap_ttfs_da</span><span class="p">,</span> <span class="n">polyTp</span><span class="p">)</span>
+        <span class="n">make_poly_da</span><span class="p">(</span><span class="s2">&quot;polySP&quot;</span><span class="p">,</span> <span class="n">rf_gap_ttfs_da</span><span class="p">,</span> <span class="n">polySp</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

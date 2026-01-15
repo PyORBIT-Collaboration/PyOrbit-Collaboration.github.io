@@ -1,0 +1,949 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>orbit.py_linac.lattice_modifications.rf_quad_overlap_modifications_lib &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/py_linac/lattice_modifications/rf_quad_overlap_modifications_lib';</script>
+    <link rel="index" title="Index" href="../../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac.lattice_modifications.rf_quad_overlap_modifications_lib</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for orbit.py_linac.lattice_modifications.rf_quad_overlap_modifications_lib</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="c1"># --------------------------------------------------------------</span>
+<span class="c1"># The functions for the lattice modifications to replace the base</span>
+<span class="c1"># RF gap nodes with The Axis Fields nodes that can overlap with</span>
+<span class="c1"># quadrupoles.</span>
+<span class="c1"># The initial base RF gap nodes have zero length, and the length</span>
+<span class="c1"># of new nodes is defined by the RF fields on the RF gap axis.</span>
+<span class="c1"># We also have to adjust these lengths to avoid overlapping RF fields.</span>
+<span class="c1"># This correction will be on the level of microns, and it will</span>
+<span class="c1"># not change the strength of the fields.</span>
+<span class="c1"># The RF fields can overlap the zero length elements like markers or</span>
+<span class="c1"># dipole correctors. The whole RF gap field will be chopped into pieces.</span>
+<span class="c1"># The RF fields also can overlap the fields one or several quads, and</span>
+<span class="c1"># these quads&#39; fields will be included into the RF gap node to use</span>
+<span class="c1"># during the bunch tracking.</span>
+<span class="c1"># --------------------------------------------------------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="c1"># import from orbit Python utilities</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
+
+<span class="c1"># from orbit.py_linac.lattice import LinacApertureNode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">Quad</span><span class="p">,</span> <span class="n">Drift</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseRF_Gap</span><span class="p">,</span> <span class="n">AxisFieldRF_Gap</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">OverlappingQuadsNode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AxisField_and_Quad_RF_Gap</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.overlapping_fields</span><span class="w"> </span><span class="kn">import</span> <span class="n">EngeFunction</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.orbit_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">Function</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.py_linac.lattice_modifications.rf_models_modifications_lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Make_AxisFieldRF_Gaps_and_Find_Neihbor_Nodes</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">GetEngeFunction</span><span class="p">(</span><span class="n">quad</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is an example of a EngeFunctionFactory function.</span>
+<span class="sd">    It returns the EngeFunction function for the instance of Quad node.</span>
+<span class="sd">    The quad should have the aperture parameter.</span>
+<span class="sd">    It is used in the quad+rf lattice transformation by default.</span>
+<span class="sd">    User can prepare his/her own EngeFunctionFactory function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">length_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">):</span>
+        <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span>
+        <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.001</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="n">EngeFunction</span><span class="p">(</span><span class="n">length_param</span><span class="p">,</span> <span class="n">acceptance_diameter_param</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">func</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Inside the Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes Python function. &quot;</span>
+        <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Cannot create the EngeFunction for the quad!&quot;</span>
+        <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;quad name = &quot;</span> <span class="o">+</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;It does not have the aperture parameter!&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes/#orbit.py_linac.lattice_modifications.Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes</span><span class="p">(</span>
+    <span class="n">accLattice</span><span class="p">,</span> <span class="n">z_step</span><span class="p">,</span> <span class="n">dir_location</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">accSeq_Names</span><span class="o">=</span><span class="p">[],</span> <span class="n">cavs_Names</span><span class="o">=</span><span class="p">[],</span> <span class="n">EngeFunctionFactory</span><span class="o">=</span><span class="n">GetEngeFunction</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function will replace  BaseRF_Gap nodes by AxisField_and_Quad_RF_Gap.</span>
+<span class="sd">    It is assumed that AxisField_and_Quad_RF_Gap nodes do not overlap any</span>
+<span class="sd">    others nodes (except Drifts). The location of the axis field</span>
+<span class="sd">    data files are specified by dir_location input variable.</span>
+<span class="sd">    The replacement will be performed only for specified sequences.</span>
+<span class="sd">    If the cavities list is empty, all of them will be replaced!</span>
+<span class="sd">    If you want to replace the nodes in a particular cavity please specify it!</span>
+<span class="sd">    The dir_location is the location of the directory with the axis field</span>
+<span class="sd">    files.</span>
+<span class="sd">    We assume that the RF gap field overlaps only with the fields of</span>
+<span class="sd">    two neighboring quads.</span>
+<span class="sd">    z_step defines the longitudinal step during the tracking through the</span>
+<span class="sd">    elements with overlapping fields.</span>
+<span class="sd">    The magnetic field longitudinal dependency in quads will be described</span>
+<span class="sd">    by Enge Functions that will be produced by the GetEngeFunction function</span>
+<span class="sd">    by default. The user can supply his/her own factory for these functions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	node_pos_dict = accLattice.getNodePositionsDict()</span>
+<span class="sd">	#for node_ind in range(len(accLattice.getNodes())):</span>
+<span class="sd">	for node_ind in range(199,298):</span>
+<span class="sd">		node = accLattice.getNodes()[node_ind]</span>
+<span class="sd">		#if(not isinstance(node,Quad)): continue</span>
+<span class="sd">		(pos_start,pos_end) = node_pos_dict[node]</span>
+<span class="sd">		print &quot;debug ind=&quot;,node_ind,&quot; node=&quot;,node.getName(),&quot; (pos_start,pos_end)=&quot;,(pos_start,pos_end)</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+    <span class="c1"># -----------------------------------------------------------------------------</span>
+    <span class="c1"># ---- rf_length_tolerance RF fields should not overlap more than this value</span>
+    <span class="n">rf_length_tolerance</span> <span class="o">=</span> <span class="mf">0.0001</span>
+    <span class="n">drift_length_tolerance</span> <span class="o">=</span> <span class="mf">0.00000001</span>
+    <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">accSeq_Name</span> <span class="ow">in</span> <span class="n">accSeq_Names</span><span class="p">:</span>
+        <span class="n">accSeq</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getSequence</span><span class="p">(</span><span class="n">accSeq_Name</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug ================== START seq=&quot;,accSeq.getName()</span>
+        <span class="k">if</span> <span class="n">accSeq</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes Python function. &quot;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Cannot find the acc. sequence with this name in the lattice!&quot;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;accSeq name = &quot;</span> <span class="o">+</span> <span class="n">accSeq_Name</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;lattice name = &quot;</span> <span class="o">+</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="c1"># --------------------------------------------------------------</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+        <span class="c1"># --- just for case: if the nodes are not in the right order</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="c1"># ---- create Enge Functions&#39; dictionary by using the usual quad nodes as keys</span>
+        <span class="n">enge_func_quad_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">quads</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getQuads</span><span class="p">(</span><span class="n">accSeq</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">quads</span><span class="p">:</span>
+            <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">quad</span><span class="p">]</span> <span class="o">=</span> <span class="n">EngeFunctionFactory</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
+        <span class="c1"># --------------------------------------------</span>
+        <span class="n">cavs</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getRF_Cavities</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cavs_Names</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cavs_tmp</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">cav</span> <span class="ow">in</span> <span class="n">cavs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">cav</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="ow">in</span> <span class="n">cavs_Names</span><span class="p">:</span>
+                    <span class="n">cavs_tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cav</span><span class="p">)</span>
+            <span class="n">cavs</span> <span class="o">=</span> <span class="n">cavs_tmp</span>
+        <span class="c1"># ---- let&#39;s check that all rf gaps are BaseRF_Gap instances</span>
+        <span class="c1"># ---- and create the dictionaries to account for new rf gaps later</span>
+        <span class="c1"># ---- rf_gap_to_cavs_dict[rf_gap] = cav</span>
+        <span class="c1"># ---- new_rf_gaps_arr_in_cav_dict[cav] = [new_AxisField_and_Quad_RF_Gap_0,..]</span>
+        <span class="n">rf_gap_to_cavs_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">new_rf_gaps_arr_in_cav_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">cav</span> <span class="ow">in</span> <span class="n">cavs</span><span class="p">:</span>
+            <span class="n">rf_gaps</span> <span class="o">=</span> <span class="n">cav</span><span class="o">.</span><span class="n">getRF_GapNodes</span><span class="p">()</span>
+            <span class="n">new_rf_gaps_arr_in_cav_dict</span><span class="p">[</span><span class="n">cav</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">rf_gap</span> <span class="ow">in</span> <span class="n">rf_gaps</span><span class="p">:</span>
+                <span class="n">rf_gap_to_cavs_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span> <span class="o">=</span> <span class="n">cav</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rf_gap</span><span class="p">,</span> <span class="n">BaseRF_Gap</span><span class="p">):</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes function. &quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;You are trying to replace the RF gap which is not BaseRF_Gap instance!&quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;RF Gap =&quot;</span> <span class="o">+</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Type of gap node=&quot;</span> <span class="o">+</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="c1"># ---- af_rf_gap_dict[rf_gap] = AxisFieldRF_Gap(rf_gap)</span>
+        <span class="c1"># ---- rf_gap_ind_up_down_arr[[rf_gap,gap_ind,drift_down_ind,drift_up_ind],...]</span>
+        <span class="p">(</span><span class="n">af_rf_gap_dict</span><span class="p">,</span> <span class="n">rf_gap_ind_up_down_arr</span><span class="p">)</span> <span class="o">=</span> <span class="n">Make_AxisFieldRF_Gaps_and_Find_Neihbor_Nodes</span><span class="p">(</span>
+            <span class="n">rf_length_tolerance</span><span class="p">,</span> <span class="n">accLattice</span><span class="p">,</span> <span class="n">accSeq</span><span class="p">,</span> <span class="n">dir_location</span><span class="p">,</span> <span class="n">cavs</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rf_gap_ind_up_down_arr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes function. &quot;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;This Acc. Sequence does not have BaseRF_Gaps!&quot;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;It is better to use another method of the lattice modification!&quot;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Acc Sequence =&quot;</span> <span class="o">+</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="c1"># -----------------------------------------------------</span>
+        <span class="c1"># ---- Now we are going to build a new lattice with AxisField_and_Quad_RF_Gap</span>
+        <span class="c1"># ---- and OverlappingQuadsNode classes. Even drifts will be replaced with</span>
+        <span class="c1"># ---- these nodes to simplify the lattice structure. The original lattice</span>
+        <span class="c1"># ---- should have only drifts, quads, and BaseRF_Gaps as elements with</span>
+        <span class="c1"># ---- non-zero length. If the user wants to include other sources of the EM</span>
+        <span class="c1"># ---- fields, he/she has to create or modify the classes responsible for</span>
+        <span class="c1"># ---- handling the overlapping EM fields.</span>
+        <span class="c1"># ---- We will generate new nodes in an arbitrary order, but at the end</span>
+        <span class="c1"># ---- we will sort them according to their position.</span>
+        <span class="c1"># -----------------------------------------------------</span>
+        <span class="n">new_nodes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># -------------------------------------------------------------------------</span>
+        <span class="c1"># ---- 1st STEP - nodes from the beginning to the first RF gap</span>
+        <span class="p">[</span><span class="n">rf_gap</span><span class="p">,</span> <span class="n">gap_ind</span><span class="p">,</span> <span class="n">drift_down_ind</span><span class="p">,</span> <span class="n">drift_up_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">rf_gap_ind_up_down_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">node_ind_start</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">node_ind_end</span> <span class="o">=</span> <span class="n">drift_down_ind</span>
+        <span class="p">(</span><span class="n">node_pos_start</span><span class="p">,</span> <span class="n">pos_tmp</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">node_ind_start</span><span class="p">]]</span>
+        <span class="n">accSeq_z_start</span> <span class="o">=</span> <span class="n">node_pos_start</span>
+        <span class="p">(</span><span class="n">rf_gap_pos_start</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span>
+        <span class="p">(</span><span class="n">z_gap_min</span><span class="p">,</span> <span class="n">z_gap_max</span><span class="p">)</span> <span class="o">=</span> <span class="n">af_rf_gap_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span><span class="o">.</span><span class="n">getZ_Min_Max</span><span class="p">()</span>
+        <span class="p">(</span><span class="n">rf_gap_pos_start</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">rf_gap_pos_start</span> <span class="o">+</span> <span class="n">z_gap_min</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span> <span class="o">+</span> <span class="n">z_gap_max</span><span class="p">)</span>
+        <span class="c1"># print &quot;debug rf gap=&quot;,rf_gap.getName(),&quot; (rf_gap_pos_start, rf_gap_pos_end)=&quot;,(rf_gap_pos_start, rf_gap_pos_end)</span>
+        <span class="c1"># print &quot;debug      (node_ind_start,node_ind_end) = &quot;,(node_ind_start,node_ind_end)</span>
+        <span class="c1"># for ind in range(node_ind_start,rf_gap_ind_up_down_arr[0][1]+1):</span>
+        <span class="c1"># 	print &quot;debug    ind =&quot;,ind,&quot; node=&quot;,nodes[ind].getName(),&quot; (node_pos_start,node_pos_end)=&quot;,node_pos_dict[nodes[ind]]</span>
+        <span class="n">node_pos_start</span> <span class="o">=</span> <span class="n">node_pos_start</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+        <span class="n">node_pos_end</span> <span class="o">=</span> <span class="n">rf_gap_pos_start</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+        <span class="c1"># ---- if the length of the node is equal to 0. we will add only the zero length elements</span>
+        <span class="p">(</span><span class="n">local_quads</span><span class="p">,</span> <span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">=</span> <span class="n">Get_quads_zeroLengthNodes_in_range</span><span class="p">(</span><span class="n">accSeq</span><span class="p">,</span> <span class="n">node_ind_start</span><span class="p">,</span> <span class="n">node_ind_end</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">node_pos_start</span> <span class="o">-</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
+            <span class="c1"># print &quot;debug before n_quads=&quot;,len(local_quads),&quot; n_markers=&quot;,len(zero_length_nodes)</span>
+            <span class="n">pos_start</span> <span class="o">=</span> <span class="n">node_pos_start</span>
+            <span class="n">pos_end</span> <span class="o">=</span> <span class="n">node_pos_end</span>
+            <span class="n">ovrlp_count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">OverlappingQuadsNode</span><span class="p">()</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:Before:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ovrlp_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                    <span class="n">pos_end</span> <span class="o">=</span> <span class="n">node_pos_end</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">pos_end</span> <span class="o">=</span> <span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span>
+                <span class="n">length</span> <span class="o">=</span> <span class="n">pos_end</span> <span class="o">-</span> <span class="n">pos_start</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                        <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                    <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+                    <span class="k">continue</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos_end</span> <span class="o">+</span> <span class="n">pos_start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">local_quads</span><span class="p">:</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">addQuad</span><span class="p">(</span><span class="n">quad</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">quad</span><span class="p">],</span> <span class="n">quad</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span> <span class="o">-</span> <span class="n">pos_start</span><span class="p">)</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setZ_Step</span><span class="p">(</span><span class="n">z_step</span><span class="p">)</span>
+                <span class="n">nParts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">z_step</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span>
+                <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                <span class="n">ovrlp_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                    <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_nodes</span> <span class="o">+=</span> <span class="n">zero_length_nodes</span>
+        <span class="c1"># --------------------------------------------------------------------------</span>
+        <span class="c1"># ---- 2st STEP - nodes from the last RF gap to the end of the Acc. Sequence</span>
+        <span class="p">[</span><span class="n">rf_gap</span><span class="p">,</span> <span class="n">gap_ind</span><span class="p">,</span> <span class="n">drift_down_ind</span><span class="p">,</span> <span class="n">drift_up_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">rf_gap_ind_up_down_arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">rf_gap_ind_up_down_arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">node_ind_start</span> <span class="o">=</span> <span class="n">drift_up_ind</span>
+        <span class="n">node_ind_end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="p">(</span><span class="n">rf_gap_pos_start</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span>
+        <span class="p">(</span><span class="n">z_gap_min</span><span class="p">,</span> <span class="n">z_gap_max</span><span class="p">)</span> <span class="o">=</span> <span class="n">af_rf_gap_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span><span class="o">.</span><span class="n">getZ_Min_Max</span><span class="p">()</span>
+        <span class="p">(</span><span class="n">rf_gap_pos_start</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">rf_gap_pos_start</span> <span class="o">+</span> <span class="n">z_gap_min</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span> <span class="o">+</span> <span class="n">z_gap_max</span><span class="p">)</span>
+        <span class="n">node_pos_start</span> <span class="o">=</span> <span class="n">rf_gap_pos_end</span>
+        <span class="p">(</span><span class="n">node_pos_tmp</span><span class="p">,</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">node_ind_end</span><span class="p">]]</span>
+        <span class="p">(</span><span class="n">local_quads</span><span class="p">,</span> <span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">=</span> <span class="n">Get_quads_zeroLengthNodes_in_range</span><span class="p">(</span><span class="n">accSeq</span><span class="p">,</span> <span class="n">node_ind_start</span><span class="p">,</span> <span class="n">node_ind_end</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">node_pos_start</span> <span class="o">-</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
+            <span class="c1"># print &quot;debug after n_quads=&quot;,len(local_quads),&quot; n_markers=&quot;,len(zero_length_nodes)</span>
+            <span class="n">pos_start</span> <span class="o">=</span> <span class="n">node_pos_start</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+            <span class="n">pos_end</span> <span class="o">=</span> <span class="n">node_pos_end</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+            <span class="n">ovrlp_count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">OverlappingQuadsNode</span><span class="p">()</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:After:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ovrlp_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                    <span class="n">pos_end</span> <span class="o">=</span> <span class="n">node_pos_end</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">pos_end</span> <span class="o">=</span> <span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span>
+                <span class="n">length</span> <span class="o">=</span> <span class="n">pos_end</span> <span class="o">-</span> <span class="n">pos_start</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                        <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                    <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+                    <span class="k">continue</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos_end</span> <span class="o">+</span> <span class="n">pos_start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">local_quads</span><span class="p">:</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">addQuad</span><span class="p">(</span><span class="n">quad</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">quad</span><span class="p">],</span> <span class="n">quad</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span> <span class="o">-</span> <span class="n">pos_start</span><span class="p">)</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setZ_Step</span><span class="p">(</span><span class="n">z_step</span><span class="p">)</span>
+                <span class="n">nParts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">z_step</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span>
+                <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                <span class="n">ovrlp_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                    <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_nodes</span> <span class="o">+=</span> <span class="n">zero_length_nodes</span>
+        <span class="c1"># --------------------------------------------------------------------------</span>
+        <span class="c1"># ---- 3st STEP - nodes of AxisField_and_Quad_RF_Gap type - new RF gaps</span>
+        <span class="c1"># ---- rf_gap_to_cavs_dict[rf_gap] = cav</span>
+        <span class="c1"># ---- new_rf_gaps_arr_in_cav_dict[cav] = [new_AxisField_and_Quad_RF_Gap_0,..]</span>
+        <span class="n">n_rf_gaps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rf_gap_ind_up_down_arr</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">local_gap_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_rf_gaps</span><span class="p">):</span>
+            <span class="p">[</span><span class="n">rf_gap</span><span class="p">,</span> <span class="n">gap_ind</span><span class="p">,</span> <span class="n">drift_down_ind</span><span class="p">,</span> <span class="n">drift_up_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">rf_gap_ind_up_down_arr</span><span class="p">[</span><span class="n">local_gap_ind</span><span class="p">]</span>
+            <span class="n">cav</span> <span class="o">=</span> <span class="n">rf_gap_to_cavs_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span>
+            <span class="n">new_rf_gaps_arr</span> <span class="o">=</span> <span class="n">new_rf_gaps_arr_in_cav_dict</span><span class="p">[</span><span class="n">cav</span><span class="p">]</span>
+            <span class="n">axisFieldRF_Gap</span> <span class="o">=</span> <span class="n">af_rf_gap_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">local_quads</span><span class="p">,</span> <span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">=</span> <span class="n">Get_quads_zeroLengthNodes_in_range</span><span class="p">(</span><span class="n">accSeq</span><span class="p">,</span> <span class="n">drift_down_ind</span><span class="p">,</span> <span class="n">drift_up_ind</span><span class="p">)</span>
+            <span class="n">local_quads</span> <span class="o">=</span> <span class="n">Find_Neihbor_Quads</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">accSeq</span><span class="p">,</span> <span class="n">rf_gap</span><span class="p">,</span> <span class="n">gap_ind</span><span class="p">,</span> <span class="n">af_rf_gap_dict</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">rf_gap_pos_start</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span>
+            <span class="n">rf_gap_pos_zero</span> <span class="o">=</span> <span class="n">rf_gap_pos_start</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+            <span class="p">(</span><span class="n">z_gap_min</span><span class="p">,</span> <span class="n">z_gap_max</span><span class="p">)</span> <span class="o">=</span> <span class="n">axisFieldRF_Gap</span><span class="o">.</span><span class="n">getZ_Min_Max</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">rf_gap_pos_start</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">rf_gap_pos_start</span> <span class="o">+</span> <span class="n">z_gap_min</span><span class="p">,</span> <span class="n">rf_gap_pos_end</span> <span class="o">+</span> <span class="n">z_gap_max</span><span class="p">)</span>
+            <span class="n">pos_start</span> <span class="o">=</span> <span class="n">rf_gap_pos_start</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+            <span class="n">pos_end</span> <span class="o">=</span> <span class="n">rf_gap_pos_end</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+            <span class="c1"># --------------------------------------------------------</span>
+            <span class="n">ovrlp_count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">axisField_and_Quad_RF_Gap</span> <span class="o">=</span> <span class="n">AxisField_and_Quad_RF_Gap</span><span class="p">(</span><span class="n">axisFieldRF_Gap</span><span class="p">)</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">rf_gap</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">axisField_and_Quad_RF_Gap</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ovrlp_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">new_rf_gaps_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">axisField_and_Quad_RF_Gap</span><span class="p">)</span>
+                <span class="n">axisField_and_Quad_RF_Gap</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                    <span class="n">pos_end</span> <span class="o">=</span> <span class="n">rf_gap_pos_end</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">pos_end</span> <span class="o">=</span> <span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span>
+                <span class="n">length</span> <span class="o">=</span> <span class="n">pos_end</span> <span class="o">-</span> <span class="n">pos_start</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                        <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                    <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+                    <span class="k">continue</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos_end</span> <span class="o">+</span> <span class="n">pos_start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">z_min</span> <span class="o">=</span> <span class="n">pos_start</span> <span class="o">-</span> <span class="n">rf_gap_pos_zero</span>
+                <span class="n">z_max</span> <span class="o">=</span> <span class="n">pos_end</span> <span class="o">-</span> <span class="n">rf_gap_pos_zero</span>
+                <span class="n">axisField_and_Quad_RF_Gap</span><span class="o">.</span><span class="n">setZ_Min_Max</span><span class="p">(</span><span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">)</span>
+                <span class="n">axisField_and_Quad_RF_Gap</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">local_quads</span><span class="p">:</span>
+                    <span class="n">axisField_and_Quad_RF_Gap</span><span class="o">.</span><span class="n">addQuad</span><span class="p">(</span><span class="n">quad</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">quad</span><span class="p">],</span> <span class="n">quad</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span> <span class="o">-</span> <span class="n">rf_gap_pos_zero</span><span class="p">)</span>
+                <span class="n">axisField_and_Quad_RF_Gap</span><span class="o">.</span><span class="n">setZ_Step</span><span class="p">(</span><span class="n">z_step</span><span class="p">)</span>
+                <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">axisField_and_Quad_RF_Gap</span><span class="p">)</span>
+                <span class="n">ovrlp_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                    <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+        <span class="c1"># --------------------------------------------------------------------------</span>
+        <span class="c1"># ---- 4st STEP - nodes between two RF gaps</span>
+        <span class="k">for</span> <span class="n">local_gap_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_rf_gaps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="p">[</span><span class="n">rf_gap0</span><span class="p">,</span> <span class="n">gap0_ind</span><span class="p">,</span> <span class="n">drift_down0_ind</span><span class="p">,</span> <span class="n">drift_up0_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">rf_gap_ind_up_down_arr</span><span class="p">[</span><span class="n">local_gap_ind</span><span class="p">]</span>
+            <span class="p">[</span><span class="n">rf_gap1</span><span class="p">,</span> <span class="n">gap1_ind</span><span class="p">,</span> <span class="n">drift_down1_ind</span><span class="p">,</span> <span class="n">drift_up1_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">rf_gap_ind_up_down_arr</span><span class="p">[</span><span class="n">local_gap_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">rf_gap0_pos_start</span><span class="p">,</span> <span class="n">rf_gap0_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">rf_gap0</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">z_gap0_min</span><span class="p">,</span> <span class="n">z_gap0_max</span><span class="p">)</span> <span class="o">=</span> <span class="n">af_rf_gap_dict</span><span class="p">[</span><span class="n">rf_gap0</span><span class="p">]</span><span class="o">.</span><span class="n">getZ_Min_Max</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">rf_gap0_pos_start</span><span class="p">,</span> <span class="n">rf_gap0_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">rf_gap0_pos_start</span> <span class="o">+</span> <span class="n">z_gap0_min</span><span class="p">,</span> <span class="n">rf_gap0_pos_end</span> <span class="o">+</span> <span class="n">z_gap0_max</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">rf_gap1_pos_start</span><span class="p">,</span> <span class="n">rf_gap1_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">rf_gap1</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">z_gap1_min</span><span class="p">,</span> <span class="n">z_gap1_max</span><span class="p">)</span> <span class="o">=</span> <span class="n">af_rf_gap_dict</span><span class="p">[</span><span class="n">rf_gap1</span><span class="p">]</span><span class="o">.</span><span class="n">getZ_Min_Max</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">rf_gap1_pos_start</span><span class="p">,</span> <span class="n">rf_gap1_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">rf_gap1_pos_start</span> <span class="o">+</span> <span class="n">z_gap1_min</span><span class="p">,</span> <span class="n">rf_gap1_pos_end</span> <span class="o">+</span> <span class="n">z_gap1_max</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">local_quads</span><span class="p">,</span> <span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">=</span> <span class="n">Get_quads_zeroLengthNodes_in_range</span><span class="p">(</span><span class="n">accSeq</span><span class="p">,</span> <span class="n">drift_up0_ind</span><span class="p">,</span> <span class="n">drift_down1_ind</span><span class="p">)</span>
+            <span class="n">node_pos_start</span> <span class="o">=</span> <span class="n">rf_gap0_pos_end</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+            <span class="n">node_pos_end</span> <span class="o">=</span> <span class="n">rf_gap1_pos_start</span> <span class="o">-</span> <span class="n">accSeq_z_start</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">node_pos_start</span> <span class="o">-</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
+                <span class="n">pos_start</span> <span class="o">=</span> <span class="n">node_pos_start</span>
+                <span class="n">pos_end</span> <span class="o">=</span> <span class="n">node_pos_end</span>
+                <span class="n">ovrlp_count</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">node</span> <span class="o">=</span> <span class="n">OverlappingQuadsNode</span><span class="p">()</span>
+                    <span class="n">name</span> <span class="o">=</span> <span class="n">rf_gap0</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:After:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ovrlp_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                        <span class="n">pos_end</span> <span class="o">=</span> <span class="n">node_pos_end</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">pos_end</span> <span class="o">=</span> <span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span>
+                    <span class="n">length</span> <span class="o">=</span> <span class="n">pos_end</span> <span class="o">-</span> <span class="n">pos_start</span>
+                    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                            <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                        <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+                        <span class="k">continue</span>
+                    <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos_end</span> <span class="o">+</span> <span class="n">pos_start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">local_quads</span><span class="p">:</span>
+                        <span class="n">node</span><span class="o">.</span><span class="n">addQuad</span><span class="p">(</span><span class="n">quad</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">quad</span><span class="p">],</span> <span class="n">quad</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span> <span class="o">-</span> <span class="n">pos_start</span><span class="p">)</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">setZ_Step</span><span class="p">(</span><span class="n">z_step</span><span class="p">)</span>
+                    <span class="n">nParts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">z_step</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="n">node</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span>
+                    <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                    <span class="n">ovrlp_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
+                        <span class="n">new_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
+                    <span class="n">pos_start</span> <span class="o">=</span> <span class="n">pos_end</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">new_nodes</span> <span class="o">+=</span> <span class="n">zero_length_nodes</span>
+        <span class="c1"># --------------------------------------------------------------------------</span>
+        <span class="n">new_nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">new_nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="c1"># --------------------------------------------------------------------------</span>
+        <span class="c1"># ---- rf_gap_to_cavs_dict[rf_gap] = cav</span>
+        <span class="c1"># ---- new_rf_gaps_arr_in_cav_dict[cav] = [new_AxisField_and_Quad_RF_Gap_0,..]</span>
+        <span class="c1"># ---- the new istances of the AxisField_and_Quad_RF_Gap has setAsFirstRFGap(False) by default</span>
+        <span class="k">for</span> <span class="n">cav</span> <span class="ow">in</span> <span class="n">cavs</span><span class="p">:</span>
+            <span class="n">new_rf_gaps_arr</span> <span class="o">=</span> <span class="n">new_rf_gaps_arr_in_cav_dict</span><span class="p">[</span><span class="n">cav</span><span class="p">]</span>
+            <span class="n">cav</span><span class="o">.</span><span class="n">removeAllGapNodes</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">axisField_and_Quad_RF_Gap</span> <span class="ow">in</span> <span class="n">new_rf_gaps_arr</span><span class="p">:</span>
+                <span class="n">cav</span><span class="o">.</span><span class="n">addRF_GapNode</span><span class="p">(</span><span class="n">axisField_and_Quad_RF_Gap</span><span class="p">)</span>
+        <span class="c1"># ------------------------------------------</span>
+        <span class="c1"># ---- let&#39;s replace all nodes in the AccSeq by the new set</span>
+        <span class="n">accSeq</span><span class="o">.</span><span class="n">removeAllNodes</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">new_nodes</span><span class="p">:</span>
+            <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="c1"># ---- new set of nodes for the lattice</span>
+    <span class="n">new_latt_nodes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">accSeq</span> <span class="ow">in</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getSequences</span><span class="p">():</span>
+        <span class="n">new_latt_nodes</span> <span class="o">+=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+    <span class="n">accLattice</span><span class="o">.</span><span class="n">setNodes</span><span class="p">(</span><span class="n">new_latt_nodes</span><span class="p">)</span>
+    <span class="n">accLattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+    <span class="c1"># ------- debug START printing of new nodes and their positions in the lattice</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	node_pos_dict = accLattice.getNodePositionsDict()</span>
+<span class="sd">	for accSeq_Name in accSeq_Names:</span>
+<span class="sd">		accSeq = accLattice.getSequence(accSeq_Name)</span>
+<span class="sd">		nodes = accSeq.getNodes()</span>
+<span class="sd">		accSeq_z_start = node_pos_dict[nodes[0]][0]</span>
+<span class="sd">		#--------------------------------------------------------------------------</span>
+<span class="sd">		for node in nodes:</span>
+<span class="sd">			pos = node.getPosition()</span>
+<span class="sd">			(pos_start,pos_end) = node_pos_dict[node]</span>
+<span class="sd">			delta = pos - ((pos_start+pos_end)/2 - accSeq_z_start)</span>
+<span class="sd">			if(abs(delta) &gt;  drift_length_tolerance):</span>
+<span class="sd">				print &quot;debug new node=&quot;,node.getName(),&quot; pos=&quot;,node.getPosition(),&quot; (pos_start,pos_end)=&quot;,node_pos_dict[node],&quot; delta=&quot;,delta</span>
+<span class="sd">	&quot;&quot;&quot;</span></div>
+    <span class="c1"># ------- debug STOP  printing of new nodes and their positions in the lattice</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">Get_quads_zeroLengthNodes_in_range</span><span class="p">(</span><span class="n">accSeq</span><span class="p">,</span> <span class="n">node_ind_start</span><span class="p">,</span> <span class="n">node_ind_end</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns all quads and zero-length nodes in this index range.</span>
+<span class="sd">    It also checks that all elements inside this range has zero length or they</span>
+<span class="sd">    are drifts of quads.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+    <span class="n">zero_length_nodes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">child_nodes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">quads</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">node_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">node_ind_start</span><span class="p">,</span> <span class="n">node_ind_end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">node_ind</span><span class="p">]</span>
+        <span class="n">children_arr</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getBodyChildren</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">children_arr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># print &quot;debug ========= parent node=&quot;,node.getName(),&quot; pos = &quot;,node.getPosition()</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children_arr</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+                    <span class="n">child_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+                    <span class="c1"># print &quot;      debug child=&quot;,child.getName(),&quot; pos=&quot;,child.getPosition()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">BaseRF_Gap</span><span class="p">):</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">length</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">zero_length_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
+                    <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Drift</span><span class="p">):</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes function. &quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;This Acc. Sequence has an element that &quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;1. has non-zero length&quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;2. not a quad&quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;3. not a drift&quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;This function does not know how to handle this elelement!&quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Acc Sequence =&quot;</span> <span class="o">+</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Acc element =&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Acc element type =&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                        <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">zero_length_nodes</span> <span class="o">+=</span> <span class="n">child_nodes</span>
+    <span class="n">zero_length_nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">quads</span><span class="p">,</span> <span class="n">zero_length_nodes</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">Find_Neihbor_Quads</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">accSeq</span><span class="p">,</span> <span class="n">rf_gap</span><span class="p">,</span> <span class="n">gap_ind</span><span class="p">,</span> <span class="n">af_rf_gap_dict</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function will find the quads with the fields overlapping RF gap fields.</span>
+<span class="sd">    It returns the quads that should be taken into account.</span>
+<span class="sd">    gap_ind is an index of rf_gap in the original accLattice.getNodes().</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
+    <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
+    <span class="p">(</span><span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">)</span> <span class="o">=</span> <span class="n">af_rf_gap_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span><span class="o">.</span><span class="n">getZ_Min_Max</span><span class="p">()</span>
+    <span class="p">(</span><span class="n">gap_pos_start</span><span class="p">,</span> <span class="n">gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">rf_gap</span><span class="p">]</span>
+    <span class="p">(</span><span class="n">gap_pos_start</span><span class="p">,</span> <span class="n">gap_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">gap_pos_start</span> <span class="o">+</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">gap_pos_end</span> <span class="o">+</span> <span class="n">z_max</span><span class="p">)</span>
+    <span class="n">quads</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># ---- let&#39;s go down</span>
+    <span class="n">node_ind</span> <span class="o">=</span> <span class="n">gap_ind</span>
+    <span class="k">while</span> <span class="n">node_ind</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">node_ind</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
+            <span class="p">(</span><span class="n">node_pos_start</span><span class="p">,</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">z_min_node</span><span class="p">,</span> <span class="n">z_max_node</span><span class="p">)</span> <span class="o">=</span> <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span><span class="o">.</span><span class="n">getLimitsZ</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">node_pos_start</span><span class="p">,</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="p">(</span><span class="n">node_pos_start</span> <span class="o">+</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">z_min_node</span><span class="p">,</span>
+                <span class="p">(</span><span class="n">node_pos_start</span> <span class="o">+</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">z_max_node</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">delta</span> <span class="o">=</span> <span class="n">node_pos_end</span> <span class="o">-</span> <span class="n">gap_pos_start</span>
+            <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="n">node_ind</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="c1"># ---- let&#39;s go up</span>
+    <span class="n">node_ind</span> <span class="o">=</span> <span class="n">gap_ind</span>
+    <span class="k">while</span> <span class="n">node_ind</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">node_ind</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
+            <span class="p">(</span><span class="n">node_pos_start</span><span class="p">,</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="p">(</span><span class="n">z_min_node</span><span class="p">,</span> <span class="n">z_max_node</span><span class="p">)</span> <span class="o">=</span> <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span><span class="o">.</span><span class="n">getLimitsZ</span><span class="p">()</span>
+            <span class="p">(</span><span class="n">node_pos_start</span><span class="p">,</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="p">(</span><span class="n">node_pos_start</span> <span class="o">+</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">z_min_node</span><span class="p">,</span>
+                <span class="p">(</span><span class="n">node_pos_start</span> <span class="o">+</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">z_max_node</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">delta</span> <span class="o">=</span> <span class="n">node_pos_start</span> <span class="o">-</span> <span class="n">gap_pos_end</span>
+            <span class="k">if</span> <span class="n">delta</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="n">node_ind</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">quads</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">quads</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">quads</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

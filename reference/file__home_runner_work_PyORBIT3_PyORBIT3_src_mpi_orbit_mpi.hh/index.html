@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File orbit_mpi.hh &#8212; PyORBIT3 v3.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh';</script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">PyORBIT3</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install/">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing/">
+                        Contributor Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../py/">
+                        Python API Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cpp/">
+                        C++ API Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh/">Program Listing for File orbit_mpi.hh</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">File orbit_mpi.hh</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="file-orbit-mpi-hh">
+<span id="file-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-hh"></span><h1>File orbit_mpi.hh<a class="headerlink" href="#file-orbit-mpi-hh" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="../dir__home_runner_work_PyORBIT3_PyORBIT3_src_mpi/#dir-home-runner-work-pyorbit3-pyorbit3-src-mpi"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/mpi</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-hh" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/mpi/orbit_mpi.hh</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id6">Defines</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id7">Typedefs</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-hh">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/mpi/orbit_mpi.hh</span></code>)<a class="headerlink" href="#definition-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-hh" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh/">Program Listing for File orbit_mpi.hh</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Python.h</span></code></p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-baserfgap-hh"><span class="std std-ref">File BaseRfGap.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap_slow.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-baserfgap-slow-hh"><span class="std std-ref">File BaseRfGap_slow.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_MatrixRfGap.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-matrixrfgap-hh"><span class="std std-ref">File MatrixRfGap.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-rfgapttf-hh"><span class="std std-ref">File RfGapTTF.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapTTF_slow.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-rfgapttf-slow-hh"><span class="std std-ref">File RfGapTTF_slow.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-rfgapthreepointttf-hh"><span class="std std-ref">File RfGapThreePointTTF.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF_slow.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-rfgapthreepointttf-slow-hh"><span class="std std-ref">File RfGapThreePointTTF_slow.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-cc"><span class="std std-ref">File orbit_mpi.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-apertures-convexapertureshape-cc"><span class="std std-ref">File ConvexApertureShape.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Bunch.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-bunch-hh"><span class="std std-ref">File Bunch.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_LImpedance.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-impedances-limpedance-hh"><span class="std std-ref">File LImpedance.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-impedances-timpedance-hh"><span class="std std-ref">File TImpedance.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleAttributes.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-particlesattributes-particleattributes-hh"><span class="std std-ref">File ParticleAttributes.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_ParticlesAttributes_ParticleMacroSize.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-particlesattributes-particlemacrosize-hh"><span class="std std-ref">File ParticleMacroSize.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Barrier_Cav.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-rfcavities-barrier-cav-hh"><span class="std std-ref">File Barrier_Cav.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Dual_Harmonic_Cav.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-rfcavities-dual-harmonic-cav-hh"><span class="std std-ref">File Dual_Harmonic_Cav.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Frequency_Cav.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-rfcavities-frequency-cav-hh"><span class="std std-ref">File Frequency_Cav.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_RFCavities_Harmonic_Cav.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-rfcavities-harmonic-cav-hh"><span class="std std-ref">File Harmonic_Cav.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-syncpart-hh"><span class="std std-ref">File SyncPart.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolver2D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-forcesolver2d-hh"><span class="std std-ref">File ForceSolver2D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_ForceSolverFFT2D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-forcesolverfft2d-hh"><span class="std std-ref">File ForceSolverFFT2D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-grid1d-cc"><span class="std std-ref">File Grid1D.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-grid1d-hh"><span class="std std-ref">File Grid1D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid2D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-grid2d-hh"><span class="std std-ref">File Grid2D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-grid3d-hh"><span class="std std-ref">File Grid3D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_LSpaceChargeCalc.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-lspacechargecalc-hh"><span class="std std-ref">File LSpaceChargeCalc.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver2D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-poissonsolver2d-hh"><span class="std std-ref">File PoissonSolver2D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolver3D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-poissonsolver3d-hh"><span class="std std-ref">File PoissonSolver3D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT2D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-poissonsolverfft2d-hh"><span class="std std-ref">File PoissonSolverFFT2D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT3D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-poissonsolverfft3d-hh"><span class="std std-ref">File PoissonSolverFFT3D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargecalc2p5d-hh"><span class="std std-ref">File SpaceChargeCalc2p5D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc2p5Drb.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargecalc2p5drb-hh"><span class="std std-ref">File SpaceChargeCalc2p5Drb.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalc3D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargecalc3d-hh"><span class="std std-ref">File SpaceChargeCalc3D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcSliceBySlice2D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargecalcslicebyslice2d-hh"><span class="std std-ref">File SpaceChargeCalcSliceBySlice2D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeCalcUnifEllipse.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargecalcunifellipse-hh"><span class="std std-ref">File SpaceChargeCalcUnifEllipse.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_SpaceChargeForceCalc2p5D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-spacechargeforcecalc2p5d-hh"><span class="std std-ref">File SpaceChargeForceCalc2p5D.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_UniformEllipsoidFieldCalculator.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-uniformellipsoidfieldcalculator-cc"><span class="std std-ref">File UniformEllipsoidFieldCalculator.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_teapot_MatrixGenerator.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-teapot-matrixgenerator-cc"><span class="std std-ref">File MatrixGenerator.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_ExtEffectsContainer.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-trackerrk4-exteffectscontainer-cc"><span class="std std-ref">File ExtEffectsContainer.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_trackerrk4_PyExternalEffects.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-trackerrk4-pyexternaleffects-cc"><span class="std std-ref">File PyExternalEffects.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_FieldSourceContainer.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-fieldsourcecontainer-cc"><span class="std std-ref">File FieldSourceContainer.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_MathPolynomial.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-mathpolynomial-cc"><span class="std std-ref">File MathPolynomial.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_Function.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-ou-function-cc"><span class="std std-ref">File OU_Function.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_OU_SplineCH.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-ou-splinech-cc"><span class="std std-ref">File OU_SplineCH.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_PyBaseFieldSource.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-pybasefieldsource-cc"><span class="std std-ref">File PyBaseFieldSource.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_BunchExtremaCalculator.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-bunch-bunchextremacalculator-cc"><span class="std std-ref">File BunchExtremaCalculator.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_InitialCoordsAttrFunctions.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-bunch-initialcoordsattrfunctions-cc"><span class="std std-ref">File InitialCoordsAttrFunctions.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_ParticlesWithIdFunctions.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-bunch-particleswithidfunctions-cc"><span class="std std-ref">File ParticlesWithIdFunctions.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_bunch_TwissFilteringFunctions.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-bunch-twissfilteringfunctions-cc"><span class="std std-ref">File TwissFilteringFunctions.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_DipoleFieldSource.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-field-sources-dipolefieldsource-cc"><span class="std std-ref">File DipoleFieldSource.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_LoopFieldSource.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-field-sources-loopfieldsource-cc"><span class="std std-ref">File LoopFieldSource.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_MagnetFieldSourceGrid3D.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-field-sources-magnetfieldsourcegrid3d-cc"><span class="std std-ref">File MagnetFieldSourceGrid3D.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_QuadFieldSource.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-field-sources-quadfieldsource-cc"><span class="std std-ref">File QuadFieldSource.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-field-sources-shiftedfieldsource-cc"><span class="std std-ref">File ShiftedFieldSource.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_field_sources_ShiftedFieldSource.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-field-sources-shiftedfieldsource-hh"><span class="std std-ref">File ShiftedFieldSource.hh</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_harmonic_analysis_HarmonicData.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-harmonic-analysis-harmonicdata-cc"><span class="std std-ref">File HarmonicData.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_integration_GaussLegendreIntegrator.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-integration-gausslegendreintegrator-cc"><span class="std std-ref">File GaussLegendreIntegrator.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_Matrix.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-matrix-matrix-cc"><span class="std std-ref">File Matrix.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_MatrixOperations.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-matrix-matrixoperations-cc"><span class="std std-ref">File MatrixOperations.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_matrix_PhaseVector.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-matrix-phasevector-cc"><span class="std std-ref">File PhaseVector.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_polynomial_OU_Polynomial.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-polynomial-ou-polynomial-cc"><span class="std std-ref">File OU_Polynomial.cc</span></a></p></li>
+<li><p><a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_statistics_StatMoments2D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-statistics-statmoments2d-hh"><span class="std std-ref">File StatMoments2D.hh</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../structMPI__Status/#exhale-struct-structmpi-status"><span class="std std-ref">Struct MPI_Status</span></a></p></li>
+<li><p><a class="reference internal" href="../structpyORBIT__MPI__Comm/#exhale-struct-structpyorbit-mpi-comm"><span class="std std-ref">Struct pyORBIT_MPI_Comm</span></a></p></li>
+<li><p><a class="reference internal" href="../structpyORBIT__MPI__Datatype/#exhale-struct-structpyorbit-mpi-datatype"><span class="std std-ref">Struct pyORBIT_MPI_Datatype</span></a></p></li>
+<li><p><a class="reference internal" href="../structpyORBIT__MPI__Group/#exhale-struct-structpyorbit-mpi-group"><span class="std std-ref">Struct pyORBIT_MPI_Group</span></a></p></li>
+<li><p><a class="reference internal" href="../structpyORBIT__MPI__Op/#exhale-struct-structpyorbit-mpi-op"><span class="std std-ref">Struct pyORBIT_MPI_Op</span></a></p></li>
+<li><p><a class="reference internal" href="../structpyORBIT__MPI__Request/#exhale-struct-structpyorbit-mpi-request"><span class="std std-ref">Struct pyORBIT_MPI_Request</span></a></p></li>
+<li><p><a class="reference internal" href="../structpyORBIT__MPI__Status/#exhale-struct-structpyorbit-mpi-status"><span class="std std-ref">Struct pyORBIT_MPI_Status</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a88d8a4fe5021ee59b3291d29d7a998c9/#exhale-function-orbit-mpi-8hh-1a88d8a4fe5021ee59b3291d29d7a998c9"><span class="std std-ref">Function ORBIT_MPI_Allreduce</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1ac45117960db64985a092d67515d24813/#exhale-function-orbit-mpi-8hh-1ac45117960db64985a092d67515d24813"><span class="std std-ref">Function ORBIT_MPI_Barrier</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a0ff4ad0ab8d5efdc288d4b9a6c3a7827/#exhale-function-orbit-mpi-8hh-1a0ff4ad0ab8d5efdc288d4b9a6c3a7827"><span class="std std-ref">Function ORBIT_MPI_Bcast</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a8d4cb78769527d6c0f85fea324040d62/#exhale-function-orbit-mpi-8hh-1a8d4cb78769527d6c0f85fea324040d62"><span class="std std-ref">Function ORBIT_MPI_Comm_compare</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1aeb3ba3e444668f7e4b7bdfecdac2cc9a/#exhale-function-orbit-mpi-8hh-1aeb3ba3e444668f7e4b7bdfecdac2cc9a"><span class="std std-ref">Function ORBIT_MPI_Comm_create</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a5da1eff2a57d8c26c27153ee40acb269/#exhale-function-orbit-mpi-8hh-1a5da1eff2a57d8c26c27153ee40acb269"><span class="std std-ref">Function ORBIT_MPI_Comm_dup</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a24b2c84f43a02cf8a83734f1cad96eab/#exhale-function-orbit-mpi-8hh-1a24b2c84f43a02cf8a83734f1cad96eab"><span class="std std-ref">Function ORBIT_MPI_Comm_free</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a4633fe24c0b4df3e6c0390b5ea78436f/#exhale-function-orbit-mpi-8hh-1a4633fe24c0b4df3e6c0390b5ea78436f"><span class="std std-ref">Function ORBIT_MPI_Comm_get_name</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a0cd2809887629b17e813a41d5637f46e/#exhale-function-orbit-mpi-8hh-1a0cd2809887629b17e813a41d5637f46e"><span class="std std-ref">Function ORBIT_MPI_Comm_group</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1acee13a335d51e30afad0eaf87f4faa2e/#exhale-function-orbit-mpi-8hh-1acee13a335d51e30afad0eaf87f4faa2e"><span class="std std-ref">Function ORBIT_MPI_Comm_rank</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1afa2f2beac5e6f10fe42add29885436f2/#exhale-function-orbit-mpi-8hh-1afa2f2beac5e6f10fe42add29885436f2"><span class="std std-ref">Function ORBIT_MPI_Comm_remote_group</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a12472e2e9e641a1a3ab75f1c0f0d98b5/#exhale-function-orbit-mpi-8hh-1a12472e2e9e641a1a3ab75f1c0f0d98b5"><span class="std std-ref">Function ORBIT_MPI_Comm_remote_size</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a25ea95f790fc2adc653044da1e291657/#exhale-function-orbit-mpi-8hh-1a25ea95f790fc2adc653044da1e291657"><span class="std std-ref">Function ORBIT_MPI_Comm_set_name</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a1160df73bb83ccc37f490208e50e92e6/#exhale-function-orbit-mpi-8hh-1a1160df73bb83ccc37f490208e50e92e6"><span class="std std-ref">Function ORBIT_MPI_Comm_size</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a19791236f2490ea410657d944f47560e/#exhale-function-orbit-mpi-8hh-1a19791236f2490ea410657d944f47560e"><span class="std std-ref">Function ORBIT_MPI_Comm_split</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a2709cb3c7623065c9acfd44790b062fc/#exhale-function-orbit-mpi-8hh-1a2709cb3c7623065c9acfd44790b062fc"><span class="std std-ref">Function ORBIT_MPI_Comm_test_inter</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1aeaa6bbc00b8a3fdf5a1cb0767600d3dd/#exhale-function-orbit-mpi-8hh-1aeaa6bbc00b8a3fdf5a1cb0767600d3dd"><span class="std std-ref">Function ORBIT_MPI_Finalize()</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a88a4f8f4bc43a7b01a4ce981a9a2f435/#exhale-function-orbit-mpi-8hh-1a88a4f8f4bc43a7b01a4ce981a9a2f435"><span class="std std-ref">Function ORBIT_MPI_Finalize(const char *)</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1acf1bbe8fdfb1fa4c23645f8ccc6f8026/#exhale-function-orbit-mpi-8hh-1acf1bbe8fdfb1fa4c23645f8ccc6f8026"><span class="std std-ref">Function ORBIT_MPI_Get_count</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1aa4fcf9825e805fb725fa38ba35113a7e/#exhale-function-orbit-mpi-8hh-1aa4fcf9825e805fb725fa38ba35113a7e"><span class="std std-ref">Function ORBIT_MPI_Get_processor_name</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a5508fbd2e5b32cdde7d0d232317e97b2/#exhale-function-orbit-mpi-8hh-1a5508fbd2e5b32cdde7d0d232317e97b2"><span class="std std-ref">Function ORBIT_MPI_Graph_create</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a3c20bb439a44f86ddc3cd5e9f63eefaa/#exhale-function-orbit-mpi-8hh-1a3c20bb439a44f86ddc3cd5e9f63eefaa"><span class="std std-ref">Function ORBIT_MPI_Graph_get</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a3ff8961d7aca957ec82e85447a9c30f2/#exhale-function-orbit-mpi-8hh-1a3ff8961d7aca957ec82e85447a9c30f2"><span class="std std-ref">Function ORBIT_MPI_Graph_map</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a73ee1378bb73daf36a24ffe94ae4ef12/#exhale-function-orbit-mpi-8hh-1a73ee1378bb73daf36a24ffe94ae4ef12"><span class="std std-ref">Function ORBIT_MPI_Graph_neighbors</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1ab78c3386b01313fb71d58ec07699267c/#exhale-function-orbit-mpi-8hh-1ab78c3386b01313fb71d58ec07699267c"><span class="std std-ref">Function ORBIT_MPI_Graph_neighbors_count</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a91c287f82a160b6e18b5ac4f2edac7ae/#exhale-function-orbit-mpi-8hh-1a91c287f82a160b6e18b5ac4f2edac7ae"><span class="std std-ref">Function ORBIT_MPI_Graphdims_get</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a539e4fc99d1ef260b37d73ef72d9f5bd/#exhale-function-orbit-mpi-8hh-1a539e4fc99d1ef260b37d73ef72d9f5bd"><span class="std std-ref">Function ORBIT_MPI_Group_compare</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a77a0a0d56a41d6dc4679645a71e11fd5/#exhale-function-orbit-mpi-8hh-1a77a0a0d56a41d6dc4679645a71e11fd5"><span class="std std-ref">Function ORBIT_MPI_Group_difference</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1aba90a8fcfd01300ea15ec8a43b608f3f/#exhale-function-orbit-mpi-8hh-1aba90a8fcfd01300ea15ec8a43b608f3f"><span class="std std-ref">Function ORBIT_MPI_Group_excl</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a099a3d089816f1f44625d691019a0dfc/#exhale-function-orbit-mpi-8hh-1a099a3d089816f1f44625d691019a0dfc"><span class="std std-ref">Function ORBIT_MPI_Group_free</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1aaac208bcc5acdc37622a7cd560ae8257/#exhale-function-orbit-mpi-8hh-1aaac208bcc5acdc37622a7cd560ae8257"><span class="std std-ref">Function ORBIT_MPI_Group_incl</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a1aafb4de63ecba901a5165b691ec22e0/#exhale-function-orbit-mpi-8hh-1a1aafb4de63ecba901a5165b691ec22e0"><span class="std std-ref">Function ORBIT_MPI_Group_intersection</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1ad5a84a819abc3c879fb6d4af83f0105d/#exhale-function-orbit-mpi-8hh-1ad5a84a819abc3c879fb6d4af83f0105d"><span class="std std-ref">Function ORBIT_MPI_Group_rank</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a204b2bc58c2a28f72981ad3011cd9068/#exhale-function-orbit-mpi-8hh-1a204b2bc58c2a28f72981ad3011cd9068"><span class="std std-ref">Function ORBIT_MPI_Group_size</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1ad70408c50a717dfa0ced89a6c810c7cb/#exhale-function-orbit-mpi-8hh-1ad70408c50a717dfa0ced89a6c810c7cb"><span class="std std-ref">Function ORBIT_MPI_Group_translate_ranks</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a2435e69f420b9246fde091766aba98ba/#exhale-function-orbit-mpi-8hh-1a2435e69f420b9246fde091766aba98ba"><span class="std std-ref">Function ORBIT_MPI_Group_union</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1ac04b00a2e3d21ffbe1c7234ab8d77eff/#exhale-function-orbit-mpi-8hh-1ac04b00a2e3d21ffbe1c7234ab8d77eff"><span class="std std-ref">Function ORBIT_MPI_Init</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a75a6dc3bc80a654fa1b99d83e1b07839/#exhale-function-orbit-mpi-8hh-1a75a6dc3bc80a654fa1b99d83e1b07839"><span class="std std-ref">Function ORBIT_MPI_Initialized</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a9f77cd15ada44eafd62d76567488687e/#exhale-function-orbit-mpi-8hh-1a9f77cd15ada44eafd62d76567488687e"><span class="std std-ref">Function ORBIT_MPI_Intercomm_create</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a25968225622e66c44289f714976dfed1/#exhale-function-orbit-mpi-8hh-1a25968225622e66c44289f714976dfed1"><span class="std std-ref">Function ORBIT_MPI_Intercomm_merge</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a9d371e7171aa7bd02028a9ab7bceca82/#exhale-function-orbit-mpi-8hh-1a9d371e7171aa7bd02028a9ab7bceca82"><span class="std std-ref">Function ORBIT_MPI_Probe</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a76986332d61c51b094ab9afa99076029/#exhale-function-orbit-mpi-8hh-1a76986332d61c51b094ab9afa99076029"><span class="std std-ref">Function ORBIT_MPI_Recv</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1acf248df6f3ab815a6335ee1169798036/#exhale-function-orbit-mpi-8hh-1acf248df6f3ab815a6335ee1169798036"><span class="std std-ref">Function ORBIT_MPI_Send</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a60acfc2f8766268f7de7c647a9ed9d43/#exhale-function-orbit-mpi-8hh-1a60acfc2f8766268f7de7c647a9ed9d43"><span class="std std-ref">Function ORBIT_MPI_Wait</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1a74872f6ada77717c6200fbf4b5c0247e/#exhale-function-orbit-mpi-8hh-1a74872f6ada77717c6200fbf4b5c0247e"><span class="std std-ref">Function ORBIT_MPI_Wtick</span></a></p></li>
+<li><p><a class="reference internal" href="../function_orbit__mpi_8hh_1abf88136dfa2327dd6cf1de0fe59ae7bd/#exhale-function-orbit-mpi-8hh-1abf88136dfa2327dd6cf1de0fe59ae7bd"><span class="std std-ref">Function ORBIT_MPI_Wtime</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aad01846ca8da972658f74b9affe1d5e8/#exhale-define-orbit-mpi-8hh-1aad01846ca8da972658f74b9affe1d5e8"><span class="std std-ref">Define MPI_ANY_SOURCE</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a89445dffa33bb6aea4d49bab508a3d30/#exhale-define-orbit-mpi-8hh-1a89445dffa33bb6aea4d49bab508a3d30"><span class="std std-ref">Define MPI_ANY_TAG</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a4b2be9d70c247bb3d0fa2d68310135ad/#exhale-define-orbit-mpi-8hh-1a4b2be9d70c247bb3d0fa2d68310135ad"><span class="std std-ref">Define MPI_BAND</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1af225a70708fa59537d0a2e0e7cc951af/#exhale-define-orbit-mpi-8hh-1af225a70708fa59537d0a2e0e7cc951af"><span class="std std-ref">Define MPI_BOR</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1ab2ec6e9369bfb9920e01ae1deb67b14a/#exhale-define-orbit-mpi-8hh-1ab2ec6e9369bfb9920e01ae1deb67b14a"><span class="std std-ref">Define MPI_BXOR</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a5b3d59a5aa038a03f5fee91c426476b9/#exhale-define-orbit-mpi-8hh-1a5b3d59a5aa038a03f5fee91c426476b9"><span class="std std-ref">Define MPI_BYTE</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1afeb16fd9ffcb668470d46e24fef55080/#exhale-define-orbit-mpi-8hh-1afeb16fd9ffcb668470d46e24fef55080"><span class="std std-ref">Define MPI_CART</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1ac521acab90e22ecd11466d7229986673/#exhale-define-orbit-mpi-8hh-1ac521acab90e22ecd11466d7229986673"><span class="std std-ref">Define MPI_CHAR</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a117133520e81a669c853602ac650d9d4/#exhale-define-orbit-mpi-8hh-1a117133520e81a669c853602ac650d9d4"><span class="std std-ref">Define MPI_COMM_NULL</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a5dcc99c598f5bd6968077f68dea4376e/#exhale-define-orbit-mpi-8hh-1a5dcc99c598f5bd6968077f68dea4376e"><span class="std std-ref">Define MPI_COMM_SELF</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a2df6a15627583d5e6f5a48550644cbef/#exhale-define-orbit-mpi-8hh-1a2df6a15627583d5e6f5a48550644cbef"><span class="std std-ref">Define MPI_COMM_WORLD</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a4089fa2007bede1c392241cb3a5bd5ba/#exhale-define-orbit-mpi-8hh-1a4089fa2007bede1c392241cb3a5bd5ba"><span class="std std-ref">Define MPI_CONGRUENT</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a248e55efe62ab7ba021822dbe63e2cf2/#exhale-define-orbit-mpi-8hh-1a248e55efe62ab7ba021822dbe63e2cf2"><span class="std std-ref">Define MPI_DATATYPE_NULL</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aafd1dc0086079e7904385538c54c9c8f/#exhale-define-orbit-mpi-8hh-1aafd1dc0086079e7904385538c54c9c8f"><span class="std std-ref">Define MPI_DOUBLE</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a44a340eb7b7f8ee6027b48098fa727b9/#exhale-define-orbit-mpi-8hh-1a44a340eb7b7f8ee6027b48098fa727b9"><span class="std std-ref">Define MPI_FLOAT</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a3b8766607a0e4f2d4dd41d5fddcebcde/#exhale-define-orbit-mpi-8hh-1a3b8766607a0e4f2d4dd41d5fddcebcde"><span class="std std-ref">Define MPI_GRAPH</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a70e1d8fc4527571226fa92031a4843a6/#exhale-define-orbit-mpi-8hh-1a70e1d8fc4527571226fa92031a4843a6"><span class="std std-ref">Define MPI_GROUP_EMPTY</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a95a656541f84f112f0f3b2852ccbc362/#exhale-define-orbit-mpi-8hh-1a95a656541f84f112f0f3b2852ccbc362"><span class="std std-ref">Define MPI_GROUP_NULL</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a6beca620f3741bc6c31a36c45828fcd8/#exhale-define-orbit-mpi-8hh-1a6beca620f3741bc6c31a36c45828fcd8"><span class="std std-ref">Define MPI_IDENT</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a43ed7cd86d20f84db849adc64a09415e/#exhale-define-orbit-mpi-8hh-1a43ed7cd86d20f84db849adc64a09415e"><span class="std std-ref">Define MPI_INT</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aad5d3a42ed21a43374f28a92f5706411/#exhale-define-orbit-mpi-8hh-1aad5d3a42ed21a43374f28a92f5706411"><span class="std std-ref">Define MPI_LAND</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1ab5b220f368fa90f52cb17dba5ea26e52/#exhale-define-orbit-mpi-8hh-1ab5b220f368fa90f52cb17dba5ea26e52"><span class="std std-ref">Define MPI_LONG</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1ae859d7201ac7d6b421dbfa08ba60e7b4/#exhale-define-orbit-mpi-8hh-1ae859d7201ac7d6b421dbfa08ba60e7b4"><span class="std std-ref">Define MPI_LONG_DOUBLE</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1abaf437ee14a6510e13cb47f5c63bbbf7/#exhale-define-orbit-mpi-8hh-1abaf437ee14a6510e13cb47f5c63bbbf7"><span class="std std-ref">Define MPI_LONG_LONG_INT</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a89f60bee88d8a8d4df7741623ea58ae1/#exhale-define-orbit-mpi-8hh-1a89f60bee88d8a8d4df7741623ea58ae1"><span class="std std-ref">Define MPI_LOR</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a9298cd22fbf7f2ff37909bc0008772b1/#exhale-define-orbit-mpi-8hh-1a9298cd22fbf7f2ff37909bc0008772b1"><span class="std std-ref">Define MPI_LXOR</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a80d80987b473f4a13b0cc0384eddb51b/#exhale-define-orbit-mpi-8hh-1a80d80987b473f4a13b0cc0384eddb51b"><span class="std std-ref">Define MPI_MAX</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aecbc3eab345ce4eceaadf5111f4847f8/#exhale-define-orbit-mpi-8hh-1aecbc3eab345ce4eceaadf5111f4847f8"><span class="std std-ref">Define MPI_MAX_ERROR_STRING</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a478ad5d8921456a83559ac35ce1a3b59/#exhale-define-orbit-mpi-8hh-1a478ad5d8921456a83559ac35ce1a3b59"><span class="std std-ref">Define MPI_MAX_NAME_STRING</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a32c2e019a42e9bfc9db6f8d9cf6adb4e/#exhale-define-orbit-mpi-8hh-1a32c2e019a42e9bfc9db6f8d9cf6adb4e"><span class="std std-ref">Define MPI_MAX_PROCESSOR_NAME</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a69e01ede130e069f6460d279191284e9/#exhale-define-orbit-mpi-8hh-1a69e01ede130e069f6460d279191284e9"><span class="std std-ref">Define MPI_MAXLOC</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aa2fecfa16d35e8fa3894c512a527b73f/#exhale-define-orbit-mpi-8hh-1aa2fecfa16d35e8fa3894c512a527b73f"><span class="std std-ref">Define MPI_MIN</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a8fa941be0ff7c437ef4b6ba63f530f38/#exhale-define-orbit-mpi-8hh-1a8fa941be0ff7c437ef4b6ba63f530f38"><span class="std std-ref">Define MPI_MINLOC</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a703581dc23026866f846404ea26b8931/#exhale-define-orbit-mpi-8hh-1a703581dc23026866f846404ea26b8931"><span class="std std-ref">Define MPI_OP_NULL</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a19e82b93bc42cbd336f522625e93ceb4/#exhale-define-orbit-mpi-8hh-1a19e82b93bc42cbd336f522625e93ceb4"><span class="std std-ref">Define MPI_PROD</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a9e474e5dd7d7e4b3461ba8effc8019f8/#exhale-define-orbit-mpi-8hh-1a9e474e5dd7d7e4b3461ba8effc8019f8"><span class="std std-ref">Define MPI_SHORT</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aa64ade05a9862b36dd04816c2701d112/#exhale-define-orbit-mpi-8hh-1aa64ade05a9862b36dd04816c2701d112"><span class="std std-ref">Define MPI_SIMILAR</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a004dd3ebf764c8c42e600ae5513e4dbc/#exhale-define-orbit-mpi-8hh-1a004dd3ebf764c8c42e600ae5513e4dbc"><span class="std std-ref">Define MPI_SUCCESS</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aa058ba472f0fd41ae860caeaebca0166/#exhale-define-orbit-mpi-8hh-1aa058ba472f0fd41ae860caeaebca0166"><span class="std std-ref">Define MPI_SUM</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1aff6b3ceb2c22396e5eab7f509b3da0dc/#exhale-define-orbit-mpi-8hh-1aff6b3ceb2c22396e5eab7f509b3da0dc"><span class="std std-ref">Define MPI_UNDEFINED</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a93e78a1b82329d0439dfd0668ddb39e4/#exhale-define-orbit-mpi-8hh-1a93e78a1b82329d0439dfd0668ddb39e4"><span class="std std-ref">Define MPI_UNDEFINED_RANK</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a89b88391b03a73c2ca5eaeb926b8d1cc/#exhale-define-orbit-mpi-8hh-1a89b88391b03a73c2ca5eaeb926b8d1cc"><span class="std std-ref">Define MPI_UNEQUAL</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1ac87ab272940388b59dfd01d5cdfff90a/#exhale-define-orbit-mpi-8hh-1ac87ab272940388b59dfd01d5cdfff90a"><span class="std std-ref">Define MPI_UNSIGNED</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a8a26b50ce81c5d801ee83a9ab4d2d32f/#exhale-define-orbit-mpi-8hh-1a8a26b50ce81c5d801ee83a9ab4d2d32f"><span class="std std-ref">Define MPI_UNSIGNED_CHAR</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a9b2b3fcdfe74a7a8b6d98a14d92a4b43/#exhale-define-orbit-mpi-8hh-1a9b2b3fcdfe74a7a8b6d98a14d92a4b43"><span class="std std-ref">Define MPI_UNSIGNED_LONG</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1acdbf7a6bf241b33828d6d38aac098c0f/#exhale-define-orbit-mpi-8hh-1acdbf7a6bf241b33828d6d38aac098c0f"><span class="std std-ref">Define MPI_UNSIGNED_SHORT</span></a></p></li>
+<li><p><a class="reference internal" href="../define_orbit__mpi_8hh_1a3869d282031f6ea6b50fdb980b758420/#exhale-define-orbit-mpi-8hh-1a3869d282031f6ea6b50fdb980b758420"><span class="std std-ref">Define USE_MPI</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../typedef_orbit__mpi_8hh_1a68c509d4adb3f4a1d6fe3a9b0b87c7b9/#exhale-typedef-orbit-mpi-8hh-1a68c509d4adb3f4a1d6fe3a9b0b87c7b9"><span class="std std-ref">Typedef MPI_Comm</span></a></p></li>
+<li><p><a class="reference internal" href="../typedef_orbit__mpi_8hh_1affc17fe964f9f670fb06e09d6134b4ff/#exhale-typedef-orbit-mpi-8hh-1affc17fe964f9f670fb06e09d6134b4ff"><span class="std std-ref">Typedef MPI_Datatype</span></a></p></li>
+<li><p><a class="reference internal" href="../typedef_orbit__mpi_8hh_1a2e7770334e9e65834ce3c95dd0c3a50f/#exhale-typedef-orbit-mpi-8hh-1a2e7770334e9e65834ce3c95dd0c3a50f"><span class="std std-ref">Typedef MPI_Group</span></a></p></li>
+<li><p><a class="reference internal" href="../typedef_orbit__mpi_8hh_1a1e6360539c256e76b432da612d0ec399/#exhale-typedef-orbit-mpi-8hh-1a1e6360539c256e76b432da612d0ec399"><span class="std std-ref">Typedef MPI_Op</span></a></p></li>
+<li><p><a class="reference internal" href="../typedef_orbit__mpi_8hh_1a240e9d13a157e03c75e42306b13cd8d8/#exhale-typedef-orbit-mpi-8hh-1a240e9d13a157e03c75e42306b13cd8d8"><span class="std std-ref">Typedef MPI_Request</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-hh">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/mpi/orbit_mpi.hh</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#includes">Includes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#included-by">Included By</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defines">Defines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typedefs">Typedefs</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, PyORBIT Collaboration.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
