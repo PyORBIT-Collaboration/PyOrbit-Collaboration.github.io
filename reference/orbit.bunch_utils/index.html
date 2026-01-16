@@ -357,6 +357,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.load_bunch/">load_bunch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.ParticleIdNumber/">ParticleIdNumber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.BunchDict/">BunchDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.SyncPartDict/">SyncPartDict</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.FileHandler/">FileHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.NumPyHandler/">NumPyHandler</a></li>
 </ul>
@@ -674,7 +675,7 @@ document.write(`
 <td><p>Saves the collected bunch attributes to a specified directory.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.bunch_utils.load_bunch/#orbit.bunch_utils.load_bunch" title="orbit.bunch_utils.load_bunch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_bunch</span></code></a>(input_dir[, Handler])</p></td>
-<td><p>Loads the bunch attributes from a specified directory containing NumPy binary files. :type input_dir: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code> :param input_dir: The directory from which to load the bunch data files. :type input_dir: str | pathlib.Path :type Handler: <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code>[<a class="reference internal" href="../orbit.bunch_utils.FileHandler/#orbit.bunch_utils.FileHandler" title="orbit.bunch_utils.serialize.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a>] :param Handler: The file handler class to use for reading the bunch data. Default is NumPyHandler. See <cite>orbit.bunch_utils.file_handler</cite> for available handlers. :type Handler: FileHandler, optional.</p></td>
+<td><p>Loads the bunch attributes from a specified directory containing NumPy binary files.</p></td>
 </tr>
 </tbody>
 </table>
@@ -691,25 +692,29 @@ document.write(`
 <td><p>This routine adds id numbers to particle in a bunch.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" title="orbit.bunch_utils.BunchDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BunchDict</span></code></a></p></td>
-<td><p></p></td>
+<td><p>A dictionary containing the attributes of a PyOrbit::Bunch object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../orbit.bunch_utils.FileHandler/#orbit.bunch_utils.FileHandler" title="orbit.bunch_utils.FileHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileHandler</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../orbit.bunch_utils.SyncPartDict/#orbit.bunch_utils.SyncPartDict" title="orbit.bunch_utils.SyncPartDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SyncPartDict</span></code></a></p></td>
+<td><p>A dictionary containing the attributes of the synchronous particle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../orbit.bunch_utils.FileHandler/#orbit.bunch_utils.FileHandler" title="orbit.bunch_utils.FileHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileHandler</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Protocol for file handlers to read/write bunch data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../orbit.bunch_utils.NumPyHandler/#orbit.bunch_utils.NumPyHandler" title="orbit.bunch_utils.NumPyHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumPyHandler</span></code></a>(dir_name)</p></td>
-<td><p>Handler implementing the FileHandler protocol for NumPy binary files. This handler will create two files in the directory passed to the constructor:     - coords.npy: A memory-mapped NumPy array containing the bunch coordinates. - attributes.npz: A NumPy archive containing data related to the synchronous particle and other bunch attributes.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../orbit.bunch_utils.NumPyHandler/#orbit.bunch_utils.NumPyHandler" title="orbit.bunch_utils.NumPyHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumPyHandler</span></code></a>(dir_name)</p></td>
+<td><p>Handler implementing the FileHandler protocol for NumPy binary files.</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="class-inheritance-diagram">
 <h2>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-6a5b3f9c865462d4297a89b2994b9d05bf45808c.png" alt="Inheritance diagram of orbit.bunch_utils.particleidnumber.ParticleIdNumber, orbit.bunch_utils.serialize.BunchDict, orbit.bunch_utils.serialize.FileHandler, orbit.bunch_utils.serialize.NumPyHandler" usemap="#inheritanceec6585ccc1" class="inheritance graphviz" /></div>
-<map id="inheritanceec6585ccc1" name="inheritanceec6585ccc1">
-<area shape="rect" id="node1" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" target="_top" title="BunchDict" alt="" coords="28,161,116,189"/>
-<area shape="rect" id="node2" href="../orbit.bunch_utils.FileHandler/#orbit.bunch_utils.FileHandler" target="_top" title="Protocol for file handlers to read/write bunch data." alt="" coords="309,109,404,137"/>
-<area shape="rect" id="node5" href="../orbit.bunch_utils.NumPyHandler/#orbit.bunch_utils.NumPyHandler" target="_top" title="Handler implementing the FileHandler protocol for NumPy binary files." alt="" coords="12,57,132,85"/>
-<area shape="rect" id="node6" href="../orbit.bunch_utils.ParticleIdNumber/#orbit.bunch_utils.ParticleIdNumber" target="_top" title="This routine adds id numbers to particle in a bunch." alt="" coords="5,5,139,33"/>
+<div class="graphviz"><img src="../../_images/inheritance-9302bd073c38acad91906b2ca4d6337481103fec.png" alt="Inheritance diagram of orbit.bunch_utils.particleidnumber.ParticleIdNumber, orbit.bunch_utils.serialize.BunchDict, orbit.bunch_utils.serialize.SyncPartDict, orbit.bunch_utils.serialize.FileHandler, orbit.bunch_utils.serialize.NumPyHandler" usemap="#inheritanceee09a194e8" class="inheritance graphviz" /></div>
+<map id="inheritanceee09a194e8" name="inheritanceee09a194e8">
+<area shape="rect" id="node1" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" target="_top" title="A dictionary containing the attributes of a PyOrbit::Bunch object." alt="" coords="28,213,116,241"/>
+<area shape="rect" id="node2" href="../orbit.bunch_utils.FileHandler/#orbit.bunch_utils.FileHandler" target="_top" title="Protocol for file handlers to read/write bunch data." alt="" coords="309,161,404,189"/>
+<area shape="rect" id="node5" href="../orbit.bunch_utils.NumPyHandler/#orbit.bunch_utils.NumPyHandler" target="_top" title="Handler implementing the FileHandler protocol for NumPy binary files." alt="" coords="12,109,132,137"/>
+<area shape="rect" id="node6" href="../orbit.bunch_utils.ParticleIdNumber/#orbit.bunch_utils.ParticleIdNumber" target="_top" title="This routine adds id numbers to particle in a bunch." alt="" coords="5,57,139,85"/>
+<area shape="rect" id="node7" href="../orbit.bunch_utils.SyncPartDict/#orbit.bunch_utils.SyncPartDict" target="_top" title="A dictionary containing the attributes of the synchronous particle." alt="" coords="20,5,124,33"/>
 </map></section>
 </section>
 

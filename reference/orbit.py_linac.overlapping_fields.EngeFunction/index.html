@@ -357,6 +357,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.load_bunch/">load_bunch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.ParticleIdNumber/">ParticleIdNumber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.BunchDict/">BunchDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.SyncPartDict/">SyncPartDict</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.FileHandler/">FileHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.NumPyHandler/">NumPyHandler</a></li>
 </ul>
@@ -667,11 +668,16 @@ document.write(`
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.py_linac.overlapping_fields.</span></span><span class="sig-name descname"><span class="pre">EngeFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length_param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceptance_diameter_param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/overlapping_fields/overlapping_quad_fields_lib/#EngeFunction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.overlapping_fields.EngeFunction" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction/#orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction" title="orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.AbstractQuadFieldSourceFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.AbstractQuadFieldSourceFunction</span></code></a></p>
 <blockquote>
-<div><p>The Enge function with parameters from Berz’s paper
-M.Berz, B. Erdelyn, K.Makino</p>
+<div><p>The Enge function with parameters from Berz’s paper[1]_.</p>
 </div></blockquote>
-<p>Fringe Field Effects in Small Rings of Large Acceptance
-Phys. Rev STAB, V3, 124001(2000)</p>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets">1</span></dt>
+<dd><ol class="upperalpha simple" start="13">
+<li><p>Berz, B. Erdélyi, and K. Makino, “Fringe field effects in small rings of large acceptance,” Phys. Rev. ST Accel. Beams, vol. 3, no. 12, p. 124001, Dec. 2000, doi: 10.1103/PhysRevSTAB.3.124001.</p></li>
+</ol>
+</dd>
+</dl>
 <p class="rubric">Methods Summary</p>
 <table class="autosummary longtable table autosummary">
 <colgroup>

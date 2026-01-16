@@ -1,0 +1,9 @@
+<map id="inheritanceee09a194e8" name="inheritanceee09a194e8">
+<area shape="rect" id="node1" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" target="_top" title="A dictionary containing the attributes of a PyOrbit::Bunch object." alt="" coords="28,213,116,241"/>
+<area shape="rect" id="node2" href="../orbit.bunch_utils.FileHandler/#orbit.bunch_utils.FileHandler" target="_top" title="Protocol for file handlers to read/write bunch data." alt="" coords="309,161,404,189"/>
+<area shape="rect" id="node3" title="Base class for protocol classes." alt="" coords="187,161,261,189"/>
+<area shape="rect" id="node4" title="Abstract base class for generic types." alt="" coords="36,161,108,189"/>
+<area shape="rect" id="node5" href="../orbit.bunch_utils.NumPyHandler/#orbit.bunch_utils.NumPyHandler" target="_top" title="Handler implementing the FileHandler protocol for NumPy binary files." alt="" coords="12,109,132,137"/>
+<area shape="rect" id="node6" href="../orbit.bunch_utils.ParticleIdNumber/#orbit.bunch_utils.ParticleIdNumber" target="_top" title="This routine adds id numbers to particle in a bunch." alt="" coords="5,57,139,85"/>
+<area shape="rect" id="node7" href="../orbit.bunch_utils.SyncPartDict/#orbit.bunch_utils.SyncPartDict" target="_top" title="A dictionary containing the attributes of the synchronous particle." alt="" coords="20,5,124,33"/>
+</map>

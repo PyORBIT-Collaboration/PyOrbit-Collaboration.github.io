@@ -357,6 +357,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.load_bunch/">load_bunch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.ParticleIdNumber/">ParticleIdNumber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.BunchDict/">BunchDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.SyncPartDict/">SyncPartDict</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.FileHandler/">FileHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.NumPyHandler/">NumPyHandler</a></li>
 </ul>
@@ -665,14 +666,22 @@ document.write(`
 <dl class="py function">
 <dt class="sig sig-object py" id="orbit.utils.multiDimIntArray">
 <span class="sig-prename descclassname"><span class="pre">orbit.utils.</span></span><span class="sig-name descname"><span class="pre">multiDimIntArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">dims</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/utils/multiDimArray/#multiDimIntArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.utils.multiDimIntArray" title="Permalink to this definition">#</a></dt>
-<dd><p>Method. Creates multi-dimensional arrays with integers, such as a[i][k][j].
-Some examples of the use of this function:</p>
-<blockquote>
-<div><p>a = multiDimArray(5,10,2)
-a = multiDimArray(<a href="#id1"><span class="problematic" id="id2">*</span></a>[5,10,2])
-a[1][2][1] = 0
-By default all elements are initialized to 0.</p>
-</div></blockquote>
+<dd><p>Creates multi-dimensional arrays with integers, such as a[i][k][j].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dims</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[int]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">multiDimArray</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">multiDimArray</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># equivalent</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">0</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>

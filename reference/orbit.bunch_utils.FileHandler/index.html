@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="NumPyHandler" href="../orbit.bunch_utils.NumPyHandler/" />
-    <link rel="prev" title="BunchDict" href="../orbit.bunch_utils.BunchDict/" />
+    <link rel="prev" title="SyncPartDict" href="../orbit.bunch_utils.SyncPartDict/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -357,6 +357,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.load_bunch/">load_bunch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.ParticleIdNumber/">ParticleIdNumber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.BunchDict/">BunchDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.SyncPartDict/">SyncPartDict</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">FileHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.NumPyHandler/">NumPyHandler</a></li>
 </ul>
@@ -667,32 +668,6 @@ document.write(`
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.bunch_utils.</span></span><span class="sig-name descname"><span class="pre">FileHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/bunch_utils/serialize/#FileHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.bunch_utils.FileHandler" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
 <p>Protocol for file handlers to read/write bunch data.</p>
-<p class="rubric">Methods Summary</p>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.bunch_utils.FileHandler.read" title="orbit.bunch_utils.FileHandler.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>()</p></td>
-<td><p><dl class="field-list simple">
-<dt class="field-odd">rtype</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" title="orbit.bunch_utils.serialize.BunchDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">BunchDict</span></code></a></p>
-</dd>
-</dl>
-</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.bunch_utils.FileHandler.write" title="orbit.bunch_utils.FileHandler.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code></a>(bunch)</p></td>
-<td><p><dl class="field-list simple">
-<dt class="field-odd">rtype</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</p></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods Documentation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -706,7 +681,45 @@ document.write(`
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.bunch_utils.FileHandler.read">
-<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/bunch_utils/serialize/#FileHandler.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.bunch_utils.FileHandler.read" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BunchDict:</span></span></span><a class="reference internal" href="../../_modules/orbit/bunch_utils/serialize/#FileHandler.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.bunch_utils.FileHandler.read" title="Permalink to this definition">#</a></dt>
+<dd><p>Reads the bunch data from the specified directory and returns it as a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.bunch_utils.FileHandler.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bunch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" title="orbit.bunch_utils.BunchDict"><span class="pre">BunchDict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None:</span></span></span><a class="reference internal" href="../../_modules/orbit/bunch_utils/serialize/#FileHandler.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.bunch_utils.FileHandler.write" title="Permalink to this definition">#</a></dt>
+<dd><p>Writes the bunch data to the specified directory.</p>
+</dd></dl>
+
+<p class="rubric">Methods Summary</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id0" title="orbit.bunch_utils.FileHandler.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" title="orbit.bunch_utils.serialize.BunchDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">BunchDict</span></code></a></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id1" title="orbit.bunch_utils.FileHandler.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code></a>(bunch)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/bunch_utils/serialize/#FileHandler.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../orbit.bunch_utils.BunchDict/#orbit.bunch_utils.BunchDict" title="orbit.bunch_utils.serialize.BunchDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">BunchDict</span></code></a></p>
@@ -715,8 +728,8 @@ document.write(`
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="orbit.bunch_utils.FileHandler.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bunch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/bunch_utils/serialize/#FileHandler.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.bunch_utils.FileHandler.write" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bunch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/bunch_utils/serialize/#FileHandler.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
@@ -743,12 +756,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../orbit.bunch_utils.BunchDict/"
+       href="../orbit.bunch_utils.SyncPartDict/"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">BunchDict</p>
+        <p class="prev-next-title">SyncPartDict</p>
       </div>
     </a>
     <a class="right-next"

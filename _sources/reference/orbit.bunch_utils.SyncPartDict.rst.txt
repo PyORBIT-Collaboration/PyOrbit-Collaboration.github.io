@@ -1,0 +1,7 @@
+SyncPartDict
+============
+
+.. currentmodule:: orbit.bunch_utils
+
+.. autoclass:: SyncPartDict
+   :show-inheritance:

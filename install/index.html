@@ -369,7 +369,41 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="installation-guide">
-<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">#</a></h1>
+<h1><a class="toc-backref" href="#id3">Installation Guide</a><a class="headerlink" href="#installation-guide" title="Permalink to this headline">#</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#installation-guide" id="id3">Installation Guide</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installation-from-source" id="id4">Installation from source</a></p>
+<ul>
+<li><p><a class="reference internal" href="#pip-setup" id="id5">Pip Setup</a></p></li>
+<li><p><a class="reference internal" href="#conda-setup" id="id6">Conda Setup</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#build" id="id7">Build</a></p></li>
+<li><p><a class="reference internal" href="#run-full-sns-linac-example" id="id8">4. Run full SNS linac example</a></p></li>
+<li><p><a class="reference internal" href="#mpi-consideration" id="id9">MPI consideration</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#meson-primer" id="id10">Meson Primer</a></p>
+<ul>
+<li><p><a class="reference internal" href="#main-modifications-in-c-code" id="id11">Main modifications in C++ code</a></p></li>
+<li><p><a class="reference internal" href="#setup" id="id12">Setup</a></p>
+<ul>
+<li><p><a class="reference internal" href="#required-software" id="id13">0. Required software</a></p></li>
+<li><p><a class="reference internal" href="#preparing-environment" id="id14">1. Preparing environment</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id2" id="id15">2. Build</a></p>
+<ul>
+<li><p><a class="reference internal" href="#run-examples" id="id16">3. Run examples</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <p>This guide provides instructions how to install PyORBIT code. <br>
 This guide doesn’t cover MPI enabled installation. <br>
 The following configurations are included in CI testing, versions will change as the runner images progress.</p>
@@ -415,13 +449,13 @@ The following configurations are included in CI testing, versions will change as
 </tbody>
 </table>
 <section id="installation-from-source">
-<h2>Installation from source<a class="headerlink" href="#installation-from-source" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4">Installation from source</a><a class="headerlink" href="#installation-from-source" title="Permalink to this headline">#</a></h2>
 <p>First step is to clone the source code:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PyORBIT-Collaboration/PyORBIT3.git
 </pre></div>
 </div>
 <section id="pip-setup">
-<h3>Pip Setup<a class="headerlink" href="#pip-setup" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id5">Pip Setup</a><a class="headerlink" href="#pip-setup" title="Permalink to this headline">#</a></h3>
 <p><strong>PIP</strong> based setup is more involved, we recommend using <strong>conda</strong> if unsure.</p>
 <section id="prepare-os">
 <h4>Prepare OS<a class="headerlink" href="#prepare-os" title="Permalink to this headline">#</a></h4>
@@ -462,7 +496,7 @@ Create virtual environment.</p>
 </section>
 </section>
 <section id="conda-setup">
-<h3>Conda Setup<a class="headerlink" href="#conda-setup" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id6">Conda Setup</a><a class="headerlink" href="#conda-setup" title="Permalink to this headline">#</a></h3>
 <p>First of all make sure you have conda installed and development packages.<br>
 Development packages for Ubuntu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">update</span> <span class="o">-</span><span class="n">y</span>
@@ -479,9 +513,9 @@ pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </s
 </section>
 </section>
 <section id="build">
-<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id7">Build</a><a class="headerlink" href="#build" title="Permalink to this headline">#</a></h2>
 <p>If you plan to modify PyORBIT’s code, install it in editable mode.
-You will NOT need to rebuild after modifications to the code. <span class="xref myst">Meson</span> will rebuild as necessary on import.</p>
+You will NOT need to rebuild after modifications to the code. <a class="reference internal" href="#meson-primer"><span class="std std-ref">Meson</span></a> will rebuild as necessary on import.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="n">isolation</span> <span class="o">--</span><span class="n">editable</span> <span class="o">.</span>
 </pre></div>
 </div>
@@ -491,7 +525,7 @@ You will NOT need to rebuild after modifications to the code. <span class="xref 
 </div>
 </section>
 <section id="run-full-sns-linac-example">
-<h2>4. Run full SNS linac example<a class="headerlink" href="#run-full-sns-linac-example" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id8">4. Run full SNS linac example</a><a class="headerlink" href="#run-full-sns-linac-example" title="Permalink to this headline">#</a></h2>
 <p>Navigate to your <strong>examples</strong> directory and launch tracking of SNS linac.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>examples/SNS_Linac/pyorbit3_linac_model/
 python<span class="w"> </span>pyorbit3_sns_linac_mebt_hebt2.py
@@ -499,7 +533,7 @@ python<span class="w"> </span>pyorbit3_sns_linac_mebt_hebt2.py
 </div>
 </section>
 <section id="mpi-consideration">
-<h2>MPI consideration<a class="headerlink" href="#mpi-consideration" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id9">MPI consideration</a><a class="headerlink" href="#mpi-consideration" title="Permalink to this headline">#</a></h2>
 <p>By default, the build system will try to find MPI and compile against it. You can control which MPI to use with command line option when building.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--config-settings<span class="o">=</span>setup-args<span class="o">=</span><span class="s2">&quot;-DUSE_MPI=none&quot;</span><span class="w"> </span>.
 </pre></div>
@@ -530,6 +564,75 @@ python<span class="w"> </span>pyorbit3_sns_linac_mebt_hebt2.py
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span>/opt/lib/pkgconfig<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--verbose<span class="w"> </span>.
 </pre></div>
 </div>
+</section>
+</section>
+<section id="meson-primer">
+<span id="id1"></span><h1><a class="toc-backref" href="#id10">Meson Primer</a><a class="headerlink" href="#meson-primer" title="Permalink to this headline">#</a></h1>
+<p>This uses meson-python to build orbit package.</p>
+<p>There is no <strong>setup.py</strong> file, instead we have <strong>meson.build</strong>.
+<strong>pyproject.toml</strong> is changed to use meson.</p>
+<p>This is experimental setup that is work in progress.
+The pure python part is built with hierarchical <strong>meson.build</strong> files in <strong>py/</strong>.
+The C++ setup is combined in one file <strong>src/meson.build</strong>.</p>
+<section id="main-modifications-in-c-code">
+<h2><a class="toc-backref" href="#id11">Main modifications in C++ code</a><a class="headerlink" href="#main-modifications-in-c-code" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>src/libmain/</strong> is not used, still there for reference but will be gone soon.</p></li>
+<li><p><strong>src/core/</strong> contains one C++ file per module inside <em>orbit.core</em></p></li>
+<li><p>The files <strong>wrap_XXXX.cc</strong> were modified to correctly reference modules</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// line</span>
+<span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyImport_ImportModule</span><span class="p">(</span><span class="s">&quot;_bunch&quot;</span><span class="p">);</span>
+<span class="c1">// replaced with</span>
+<span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyImport_ImportModule</span><span class="p">(</span><span class="s">&quot;orbit.core.bunch&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="setup">
+<h2><a class="toc-backref" href="#id12">Setup</a><a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
+<section id="required-software">
+<h3><a class="toc-backref" href="#id13">0. Required software</a><a class="headerlink" href="#required-software" title="Permalink to this headline">#</a></h3>
+<p>One needs compilers, python and libfftw (and potentially mpi).
+See <a class="reference external" href="https://github.com/PyORBIT-Collaboration/PyORBIT3">PyORBIT3</a> for external
+requirements.</p>
+</section>
+<section id="preparing-environment">
+<h3><a class="toc-backref" href="#id14">1. Preparing environment</a><a class="headerlink" href="#preparing-environment" title="Permalink to this headline">#</a></h3>
+<p>First step is to clone the source code from meson branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>meson<span class="w"> </span>https://github.com/azukov/PyORBIT3.git
+</pre></div>
+</div>
+<p>Initialize new virtual environment and install packages</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">.</span><span class="n">mes</span>
+<span class="n">source</span> <span class="o">.</span><span class="n">mes</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pip</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span>
+</pre></div>
+</div>
+<p>Edit <strong>meson.build</strong> and set correct paths/flags for python/fftw3 headers and libraries</p>
+</section>
+</section>
+<section id="id2">
+<h2><a class="toc-backref" href="#id15">2. Build</a><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>To install orbit package in development mode run following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-build-isolation<span class="w"> </span>--editable<span class="w"> </span>.
+</pre></div>
+</div>
+<p>No rebuild is necessary, just edit <strong>py/</strong> or <strong>src/</strong> and meson will rebuild as needed when import happens.</p>
+<section id="run-examples">
+<h3><a class="toc-backref" href="#id16">3. Run examples</a><a class="headerlink" href="#run-examples" title="Permalink to this headline">#</a></h3>
+<p>Special examples used for meson testing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>examples/meson
+python<span class="w"> </span>imports_test.py
+python<span class="w"> </span>uspas_test.py
+</pre></div>
+</div>
+<p>SNS linac example</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>examples/SNS_Linac/pyorbit3_linac_model/
+python<span class="w"> </span>pyorbit3_sns_linac_mebt_hebt2.py
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -580,6 +683,7 @@ python<span class="w"> </span>pyorbit3_sns_linac_mebt_hebt2.py
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Installation Guide</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-source">Installation from source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-setup">Pip Setup</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-os">Prepare OS</a></li>
@@ -593,6 +697,22 @@ python<span class="w"> </span>pyorbit3_sns_linac_mebt_hebt2.py
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-full-sns-linac-example">4. Run full SNS linac example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mpi-consideration">MPI consideration</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#meson-primer">Meson Primer</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-modifications-in-c-code">Main modifications in C++ code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-software">0. Required software</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-environment">1. Preparing environment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2. Build</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-examples">3. Run examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
   <div class="sidebar-secondary-item">
