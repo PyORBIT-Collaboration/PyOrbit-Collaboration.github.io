@@ -677,14 +677,20 @@ user defined nodes etc.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.getPosition" title="orbit.py_linac.lattice.BaseLinacNode.getPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPosition</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.getDataAdaptor" title="orbit.py_linac.lattice.BaseLinacNode.getDataAdaptor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDataAdaptor</span></code></a>()</p></td>
+<td><p>Returns the XML data adaptor of this node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.getPosition" title="orbit.py_linac.lattice.BaseLinacNode.getPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPosition</span></code></a>()</p></td>
 <td><p>Returns the position of the node inside the sequence.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.getSequence" title="orbit.py_linac.lattice.BaseLinacNode.getSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSequence</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.getSequence" title="orbit.py_linac.lattice.BaseLinacNode.getSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSequence</span></code></a>()</p></td>
 <td><p>Returns the seqence.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.isRFGap" title="orbit.py_linac.lattice.BaseLinacNode.isRFGap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRFGap</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.isRFGap" title="orbit.py_linac.lattice.BaseLinacNode.isRFGap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRFGap</span></code></a>()</p></td>
 <td><p>Returns False.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.setDataAdaptor" title="orbit.py_linac.lattice.BaseLinacNode.setDataAdaptor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setDataAdaptor</span></code></a>(data_adaptor)</p></td>
+<td><p>Sets the XML data adaptor of this node.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.BaseLinacNode.setLinacTracker" title="orbit.py_linac.lattice.BaseLinacNode.setLinacTracker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLinacTracker</span></code></a>([switch])</p></td>
 <td><p>This method will switch tracker module to the linac specific traker by default</p></td>
@@ -705,6 +711,12 @@ user defined nodes etc.</p>
 </table>
 <p class="rubric">Methods Documentation</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.BaseLinacNode.getDataAdaptor">
+<span class="sig-name descname"><span class="pre">getDataAdaptor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacAccNodes/#BaseLinacNode.getDataAdaptor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.BaseLinacNode.getDataAdaptor" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the XML data adaptor of this node.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="orbit.py_linac.lattice.BaseLinacNode.getPosition">
 <span class="sig-name descname"><span class="pre">getPosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacAccNodes/#BaseLinacNode.getPosition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.BaseLinacNode.getPosition" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the position of the node inside the sequence.
@@ -722,6 +734,12 @@ at the center.</p>
 <dt class="sig sig-object py" id="orbit.py_linac.lattice.BaseLinacNode.isRFGap">
 <span class="sig-name descname"><span class="pre">isRFGap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacAccNodes/#BaseLinacNode.isRFGap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.BaseLinacNode.isRFGap" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns False. The RF Gap node returns True.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.BaseLinacNode.setDataAdaptor">
+<span class="sig-name descname"><span class="pre">setDataAdaptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_adaptor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacAccNodes/#BaseLinacNode.setDataAdaptor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.BaseLinacNode.setDataAdaptor" title="Permalink to this definition">#</a></dt>
+<dd><p>Sets the XML data adaptor of this node.</p>
 </dd></dl>
 
 <dl class="py method">

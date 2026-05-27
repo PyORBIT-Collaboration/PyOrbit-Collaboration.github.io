@@ -10,9 +10,11 @@ BaseLinacNode
 
    .. autosummary::
 
+      ~BaseLinacNode.getDataAdaptor
       ~BaseLinacNode.getPosition
       ~BaseLinacNode.getSequence
       ~BaseLinacNode.isRFGap
+      ~BaseLinacNode.setDataAdaptor
       ~BaseLinacNode.setLinacTracker
       ~BaseLinacNode.setPosition
       ~BaseLinacNode.setSequence
@@ -21,9 +23,11 @@ BaseLinacNode
 
    .. rubric:: Methods Documentation
 
+   .. automethod:: getDataAdaptor
    .. automethod:: getPosition
    .. automethod:: getSequence
    .. automethod:: isRFGap
+   .. automethod:: setDataAdaptor
    .. automethod:: setLinacTracker
    .. automethod:: setPosition
    .. automethod:: setSequence

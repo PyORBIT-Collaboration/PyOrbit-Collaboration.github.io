@@ -668,6 +668,9 @@ document.write(`
                         <span class="n">accNode</span> <span class="o">=</span> <span class="n">MarkerLinacNode</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">stringValue</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
                     <span class="n">accNode</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="n">node_pos</span><span class="p">)</span>
                     <span class="n">thinNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accNode</span><span class="p">)</span>
+                <span class="c1">#--------------------------------------</span>
+                <span class="c1">#---- sets up copy of XML data adaptor of this node</span>
+                <span class="n">accNode</span><span class="o">.</span><span class="n">setDataAdaptor</span><span class="p">(</span><span class="n">node_da</span><span class="o">.</span><span class="n">getDeepCopy</span><span class="p">())</span>
             <span class="c1"># ----- assign the thin nodes that are inside the thick nodes</span>
             <span class="n">unusedThinNodes</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="k">for</span> <span class="n">thinNode</span> <span class="ow">in</span> <span class="n">thinNodes</span><span class="p">:</span>

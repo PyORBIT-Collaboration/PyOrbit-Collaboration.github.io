@@ -595,7 +595,10 @@ document.write(`
         <span class="c1"># -----------------------------</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
             <span class="n">trMatrxGenNode</span> <span class="o">=</span> <span class="n">LinacTrMatrixGenNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:trMatrx&quot;</span><span class="p">)</span>
-            <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">trMatrxGenNode</span><span class="p">,</span> <span class="n">place</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">place</span> <span class="o">==</span> <span class="n">MarkerLinacNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">):</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">trMatrxGenNode</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="n">place_in_part</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BEFORE</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">trMatrxGenNode</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="n">place_in_part</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">AFTER</span><span class="p">)</span>
         <span class="c1"># ----- set up the position of the TrMatrix nodes</span>
         <span class="n">actions</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
 
