@@ -75,9 +75,9 @@ Functions
 
 - :ref:`exhale_function_namespaceOrbitUtils_1ae36314bfa71f499018ed7cb956b3e125`
 
-- :ref:`exhale_function_namespaceOrbitUtils_1a3932d3e12aabfb8fe18e24ded18be8ff`
-
 - :ref:`exhale_function_namespaceOrbitUtils_1a998732605bed18a2bb8d14df8a458de3`
+
+- :ref:`exhale_function_namespaceOrbitUtils_1a3932d3e12aabfb8fe18e24ded18be8ff`
 
 
 Variables
