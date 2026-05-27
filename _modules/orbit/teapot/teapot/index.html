@@ -378,6 +378,7 @@ document.write(`
 <span class="sd">- Kicker</span>
 <span class="sd">- RingRF</span>
 <span class="sd">- Monitor</span>
+<span class="sd">- ContinuousLinearFocusing</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
@@ -1869,6 +1870,98 @@ document.write(`
 <span class="sd">        field will be used in calculation.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__usage</span></div></div>
+
+
+<div class="viewcode-block" id="ContinuousLinearFocusingTEAPOT"><a class="viewcode-back" href="../../../../reference/orbit.teapot.ContinuousLinearFocusingTEAPOT/#orbit.teapot.ContinuousLinearFocusingTEAPOT">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ContinuousLinearFocusingTEAPOT</span><span class="p">(</span><span class="n">NodeTEAPOT</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;CLF no name&quot;</span><span class="p">,</span>
+        <span class="n">length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">nparts</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">kq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">poles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">kls</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">skews</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">waveform</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">NodeTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;kq&quot;</span><span class="p">,</span> <span class="n">kq</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">,</span> <span class="n">poles</span> <span class="k">if</span> <span class="n">poles</span> <span class="k">else</span> <span class="p">[])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">,</span> <span class="n">kls</span> <span class="k">if</span> <span class="n">kls</span> <span class="k">else</span> <span class="p">[])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">,</span> <span class="n">skews</span> <span class="k">if</span> <span class="n">skews</span> <span class="k">else</span> <span class="p">[])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="n">nparts</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waveform</span> <span class="o">=</span> <span class="n">waveform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">getNodeTiltIN</span><span class="p">()</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;CLF tilt in&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">getNodeTiltOUT</span><span class="p">()</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;CLF tilt out&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;continuous linear focusing&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ContinuousLinearFocusingTEAPOT.initialize"><a class="viewcode-back" href="../../../../reference/orbit.teapot.ContinuousLinearFocusingTEAPOT/#orbit.teapot.ContinuousLinearFocusingTEAPOT.initialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nParts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">nParts</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Quad Combined Function TEAPOT class instance should have more than 2 parts!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Method initialize():&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Name of element=&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Type of element=&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;nParts =&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="n">lengthIN</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="n">lengthOUT</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="n">lengthStep</span> <span class="o">=</span> <span class="n">lengthIN</span> <span class="o">+</span> <span class="n">lengthOUT</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">lengthIN</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">lengthOUT</span><span class="p">,</span> <span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">lengthStep</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContinuousLinearFocusingTEAPOT.track"><a class="viewcode-back" href="../../../../reference/orbit.teapot.ContinuousLinearFocusingTEAPOT/#orbit.teapot.ContinuousLinearFocusingTEAPOT.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+        <span class="n">nParts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">()</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+
+        <span class="n">strength</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">waveform</span><span class="p">:</span>
+            <span class="n">strength</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">waveform</span><span class="o">.</span><span class="n">getStrength</span><span class="p">()</span>
+
+        <span class="n">kq</span> <span class="o">=</span> <span class="n">strength</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;kq&quot;</span><span class="p">)</span>
+        <span class="n">poleArr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;poles&quot;</span><span class="p">)</span>
+        <span class="n">klArr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;kls&quot;</span><span class="p">)</span>
+        <span class="n">skewArr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;skews&quot;</span><span class="p">)</span>
+
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+
+        <span class="n">useCharge</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="s2">&quot;useCharge&quot;</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
+            <span class="n">useCharge</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;useCharge&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">TPB</span><span class="o">.</span><span class="n">continuousLinear</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">kq</span><span class="p">,</span> <span class="n">useCharge</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poleArr</span><span class="p">)):</span>
+                <span class="n">pole</span> <span class="o">=</span> <span class="n">poleArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">kl</span> <span class="o">=</span> <span class="n">strength</span> <span class="o">*</span> <span class="n">klArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">skew</span> <span class="o">=</span> <span class="n">skewArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">TPB</span><span class="o">.</span><span class="n">multp</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">pole</span><span class="p">,</span> <span class="n">kl</span><span class="p">,</span> <span class="n">skew</span><span class="p">,</span> <span class="n">useCharge</span><span class="p">)</span>
+            <span class="n">TPB</span><span class="o">.</span><span class="n">continuousLinear</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">kq</span><span class="p">,</span> <span class="n">useCharge</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poleArr</span><span class="p">)):</span>
+                <span class="n">pole</span> <span class="o">=</span> <span class="n">poleArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">kl</span> <span class="o">=</span> <span class="n">strength</span> <span class="o">*</span> <span class="n">klArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">skew</span> <span class="o">=</span> <span class="n">skewArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">TPB</span><span class="o">.</span><span class="n">multp</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">pole</span><span class="p">,</span> <span class="n">kl</span><span class="p">,</span> <span class="n">skew</span><span class="p">,</span> <span class="n">useCharge</span><span class="p">)</span>
+            <span class="n">TPB</span><span class="o">.</span><span class="n">continuousLinear</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">kq</span><span class="p">,</span> <span class="n">useCharge</span><span class="p">)</span>
+        <span class="k">return</span></div>
+
+<div class="viewcode-block" id="ContinuousLinearFocusingTEAPOT.setWaveform"><a class="viewcode-back" href="../../../../reference/orbit.teapot.ContinuousLinearFocusingTEAPOT/#orbit.teapot.ContinuousLinearFocusingTEAPOT.setWaveform">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setWaveform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">waveform</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waveform</span> <span class="o">=</span> <span class="n">waveform</span></div></div>
 </pre></div>
 
                 </article>

@@ -68,6 +68,8 @@ Functions
 
 - :ref:`exhale_function_teapotbase_8cc_1a663553aef54c825752910f35d740fb5c`
 
+- :ref:`exhale_function_teapotbase_8cc_1a118992ec941254dfb0819b3eeba8ffc1`
+
 - :ref:`exhale_function_teapotbase_8cc_1a072b36a64d9eefa246e2283fb1ba839e`
 
 - :ref:`exhale_function_teapotbase_8cc_1ae142ba1424b5fe090d4526b868da176d`

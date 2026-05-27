@@ -1,0 +1,21 @@
+ContinuousLinearFocusingTEAPOT
+==============================
+
+.. currentmodule:: orbit.teapot
+
+.. autoclass:: ContinuousLinearFocusingTEAPOT
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ContinuousLinearFocusingTEAPOT.initialize
+      ~ContinuousLinearFocusingTEAPOT.setWaveform
+      ~ContinuousLinearFocusingTEAPOT.track
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: initialize
+   .. automethod:: setWaveform
+   .. automethod:: track
