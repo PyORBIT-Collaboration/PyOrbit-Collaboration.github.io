@@ -467,7 +467,7 @@ document.write(`
 
 
 <div class="viewcode-block" id="addErrorNodeAsChild_I"><a class="viewcode-back" href="../../../../reference/orbit.errors.addErrorNodeAsChild_I/#orbit.errors.addErrorNodeAsChild_I">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">addErrorNodeAsChild_I</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">AccNode</span><span class="p">,</span> <span class="n">Error_Node</span><span class="p">):</span>
-    <span class="n">AccNode</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">Error_Node</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
+    <span class="n">AccNode</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Error_Node</span><span class="p">)</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span></div>
 
 
