@@ -44,6 +44,12 @@ Program Listing for File LSpaceChargeCalc.hh
    
        virtual ~LSpaceChargeCalc();
    
+       void setNumModes(int n);
+   
+       void setUseGrad(int setting);
+   
+       void setSmoothGrad(int setting);
+   
        void trackBunch(Bunch* bunch);
    
        void assignImpedanceValue(int n, double real, double imag);
@@ -57,6 +63,9 @@ Program Listing for File LSpaceChargeCalc.hh
        int nBins;
        int nMacrosMin;
        int useSpaceCharge;
+       int nModes;
+       int useGrad;
+       int smooth;
    
    //protected:
        Grid1D* zGrid;

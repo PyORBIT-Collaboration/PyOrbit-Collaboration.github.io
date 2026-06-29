@@ -414,6 +414,12 @@ document.write(`
 
 <span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">LSpaceChargeCalc</span><span class="p">();</span>
 
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNumModes</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUseGrad</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">setting</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSmoothGrad</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">setting</span><span class="p">);</span>
+
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">);</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">assignImpedanceValue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">imag</span><span class="p">);</span>
@@ -427,6 +433,9 @@ document.write(`
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nBins</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nMacrosMin</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">useSpaceCharge</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nModes</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">useGrad</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">smooth</span><span class="p">;</span>
 
 <span class="c1">//protected:</span>
 <span class="w">    </span><span class="n">Grid1D</span><span class="o">*</span><span class="w"> </span><span class="n">zGrid</span><span class="p">;</span>
