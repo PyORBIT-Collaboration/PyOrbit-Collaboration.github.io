@@ -390,7 +390,8 @@ document.write(`
 <span class="cp">#endif</span>
 
 <span class="cp">#if USE_MPI &gt; 0</span>
-<span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mpi.h&quot;</span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mpi.h&quot;</span>
+<span class="w">  </span><span class="cp">#define ORBIT_MPI_IN_PLACE MPI_IN_PLACE</span>
 <span class="cp">#else</span>
 <span class="c1">//---------------------------------------------------------------</span>
 <span class="c1">//START the case when USE_MPI is not defined.</span>
@@ -474,6 +475,9 @@ document.write(`
 <span class="w"> </span><span class="cp">#define MPI_SUCCESS              0</span>
 <span class="w"> </span><span class="cp">#define MPI_ANY_SOURCE         (-2)</span>
 <span class="w"> </span><span class="cp">#define MPI_ANY_TAG            (-1)</span>
+
+<span class="w"> </span><span class="cm">/* MPI in-place operations */</span>
+<span class="w"> </span><span class="cp">#define ORBIT_MPI_IN_PLACE ((void*)1)</span>
 
 <span class="cp">#endif</span>
 <span class="c1">//-------------------------------------------------------------</span>
