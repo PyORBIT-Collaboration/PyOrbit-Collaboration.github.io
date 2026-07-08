@@ -411,42 +411,14 @@ document.write(`
 <span class="cp">#endif</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">ORBIT_MPI_Init</span><span class="p">(){</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="cp">#if USE_MPI &gt; 0</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="w">  </span><span class="c1">// Getting arguments from sys.argv</span>
-<span class="w">  </span><span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">sys_module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyImport_ImportModule</span><span class="p">(</span><span class="s">&quot;sys&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">argv_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyObject_GetAttrString</span><span class="p">(</span><span class="n">sys_module</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;argv&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">// Check if argv_list is a list</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PyList_Check</span><span class="p">(</span><span class="n">argv_list</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Access individual command-line arguments</span>
-<span class="w">    </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyList_Size</span><span class="p">(</span><span class="n">argv_list</span><span class="p">);</span>
-<span class="w">    </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">**</span><span class="p">)</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Py_ssize_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyList_GetItem</span><span class="p">(</span><span class="n">argv_list</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">PyUnicode_Check</span><span class="p">(</span><span class="n">item</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">ch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">PyUnicode_AsUTF8</span><span class="p">(</span><span class="n">item</span><span class="p">));</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="c1">// Release references</span>
-<span class="w">  </span><span class="n">Py_XDECREF</span><span class="p">(</span><span class="n">argv_list</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Py_XDECREF</span><span class="p">(</span><span class="n">sys_module</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">len</span><span class="p">,</span><span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">free</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
-<span class="w">  </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Ignoring result; if it fails, the proc is doomed anyway.</span>
+<span class="w">  </span><span class="n">MPI_Init</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Registering MPI finalize method at cleanup stage</span>
 <span class="w">  </span><span class="n">Py_AtExit</span><span class="p">(</span><span class="n">ORBIT_MPI_Finalize</span><span class="p">);</span>
-<span class="cp">#else</span>
-<span class="w">  </span><span class="n">res</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
 <span class="cp">#endif</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">ORBIT_MPI_Initialized</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">init</span><span class="p">){</span>
@@ -853,7 +825,7 @@ document.write(`
 <span class="kt">int</span><span class="w"> </span><span class="nf">ORBIT_MPI_Graph_get</span><span class="p">(</span><span class="n">MPI_Comm</span><span class="w"> </span><span class="n">comm</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxindex</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxedges</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">edges</span><span class="p">){</span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="cp">#if USE_MPI &gt; 0</span>
-<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ORBIT_MPI_Graph_get</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span><span class="w"> </span><span class="n">maxindex</span><span class="p">,</span><span class="w"> </span><span class="n">maxedges</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">edges</span><span class="p">);</span>
+<span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPI_Graph_get</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span><span class="w"> </span><span class="n">maxindex</span><span class="p">,</span><span class="w"> </span><span class="n">maxedges</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">edges</span><span class="p">);</span>
 <span class="cp">#else</span>
 <span class="w">  </span><span class="n">res</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
 <span class="cp">#endif</span>
