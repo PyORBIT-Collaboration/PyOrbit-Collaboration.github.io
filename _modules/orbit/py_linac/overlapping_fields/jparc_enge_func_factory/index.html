@@ -369,7 +369,7 @@ document.write(`
 
 <span class="c1"># --------------------------------------------------------------</span>
 <span class="c1"># This is a Enge Function Factory specific for the J-PARC. Some</span>
-<span class="c1"># Enge&#39;s function parameters are defined by the aperture and length,</span>
+<span class="c1"># Enge's function parameters are defined by the aperture and length,</span>
 <span class="c1"># and others are defined by the field distribution formula from Trace3D</span>
 <span class="c1"># documentation.</span>
 <span class="c1"># --------------------------------------------------------------</span>
@@ -384,34 +384,34 @@ document.write(`
 
 
 <div class="viewcode-block" id="JPARC_EngeFunctionFactory"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.JPARC_EngeFunctionFactory/#orbit.py_linac.overlapping_fields.JPARC_EngeFunctionFactory">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">JPARC_EngeFunctionFactory</span><span class="p">(</span><span class="n">quad</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    It generates the Enge&#39;s Function for J-PARC quads.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    It generates the Enge's Function for J-PARC quads.</span>
+<span class="sd">    """</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
     <span class="n">length_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
     <span class="c1"># ---- general PMQ function described in Trace3D documentation</span>
-    <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;radIn&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;radOut&quot;</span><span class="p">):</span>
-        <span class="n">radIn</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;radIn&quot;</span><span class="p">)</span>
-        <span class="n">radOut</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;radOut&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">"radIn"</span><span class="p">)</span> <span class="ow">and</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">"radOut"</span><span class="p">):</span>
+        <span class="n">radIn</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"radIn"</span><span class="p">)</span>
+        <span class="n">radOut</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"radOut"</span><span class="p">)</span>
         <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.01</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;LI_DTL1:DTQ01&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"LI_DTL1:DTQ01"</span><span class="p">:</span>
             <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.02</span>
         <span class="n">func</span> <span class="o">=</span> <span class="n">PMQ_Trace3D_Function</span><span class="p">(</span><span class="n">length_param</span><span class="p">,</span> <span class="n">radIn</span><span class="p">,</span> <span class="n">radOut</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">func</span>
-    <span class="c1"># ----- general Enge&#39;s Function</span>
-    <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">):</span>
-        <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span>
+    <span class="c1"># ----- general Enge's Function</span>
+    <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">"aperture"</span><span class="p">):</span>
+        <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"aperture"</span><span class="p">)</span>
         <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.01</span>
         <span class="n">func</span> <span class="o">=</span> <span class="n">EngeFunction</span><span class="p">(</span><span class="n">length_param</span><span class="p">,</span> <span class="n">acceptance_diameter_param</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">func</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;SNS_EngeFunctionFactory Python function. &quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"SNS_EngeFunctionFactory Python function. "</span>
         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Cannot create the EngeFunction for the quad!&quot;</span>
+        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Cannot create the EngeFunction for the quad!"</span>
         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;quad name = &quot;</span> <span class="o">+</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"quad name = "</span> <span class="o">+</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;It does not have the aperture parameter!&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"It does not have the aperture parameter!"</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
         <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">None</span></div>

@@ -392,7 +392,7 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.orbit_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">Function</span>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AxisField_and_Quad_RF_Gap</span><span class="p">(</span><span class="n">AbstractRF_Gap</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The class represents the part of the RF gap. It uses the part (longitudinally)</span>
 <span class="sd">    of the RF axis field that can be overlapped by quadrupole magnet field.</span>
 <span class="sd">    It is almost copy of the AxisFieldRF_Gap class, but it describes the part of</span>
@@ -404,28 +404,28 @@ document.write(`
 
 <span class="sd">    User have to provide the instance of the AxisFieldRF_Gap at the constructor.</span>
 <span class="sd">    The instance of this class has the axis field for the whole gap.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis_field_rf_gap</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor for the axis field RF gap.</span>
 <span class="sd">        The axis_field_rf_gap is the instance of the AbstractRF_Gap class.</span>
 <span class="sd">        E0L parameter is in GeV. Phases are in radians.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">AbstractRF_Gap</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;GAP&amp;Q&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"GAP&amp;Q"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span> <span class="o">=</span> <span class="n">axis_field_rf_gap</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;E0TL&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;E0TL&quot;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;gap_phase&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;gap_phase&quot;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;rfCavity&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;rfCavity&quot;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;EzFile&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;EzFile&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"E0TL"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"E0TL"</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"mode"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"mode"</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"gap_phase"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"gap_phase"</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"rfCavity"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"rfCavity"</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"E0L"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"E0L"</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"EzFile"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"EzFile"</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span>
         <span class="c1"># ---- aperture parameters</span>
-        <span class="k">if</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">,</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">,</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aprt_type&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">"aperture"</span><span class="p">)</span> <span class="ow">and</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">"aprt_type"</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"aperture"</span><span class="p">,</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"aperture"</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"aprt_type"</span><span class="p">,</span> <span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"aprt_type"</span><span class="p">))</span>
         <span class="c1"># ---- axis field related parameters</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span> <span class="o">=</span> <span class="mf">0.01</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">z_min</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -446,10 +446,10 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span> <span class="o">=</span> <span class="kc">False</span>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.setLinacTracker"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.setLinacTracker">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method will switch RF gap model to slower one where transformations</span>
 <span class="sd">        coefficients are calculated for each particle in the bunch.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="n">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="p">)</span>
         <span class="n">AbstractRF_Gap</span><span class="o">.</span><span class="n">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">switch</span><span class="p">:</span>
@@ -458,35 +458,35 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span> <span class="o">=</span> <span class="n">RfGapThreePointTTF</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.setUseLongitudinalFieldOfQuad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.setUseLongitudinalFieldOfQuad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setUseLongitudinalFieldOfQuad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">use</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        If we going to use the longitudinal magnetic field component of quad</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">useLongField</span> <span class="o">=</span> <span class="n">use</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getUseLongitudinalFieldOfQuad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getUseLongitudinalFieldOfQuad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getUseLongitudinalFieldOfQuad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        If we going to use the longitudinal magnetic field component of quad</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">useLongField</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getAxisFieldRF_Gap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getAxisFieldRF_Gap">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getAxisFieldRF_Gap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It returns the  AxisFieldRF_Gap instance for this gap.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getBaseRF_Gap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getBaseRF_Gap">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBaseRF_Gap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It returns the BaseRF_Gap instance for this gap.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">baserf_gap</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.reverseOrderNodeSpecific"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.reverseOrderNodeSpecific">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrderNodeSpecific</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method is used for a lattice reversal and a bunch backtracking</span>
 <span class="sd">        This is a node type specific method. The implementation of the abstract</span>
 <span class="sd">        method of AccNode class from the top level lattice package.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span>
         <span class="c1"># ---- Here the order of quads does not matter</span>
         <span class="k">for</span> <span class="n">quad_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">)):</span>
@@ -495,83 +495,83 @@ document.write(`
         <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">z_max</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">z_min</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.isNodeInReversedLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.isNodeInReversedLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isNodeInReversedLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns True if this node in the reversed lattice or False if it otherwise.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.addQuad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.addQuad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addQuad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Adds the quad with the field function and the position.</span>
 <span class="sd">        The position of the quad is relative to the center of</span>
 <span class="sd">        the parent rf gap node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">])</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getQuads"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getQuads">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getQuads</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the list of quads in this node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">quads</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">quads</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getPosAndQuad_Arr"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getPosAndQuad_Arr">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getPosAndQuad_Arr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Return the array with pairs: the quad and the position of its center.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">quad_arr</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="n">quad_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">quad</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">quad_arr</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getTotalField"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getTotalField">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTotalField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_from_center</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the combined field of all overlapping quads.</span>
 <span class="sd">        z_from_center - is a distance from the center of the parent RF gap node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">z_from_center</span>
         <span class="n">G</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_min</span> <span class="ow">or</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">G</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">fieldFunc</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
                 <span class="n">G</span> <span class="o">+=</span> <span class="n">gl</span> <span class="o">*</span> <span class="n">fieldFunc</span><span class="o">.</span><span class="n">getFuncValue</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">z_center_of_field</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">G</span> <span class="o">+=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getTotalField</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">z_center_of_field</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">G</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getTotalFieldDerivative"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getTotalFieldDerivative">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTotalFieldDerivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_from_center</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the combined derivative of the field of all overlapping quads.</span>
 <span class="sd">        z_from_center - is a distance from the center of the parent RF gap node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">z_from_center</span>
         <span class="n">GP</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_min</span> <span class="ow">or</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">GP</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">fieldFunc</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
                 <span class="n">GP</span> <span class="o">+=</span> <span class="n">gl</span> <span class="o">*</span> <span class="n">fieldFunc</span><span class="o">.</span><span class="n">getFuncDerivative</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">z_center_of_field</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">GP</span> <span class="o">+=</span> <span class="mf">0.0</span>
         <span class="k">return</span> <span class="n">GP</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getZ_Step"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getZ_Step">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the longitudinal step during the tracking.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.setZ_Step"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.setZ_Step">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_step</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">axis_field_func</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Class AxisFieldRF_Gap: You have to get the axis field from a file first!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Class AxisFieldRF_Gap: You have to get the axis field from a file first!"</span>
             <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Call readAxisFieldFile(dir_location,file_name) method first!&quot;</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Stop.&quot;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Call readAxisFieldFile(dir_location,file_name) method first!"</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Stop."</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
         <span class="n">nParts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="mf">1.0000001</span> <span class="o">/</span> <span class="n">z_step</span><span class="p">)</span>
@@ -582,18 +582,18 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getZ_Min_Max"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getZ_Min_Max">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Min_Max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple (z_min,z_max) with the limits of the axis field.</span>
 <span class="sd">        These parameters define the length of the node. The center of the node</span>
 <span class="sd">        is at 0.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.setZ_Min_Max"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.setZ_Min_Max">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setZ_Min_Max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the actual longitudinal sizes of the node. It is used for small correction</span>
 <span class="sd">        of the length to avoid fields overlapping from neighbouring gaps.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">z_min</span> <span class="o">=</span> <span class="n">z_min</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span> <span class="o">=</span> <span class="n">z_max</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_min</span>
@@ -601,68 +601,68 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">setZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_step</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getEzFiled"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getEzFiled">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEzFiled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the Ez field on the axis of the RF gap in V/m.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">rfCavity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">()</span>
-        <span class="n">E0L</span> <span class="o">=</span> <span class="mf">1.0e9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">)</span>
+        <span class="n">E0L</span> <span class="o">=</span> <span class="mf">1.0e9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"E0L"</span><span class="p">)</span>
         <span class="n">rf_ampl</span> <span class="o">=</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">getAmp</span><span class="p">()</span>
         <span class="n">Ez</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getEzFiledInternal</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">rfCavity</span><span class="p">,</span> <span class="n">E0L</span><span class="p">,</span> <span class="n">rf_ampl</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Ez</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getEzFiledInternal"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getEzFiledInternal">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEzFiledInternal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">rfCavity</span><span class="p">,</span> <span class="n">E0L</span><span class="p">,</span> <span class="n">rf_ampl</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the Ez field on the axis of the RF gap in V/m.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span><span class="p">:</span>
             <span class="n">z</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
         <span class="n">Ez</span> <span class="o">=</span> <span class="n">E0L</span> <span class="o">*</span> <span class="n">rf_ampl</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">axis_field_func</span><span class="o">.</span><span class="n">getY</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Ez</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getRF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getRF_Cavity">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the parent RF Cavity.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;rfCavity&quot;</span><span class="p">)</span></div>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"rfCavity"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The AxisFieldRF_Gap class implementation of</span>
 <span class="sd">        the AccNode class track(probe) method.</span>
 <span class="sd">        User have to track the design bunch first to setup all gaps arrival time.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">rfCavity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">isDesignSetUp</span><span class="p">():</span>
             <span class="n">sequence</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getSequence</span><span class="p">()</span>
             <span class="n">accLattice</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">getLinacAccLattice</span><span class="p">()</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The AxisFieldRF_Gap class. &quot;</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;You have to run trackDesign on the LinacAccLattice&quot;</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;first to initialize all RF Cavities&#39; phases!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"The AxisFieldRF_Gap class. "</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"You have to run trackDesign on the LinacAccLattice"</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"first to initialize all RF Cavities' phases!"</span>
             <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="k">if</span> <span class="n">accLattice</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Lattice =&quot;</span> <span class="o">+</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Lattice ="</span> <span class="o">+</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="k">if</span> <span class="n">sequence</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Sequence =&quot;</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Sequence ="</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;RF Cavity =&quot;</span> <span class="o">+</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"RF Cavity ="</span> <span class="o">+</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Name of element=&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Name of element="</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Type of element=&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Type of element="</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="c1"># -----------------------------------------</span>
         <span class="n">nParts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
         <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">()</span>
         <span class="n">part_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
         <span class="n">syncPart</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span>
         <span class="n">eKin_in</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
         <span class="n">momentum</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">momentum</span><span class="p">()</span>
-        <span class="n">E0L</span> <span class="o">=</span> <span class="mf">1.0e9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">)</span>
-        <span class="n">modePhase</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">baserf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">E0L</span> <span class="o">=</span> <span class="mf">1.0e9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"E0L"</span><span class="p">)</span>
+        <span class="n">modePhase</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">baserf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"mode"</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
         <span class="n">frequency</span> <span class="o">=</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">getFrequency</span><span class="p">()</span>
         <span class="n">rf_ampl</span> <span class="o">=</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">getAmp</span><span class="p">()</span>
         <span class="n">arrival_time</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -712,10 +712,10 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part_pos</span><span class="p">,</span> <span class="n">phase</span> <span class="o">+</span> <span class="n">delta_phase</span><span class="p">)</span>
         <span class="c1"># ---- this part is the debugging ---START---</span>
         <span class="c1"># eKin_out = syncPart.kinEnergy()</span>
-        <span class="c1"># s  = &quot;debug pos[mm]= %7.2f &quot;%(self.part_pos*1000.)</span>
-        <span class="c1"># s += &quot; ekin= %9.6f&quot;%(syncPart.kinEnergy()*1000.)</span>
-        <span class="c1"># s += &quot; phase = %9.2f &quot;%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
-        <span class="c1"># s += &quot; dE= %9.6f &quot;%((eKin_out-eKin_in)*1000.)</span>
+        <span class="c1"># s  = "debug pos[mm]= %7.2f "%(self.part_pos*1000.)</span>
+        <span class="c1"># s += " ekin= %9.6f"%(syncPart.kinEnergy()*1000.)</span>
+        <span class="c1"># s += " phase = %9.2f "%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
+        <span class="c1"># s += " dE= %9.6f "%((eKin_out-eKin_in)*1000.)</span>
         <span class="c1"># print s</span>
         <span class="c1"># ---- this part is the debugging ---STOP---</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span>
@@ -751,10 +751,10 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part_pos</span><span class="p">,</span> <span class="n">phase</span> <span class="o">+</span> <span class="n">delta_phase</span><span class="p">)</span>
         <span class="c1"># ---- this part is the debugging ---START---</span>
         <span class="c1"># eKin_out = syncPart.kinEnergy()</span>
-        <span class="c1"># s  = &quot;debug pos[mm]= %7.2f &quot;%(self.part_pos*1000.)</span>
-        <span class="c1"># s += &quot; ekin= %9.6f&quot;%(syncPart.kinEnergy()*1000.)</span>
-        <span class="c1"># s += &quot; phase = %9.2f &quot;%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
-        <span class="c1"># s += &quot; dE= %9.6f &quot;%((eKin_out-eKin_in)*1000.)</span>
+        <span class="c1"># s  = "debug pos[mm]= %7.2f "%(self.part_pos*1000.)</span>
+        <span class="c1"># s += " ekin= %9.6f"%(syncPart.kinEnergy()*1000.)</span>
+        <span class="c1"># s += " phase = %9.2f "%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
+        <span class="c1"># s += " dE= %9.6f "%((eKin_out-eKin_in)*1000.)</span>
         <span class="c1"># print s</span>
         <span class="c1"># ---- this part is the debugging ---STOP---</span>
         <span class="c1"># ---- Calculate the phase at the center</span>
@@ -762,10 +762,10 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">_phase_gap_func_analysis</span><span class="p">()</span></div>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_phase_gap_func_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Performs analysis of the RF gap function phase vs. postion</span>
 <span class="sd">        and calculates the accelerating phase at the center of the gap.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">n_pos_points</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span>
         <span class="n">phase_gap</span> <span class="o">=</span> <span class="mf">0.</span>
         <span class="k">if</span><span class="p">(</span><span class="n">n_pos_points</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
@@ -784,27 +784,27 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">setGapPhase</span><span class="p">(</span><span class="n">phase_gap_center</span><span class="p">)</span>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.getPhaseVsPositionFuncion"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.getPhaseVsPositionFuncion">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getPhaseVsPositionFuncion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Retuns the RF gap function phase vs. postion.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span></div>
 
 <div class="viewcode-block" id="AxisField_and_Quad_RF_Gap.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap/#orbit.py_linac.lattice.AxisField_and_Quad_RF_Gap.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The method is tracking the design synchronous particle through the RF Gap.</span>
 <span class="sd">        If the gap is a first gap in the cavity we put the arrival time as</span>
 <span class="sd">        a cavity parameter. The pair of the cavity design phase and this arrival time</span>
 <span class="sd">        at the first gap are used during the real bunch tracking.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">nParts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
         <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">()</span>
         <span class="n">part_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="n">syncPart</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span>
         <span class="n">eKin_in</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span>
         <span class="c1"># ---- parameter E0L is in GeV, but cppGapModel = RfGapThreePointTTF() uses fields in V/m</span>
-        <span class="n">E0L</span> <span class="o">=</span> <span class="mf">1.0e9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;E0L&quot;</span><span class="p">)</span>
-        <span class="n">modePhase</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">baserf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">E0L</span> <span class="o">=</span> <span class="mf">1.0e9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"E0L"</span><span class="p">)</span>
+        <span class="n">modePhase</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_rf_gap</span><span class="o">.</span><span class="n">baserf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"mode"</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
         <span class="n">rfCavity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">()</span>
         <span class="n">rf_ampl</span> <span class="o">=</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">getDesignAmp</span><span class="p">()</span>
         <span class="n">arrival_time</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -823,15 +823,15 @@ document.write(`
             <span class="n">rfCavity</span><span class="o">.</span><span class="n">setDesignSetUp</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
             <span class="n">rfCavity</span><span class="o">.</span><span class="n">_setDesignPhase</span><span class="p">(</span><span class="n">rfCavity</span><span class="o">.</span><span class="n">getPhase</span><span class="p">())</span>
             <span class="n">rfCavity</span><span class="o">.</span><span class="n">_setDesignAmp</span><span class="p">(</span><span class="n">rfCavity</span><span class="o">.</span><span class="n">getAmp</span><span class="p">())</span>
-            <span class="c1"># print &quot;debug firs gap first part phase=&quot;,phase*180./math.pi,&quot; arr time=&quot;,arrival_time</span>
+            <span class="c1"># print "debug firs gap first part phase=",phase*180./math.pi," arr time=",arrival_time</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">first_gap_arr_time</span> <span class="o">=</span> <span class="n">rfCavity</span><span class="o">.</span><span class="n">getDesignArrivalTime</span><span class="p">()</span>
-            <span class="c1"># print &quot;debug name=&quot;,self.getName(),&quot; delta_phase=&quot;,frequency*(arrival_time - first_gap_arr_time)*360.0,&quot; phase=&quot;,phase*180/math.pi</span>
+            <span class="c1"># print "debug name=",self.getName()," delta_phase=",frequency*(arrival_time - first_gap_arr_time)*360.0," phase=",phase*180/math.pi</span>
             <span class="n">phase</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">fmod</span><span class="p">(</span>
                 <span class="n">frequency</span> <span class="o">*</span> <span class="p">(</span><span class="n">arrival_time</span> <span class="o">-</span> <span class="n">first_gap_arr_time</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">+</span> <span class="n">phase</span><span class="p">,</span>
                 <span class="mf">2.0</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span>
             <span class="p">)</span>
-        <span class="c1"># print &quot;debug design name=&quot;,self.getName(),&quot; arr_time=&quot;,arrival_time,&quot; phase=&quot;,phase*180./math.pi,&quot; E0TL=&quot;,E0TL*1.0e+3,&quot; freq=&quot;,frequency</span>
+        <span class="c1"># print "debug design name=",self.getName()," arr_time=",arrival_time," phase=",phase*180./math.pi," E0TL=",E0TL*1.0e+3," freq=",frequency</span>
         <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">part_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_min</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
@@ -851,10 +851,10 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part_pos</span><span class="p">,</span> <span class="n">phase</span> <span class="o">+</span> <span class="n">delta_phase</span><span class="p">)</span>
         <span class="c1"># ---- this part is the debugging ---START---</span>
         <span class="c1"># eKin_out = syncPart.kinEnergy()</span>
-        <span class="c1"># s  = &quot;debug pos[mm]= %7.2f &quot;%(self.part_pos*1000.)</span>
-        <span class="c1"># s += &quot; ekin= %9.6f&quot;%(syncPart.kinEnergy()*1000.)</span>
-        <span class="c1"># s += &quot; phase = %9.2f &quot;%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
-        <span class="c1"># s += &quot; dE= %9.6f &quot;%((eKin_out-eKin_in)*1000.)</span>
+        <span class="c1"># s  = "debug pos[mm]= %7.2f "%(self.part_pos*1000.)</span>
+        <span class="c1"># s += " ekin= %9.6f"%(syncPart.kinEnergy()*1000.)</span>
+        <span class="c1"># s += " phase = %9.2f "%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
+        <span class="c1"># s += " dE= %9.6f "%((eKin_out-eKin_in)*1000.)</span>
         <span class="c1"># print s</span>
         <span class="c1"># ---- this part is the debugging ---STOP---</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span>
@@ -874,10 +874,10 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part_pos</span><span class="p">,</span> <span class="n">phase</span> <span class="o">+</span> <span class="n">delta_phase</span><span class="p">)</span>
         <span class="c1"># ---- this part is the debugging ---START---</span>
         <span class="c1"># eKin_out = syncPart.kinEnergy()</span>
-        <span class="c1"># s  = &quot;debug pos[mm]= %7.2f &quot;%(self.part_pos*1000.)</span>
-        <span class="c1"># s += &quot; ekin= %9.6f&quot;%(syncPart.kinEnergy()*1000.)</span>
-        <span class="c1"># s += &quot; phase = %9.2f &quot;%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
-        <span class="c1"># s += &quot; dE= %9.6f &quot;%((eKin_out-eKin_in)*1000.)</span>
+        <span class="c1"># s  = "debug pos[mm]= %7.2f "%(self.part_pos*1000.)</span>
+        <span class="c1"># s += " ekin= %9.6f"%(syncPart.kinEnergy()*1000.)</span>
+        <span class="c1"># s += " phase = %9.2f "%(phaseNearTargetPhaseDeg((phase+delta_phase)*180./math.pi,0.))</span>
+        <span class="c1"># s += " dE= %9.6f "%((eKin_out-eKin_in)*1000.)</span>
         <span class="c1"># print s</span>
         <span class="c1"># ---- this part is the debugging ---STOP---</span>
         <span class="c1"># ---- Calculate the phase at the center</span>
@@ -886,16 +886,16 @@ document.write(`
 
 
 <div class="viewcode-block" id="OverlappingQuadsNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">OverlappingQuadsNode</span><span class="p">(</span><span class="n">BaseLinacNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The class represent the set of quads with the overlapping fields.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;OverlappingQuads&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"OverlappingQuads"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates the OverlappingQuadsNode instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;OVRLPQ&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;OVRLPQ&quot;</span><span class="p">)</span>
+<span class="sd">        """</span>
+        <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"OVRLPQ"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"OVRLPQ"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># ----quads_fields_arr is an array of [quad, fieldFunc, z_center_of_field]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span> <span class="o">=</span> <span class="p">[]</span>
@@ -911,23 +911,23 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span> <span class="o">=</span> <span class="kc">False</span>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.setUseLongitudinalFieldOfQuad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.setUseLongitudinalFieldOfQuad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setUseLongitudinalFieldOfQuad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">use</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        If we going to use the longitudinal magnetic field component of quad</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">useLongField</span> <span class="o">=</span> <span class="n">use</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.getUseLongitudinalFieldOfQuad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.getUseLongitudinalFieldOfQuad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getUseLongitudinalFieldOfQuad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        If we going to use the longitudinal magnetic field component of quad</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">useLongField</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.reverseOrderNodeSpecific"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.reverseOrderNodeSpecific">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reverseOrderNodeSpecific</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method is used for a lattice reversal and a bunch backtracking</span>
 <span class="sd">        This is a node type specific method. The implementation of the abstract</span>
 <span class="sd">        method of AccNode class from the top level lattice package.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span>
         <span class="c1"># ---- Here the order of quads does not matter</span>
         <span class="k">for</span> <span class="n">quad_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">)):</span>
@@ -935,62 +935,62 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">[</span><span class="n">quad_ind</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">z_center_of_field</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.isNodeInReversedLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.isNodeInReversedLattice">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isNodeInReversedLattice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns True if this node in the reversed lattice or False if it otherwise.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reversed_lattice</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.addQuad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.addQuad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addQuad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Adds the quad with the field function and the position.</span>
 <span class="sd">        The position of the quad is relative to the beginning of this OverlappingQuadsNode.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">])</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.setZ_Step"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.setZ_Step">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_step</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the longitudinal step for the tracking along the node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span> <span class="o">=</span> <span class="n">z_step</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.getZ_Step"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.getZ_Step">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the longitudinal step for the tracking along the node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.getZ_Min_Max"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.getZ_Min_Max">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Min_Max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple (z_min,z_max) with the limits of z coordinate from the center.</span>
 <span class="sd">        These parameters define the length of the node. The center of the node</span>
 <span class="sd">        is at 0.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">L2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">L2</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.getQuads"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.getQuads">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getQuads</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the list of quads in this node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">quads</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">quads</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.getCentersOfField"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.getCentersOfField">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getCentersOfField</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the array of centers of the quads in this node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">centers_arr</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="n">centers_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">z_center_of_field</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">centers_arr</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.initialize"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.initialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The OverlappingQuadsNode class implementation</span>
 <span class="sd">        of the AccNode class initialize() method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">nParts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
         <span class="n">lengthStep</span> <span class="o">=</span> <span class="n">length</span> <span class="o">/</span> <span class="n">nParts</span>
@@ -998,14 +998,14 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">lengthStep</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The  OverlappingQuadsNode class implementation of the AccNode class track(paramDict) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">()</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">z_value</span> <span class="o">=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="n">charge</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">charge</span><span class="p">()</span>
         <span class="n">momentum</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">momentum</span><span class="p">()</span>
         <span class="n">n_steps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
@@ -1031,36 +1031,36 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">z_value</span> <span class="o">+=</span> <span class="n">length</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.getTotalField"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.getTotalField">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTotalField</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_from_center</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the combined field of all overlapping quads.</span>
 <span class="sd">        z_from_center - is a distance from the center of the node.</span>
 <span class="sd">        z - is a distance from the beginning of the node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">z_from_center</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="n">G</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="mf">0.0</span> <span class="ow">or</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">():</span>
             <span class="k">return</span> <span class="n">G</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">fieldFunc</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
                 <span class="n">G</span> <span class="o">+=</span> <span class="n">gl</span> <span class="o">*</span> <span class="n">fieldFunc</span><span class="o">.</span><span class="n">getFuncValue</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">z_center_of_field</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">G</span> <span class="o">+=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getTotalField</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">z_center_of_field</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">G</span></div>
 
 <div class="viewcode-block" id="OverlappingQuadsNode.getTotalFieldDerivative"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.OverlappingQuadsNode/#orbit.py_linac.lattice.OverlappingQuadsNode.getTotalFieldDerivative">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTotalFieldDerivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_from_center</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the combined derivative of the field of all overlapping quads.</span>
 <span class="sd">        z_from_center - is a distance from the center of the node.</span>
 <span class="sd">        z - is a distance from the beginning of the node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">z_from_center</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="n">GP</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="mf">0.0</span> <span class="ow">or</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">():</span>
             <span class="k">return</span> <span class="n">GP</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">fieldFunc</span><span class="p">,</span> <span class="n">z_center_of_field</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quads_fields_arr</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">fieldFunc</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
+                <span class="n">gl</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">)</span> <span class="o">*</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
                 <span class="n">GP</span> <span class="o">+=</span> <span class="n">gl</span> <span class="o">*</span> <span class="n">fieldFunc</span><span class="o">.</span><span class="n">getFuncDerivative</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">z_center_of_field</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">GP</span> <span class="o">+=</span> <span class="mf">0.0</span>

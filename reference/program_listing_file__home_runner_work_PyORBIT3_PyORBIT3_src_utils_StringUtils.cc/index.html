@@ -380,7 +380,7 @@ document.write(`
   <section id="program-listing-for-file-stringutils-cc">
 <span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-utils-stringutils-cc"></span><h1>Program Listing for File StringUtils.cc<a class="headerlink" href="#program-listing-for-file-stringutils-cc" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_utils_StringUtils.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-utils-stringutils-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/utils/StringUtils.cc</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;StringUtils.hh&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"StringUtils.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
@@ -392,16 +392,16 @@ document.write(`
 <span class="w">  </span><span class="n">tokens</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
 <span class="w">  </span><span class="c1">// Skip delimiters at beginning.</span>
 <span class="w">  </span><span class="n">string</span><span class="o">::</span><span class="n">size_type</span><span class="w"> </span><span class="n">lastPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">find_first_not_of</span><span class="p">(</span><span class="n">delimiters</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">  </span><span class="c1">// Find first &quot;non-delimiter&quot;.</span>
+<span class="w">  </span><span class="c1">// Find first "non-delimiter".</span>
 <span class="w">  </span><span class="n">string</span><span class="o">::</span><span class="n">size_type</span><span class="w"> </span><span class="n">pos</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">find_first_of</span><span class="p">(</span><span class="n">delimiters</span><span class="p">,</span><span class="w"> </span><span class="n">lastPos</span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lastPos</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="c1">// Found a token, add it to the vector.</span>
 <span class="w">      </span><span class="n">tokens</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">lastPos</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastPos</span><span class="p">));</span>
-<span class="w">      </span><span class="c1">// Skip delimiters.  Note the &quot;not_of&quot;</span>
+<span class="w">      </span><span class="c1">// Skip delimiters.  Note the "not_of"</span>
 <span class="w">      </span><span class="n">lastPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">find_first_not_of</span><span class="p">(</span><span class="n">delimiters</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
-<span class="w">      </span><span class="c1">// Find next &quot;non-delimiter&quot;</span>
+<span class="w">      </span><span class="c1">// Find next "non-delimiter"</span>
 <span class="w">      </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">find_first_of</span><span class="p">(</span><span class="n">delimiters</span><span class="p">,</span><span class="w"> </span><span class="n">lastPos</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">tokens</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>

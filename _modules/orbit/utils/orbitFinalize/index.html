@@ -366,17 +366,17 @@ document.write(`
                   
   <h1>Source code for orbit.utils.orbitFinalize</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="orbitFinalize"><a class="viewcode-back" href="../../../../reference/orbit.utils.orbitFinalize/#orbit.utils.orbitFinalize">[docs]</a><span></span><span class="k">def</span><span class="w"> </span><span class="nf">orbitFinalize</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Method. Finalizes the execution of the ORBIT script.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbit_mpi</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
 
     <span class="k">if</span> <span class="n">orbit_mpi</span><span class="o">.</span><span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">orbit_mpi</span><span class="o">.</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ORBIT message: &quot;</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"ORBIT message: "</span> <span class="o">+</span> <span class="n">message</span><span class="p">)</span>
         <span class="n">traceback</span><span class="o">.</span><span class="n">print_stack</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;STOP&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"STOP"</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
 </pre></div>
 

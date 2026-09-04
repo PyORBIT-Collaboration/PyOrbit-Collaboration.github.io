@@ -388,20 +388,20 @@ document.write(`
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">printM</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----matrix--- size=&quot;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----matrix--- size="</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">0</span><span class="p">]):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">1</span><span class="p">]):</span>
-            <span class="nb">print</span><span class="p">((</span><span class="s2">&quot;m(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)= </span><span class="si">%10.3g</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">((</span><span class="s2">"m("</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">","</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">")= </span><span class="si">%10.3g</span><span class="s2"> "</span> <span class="o">%</span> <span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" "</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="TransverseBPM"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TransverseBPM/#orbit.py_linac.orbit_correction.TransverseBPM">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TransverseBPM</span><span class="p">(</span><span class="n">BaseLinacNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    BPM node for transverse position report</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trajCorrection</span><span class="p">,</span> <span class="n">bpm_marker_node</span><span class="p">,</span> <span class="n">sfx</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">bpm_marker_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;_diag&quot;</span> <span class="o">+</span> <span class="n">sfx</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trajCorrection</span><span class="p">,</span> <span class="n">bpm_marker_node</span><span class="p">,</span> <span class="n">sfx</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">bpm_marker_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"_diag"</span> <span class="o">+</span> <span class="n">sfx</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="c1"># ---- the trajectory correction instance that created this node</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">trajCorrection</span> <span class="o">=</span> <span class="n">trajCorrection</span>
@@ -412,27 +412,27 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">yp</span> <span class="o">=</span> <span class="mf">0.0</span>
 
 <div class="viewcode-block" id="TransverseBPM.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TransverseBPM/#orbit.py_linac.orbit_correction.TransverseBPM.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Nothing should happen here</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="TransverseBPM.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TransverseBPM/#orbit.py_linac.orbit_correction.TransverseBPM.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It is tracking the bunch through this node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="n">nParts</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">nParts</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;TransverseBPM class:&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"TransverseBPM class:"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Node name=&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Node name="</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Number of macro-particles in bunch nParts=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Number of macro-particles in bunch nParts="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;It should be more than 0&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"It should be more than 0"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop.&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Stop."</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">nParts</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
@@ -443,14 +443,14 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">yp</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">yp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TransverseBPM.getCoordinates"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TransverseBPM/#orbit.py_linac.orbit_correction.TransverseBPM.getCoordinates">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getCoordinates</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        returns coordinates of the particle</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">yp</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="TrajectoryCorrection"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TrajectoryCorrection</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class to perform correction of the trajectory in the linac type lattice</span>
 <span class="sd">    or in the part of it. To correct trajectories the Linac DCorrectorH and</span>
 <span class="sd">    DCorrectorV objects will be used. The trajectory is defined by BPMs nodes</span>
@@ -460,7 +460,7 @@ document.write(`
 <span class="sd">    values for each BPM. By default the goal for all BPMs is 0., but user can</span>
 <span class="sd">    redefine these values and set of BPMs. User also can redefine what</span>
 <span class="sd">    dipole correctors will be used.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">start_node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop_node</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># ---- change in the corrector field</span>
@@ -493,9 +493,9 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">_updateQuad_Nodes</span><span class="p">()</span></div>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getStartStopIndexes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the start and stop indexes of the start and stop nodes</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">start_ind</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_node</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">start_ind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span><span class="o">.</span><span class="n">getNodeIndex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_node</span><span class="p">)</span>
@@ -505,9 +505,9 @@ document.write(`
         <span class="k">return</span> <span class="p">(</span><span class="n">start_ind</span><span class="p">,</span> <span class="n">stop_ind</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_returnFilteredNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns list of nodes between start and stop nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="p">(</span><span class="n">start_ind</span><span class="p">,</span> <span class="n">stop_ind</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getStartStopIndexes</span><span class="p">()</span>
         <span class="n">nodes_tmp</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
@@ -524,10 +524,10 @@ document.write(`
         <span class="k">return</span> <span class="n">nodes_tmp</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_updateBPM_Nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bpms</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Updates BPM nodes between start_node and stop_node.</span>
 <span class="sd">        Returns array of bpm nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cleanBPM_Nodes</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bpm_node_arr</span> <span class="o">=</span> <span class="p">[]</span>
@@ -535,7 +535,7 @@ document.write(`
         <span class="k">if</span> <span class="n">bpms</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">markers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span><span class="o">.</span><span class="n">getNodesOfClass</span><span class="p">(</span><span class="n">MarkerLinacNode</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">markers</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;BPM&quot;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"BPM"</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">bpm_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">bpm_nodes</span> <span class="o">=</span> <span class="n">bpms</span>
@@ -549,9 +549,9 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm_node_arr</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_updateDC_Nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Updates DCorrector nodes that we use for orbit correction</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="n">class_type</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span>
         <span class="n">dc_node_arr</span> <span class="o">=</span> <span class="kc">None</span>
@@ -592,9 +592,9 @@ document.write(`
         <span class="k">return</span> <span class="n">dc_node_arr</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_updateQuad_Nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Updates Quad nodes with TransverseBPM instances</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cleanQuad_Nodes</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">quad_node_arr</span> <span class="o">=</span> <span class="p">[]</span>
@@ -606,11 +606,11 @@ document.write(`
         <span class="n">quad_arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_returnFilteredNodes</span><span class="p">(</span><span class="n">quad_arr</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">quad_arr</span><span class="p">:</span>
             <span class="p">(</span><span class="n">start_pos</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">quad</span><span class="p">]</span>
-            <span class="n">transvBPM</span> <span class="o">=</span> <span class="n">TransverseBPM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">,</span> <span class="s2">&quot;_entrance&quot;</span><span class="p">)</span>
+            <span class="n">transvBPM</span> <span class="o">=</span> <span class="n">TransverseBPM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">,</span> <span class="s2">"_entrance"</span><span class="p">)</span>
             <span class="n">transvBPM</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">start_pos</span><span class="p">)</span>
             <span class="n">quad</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">transvBPM</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">quad_transvBPM_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">transvBPM</span><span class="p">)</span>
-            <span class="n">transvBPM</span> <span class="o">=</span> <span class="n">TransverseBPM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">,</span> <span class="s2">&quot;_exit&quot;</span><span class="p">)</span>
+            <span class="n">transvBPM</span> <span class="o">=</span> <span class="n">TransverseBPM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">,</span> <span class="s2">"_exit"</span><span class="p">)</span>
             <span class="n">transvBPM</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">end_pos</span><span class="p">)</span>
             <span class="n">quad</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">transvBPM</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">quad_transvBPM_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">transvBPM</span><span class="p">)</span>
@@ -618,56 +618,56 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_node_arr</span>
 
 <div class="viewcode-block" id="TrajectoryCorrection.setBPMs"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.setBPMs">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setBPMs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bpms</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets custom bpm array for analysis.</span>
 <span class="sd">        In reality they can be any nodes.</span>
 <span class="sd">        Returns array of bpm nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_updateBPM_Nodes</span><span class="p">(</span><span class="n">bpms</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.getBPMs"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.getBPMs">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBPMs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns array of bpm nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm_node_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.setDCHs"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.setDCHs">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setDCHs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dchs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the DCorrectorHs</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_updateDC_Nodes</span><span class="p">(</span><span class="n">dchs</span><span class="p">,</span> <span class="n">DCorrectorH</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dch_node_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.getDCHs"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.getDCHs">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDCHs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns DCorrectorHs array</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dch_node_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.setDCVs"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.setDCVs">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setDCVs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dcvs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the DCorrectorVs</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_updateDC_Nodes</span><span class="p">(</span><span class="n">dcvs</span><span class="p">,</span> <span class="n">DCorrectorV</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dcv_node_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.getDCVs"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.getDCVs">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDCVs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns DCorrectorVs array</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dcv_node_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.setQuads"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.setQuads">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setQuads</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quads</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets Quads</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_updateQuad_Nodes</span><span class="p">(</span><span class="n">quads</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_node_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.getQuads"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.getQuads">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getQuads</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns Quads array</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_node_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.getTransverseBPMs"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.getTransverseBPMs">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTransverseBPMs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -677,18 +677,18 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_transvBPM_arr</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.getTransverseBPMforBPM"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.getTransverseBPMforBPM">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTransverseBPMforBPM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bpm</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Retuns the TransverseBPM instance for particular BPM.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">bpm</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">):</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">TransverseBPM</span><span class="p">):</span>
                 <span class="k">return</span> <span class="n">child</span>
         <span class="k">return</span> <span class="kc">None</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.cleanBPM_Nodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.cleanBPM_Nodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">cleanBPM_Nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Removes TransverseBPM child nodes from BPM nodes</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">bpm</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm_node_arr</span><span class="p">:</span>
             <span class="n">child_arr</span> <span class="o">=</span> <span class="n">bpm</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
             <span class="n">transvBPM</span> <span class="o">=</span> <span class="kc">None</span>
@@ -701,9 +701,9 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">transvBPM_arr</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.cleanQuad_Nodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.cleanQuad_Nodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">cleanQuad_Nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Removes TransverseBPM child nodes from Quad nodes</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_node_arr</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">place</span> <span class="ow">in</span> <span class="p">[</span><span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">EXIT</span><span class="p">]:</span>
                 <span class="n">child_arr</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getChildNodes</span><span class="p">(</span><span class="n">place</span><span class="p">)</span>
@@ -717,11 +717,11 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">quad_transvBPM_arr</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.correctTrajectory"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.correctTrajectory">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">correctTrajectory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_initial</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method will calculate and applyes fields to dipole correctors</span>
 <span class="sd">        to achive minimal beam deviation from the center at all BPMs.</span>
 <span class="sd">        LSQM method is used.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">bunch_in</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">makeOneParticleBunch</span><span class="p">(</span><span class="n">bunch_initial</span><span class="p">)</span>
         <span class="c1"># --------------------------</span>
         <span class="n">bunch_init</span> <span class="o">=</span> <span class="n">Bunch</span><span class="p">()</span>
@@ -748,7 +748,7 @@ document.write(`
         <span class="n">horAmtrx</span> <span class="o">=</span> <span class="p">(</span><span class="n">horResponceMtrxTr</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">horResponceMtrx</span><span class="p">))</span><span class="o">.</span><span class="n">invert</span><span class="p">()</span>
         <span class="n">verAmtrx</span> <span class="o">=</span> <span class="p">(</span><span class="n">verResponceMtrxTr</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">verResponceMtrx</span><span class="p">))</span><span class="o">.</span><span class="n">invert</span><span class="p">()</span>
         <span class="c1"># printM(horAmtrx)</span>
-        <span class="c1"># print &quot;det(horAmtrx) = &quot;,horAmtrx.det()</span>
+        <span class="c1"># print "det(horAmtrx) = ",horAmtrx.det()</span>
         <span class="n">horATmtrx</span> <span class="o">=</span> <span class="n">horAmtrx</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">horResponceMtrxTr</span><span class="p">)</span>
         <span class="n">verATmtrx</span> <span class="o">=</span> <span class="n">verAmtrx</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">verResponceMtrxTr</span><span class="p">)</span>
         <span class="c1"># ---- matrices for LSQM are ready - now use initial bunch to get</span>
@@ -764,43 +764,43 @@ document.write(`
             <span class="n">verBPM_V</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">bpm_value_ver_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
         <span class="n">dch_val_V</span> <span class="o">=</span> <span class="n">horATmtrx</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">horBPM_V</span><span class="p">)</span>
         <span class="n">dcv_val_V</span> <span class="o">=</span> <span class="n">verATmtrx</span><span class="o">.</span><span class="n">mult</span><span class="p">(</span><span class="n">verBPM_V</span><span class="p">)</span>
-        <span class="c1"># print &quot;debug =========== final DCH fields ================&quot;</span>
+        <span class="c1"># print "debug =========== final DCH fields ================"</span>
         <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dch_val_V</span><span class="o">.</span><span class="n">size</span><span class="p">()):</span>
             <span class="n">dc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dch_node_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
             <span class="n">delta_field</span> <span class="o">=</span> <span class="n">dch_val_V</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
-            <span class="c1"># print &quot;debug corr =&quot;,dc.getName(),&quot; init field [T] =&quot;,dc.getParam(&quot;B&quot;),&quot; delta [T] =&quot;,delta_field</span>
-            <span class="n">dc</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">dc</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">delta_field</span><span class="p">)</span>
-        <span class="c1"># print &quot;debug =========== final DCV fields ================&quot;</span>
+            <span class="c1"># print "debug corr =",dc.getName()," init field [T] =",dc.getParam("B")," delta [T] =",delta_field</span>
+            <span class="n">dc</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span> <span class="n">dc</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span> <span class="o">-</span> <span class="n">delta_field</span><span class="p">)</span>
+        <span class="c1"># print "debug =========== final DCV fields ================"</span>
         <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dcv_val_V</span><span class="o">.</span><span class="n">size</span><span class="p">()):</span>
             <span class="n">dc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dcv_node_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
             <span class="n">delta_field</span> <span class="o">=</span> <span class="n">dcv_val_V</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
-            <span class="c1"># print &quot;debug corr =&quot;,dc.getName(),&quot; init field [T] =&quot;,dc.getParam(&quot;B&quot;),&quot; delta [T] =&quot;,delta_field</span>
-            <span class="n">dc</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">dc</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">delta_field</span><span class="p">)</span></div>
+            <span class="c1"># print "debug corr =",dc.getName()," init field [T] =",dc.getParam("B")," delta [T] =",delta_field</span>
+            <span class="n">dc</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span> <span class="n">dc</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span> <span class="o">-</span> <span class="n">delta_field</span><span class="p">)</span></div>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_calculatBPM_Matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_init</span><span class="p">,</span> <span class="n">responceMtrx</span><span class="p">,</span> <span class="n">dc_node_arr</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="n">corr_field_arr</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">dc_node</span> <span class="ow">in</span> <span class="n">dc_node_arr</span><span class="p">:</span>
-            <span class="n">corr_field_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dc_node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">))</span>
+            <span class="n">corr_field_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dc_node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"B"</span><span class="p">))</span>
         <span class="c1"># ---------------------------------------------</span>
         <span class="n">bpm_value_init_arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculateTrajectory</span><span class="p">(</span><span class="n">bunch_init</span><span class="p">)[</span><span class="n">axis</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">dc_node_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dc_node_arr</span><span class="p">)):</span>
             <span class="n">dc_node</span> <span class="o">=</span> <span class="n">dc_node_arr</span><span class="p">[</span><span class="n">dc_node_ind</span><span class="p">]</span>
             <span class="n">field</span> <span class="o">=</span> <span class="n">corr_field_arr</span><span class="p">[</span><span class="n">dc_node_ind</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltaB</span>
-            <span class="n">dc_node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span>
+            <span class="n">dc_node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span>
             <span class="n">bpm_value_arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculateTrajectory</span><span class="p">(</span><span class="n">bunch_init</span><span class="p">)[</span><span class="n">axis</span><span class="p">]</span>
             <span class="k">for</span> <span class="n">bpm_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transvBPM_arr</span><span class="p">)):</span>
                 <span class="n">deltaVal</span> <span class="o">=</span> <span class="n">bpm_value_arr</span><span class="p">[</span><span class="n">bpm_ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">bpm_value_init_arr</span><span class="p">[</span><span class="n">bpm_ind</span><span class="p">]</span>
                 <span class="n">derivative</span> <span class="o">=</span> <span class="n">deltaVal</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltaB</span>
                 <span class="n">responceMtrx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">bpm_ind</span><span class="p">,</span> <span class="n">dc_node_ind</span><span class="p">,</span> <span class="n">derivative</span><span class="p">)</span>
-            <span class="n">dc_node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">corr_field_arr</span><span class="p">[</span><span class="n">dc_node_ind</span><span class="p">])</span>
+            <span class="n">dc_node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span> <span class="n">corr_field_arr</span><span class="p">[</span><span class="n">dc_node_ind</span><span class="p">])</span>
 
 <div class="viewcode-block" id="TrajectoryCorrection.calculateTrajectory"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.calculateTrajectory">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">calculateTrajectory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_init</span><span class="p">,</span> <span class="n">print_info</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It tracks bunch with one particle through the lattice and</span>
 <span class="sd">        fills out the BPM data in self.transvBPM_arr</span>
 <span class="sd">        Returns arrays of x,y corrdinates of the bunch in</span>
 <span class="sd">        (pm_value_hor_arr,bpm_value_ver_arr) tuple.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">bunch</span> <span class="o">=</span> <span class="n">Bunch</span><span class="p">()</span>
         <span class="n">bunch_init</span><span class="o">.</span><span class="n">copyBunchTo</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
         <span class="p">(</span><span class="n">start_ind</span><span class="p">,</span> <span class="n">stop_ind</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getStartStopIndexes</span><span class="p">()</span>
@@ -815,23 +815,23 @@ document.write(`
             <span class="n">bpm_value_ver_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val_ver</span><span class="p">)</span>
         <span class="c1"># ---- Start trajectory printing</span>
         <span class="k">if</span> <span class="n">print_info</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; index name position[m]  x[mm] y[mm] &quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">" index name position[m]  x[mm] y[mm] "</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bpm_value_hor_arr</span><span class="p">)):</span>
                 <span class="n">hor_val</span> <span class="o">=</span> <span class="n">bpm_value_hor_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1000.0</span>
                 <span class="n">ver_val</span> <span class="o">=</span> <span class="n">bpm_value_ver_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1000.0</span>
                 <span class="n">bpm_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm_node_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
                 <span class="n">transvBPM</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transvBPM_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
                 <span class="n">pos</span> <span class="o">=</span> <span class="n">transvBPM</span><span class="o">.</span><span class="n">getPosition</span><span class="p">()</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">%2d</span><span class="s2"> </span><span class="si">%20s</span><span class="s2">  </span><span class="si">%8.3f</span><span class="s2">   </span><span class="si">%+6.2f</span><span class="s2"> </span><span class="si">%+6.2f</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">bpm_node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="n">pos</span><span class="p">,</span> <span class="n">hor_val</span><span class="p">,</span> <span class="n">ver_val</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">" </span><span class="si">%2d</span><span class="s2"> </span><span class="si">%20s</span><span class="s2">  </span><span class="si">%8.3f</span><span class="s2">   </span><span class="si">%+6.2f</span><span class="s2"> </span><span class="si">%+6.2f</span><span class="s2"> "</span> <span class="o">%</span> <span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">bpm_node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="n">pos</span><span class="p">,</span> <span class="n">hor_val</span><span class="p">,</span> <span class="n">ver_val</span><span class="p">))</span>
         <span class="c1"># ---- Stop trajectory printing</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">bpm_value_hor_arr</span><span class="p">,</span> <span class="n">bpm_value_ver_arr</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TrajectoryCorrection.makeOneParticleBunch"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection.makeOneParticleBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeOneParticleBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_init</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the bunch with one particle which coordinates</span>
 <span class="sd">        are equal to the average coordinates in the initial</span>
 <span class="sd">        bunch.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">bunch_out</span> <span class="o">=</span> <span class="n">Bunch</span><span class="p">()</span>
         <span class="n">bunch_init</span><span class="o">.</span><span class="n">copyEmptyBunchTo</span><span class="p">(</span><span class="n">bunch_out</span><span class="p">)</span>
         <span class="n">x_avg</span> <span class="o">=</span> <span class="mf">0.0</span>

@@ -380,7 +380,7 @@ document.write(`
   <section id="program-listing-for-file-compositeapertureshape-cc">
 <span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-orbit-apertures-compositeapertureshape-cc"></span><h1>Program Listing for File CompositeApertureShape.cc<a class="headerlink" href="#program-listing-for-file-compositeapertureshape-cc" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_CompositeApertureShape.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-apertures-compositeapertureshape-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/CompositeApertureShape.cc</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompositeApertureShape.hh&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"CompositeApertureShape.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
@@ -397,15 +397,15 @@ document.write(`
 <span class="c1">//</span>
 <span class="c1">//   CompositeApertureShape is an implementation of BaseApertureShape class</span>
 <span class="c1">//   to represent a logical union of several shapes dtored in collection.</span>
-<span class="c1">//   To get &quot;isinside&quot; method result 1 (Yes) this class will go through</span>
+<span class="c1">//   To get "isinside" method result 1 (Yes) this class will go through</span>
 <span class="c1">//   all BaseApertureShape class instances in the collection and</span>
 <span class="c1">//   should get 1 from at least one shape.</span>
 <span class="c1">//</span>
 
 <span class="n">CompositeApertureShape</span><span class="o">::</span><span class="n">CompositeApertureShape</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="n">BaseApertureShape</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">        </span><span class="n">shapeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;composite&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="n">typeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;composite&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">shapeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"composite"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">typeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"composite"</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">CompositeApertureShape</span><span class="o">::~</span><span class="n">CompositeApertureShape</span><span class="p">()</span>

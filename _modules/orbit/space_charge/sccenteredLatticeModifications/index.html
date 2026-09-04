@@ -365,10 +365,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.space_charge.sccenteredLatticeModifications</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">Module. Includes a base function that modifies the accelerator lattice</span>
 <span class="sd">by inserting SC accelerator nodes.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="c1"># import auxiliary classes</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
@@ -378,7 +378,7 @@ document.write(`
 
 
 <div class="viewcode-block" id="setSC_Centered_AccNodes"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.setSC_Centered_AccNodes/#orbit.space_charge.setSC_Centered_AccNodes">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">setSC_Centered_AccNodes</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">sc_path_length_min</span><span class="p">,</span> <span class="n">space_charge_calculator</span><span class="p">,</span> <span class="n">SC_NodeConstructor</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Inserts a set of space charge nodes into the lattice as child nodes</span>
 <span class="sd">    of the first level accelerator nodes. The SC nodes will be inserted</span>
 <span class="sd">    at chosen parts of first level AccNode elements such that space</span>
@@ -387,7 +387,7 @@ document.write(`
 <span class="sd">    The function returns the array of SC nodes as a convenience for the</span>
 <span class="sd">    user. This is a general function, and SC nodes will require further</span>
 <span class="sd">    information regarding the nature of the SC nodes to be provided later.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">accNodes</span> <span class="o">=</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">accNodes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -407,12 +407,12 @@ document.write(`
             <span class="n">part_length</span> <span class="o">=</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">part_length</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span>
-                    <span class="s2">&quot;Warning! Node &quot;</span><span class="p">,</span>
+                    <span class="s2">"Warning! Node "</span><span class="p">,</span>
                     <span class="n">accNode</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span>
-                    <span class="s2">&quot; has length &quot;</span><span class="p">,</span>
+                    <span class="s2">" has length "</span><span class="p">,</span>
                     <span class="n">part_length</span><span class="p">,</span>
-                    <span class="s2">&quot;m which is greater than 1 m. Space charge </span><span class="se">\</span>
-<span class="s2">					algorithm may be innacurate!&quot;</span><span class="p">,</span>
+                    <span class="s2">"m which is greater than 1 m. Space charge </span><span class="se">\</span>
+<span class="s2">					algorithm may be innacurate!"</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="k">if</span> <span class="n">running_path</span> <span class="o">&gt;</span> <span class="n">sc_path_length_min</span><span class="p">:</span>
                 <span class="n">nodes_arr</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">accNode</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">length_total</span><span class="p">,</span> <span class="n">running_path</span><span class="p">))</span>
@@ -441,7 +441,7 @@ document.write(`
     <span class="k">for</span> <span class="n">inode</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes_arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
         <span class="p">(</span><span class="n">accNode</span><span class="p">,</span> <span class="n">part_index</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">path_length</span><span class="p">)</span> <span class="o">=</span> <span class="n">nodes_arr</span><span class="p">[</span><span class="n">inode</span><span class="p">]</span>
         <span class="p">(</span><span class="n">accNodeNext</span><span class="p">,</span> <span class="n">part_indexNext</span><span class="p">,</span> <span class="n">positionNext</span><span class="p">,</span> <span class="n">path_lengthNext</span><span class="p">)</span> <span class="o">=</span> <span class="n">nodes_arr</span><span class="p">[</span><span class="n">inode</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-        <span class="n">scNode</span> <span class="o">=</span> <span class="n">SC_NodeConstructor</span><span class="p">(</span><span class="n">space_charge_calculator</span><span class="p">,</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">part_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+        <span class="n">scNode</span> <span class="o">=</span> <span class="n">SC_NodeConstructor</span><span class="p">(</span><span class="n">space_charge_calculator</span><span class="p">,</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">part_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">":"</span><span class="p">)</span>
         <span class="n">NodeLength</span> <span class="o">=</span> <span class="p">(</span><span class="n">path_length</span> <span class="o">+</span> <span class="n">path_lengthNext</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
         <span class="n">scNode</span><span class="o">.</span><span class="n">setLengthOfSC</span><span class="p">(</span><span class="n">NodeLength</span><span class="p">)</span>
         <span class="n">scNodes_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scNode</span><span class="p">)</span>
@@ -452,7 +452,7 @@ document.write(`
     <span class="c1"># ---------------------------------------------------</span>
 
     <span class="p">(</span><span class="n">accNode</span><span class="p">,</span> <span class="n">part_index</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">path_length</span><span class="p">)</span> <span class="o">=</span> <span class="n">nodes_arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes_arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="n">scNode</span> <span class="o">=</span> <span class="n">SC_NodeConstructor</span><span class="p">(</span><span class="n">space_charge_calculator</span><span class="p">,</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">part_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+    <span class="n">scNode</span> <span class="o">=</span> <span class="n">SC_NodeConstructor</span><span class="p">(</span><span class="n">space_charge_calculator</span><span class="p">,</span> <span class="n">accNode</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">part_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">":"</span><span class="p">)</span>
     <span class="n">NodeLength</span> <span class="o">=</span> <span class="n">path_length</span> <span class="o">/</span> <span class="mf">2.0</span>
     <span class="n">scNode</span><span class="o">.</span><span class="n">setLengthOfSC</span><span class="p">(</span><span class="n">NodeLength</span><span class="p">)</span>
     <span class="n">scNodes_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scNode</span><span class="p">)</span>

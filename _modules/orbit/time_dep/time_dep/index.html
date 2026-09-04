@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.time_dep.time_dep</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">Module. Includes classes for all time-dependent lattice.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -380,14 +380,14 @@ document.write(`
 
 
 <div class="viewcode-block" id="TIME_DEP_Lattice"><a class="viewcode-back" href="../../../../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TIME_DEP_Lattice</span><span class="p">(</span><span class="n">TEAPOT_Ring</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The subclass of the TEAPOT_Lattice.</span>
 
 <span class="sd">    TIME_DEP_Lattice has the ability to set time-dependent parameters to the Lattice.</span>
 <span class="sd">    Multi-turn track also available.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name"</span><span class="p">):</span>
         <span class="n">TEAPOT_Ring</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__latticeDict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__TDNodeDict</span> <span class="o">=</span> <span class="p">{}</span>
@@ -395,9 +395,9 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <div class="viewcode-block" id="TIME_DEP_Lattice.setLatticeOrder"><a class="viewcode-back" href="../../../../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice.setLatticeOrder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the time-dependent lattice names to the lattice.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">accNodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
         <span class="n">elemInLine</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">accNodes</span><span class="p">)):</span>
@@ -408,63 +408,63 @@ document.write(`
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">elemInLine</span><span class="p">[</span><span class="n">elemname</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
             <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span>
-            <span class="n">node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;TPName&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">elemInLine</span><span class="p">[</span><span class="n">elemname</span><span class="p">]))</span></div>
-            <span class="c1"># node.setParam(&quot;sequence&quot;, i + 1)</span>
-            <span class="c1"># print &quot;debug node&quot;, node.getName(), \</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"TPName"</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"_"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">elemInLine</span><span class="p">[</span><span class="n">elemname</span><span class="p">]))</span></div>
+            <span class="c1"># node.setParam("sequence", i + 1)</span>
+            <span class="c1"># print "debug node", node.getName(), \</span>
             <span class="c1"># node.getParamsDict()</span>
 
 <div class="viewcode-block" id="TIME_DEP_Lattice.setTimeDepNode"><a class="viewcode-back" href="../../../../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice.setTimeDepNode">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setTimeDepNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">TPName</span><span class="p">,</span> <span class="n">waveform</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the waveform function to the TP node before track.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">TPName</span> <span class="o">==</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;TPName&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">TPName</span> <span class="o">==</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"TPName"</span><span class="p">):</span>
                 <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span>
-                <span class="n">node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;waveform&quot;</span><span class="p">,</span> <span class="n">waveform</span><span class="p">)</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"waveform"</span><span class="p">,</span> <span class="n">waveform</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">__TDNodeDict</span><span class="p">[</span><span class="n">TPName</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">flag</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The&quot;</span><span class="p">,</span> <span class="n">TPName</span><span class="p">,</span> <span class="s2">&quot;is not found.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The"</span><span class="p">,</span> <span class="n">TPName</span><span class="p">,</span> <span class="s2">"is not found."</span><span class="p">)</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TIME_DEP_Lattice.setTimeDepStrength"><a class="viewcode-back" href="../../../../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice.setTimeDepStrength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setTimeDepStrength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Set strength to the TP node while running.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">NodeDict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__TDNodeDict</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">NodeDict</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
             <span class="n">node</span> <span class="o">=</span> <span class="n">NodeDict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="n">waveform</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;waveform&quot;</span><span class="p">)</span>
+            <span class="n">waveform</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"waveform"</span><span class="p">)</span>
             <span class="n">waveform</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
             <span class="n">waveformType</span> <span class="o">=</span> <span class="n">waveform</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">waveformType</span> <span class="o">==</span> <span class="s2">&quot;kicker waveform&quot;</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;kick teapot&quot;</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;kx&quot;</span><span class="p">,</span> <span class="n">waveform</span><span class="o">.</span><span class="n">getKx</span><span class="p">())</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;ky&quot;</span><span class="p">,</span> <span class="n">waveform</span><span class="o">.</span><span class="n">getKy</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">waveformType</span> <span class="o">==</span> <span class="s2">"kicker waveform"</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"kick teapot"</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">"kx"</span><span class="p">,</span> <span class="n">waveform</span><span class="o">.</span><span class="n">getKx</span><span class="p">())</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">"ky"</span><span class="p">,</span> <span class="n">waveform</span><span class="o">.</span><span class="n">getKy</span><span class="p">())</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="nb">print</span><span class="p">(</span>
-                        <span class="s2">&quot;No kicker waveform added. </span><span class="se">\</span>
-<span class="s2">                                Please check node type.&quot;</span>
+                        <span class="s2">"No kicker waveform added. </span><span class="se">\</span>
+<span class="s2">                                Please check node type."</span>
                     <span class="p">)</span>
-            <span class="k">elif</span> <span class="n">waveformType</span> <span class="o">==</span> <span class="s2">&quot;magnet waveform&quot;</span><span class="p">:</span>
+            <span class="k">elif</span> <span class="n">waveformType</span> <span class="o">==</span> <span class="s2">"magnet waveform"</span><span class="p">:</span>
                 <span class="n">strength</span> <span class="o">=</span> <span class="n">waveform</span><span class="o">.</span><span class="n">getStrength</span><span class="p">()</span>
-                <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;multipole teapot&quot;</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;kls&quot;</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
-                <span class="k">elif</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;quad teapot&quot;</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;kls&quot;</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;kq&quot;</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
-                <span class="k">elif</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;solenoid teapot&quot;</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"multipole teapot"</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">"kls"</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"quad teapot"</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">"kls"</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">"kq"</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"solenoid teapot"</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="n">strength</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="nb">print</span><span class="p">(</span>
-                        <span class="s2">&quot;No magnet waveform added. </span><span class="se">\</span>
-<span class="s2">                                Please check node type.&quot;</span>
+                        <span class="s2">"No magnet waveform added. </span><span class="se">\</span>
+<span class="s2">                                Please check node type."</span>
                     <span class="p">)</span></div>
 
 <div class="viewcode-block" id="TIME_DEP_Lattice.setParam"><a class="viewcode-back" href="../../../../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice.setParam">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">Kparam</span><span class="p">,</span> <span class="n">strength</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="n">Kparam</span><span class="p">):</span>
             <span class="n">paramval</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="n">Kparam</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">Kparam</span> <span class="o">==</span> <span class="s2">&quot;kls&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">Kparam</span> <span class="o">==</span> <span class="s2">"kls"</span><span class="p">:</span>
                 <span class="n">newparamval</span> <span class="o">=</span> <span class="p">[]</span>
                 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">paramval</span><span class="p">)):</span>
                     <span class="n">newparamval</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">paramval</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">strength</span><span class="p">)</span>
@@ -474,9 +474,9 @@ document.write(`
             <span class="n">node</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="n">Kparam</span><span class="p">,</span> <span class="n">paramval</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TIME_DEP_Lattice.trackBunchTurns"><a class="viewcode-back" href="../../../../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice.trackBunchTurns">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunchTurns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It tracks the bunch through the lattice with multi-turn.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">turns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__turns</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
         <span class="c1"># start</span>
@@ -485,16 +485,16 @@ document.write(`
             <span class="n">syncPart</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span>
             <span class="n">time</span> <span class="o">=</span> <span class="n">syncPart</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">setTimeDepStrength</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;trackBunchTurns time </span><span class="si">%s</span><span class="s2"> in </span><span class="si">%s</span><span class="s2"> turn&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="s2">&quot;.12g&quot;</span><span class="p">),</span> <span class="n">i</span><span class="p">)</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">"trackBunchTurns time </span><span class="si">%s</span><span class="s2"> in </span><span class="si">%s</span><span class="s2"> turn"</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="s2">".12g"</span><span class="p">),</span> <span class="n">i</span><span class="p">)</span></div>
         <span class="c1"># getsublattice</span>
         <span class="c1"># sublattice.trackBunch(bunch)</span>
 
 <div class="viewcode-block" id="TIME_DEP_Lattice.setTurns"><a class="viewcode-back" href="../../../../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice.setTurns">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setTurns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">turns</span><span class="p">,</span> <span class="n">startPosition</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">endPosition</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the turns and start end position before track.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">startNode</span> <span class="o">=</span> <span class="n">StartNode</span><span class="p">(</span><span class="s2">&quot;start node&quot;</span><span class="p">)</span>
-        <span class="n">endNode</span> <span class="o">=</span> <span class="n">EndNode</span><span class="p">(</span><span class="s2">&quot;end node&quot;</span><span class="p">)</span>
+<span class="sd">        """</span>
+        <span class="n">startNode</span> <span class="o">=</span> <span class="n">StartNode</span><span class="p">(</span><span class="s2">"start node"</span><span class="p">)</span>
+        <span class="n">endNode</span> <span class="o">=</span> <span class="n">EndNode</span><span class="p">(</span><span class="s2">"end node"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">startNode</span><span class="p">,</span> <span class="n">startPosition</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">endNode</span><span class="p">,</span> <span class="n">endPosition</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__turns</span> <span class="o">=</span> <span class="n">turns</span></div></div>
@@ -502,19 +502,19 @@ document.write(`
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">StartNode</span><span class="p">(</span><span class="n">AccNode</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name"</span><span class="p">):</span>
         <span class="n">AccNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;start node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"start node"</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="c1"># bunch.getSyncParticle().time(0.)</span>
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">EndNode</span><span class="p">(</span><span class="n">AccNode</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name"</span><span class="p">):</span>
         <span class="n">AccNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;end node&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"end node"</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
         <span class="k">pass</span>

@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.bumps.TeapotBumpNode</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">This module contains bump classes for TEAPOT lattice</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -386,50 +386,50 @@ document.write(`
 
 
 <div class="viewcode-block" id="TeapotSimpleBumpNode"><a class="viewcode-back" href="../../../../reference/orbit.bumps.TeapotSimpleBumpNode/#orbit.bumps.TeapotSimpleBumpNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotSimpleBumpNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Kicker node class for TEAPOT lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bump&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"bump"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates a Bump TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">simplebump</span> <span class="o">=</span> <span class="n">simpleBump</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;Bump&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"Bump"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
 
 <div class="viewcode-block" id="TeapotSimpleBumpNode.track"><a class="viewcode-back" href="../../../../reference/orbit.bumps.TeapotSimpleBumpNode/#orbit.bumps.TeapotSimpleBumpNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Simplebump-teapot class implementation of the</span>
 <span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">simplebump</span><span class="o">.</span><span class="n">bump</span><span class="p">()</span></div></div>
 
 
 <div class="viewcode-block" id="TDTeapotSimpleBumpNode"><a class="viewcode-back" href="../../../../reference/orbit.bumps.TDTeapotSimpleBumpNode/#orbit.bumps.TDTeapotSimpleBumpNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TDTeapotSimpleBumpNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Kicker node class for TEAPOT lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">,</span> <span class="n">waveform</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bump&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">,</span> <span class="n">waveform</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"bump"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates a TDBump TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">TDsimplebump</span> <span class="o">=</span> <span class="n">TDsimpleBump</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">,</span> <span class="n">waveform</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;Bump&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"Bump"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
 
 <div class="viewcode-block" id="TDTeapotSimpleBumpNode.track"><a class="viewcode-back" href="../../../../reference/orbit.bumps.TDTeapotSimpleBumpNode/#orbit.bumps.TDTeapotSimpleBumpNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        TDSimplebump-teapot class implementation of the</span>
 <span class="sd">        AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">TDsimplebump</span><span class="o">.</span><span class="n">bump</span><span class="p">()</span></div></div>
 </pre></div>
 

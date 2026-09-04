@@ -401,15 +401,15 @@ document.write(`
 <span class="c1">// turn value to the particles lost in this collimator.</span>
 <span class="c1">//</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../Bunch.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;TurnNumberAttributes.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"../Bunch.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"TurnNumberAttributes.hh"</span>
 
 <span class="n">TurnNumberAttributes</span><span class="o">::</span><span class="n">TurnNumberAttributes</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">)</span><span class="o">:</span>
 <span class="n">ParticleAttributes</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">  </span><span class="n">cl_name_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TurnNumber&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="n">attrDescr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TurnNumber&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">attr_name_str</span><span class="p">(</span><span class="s">&quot;TurnNumber&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">cl_name_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"TurnNumber"</span><span class="p">;</span>
+<span class="w">  </span><span class="n">attrDescr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"TurnNumber"</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">attr_name_str</span><span class="p">(</span><span class="s">"TurnNumber"</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">//we start counting from the 1st turn</span>
 <span class="w">  </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">setBunchAttribute</span><span class="p">(</span><span class="w"> </span><span class="n">attr_name_str</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="p">}</span>

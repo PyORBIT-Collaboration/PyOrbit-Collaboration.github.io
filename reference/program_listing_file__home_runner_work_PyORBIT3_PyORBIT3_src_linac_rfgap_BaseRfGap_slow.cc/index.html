@@ -380,15 +380,15 @@ document.write(`
   <section id="program-listing-for-file-baserfgap-slow-cc">
 <span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-baserfgap-slow-cc"></span><h1>Program Listing for File BaseRfGap_slow.cc<a class="headerlink" href="#program-listing-for-file-baserfgap-slow-cc" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_BaseRfGap_slow.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-baserfgap-slow-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap/BaseRfGap_slow.cc</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BaseRfGap_slow.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ParticleMacroSize.hh&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"BaseRfGap_slow.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"ParticleMacroSize.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Bunch.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;bessel.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"Bunch.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"bessel.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"OrbitConst.hh"</span>
 
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
 
@@ -465,7 +465,7 @@ document.write(`
 <span class="w">    </span><span class="n">I1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bessi1</span><span class="p">(</span><span class="n">kr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">//longitudinal-energy part</span>
 <span class="w">    </span><span class="n">d_phi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">k</span><span class="o">/</span><span class="n">beta_z</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">//std::cout&lt;&lt;&quot;debug part i=&quot;&lt;&lt;i&lt;&lt;&quot; phase=&quot;&lt;&lt;phase*180./3.1415926&lt;&lt;&quot; d_phi=&quot;&lt;&lt;d_phi*180./3.1415926&lt;&lt;&quot; (phase + d_phi)=&quot;&lt;&lt;(phase + d_phi)*180./3.1415926&lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cout&lt;&lt;"debug part i="&lt;&lt;i&lt;&lt;" phase="&lt;&lt;phase*180./3.1415926&lt;&lt;" d_phi="&lt;&lt;d_phi*180./3.1415926&lt;&lt;" (phase + d_phi)="&lt;&lt;(phase + d_phi)*180./3.1415926&lt;&lt;std::endl;</span>
 <span class="w">    </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">dE</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">dE</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">charge</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">E0TL</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">phase</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d_phi</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">I0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">delta_eKin</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">//the linear part - implemented in MatrixRFGap</span>
 <span class="w">    </span><span class="c1">//bunch-&gt;dE(i) = bunch-&gt;dE(i) - chargeE0TLsin * d_phi;</span>

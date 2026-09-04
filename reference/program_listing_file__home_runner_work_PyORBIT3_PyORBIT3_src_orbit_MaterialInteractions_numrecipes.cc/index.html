@@ -384,7 +384,7 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cfloat&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;numrecipes.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"numrecipes.hh"</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">{</span>
 
@@ -401,7 +401,7 @@ document.write(`
 <span class="w">        </span><span class="n">d</span><span class="o">=</span><span class="n">r_o</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r_o</span><span class="p">;</span>
 
 <span class="w">        </span><span class="n">f_x</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">s</span><span class="o">*</span><span class="n">s</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="o">*</span><span class="n">s</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
-<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;&quot;fx, a, s, b, c, d&quot;&lt;&lt;f_x&lt;&lt;&quot; &quot;&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;s&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;d&lt;&lt;&quot;\n&quot;;</span>
+<span class="w">        </span><span class="c1">//std::cerr&lt;&lt;"fx, a, s, b, c, d"&lt;&lt;f_x&lt;&lt;" "&lt;&lt;a&lt;&lt;" "&lt;&lt;s&lt;&lt;" "&lt;&lt;b&lt;&lt;" "&lt;&lt;c&lt;&lt;" "&lt;&lt;d&lt;&lt;"\n";</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">f_x</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -447,14 +447,14 @@ document.write(`
 
 <span class="w">        </span><span class="n">f</span><span class="o">=</span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="n">param3</span><span class="p">);</span>
 <span class="w">        </span><span class="n">fmid</span><span class="o">=</span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="n">param3</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="o">*</span><span class="n">fmid</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&quot;Root must be bracketed for bisection in rtbis</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="o">*</span><span class="n">fmid</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">"Root must be bracketed for bisection in rtbis</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 <span class="w">        </span><span class="n">rtb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="n">dx</span><span class="o">=</span><span class="n">x2</span><span class="o">-</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="o">-</span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">);</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">JMAX</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">fmid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="n">xmid</span><span class="o">=</span><span class="n">rtb</span><span class="o">+</span><span class="p">(</span><span class="n">dx</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="n">param3</span><span class="p">);</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fmid</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="n">rtb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xmid</span><span class="p">;</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xacc</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">fmid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">rtb</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&quot;Too many bisections in rtbis </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">"Too many bisections in rtbis </span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -541,14 +541,14 @@ document.write(`
 <span class="w">            </span><span class="n">os</span><span class="o">=</span><span class="n">s</span><span class="p">;</span>
 <span class="w">            </span><span class="n">ost</span><span class="o">=</span><span class="n">st</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">//nrerror(&quot;Too many steps in routine qsimp&quot;);</span>
+<span class="w">        </span><span class="c1">//nrerror("Too many steps in routine qsimp");</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="cp">#undef EPS</span>
 <span class="cp">#undef JMAX</span>
 
 
-<span class="w">    </span><span class="cm">/* note #undef&#39;s at end of file */</span>
+<span class="w">    </span><span class="cm">/* note #undef's at end of file */</span>
 <span class="cp">#if !defined(DOXYGEN_SHOULD_SKIP_THIS)</span>
 <span class="cp">#define FUNC(x, p, fac1) ((*rfunc)(x, p, fac1))</span>
 <span class="cp">#endif</span>

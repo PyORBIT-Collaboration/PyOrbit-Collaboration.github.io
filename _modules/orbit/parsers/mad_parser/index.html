@@ -374,49 +374,49 @@ document.write(`
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">_possibleElementType</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class. Specifies all possible element types</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates list of element types.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;drift&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;sbend&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;rbend&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;quad&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;quadrupole&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;sextupole&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;octupole&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;multipole&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;solenoid&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;kicker&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;hkicker&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;vkicker&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;hkick&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;vkick&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;rfcavity&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;rcollimator&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;marker&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;monitor&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"drift"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"sbend"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"rbend"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"quad"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"quadrupole"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"sextupole"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"octupole"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"multipole"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"solenoid"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"kicker"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"hkicker"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"vkicker"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"hkick"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"vkick"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"rfcavity"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"rcollimator"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"marker"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"monitor"</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Deletes element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">checkType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name_in</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Confirms validity of element type.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">name_in</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__names_type</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error creating lattice element:&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There is no element with type: &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error creating lattice element:"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"There is no element with type: "</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Stop."</span><span class="p">)</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">name_in</span>
 
@@ -425,75 +425,75 @@ document.write(`
 
 
 <div class="viewcode-block" id="MAD_LattElement"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MAD_LattElement</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class. Represents an arbitrary element in the lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">_typeChecker</span> <span class="o">=</span> <span class="n">_possibleElementType</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">Typename</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates element with name, type,</span>
 <span class="sd">        and parameter dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_typeChecker</span><span class="o">.</span><span class="n">checkType</span><span class="p">(</span><span class="n">Typename</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__par</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Deletes parameters.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__par</span>
 
 <div class="viewcode-block" id="MAD_LattElement.getName"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement.getName">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns name of element</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span></div>
 
 <div class="viewcode-block" id="MAD_LattElement.setType"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement.setType">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tp</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Sets the type of element without checking.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__type</span> <span class="o">=</span> <span class="n">tp</span></div>
 
 <div class="viewcode-block" id="MAD_LattElement.getType"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement.getType">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns type of element</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__type</span></div>
 
 <div class="viewcode-block" id="MAD_LattElement.addParameter"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement.addParameter">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addParameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nameOfPar</span><span class="p">,</span> <span class="n">parVal</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Adds parameter and value to element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__par</span><span class="p">[</span><span class="n">nameOfPar</span><span class="p">]</span> <span class="o">=</span> <span class="n">parVal</span></div>
 
 <div class="viewcode-block" id="MAD_LattElement.getParameter"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement.getParameter">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getParameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nameOfPar</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns name of parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">nameOfPar</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__par</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;class MAD_LattElement, method getParameter&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The name of Element = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The type of Element = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__type</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Element&#39;s key-val = &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__par</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This Element does not have Parameter = &quot;</span><span class="p">,</span> <span class="n">nameOfPar</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"class MAD_LattElement, method getParameter"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The name of Element = "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The type of Element = "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__type</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"The Element's key-val = "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__par</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"This Element does not have Parameter = "</span><span class="p">,</span> <span class="n">nameOfPar</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Stop."</span><span class="p">)</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__par</span><span class="p">[</span><span class="n">nameOfPar</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="MAD_LattElement.getParameters"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement.getParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns parameter dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__par</span></div>
 
 <div class="viewcode-block" id="MAD_LattElement.getElements"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattElement/#orbit.parsers.MAD_LattElement.getElements">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getElements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns list of elements (only one here)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">elements</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">elements</span></div></div>
@@ -503,55 +503,55 @@ document.write(`
 
 
 <div class="viewcode-block" id="MAD_LattLine"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattLine/#orbit.parsers.MAD_LattLine">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MAD_LattLine</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class. Represents an arbitrary line in the lattice.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates line with list of lines and/or elements.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__items</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__sign_arr</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Deletes instance with list of lines and/or elements.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__items</span>
 
 <div class="viewcode-block" id="MAD_LattLine.getName"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattLine/#orbit.parsers.MAD_LattLine.getName">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns name of the line.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span></div>
 
 <div class="viewcode-block" id="MAD_LattLine.getType"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattLine/#orbit.parsers.MAD_LattLine.getType">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Method. Returns type: &quot;LINE&quot;.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;LINE&quot;</span></div>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Method. Returns type: "LINE".</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="s2">"LINE"</span></div>
 
 <div class="viewcode-block" id="MAD_LattLine.addItem"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattLine/#orbit.parsers.MAD_LattLine.addItem">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">sign</span><span class="o">=+</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Adds a line or element to this line.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__sign_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sign</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="MAD_LattLine.getItems"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattLine/#orbit.parsers.MAD_LattLine.getItems">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getItems</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns list with elements and lines.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__items</span></div>
 
 <div class="viewcode-block" id="MAD_LattLine.getLinesDict"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattLine/#orbit.parsers.MAD_LattLine.getLinesDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLinesDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns a dictionary</span>
 <span class="sd">        containing all lattice lines, recursive.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__items</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="ow">or</span> <span class="n">item</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
@@ -559,13 +559,13 @@ document.write(`
         <span class="k">return</span> <span class="nb">dict</span></div>
 
 <div class="viewcode-block" id="MAD_LattLine.getElements"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_LattLine/#orbit.parsers.MAD_LattLine.getElements">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getElements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns list of elements&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns list of elements"""</span>
         <span class="n">elements</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="c1"># print &quot;debug ================= name line = &quot;,self.getName()</span>
+        <span class="c1"># print "debug ================= name line = ",self.getName()</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__items</span><span class="p">)):</span>
             <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
             <span class="n">sign</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__sign_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="c1"># print &quot;           debug item=&quot;,item.getName(),&quot; sign=&quot;,sign</span>
+            <span class="c1"># print "           debug item=",item.getName()," sign=",sign</span>
             <span class="n">elems</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">getElements</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">sign</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
                 <span class="n">elems</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
@@ -578,40 +578,40 @@ document.write(`
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">_madLine</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class: A line of a MAD file. It can be one of three types:</span>
 <span class="sd">    variable, accelerator line, or accelerator element.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates a blank MAD file line class instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__line</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__line</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__type</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">setLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Sets a MAD file line class instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__line</span> <span class="o">=</span> <span class="n">line</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getLine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns a MAD file line class instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__line</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">setType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ltype</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Sets a MAD file line type.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__type</span> <span class="o">=</span> <span class="n">ltype</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns a MAD file line type.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__type</span>
 
 
@@ -619,37 +619,37 @@ document.write(`
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">_variable</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class. Holds MAD variables.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates empty MAD variable.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_expression</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_expression</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getType</span><span class="p">():</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Static method of this class.</span>
 <span class="sd">        Returns the name of the type.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;variable&quot;</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="s2">"variable"</span>
 
     <span class="n">getType</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">getType</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the numerical value of this variable.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">setValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It sets the numerical value of this variable.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">val</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
@@ -665,22 +665,22 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_expression</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">parseLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line_init</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It does the first parsing of the initial string.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="c1"># divide string onto two parts: name of value and value</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;=:=).*&quot;</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;=:=).*"</span><span class="p">)</span>
         <span class="n">s_val</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_val</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;.*(?=:=)&quot;</span><span class="p">)</span>
+            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">".*(?=:=)"</span><span class="p">)</span>
             <span class="n">s_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)</span>
             <span class="n">s_val</span> <span class="o">=</span> <span class="n">s_val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">s_name</span> <span class="o">=</span> <span class="n">s_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># deal with const defenition like AA = 1.2</span>
-            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;==).*&quot;</span><span class="p">)</span>
+            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;==).*"</span><span class="p">)</span>
             <span class="n">s_val</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)</span>
-            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;.*(?==)&quot;</span><span class="p">)</span>
+            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">".*(?==)"</span><span class="p">)</span>
             <span class="n">s_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)</span>
             <span class="n">s_val</span> <span class="o">=</span> <span class="n">s_val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">s_name</span> <span class="o">=</span> <span class="n">s_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -692,9 +692,9 @@ document.write(`
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">_element</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The MAD element class. It also keeps initial string (line) from MAD file.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
@@ -703,11 +703,11 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">_numParameters</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getType</span><span class="p">():</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It is static method of this class.</span>
 <span class="sd">        It returns the name of the type.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;element&quot;</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="s2">"element"</span>
 
     <span class="n">getType</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">getType</span><span class="p">)</span>
 
@@ -724,40 +724,40 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_elementType</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the dictionary with key:string pairs</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getNumParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the dictionary with {key:(numeric value)} pairs</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numParameters</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">parseLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line_init</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It does the first parsing of the initial string.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="c1"># divide string onto three parts: name,type and key-values of element</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\w]+(?=:)&quot;</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[\w]+(?=:)"</span><span class="p">)</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;=:)[\w]+?(?=\s|,)&quot;</span><span class="p">)</span>
-        <span class="nb">type</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;=:)[\w]+?(?=\s|,)"</span><span class="p">)</span>
+        <span class="nb">type</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span> <span class="o">+</span> <span class="s2">","</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setElementType</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;=\w),.*&quot;</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;=\w),.*"</span><span class="p">)</span>
         <span class="n">s_key_vals</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)</span>
         <span class="c1"># ==================================================</span>
-        <span class="c1"># now we have name and type, let&#39;s get key-val pairs</span>
+        <span class="c1"># now we have name and type, let's get key-val pairs</span>
         <span class="c1"># ==================================================</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_key_vals</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="n">s_key_vals</span> <span class="o">=</span> <span class="n">s_key_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;=,).+?(?=,)&quot;</span><span class="p">)</span>
+        <span class="n">s_key_vals</span> <span class="o">=</span> <span class="n">s_key_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">","</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;=,).+?(?=,)"</span><span class="p">)</span>
         <span class="n">s_key_vals</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">s_key_vals</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">s_key_val</span> <span class="ow">in</span> <span class="n">s_key_vals</span><span class="p">:</span>
-            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\w]+?(?==)&quot;</span><span class="p">)</span>
+            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[\w]+?(?==)"</span><span class="p">)</span>
             <span class="n">key</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">s_key_val</span><span class="p">)</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="c1"># we have stand alone key, e.g. T1</span>
@@ -765,30 +765,30 @@ document.write(`
                 <span class="n">val</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-                <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;==).*&quot;</span><span class="p">)</span>
+                <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;==).*"</span><span class="p">)</span>
                 <span class="n">val</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">s_key_val</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_parameters</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_numParameters</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">_accLine</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The MAD accelerator class. It also keeps initial string (line) from MAD file.</span>
 <span class="sd">    The component lines could have reverse order of element. We keep sign in</span>
 <span class="sd">    compSign array.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_expression</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_expression</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_components</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getType</span><span class="p">():</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It is static method of this class.</span>
 <span class="sd">        It returns the name of the type.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;accLine&quot;</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="s2">"accLine"</span>
 
     <span class="n">getType</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">getType</span><span class="p">)</span>
 
@@ -805,28 +805,28 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_expression</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getComponents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the set with tuples (components name, sign)</span>
 <span class="sd">        The sign define the order of elements from sub-line.</span>
 <span class="sd">        The sign +- 1. The -1 means the revers order.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_components</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">parseLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line_init</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It does the first parsing of the initial string.</span>
 <span class="sd">        Parses the MAD file line with lattice line definition.</span>
 <span class="sd">        The sign is +- 1. The -1 means the revers order for the elements</span>
 <span class="sd">        inside the component.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="c1"># define name of new line</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\w]+(?=:)&quot;</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[\w]+(?=:)"</span><span class="p">)</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;==).*&quot;</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;==).*"</span><span class="p">)</span>
         <span class="n">s_def</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">line_init</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setExpression</span><span class="p">(</span><span class="n">s_def</span><span class="p">)</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;=\(|,).+?(?=,|\))&quot;</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;=\(|,).+?(?=,|\))"</span><span class="p">)</span>
         <span class="n">item_names</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">s_def</span><span class="p">)</span>
         <span class="c1"># =========================================</span>
         <span class="c1"># deal with the N*name expressions</span>
@@ -835,14 +835,14 @@ document.write(`
         <span class="k">for</span> <span class="n">it_in</span> <span class="ow">in</span> <span class="n">item_names</span><span class="p">:</span>
             <span class="n">sign</span> <span class="o">=</span> <span class="o">+</span><span class="mi">1</span>
             <span class="n">it</span> <span class="o">=</span> <span class="n">it_in</span>
-            <span class="k">if</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"-"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">sign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
                 <span class="n">it</span> <span class="o">=</span> <span class="n">it_in</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\d]+?(?=\*)&quot;</span><span class="p">)</span>
+            <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[\d]+?(?=\*)"</span><span class="p">)</span>
             <span class="n">n_rep</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">it</span><span class="p">)</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">n_rep</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">n_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n_rep</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-                <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;=\*)[\w]+&quot;</span><span class="p">)</span>
+                <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;=\*)[\w]+"</span><span class="p">)</span>
                 <span class="n">s</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">it</span><span class="p">)</span>
                 <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
                 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_rep</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
@@ -853,16 +853,16 @@ document.write(`
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">StringFunctions</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class defines the set of static string functions.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">replaceElementKeys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str_in</span><span class="p">,</span> <span class="n">elem</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It will replace elem[key] in the string expression of this variable.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">new_val</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="n">elem</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;\[&quot;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;\]&quot;</span>
+<span class="sd">        """</span>
+        <span class="n">new_val</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"("</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">")"</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">elem</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">"\["</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">"\]"</span>
         <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
         <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">new_val</span><span class="p">,</span> <span class="n">str_in</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">str_out</span>
@@ -870,16 +870,16 @@ document.write(`
     <span class="n">replaceElementKeys</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">replaceElementKeys</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">getElementKeys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str_in</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the set of [element,key] pairs for input string.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\w]*\[[\w]*\]&quot;</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[\w]*\[[\w]*\]"</span><span class="p">)</span>
         <span class="n">s_name_key</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">str_in</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_name_key</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">res</span>
-        <span class="n">patt_elem</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\w]*(?=\[)&quot;</span><span class="p">)</span>
-        <span class="n">patt_key</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;=\[)[\w]*(?=\])&quot;</span><span class="p">)</span>
+        <span class="n">patt_elem</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[\w]*(?=\[)"</span><span class="p">)</span>
+        <span class="n">patt_key</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(?&lt;=\[)[\w]*(?=\])"</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">s_name_key</span><span class="p">:</span>
             <span class="n">elem</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt_elem</span><span class="p">,</span> <span class="n">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">key</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">patt_key</span><span class="p">,</span> <span class="n">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
@@ -889,10 +889,10 @@ document.write(`
     <span class="n">getElementKeys</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">getElementKeys</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">calculateString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str_in</span><span class="p">,</span> <span class="n">localDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns a tuple (True,value) if</span>
 <span class="sd">        the expression can be evaluated and (False,None) otherwise.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">val</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">str_in</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">localDict</span><span class="p">)</span>
             <span class="k">return</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
@@ -902,31 +902,31 @@ document.write(`
     <span class="n">calculateString</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">calculateString</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">replaceMath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str_in</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It replaces math symbols</span>
 <span class="sd">        to make them readable for python eval().</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="c1"># replace .e by .0e</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\.e&quot;</span><span class="p">,</span> <span class="s2">&quot;.0e&quot;</span><span class="p">,</span> <span class="n">str_in</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\.e"</span><span class="p">,</span> <span class="s2">".0e"</span><span class="p">,</span> <span class="n">str_in</span><span class="p">)</span>
         <span class="c1"># check the math operatons</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;sin\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.sin(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;SIN\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.sin(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;cos\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.cos(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;COS\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.cos(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;tan\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.tan(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;TAN\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.tan(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;exp\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.exp(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;EXP\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.exp(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;log\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.log(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;LOG\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.log(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;acos\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.acos(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;ACOS\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.acos(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;asin\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.asin(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;ASIN\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.asin(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;atan\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.atan(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;ATAN\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.atan(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;sqrt\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.sqrt(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
-        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;SQRT\(&quot;</span><span class="p">,</span> <span class="s2">&quot;math.sqrt(&quot;</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"sin\("</span><span class="p">,</span> <span class="s2">"math.sin("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"SIN\("</span><span class="p">,</span> <span class="s2">"math.sin("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"cos\("</span><span class="p">,</span> <span class="s2">"math.cos("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"COS\("</span><span class="p">,</span> <span class="s2">"math.cos("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"tan\("</span><span class="p">,</span> <span class="s2">"math.tan("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"TAN\("</span><span class="p">,</span> <span class="s2">"math.tan("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"exp\("</span><span class="p">,</span> <span class="s2">"math.exp("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"EXP\("</span><span class="p">,</span> <span class="s2">"math.exp("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"log\("</span><span class="p">,</span> <span class="s2">"math.log("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"LOG\("</span><span class="p">,</span> <span class="s2">"math.log("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"acos\("</span><span class="p">,</span> <span class="s2">"math.acos("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"ACOS\("</span><span class="p">,</span> <span class="s2">"math.acos("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"asin\("</span><span class="p">,</span> <span class="s2">"math.asin("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"ASIN\("</span><span class="p">,</span> <span class="s2">"math.asin("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"atan\("</span><span class="p">,</span> <span class="s2">"math.atan("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"ATAN\("</span><span class="p">,</span> <span class="s2">"math.atan("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"sqrt\("</span><span class="p">,</span> <span class="s2">"math.sqrt("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
+        <span class="n">str_out</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"SQRT\("</span><span class="p">,</span> <span class="s2">"math.sqrt("</span><span class="p">,</span> <span class="n">str_out</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">str_out</span>
 
     <span class="n">replaceMath</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">replaceMath</span><span class="p">)</span>
@@ -936,20 +936,20 @@ document.write(`
 
 
 <div class="viewcode-block" id="MAD_Parser"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MAD_Parser</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;MAD parser&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""MAD parser"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create instance of the MAD_Parser class&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Create instance of the MAD_Parser class"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__madLines</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__accValues</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__accElements</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__accLines</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__madFilePath</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__madFilePath</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="c1"># old style lattice elements and lines</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__lattElems</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__lattLines</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># the lines to ignore will start with these words</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__ingnoreWords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;beam&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__ingnoreWords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"title"</span><span class="p">,</span> <span class="s2">"beam"</span><span class="p">]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__madLines</span>
@@ -963,7 +963,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
         <span class="c1"># -----------------------------------------------------------</span>
         <span class="c1"># The madLines has all lines</span>
-        <span class="c1"># Let&#39;s create values, elements, and accelerator lines arrays</span>
+        <span class="c1"># Let's create values, elements, and accelerator lines arrays</span>
         <span class="c1"># -----------------------------------------------------------</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__madLines</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span> <span class="o">==</span> <span class="n">_accLine</span><span class="o">.</span><span class="n">getType</span><span class="p">():</span>
@@ -978,9 +978,9 @@ document.write(`
                 <span class="n">elem</span> <span class="o">=</span> <span class="n">_element</span><span class="p">()</span>
                 <span class="n">elem</span><span class="o">.</span><span class="n">parseLine</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">getLine</span><span class="p">())</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">__accElements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
-        <span class="c1"># print &quot;debug size values=&quot;,len(self.__accValues)</span>
-        <span class="c1"># print &quot;debug size elements=&quot;,len(self.__accElements)</span>
-        <span class="c1"># print &quot;debug size accLines=&quot;,len(self.__accLines)</span>
+        <span class="c1"># print "debug size values=",len(self.__accValues)</span>
+        <span class="c1"># print "debug size elements=",len(self.__accElements)</span>
+        <span class="c1"># print "debug size accLines=",len(self.__accLines)</span>
         <span class="c1"># -----------------------------------------------</span>
         <span class="c1"># replace all elem[key] substrings in elements by</span>
         <span class="c1"># variables</span>
@@ -993,7 +993,7 @@ document.write(`
         <span class="k">while</span> <span class="n">doNotStop</span><span class="p">:</span>
             <span class="n">doNotStop</span> <span class="o">=</span> <span class="kc">False</span>
             <span class="n">accElemDictCp</span> <span class="o">=</span> <span class="n">accElemDict</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-            <span class="c1"># print &quot;debug dict size=&quot;,len(accElemDictCp)</span>
+            <span class="c1"># print "debug dict size=",len(accElemDictCp)</span>
             <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">accElem</span> <span class="ow">in</span> <span class="n">accElemDictCp</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                 <span class="n">kvs</span> <span class="o">=</span> <span class="n">accElem</span><span class="o">.</span><span class="n">getParameters</span><span class="p">()</span>
                 <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">kvs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -1008,15 +1008,15 @@ document.write(`
                             <span class="n">val</span> <span class="o">=</span> <span class="n">StringFunctions</span><span class="o">.</span><span class="n">replaceElementKeys</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">replVal</span><span class="p">)</span>
                     <span class="n">kvs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">accElemDictCp</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">accElemDict</span><span class="p">):</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=========== Unresolved AccElements============&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"=========== Unresolved AccElements============"</span><span class="p">)</span>
                 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">accElem</span> <span class="ow">in</span> <span class="n">accElemDictCp</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;name=&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;  params=&quot;</span><span class="p">,</span> <span class="n">accElem</span><span class="o">.</span><span class="n">getParameters</span><span class="p">())</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=========== MAD File Problem ===============&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=================STOP=======================&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"name="</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"  params="</span><span class="p">,</span> <span class="n">accElem</span><span class="o">.</span><span class="n">getParameters</span><span class="p">())</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"=========== MAD File Problem ==============="</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"=================STOP======================="</span><span class="p">)</span>
                 <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># ---------------------------------------------------------</span>
         <span class="c1"># Elements are ready!</span>
-        <span class="c1"># Now let&#39;s substitute elements parameters in variables&#39; expression.</span>
+        <span class="c1"># Now let's substitute elements parameters in variables' expression.</span>
         <span class="c1"># ---------------------------------------------------------</span>
         <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accValues</span><span class="p">:</span>
             <span class="n">val</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">getExpression</span><span class="p">()</span>
@@ -1027,14 +1027,14 @@ document.write(`
                 <span class="n">val</span> <span class="o">=</span> <span class="n">StringFunctions</span><span class="o">.</span><span class="n">replaceElementKeys</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">replVal</span><span class="p">)</span>
             <span class="n">var</span><span class="o">.</span><span class="n">setExpression</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
         <span class="c1"># -----------------------------------------------</span>
-        <span class="c1"># now let&#39;s calculate all variables</span>
+        <span class="c1"># now let's calculate all variables</span>
         <span class="c1"># -----------------------------------------------</span>
         <span class="c1"># replace all math cos,sin, etc by math.cos, math.sin, etc</span>
         <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accValues</span><span class="p">:</span>
             <span class="n">val</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">getExpression</span><span class="p">()</span>
             <span class="n">val</span> <span class="o">=</span> <span class="n">StringFunctions</span><span class="o">.</span><span class="n">replaceMath</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
             <span class="n">var</span><span class="o">.</span><span class="n">setExpression</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-        <span class="c1"># Then let&#39;s calculate numerical values.</span>
+        <span class="c1"># Then let's calculate numerical values.</span>
         <span class="c1"># They can be defined recursivelly, so we need iterations</span>
         <span class="n">accVarDict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accValues</span><span class="p">:</span>
@@ -1044,7 +1044,7 @@ document.write(`
         <span class="k">while</span> <span class="n">doNotStop</span><span class="p">:</span>
             <span class="n">doNotStop</span> <span class="o">=</span> <span class="kc">False</span>
             <span class="n">accVarDictInner</span> <span class="o">=</span> <span class="n">accVarDict</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-            <span class="c1"># print &quot;debug variables dict. size=&quot;,len(accVarDictInner)</span>
+            <span class="c1"># print "debug variables dict. size=",len(accVarDictInner)</span>
             <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">accVarDictInner</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                 <span class="n">str_in</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">getExpression</span><span class="p">()</span>
                 <span class="n">res</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">StringFunctions</span><span class="o">.</span><span class="n">calculateString</span><span class="p">(</span><span class="n">str_in</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">localValDict</span><span class="p">)</span>
@@ -1055,11 +1055,11 @@ document.write(`
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">doNotStop</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">accVarDictInner</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">accVarDict</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">accVarDict</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=========== Unresolved Variables============&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"=========== Unresolved Variables============"</span><span class="p">)</span>
                 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">accVarDictInner</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;name=&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;  str=&quot;</span><span class="p">,</span> <span class="n">var</span><span class="o">.</span><span class="n">getExpression</span><span class="p">())</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=========== MAD File Problem ===============&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=================STOP=======================&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"name="</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"  str="</span><span class="p">,</span> <span class="n">var</span><span class="o">.</span><span class="n">getExpression</span><span class="p">())</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"=========== MAD File Problem ==============="</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"=================STOP======================="</span><span class="p">)</span>
                 <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># -------------------------------------------</span>
         <span class="c1"># Now calculate all parameters in key,string_value</span>
@@ -1073,15 +1073,15 @@ document.write(`
                 <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
                     <span class="n">res</span><span class="p">,</span> <span class="n">val_out</span> <span class="o">=</span> <span class="n">StringFunctions</span><span class="o">.</span><span class="n">calculateString</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">localValDict</span><span class="p">)</span>
                     <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="p">:</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=============MAD File problem ==============&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Problem with acc. element:&quot;</span><span class="p">,</span> <span class="n">accElem</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parameter name:&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can not calculate string:&quot;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;============ STOP ==========================&quot;</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"=============MAD File problem =============="</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"Problem with acc. element:"</span><span class="p">,</span> <span class="n">accElem</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"Parameter name:"</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"Can not calculate string:"</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"============ STOP =========================="</span><span class="p">)</span>
                         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
                 <span class="n">kvNums</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val_out</span>
         <span class="c1"># ---------------------------------------------</span>
-        <span class="c1"># Let&#39;s create all lattice elements (old style)</span>
+        <span class="c1"># Let's create all lattice elements (old style)</span>
         <span class="c1"># ---------------------------------------------</span>
         <span class="k">for</span> <span class="n">accElem</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accElements</span><span class="p">:</span>
             <span class="n">lattElem</span> <span class="o">=</span> <span class="n">MAD_LattElement</span><span class="p">(</span><span class="n">accElem</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="n">accElem</span><span class="o">.</span><span class="n">getElementType</span><span class="p">())</span>
@@ -1090,7 +1090,7 @@ document.write(`
             <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">kvs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                 <span class="n">lattElem</span><span class="o">.</span><span class="n">addParameter</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
         <span class="c1"># ----------------------------------------------</span>
-        <span class="c1"># Let&#39;s create lattice lines (old style)</span>
+        <span class="c1"># Let's create lattice lines (old style)</span>
         <span class="c1"># ----------------------------------------------</span>
         <span class="n">lattElemDict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lattElems</span><span class="p">:</span>
@@ -1109,16 +1109,16 @@ document.write(`
             <span class="n">childs</span> <span class="o">=</span> <span class="n">accLine</span><span class="o">.</span><span class="n">getComponents</span><span class="p">()</span>
             <span class="k">for</span> <span class="n">child</span><span class="p">,</span> <span class="n">sign</span> <span class="ow">in</span> <span class="n">childs</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">lattElemDict</span> <span class="ow">and</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">accLineDict</span><span class="p">:</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=========== MAD File Problem ===============&quot;</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accelerator line and element have the same name:&quot;</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=================STOP=======================&quot;</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lattice Line name=&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"=========== MAD File Problem ==============="</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"Accelerator line and element have the same name:"</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"=================STOP======================="</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"Lattice Line name="</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
                     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">child</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lattElemDict</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">child</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">accLineDict</span><span class="p">):</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=========== MAD File Problem ===============&quot;</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can not find Accelerator line and element with name:&quot;</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lattice Line name=&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=================STOP=======================&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"=========== MAD File Problem ==============="</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"Can not find Accelerator line and element with name:"</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"Lattice Line name="</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"=================STOP======================="</span><span class="p">)</span>
                     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">lattElemDict</span><span class="p">:</span>
                     <span class="n">lattLine</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">lattElemDict</span><span class="p">[</span><span class="n">child</span><span class="p">],</span> <span class="n">sign</span><span class="p">)</span>
@@ -1127,51 +1127,51 @@ document.write(`
 
 <div class="viewcode-block" id="MAD_Parser.initialize"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser.initialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mad_file_name</span><span class="p">):</span>
         <span class="n">fl</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__madFilePath</span><span class="p">,</span> <span class="n">mad_file_name</span><span class="p">))</span>
-        <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="k">for</span> <span class="nb">str</span> <span class="ow">in</span> <span class="n">fl</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
             <span class="c1"># check if the line is a comment</span>
-            <span class="k">if</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"!"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span>
                 <span class="k">continue</span>
             <span class="c1"># STOP parsing a MAD file if there is a start of mad commands</span>
-            <span class="k">if</span> <span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;use&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"use"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">break</span>
-            <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()])</span>
-            <span class="c1"># this part deal with a comment &quot;!&quot; at the end of line</span>
+            <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()])</span>
+            <span class="c1"># this part deal with a comment "!" at the end of line</span>
             <span class="n">str0</span> <span class="o">=</span> <span class="n">str_local</span>
-            <span class="k">if</span> <span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)):</span>
-                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="n">str0</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+            <span class="k">if</span> <span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">"!"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">"!"</span><span class="p">)):</span>
+                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="n">str0</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
             <span class="n">str_local</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-            <span class="c1"># this part deal with a comment &quot;;&quot; at the end of line</span>
+            <span class="c1"># this part deal with a comment ";" at the end of line</span>
             <span class="n">str0</span> <span class="o">=</span> <span class="n">str_local</span>
-            <span class="k">if</span> <span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)):</span>
-                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="n">str0</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+            <span class="k">if</span> <span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">";"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">";"</span><span class="p">)):</span>
+                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="n">str0</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
             <span class="n">str_local</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
             <span class="c1"># this part deal with a continue sign at the end of line</span>
-            <span class="k">if</span> <span class="n">str_local</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">str_local</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">"&amp;"</span><span class="p">):</span>
                 <span class="n">str0</span> <span class="o">=</span> <span class="n">str_local</span>
-                <span class="k">if</span> <span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">)):</span>
-                        <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="n">str0</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+                <span class="k">if</span> <span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">"&amp;"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">str0</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">"&amp;"</span><span class="p">)):</span>
+                        <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_local</span><span class="p">,</span> <span class="n">str0</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
                 <span class="n">str_local</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
                 <span class="k">continue</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># check the empty line</span>
-                <span class="k">if</span> <span class="n">str_local</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
-                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="k">if</span> <span class="n">str_local</span> <span class="o">==</span> <span class="s2">""</span><span class="p">:</span>
+                    <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span>
                     <span class="k">continue</span>
                 <span class="c1"># now we have the line to parse</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_init_string</span><span class="p">(</span><span class="n">str_local</span><span class="p">)</span>
-                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">str_local</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="n">fl</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_init_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">str0</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;The method initializes the one string&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""The method initializes the one string"""</span>
         <span class="c1"># Now here 5 types of string</span>
         <span class="c1"># 0 - unknown type of the line</span>
         <span class="c1"># 1 - variables calculations</span>
@@ -1179,36 +1179,36 @@ document.write(`
         <span class="c1"># 3 - MAD line definition</span>
         <span class="c1"># 4 - call another nested MAD file</span>
         <span class="c1"># Delete spaces</span>
-        <span class="n">str0</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[ ]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">str0</span><span class="p">)</span>
+        <span class="n">str0</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[ ]"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="n">str0</span><span class="p">)</span>
         <span class="n">tp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findLineType</span><span class="p">(</span><span class="n">str0</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">tp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># print &quot;StrType =0 :&quot;,str0</span>
+            <span class="c1"># print "StrType =0 :",str0</span>
             <span class="k">return</span>
         <span class="k">if</span> <span class="n">tp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="c1"># print &quot;StrType =1 :&quot;,str0</span>
+            <span class="c1"># print "StrType =1 :",str0</span>
             <span class="n">madLine</span> <span class="o">=</span> <span class="n">_madLine</span><span class="p">()</span>
             <span class="n">madLine</span><span class="o">.</span><span class="n">setLine</span><span class="p">(</span><span class="n">str0</span><span class="p">)</span>
-            <span class="n">madLine</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;variable&quot;</span><span class="p">)</span>
+            <span class="n">madLine</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"variable"</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__madLines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">madLine</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">tp</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="c1"># print &quot;StrType =2 :&quot;,str0</span>
+            <span class="c1"># print "StrType =2 :",str0</span>
             <span class="n">madLine</span> <span class="o">=</span> <span class="n">_madLine</span><span class="p">()</span>
             <span class="n">madLine</span><span class="o">.</span><span class="n">setLine</span><span class="p">(</span><span class="n">str0</span><span class="p">)</span>
-            <span class="n">madLine</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;element&quot;</span><span class="p">)</span>
+            <span class="n">madLine</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"element"</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__madLines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">madLine</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">tp</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-            <span class="c1"># print &quot;StrType =3 :&quot;,str0</span>
+            <span class="c1"># print "StrType =3 :",str0</span>
             <span class="n">madLine</span> <span class="o">=</span> <span class="n">_madLine</span><span class="p">()</span>
             <span class="n">madLine</span><span class="o">.</span><span class="n">setLine</span><span class="p">(</span><span class="n">str0</span><span class="p">)</span>
-            <span class="n">madLine</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;accLine&quot;</span><span class="p">)</span>
+            <span class="n">madLine</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"accLine"</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__madLines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">madLine</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">tp</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-            <span class="c1"># print &quot;StrType =4 :&quot;,str0</span>
+            <span class="c1"># print "StrType =4 :",str0</span>
             <span class="n">fl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parseNestedFileLine</span><span class="p">(</span><span class="n">str0</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">fl</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_findLineType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return type of the string&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Return type of the string"""</span>
         <span class="c1"># Now here 5 types of string</span>
         <span class="c1"># 0 - unknown type of the line</span>
         <span class="c1"># 1 - variables calculations</span>
@@ -1219,94 +1219,94 @@ document.write(`
         <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ingnoreWords</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">stype</span>
-        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;.*:=.*&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">".*:=.*"</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">t_match</span><span class="p">:</span>
             <span class="n">stype</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;.*=.*&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">".*=.*"</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">stype</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\w]* *:.*&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+            <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[\w]* *:.*"</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">t_match</span><span class="p">:</span>
                 <span class="n">stype</span> <span class="o">=</span> <span class="mi">2</span>
-        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;.*:.*line.*=&quot;</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">".*:.*line.*="</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">t_match</span><span class="p">:</span>
             <span class="n">stype</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot; *call *file *=&quot;</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+        <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">" *call *file *="</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">t_match</span><span class="p">:</span>
             <span class="n">stype</span> <span class="o">=</span> <span class="mi">4</span>
         <span class="c1"># deal with constant defenition like AAA = 1.0</span>
         <span class="k">if</span> <span class="n">stype</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;.*=.*&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+            <span class="n">t_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">".*=.*"</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">t_match</span><span class="p">:</span>
                 <span class="n">stype</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">stype</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_parseNestedFileLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the name of the nested file&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the name of the nested file"""</span>
         <span class="c1"># Define delimiter</span>
-        <span class="n">dl</span> <span class="o">=</span> <span class="s2">&quot;&#39;&quot;</span>
+        <span class="n">dl</span> <span class="o">=</span> <span class="s2">"'"</span>
         <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">dl</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">dl</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span>
+            <span class="n">dl</span> <span class="o">=</span> <span class="s1">'"'</span>
         <span class="n">ind0</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">dl</span><span class="p">)</span>
         <span class="n">ind0</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">ind1</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="n">dl</span><span class="p">)</span>
-        <span class="n">str_res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">str_res</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="k">if</span> <span class="n">ind0</span> <span class="o">&gt;=</span> <span class="n">ind1</span> <span class="ow">or</span> <span class="n">ind0</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ind1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong line in the MAD file&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;line Call file= defines wrong name of file format&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should be : Call file = &#39;name of file&#39;&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Line:&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Wrong line in the MAD file"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"line Call file= defines wrong name of file format"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Should be : Call file = 'name of file'"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Line:"</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Stop."</span><span class="p">)</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ind0</span><span class="p">,</span> <span class="n">ind1</span><span class="p">):</span>
-            <span class="n">str_res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_res</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+            <span class="n">str_res</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">str_res</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
         <span class="k">return</span> <span class="n">str_res</span>
 
 <div class="viewcode-block" id="MAD_Parser.getMAD_Lines"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser.getMAD_Lines">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMAD_Lines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the list of the lattice lines</span>
 <span class="sd">        that are defined in the MAD file.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lattLines</span></div>
 
 <div class="viewcode-block" id="MAD_Parser.getMAD_Elements"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser.getMAD_Elements">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMAD_Elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the list of the lattice elements</span>
 <span class="sd">        that are defined in the MAD file.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lattElems</span></div>
 
 <div class="viewcode-block" id="MAD_Parser.getMAD_Variables"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser.getMAD_Variables">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMAD_Variables</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the list of the variables</span>
 <span class="sd">        that are defined in the MAD file.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accValues</span></div>
 
 <div class="viewcode-block" id="MAD_Parser.getMAD_LinesDict"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser.getMAD_LinesDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMAD_LinesDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the dictionary of the lattice lines</span>
 <span class="sd">        that are defined in the MAD file.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">lattLine</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lattLines</span><span class="p">:</span>
             <span class="nb">dict</span><span class="p">[</span><span class="n">lattLine</span><span class="o">.</span><span class="n">getName</span><span class="p">()]</span> <span class="o">=</span> <span class="n">lattLine</span>
         <span class="k">return</span> <span class="nb">dict</span></div>
 
 <div class="viewcode-block" id="MAD_Parser.getMAD_ElementsDict"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser.getMAD_ElementsDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMAD_ElementsDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the dictionary of the lattice elements</span>
 <span class="sd">        that are defined in the MAD file.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">lattElem</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lattElems</span><span class="p">:</span>
             <span class="nb">dict</span><span class="p">[</span><span class="n">lattElem</span><span class="o">.</span><span class="n">getName</span><span class="p">()]</span> <span class="o">=</span> <span class="n">lattElem</span>
         <span class="k">return</span> <span class="nb">dict</span></div>
 
 <div class="viewcode-block" id="MAD_Parser.getMAD_VariablesDict"><a class="viewcode-back" href="../../../../reference/orbit.parsers.MAD_Parser/#orbit.parsers.MAD_Parser.getMAD_VariablesDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMAD_VariablesDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. It returns the dictionary of the variables</span>
 <span class="sd">        that are defined in the MAD file.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accValues</span><span class="p">:</span>
             <span class="nb">dict</span><span class="p">[</span><span class="n">var</span><span class="o">.</span><span class="n">getName</span><span class="p">()]</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span>

@@ -666,8 +666,15 @@ document.write(`
 <h1>TeapotTuneAnalysisNode<a class="headerlink" href="#teapottuneanalysisnode" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.diagnostics.</span></span><span class="sig-name descname"><span class="pre">TeapotTuneAnalysisNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tuneanalysis</span> <span class="pre">no</span> <span class="pre">name'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.diagnostics.</span></span><span class="sig-name descname"><span class="pre">TeapotTuneAnalysisNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TeapotTuneAnalysis</span> <span class="pre">no</span> <span class="pre">name'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../orbit.teapot.DriftTEAPOT/#orbit.teapot.DriftTEAPOT" title="orbit.teapot.teapot.DriftTEAPOT"><code class="xref py py-class docutils literal notranslate"><span class="pre">orbit.teapot.teapot.DriftTEAPOT</span></code></a></p>
+<p>Estimates tunes from coordinates on neighboring turns.</p>
+<p>This node computes the tunes and actions of each particle in the bunch.
+We use the Average Phase Advance (APA) method to estimate the tunes [1].
+We use only a single turn rather than the average of multiple turns.</p>
+<p>[1] <a class="reference external" href="https://cds.cern.ch/record/292773/files/p147.pdf">https://cds.cern.ch/record/292773/files/p147.pdf</a>
+[2] <a class="reference external" href="https://arxiv.org/pdf/1207.5526">https://arxiv.org/pdf/1207.5526</a>
+[3] S. Y. Lee, <em>Accelerator Physics</em></p>
 <p class="rubric">Methods Summary</p>
 <table class="autosummary longtable table autosummary">
 <colgroup>
@@ -675,40 +682,313 @@ document.write(`
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.assignTwiss" title="orbit.diagnostics.TeapotTuneAnalysisNode.assignTwiss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assignTwiss</span></code></a>(betax, alphax, etax, etapx, ...)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.activate" title="orbit.diagnostics.TeapotTuneAnalysisNode.activate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">activate</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setLatticeLength" title="orbit.diagnostics.TeapotTuneAnalysisNode.setLatticeLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLatticeLength</span></code></a>(lattlength)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.deactivate" title="orbit.diagnostics.TeapotTuneAnalysisNode.deactivate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deactivate</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setPosition" title="orbit.diagnostics.TeapotTuneAnalysisNode.setPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPosition</span></code></a>(pos)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getActions" title="orbit.diagnostics.TeapotTuneAnalysisNode.getActions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getActions</span></code></a>(bunch, index)</p></td>
+<td><p>Return actions (J_1, J_2).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.track" title="orbit.diagnostics.TeapotTuneAnalysisNode.track"><code class="xref py py-obj docutils literal notranslate"><span class="pre">track</span></code></a>(paramsDict)</p></td>
-<td><p>The bunchtuneanalysis-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getData" title="orbit.diagnostics.TeapotTuneAnalysisNode.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>(bunch[, index])</p></td>
+<td><p>Return tune and action data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getNormMatrix" title="orbit.diagnostics.TeapotTuneAnalysisNode.getNormMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNormMatrix</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getTunes" title="orbit.diagnostics.TeapotTuneAnalysisNode.getTunes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTunes</span></code></a>(bunch[, index])</p></td>
+<td><p>Return fractional tunes (nu_1, nu_2).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrix" title="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNormMatrix</span></code></a>(norm_matrix)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromBunch" title="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromBunch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNormMatrixFromBunch</span></code></a>(bunch[, dim])</p></td>
+<td><p>Set normalization matrix from bunch covariance matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix" title="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNormMatrixFromCovMatrix</span></code></a>(cov_matrix)</p></td>
+<td><p>Set normalization matrix from covariance matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix" title="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNormMatrixFromTransferMatrix</span></code></a>(transfer_matrix)</p></td>
+<td><p>Set normalization matrix from transfer matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTwiss" title="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTwiss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNormMatrixFromTwiss</span></code></a>(betax, alphax, etax, ...)</p></td>
+<td><p>Set normalization matrix from Twiss parameters (x, y) and dispersion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setPosition" title="orbit.diagnostics.TeapotTuneAnalysisNode.setPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPosition</span></code></a>(position)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.diagnostics.TeapotTuneAnalysisNode.track" title="orbit.diagnostics.TeapotTuneAnalysisNode.track"><code class="xref py py-obj docutils literal notranslate"><span class="pre">track</span></code></a>(params_dict)</p></td>
+<td><p>The drift class implementation of the AccNodeBunchTracker class track(probe) method.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.assignTwiss">
-<span class="sig-name descname"><span class="pre">assignTwiss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">betax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alphax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etapx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">betay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alphay</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.assignTwiss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.assignTwiss" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.activate">
+<span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.activate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.activate" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.setLatticeLength">
-<span class="sig-name descname"><span class="pre">setLatticeLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lattlength</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setLatticeLength"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setLatticeLength" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.deactivate">
+<span class="sig-name descname"><span class="pre">deactivate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.deactivate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.deactivate" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.getActions">
+<span class="sig-name descname"><span class="pre">getActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bunch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.getActions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getActions" title="Permalink to this definition">#</a></dt>
+<dd><p>Return actions (J_1, J_2).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bunch</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bunch</span></code>) – Bunch object.</p></li>
+<li><p><strong>index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Particle index (not ID).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Action (mode 1).
+J_2: Action (mode 2).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>J_1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.getData">
+<span class="sig-name descname"><span class="pre">getData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bunch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.getData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getData" title="Permalink to this definition">#</a></dt>
+<dd><p>Return tune and action data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bunch</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bunch</span></code>) – A Bunch object.</p></li>
+<li><p><strong>index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Particle index. If None, return data for all particles.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl>
+<dt>Dictionary with the following keys:</dt><dd><ul class="simple">
+<li><p>”phase_1”</p></li>
+<li><p>”phase_2”</p></li>
+<li><p>”tune_1”</p></li>
+<li><p>”tune_2”</p></li>
+<li><p>”action_1”</p></li>
+<li><p>”action_2”</p></li>
+<li><p>”action_3”</p></li>
+</ul>
+<p>If <cite>index</cite> is provided, each value is a float. Otherwise each value
+is a list of floats. If the lattice is uncoupled, 1-&gt;x and 2-&gt;y.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.getNormMatrix">
+<span class="sig-name descname"><span class="pre">getNormMatrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.getNormMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getNormMatrix" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.getTunes">
+<span class="sig-name descname"><span class="pre">getTunes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bunch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.getTunes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.getTunes" title="Permalink to this definition">#</a></dt>
+<dd><p>Return fractional tunes (nu_1, nu_2).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bunch</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bunch</span></code>) – A Bunch object.</p></li>
+<li><p><strong>index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Particle index (not ID).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Fractional tune (mode 1).
+tune_2: Fractional tune (mode 2).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tune_1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrix">
+<span class="sig-name descname"><span class="pre">setNormMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm_matrix</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setNormMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrix" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>norm_matrix</strong> (<em>numpy.ndarray</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromBunch">
+<span class="sig-name descname"><span class="pre">setNormMatrixFromBunch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bunch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setNormMatrixFromBunch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromBunch" title="Permalink to this definition">#</a></dt>
+<dd><p>Set normalization matrix from bunch covariance matrix.</p>
+<p>The bunch covariance matrix is calculated from the macroparticles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bunch</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bunch</span></code>) – Bunch object with at least one macroparticle.</p></li>
+<li><p><strong>dim</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix">
+<span class="sig-name descname"><span class="pre">setNormMatrixFromCovMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cov_matrix</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix" title="Permalink to this definition">#</a></dt>
+<dd><p>Set normalization matrix from covariance matrix.</p>
+<p>Assume that S = M S M^T, where S is the covariance matrix
+and M is the transfer matrix. Then M and SU (U is the Poisson matrix)
+have different eigenvalues but the same eigenvectors So we can compute
+the normalization matrix directly from SU, without knowing M.</p>
+<p>I’m not sure how to order the eigenvectors of SU as there is no
+guaranteed ordering from np.linalg.eig. By default, we sort the
+eigenvectors of SU by their eigenvalues (eigenemittances), so the
+smallest eigenemittance is mode 1, the next is mode 2, and so on.
+So if you compare this method to <cite>setNormMatrixFromTransferMatrix</cite>,
+you may get {nu1, nu2} -&gt; {nu2, nu1}.</p>
+<p>This is only a problem in coupled lattices with 4D normalization.
+With 2D normalization there is no ambiguity. This function will
+check if there are off-block-diagonal terms in the covariance
+matrix to determine whether to use 2D or 4D normalization.
+norm_matrix = build_norm_matrix_from_cov(cov_matrix)
+self.setNormMatrix(norm_matrix)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cov_matrix</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – 4x4 or 6x6 covariance matrix.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix">
+<span class="sig-name descname"><span class="pre">setNormMatrixFromTransferMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transfer_matrix</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix" title="Permalink to this definition">#</a></dt>
+<dd><p>Set normalization matrix from transfer matrix.</p>
+<p>Assumes transfer matrix is periodic and stable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transfer_matrix</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – 4x4 or 6x6 transfer matrix.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTwiss">
+<span class="sig-name descname"><span class="pre">setNormMatrixFromTwiss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">betax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alphax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etapx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">betay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alphay</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setNormMatrixFromTwiss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTwiss" title="Permalink to this definition">#</a></dt>
+<dd><p>Set normalization matrix from Twiss parameters (x, y) and dispersion.</p>
+<p>betax{y}: Beta parameter in x{y} plane.
+alphax{y}: Alpha parameter in x{y} plane.
+etax: Dispersion in x plane.
+etapx: Disperion prime in x plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>betax</strong> (<em>float</em>) – </p></li>
+<li><p><strong>alphax</strong> (<em>float</em>) – </p></li>
+<li><p><strong>etax</strong> (<em>float</em>) – </p></li>
+<li><p><strong>etapx</strong> (<em>float</em>) – </p></li>
+<li><p><strong>betay</strong> (<em>float</em>) – </p></li>
+<li><p><strong>alphay</strong> (<em>float</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.setPosition">
-<span class="sig-name descname"><span class="pre">setPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setPosition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setPosition" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">setPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.setPosition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.setPosition" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>position</strong> (<em>float</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.diagnostics.TeapotTuneAnalysisNode.track">
-<span class="sig-name descname"><span class="pre">track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paramsDict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.track"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.track" title="Permalink to this definition">#</a></dt>
-<dd><p>The bunchtuneanalysis-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</p>
+<span class="sig-name descname"><span class="pre">track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/diagnostics/TeapotDiagnosticsNode/#TeapotTuneAnalysisNode.track"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.diagnostics.TeapotTuneAnalysisNode.track" title="Permalink to this definition">#</a></dt>
+<dd><p>The drift class implementation of the AccNodeBunchTracker class track(probe) method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>params_dict</strong> (<em>dict</em>) – </p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

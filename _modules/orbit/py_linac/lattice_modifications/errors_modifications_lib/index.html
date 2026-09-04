@@ -412,16 +412,16 @@ document.write(`
 
 
 <div class="viewcode-block" id="ErrorForNodesModification"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.ErrorForNodesModification/#orbit.py_linac.lattice_modifications.ErrorForNodesModification">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ErrorForNodesModification</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The base abstract class for set of separate nodes modification</span>
 <span class="sd">    with two error nodes: one at the entrance and one at the exit</span>
 <span class="sd">    of the lattice node. The lattice is specified for possible</span>
 <span class="sd">    needs in the future when we will introduce errors for some</span>
 <span class="sd">    section of the lattice as a whole. Right now we are working</span>
 <span class="sd">    only with nodes.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;ErrorForNodesModification&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">"ErrorForNodesModification"</span><span class="p">):</span>
         <span class="n">NamedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="n">TypedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_in</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
@@ -430,41 +430,41 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getInstanceOfErrorController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is abstract method. The subclasses should implement this method</span>
 <span class="sd">        according the particular error type.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="ErrorForNodesModification.updateErrorParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.ErrorForNodesModification/#orbit.py_linac.lattice_modifications.ErrorForNodesModification.updateErrorParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateErrorParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is abstract method. The sub-classes should implement this method</span>
 <span class="sd">        according the particular error type. It updates the error defining</span>
 <span class="sd">        parameters for all registered error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="ErrorForNodesModification.getLatticeNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.ErrorForNodesModification/#orbit.py_linac.lattice_modifications.ErrorForNodesModification.getLatticeNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLatticeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the list of lattice nodes to which we applied errors.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span></div>
 
 <div class="viewcode-block" id="ErrorForNodesModification.getErrorControllers"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.ErrorForNodesModification/#orbit.py_linac.lattice_modifications.ErrorForNodesModification.getErrorControllers">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getErrorControllers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the array of error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span></div>
 
 <div class="viewcode-block" id="ErrorForNodesModification.addLatticeNodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.ErrorForNodesModification/#orbit.py_linac.lattice_modifications.ErrorForNodesModification.addLatticeNodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addLatticeNodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">lattice</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Adds the error controllers to the nodes</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lattice</span> <span class="o">=</span> <span class="n">lattice</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">+=</span> <span class="n">nodes</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">:</span>
             <span class="n">errCntrl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getInstanceOfErrorController</span><span class="p">()</span>
-            <span class="n">errCntrl</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="s2">&quot;ErrCntrl:&quot;</span> <span class="o">+</span> <span class="n">errCntrl</span><span class="o">.</span><span class="n">getShortTypeName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+            <span class="n">errCntrl</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="s2">"ErrCntrl:"</span> <span class="o">+</span> <span class="n">errCntrl</span><span class="o">.</span><span class="n">getShortTypeName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
             <span class="n">errCntrl</span><span class="o">.</span><span class="n">setLattice</span><span class="p">(</span><span class="n">lattice</span><span class="p">)</span>
             <span class="n">errCntrl</span><span class="o">.</span><span class="n">setOneNodeParent</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">errCntrl</span><span class="p">)</span>
@@ -473,83 +473,83 @@ document.write(`
 
 
 <div class="viewcode-block" id="CoordinateDisplacementNodesModification"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification/#orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CoordinateDisplacementNodesModification</span><span class="p">(</span><span class="n">ErrorForNodesModification</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class applies the coordinate displacement errors to the set of nodes.</span>
 <span class="sd">    The parameters of displacements are translated to all error controllers.</span>
 <span class="sd">    It could be fixed (all nodes will have the same displacement) or</span>
 <span class="sd">    random values distributed around 0. by Gaussian with one sigma.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
-        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;CoordinateDisplacementNodesModification&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">):</span>
+        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"CoordinateDisplacementNodesModification"</span><span class="p">)</span>
         <span class="c1"># ---- these parameters can be interpreted as just values or sigmas for</span>
         <span class="c1"># ---- for Gaussian distributions</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;dx&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dxp&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dy&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dyp&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dz&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;dE&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"dx"</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">"dxp"</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">"dy"</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">"dyp"</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">"dz"</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">"dE"</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getInstanceOfErrorController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the instance of ErrorCntrlCoordDisplacement error controller.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">ErrorCntrlCoordDisplacement</span><span class="p">()</span>
 
 <div class="viewcode-block" id="CoordinateDisplacementNodesModification.updateErrorParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification/#orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification.updateErrorParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateErrorParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is an implementation of parent class abstract method.</span>
 <span class="sd">        It updates the error defining parameters for all registered</span>
 <span class="sd">        error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
             <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
                 <span class="n">errCntrl</span><span class="o">.</span><span class="n">setDisplacementParameter</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span></div>
 
 <div class="viewcode-block" id="CoordinateDisplacementNodesModification.getCoordinateDisplacementParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification/#orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification.getCoordinateDisplacementParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getCoordinateDisplacementParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns tuple with coordinate shift parameters.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dx&quot;</span><span class="p">]</span>
-        <span class="n">dxp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dxp&quot;</span><span class="p">]</span>
-        <span class="n">dy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dy&quot;</span><span class="p">]</span>
-        <span class="n">dyp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dyp&quot;</span><span class="p">]</span>
-        <span class="n">dz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dz&quot;</span><span class="p">]</span>
-        <span class="n">dE</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">&quot;dE&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">"dx"</span><span class="p">]</span>
+        <span class="n">dxp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">"dxp"</span><span class="p">]</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">"dy"</span><span class="p">]</span>
+        <span class="n">dyp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">"dyp"</span><span class="p">]</span>
+        <span class="n">dz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">"dz"</span><span class="p">]</span>
+        <span class="n">dE</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="s2">"dE"</span><span class="p">]</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dxp</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dyp</span><span class="p">,</span> <span class="n">dz</span><span class="p">,</span> <span class="n">dE</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="CoordinateDisplacementNodesModification.setDisplacementParameter"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification/#orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification.setDisplacementParameter">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setDisplacementParameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the error value for a particular coordinate for all nodes.</span>
 <span class="sd">        The cooridinate is defined by key parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Class CoordinateDisplacementNodesModification - key-value problem&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Class CoordinateDisplacementNodesModification - key-value problem"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Method setDisplacementParameter:&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Method setDisplacementParameter:"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;You are trying to set value for key=&quot;</span> <span class="o">+</span> <span class="n">key</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"You are trying to set value for key="</span> <span class="o">+</span> <span class="n">key</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Keys could be only = (dx, dxp, dy, dyp, dz, dE)&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Keys could be only = (dx, dxp, dy, dyp, dz, dE)"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">updateErrorParameters</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="CoordinateDisplacementNodesModification.setGaussDistributedDisplacementParameter"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification/#orbit.py_linac.lattice_modifications.CoordinateDisplacementNodesModification.setGaussDistributedDisplacementParameter">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedDisplacementParameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">cut_off_level</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated error value for a particular coordinate for all nodes.</span>
 <span class="sd">        The cooridinate is defined by key parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">value</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">param_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Class CoordinateDisplacementNodesModification - key-value problem&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Class CoordinateDisplacementNodesModification - key-value problem"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Method setGaussDistributedDisplacementParameter:&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Method setGaussDistributedDisplacementParameter:"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;You are trying to set value for key=&quot;</span> <span class="o">+</span> <span class="n">key</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"You are trying to set value for key="</span> <span class="o">+</span> <span class="n">key</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Keys could be only = (dx, dxp, dy, dyp, dz, dE)&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Keys could be only = (dx, dxp, dy, dyp, dz, dE)"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
             <span class="k">return</span>
@@ -564,51 +564,51 @@ document.write(`
 
 
 <div class="viewcode-block" id="LongitudinalDisplacementNodesModification"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification/#orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LongitudinalDisplacementNodesModification</span><span class="p">(</span><span class="n">ErrorForNodesModification</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class shifts lattice nodes in longitudinal directions.</span>
 <span class="sd">    The shift length is sent to all error controllers.</span>
 <span class="sd">    It could be fixed (all nodes will have the same displacement) or</span>
 <span class="sd">    random values distributed around 0. by Gaussian with one sigma.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
-        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;LongitudinalDisplacementNodesModification&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">):</span>
+        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"LongitudinalDisplacementNodesModification"</span><span class="p">)</span>
         <span class="c1"># ---- this parameter can be interpreted as just a value or a sigma for</span>
         <span class="c1"># ---- for Gaussian distributions</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span> <span class="o">=</span> <span class="n">shift_length</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getInstanceOfErrorController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the instance of ErrorCntrlCoordDisplacement error controller.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">ErrorCntrlLongitudinalDisplacement</span><span class="p">()</span>
 
 <div class="viewcode-block" id="LongitudinalDisplacementNodesModification.updateErrorParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification/#orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification.updateErrorParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateErrorParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is an implementation of parent class abstract method.</span>
 <span class="sd">        It updates the error defining parameters for all registered</span>
 <span class="sd">        error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">errCntrl</span><span class="o">.</span><span class="n">setShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="LongitudinalDisplacementNodesModification.getShiftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification/#orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification.getShiftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the shift-length parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span></div>
 
 <div class="viewcode-block" id="LongitudinalDisplacementNodesModification.setShiftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification/#orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification.setShiftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shift_length</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the shift-length parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">shift_length</span> <span class="o">=</span> <span class="n">shift_length</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">updateErrorParameters</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="LongitudinalDisplacementNodesModification.setGaussDistributedShiftLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification/#orbit.py_linac.lattice_modifications.LongitudinalDisplacementNodesModification.setGaussDistributedShiftLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedShiftLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shift_length</span><span class="p">,</span> <span class="n">cut_off_level</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated error shift_length for all nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">shift_length_tmp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">shift_length</span><span class="p">)</span>
             <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">shift_length_tmp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">shift_length</span><span class="p">)</span> <span class="o">*</span> <span class="n">cut_off_level</span><span class="p">:</span>
@@ -619,51 +619,51 @@ document.write(`
 
 
 <div class="viewcode-block" id="StraightRotationZ_NodesModification"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">StraightRotationZ_NodesModification</span><span class="p">(</span><span class="n">ErrorForNodesModification</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class rotate lattice nodes around z-axis directions.</span>
 <span class="sd">    The rotating angle is sent to all error controllers.</span>
 <span class="sd">    It could be fixed (all nodes will have the same angle) or</span>
 <span class="sd">    random values distributed around 0. by Gaussian with one sigma.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
-        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;StraightRotationZ_NodesModification&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">):</span>
+        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"StraightRotationZ_NodesModification"</span><span class="p">)</span>
         <span class="c1"># ---- this parameter can be interpreted as just a value or a sigma for</span>
         <span class="c1"># ---- for Gaussian distributions</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getInstanceOfErrorController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the instance of ErrorCntrlStraightRotationZ error controller.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">ErrorCntrlStraightRotationZ</span><span class="p">()</span>
 
 <div class="viewcode-block" id="StraightRotationZ_NodesModification.updateErrorParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification.updateErrorParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateErrorParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is an implementation of parent class abstract method.</span>
 <span class="sd">        It updates the error defining parameters for all registered</span>
 <span class="sd">        error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">errCntrl</span><span class="o">.</span><span class="n">setRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="StraightRotationZ_NodesModification.getRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification.getRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the angle parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div>
 
 <div class="viewcode-block" id="StraightRotationZ_NodesModification.setRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification.setRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the angle parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">updateErrorParameters</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="StraightRotationZ_NodesModification.setGaussDistributedAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationZ_NodesModification.setGaussDistributedAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">cut_off_level</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated error angle for all nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">angle_tmp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
             <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">angle_tmp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">cut_off_level</span><span class="p">:</span>
@@ -674,44 +674,44 @@ document.write(`
 
 
 <div class="viewcode-block" id="StraightRotationX_NodesModification"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">StraightRotationX_NodesModification</span><span class="p">(</span><span class="n">ErrorForNodesModification</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class rotate lattice nodes around x-axis directions.</span>
 <span class="sd">    The rotating angle is sent to all error controllers.</span>
 <span class="sd">    It could be fixed (all nodes will have the same angle) or</span>
 <span class="sd">    random values distributed around 0. by Gaussian with one sigma.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
-        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;StraightRotationX_NodesModification&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">):</span>
+        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"StraightRotationX_NodesModification"</span><span class="p">)</span>
         <span class="c1"># ---- this parameter can be interpreted as just a value or a sigma for</span>
         <span class="c1"># ---- for Gaussian distributions</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getInstanceOfErrorController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the instance of ErrorCntrlStraightRotationZ error controller.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">ErrorCntrlStraightRotationX</span><span class="p">()</span>
 
 <div class="viewcode-block" id="StraightRotationX_NodesModification.updateErrorParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification.updateErrorParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateErrorParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is an implementation of parent class abstract method.</span>
 <span class="sd">        It updates the error defining parameters for all registered</span>
 <span class="sd">        error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">entr_parent_node</span> <span class="o">=</span> <span class="n">errCntrl</span><span class="o">.</span><span class="n">getEntanceNodeParent</span><span class="p">()</span>
             <span class="n">exit_parent_node</span> <span class="o">=</span> <span class="n">errCntrl</span><span class="o">.</span><span class="n">getExitNodeParent</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">entr_parent_node</span> <span class="o">!=</span> <span class="n">exit_parent_node</span><span class="p">:</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Class StraightRotationX_NodesModification update parameters problem!&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Class StraightRotationX_NodesModification update parameters problem!"</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;For this type of Error Node Controllers parent node is one, not two!&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"For this type of Error Node Controllers parent node is one, not two!"</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Entrance parent node=&quot;</span> <span class="o">+</span> <span class="n">entr_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Entrance parent node="</span> <span class="o">+</span> <span class="n">entr_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Exit     parent node=&quot;</span> <span class="o">+</span> <span class="n">exit_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Exit     parent node="</span> <span class="o">+</span> <span class="n">exit_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Stop"</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
                 <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
                 <span class="k">return</span>
@@ -719,22 +719,22 @@ document.write(`
             <span class="n">errCntrl</span><span class="o">.</span><span class="n">setBaseLength</span><span class="p">(</span><span class="n">entr_parent_node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="StraightRotationX_NodesModification.getRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification.getRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the angle parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div>
 
 <div class="viewcode-block" id="StraightRotationX_NodesModification.setRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification.setRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the angle parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">updateErrorParameters</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="StraightRotationX_NodesModification.setGaussDistributedAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationX_NodesModification.setGaussDistributedAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">cut_off_level</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated error angle for all nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">angle_tmp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
             <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">angle_tmp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">cut_off_level</span><span class="p">:</span>
@@ -745,44 +745,44 @@ document.write(`
 
 
 <div class="viewcode-block" id="StraightRotationY_NodesModification"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">StraightRotationY_NodesModification</span><span class="p">(</span><span class="n">ErrorForNodesModification</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class rotate lattice nodes around y-axis directions.</span>
 <span class="sd">    The rotating angle is sent to all error controllers.</span>
 <span class="sd">    It could be fixed (all nodes will have the same angle) or</span>
 <span class="sd">    random values distributed around 0. by Gaussian with one sigma.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
-        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;StraightRotationY_NodesModification&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">):</span>
+        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"StraightRotationY_NodesModification"</span><span class="p">)</span>
         <span class="c1"># ---- this parameter can be interpreted as just a value or a sigma for</span>
         <span class="c1"># ---- for Gaussian distributions</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getInstanceOfErrorController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the instance of ErrorCntrlStraightRotationZ error controller.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">ErrorCntrlStraightRotationY</span><span class="p">()</span>
 
 <div class="viewcode-block" id="StraightRotationY_NodesModification.updateErrorParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification.updateErrorParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateErrorParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is an implementation of parent class abstract method.</span>
 <span class="sd">        It updates the error defining parameters for all registered</span>
 <span class="sd">        error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">entr_parent_node</span> <span class="o">=</span> <span class="n">errCntrl</span><span class="o">.</span><span class="n">getEntanceNodeParent</span><span class="p">()</span>
             <span class="n">exit_parent_node</span> <span class="o">=</span> <span class="n">errCntrl</span><span class="o">.</span><span class="n">getExitNodeParent</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">entr_parent_node</span> <span class="o">!=</span> <span class="n">exit_parent_node</span><span class="p">:</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Class StraightRotationY_NodesModification update parameters problem!&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Class StraightRotationY_NodesModification update parameters problem!"</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;For this type of Error Node Controllers parent node is one, not two!&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"For this type of Error Node Controllers parent node is one, not two!"</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Entrance parent node=&quot;</span> <span class="o">+</span> <span class="n">entr_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Entrance parent node="</span> <span class="o">+</span> <span class="n">entr_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Exit     parent node=&quot;</span> <span class="o">+</span> <span class="n">exit_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Exit     parent node="</span> <span class="o">+</span> <span class="n">exit_parent_node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Stop&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Stop"</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
                 <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
                 <span class="k">return</span>
@@ -790,22 +790,22 @@ document.write(`
             <span class="n">errCntrl</span><span class="o">.</span><span class="n">setBaseLength</span><span class="p">(</span><span class="n">entr_parent_node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="StraightRotationY_NodesModification.getRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification.getRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the angle parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span></div>
 
 <div class="viewcode-block" id="StraightRotationY_NodesModification.setRotationAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification.setRotationAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRotationAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the angle parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">updateErrorParameters</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="StraightRotationY_NodesModification.setGaussDistributedAngle"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification/#orbit.py_linac.lattice_modifications.StraightRotationY_NodesModification.setGaussDistributedAngle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedAngle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">cut_off_level</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated error angle for all nodes.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">angle_tmp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
             <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">angle_tmp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">cut_off_level</span><span class="p">:</span>
@@ -821,40 +821,40 @@ document.write(`
 
 
 <div class="viewcode-block" id="QuadFieldsErrorsDeployment"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment/#orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">QuadFieldsErrorsDeployment</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class will apply the errors to the fields of the quads</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;QuadFieldsErrorsDeployment&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">"QuadFieldsErrorsDeployment"</span><span class="p">):</span>
         <span class="n">NamedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="n">TypedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_in</span><span class="p">)</span>
         <span class="c1"># ---- self.quad_and_field_arr[ind] = [[quad,field_init],...]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span> <span class="o">=</span> <span class="p">[]</span>
 
 <div class="viewcode-block" id="QuadFieldsErrorsDeployment.addQuads"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment/#orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment.addQuads">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addQuads</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quads</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Add quads to the inner array of quads.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">quads</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">quad</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">quad</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">)])</span></div>
+                <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">quad</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">)])</span></div>
 
 <div class="viewcode-block" id="QuadFieldsErrorsDeployment.addQuad"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment/#orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment.addQuad">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addQuad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Add one quad to the inner array of quads.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">quad</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">quad</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">)])</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">quad</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">)])</span></div>
 
 <div class="viewcode-block" id="QuadFieldsErrorsDeployment.restoreFields"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment/#orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment.restoreFields">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">restoreFields</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">field_init</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span><span class="p">:</span>
-            <span class="n">quad</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">,</span> <span class="n">field_init</span><span class="p">)</span></div>
+            <span class="n">quad</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">,</span> <span class="n">field_init</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="QuadFieldsErrorsDeployment.setGaussDistributedRealtiveErrors"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment/#orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment.setGaussDistributedRealtiveErrors">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedRealtiveErrors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relative_error</span><span class="p">,</span> <span class="n">cut_off_level</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated error fields for all quads.</span>
 <span class="sd">        Changes will be different for all quads.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span> <span class="n">field_init</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span><span class="p">:</span>
             <span class="n">rel_err</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">relative_error</span><span class="p">)</span>
             <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">rel_err</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">relative_error</span><span class="p">)</span> <span class="o">*</span> <span class="n">cut_off_level</span><span class="p">:</span>
@@ -862,13 +862,13 @@ document.write(`
             <span class="n">main_rank</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="n">rel_err</span> <span class="o">=</span> <span class="n">MPI_Bcast</span><span class="p">(</span><span class="n">rel_err</span><span class="p">,</span> <span class="n">mpi_datatype</span><span class="o">.</span><span class="n">MPI_DOUBLE</span><span class="p">,</span> <span class="n">main_rank</span><span class="p">,</span> <span class="n">comm</span><span class="p">)</span>
             <span class="n">field</span> <span class="o">=</span> <span class="n">field_init</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">rel_err</span><span class="p">)</span>
-            <span class="n">quad</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span></div>
+            <span class="n">quad</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="QuadFieldsErrorsDeployment.setGaussDistributedRealtiveErrorToGroup"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment/#orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment.setGaussDistributedRealtiveErrorToGroup">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedRealtiveErrorToGroup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">relative_error</span><span class="p">,</span><span class="n">cut_off_level</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span><span class="n">comm</span> <span class="o">=</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated error fields for all quads in the string.</span>
 <span class="sd">        Changes will be the same for all quads. We assume one PS for all quads.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">rel_err</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="n">relative_error</span><span class="p">)</span>
         <span class="k">while</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">rel_err</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">relative_error</span><span class="p">)</span><span class="o">*</span><span class="n">cut_off_level</span><span class="p">):</span>
             <span class="n">rel_err</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="n">relative_error</span><span class="p">)</span>
@@ -876,43 +876,43 @@ document.write(`
         <span class="n">rel_err</span> <span class="o">=</span> <span class="n">orbit_mpi</span><span class="o">.</span><span class="n">MPI_Bcast</span><span class="p">(</span><span class="n">rel_err</span><span class="p">,</span><span class="n">mpi_datatype</span><span class="o">.</span><span class="n">MPI_DOUBLE</span><span class="p">,</span><span class="n">main_rank</span><span class="p">,</span><span class="n">comm</span><span class="p">)</span>
         <span class="k">for</span> <span class="p">[</span><span class="n">quad</span><span class="p">,</span><span class="n">field_init</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad_and_field_arr</span><span class="p">:</span>
             <span class="n">field</span> <span class="o">=</span> <span class="n">field_init</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">rel_err</span><span class="p">)</span>
-            <span class="n">quad</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">,</span><span class="n">field</span><span class="p">)</span></div></div>
+            <span class="n">quad</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">,</span><span class="n">field</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="BendFieldNodesModification"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BendFieldNodesModification</span><span class="p">(</span><span class="n">ErrorForNodesModification</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class will apply the errors to the fields of the bends using energy shift</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no_name&quot;</span><span class="p">):</span>
-        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;BendFieldNodesModification&quot;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no_name"</span><span class="p">):</span>
+        <span class="n">ErrorForNodesModification</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"BendFieldNodesModification"</span><span class="p">)</span>
         <span class="c1"># ---- defines a relative change in the bend field</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span> <span class="o">=</span> <span class="mf">0.0</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getInstanceOfErrorController</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the instance of ErrorCntrlCoordDisplacement error controller.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">ErrorCntrlBendField</span><span class="p">()</span>
 
 <div class="viewcode-block" id="BendFieldNodesModification.updateErrorParameters"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification.updateErrorParameters">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateErrorParameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is an implementation of parent class abstract method.</span>
 <span class="sd">        It updates the realtive field change parameter for all registered</span>
 <span class="sd">        error controllers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">errCntrl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_controllers</span><span class="p">:</span>
             <span class="n">errCntrl</span><span class="o">.</span><span class="n">setRelativeFieldChange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="BendFieldNodesModification.addBends"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification.addBends">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addBends</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bends</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Adds up bend nodes array.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addLatticeNodes</span><span class="p">(</span><span class="n">bends</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="BendFieldNodesModification.addBend"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification.addBend">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addBend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bend</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Adds up bend node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addLatticeNodes</span><span class="p">(</span>
             <span class="p">[</span>
                 <span class="n">bend</span><span class="p">,</span>
@@ -920,22 +920,22 @@ document.write(`
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="BendFieldNodesModification.setRelativeFieldChange"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification.setRelativeFieldChange">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRelativeFieldChange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relative_field_change</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the realtive change in the bend field.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span> <span class="o">=</span> <span class="n">relative_field_change</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">updateErrorParameters</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="BendFieldNodesModification.getRelativeFieldChange"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification.getRelativeFieldChange">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRelativeFieldChange</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the realtive change in the bend field.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">relative_field_change</span></div>
 
 <div class="viewcode-block" id="BendFieldNodesModification.setGaussDistributedRelativeFieldError"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification.setGaussDistributedRelativeFieldError">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGaussDistributedRelativeFieldError</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relative_error</span><span class="p">,</span> <span class="n">cut_off_level</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the random generated field error for all bends. The same value for all registered bends.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">rel_err</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">relative_error</span><span class="p">)</span>
         <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">rel_err</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">relative_error</span><span class="p">)</span> <span class="o">*</span> <span class="n">cut_off_level</span><span class="p">:</span>
             <span class="n">rel_err</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">relative_error</span><span class="p">)</span>

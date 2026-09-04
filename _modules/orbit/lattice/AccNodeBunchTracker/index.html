@@ -369,26 +369,26 @@ document.write(`
 
 
 <div class="viewcode-block" id="AccNodeBunchTracker"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccNodeBunchTracker/#orbit.lattice.AccNodeBunchTracker">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccNodeBunchTracker</span><span class="p">(</span><span class="n">AccNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class. Base class of the accelerator nodes that track the pyORBIT bunch.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">&quot;bunch tracker&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name"</span><span class="p">,</span> <span class="n">type_in</span><span class="o">=</span><span class="s2">"bunch tracker"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates an empty bunch tracker accelerator node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">AccNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">type_in</span><span class="p">)</span>
 
 <div class="viewcode-block" id="AccNodeBunchTracker.trackBunch"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccNodeBunchTracker/#orbit.lattice.AccNodeBunchTracker.trackBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">paramsDict</span><span class="o">=</span><span class="p">{},</span> <span class="n">actionContainer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It tracks the bunch through the AccNodeBunchTracker instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="n">actionContainer</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">actionContainer</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">(</span><span class="s2">&quot;Bunch Tracking&quot;</span><span class="p">)</span>
-        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bunch</span>
+            <span class="n">actionContainer</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">(</span><span class="s2">"Bunch Tracking"</span><span class="p">)</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span> <span class="o">=</span> <span class="n">bunch</span>
 
         <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
             <span class="n">node</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">)</span>
 
         <span class="n">actionContainer</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
@@ -396,10 +396,10 @@ document.write(`
         <span class="n">actionContainer</span><span class="o">.</span><span class="n">removeAction</span><span class="p">(</span><span class="n">track</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AccNodeBunchTracker.track"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccNodeBunchTracker/#orbit.lattice.AccNodeBunchTracker.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It is tracking the bunch through the element. Each element</span>
 <span class="sd">        should implement this method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div></div>
 </pre></div>
 

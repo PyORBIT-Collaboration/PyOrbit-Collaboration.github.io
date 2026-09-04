@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.diagnostics.diagnosticsLatticeModifications</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">Module. Includes functions that will modify the accelerator lattice by inserting the one diagnostics node accelerator node.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="c1"># import the auxiliary classes</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
 
@@ -383,9 +383,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="addTeapotDiagnosticsNode"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.addTeapotDiagnosticsNode/#orbit.diagnostics.addTeapotDiagnosticsNode">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">addTeapotDiagnosticsNode</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">diagnostics_node</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    It will put one Teapot diagnostics node in the lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">length_tollerance</span> <span class="o">=</span> <span class="mf">0.0001</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
     <span class="n">position_start</span> <span class="o">=</span> <span class="n">position</span>
@@ -403,10 +403,10 @@ document.write(`
     <span class="c1"># -------now we check that between start and end we have only non-modified drift elements</span>
     <span class="c1"># -------if the space charge was added first - that is a problem. The collimation should be added first.</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">node_start_ind</span> <span class="p">:</span> <span class="n">node_stop_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
-        <span class="c1"># print &quot;debug node=&quot;,node.getName(),&quot; type=&quot;,node.getType(),&quot; L=&quot;,node.getLength()</span>
+        <span class="c1"># print "debug node=",node.getName()," type=",node.getType()," L=",node.getLength()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">DriftTEAPOT</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non-drift node=&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; type=&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">&quot; L=&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
-            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">&quot;We have non-drift element at the place of the diagnostics! Stop!&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Non-drift node="</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">" type="</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">" L="</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">"We have non-drift element at the place of the diagnostics! Stop!"</span><span class="p">)</span>
 
     <span class="c1"># make array of nodes from diagnostics in the center and possible two drifts if their length is more than length_tollerance [m]</span>
     <span class="n">nodes_new_arr</span> <span class="o">=</span> <span class="p">[</span>
@@ -436,11 +436,11 @@ document.write(`
 
 
 <div class="viewcode-block" id="addTeapotStatLatsNodeSet"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.addTeapotStatLatsNodeSet/#orbit.diagnostics.addTeapotStatLatsNodeSet">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">addTeapotStatLatsNodeSet</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    It will put one Teapot statlats node at start of each node in lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
-    <span class="n">nodesetcontroller</span> <span class="o">=</span> <span class="n">diagnosticsNodeSetController</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="s2">&quot;StatLats Set Controller&quot;</span><span class="p">)</span>
+<span class="sd">    """</span>
+    <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+    <span class="n">nodesetcontroller</span> <span class="o">=</span> <span class="n">diagnosticsNodeSetController</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="s2">"StatLats Set Controller"</span><span class="p">)</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
         <span class="n">position</span> <span class="o">=</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()[</span><span class="n">node</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
@@ -453,16 +453,16 @@ document.write(`
 
 
 <div class="viewcode-block" id="addTeapotMomentsNodeSet"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.addTeapotMomentsNodeSet/#orbit.diagnostics.addTeapotMomentsNodeSet">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">addTeapotMomentsNodeSet</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">nodispersion</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">emitnorm</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    It will put one Teapot statlats node at start of each node in lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
-    <span class="n">nodesetcontroller</span> <span class="o">=</span> <span class="n">diagnosticsNodeSetController</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="s2">&quot;Moment Set Controller&quot;</span><span class="p">)</span>
+<span class="sd">    """</span>
+    <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+    <span class="n">nodesetcontroller</span> <span class="o">=</span> <span class="n">diagnosticsNodeSetController</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="s2">"Moment Set Controller"</span><span class="p">)</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;In lattice modification no dispersion is &quot;</span><span class="p">,</span> <span class="n">nodispersion</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"In lattice modification no dispersion is "</span><span class="p">,</span> <span class="n">nodispersion</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
         <span class="n">position</span> <span class="o">=</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()[</span><span class="n">node</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">diagnostics_node</span> <span class="o">=</span> <span class="n">TeapotMomentsNodeSetMember</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">nodispersion</span><span class="p">,</span> <span class="n">emitnorm</span><span class="p">,</span> <span class="s2">&quot;moments&quot;</span><span class="p">)</span>
+        <span class="n">diagnostics_node</span> <span class="o">=</span> <span class="n">TeapotMomentsNodeSetMember</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">nodispersion</span><span class="p">,</span> <span class="n">emitnorm</span><span class="p">,</span> <span class="s2">"moments"</span><span class="p">)</span>
         <span class="n">diagnostics_node</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
         <span class="n">diagnostics_node</span><span class="o">.</span><span class="n">setLatticeLength</span><span class="p">(</span><span class="n">lattice</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
         <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">diagnostics_node</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
@@ -471,11 +471,11 @@ document.write(`
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">diagnosticsNodeSetController</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class keeps lists of moment nodes and acts as a controller</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Diagnostic Set Controller&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Diagnostic Set Controller"</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nodelist</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="n">file</span>
 
@@ -489,7 +489,7 @@ document.write(`
 
     <span class="k">def</span><span class="w"> </span><span class="nf">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="n">file_out</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nodelist</span><span class="p">:</span>
             <span class="n">node</span><span class="o">.</span><span class="n">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">)</span>

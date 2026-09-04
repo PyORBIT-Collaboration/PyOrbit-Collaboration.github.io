@@ -380,7 +380,7 @@ document.write(`
   <section id="program-listing-for-file-pybaseapertureshape-cc">
 <span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-orbit-apertures-pybaseapertureshape-cc"></span><h1>Program Listing for File PyBaseApertureShape.cc<a class="headerlink" href="#program-listing-for-file-pybaseapertureshape-cc" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_PyBaseApertureShape.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-apertures-pybaseapertureshape-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/PyBaseApertureShape.cc</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;PyBaseApertureShape.hh&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"PyBaseApertureShape.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
@@ -403,8 +403,8 @@ document.write(`
 
 <span class="n">PyBaseApertureShape</span><span class="o">::</span><span class="n">PyBaseApertureShape</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="n">BaseApertureShape</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">        </span><span class="n">shapeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;python_class_shape&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="n">typeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;python_class_shape&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">shapeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"python_class_shape"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">typeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"python_class_shape"</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">PyBaseApertureShape</span><span class="o">::~</span><span class="n">PyBaseApertureShape</span><span class="p">()</span>
@@ -420,7 +420,7 @@ document.write(`
 
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res_isinside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">py_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyObject_CallMethod</span><span class="p">(</span><span class="n">py_wrp</span><span class="p">,</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="s">&quot;inside&quot;</span><span class="p">),</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="s">&quot;Oi&quot;</span><span class="p">),</span><span class="n">py_bunch</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
+<span class="w">    </span><span class="n">PyObject</span><span class="o">*</span><span class="w"> </span><span class="n">py_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyObject_CallMethod</span><span class="p">(</span><span class="n">py_wrp</span><span class="p">,</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="s">"inside"</span><span class="p">),</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="s">"Oi"</span><span class="p">),</span><span class="n">py_bunch</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">res_isinside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">PyLong_AS_LONG</span><span class="p">(</span><span class="n">py_res</span><span class="p">);</span>
 

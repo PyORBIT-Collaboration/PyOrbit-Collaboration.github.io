@@ -398,8 +398,8 @@ document.write(`
 <span class="c1">//</span>
 <span class="c1">// INCLUDE FILES</span>
 <span class="c1">//</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;orbit_mpi.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;wrap_mpi_comm.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"orbit_mpi.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"wrap_mpi_comm.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
@@ -411,12 +411,12 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;map&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ParticleAttributes.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SyncPart.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"ParticleAttributes.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"SyncPart.hh"</span>
 
 <span class="c1">//from utils</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AttributesBucket.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CppPyWrapper.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"AttributesBucket.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"CppPyWrapper.hh"</span>
 
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
 
@@ -498,7 +498,7 @@ document.write(`
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">getSize</span><span class="p">();</span>
 
 <span class="w">  </span><span class="c1">//returns the number of macro-particles in all CPUs</span>
-<span class="w">  </span><span class="c1">//it uses communications between CPUs over internal &quot;Local&quot; MPI communicator</span>
+<span class="w">  </span><span class="c1">//it uses communications between CPUs over internal "Local" MPI communicator</span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">getSizeGlobal</span><span class="p">();</span>
 
 <span class="w">  </span><span class="c1">//returns the number of macro-particles in all CPUs</span>
@@ -590,7 +590,7 @@ document.write(`
 <span class="w">  </span><span class="c1">//It is used inside the memorize and restore particle attributes routines</span>
 <span class="w">  </span><span class="n">ParticleAttributes</span><span class="o">*</span><span class="w"> </span><span class="nf">removeParticleAttributesWithoutDelete</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">//this method provides access to the particles&#39; attributes</span>
+<span class="w">  </span><span class="c1">//this method provides access to the particles' attributes</span>
 <span class="w">  </span><span class="c1">//array from ParticleAttributes class instance.</span>
 <span class="w">  </span><span class="c1">//User is not supposed to use this method directly.</span>
 <span class="w">  </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">getParticleAttributeVal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ind</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">attr_ind</span><span class="p">);</span>

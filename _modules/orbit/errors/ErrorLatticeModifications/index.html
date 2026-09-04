@@ -365,10 +365,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.errors.ErrorLatticeModifications</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">Module. Includes functions that will modify the accelerator lattice</span>
 <span class="sd">by inserting an error node into a teapot accelerator node.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="c1"># import the auxiliary classes</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
@@ -381,9 +381,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="addErrorNode"><a class="viewcode-back" href="../../../../reference/orbit.errors.addErrorNode/#orbit.errors.addErrorNode">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">addErrorNode</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">Error_Node</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This will put one error node into the lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">length_tolerance</span> <span class="o">=</span> <span class="mf">0.0001</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
     <span class="n">position_start</span> <span class="o">=</span> <span class="n">position</span>
@@ -397,37 +397,37 @@ document.write(`
         <span class="n">ind</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">z</span> <span class="o">+=</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">	Check that between start and end there are only non-modified</span>
 <span class="sd">	drift elements. If space charge was added first - that is a problem.</span>
 <span class="sd">	The collimation should be added first.</span>
-<span class="sd">	&quot;&quot;&quot;</span>
+<span class="sd">	"""</span>
 
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">node_start_ind</span> <span class="p">:</span> <span class="n">node_stop_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">		print &quot;debug node = &quot;, node.getName(), &quot; type = &quot;, node.getType(),\</span>
-<span class="sd">		&quot; L = &quot;, node.getLength()</span>
-<span class="sd">		&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">		print "debug node = ", node.getName(), " type = ", node.getType(),\</span>
+<span class="sd">		" L = ", node.getLength()</span>
+<span class="sd">		"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">DriftTEAPOT</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non-drift node = &quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; type = &quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">&quot; L = &quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Non-drift node = "</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">" type = "</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">" L = "</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
             <span class="n">orbitFinalize</span><span class="p">(</span>
-                <span class="s2">&quot;We have non-drift element at the place of </span><span class="se">\</span>
-<span class="s2">				the error node! Stop!&quot;</span>
+                <span class="s2">"We have non-drift element at the place of </span><span class="se">\</span>
+<span class="s2">				the error node! Stop!"</span>
             <span class="p">)</span>
-<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">            </span><span class="sd">"""</span>
 <span class="sd">			if(node.getNumberOfChildren() != 4):</span>
-<span class="sd">				print &quot;Node = &quot;, node.getName(),&quot; type = &quot;, node.getType(),\</span>
-<span class="sd">				&quot; L = &quot;, node.getLength(), &quot; N child nodes = &quot;,\</span>
+<span class="sd">				print "Node = ", node.getName()," type = ", node.getType(),\</span>
+<span class="sd">				" L = ", node.getLength(), " N child nodes = ",\</span>
 <span class="sd">				node.getNumberOfChildren()</span>
-<span class="sd">			orbitFinalize(&quot;Drift element was modified with additional \</span>
+<span class="sd">			orbitFinalize("Drift element was modified with additional \</span>
 <span class="sd">			functionality (SC or something else)! Add collimation first! \</span>
-<span class="sd">			Stop!&quot;)</span>
-<span class="sd">			&quot;&quot;&quot;</span>
+<span class="sd">			Stop!")</span>
+<span class="sd">			"""</span>
 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">	Make array of nodes with error node in the center and two possible drifts,</span>
 <span class="sd">	if their length is more than length_tollerance [m]</span>
-<span class="sd">	&quot;&quot;&quot;</span>
+<span class="sd">	"""</span>
 
     <span class="n">nodes_new_arr</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">Error_Node</span><span class="p">,</span>
@@ -435,11 +435,11 @@ document.write(`
     <span class="n">drift_node_start</span> <span class="o">=</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">node_start_ind</span><span class="p">]</span>
     <span class="n">drift_node_stop</span> <span class="o">=</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">node_stop_ind</span><span class="p">]</span>
 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">	Now create two drift nodes: before and after the error node.</span>
 <span class="sd">	If the length of either of these additional drifts is less than</span>
 <span class="sd">	length_tollerance [m], skip this drift.</span>
-<span class="sd">	&quot;&quot;&quot;</span>
+<span class="sd">	"""</span>
 
     <span class="k">if</span> <span class="n">position_start</span> <span class="o">&gt;</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()[</span><span class="n">drift_node_start</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">length_tolerance</span><span class="p">:</span>
         <span class="n">drift_node_start_new</span> <span class="o">=</span> <span class="n">DriftTEAPOT</span><span class="p">(</span><span class="n">drift_node_start</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
@@ -450,14 +450,14 @@ document.write(`
         <span class="n">drift_node_stop_new</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">lattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()[</span><span class="n">drift_node_stop</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">position_stop</span><span class="p">)</span>
         <span class="n">nodes_new_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">drift_node_stop_new</span><span class="p">)</span>
 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">	Now modify the lattice by replacing the old part with the new nodes</span>
-<span class="sd">	&quot;&quot;&quot;</span>
+<span class="sd">	"""</span>
 
     <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">node_start_ind</span> <span class="p">:</span> <span class="n">node_stop_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">nodes_new_arr</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">	Initialize the lattice</span>
-<span class="sd">	&quot;&quot;&quot;</span>
+<span class="sd">	"""</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span></div>
 
 

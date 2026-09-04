@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.matrix_lattice.BaseMATRIX</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">The AccNode subclass that represents a transport 7x7 matrix in a MATRIX_Lattice instance.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="c1"># import general accelerator elements and lattice</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">..lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccLattice</span><span class="p">,</span> <span class="n">AccNode</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="p">,</span> <span class="n">AccNodeBunchTracker</span>
@@ -377,27 +377,27 @@ document.write(`
 
 
 <div class="viewcode-block" id="BaseMATRIX"><a class="viewcode-back" href="../../../../reference/orbit.matrix_lattice.BaseMATRIX/#orbit.matrix_lattice.BaseMATRIX">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BaseMATRIX</span><span class="p">(</span><span class="n">AccNodeBunchTracker</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;The base abstract class of the BaseMATRIX accelerator lattice elements hierarchy.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""The base abstract class of the BaseMATRIX accelerator lattice elements hierarchy."""</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates the base MATRIX element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">AccNodeBunchTracker</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;base matrix&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"base matrix"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 
 <div class="viewcode-block" id="BaseMATRIX.getMatrix"><a class="viewcode-back" href="../../../../reference/orbit.matrix_lattice.BaseMATRIX/#orbit.matrix_lattice.BaseMATRIX.getMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the (7,7) Matrix for this transport AccNode.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span></div>
 
 <div class="viewcode-block" id="BaseMATRIX.track"><a class="viewcode-back" href="../../../../reference/orbit.matrix_lattice.BaseMATRIX/#orbit.matrix_lattice.BaseMATRIX.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        It is tracking the parameter dictionary (with bunch as a &quot;bunch&quot;) through the BaseMATRIX element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        It is tracking the parameter dictionary (with bunch as a "bunch") through the BaseMATRIX element.</span>
+<span class="sd">        """</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span></div></div>
 </pre></div>
 

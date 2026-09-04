@@ -395,8 +395,8 @@ document.write(`
 <span class="c1">//    table y(x) and does some operation with the tables.</span>
 <span class="c1">//    It is using linear interpolation.</span>
 <span class="c1">//</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;orbit_mpi.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OU_Function.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"orbit_mpi.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"OU_Function.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
 
@@ -520,7 +520,7 @@ document.write(`
 <span class="w">                            </span><span class="n">ind_stop</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">ind</span><span class="p">;</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">){</span>
-<span class="w">                        </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  add(double x, double y) has unlimited loop. Check data.&quot;</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  add(double x, double y) has unlimited loop. Check data."</span><span class="p">);</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="n">ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ind_stop</span><span class="p">;</span>
@@ -552,7 +552,7 @@ document.write(`
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">ind</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">){</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">];</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class:The index in x(int ind) more than size&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class:The index in x(int ind) more than size"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 
 <span class="p">}</span>
@@ -562,7 +562,7 @@ document.write(`
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">ind</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">){</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">];</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class:The index in y(int ind) more than size&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class:The index in y(int ind) more than size"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -571,7 +571,7 @@ document.write(`
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">ind</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">){</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">];</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class:The index in err(int ind) more than size&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class:The index in err(int ind) more than size"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -648,7 +648,7 @@ document.write(`
 <span class="kt">double</span><span class="w"> </span><span class="n">Function</span><span class="o">::</span><span class="n">getY</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
-<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getY(double x)  (size&lt;1)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getY(double x)  (size&lt;1)"</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
@@ -664,7 +664,7 @@ document.write(`
 <span class="w">            </span><span class="n">yy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">];</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">yy</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getY(double x)  ind &lt; 0 or ind &gt;= (size-2)&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getY(double x)  ind &lt; 0 or ind &gt;= (size-2)"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">yy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span><span class="o">*</span><span class="p">((</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span><span class="o">/</span><span class="n">x_step</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">yy</span><span class="p">;</span>
@@ -683,7 +683,7 @@ document.write(`
 <span class="w">                </span><span class="n">ind_stop</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">ind</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">){</span>
-<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getY(double y) has unlimited loop. Check data.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getY(double y) has unlimited loop. Check data."</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">    </span><span class="n">ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ind_start</span><span class="p">;</span>
@@ -695,7 +695,7 @@ document.write(`
 <span class="kt">double</span><span class="w"> </span><span class="n">Function</span><span class="o">::</span><span class="n">getYP</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
-<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getYP(double x)  (size&lt;2)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getYP(double x)  (size&lt;2)"</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
@@ -711,7 +711,7 @@ document.write(`
 <span class="w">            </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="mi">-1</span><span class="p">])</span><span class="o">/</span><span class="n">x_step</span><span class="p">;</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">yp</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getYP(double x)  ind &lt; 0 or ind &gt;= (size-2)&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getYP(double x)  ind &lt; 0 or ind &gt;= (size-2)"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span><span class="o">/</span><span class="n">x_step</span><span class="p">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">yp</span><span class="p">;</span>
@@ -730,7 +730,7 @@ document.write(`
 <span class="w">                </span><span class="n">ind_stop</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">ind</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">){</span>
-<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getYP(double y) has unlimited loop. Check data.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getYP(double y) has unlimited loop. Check data."</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">    </span><span class="n">ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ind_start</span><span class="p">;</span>
@@ -742,7 +742,7 @@ document.write(`
 <span class="kt">double</span><span class="w"> </span><span class="n">Function</span><span class="o">::</span><span class="n">getYErr</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
-<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getYerr(double x)  (size&lt;1)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getYerr(double x)  (size&lt;1)"</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">xMin</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">err_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
@@ -754,7 +754,7 @@ document.write(`
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">inf_const_step</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
 <span class="w">    </span><span class="n">ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)((</span><span class="n">x</span><span class="o">-</span><span class="n">xMin</span><span class="p">)</span><span class="o">/</span><span class="n">x_step</span><span class="p">);</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">ind</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ind</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="mi">-2</span><span class="p">)){</span>
-<span class="w">      </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getYerr(double x)  ind &lt; 0 or ind &gt;= (size-2)&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getYerr(double x)  ind &lt; 0 or ind &gt;= (size-2)"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">err_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">err_arr</span><span class="p">[</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">err_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span><span class="o">*</span><span class="p">((</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span><span class="o">/</span><span class="n">x_step</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
@@ -773,7 +773,7 @@ document.write(`
 <span class="w">                </span><span class="n">ind_stop</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">ind</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">){</span>
-<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getX(double y) has unlimited loop. Check data.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getX(double y) has unlimited loop. Check data."</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">    </span><span class="n">ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ind_start</span><span class="p">;</span>
@@ -789,7 +789,7 @@ document.write(`
 <span class="p">{</span>
 
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
-<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getX(double y)  (size&lt;1)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getX(double y)  (size&lt;1)"</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">yMin</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
@@ -811,7 +811,7 @@ document.write(`
 <span class="w">                </span><span class="n">ind_stop</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">ind</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">){</span>
-<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  getX(double y) has unlimited loop. Check data.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  getX(double y) has unlimited loop. Check data."</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 
@@ -906,12 +906,12 @@ document.write(`
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">f_inv</span><span class="o">-&gt;</span><span class="n">getMaxX</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">getMaxY</span><span class="p">()){</span>
-<span class="w">        </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  setInverse(Function* f_inv) f_inv-&gt;getMaxX() &gt; getMaxY()&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  setInverse(Function* f_inv) f_inv-&gt;getMaxX() &gt; getMaxY()"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">f_inv</span><span class="o">-&gt;</span><span class="n">getMinX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">getMinY</span><span class="p">()){</span>
-<span class="w">        </span><span class="n">finalize</span><span class="p">(</span><span class="s">&quot;ORBIT Utils Function class: The Function method  setInverse(Function* f_inv) f_inv-&gt;getMinX() &lt; getMinY()&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">finalize</span><span class="p">(</span><span class="s">"ORBIT Utils Function class: The Function method  setInverse(Function* f_inv) f_inv-&gt;getMinX() &lt; getMinY()"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -1025,20 +1025,20 @@ document.write(`
 <span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">rank_MPI</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
 <span class="w">        </span><span class="n">Out</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">setprecision</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setiosflags</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ios</span><span class="o">::</span><span class="n">scientific</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Out</span><span class="o">&lt;&lt;</span><span class="s">&quot;% size = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getSize</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
-<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">&quot;% minX = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMinX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
-<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">&quot;% maxX = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMaxX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
-<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">&quot;% minY = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMinY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
-<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">&quot;% maxY = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMaxY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
-<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">&quot;% x-step const = &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">isStepConst</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Out</span><span class="o">&lt;&lt;</span><span class="s">"% size = "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getSize</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">"% minX = "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMinX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">"% maxX = "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMaxX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">"% minY = "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMinY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">"% maxY = "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">getMaxY</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="s">"% x-step const = "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">isStepConst</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">Out</span><span class="o">&lt;&lt;</span><span class="s">&quot;% #i      x     y      y_err &quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Out</span><span class="o">&lt;&lt;</span><span class="s">"% #i      x     y      y_err "</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<span class="w">        </span><span class="n">Out</span><span class="o">&lt;&lt;</span><span class="s">&quot; &quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span>
-<span class="w">        </span><span class="o">&lt;&lt;</span><span class="s">&quot;   </span><span class="se">\t</span><span class="s">&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="w">        </span><span class="o">&lt;&lt;</span><span class="s">&quot;   </span><span class="se">\t</span><span class="s">&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="w">        </span><span class="o">&lt;&lt;</span><span class="s">&quot;   </span><span class="se">\t</span><span class="s">&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">err_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">        </span><span class="n">Out</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="s">"   </span><span class="se">\t</span><span class="s">"</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="s">"   </span><span class="se">\t</span><span class="s">"</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">y_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="s">"   </span><span class="se">\t</span><span class="s">"</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">err_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 <span class="w">        </span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">Out</span><span class="p">.</span><span class="n">flush</span><span class="p">();</span>
 <span class="w">      </span><span class="p">}</span>

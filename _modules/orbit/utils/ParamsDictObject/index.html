@@ -373,82 +373,82 @@ document.write(`
 
 
 <div class="viewcode-block" id="ParamsDictObject"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ParamsDictObject</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class. Object that has a parameters dictionary.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Object that has a parameters dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
 
 <div class="viewcode-block" id="ParamsDictObject.addParam"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.addParam">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Adds a parameter to the object.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.removeParam"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.removeParam">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">removeParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Removes a parameter.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span><span class="p">:</span>
             <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.setParam"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.setParam">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Sets a parameter to the object.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.setParamsDict"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.setParamsDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setParamsDict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Sets an external dictionary as a parameter</span>
 <span class="sd">        dictionary for this element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span> <span class="o">=</span> <span class="n">params</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.updateParamsDict"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.updateParamsDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">updateParamsDict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Updates the dictionary with external dictionary data.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.getParam"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.getParam">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns requested parameters of the object.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The object does not have a parameter for the key you requested!&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"The object does not have a parameter for the key you requested!"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;method getParam(self, key)&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"method getParam(self, key)"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">NamedObject</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Name of element = &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Name of element = "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">TypedObject</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Type of element = &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Type of element = "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
                 <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;key = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"key = "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.getParamsDict"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.getParamsDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getParamsDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns the whole parameters dictionary.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.hasParam"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.hasParam">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">hasParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns True if the object has a parameter</span>
 <span class="sd">        for this key. Returns False otherwise.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span></div>
 
 <div class="viewcode-block" id="ParamsDictObject.keys"><a class="viewcode-back" href="../../../../reference/orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject.keys">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;return the list of the keys for the parameters&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""return the list of the keys for the parameters"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__paramsDict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span></div></div>
 </pre></div>
 

@@ -377,10 +377,10 @@ document.write(`
 
 
 <div class="viewcode-block" id="profiles"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.profiles/#orbit.diagnostics.profiles">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">profiles</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">histogram</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">Min</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">Max</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Returns a profile as Grid1D object for one of the following bunch coordinates:</span>
 <span class="sd">    x[m] xp[rad] y[m] yp[rad] z[m] dE[GeV]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">grid1D</span> <span class="o">=</span> <span class="n">Grid1D</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
 
@@ -393,28 +393,28 @@ document.write(`
     <span class="n">nParts</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSizeGlobal</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">nParts</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="n">main_rank</span><span class="p">:</span>
-            <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
-            <span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;bunch has only number of particles =&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span>
+            <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+            <span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"bunch has only number of particles ="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span>
             <span class="n">file_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
             <span class="k">return</span> <span class="n">grid1D</span>
 
     <span class="n">coord_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">"x"</span><span class="p">:</span>
         <span class="n">coord_index</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">&quot;px&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">"px"</span><span class="p">:</span>
         <span class="n">coord_index</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">"y"</span><span class="p">:</span>
         <span class="n">coord_index</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">&quot;py&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">"py"</span><span class="p">:</span>
         <span class="n">coord_index</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">"z"</span><span class="p">:</span>
         <span class="n">coord_index</span> <span class="o">=</span> <span class="mi">4</span>
-    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">&quot;dE&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">coord</span> <span class="o">==</span> <span class="s2">"dE"</span><span class="p">:</span>
         <span class="n">coord_index</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="k">if</span> <span class="n">coord_index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">st</span> <span class="o">=</span> <span class="s2">&quot;Error: profiles(bunch,coord,...)&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">st</span> <span class="o">+=</span> <span class="s2">&quot;coord is not x,xp,y,yp,z, or dE.&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">st</span> <span class="o">+=</span> <span class="s2">&quot;Stop.&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="s2">"Error: profiles(bunch,coord,...)"</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">st</span> <span class="o">+=</span> <span class="s2">"coord is not x,xp,y,yp,z, or dE."</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="n">st</span> <span class="o">+=</span> <span class="s2">"Stop."</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
         <span class="n">orbit_mpi</span><span class="o">.</span><span class="n">finalize</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
 
@@ -437,8 +437,8 @@ document.write(`
 
     <span class="k">if</span> <span class="n">Min</span> <span class="o">==</span> <span class="n">Max</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="n">main_rank</span><span class="p">:</span>
-            <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
-            <span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;No histogram min=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Min</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; max=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Max</span><span class="p">)</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span>
+            <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+            <span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"No histogram min="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Min</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" max="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Max</span><span class="p">)</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span>
             <span class="n">file_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
             <span class="k">return</span> <span class="n">grid1D</span>
 
@@ -450,15 +450,15 @@ document.write(`
 
     <span class="c1"># --- dump the histogram to the file</span>
     <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="n">main_rank</span><span class="p">:</span>
-        <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
-        <span class="n">st</span> <span class="o">=</span> <span class="s2">&quot;% &quot;</span> <span class="o">+</span> <span class="s2">&quot; Min, Max = </span><span class="si">%15.8g</span><span class="s2"> , </span><span class="si">%15.8g</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">Min</span><span class="p">,</span> <span class="n">Max</span><span class="p">)</span>
-        <span class="n">st</span> <span class="o">+=</span> <span class="s2">&quot; nSteps = </span><span class="si">%5d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">steps</span>
-        <span class="n">st</span> <span class="o">+=</span> <span class="s2">&quot; hist_sum = </span><span class="si">%15.8g</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sum_value</span>
+        <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">histogram</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="s2">"% "</span> <span class="o">+</span> <span class="s2">" Min, Max = </span><span class="si">%15.8g</span><span class="s2"> , </span><span class="si">%15.8g</span><span class="s2"> "</span> <span class="o">%</span> <span class="p">(</span><span class="n">Min</span><span class="p">,</span> <span class="n">Max</span><span class="p">)</span>
+        <span class="n">st</span> <span class="o">+=</span> <span class="s2">" nSteps = </span><span class="si">%5d</span><span class="s2"> "</span> <span class="o">%</span> <span class="n">steps</span>
+        <span class="n">st</span> <span class="o">+=</span> <span class="s2">" hist_sum = </span><span class="si">%15.8g</span><span class="s2">"</span> <span class="o">%</span> <span class="n">sum_value</span>
         <span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">st</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
             <span class="n">val</span> <span class="o">=</span> <span class="n">grid1D</span><span class="o">.</span><span class="n">getGridZ</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
             <span class="n">rho</span> <span class="o">=</span> <span class="n">grid1D</span><span class="o">.</span><span class="n">getValueOnGrid</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
-            <span class="n">st</span> <span class="o">=</span> <span class="s2">&quot; </span><span class="si">%15.8g</span><span class="s2">  </span><span class="si">%15.8g</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">rho</span><span class="p">)</span>
+            <span class="n">st</span> <span class="o">=</span> <span class="s2">" </span><span class="si">%15.8g</span><span class="s2">  </span><span class="si">%15.8g</span><span class="s2"> "</span> <span class="o">%</span> <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">rho</span><span class="p">)</span>
             <span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">st</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span><span class="p">)</span>
         <span class="n">file_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 

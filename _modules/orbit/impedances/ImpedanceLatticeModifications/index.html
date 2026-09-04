@@ -365,10 +365,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.impedances.ImpedanceLatticeModifications</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">Module. Includes functions that will modify the accelerator lattice</span>
 <span class="sd">by inserting an impedance node into a teapot accelerator node.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="c1"># import the auxiliary classes</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
 
@@ -388,9 +388,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="addImpedanceNode"><a class="viewcode-back" href="../../../../reference/orbit.impedances.addImpedanceNode/#orbit.impedances.addImpedanceNode">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">addImpedanceNode</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">Impedance_Node</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This will put one impedance node into the lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">length_tolerance</span> <span class="o">=</span> <span class="mf">0.0001</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
     <span class="n">position_start</span> <span class="o">=</span> <span class="n">position</span>
@@ -406,13 +406,13 @@ document.write(`
     <span class="c1"># -------now we check that between start and end we have only non-modified drift elements</span>
     <span class="c1"># -------if the space charge was added first - that is a problem. The collimation should be added first.</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">node_start_ind</span> <span class="p">:</span> <span class="n">node_stop_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
-        <span class="c1"># print &quot;debug node=&quot;,node.getName(),&quot; type=&quot;,node.getType(),&quot; L=&quot;,node.getLength()</span>
+        <span class="c1"># print "debug node=",node.getName()," type=",node.getType()," L=",node.getLength()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">DriftTEAPOT</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non-drift node=&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; type=&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">&quot; L=&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
-            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">&quot;We have non-drift element at the place of the longitudinal space charge node! Stop!&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Non-drift node="</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">" type="</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">" L="</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">())</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">"We have non-drift element at the place of the longitudinal space charge node! Stop!"</span><span class="p">)</span>
             <span class="c1"># if(node.getNumberOfChildren() != 4):</span>
-            <span class="c1"># print &quot;Node=&quot;,node.getName(),&quot; type=&quot;,node.getType(),&quot; L=&quot;,node.getLength(),&quot; N children nodes=&quot;,node.getNumberOfChildren()</span>
-            <span class="c1"># orbitFinalize(&quot;Drift element was modified with additional functionality (SC or something else)! Add collimation first! Stop!&quot;)</span>
+            <span class="c1"># print "Node=",node.getName()," type=",node.getType()," L=",node.getLength()," N children nodes=",node.getNumberOfChildren()</span>
+            <span class="c1"># orbitFinalize("Drift element was modified with additional functionality (SC or something else)! Add collimation first! Stop!")</span>
     <span class="c1"># make array of nodes from long sc node in the center and possible two drifts if their length is more than length_tollerance [m]</span>
     <span class="n">nodes_new_arr</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">Impedance_Node</span><span class="p">,</span>

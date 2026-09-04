@@ -365,10 +365,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.rf_cavities.RFLatticeModifications</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">Module. Includes functions that will modify the accelerator lattice</span>
 <span class="sd">by inserting one teapot node accelerator node.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="c1"># import the auxiliary classes</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span>
@@ -384,9 +384,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="addRFNode"><a class="viewcode-back" href="../../../../reference/orbit.rf_cavities.addRFNode/#orbit.rf_cavities.addRFNode">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">addRFNode</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">rf_node</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This will put one rf cavity node in the lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">length_tolerance</span> <span class="o">=</span> <span class="mf">0.0001</span>
     <span class="n">lattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
     <span class="n">position_start</span> <span class="o">=</span> <span class="n">position</span>
@@ -404,13 +404,13 @@ document.write(`
     <span class="c1"># -------If the rf was added first - that is a problem.</span>
     <span class="c1"># -------The collimation should be added first.</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">lattice</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()[</span><span class="n">node_start_ind</span> <span class="p">:</span> <span class="n">node_stop_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
-        <span class="c1"># print &quot;debug node = &quot;, node.getName(),\</span>
-        <span class="c1"># &quot; type = &quot;, node.getType(),&quot; L = &quot;, node.getLength()</span>
+        <span class="c1"># print "debug node = ", node.getName(),\</span>
+        <span class="c1"># " type = ", node.getType()," L = ", node.getLength()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">DriftTEAPOT</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">((</span><span class="s2">&quot;Non-drift node = &quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">&quot; type = &quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">&quot; L = &quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()))</span>
+            <span class="nb">print</span><span class="p">((</span><span class="s2">"Non-drift node = "</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span> <span class="s2">" type = "</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">(),</span> <span class="s2">" L = "</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()))</span>
             <span class="n">orbitFinalize</span><span class="p">(</span>
-                <span class="s2">&quot;We have a non-drift element at the</span><span class="se">\</span>
-<span class="s2">			location of the rf node! Stop!&quot;</span>
+                <span class="s2">"We have a non-drift element at the</span><span class="se">\</span>
+<span class="s2">			location of the rf node! Stop!"</span>
             <span class="p">)</span>
             <span class="c1"># Make array of nodes from rf node in the center and possibly</span>
     <span class="c1"># two drifts if their length is more than length_tollerance [m]</span>

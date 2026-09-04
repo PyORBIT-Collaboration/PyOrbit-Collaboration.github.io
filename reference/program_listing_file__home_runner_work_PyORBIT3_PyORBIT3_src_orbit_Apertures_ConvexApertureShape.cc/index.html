@@ -380,9 +380,9 @@ document.write(`
   <section id="program-listing-for-file-convexapertureshape-cc">
 <span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-orbit-apertures-convexapertureshape-cc"></span><h1>Program Listing for File ConvexApertureShape.cc<a class="headerlink" href="#program-listing-for-file-convexapertureshape-cc" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Apertures_ConvexApertureShape.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-apertures-convexapertureshape-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/orbit/Apertures/ConvexApertureShape.cc</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;orbit_mpi.hh&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"orbit_mpi.hh"</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ConvexApertureShape.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"ConvexApertureShape.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
@@ -403,8 +403,8 @@ document.write(`
 
 <span class="n">ConvexApertureShape</span><span class="o">::</span><span class="n">ConvexApertureShape</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="n">BaseApertureShape</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">        </span><span class="n">shapeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;convex&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="n">typeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;convex&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">shapeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"convex"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">typeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"convex"</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">ConvexApertureShape</span><span class="o">::~</span><span class="n">ConvexApertureShape</span><span class="p">()</span>
@@ -454,7 +454,7 @@ document.write(`
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nPoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">convexX</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">nPoints</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">nPoints</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
-<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">&quot;ConvexApertureShape.checkAllPoints() - number of convex shape points = 0 or 1. Stop.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">"ConvexApertureShape.checkAllPoints() - number of convex shape points = 0 or 1. Stop."</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">nPoints</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
@@ -464,18 +464,18 @@ document.write(`
 
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ind</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">nPoints</span><span class="mi">-2</span><span class="p">);</span><span class="w"> </span><span class="n">ind</span><span class="o">++</span><span class="p">){</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">checkOnePoint</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">ind</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
-<span class="w">            </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">&quot;ConvexApertureShape.checkAllPoints() - not a convex shape. Stop.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">"ConvexApertureShape.checkAllPoints() - not a convex shape. Stop."</span><span class="p">);</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">checkOnePoint</span><span class="p">(</span><span class="n">nPoints</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">nPoints</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
-<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">&quot;ConvexApertureShape.checkAllPoints() - not a convex shape. Stop.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">"ConvexApertureShape.checkAllPoints() - not a convex shape. Stop."</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">checkOnePoint</span><span class="p">(</span><span class="n">nPoints</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">nPoints</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
-<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">&quot;ConvexApertureShape.checkAllPoints() - not a convex shape. Stop.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="s">"ConvexApertureShape.checkAllPoints() - not a convex shape. Stop."</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -491,7 +491,7 @@ document.write(`
 <span class="kt">int</span><span class="w"> </span><span class="n">ConvexApertureShape</span><span class="o">::</span><span class="n">checkOnePoint</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">//double res = ((convexX[i1] - convexX[i0])*(y - convexY[i0]) -(x - convexX[i0])*(convexY[i1] - convexY[i0]));</span>
-<span class="w">    </span><span class="c1">//std::cout&lt;&lt;&quot;debug x,y=&quot;&lt;&lt; x &lt;&lt;&quot;  &quot;&lt;&lt; y &lt;&lt;&quot; i0=&quot;&lt;&lt; i0 &lt;&lt;&quot; i1=&quot;&lt;&lt; i1 &lt;&lt;&quot;  res=&quot;&lt;&lt; res &lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cout&lt;&lt;"debug x,y="&lt;&lt; x &lt;&lt;"  "&lt;&lt; y &lt;&lt;" i0="&lt;&lt; i0 &lt;&lt;" i1="&lt;&lt; i1 &lt;&lt;"  res="&lt;&lt; res &lt;&lt;std::endl;</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="p">((</span><span class="n">convexX</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">convexX</span><span class="p">[</span><span class="n">i0</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">convexY</span><span class="p">[</span><span class="n">i0</span><span class="p">])</span><span class="w"> </span><span class="o">-</span>
 <span class="w">          </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">convexX</span><span class="p">[</span><span class="n">i0</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">convexY</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">convexY</span><span class="p">[</span><span class="n">i0</span><span class="p">]))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="p">){</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>

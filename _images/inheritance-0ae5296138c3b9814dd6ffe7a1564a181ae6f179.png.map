@@ -7,11 +7,11 @@
 <area shape="rect" id="node6" href="../orbit.teapot.BaseTEAPOT/#orbit.teapot.BaseTEAPOT" target="_top" title="The base abstract class of the TEAPOT accelerator elements hierarchy." alt="" coords="339,164,404,181"/>
 <area shape="rect" id="node8" href="../orbit.teapot.NodeTEAPOT/#orbit.teapot.NodeTEAPOT" target="_top" title="NodeTEAPOT" alt="" coords="433,164,499,181"/>
 <area shape="rect" id="node7" href="../orbit.teapot.DriftTEAPOT/#orbit.teapot.DriftTEAPOT" target="_top" title="Drift TEAPOT element." alt="" coords="528,164,590,181"/>
-<area shape="rect" id="node13" href="../orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode" target="_top" title="The moments node class for TEAPOT lattice" alt="" coords="643,100,742,117"/>
-<area shape="rect" id="node14" href="../orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember" target="_top" title="The moments node class for TEAPOT lattice" alt="" coords="620,132,765,149"/>
-<area shape="rect" id="node15" href="../orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode" target="_top" title="The statlats node class for TEAPOT lattice" alt="" coords="646,164,739,181"/>
-<area shape="rect" id="node16" href="../orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember" target="_top" title="The statlats node class for TEAPOT lattice" alt="" coords="623,196,762,213"/>
-<area shape="rect" id="node17" href="../orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode" target="_top" title="TeapotTuneAnalysisNode" alt="" coords="636,228,749,245"/>
+<area shape="rect" id="node13" href="../orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode" target="_top" title="TeapotMomentsNode" alt="" coords="643,100,742,117"/>
+<area shape="rect" id="node14" href="../orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember" target="_top" title="TeapotMomentsNodeSetMember" alt="" coords="620,132,765,149"/>
+<area shape="rect" id="node15" href="../orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode" target="_top" title="TeapotStatLatsNode" alt="" coords="646,164,739,181"/>
+<area shape="rect" id="node16" href="../orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember" target="_top" title="TeapotStatLatsNodeSetMember" alt="" coords="623,196,762,213"/>
+<area shape="rect" id="node17" href="../orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode" target="_top" title="Estimates tunes from coordinates on neighboring turns." alt="" coords="636,228,749,245"/>
 <area shape="rect" id="node9" href="../orbit.diagnostics.Moments/#orbit.diagnostics.Moments" target="_top" title="This class delivers the beam moments" alt="" coords="26,100,77,117"/>
 <area shape="rect" id="node10" href="../orbit.diagnostics.MomentsSetMember/#orbit.diagnostics.MomentsSetMember" target="_top" title="This class delivers the beam moments" alt="" coords="3,67,100,85"/>
 <area shape="rect" id="node11" href="../orbit.diagnostics.StatLats/#orbit.diagnostics.StatLats" target="_top" title="This class gathers delivers the statistical twiss parameters" alt="" coords="29,35,75,52"/>

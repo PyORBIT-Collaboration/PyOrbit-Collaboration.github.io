@@ -365,13 +365,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.teapot.teapot_matrix_lattice</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">The TEAPOT MATRIX_Lattice is a subclass of a MAXTRIX_Lattice class. The Matrix lattice is generated</span>
 <span class="sd">by using the TEAPOT lattice. The matrices are the linear part of the TEAPOT elements</span>
 <span class="sd">tracking. The number of transport matrices in the lattice is equal to the sum of</span>
 <span class="sd">all parts of TEAPOT elements. The RF cavities in the Matrix lattice are the</span>
 <span class="sd">TEAPOT RF Cavity class instances.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
@@ -394,18 +394,18 @@ document.write(`
 
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TEAPOT_MATRIX_Lattice</span><span class="p">(</span><span class="n">MATRIX_Lattice</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The subclass of the MATRIX_Lattice class. Shell class for the BaseMATRIX nodes collection.</span>
 <span class="sd">    The TEAPOT_Lattice instance is needed to create the TEAPOT_MATRIX_Lattice instance.</span>
 <span class="sd">    The nodes for RF elements are the usual TEAPOT RingRFTEAPOT nodes. The Bunch instance</span>
-<span class="sd">    is needed for the MATRIX_Lattice constructor to specify the particle&#39;s energy and</span>
+<span class="sd">    is needed for the MATRIX_Lattice constructor to specify the particle's energy and</span>
 <span class="sd">    other parameters.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">teapot_lattice</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="n">MATRIX_Lattice</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">teapot_lattice</span><span class="p">,</span> <span class="n">TEAPOT_Lattice</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">&quot;Constructor orbit.teapot.TEAPOT_MATRIX_Lattice needs  the TEAPOT_Lattice instance.&quot;</span><span class="p">)</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">"Constructor orbit.teapot.TEAPOT_MATRIX_Lattice needs  the TEAPOT_Lattice instance."</span><span class="p">)</span>
         <span class="c1"># memorize the TEAPOT LATTICE</span>
         <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">name</span> <span class="o">=</span> <span class="n">teapot_lattice</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
@@ -419,8 +419,8 @@ document.write(`
 
         <span class="c1"># ----------make MATRIX lattice from TEAPOT</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">twissAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
-            <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
+            <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
             <span class="n">active_index</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">()</span>
             <span class="n">n_parts</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getnParts</span><span class="p">()</span>
             <span class="n">length</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="n">active_index</span><span class="p">)</span>
@@ -428,16 +428,16 @@ document.write(`
                 <span class="bp">self</span><span class="o">.</span><span class="n">matrixGenerator</span><span class="o">.</span><span class="n">initBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
                 <span class="n">node</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">)</span>
                 <span class="c1"># bunch is ready</span>
-                <span class="n">matrixNode</span> <span class="o">=</span> <span class="n">BaseMATRIX</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">active_index</span><span class="p">))</span>
-                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;matrix_parent_node&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;matrix_parent_node_type&quot;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">())</span>
-                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;matrix_parent_node_n_nodes&quot;</span><span class="p">,</span> <span class="n">n_parts</span><span class="p">)</span>
-                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">&quot;matrix_parent_node_active_index&quot;</span><span class="p">,</span> <span class="n">active_index</span><span class="p">)</span>
+                <span class="n">matrixNode</span> <span class="o">=</span> <span class="n">BaseMATRIX</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"_"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">active_index</span><span class="p">))</span>
+                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"matrix_parent_node"</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"matrix_parent_node_type"</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">())</span>
+                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"matrix_parent_node_n_nodes"</span><span class="p">,</span> <span class="n">n_parts</span><span class="p">)</span>
+                <span class="n">matrixNode</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"matrix_parent_node_active_index"</span><span class="p">,</span> <span class="n">active_index</span><span class="p">)</span>
                 <span class="n">matrixNode</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">matrixGenerator</span><span class="o">.</span><span class="n">calculateMatrix</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getMatrix</span><span class="p">())</span>
-                <span class="c1"># print &quot;============= name=&quot;,matrixNode.getName(),</span>
-                <span class="c1"># print &quot; type=&quot;,matrixNode.getParam(&quot;matrix_parent_node_type&quot;),</span>
-                <span class="c1"># print &quot; L=&quot;,matrixNode.getLength()</span>
+                <span class="c1"># print "============= name=",matrixNode.getName(),</span>
+                <span class="c1"># print " type=",matrixNode.getParam("matrix_parent_node_type"),</span>
+                <span class="c1"># print " L=",matrixNode.getLength()</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">)</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">RingRFTEAPOT</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
                 <span class="n">rf_node</span> <span class="o">=</span> <span class="n">RingRFTEAPOT</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
@@ -447,10 +447,10 @@ document.write(`
         <span class="n">accContainer</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
         <span class="n">accContainer</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">twissAction</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
         <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span>
-        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;lostbunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lost_bunch</span>
-        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;position&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;useCharge&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">teapot_lattice</span><span class="o">.</span><span class="n">getUseRealCharge</span><span class="p">()</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"lostbunch"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lost_bunch</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"position"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"useCharge"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">teapot_lattice</span><span class="o">.</span><span class="n">getUseRealCharge</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">teapot_lattice</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">accContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">makeOneTurnMatrix</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
@@ -463,145 +463,145 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">(</span><span class="n">Ekin</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">matrixNode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNodes</span><span class="p">():</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">matrixNode</span><span class="p">,</span> <span class="n">BaseMATRIX</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-                <span class="n">node</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;matrix_parent_node&quot;</span><span class="p">)</span>
-                <span class="n">active_index</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;matrix_parent_node_active_index&quot;</span><span class="p">)</span>
-                <span class="n">n_parts</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;matrix_parent_node_n_nodes&quot;</span><span class="p">)</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"matrix_parent_node"</span><span class="p">)</span>
+                <span class="n">active_index</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"matrix_parent_node_active_index"</span><span class="p">)</span>
+                <span class="n">n_parts</span> <span class="o">=</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"matrix_parent_node_n_nodes"</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">n_parts</span> <span class="o">!=</span> <span class="n">node</span><span class="o">.</span><span class="n">getnParts</span><span class="p">():</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot; orbit.teapot.TEAPOT_MATRIX_Lattice class&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;  rebuild(Ekin = -1.0) method&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;  TEAPOT node=&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;  has been changed!&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;  Stop!&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">" orbit.teapot.TEAPOT_MATRIX_Lattice class"</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"  rebuild(Ekin = -1.0) method"</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"  TEAPOT node="</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"  has been changed!"</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"  Stop!"</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
                     <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">matrixGenerator</span><span class="o">.</span><span class="n">initBunch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bunch</span><span class="p">)</span>
                 <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
-                <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span>
-                <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
+                <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span>
+                <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span> <span class="o">=</span> <span class="n">node</span>
                 <span class="n">node</span><span class="o">.</span><span class="n">setActivePartIndex</span><span class="p">(</span><span class="n">active_index</span><span class="p">)</span>
                 <span class="n">node</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">matrixGenerator</span><span class="o">.</span><span class="n">calculateMatrix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bunch</span><span class="p">,</span> <span class="n">matrixNode</span><span class="o">.</span><span class="n">getMatrix</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">makeOneTurnMatrix</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getRingParametersDict"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingParametersDict">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRingParametersDict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the dictionary with different ring parametrs</span>
 <span class="sd">        calculated from the one turn transport matrix. It overloads the</span>
 <span class="sd">        getRingParametersDict(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">momentum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">momentum</span><span class="p">()</span>
         <span class="n">mass</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">mass</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">MATRIX_Lattice</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getRingMatrix"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRingMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the dictionary with different ring parametrs</span>
 <span class="sd">        calculated from the one turn transport matrix. It overloads the</span>
 <span class="sd">        getRingParametersDict(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="n">MATRIX_Lattice</span><span class="o">.</span><span class="n">getOneTurnMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getRingOrbit"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingOrbit">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRingOrbit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z0</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple ([(position, X),...],[(position,Y),...] ).</span>
 <span class="sd">        It overloads the getRingTwissDataX(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackOrbit</span><span class="p">(</span><span class="n">z0</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getRingTwissDataX"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataX">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRingTwissDataX</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple (tuneX, [(position, alphaX),...],[(position,betaX),...] ).</span>
 <span class="sd">        It overloads the getRingTwissDataX(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="n">alpha_x</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha x&quot;</span><span class="p">]</span>
-        <span class="n">beta_x</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta x [m]&quot;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_x</span><span class="p">,</span> <span class="n">beta_x</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span></div>
+        <span class="n">alpha_x</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"alpha x"</span><span class="p">]</span>
+        <span class="n">beta_x</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"beta x [m]"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_x</span><span class="p">,</span> <span class="n">beta_x</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getRingTwissDataY"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataY">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRingTwissDataY</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple (tuneY, [(position, alphaY),...],[(position,betaY),...] ).</span>
 <span class="sd">        It overloads the getRingTwissDataY(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="n">alpha_y</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;alpha y&quot;</span><span class="p">]</span>
-        <span class="n">beta_y</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;beta y [m]&quot;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_y</span><span class="p">,</span> <span class="n">beta_y</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span></div>
+        <span class="n">alpha_y</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"alpha y"</span><span class="p">]</span>
+        <span class="n">beta_y</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"beta y [m]"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_y</span><span class="p">,</span> <span class="n">beta_y</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getRingDispersionDataX"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataX">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRingDispersionDataX</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple  ([(position, dispX),...],[(position,disp_pX),...] ).</span>
 <span class="sd">        It overloads the getRingDispersionDataX(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="n">disp</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion x [m]&quot;</span><span class="p">]</span>
-        <span class="n">disp_p</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime x&quot;</span><span class="p">]</span>
-        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;momentum [GeV/c]&quot;</span><span class="p">]</span>
-        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;mass [GeV]&quot;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span></div>
+        <span class="n">disp</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"dispersion x [m]"</span><span class="p">]</span>
+        <span class="n">disp_p</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"dispersion prime x"</span><span class="p">]</span>
+        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"momentum [GeV/c]"</span><span class="p">]</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"mass [GeV]"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getRingDispersionDataY"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataY">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRingDispersionDataY</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple  ([(position, dispY),...],[(position,disp_pY),...] ).</span>
 <span class="sd">        It overloads the getRingDispersionDataY(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="n">disp</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion y [m]&quot;</span><span class="p">]</span>
-        <span class="n">disp_p</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;dispersion prime y&quot;</span><span class="p">]</span>
-        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;momentum [GeV/c]&quot;</span><span class="p">]</span>
-        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;mass [GeV]&quot;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span></div>
+        <span class="n">disp</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"dispersion y [m]"</span><span class="p">]</span>
+        <span class="n">disp_p</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"dispersion prime y"</span><span class="p">]</span>
+        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"momentum [GeV/c]"</span><span class="p">]</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"mass [GeV]"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getTransferTwissDataX"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataX">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTransferTwissDataX</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha_x</span><span class="p">,</span> <span class="n">beta_x</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple (tuneX, [(position, alphaX),...],[(position,betaX),...] ).</span>
 <span class="sd">        It overloads the getRingTwissDataX(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_x</span><span class="p">,</span> <span class="n">beta_x</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_x</span><span class="p">,</span> <span class="n">beta_x</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getTransferTwissDataY"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataY">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTransferTwissDataY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha_y</span><span class="p">,</span> <span class="n">beta_y</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple (tuneY, [(position, alphaY),...],[(position,betaY),...] ).</span>
 <span class="sd">        It overloads the getRingTwissDataY(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_y</span><span class="p">,</span> <span class="n">beta_y</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackTwissData</span><span class="p">(</span><span class="n">alpha_y</span><span class="p">,</span> <span class="n">beta_y</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getTransferDispersionDataX"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataX">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTransferDispersionDataX</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple  ([(position, dispX),...],[(position,disp_pX),...] ).</span>
 <span class="sd">        It overloads the getRingDispersionDataX(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;momentum [GeV/c]&quot;</span><span class="p">]</span>
-        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;mass [GeV]&quot;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span></div>
+        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"momentum [GeV/c]"</span><span class="p">]</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"mass [GeV]"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getTransferDispersionDataY"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataY">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTransferDispersionDataY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple  ([(position, dispY),...],[(position,disp_pY),...] ).</span>
 <span class="sd">        It overloads the getRingDispersionDataY(p,m) method from the parent MATRIX_Lattice</span>
 <span class="sd">        class.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">res_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingParametersDict</span><span class="p">()</span>
-        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;momentum [GeV/c]&quot;</span><span class="p">]</span>
-        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">&quot;mass [GeV]&quot;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span></div>
+        <span class="n">momentum</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"momentum [GeV/c]"</span><span class="p">]</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="n">res_dict</span><span class="p">[</span><span class="s2">"mass [GeV]"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trackDispersionData</span><span class="p">(</span><span class="n">momentum</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">disp</span><span class="p">,</span> <span class="n">disp_p</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TEAPOT_MATRIX_Lattice.getChromaticitiesXY"><a class="viewcode-back" href="../../../../reference/orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice.getChromaticitiesXY">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getChromaticitiesXY</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Calculates chromaticities for X,Y planes for the whole ring</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="p">(</span><span class="n">tuneX</span><span class="p">,</span> <span class="n">tmp0</span><span class="p">,</span> <span class="n">tmp1</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingTwissDataX</span><span class="p">()</span>
         <span class="p">(</span><span class="n">tuneY</span><span class="p">,</span> <span class="n">tmp0</span><span class="p">,</span> <span class="n">tmp1</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRingTwissDataY</span><span class="p">()</span>
         <span class="n">tuneX</span> <span class="o">=</span> <span class="n">tuneX</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -610,14 +610,14 @@ document.write(`
 
         <span class="c1"># track bunch through the TEAPOT nodes</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">twissAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">BaseTEAPOT</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">RingRFTEAPOT</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
                 <span class="n">node</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">)</span>
 
         <span class="n">accContainer</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
         <span class="n">accContainer</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">twissAction</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="o">.</span><span class="n">BODY</span><span class="p">)</span>
         <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span>
+        <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">teapot_lattice</span><span class="o">.</span><span class="n">trackActions</span><span class="p">(</span><span class="n">accContainer</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">)</span>
 
         <span class="n">res_coeff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrixGenerator</span><span class="o">.</span><span class="n">calcChromCoeff</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bunch</span><span class="p">)</span>

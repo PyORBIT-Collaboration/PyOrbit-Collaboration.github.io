@@ -393,7 +393,7 @@ document.write(`
 
 
 <div class="viewcode-block" id="Replace_Quads_to_OverlappingQuads_Nodes"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.Replace_Quads_to_OverlappingQuads_Nodes/#orbit.py_linac.lattice_modifications.Replace_Quads_to_OverlappingQuads_Nodes">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">Replace_Quads_to_OverlappingQuads_Nodes</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">z_step</span><span class="p">,</span> <span class="n">accSeq_Names</span><span class="o">=</span><span class="p">[],</span> <span class="n">quad_Names</span><span class="o">=</span><span class="p">[],</span> <span class="n">EngeFunctionFactory</span><span class="o">=</span><span class="n">GetEngeFunction</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Function will replace  Quad nodes by OverlappingQuadsNode nodes.</span>
 <span class="sd">    The replacement will be performed only for specified sequences.</span>
 <span class="sd">    If the quad names list is empty, all of them will be replaced!</span>
@@ -402,22 +402,22 @@ document.write(`
 <span class="sd">    The magnetic field longitudinal dependency in quads will be described</span>
 <span class="sd">    by Enge Functions that will be produced by the GetEngeFunction function</span>
 <span class="sd">    by default. The user can supply his/her own factory for these functions.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># -----------------------------------------------------------------------------</span>
     <span class="c1"># ---- if the new drift will be shorter than drift_length_tolerance we ingnore it</span>
     <span class="n">drift_length_tolerance</span> <span class="o">=</span> <span class="mf">0.00000001</span>
     <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">accSeq_Name</span> <span class="ow">in</span> <span class="n">accSeq_Names</span><span class="p">:</span>
         <span class="n">accSeq</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getSequence</span><span class="p">(</span><span class="n">accSeq_Name</span><span class="p">)</span>
-        <span class="c1"># print &quot;debug ================== STAR seq=&quot;,accSeq.getName()</span>
+        <span class="c1"># print "debug ================== STAR seq=",accSeq.getName()</span>
         <span class="k">if</span> <span class="n">accSeq</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes Python function. &quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes Python function. "</span>
             <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Cannot find the acc. sequence with this name in the lattice!&quot;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Cannot find the acc. sequence with this name in the lattice!"</span>
             <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;accSeq name = &quot;</span> <span class="o">+</span> <span class="n">accSeq_Name</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"accSeq name = "</span> <span class="o">+</span> <span class="n">accSeq_Name</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;lattice name = &quot;</span> <span class="o">+</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"lattice name = "</span> <span class="o">+</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="c1"># --------------------------------------------------------------</span>
@@ -439,18 +439,18 @@ document.write(`
                 <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="ow">in</span> <span class="n">quad_Names</span><span class="p">:</span>
                     <span class="n">quads_tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
             <span class="n">quads</span> <span class="o">=</span> <span class="n">quads_tmp</span>
-        <span class="c1"># ---- create Enge Functions&#39; dictionary by using the usual quad nodes as keys</span>
+        <span class="c1"># ---- create Enge Functions' dictionary by using the usual quad nodes as keys</span>
         <span class="n">enge_func_quad_dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">quads</span><span class="p">:</span>
             <span class="n">enge_func_quad_dict</span><span class="p">[</span><span class="n">quad</span><span class="p">]</span> <span class="o">=</span> <span class="n">EngeFunctionFactory</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
         <span class="c1"># --------------------------------------------</span>
-        <span class="c1"># ---- let&#39;s create the array with groups of overlaping quads</span>
+        <span class="c1"># ---- let's create the array with groups of overlaping quads</span>
         <span class="c1"># ---- quad_groups_and_ind_arr = [[quad0,quad1,..],pos_start,pos_end,ind_start,ind_end]</span>
         <span class="n">quad_groups_and_ind_arr</span> <span class="o">=</span> <span class="n">Find_Groups_of_Quads</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">accSeq</span><span class="p">,</span> <span class="n">quads</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">,</span> <span class="n">node_to_index_in_seq_dict</span><span class="p">)</span>
         <span class="c1"># --------------------------------------------</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">quad_groups_and_ind_arr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="c1"># ---- let&#39;s check that the ends of fields of groups of quads cover the drifts</span>
+        <span class="c1"># ---- let's check that the ends of fields of groups of quads cover the drifts</span>
         <span class="k">for</span> <span class="n">group_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">quad_groups_and_ind_arr</span><span class="p">)):</span>
             <span class="p">[</span><span class="n">quads_arr</span><span class="p">,</span> <span class="n">pos_start</span><span class="p">,</span> <span class="n">pos_end</span><span class="p">,</span> <span class="n">ind_start</span><span class="p">,</span> <span class="n">ind_end</span><span class="p">]</span> <span class="o">=</span> <span class="n">quad_groups_and_ind_arr</span><span class="p">[</span><span class="n">group_ind</span><span class="p">]</span>
             <span class="k">for</span> <span class="n">node_ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ind_start</span><span class="p">,</span> <span class="n">ind_end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
@@ -463,36 +463,36 @@ document.write(`
                     <span class="n">res</span> <span class="o">=</span> <span class="n">delta_pos_quad_start</span> <span class="o">&lt;</span> <span class="p">(</span><span class="o">-</span><span class="n">drift_length_tolerance</span><span class="p">)</span>
                     <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="ow">or</span> <span class="p">(</span><span class="n">delta_pos_quad_end</span> <span class="o">&gt;</span> <span class="n">drift_length_tolerance</span><span class="p">)</span>
                     <span class="k">if</span> <span class="n">res</span><span class="p">:</span>
-                        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The  Replace_Quads_to_OverlappingQuads_Nodes function. STOP. &quot;</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"The  Replace_Quads_to_OverlappingQuads_Nodes function. STOP. "</span>
                         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;We have quad at the beginning or the end of the sequence! quad = &quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"We have quad at the beginning or the end of the sequence! quad = "</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;quad field positions[m] [from,to] =&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">((</span><span class="n">delta_pos_quad_start</span><span class="p">,</span> <span class="n">delta_pos_quad_end</span><span class="p">))</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"quad field positions[m] [from,to] ="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">((</span><span class="n">delta_pos_quad_start</span><span class="p">,</span> <span class="n">delta_pos_quad_end</span><span class="p">))</span>
                         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;The quad&#39;s distributed field will be outside the sequence!&quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"The quad's distributed field will be outside the sequence!"</span>
                         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;The code cannot handle this situation at this moment.&quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"The code cannot handle this situation at this moment."</span>
                         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;You have to change the EngeFunctionFactory to describe the right field function.&quot;</span>
+                        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"You have to change the EngeFunctionFactory to describe the right field function."</span>
                         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
                         <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">quads_arr</span><span class="p">:</span>
                     <span class="k">continue</span>
                 <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Drift</span><span class="p">)):</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The  Replace_Quads_to_OverlappingQuads_Nodes function. STOP. &quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">"The  Replace_Quads_to_OverlappingQuads_Nodes function. STOP. "</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;The field of the group of quads covers the elements with L != 0 and different from Drift! &quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"The field of the group of quads covers the elements with L != 0 and different from Drift! "</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;At this moment we do not know how to handle this situation.&quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"At this moment we do not know how to handle this situation."</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">quad_names</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                    <span class="n">quad_names</span> <span class="o">=</span> <span class="s2">""</span>
                     <span class="k">for</span> <span class="n">quad</span> <span class="ow">in</span> <span class="n">quads_arr</span><span class="p">:</span>
-                        <span class="n">quad_names</span> <span class="o">+=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Quads = &quot;</span> <span class="o">+</span> <span class="n">quad_names</span>
+                        <span class="n">quad_names</span> <span class="o">+=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" "</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Quads = "</span> <span class="o">+</span> <span class="n">quad_names</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;node=&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"node="</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Type = &quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Type = "</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
                     <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="c1"># ----------------------------------------------------------------------------</span>
         <span class="c1"># -----------------------------------------------------</span>
@@ -521,7 +521,7 @@ document.write(`
                 <span class="p">(</span><span class="n">node_pos_start</span><span class="p">,</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
                 <span class="n">delta</span> <span class="o">=</span> <span class="n">node_pos_end</span> <span class="o">-</span> <span class="n">pos_start</span>
                 <span class="n">new_length</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span>
-                <span class="c1"># print &quot;debug start group node = &quot;,node.getName(),&quot; node.getLength() - delta =&quot;,node.getLength() - delta</span>
+                <span class="c1"># print "debug start group node = ",node.getName()," node.getLength() - delta =",node.getLength() - delta</span>
                 <span class="k">if</span> <span class="n">new_length</span> <span class="o">&gt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
                     <span class="k">if</span> <span class="n">quad_group_ind</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                         <span class="c1"># ---- we have to check that this node is not the end node of the previous quad group</span>
@@ -543,7 +543,7 @@ document.write(`
                 <span class="p">(</span><span class="n">node_pos_start</span><span class="p">,</span> <span class="n">node_pos_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
                 <span class="n">delta</span> <span class="o">=</span> <span class="n">pos_end</span> <span class="o">-</span> <span class="n">node_pos_start</span>
                 <span class="n">new_length</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span>
-                <span class="c1"># print &quot;debug end   group node = &quot;,node.getName(),&quot; node.getLength() - delta =&quot;,node.getLength() - delta</span>
+                <span class="c1"># print "debug end   group node = ",node.getName()," node.getLength() - delta =",node.getLength() - delta</span>
                 <span class="k">if</span> <span class="n">new_length</span> <span class="o">&gt;</span> <span class="n">drift_length_tolerance</span><span class="p">:</span>
                     <span class="k">if</span> <span class="n">quad_group_ind</span> <span class="o">&lt;</span> <span class="n">n_groups</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
                         <span class="c1"># ---- we have to check that this node is not the start node of the next quad group</span>
@@ -597,7 +597,7 @@ document.write(`
             <span class="n">ovrlp_count</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
                 <span class="n">node</span> <span class="o">=</span> <span class="n">OverlappingQuadsNode</span><span class="p">()</span>
-                <span class="n">name</span> <span class="o">=</span> <span class="n">quads_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:group:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ovrlp_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">quads_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">":group:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ovrlp_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
                 <span class="n">node</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_length_nodes</span><span class="p">):</span>
                     <span class="n">pos_end</span> <span class="o">=</span> <span class="n">node_pos_end</span>
@@ -626,7 +626,7 @@ document.write(`
         <span class="n">new_nodes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">new_nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">getPosition</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="c1"># --------------------------------------------------------------------------</span>
         <span class="c1"># ------------------------------------------</span>
-        <span class="c1"># ---- let&#39;s replace all nodes in the AccSeq by the new set</span>
+        <span class="c1"># ---- let's replace all nodes in the AccSeq by the new set</span>
         <span class="n">accSeq</span><span class="o">.</span><span class="n">removeAllNodes</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">new_nodes</span><span class="p">:</span>
             <span class="n">accSeq</span><span class="o">.</span><span class="n">addNode</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -637,7 +637,7 @@ document.write(`
     <span class="n">accLattice</span><span class="o">.</span><span class="n">setNodes</span><span class="p">(</span><span class="n">new_latt_nodes</span><span class="p">)</span>
     <span class="n">accLattice</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
     <span class="c1"># ------- debug START printing of new nodes and their positions in the lattice</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">	node_pos_dict = accLattice.getNodePositionsDict()</span>
 <span class="sd">	for accSeq_Name in accSeq_Names:</span>
 <span class="sd">		accSeq = accLattice.getSequence(accSeq_Name)</span>
@@ -649,17 +649,17 @@ document.write(`
 <span class="sd">			(pos_start,pos_end) = node_pos_dict[node]</span>
 <span class="sd">			delta = pos - ((pos_start+pos_end)/2 - accSeq_z_start)</span>
 <span class="sd">			if(abs(delta) &gt;  drift_length_tolerance):</span>
-<span class="sd">				print &quot;debug new node=&quot;,node.getName(),&quot; pos=&quot;,node.getPosition(),&quot; (pos_start,pos_end)=&quot;,node_pos_dict[node],&quot; delta=&quot;,delta</span>
-<span class="sd">	&quot;&quot;&quot;</span></div>
+<span class="sd">				print "debug new node=",node.getName()," pos=",node.getPosition()," (pos_start,pos_end)=",node_pos_dict[node]," delta=",delta</span>
+<span class="sd">	"""</span></div>
     <span class="c1"># ------- debug STOP  printing of new nodes and their positions in the lattice</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">Find_Groups_of_Quads</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">accSeq</span><span class="p">,</span> <span class="n">quads</span><span class="p">,</span> <span class="n">enge_func_quad_dict</span><span class="p">,</span> <span class="n">node_to_index_in_seq_dict</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This function will find the group of quads with the fields overlapping each other.</span>
 <span class="sd">    It returns the quads that should be taken into account.</span>
 <span class="sd">    quad_groups_and_ind_arr = [[quad0,quad1,..],pos_start,pos_end,ind_start,ind_end]]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
     <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
     <span class="n">n_quads</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">quads</span><span class="p">)</span>
@@ -688,27 +688,27 @@ document.write(`
             <span class="n">quad_groups_and_ind_arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">quad_groups_and_ind_arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">arr_tmp</span><span class="p">,</span> <span class="n">pos_start</span><span class="p">,</span> <span class="n">pos_end</span><span class="p">,</span> <span class="n">ind_start</span><span class="p">,</span> <span class="n">ind_end</span><span class="p">]</span>
             <span class="n">quads_arr</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="c1"># ----------------------------------- DEBUG PRINTING START</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">	for [quads_arr,pos_start,pos_end,ind_start,ind_end] in quad_groups_and_ind_arr:</span>
-<span class="sd">		print &quot;debug new group N quads=&quot;,len(quads_arr),&quot; (pos_start,pos_end)=&quot;,(pos_start,pos_end),&quot; (ind_start,ind_end)=&quot;,(ind_start,ind_end)</span>
+<span class="sd">		print "debug new group N quads=",len(quads_arr)," (pos_start,pos_end)=",(pos_start,pos_end)," (ind_start,ind_end)=",(ind_start,ind_end)</span>
 <span class="sd">		for quad in quads_arr:</span>
 <span class="sd">			(pos_start,pos_end) = node_pos_dict[quad]</span>
 <span class="sd">			(z_min,z_max) = enge_func_quad_dict[quad].getLimitsZ()</span>
 <span class="sd">			pos_center = (pos_start+pos_end)/2</span>
-<span class="sd">			print &quot;debug          quad = &quot;,quad.getName(),&quot; (pos_center+z_min,pos_center+z_max) =&quot;,(pos_center+z_min,pos_center+z_max)</span>
-<span class="sd">	&quot;&quot;&quot;</span>
+<span class="sd">			print "debug          quad = ",quad.getName()," (pos_center+z_min,pos_center+z_max) =",(pos_center+z_min,pos_center+z_max)</span>
+<span class="sd">	"""</span>
     <span class="c1"># ----------------------------------- DEBUG PRINTING END</span>
     <span class="k">return</span> <span class="n">quad_groups_and_ind_arr</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">GetNodeInAccSeqForPosition</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    It is a local convenience function. It returns the node in the AccSeq</span>
 <span class="sd">    which coordinates cover the z-position. The position z is a position</span>
 <span class="sd">    in the lattice.</span>
 <span class="sd">    This function is different from the AccLattice method getNodeForPosition(z),</span>
-<span class="sd">    because it limits the nodes&#39; array to speed up the finding process.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    because it limits the nodes' array to speed up the finding process.</span>
+<span class="sd">    """</span>
     <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
     <span class="n">index0</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">index1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
@@ -721,7 +721,7 @@ document.write(`
         <span class="k">return</span> <span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="n">index1</span><span class="p">],</span> <span class="n">index1</span><span class="p">,</span> <span class="n">posBefore1</span><span class="p">,</span> <span class="n">posAfter1</span><span class="p">)</span>
     <span class="k">while</span> <span class="n">index0</span> <span class="o">!=</span> <span class="n">index1</span><span class="p">:</span>
         <span class="n">index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index0</span> <span class="o">+</span> <span class="n">index1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="c1"># print &quot;debug z=&quot;,z,&quot; index0=&quot;,index0,&quot; index1=&quot;,index1,&quot; index=&quot;,index,&quot; (posBefore0, posAfter0)=&quot;,(posBefore0, posAfter0),&quot; (posBefore1, posAfter1)=&quot;,(posBefore1, posAfter1)</span>
+        <span class="c1"># print "debug z=",z," index0=",index0," index1=",index1," index=",index," (posBefore0, posAfter0)=",(posBefore0, posAfter0)," (posBefore1, posAfter1)=",(posBefore1, posAfter1)</span>
         <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">nodes</span><span class="p">[</span><span class="n">index</span><span class="p">]]</span>
         <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">posBefore</span><span class="p">:</span>
             <span class="n">index1</span> <span class="o">=</span> <span class="n">index</span>
@@ -744,11 +744,11 @@ document.write(`
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">Get_quads_zeroLengthNodes_in_range</span><span class="p">(</span><span class="n">accSeq</span><span class="p">,</span> <span class="n">node_ind_start</span><span class="p">,</span> <span class="n">node_ind_end</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Returns all quads and zero-length nodes in this index range.</span>
 <span class="sd">    It also checks that all elements inside this range has zero length or they</span>
 <span class="sd">    are drifts of quads.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getNodes</span><span class="p">()</span>
     <span class="n">zero_length_nodes</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">child_nodes</span> <span class="o">=</span> <span class="p">[]</span>
@@ -757,11 +757,11 @@ document.write(`
         <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">node_ind</span><span class="p">]</span>
         <span class="n">children_arr</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getBodyChildren</span><span class="p">()</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">children_arr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># print &quot;debug ========= parent node=&quot;,node.getName(),&quot; pos = &quot;,node.getPosition()</span>
+            <span class="c1"># print "debug ========= parent node=",node.getName()," pos = ",node.getPosition()</span>
             <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children_arr</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
                     <span class="n">child_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
-                    <span class="c1"># print &quot;      debug child=&quot;,child.getName(),&quot; pos=&quot;,child.getPosition()</span>
+                    <span class="c1"># print "      debug child=",child.getName()," pos=",child.getPosition()</span>
         <span class="n">length</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">length</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
             <span class="n">zero_length_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -770,22 +770,22 @@ document.write(`
                 <span class="n">quads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Drift</span><span class="p">):</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes function. &quot;</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;This Acc. Sequence has an element that &quot;</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s2">"The Replace_BaseRF_Gap_and_Quads_to_Overlapping_Nodes function. "</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"This Acc. Sequence has an element that "</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;1. has non-zero length&quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"1. has non-zero length"</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;2. not a quad&quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"2. not a quad"</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;3. not a drift&quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"3. not a drift"</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;This function does not know how to handle this elelement!&quot;</span>
+                    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"This function does not know how to handle this elelement!"</span>
                     <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Acc Sequence =&quot;</span> <span class="o">+</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Acc Sequence ="</span> <span class="o">+</span> <span class="n">accSeq</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                     <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Acc element =&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Acc element ="</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
                     <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;Acc element type =&quot;</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"Acc element type ="</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">getType</span><span class="p">()</span>
                     <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
                     <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="n">zero_length_nodes</span> <span class="o">+=</span> <span class="n">child_nodes</span>

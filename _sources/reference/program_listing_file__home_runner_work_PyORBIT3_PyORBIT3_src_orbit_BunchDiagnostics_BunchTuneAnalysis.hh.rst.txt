@@ -13,7 +13,6 @@ Program Listing for File BunchTuneAnalysis.hh
    #ifndef BUNCH_TUNE_ANALYSIS_H
    #define BUNCH_TUNE_ANALYSIS_H
    
-   //pyORBIT utils
    #include "CppPyWrapper.hh"
    
    #include "Bunch.hh"
@@ -25,29 +24,26 @@ Program Listing for File BunchTuneAnalysis.hh
    class BunchTuneAnalysis: public OrbitUtils::CppPyWrapper
    {
        public:
-   
            BunchTuneAnalysis();
    
            virtual ~BunchTuneAnalysis();
    
            void analyzeBunch(Bunch* bunch);
    
-           //** Assigns Twiss values at location of calculator */
-           void assignTwiss(double bx, double ax, double dx, double dpx, double by, double ay);
+           void setNormMatrixElement(int i, int j, double value);
    
-           double getTune(int ic);
+           double getNormMatrixElement(int i, int j);
    
+           void setNormMatrixFromTwiss(double betax, double alphax, double etax, double etapx, double betay, double alphay);
    
        private:
-           //** Twiss */
-           double betax;
-           double alphax;
-           double etax;
-           double etapx;
-           double betay;
-           double alphay;
+           // Normalization matrix V^{-1}
+           double matrix[6][6];
    
+           // Flag to erase stored phase/amplitude info.
+           int erase;
    };
+   
    
    #endif
    //endif for BUNCH_TUNE_ANALYSIS_H

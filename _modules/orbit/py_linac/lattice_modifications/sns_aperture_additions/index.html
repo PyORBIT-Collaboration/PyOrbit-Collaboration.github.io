@@ -382,21 +382,21 @@ document.write(`
 
 
 <div class="viewcode-block" id="AddMEBTChopperPlatesAperturesToSNS_Lattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice_modifications.AddMEBTChopperPlatesAperturesToSNS_Lattice/#orbit.py_linac.lattice_modifications.AddMEBTChopperPlatesAperturesToSNS_Lattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">AddMEBTChopperPlatesAperturesToSNS_Lattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">aprtNodes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Function will add two Aperture nodes at the entrance and exit of</span>
 <span class="sd">    MEBT chopper plates. It returns the list of Aperture nodes.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">x_size</span> <span class="o">=</span> <span class="mf">0.060</span>
     <span class="n">y_size</span> <span class="o">=</span> <span class="mf">0.018</span>
     <span class="n">shape</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">node_pos_dict</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodePositionsDict</span><span class="p">()</span>
-    <span class="n">node1</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesForName</span><span class="p">(</span><span class="s2">&quot;MEBT:ChpPlt:Entr&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">node2</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesForName</span><span class="p">(</span><span class="s2">&quot;MEBT:ChpPlt:Exit&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">node1</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesForName</span><span class="p">(</span><span class="s2">"MEBT:ChpPlt:Entr"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">node2</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodesForName</span><span class="p">(</span><span class="s2">"MEBT:ChpPlt:Exit"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="n">node1</span><span class="p">,</span> <span class="n">node2</span><span class="p">]:</span>
         <span class="n">node_name</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
         <span class="p">(</span><span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">node_pos_dict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
         <span class="n">apertureNode</span> <span class="o">=</span> <span class="n">LinacApertureNode</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">x_size</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">y_size</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">)</span>
-        <span class="n">apertureNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">node_name</span> <span class="o">+</span> <span class="s2">&quot;:Aprt&quot;</span><span class="p">)</span>
+        <span class="n">apertureNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">node_name</span> <span class="o">+</span> <span class="s2">":Aprt"</span><span class="p">)</span>
         <span class="n">apertureNode</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span>
         <span class="n">node</span><span class="o">.</span><span class="n">addChildNode</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
         <span class="n">aprtNodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">apertureNode</span><span class="p">)</span>

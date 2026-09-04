@@ -380,7 +380,7 @@ document.write(`
   <section id="program-listing-for-file-orbit-mpi-cc">
 <span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-cc"></span><h1>Program Listing for File orbit_mpi.cc<a class="headerlink" href="#program-listing-for-file-orbit-mpi-cc" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-mpi-orbit-mpi-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/mpi/orbit_mpi.cc</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;orbit_mpi.hh&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"orbit_mpi.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
@@ -436,9 +436,9 @@ document.write(`
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ORBIT_MPI_Finalize</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">){</span>
-<span class="w">    </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_RuntimeError</span><span class="p">,</span><span class="s">&quot;ORBIT_MPI_Finalize.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_RuntimeError</span><span class="p">,</span><span class="s">"ORBIT_MPI_Finalize."</span><span class="p">);</span>
 <span class="w">    </span><span class="n">PyErr_Print</span><span class="p">();</span>
-<span class="w">    </span><span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">&quot;import traceback; traceback.print_stack()&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">"import traceback; traceback.print_stack()"</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -457,9 +457,9 @@ document.write(`
 <span class="cp">#endif</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">Py_IsInitialized</span><span class="p">()){</span>
-<span class="w">      </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_RuntimeError</span><span class="p">,</span><span class="s">&quot;ORBIT_MPI_Finalize.&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_RuntimeError</span><span class="p">,</span><span class="s">"ORBIT_MPI_Finalize."</span><span class="p">);</span>
 <span class="w">      </span><span class="n">PyErr_Print</span><span class="p">();</span>
-<span class="w">      </span><span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">&quot;import traceback; traceback.print_stack()&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">PyRun_SimpleString</span><span class="p">(</span><span class="s">"import traceback; traceback.print_stack()"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">message</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">){</span>
 <span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="n">message</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
@@ -491,7 +491,7 @@ document.write(`
 <span class="cp">#else</span>
 <span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
 <span class="w">  </span><span class="o">*</span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s">&quot;no mpi&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s">"no mpi"</span><span class="p">;</span>
 <span class="cp">#endif</span>
 
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
@@ -620,7 +620,7 @@ document.write(`
 <span class="w">  </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MPI_Comm_get_name</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span><span class="w"> </span><span class="n">namep</span><span class="p">,</span><span class="w"> </span><span class="n">reslen</span><span class="p">);</span>
 <span class="cp">#else</span>
 <span class="w">  </span><span class="n">res</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
-<span class="w">    </span><span class="n">namep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s">&quot;no mpi&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">namep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s">"no mpi"</span><span class="p">;</span>
 <span class="w">    </span><span class="o">*</span><span class="n">reslen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
 <span class="cp">#endif</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>

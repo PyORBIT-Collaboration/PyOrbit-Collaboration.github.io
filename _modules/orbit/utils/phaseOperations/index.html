@@ -365,18 +365,18 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.utils.phaseOperations</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">The collection of functions and classes for operations with phases.</span>
 <span class="sd">They utilized the 360 deg or 2*math.pi periodicity of the phases.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
 
 <div class="viewcode-block" id="phaseNearTargetPhase"><a class="viewcode-back" href="../../../../reference/orbit.utils.phaseNearTargetPhase/#orbit.utils.phaseNearTargetPhase">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">phaseNearTargetPhase</span><span class="p">(</span><span class="n">phase</span><span class="p">,</span> <span class="n">phase_trgt</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Adds or subtracts 2*math.pi to get the phase near the target phase.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">pi2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
     <span class="n">delta</span> <span class="o">=</span> <span class="n">pi2</span> <span class="o">*</span> <span class="nb">int</span><span class="p">((</span><span class="n">phase_trgt</span> <span class="o">-</span> <span class="n">phase</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">pi2</span><span class="p">))</span>
     <span class="n">phase</span> <span class="o">+=</span> <span class="n">delta</span>
@@ -389,9 +389,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="phaseNearTargetPhaseDeg"><a class="viewcode-back" href="../../../../reference/orbit.utils.phaseNearTargetPhaseDeg/#orbit.utils.phaseNearTargetPhaseDeg">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">phaseNearTargetPhaseDeg</span><span class="p">(</span><span class="n">phase</span><span class="p">,</span> <span class="n">phase_trgt</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Adds or subtracts 360 to get the phase near the target phase.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">delta</span> <span class="o">=</span> <span class="mf">360.0</span> <span class="o">*</span> <span class="nb">int</span><span class="p">((</span><span class="n">phase_trgt</span> <span class="o">-</span> <span class="n">phase</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">360.0</span><span class="p">))</span>
     <span class="n">phase</span> <span class="o">+=</span> <span class="n">delta</span>
     <span class="k">if</span> <span class="n">phase_trgt</span> <span class="o">-</span> <span class="n">phase</span> <span class="o">&gt;</span> <span class="mf">180.0</span><span class="p">:</span>

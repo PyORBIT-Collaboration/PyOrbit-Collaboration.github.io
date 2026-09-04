@@ -366,7 +366,7 @@ document.write(`
                   
   <h1>Source code for orbit.utils.multiDimArray</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="multiDimDoubleArray"><a class="viewcode-back" href="../../../../reference/orbit.utils.multiDimDoubleArray/#orbit.utils.multiDimDoubleArray">[docs]</a><span></span><span class="k">def</span><span class="w"> </span><span class="nf">multiDimDoubleArray</span><span class="p">(</span><span class="o">*</span><span class="n">dims</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Creates multi-dimensional arrays with doubles, such as a[i][k][j].</span>
 
 <span class="sd">    Parameters</span>
@@ -387,7 +387,7 @@ document.write(`
 <span class="sd">    &gt;&gt;&gt; a = multiDimArray(*[5,10,2])  # equivalent</span>
 <span class="sd">    &gt;&gt;&gt; a[1][2][1]</span>
 <span class="sd">    0.0</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
@@ -400,7 +400,7 @@ document.write(`
 
 
 <div class="viewcode-block" id="multiDimIntArray"><a class="viewcode-back" href="../../../../reference/orbit.utils.multiDimIntArray/#orbit.utils.multiDimIntArray">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">multiDimIntArray</span><span class="p">(</span><span class="o">*</span><span class="n">dims</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Creates multi-dimensional arrays with integers, such as a[i][k][j].</span>
 
 <span class="sd">    Parameters</span>
@@ -417,7 +417,7 @@ document.write(`
 <span class="sd">    &gt;&gt;&gt; a = multiDimArray(*[5,10,2])  # equivalent</span>
 <span class="sd">    &gt;&gt;&gt; a[1][2][1]</span>
 <span class="sd">    0</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dims</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>

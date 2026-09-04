@@ -373,9 +373,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="AccActionsContainer"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AccActionsContainer</span><span class="p">(</span><span class="n">NamedObject</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Class. Container for accelerator actions.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">ENTRANCE</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">BODY</span> <span class="o">=</span> <span class="mi">1</span>
@@ -384,40 +384,40 @@ document.write(`
     <span class="n">BEFORE</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">AFTER</span> <span class="o">=</span> <span class="mi">1</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name container&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name container"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates empty accelerator actions container.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">NamedObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="c1"># Array with entrance, body, and exit actions.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__actionsArr</span> <span class="o">=</span> <span class="p">([],</span> <span class="p">[],</span> <span class="p">[])</span>
 
 <div class="viewcode-block" id="AccActionsContainer.addAction"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer.addAction">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">addAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">place</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Appends an action at the entrance, body, or exit</span>
 <span class="sd">        of an accelerator node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__actionsArr</span><span class="p">[</span><span class="n">place</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">action</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AccActionsContainer.removeAction"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer.removeAction">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">removeAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">place</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Removes an action from the entrance, body, or exit</span>
 <span class="sd">        of an accelerator node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__actionsArr</span><span class="p">[</span><span class="n">place</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">action</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="AccActionsContainer.getActions"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer.getActions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">place</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Returns a list of the actions at the entrance, body,</span>
 <span class="sd">        or exit of an accelerator node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__actionsArr</span><span class="p">[</span><span class="n">place</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="AccActionsContainer.performActions"><a class="viewcode-back" href="../../../../reference/orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer.performActions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">performActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">,</span> <span class="n">place</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Performs actions at the entrance, body, or exit</span>
 <span class="sd">        of an accelerator node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__actionsArr</span><span class="p">[</span><span class="n">place</span><span class="p">]:</span>
             <span class="n">action</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">)</span></div></div>
 </pre></div>

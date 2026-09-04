@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.space_charge.scAccNodes</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">Module. Includes abstract classes for all types of space charge accelerator nodes.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -381,66 +381,66 @@ document.write(`
 
 
 <div class="viewcode-block" id="SC_Base_AccNode"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">SC_Base_AccNode</span><span class="p">(</span><span class="n">AccNodeBunchTracker</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The subclass of the AccNodeBunchTracker class. It is a base class for SC nodes. It uses the c++ space charge calculator to calculate the .</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sc_calculator</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sc_calculator</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates the Space Charge (SC) accelerator node element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">AccNodeBunchTracker</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;SC_Base&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"SC_Base"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sc_length</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">switcher</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sc_calculator</span> <span class="o">=</span> <span class="n">sc_calculator</span>
 
 <div class="viewcode-block" id="SC_Base_AccNode.isRFGap"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.isRFGap">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isRFGap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns False. The RF Gap node returns True.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
 <div class="viewcode-block" id="SC_Base_AccNode.setLengthOfSC"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.setLengthOfSC">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLengthOfSC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sc_length</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Defines the path length that will be used in SC kick calculations.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sc_length</span> <span class="o">=</span> <span class="n">sc_length</span></div>
 
 <div class="viewcode-block" id="SC_Base_AccNode.getLengthOfSC"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.getLengthOfSC">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLengthOfSC</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the path length that will be used in SC kick calculations.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc_length</span></div>
 
 <div class="viewcode-block" id="SC_Base_AccNode.setCalculationOn"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.setCalculationOn">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setCalculationOn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switcher</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the boolean parameter that define if the calculations will be performed. True of False.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">switcher</span> <span class="o">=</span> <span class="n">switcher</span></div>
 
 <div class="viewcode-block" id="SC_Base_AccNode.getCalculationOn"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.getCalculationOn">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getCalculationOn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the boolean parameter that define if the calculations will be performed. True of False.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">switcher</span></div>
 
 <div class="viewcode-block" id="SC_Base_AccNode.getCalculator"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.getCalculator">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getCalculator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the space-charge calculator.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc_calculator</span></div>
 
 <div class="viewcode-block" id="SC_Base_AccNode.trackDesign"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method is for Linac Nodes compatibility. It is empty and should not be used for Space Charge calculations.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="SC_Base_AccNode.track"><a class="viewcode-back" href="../../../../reference/orbit.space_charge.SC_Base_AccNode/#orbit.space_charge.SC_Base_AccNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It is tracking the bunch through the Space Charge calculator. Each subclass should implement this method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div></div>
 </pre></div>
 

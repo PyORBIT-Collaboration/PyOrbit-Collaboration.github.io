@@ -10,14 +10,32 @@ TeapotTuneAnalysisNode
 
    .. autosummary::
 
-      ~TeapotTuneAnalysisNode.assignTwiss
-      ~TeapotTuneAnalysisNode.setLatticeLength
+      ~TeapotTuneAnalysisNode.activate
+      ~TeapotTuneAnalysisNode.deactivate
+      ~TeapotTuneAnalysisNode.getActions
+      ~TeapotTuneAnalysisNode.getData
+      ~TeapotTuneAnalysisNode.getNormMatrix
+      ~TeapotTuneAnalysisNode.getTunes
+      ~TeapotTuneAnalysisNode.setNormMatrix
+      ~TeapotTuneAnalysisNode.setNormMatrixFromBunch
+      ~TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix
+      ~TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix
+      ~TeapotTuneAnalysisNode.setNormMatrixFromTwiss
       ~TeapotTuneAnalysisNode.setPosition
       ~TeapotTuneAnalysisNode.track
 
    .. rubric:: Methods Documentation
 
-   .. automethod:: assignTwiss
-   .. automethod:: setLatticeLength
+   .. automethod:: activate
+   .. automethod:: deactivate
+   .. automethod:: getActions
+   .. automethod:: getData
+   .. automethod:: getNormMatrix
+   .. automethod:: getTunes
+   .. automethod:: setNormMatrix
+   .. automethod:: setNormMatrixFromBunch
+   .. automethod:: setNormMatrixFromCovMatrix
+   .. automethod:: setNormMatrixFromTransferMatrix
+   .. automethod:: setNormMatrixFromTwiss
    .. automethod:: setPosition
    .. automethod:: track

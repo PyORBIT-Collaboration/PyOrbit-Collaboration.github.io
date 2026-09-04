@@ -367,9 +367,9 @@ document.write(`
   <h1>Source code for orbit.bumps.bumps</h1><div class="highlight"><pre>
 <span></span><span class="ch">#!/usr/bin/env python</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="sd">This is not a parallel version!</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -382,9 +382,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="simpleBump"><a class="viewcode-back" href="../../../../reference/orbit.bumps.simpleBump/#orbit.bumps.simpleBump">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">simpleBump</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This routine adds a transverse particle coordinate bump.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span> <span class="o">=</span> <span class="n">bunch</span>
@@ -411,9 +411,9 @@ document.write(`
 
 
 <div class="viewcode-block" id="close_orbit_bumps"><a class="viewcode-back" href="../../../../reference/orbit.bumps.close_orbit_bumps/#orbit.bumps.close_orbit_bumps">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">close_orbit_bumps</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This routine try to find the kicks for a closed orbit bump.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tuneX</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -428,8 +428,8 @@ document.write(`
         <span class="n">nc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">nv</span> <span class="o">==</span> <span class="n">nc</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of variables and constraints must be equal&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Number of variables and constraints must be equal"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Stop."</span><span class="p">)</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
         <span class="n">matrix_lattice</span> <span class="o">=</span> <span class="n">TEAPOT_MATRIX_Lattice</span><span class="p">(</span><span class="n">lattice</span><span class="p">,</span> <span class="n">bunch</span><span class="p">)</span>
@@ -532,15 +532,15 @@ document.write(`
 
         <span class="c1"># which coo. x or xp</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nc</span><span class="p">):</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"x"</span><span class="p">:</span>
                 <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_x</span><span class="p">(</span><span class="n">kick</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
                 <span class="n">err</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span>
-            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;xp&quot;</span><span class="p">:</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"xp"</span><span class="p">:</span>
                 <span class="n">xp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_xp</span><span class="p">(</span><span class="n">kick</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
                 <span class="n">err</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xp</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown coordinate&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop.&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown coordinate"</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Stop."</span><span class="p">)</span>
                 <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">err</span><span class="p">)</span></div>
 
@@ -553,27 +553,27 @@ document.write(`
             <span class="n">p0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">p0</span></div>
 
-<div class="viewcode-block" id="close_orbit_bumps.find_kicks"><a class="viewcode-back" href="../../../../reference/orbit.bumps.close_orbit_bumps/#orbit.bumps.close_orbit_bumps.find_kicks">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">find_kicks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Simplex&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="close_orbit_bumps.find_kicks"><a class="viewcode-back" href="../../../../reference/orbit.bumps.close_orbit_bumps/#orbit.bumps.close_orbit_bumps.find_kicks">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">find_kicks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"Simplex"</span><span class="p">):</span>
         <span class="n">p0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_start_value</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;Simplex&quot;</span><span class="p">:</span>
-            <span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimzation_function</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Nelder-Mead&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xtol&quot;</span><span class="p">:</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="s2">&quot;disp&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;maxiter&quot;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">})</span>
+        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">"Simplex"</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimzation_function</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"Nelder-Mead"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">"xtol"</span><span class="p">:</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="s2">"disp"</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">"maxiter"</span><span class="p">:</span> <span class="mi">20000</span><span class="p">})</span>
             <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span>
-        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;LeastSq&quot;</span><span class="p">:</span>
-            <span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimzation_function</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;SLSQP&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">"LeastSq"</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimzation_function</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"SLSQP"</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown routine&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Routines are Simplex or LeastSq&quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown routine"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Routines are Simplex or LeastSq"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Stop."</span><span class="p">)</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div></div>
 
     <span class="c1"># ======================optimzation function===============</span>
 
 
 <div class="viewcode-block" id="TDsimpleBump"><a class="viewcode-back" href="../../../../reference/orbit.bumps.TDsimpleBump/#orbit.bumps.TDsimpleBump">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TDsimpleBump</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This routine adds a transverse particle coordinate bump.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">xbump</span><span class="p">,</span> <span class="n">xpbump</span><span class="p">,</span> <span class="n">ybump</span><span class="p">,</span> <span class="n">ypbump</span><span class="p">,</span> <span class="n">waveform</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bunch</span> <span class="o">=</span> <span class="n">bunch</span>

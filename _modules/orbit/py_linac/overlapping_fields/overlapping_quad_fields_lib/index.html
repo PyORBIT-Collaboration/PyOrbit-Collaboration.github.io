@@ -394,10 +394,10 @@ document.write(`
 
 
 <div class="viewcode-block" id="AbstractQuadFieldSourceFunction"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction/#orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AbstractQuadFieldSourceFunction</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    It is an abstract class describing the quadrupole magnetic</span>
 <span class="sd">    field as a function of the longitudinal coordinate.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
@@ -406,62 +406,62 @@ document.write(`
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AbstractQuadFieldSourceFunction.getFuncValue"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction/#orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction.getFuncValue">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns the quad&#39;s normalized field distribution</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Returns the quad's normalized field distribution</span>
 <span class="sd">        at the distance z from the center.</span>
 <span class="sd">        the distribution should be normalized to 1 over the</span>
 <span class="sd">        integration along the longitudinal coordinate.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AbstractQuadFieldSourceFunction.getFuncDerivative"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction/#orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction.getFuncDerivative">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncDerivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the derivative of the getFuncValue(z)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div></div>
 
 
 <div class="viewcode-block" id="SimpleQuadFieldFunc"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc/#orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">SimpleQuadFieldFunc</span><span class="p">(</span><span class="n">AbstractQuadFieldSourceFunction</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    It is an implementation of the QuadFieldSourceFunction class for</span>
 <span class="sd">    a simple quad with constant field between (-L/2;+L/2).</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quad</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">quad</span> <span class="o">=</span> <span class="n">quad</span>
 
 <div class="viewcode-block" id="SimpleQuadFieldFunc.getLimitsZ"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc/#orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc.getLimitsZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLimitsZ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns (+L/2,-L/2) as longitudinal limits of the quad field.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
         <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">L</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">L</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="SimpleQuadFieldFunc.getFuncValue"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc/#orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc.getFuncValue">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns the quad&#39;s normalized field distribution at the distance z from the center</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Returns the quad's normalized field distribution at the distance z from the center</span>
+<span class="sd">        """</span>
         <span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
         <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">L</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
             <span class="k">return</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">L</span>
         <span class="k">return</span> <span class="mf">0.0</span></div>
 
 <div class="viewcode-block" id="SimpleQuadFieldFunc.getFuncDerivative"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc/#orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc.getFuncDerivative">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncDerivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the derivative of the getFuncValue(z)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="mf">0.0</span></div></div>
 
 
 <div class="viewcode-block" id="EngeFunction"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">EngeFunction</span><span class="p">(</span><span class="n">AbstractQuadFieldSourceFunction</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">          The Enge function with parameters from Berz&#39;s paper [1]_.</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">          The Enge function with parameters from Berz's paper [1]_.</span>
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
 <span class="sd">    .. [1] M. Berz, B. Erdélyi, and K. Makino, “Fringe field effects in small rings of large acceptance,” Phys. Rev. ST Accel. Beams, vol. 3, no. 12, p. 124001, Dec. 2000, doi: 10.1103/PhysRevSTAB.3.124001.</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length_param</span><span class="p">,</span> <span class="n">acceptance_diameter_param</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length_param</span>
@@ -479,58 +479,58 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span>
 
 <div class="viewcode-block" id="EngeFunction.setEngeCoefficients"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.setEngeCoefficients">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setEngeCoefficients</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a_arr</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Sets new values for Enge function&#39;s coeffients.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Sets new values for Enge function's coeffients.</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a_arr</span> <span class="o">=</span> <span class="n">a_arr</span>
         <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findCutOff</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_level</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="EngeFunction.setCutOffLevel"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.setCutOffLevel">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setCutOffLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cutoff level for quad&#39;s  field&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Sets the cutoff level for quad's  field"""</span>
         <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_level</span> <span class="o">=</span> <span class="n">cutoff_level</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findCutOff</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="EngeFunction.setCutOffZ"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.setCutOffZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setCutOffZ</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cutoff_z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cutoff distance from the center of quad&#39;s field&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Sets the cutoff distance from the center of quad's field"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span> <span class="o">=</span> <span class="n">cutoff_z</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="EngeFunction.setLength"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.setLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the length of quad&#39;s field&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Sets the length of quad's field"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
         <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mf">2.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findCutOff</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_level</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="EngeFunction.setAcceptanceDiameter"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.setAcceptanceDiameter">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setAcceptanceDiameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">acceptance_diameter</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the acceptance diameter of the quad&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Sets the acceptance diameter of the quad"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">acceptance_diameter</span> <span class="o">=</span> <span class="n">acceptance_diameter</span>
         <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mf">2.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findCutOff</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_level</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="EngeFunction.setNumberOfPoints"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.setNumberOfPoints">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNumberOfPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_func_points</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the number of points in the field function&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Sets the number of points in the field function"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_func_points</span> <span class="o">=</span> <span class="n">n_func_points</span>
         <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mf">2.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findCutOff</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_level</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="EngeFunction.getCuttOffZ"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.getCuttOffZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getCuttOffZ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the cutoff distance from the center of quad&#39;s field&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the cutoff distance from the center of quad's field"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span></div>
 
 <div class="viewcode-block" id="EngeFunction.getNumberOfPoints"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.getNumberOfPoints">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the number of points in the field function&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the number of points in the field function"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_func_points</span></div>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_getTrueEngeFunc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the quad&#39;s field at the distance x from the center&quot;&quot;&quot;</span>
-        <span class="c1"># x is the distance from the center of the magnet with the iron length l &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the quad's field at the distance x from the center"""</span>
+        <span class="c1"># x is the distance from the center of the magnet with the iron length l """</span>
         <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">acceptance_diameter</span>
         <span class="n">sum_exp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">x0</span> <span class="o">=</span> <span class="n">x</span>
@@ -542,7 +542,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">sum_exp</span><span class="p">))</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_findCutOff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Finds the distance from the center where the field is less than cutoff level&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Finds the distance from the center where the field is less than cutoff level"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">=</span> <span class="mf">1.0</span>
         <span class="n">init_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getTrueEngeFunc</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">step</span>
@@ -570,7 +570,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Normalizes the quad field function to the integral of 1&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Normalizes the quad field function to the integral of 1"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">=</span> <span class="mf">1.0</span>
         <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_z</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_func_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
@@ -586,31 +586,31 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">setConstStep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <div class="viewcode-block" id="EngeFunction.getFuncValue"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.getFuncValue">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the quad&#39;s field at the distance z from the center&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the quad's field at the distance z from the center"""</span>
         <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getMaxX</span><span class="p">():</span>
             <span class="k">return</span> <span class="mf">0.0</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getY</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="EngeFunction.getFuncDerivative"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.getFuncDerivative">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncDerivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the derivative of the getFuncValue(z)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getMaxX</span><span class="p">():</span>
             <span class="k">return</span> <span class="mf">0.0</span>
         <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">copysign</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getYP</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)),</span> <span class="o">-</span><span class="n">z</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="EngeFunction.getLimitsZ"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.getLimitsZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLimitsZ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the tuple with min and max Z value for this field&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the tuple with min and max Z value for this field"""</span>
         <span class="n">z_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getMaxX</span><span class="p">()</span>
         <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">z_max</span><span class="p">,</span> <span class="n">z_max</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="PMQ_Trace3D_Function"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">PMQ_Trace3D_Function</span><span class="p">(</span><span class="n">AbstractQuadFieldSourceFunction</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The PMQ Function is a represenatation of the field of permanent quad</span>
 <span class="sd">    from Trace3D documantation (p 77):</span>
 <span class="sd">    http://laacg.lanl.gov/laacg/services/traceman.pdf</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length_param</span><span class="p">,</span> <span class="n">rad_in</span><span class="p">,</span> <span class="n">rad_out</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length_param</span>
@@ -627,7 +627,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">_normalize</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_findCutOff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Finds the distance from the center where the field is less than cutoff level&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Finds the distance from the center where the field is less than cutoff level"""</span>
         <span class="n">init_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getPMQ_FuncValue</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">step</span>
         <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getPMQ_FuncValue</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">/</span> <span class="n">init_val</span>
@@ -655,7 +655,7 @@ document.write(`
         <span class="k">return</span> <span class="n">cutoff_z</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Normalizes the quad field function to the integral of 1&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Normalizes the quad field function to the integral of 1"""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">=</span> <span class="mf">1.0</span>
         <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_func_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
         <span class="n">sum_int</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -670,15 +670,15 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">sum_int</span>
 
 <div class="viewcode-block" id="PMQ_Trace3D_Function.getLimitsZ"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function.getLimitsZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getLimitsZ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns (z_min,z_max) tuple as longitudinal limits of the quad field.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="PMQ_Trace3D_Function.pmq_func"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function.pmq_func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">pmq_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This is PMQ function defined at p. 77 of the Trace3D manual.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">r1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad_in</span>
         <span class="n">r2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad_out</span>
         <span class="n">v1</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="p">(</span><span class="n">z</span> <span class="o">/</span> <span class="n">r1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
@@ -687,22 +687,22 @@ document.write(`
         <span class="k">return</span> <span class="n">f</span></div>
 
 <div class="viewcode-block" id="PMQ_Trace3D_Function.getPMQ_FuncValue"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function.getPMQ_FuncValue">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getPMQ_FuncValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the total PMQ quad field distribution</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pmq_func</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">pmq_func</span><span class="p">(</span><span class="n">z</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">f</span></div>
 
 <div class="viewcode-block" id="PMQ_Trace3D_Function.getFuncValue"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function.getFuncValue">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the quad&#39;s field at the distance z from the center&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the quad's field at the distance z from the center"""</span>
         <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getMaxX</span><span class="p">():</span>
             <span class="k">return</span> <span class="mf">0.0</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getY</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="PMQ_Trace3D_Function.getFuncDerivative"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function.getFuncDerivative">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getFuncDerivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the derivative of the getFuncValue(z)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getMaxX</span><span class="p">():</span>
             <span class="k">return</span> <span class="mf">0.0</span>
         <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">copysign</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="n">getYP</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)),</span> <span class="o">-</span><span class="n">z</span><span class="p">)</span></div></div>
@@ -711,7 +711,7 @@ document.write(`
 <span class="c1"># -----------------------------------------------------------------------</span>
 <span class="c1"># -----Test of the Enge Function ----------------</span>
 <span class="c1"># -----------------------------------------------------------------------</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="c1"># ---- MEBT quads ----</span>
     <span class="n">length_param</span> <span class="o">=</span> <span class="mf">0.066</span>
     <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="mf">0.0363</span>
@@ -728,10 +728,10 @@ document.write(`
     <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">ind</span> <span class="o">*</span> <span class="n">step</span> <span class="o">-</span> <span class="n">z_max</span>
         <span class="n">val</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">getFuncValue</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">%12.5e</span><span class="s2">  </span><span class="si">%12.5e</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">z</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;z limits=&quot;</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">getLimitsZ</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">" </span><span class="si">%12.5e</span><span class="s2">  </span><span class="si">%12.5e</span><span class="s2"> "</span> <span class="o">%</span> <span class="p">(</span><span class="n">z</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"z limits="</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">getLimitsZ</span><span class="p">())</span>
     <span class="n">func</span><span class="o">.</span><span class="n">setCutOffZ</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">func</span><span class="o">.</span><span class="n">getLimitsZ</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;new z limits=&quot;</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">getLimitsZ</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"new z limits="</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">getLimitsZ</span><span class="p">())</span>
 </pre></div>
 
                 </article>

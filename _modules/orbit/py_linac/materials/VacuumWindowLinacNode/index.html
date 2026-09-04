@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.py_linac.materials.VacuumWindowLinacNode</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">This module is a vacuum window node in the linac or transport line</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -385,7 +385,7 @@ document.write(`
 <span class="c1"># /src/orbit/MaterialInteractions/Collimator.cc</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.collimator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Collimator</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="sd">//-------------------------------------------------------------------------</span>
 <span class="sd">// C++ class Collimator has the following parameters:</span>
 <span class="sd">//</span>
@@ -408,23 +408,23 @@ document.write(`
 <span class="sd">//   d:      maximum vertical edge (used only in shapes 5 or 6)</span>
 <span class="sd">//   angle:  tilt angle of collimator.</span>
 <span class="sd">//--------------------------------------------------------------------------</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 
 <div class="viewcode-block" id="VacuumWindowNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">VacuumWindowNode</span><span class="p">(</span><span class="n">BaseLinacNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The vacuum window node class for linac lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">density_fac</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;vacuum_window&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">density_fac</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"vacuum_window"</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates the vacuum window element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="c1"># ---- material</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ma</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ma</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">materials_arr</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;carbon&quot;</span><span class="p">,</span> <span class="s2">&quot;aluminum&quot;</span><span class="p">,</span> <span class="s2">&quot;iron&quot;</span><span class="p">,</span> <span class="s2">&quot;copper&quot;</span><span class="p">,</span> <span class="s2">&quot;tantalum&quot;</span><span class="p">,</span> <span class="s2">&quot;tungstun&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">materials_arr</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;platinum&quot;</span><span class="p">,</span> <span class="s2">&quot;lead&quot;</span><span class="p">,</span> <span class="s2">&quot;black absorber&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">materials_arr</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"carbon"</span><span class="p">,</span> <span class="s2">"aluminum"</span><span class="p">,</span> <span class="s2">"iron"</span><span class="p">,</span> <span class="s2">"copper"</span><span class="p">,</span> <span class="s2">"tantalum"</span><span class="p">,</span> <span class="s2">"tungstun"</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">materials_arr</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">"platinum"</span><span class="p">,</span> <span class="s2">"lead"</span><span class="p">,</span> <span class="s2">"black absorber"</span><span class="p">]</span>
         <span class="c1"># ---- by default the shape is circle</span>
         <span class="n">shape</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="c1"># ---- by default the radius is 0 m</span>
@@ -439,49 +439,49 @@ document.write(`
         <span class="c1"># ----</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">density_fac</span> <span class="o">=</span> <span class="n">density_fac</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collimator</span> <span class="o">=</span> <span class="n">Collimator</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ma</span><span class="p">,</span> <span class="n">density_fac</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;vacuum_window&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"vacuum_window"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
 
 <div class="viewcode-block" id="VacuumWindowNode.getMaterial"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode.getMaterial">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getMaterial</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the material</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ma</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ma</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">materials_arr</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ma</span><span class="p">]</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">materials_arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">materials_arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="VacuumWindowNode.getDensityfactor"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode.getDensityfactor">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDensityfactor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns density factor of the window material.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">density_fac</span></div>
 
 <div class="viewcode-block" id="VacuumWindowNode.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        For the design tracking it will do nothing.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="VacuumWindowNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The vacuum window class implementation of the AccNodeBunchTracker class track(paramsDict) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">length</span> <span class="o">&lt;=</span> <span class="mf">0.0</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s2">&quot;lostbunch&quot;</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
-            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;lostbunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">"lostbunch"</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
+            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"lostbunch"</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">collimator</span><span class="o">.</span><span class="n">collimateBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">collimator</span><span class="o">.</span><span class="n">collimateBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="VacuumWindowNode.setPosition"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the position of the vacuum window to put this info</span>
 <span class="sd">        into the lost particles bunch for each lost particle.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collimator</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span></div></div>
 </pre></div>

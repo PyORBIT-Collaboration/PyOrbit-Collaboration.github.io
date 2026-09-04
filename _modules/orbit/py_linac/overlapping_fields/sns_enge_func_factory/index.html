@@ -369,10 +369,10 @@ document.write(`
 
 <span class="c1"># --------------------------------------------------------------</span>
 <span class="c1"># This is a Enge Function Factory specific for the SNS. Some</span>
-<span class="c1"># Enge&#39;s function parameters are found by fitting the measured or</span>
-<span class="c1"># calculated field distributions. Others are generated with quad&#39;s</span>
+<span class="c1"># Enge's function parameters are found by fitting the measured or</span>
+<span class="c1"># calculated field distributions. Others are generated with quad's</span>
 <span class="c1"># length and beam pipe diameter.</span>
-<span class="c1"># These parameters for SNS with the specific quads&#39; names.</span>
+<span class="c1"># These parameters for SNS with the specific quads' names.</span>
 <span class="c1"># For your accelerator you should create your own factory.</span>
 <span class="c1"># --------------------------------------------------------------</span>
 
@@ -385,39 +385,39 @@ document.write(`
 
 
 <div class="viewcode-block" id="SNS_EngeFunctionFactory"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.overlapping_fields.SNS_EngeFunctionFactory/#orbit.py_linac.overlapping_fields.SNS_EngeFunctionFactory">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">SNS_EngeFunctionFactory</span><span class="p">(</span><span class="n">quad</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    It generates the Enge&#39;s Function for SNS quads. For some of the quads in the SNS</span>
-<span class="sd">    lattice we know the Enge&#39;s parameters. So, it is a SNS specific function.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    It generates the Enge's Function for SNS quads. For some of the quads in the SNS</span>
+<span class="sd">    lattice we know the Enge's parameters. So, it is a SNS specific function.</span>
+<span class="sd">    """</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;MEBT&quot;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">names_042mm</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;MEBT_Mag:QH05&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QV06&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QH07&quot;</span><span class="p">]</span>
-        <span class="n">names_042mm</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;MEBT_Mag:QH08&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QV09&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QH10&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"MEBT"</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">names_042mm</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"MEBT_Mag:QH05"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QV06"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QH07"</span><span class="p">]</span>
+        <span class="n">names_042mm</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">"MEBT_Mag:QH08"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QV09"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QH10"</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names_042mm</span><span class="p">:</span>
             <span class="n">length_param</span> <span class="o">=</span> <span class="mf">0.066</span>
             <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="mf">0.0363</span>
             <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.001</span>
             <span class="n">func</span> <span class="o">=</span> <span class="n">EngeFunction</span><span class="p">(</span><span class="n">length_param</span><span class="p">,</span> <span class="n">acceptance_diameter_param</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">func</span>
-        <span class="n">names_032mm</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;MEBT_Mag:QH01&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QV02&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QH03&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QV04&quot;</span><span class="p">]</span>
-        <span class="n">names_032mm</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;MEBT_Mag:QV11&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QH12&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QV13&quot;</span><span class="p">,</span> <span class="s2">&quot;MEBT_Mag:QH14&quot;</span><span class="p">]</span>
+        <span class="n">names_032mm</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"MEBT_Mag:QH01"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QV02"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QH03"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QV04"</span><span class="p">]</span>
+        <span class="n">names_032mm</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">"MEBT_Mag:QV11"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QH12"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QV13"</span><span class="p">,</span> <span class="s2">"MEBT_Mag:QH14"</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names_032mm</span><span class="p">:</span>
             <span class="n">length_param</span> <span class="o">=</span> <span class="mf">0.061</span>
             <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="mf">0.029</span>
             <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.001</span>
             <span class="n">func</span> <span class="o">=</span> <span class="n">EngeFunction</span><span class="p">(</span><span class="n">length_param</span><span class="p">,</span> <span class="n">acceptance_diameter_param</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">func</span>
-    <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;DTL&quot;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"DTL"</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1"># ---- for the DTL_Mag:PMQH100 we have to cut the field because it leaks to the MEBT section</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;DTL_Mag:PMQH100&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"DTL_Mag:PMQH100"</span><span class="p">:</span>
             <span class="n">func</span> <span class="o">=</span> <span class="n">SimpleQuadFieldFunc</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">func</span>
         <span class="c1"># ---- for the DTL_Mag:PMQV300 we have to cut the field because it leaks to the DTL2 section</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;DTL_Mag:PMQV300&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"DTL_Mag:PMQV300"</span><span class="p">:</span>
             <span class="n">func</span> <span class="o">=</span> <span class="n">SimpleQuadFieldFunc</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">func</span>
         <span class="c1"># ---- for the DTL_Mag:PMQH500 we have to cut the field because it leaks to the DTL4 section</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;DTL_Mag:PMQH500&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"DTL_Mag:PMQH500"</span><span class="p">:</span>
             <span class="n">func</span> <span class="o">=</span> <span class="n">SimpleQuadFieldFunc</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">func</span>
         <span class="c1"># ----- the SNS DTL quads are all the same L= 35 mm D = 25 mm</span>
@@ -426,26 +426,26 @@ document.write(`
         <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.001</span>
         <span class="n">func</span> <span class="o">=</span> <span class="n">EngeFunction</span><span class="p">(</span><span class="n">length_param</span><span class="p">,</span> <span class="n">acceptance_diameter_param</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">func</span>
-    <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;CCL&quot;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"CCL"</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1"># ---- for the CCL_Mag:QH00 we have to cut the field because it leaks to the DTL6 section</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;CCL_Mag:QH00&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"CCL_Mag:QH00"</span><span class="p">:</span>
             <span class="n">func</span> <span class="o">=</span> <span class="n">SimpleQuadFieldFunc</span><span class="p">(</span><span class="n">quad</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">func</span>
-    <span class="c1"># ----- general Enge&#39;s Function</span>
+    <span class="c1"># ----- general Enge's Function</span>
     <span class="n">length_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getLength</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">):</span>
-        <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;aperture&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">hasParam</span><span class="p">(</span><span class="s2">"aperture"</span><span class="p">):</span>
+        <span class="n">acceptance_diameter_param</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"aperture"</span><span class="p">)</span>
         <span class="n">cutoff_level</span> <span class="o">=</span> <span class="mf">0.001</span>
         <span class="n">func</span> <span class="o">=</span> <span class="n">EngeFunction</span><span class="p">(</span><span class="n">length_param</span><span class="p">,</span> <span class="n">acceptance_diameter_param</span><span class="p">,</span> <span class="n">cutoff_level</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">func</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;SNS_EngeFunctionFactory Python function. &quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"SNS_EngeFunctionFactory Python function. "</span>
         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;Cannot create the EngeFunction for the quad!&quot;</span>
+        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Cannot create the EngeFunction for the quad!"</span>
         <span class="n">msg</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;quad name = &quot;</span> <span class="o">+</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"quad name = "</span> <span class="o">+</span> <span class="n">quad</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot;It does not have the aperture parameter!&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"It does not have the aperture parameter!"</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
         <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">None</span></div>

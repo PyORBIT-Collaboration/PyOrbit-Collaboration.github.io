@@ -378,11 +378,11 @@ document.write(`
 
 
 <div class="viewcode-block" id="SuperFish_3D_RF_FieldReader"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/#orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">SuperFish_3D_RF_FieldReader</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This class reads the SuperFish file with the 3D axial symmetric RF field.</span>
 <span class="sd">    It uses z and r as variables. The file include Ez, Er, and H.</span>
 <span class="sd">    The file will work in parallel environment.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># self.data_arr is a flat data array with tuples [z,r,Ez,Er,E,B]</span>
@@ -405,23 +405,23 @@ document.write(`
         <span class="n">rank</span> <span class="o">=</span> <span class="n">orbit_mpi</span><span class="o">.</span><span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">)</span>
         <span class="n">main_rank</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">fl_in</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+            <span class="n">fl_in</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span>
             <span class="n">start_data</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">fl_in</span><span class="p">:</span>
                 <span class="n">res</span> <span class="o">=</span> <span class="n">ln</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
                 <span class="k">if</span> <span class="n">start_data</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(Zmin,Rmin)&quot;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-                        <span class="n">zr_min_max</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"(Zmin,Rmin)"</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">zr_min_max</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">Zmin</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">zr_min_max</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">Rmin</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">zr_min_max</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-                    <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(Zmax,Rmax)&quot;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-                        <span class="n">zr_min_max</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"(Zmax,Rmax)"</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">zr_min_max</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">Zmax</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">zr_min_max</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">Rmax</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">zr_min_max</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Z&quot;</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;and&quot;</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Z"</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"and"</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"R"</span><span class="p">:</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">zSteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">rSteps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
-                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;(cm)&quot;</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;(cm)&quot;</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;(MV/m)&quot;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"(cm)"</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"(cm)"</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"(MV/m)"</span><span class="p">:</span>
                         <span class="n">start_data</span> <span class="o">=</span> <span class="mi">1</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
@@ -443,10 +443,10 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">Rmax</span> <span class="o">=</span> <span class="n">orbit_mpi</span><span class="o">.</span><span class="n">MPI_Bcast</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Rmax</span><span class="p">,</span> <span class="n">mpi_datatype</span><span class="o">.</span><span class="n">MPI_DOUBLE</span><span class="p">,</span> <span class="n">main_rank</span><span class="p">,</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">MPI_COMM_WORLD</span><span class="p">)</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zSteps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rSteps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=====================================================&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SuperFish_3D_RF_FiledReader:&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The file=&quot;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot; does not have a correct format!&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stop.&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"====================================================="</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"SuperFish_3D_RF_FiledReader:"</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"The file="</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="s2">" does not have a correct format!"</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Stop."</span><span class="p">)</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
             <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">6</span>
@@ -457,31 +457,31 @@ document.write(`
                 <span class="bp">self</span><span class="o">.</span><span class="n">data_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="SuperFish_3D_RF_FieldReader.getDataArray"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/#orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.getDataArray">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getDataArray</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        A convinience method. It returns the raw array</span>
 <span class="sd">        with records with tuples [z,r,Ez,Er,E,B]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_arr</span></div>
 
 <div class="viewcode-block" id="SuperFish_3D_RF_FieldReader.getNumberStepsZ"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/#orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.getNumberStepsZ">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberStepsZ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the number of steps in Z-axis. The number of grid points is self.zSteps+1.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">zSteps</span></div>
 
 <div class="viewcode-block" id="SuperFish_3D_RF_FieldReader.getNumberStepsR"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/#orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.getNumberStepsR">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberStepsR</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the number of steps along the radius. The number of grid points is self.rSteps+1.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rSteps</span></div>
 
 <div class="viewcode-block" id="SuperFish_3D_RF_FieldReader.makeGrid2DFileds_EzErH"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/#orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.makeGrid2DFileds_EzErH">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeGrid2DFileds_EzErH</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It fills out the Grid2D instances with the electric and magnetic filed components -</span>
 <span class="sd">        Ez, Er, H.</span>
 <span class="sd">        The Ez and Er are in MV in SuperFish file, and H in [A/m].</span>
 <span class="sd">        In the Grid2D Ez and Er will be placed in [V/m].</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="c1"># The Z and R in the self.data_arr are in [cm], so to switch to [m] we use 0.01</span>
         <span class="n">Zmin</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">Zmin</span>
         <span class="n">Zmax</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">Zmax</span>
@@ -500,11 +500,11 @@ document.write(`
         <span class="k">return</span> <span class="p">(</span><span class="n">grid2D_Ez</span><span class="p">,</span> <span class="n">grid2D_Er</span><span class="p">,</span> <span class="n">grid2D_H</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="SuperFish_3D_RF_FieldReader.getAxisEz"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/#orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.getAxisEz">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getAxisEz</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zSimmetric</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the Spline with Ez(z) on the axis of the RF.</span>
 <span class="sd">        If zSimmetric &gt; 0 the table has only half of the table,</span>
 <span class="sd">        and the Function should be added points for (-Zmax) to (Zmin - step).</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">stepZ</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Zmax</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">Zmin</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">zSteps</span>
         <span class="n">Ez_max</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="k">for</span> <span class="n">iz</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">zSteps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>

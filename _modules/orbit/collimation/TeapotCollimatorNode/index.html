@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.collimation.TeapotCollimatorNode</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">This module is a collimator node class for TEAPOT lattice</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -386,26 +386,26 @@ document.write(`
 
 
 <div class="viewcode-block" id="TeapotCollimatorNode"><a class="viewcode-back" href="../../../../reference/orbit.collimation.TeapotCollimatorNode/#orbit.collimation.TeapotCollimatorNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotCollimatorNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The collimator node class for TEAPOT lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">density_fac</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;collimator no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">density_fac</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"collimator no name"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Constructor. Creates the Collimator TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collimator</span> <span class="o">=</span> <span class="n">Collimator</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">density_fac</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;collimator teapot&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"collimator teapot"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
 
 <div class="viewcode-block" id="TeapotCollimatorNode.track"><a class="viewcode-back" href="../../../../reference/orbit.collimation.TeapotCollimatorNode/#orbit.collimation.TeapotCollimatorNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The collimator-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-        <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;lostbunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+        <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"lostbunch"</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collimator</span><span class="o">.</span><span class="n">collimateBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TeapotCollimatorNode.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.collimation.TeapotCollimatorNode/#orbit.collimation.TeapotCollimatorNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>

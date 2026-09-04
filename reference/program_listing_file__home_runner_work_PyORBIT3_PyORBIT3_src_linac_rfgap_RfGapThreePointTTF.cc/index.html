@@ -380,10 +380,10 @@ document.write(`
   <section id="program-listing-for-file-rfgapthreepointttf-cc">
 <span id="program-listing-file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-rfgapthreepointttf-cc"></span><h1>Program Listing for File RfGapThreePointTTF.cc<a class="headerlink" href="#program-listing-for-file-rfgapthreepointttf-cc" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_linac_rfgap_RfGapThreePointTTF.cc/#file-home-runner-work-pyorbit3-pyorbit3-src-linac-rfgap-rfgapthreepointttf-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/PyORBIT3/PyORBIT3/src/linac/rfgap/RfGapThreePointTTF.cc</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Bunch.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;bessel.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;OrbitConst.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;RfGapThreePointTTF.hh&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"Bunch.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"bessel.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"OrbitConst.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"RfGapThreePointTTF.hh"</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
@@ -483,7 +483,7 @@ document.write(`
 <span class="w">        </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">xp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">xp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">prime_coeff</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d_rp</span><span class="o">*</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 <span class="w">        </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">yp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">yp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">prime_coeff</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d_rp</span><span class="o">*</span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="c1">//std::cout &lt;&lt; &quot;=====debug from C++ ==============&quot;&lt;&lt;std::endl;</span>
+<span class="w">    </span><span class="c1">//std::cout &lt;&lt; "=====debug from C++ =============="&lt;&lt;std::endl;</span>
 <span class="w">    </span><span class="c1">//bunch-&gt;print(std::cout);</span>
 <span class="p">}</span>
 

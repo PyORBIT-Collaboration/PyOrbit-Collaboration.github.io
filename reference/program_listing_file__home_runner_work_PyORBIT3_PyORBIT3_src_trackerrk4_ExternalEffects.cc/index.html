@@ -391,19 +391,19 @@ document.write(`
 <span class="c1">//    A base class for anything external that acting on the bunch except</span>
 <span class="c1">//    slow changing magnetic and electric fields.</span>
 <span class="c1">//</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;RungeKuttaTracker.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"RungeKuttaTracker.hh"</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ExternalEffects.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"ExternalEffects.hh"</span>
 
 
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">TrackerRK4</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">OrbitUtils</span><span class="p">;</span>
 
 <span class="n">ExternalEffects</span><span class="o">::</span><span class="n">ExternalEffects</span><span class="p">(){</span>
-<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;empty&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"empty"</span><span class="p">;</span>
 
 <span class="w">    </span><span class="n">rank_setup</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="n">rank_prepare</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>

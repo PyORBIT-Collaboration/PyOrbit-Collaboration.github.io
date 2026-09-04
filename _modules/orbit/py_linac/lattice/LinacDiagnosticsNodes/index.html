@@ -365,9 +365,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.py_linac.lattice.LinacDiagnosticsNodes</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">This package is a collection of diagnostics nodes fo linacs.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -390,19 +390,19 @@ document.write(`
 
 
 <div class="viewcode-block" id="LinacBPM"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacBPM/#orbit.py_linac.lattice.LinacBPM">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LinacBPM</span><span class="p">(</span><span class="n">BaseLinacNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The linac BPM representation. It calculates the average x,y, and phases</span>
 <span class="sd">    of all particles in the bunch, and the amplitude signal which is an amplitude</span>
-<span class="sd">    of the Fourier harmonics. To calculate this it needs the frequency [Hz] of BPM&#39;s</span>
+<span class="sd">    of the Fourier harmonics. To calculate this it needs the frequency [Hz] of BPM's</span>
 <span class="sd">    electronics and the normalization factor.</span>
 <span class="sd">    At this moment, all functionality is implemented on the Python level, but in</span>
-<span class="sd">    the future the operations with the particles&#39; coordinates should be moved to</span>
+<span class="sd">    the future the operations with the particles' coordinates should be moved to</span>
 <span class="sd">    C++ level.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="mf">805.0e6</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;BPM&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="mf">805.0e6</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"BPM"</span><span class="p">):</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;BPM&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"BPM"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="mf">805.0e6</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">phase_hist_arr</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">phase_step</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># in deg</span>
@@ -468,31 +468,31 @@ document.write(`
         <span class="n">nHistP</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phase_hist_arr</span><span class="p">)</span>
         <span class="n">fl_out</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="n">file_out_name</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">fl_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_out_name</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+            <span class="n">fl_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_out_name</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nHistP</span><span class="p">):</span>
             <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phase_hist_arr</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
             <span class="n">phase</span> <span class="o">=</span> <span class="p">(</span><span class="n">ind</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">phase_step</span> <span class="o">-</span> <span class="mf">180.0</span>
-            <span class="n">st</span> <span class="o">=</span> <span class="s2">&quot; </span><span class="si">%3d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">ind</span>
-            <span class="n">st</span> <span class="o">+=</span> <span class="s2">&quot; </span><span class="si">%7.2f</span><span class="s2">  </span><span class="si">%12.5g</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">phase</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+            <span class="n">st</span> <span class="o">=</span> <span class="s2">" </span><span class="si">%3d</span><span class="s2"> "</span> <span class="o">%</span> <span class="n">ind</span>
+            <span class="n">st</span> <span class="o">+=</span> <span class="s2">" </span><span class="si">%7.2f</span><span class="s2">  </span><span class="si">%12.5g</span><span class="s2"> "</span> <span class="o">%</span> <span class="p">(</span><span class="n">phase</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">fl_out</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">fl_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">st</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">fl_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">st</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">fl_out</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">fl_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="LinacBPM.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacBPM/#orbit.py_linac.lattice.LinacBPM.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The LinacBPM class implementation of the AccNode class track(paramsDict) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">analyzeBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="LinacBPM.analyzeBunch"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacBPM/#orbit.py_linac.lattice.LinacBPM.analyzeBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">analyzeBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Here we assume that the macrosize is the same for each</span>
 <span class="sd">        particle</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">comm</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getMPIComm</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cleanPhaseHist</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x_avg</span> <span class="o">=</span> <span class="mf">0.0</span>

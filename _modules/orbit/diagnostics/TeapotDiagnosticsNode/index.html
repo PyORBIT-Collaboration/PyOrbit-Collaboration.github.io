@@ -365,253 +365,353 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.diagnostics.TeapotDiagnosticsNode</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module is a collimator node class for TEAPOT lattice</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""TEAPOT-style bunch diagnostic nodes."""</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">IO</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="c1"># import the auxiliary classes</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">orbitFinalize</span><span class="p">,</span> <span class="n">NamedObject</span><span class="p">,</span> <span class="n">ParamsDictObject</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.bunch</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bunch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.bunch</span><span class="w"> </span><span class="kn">import</span> <span class="n">BunchTwissAnalysis</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.bunch</span><span class="w"> </span><span class="kn">import</span> <span class="n">BunchTuneAnalysis</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.teapot</span><span class="w"> </span><span class="kn">import</span> <span class="n">DriftTEAPOT</span>
 
-<span class="c1"># import general accelerator elements and lattice</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">..lattice</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccNode</span><span class="p">,</span> <span class="n">AccActionsContainer</span><span class="p">,</span> <span class="n">AccNodeBunchTracker</span>
-
-
-<span class="c1"># import Diagnostics classes</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">.diagnostics</span><span class="w"> </span><span class="kn">import</span> <span class="n">StatLats</span><span class="p">,</span> <span class="n">StatLatsSetMember</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">.diagnostics</span><span class="w"> </span><span class="kn">import</span> <span class="n">Moments</span><span class="p">,</span> <span class="n">MomentsSetMember</span><span class="p">,</span> <span class="n">BPMSignal</span>
-
-<span class="c1"># import teapot drift class</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">..teapot</span><span class="w"> </span><span class="kn">import</span> <span class="n">DriftTEAPOT</span>
-
-
-<span class="c1"># import Bunch diagnostics</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">bunch</span>
-
-<span class="n">BunchTuneAnalysis</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">BunchTuneAnalysis</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.diagnostics</span><span class="w"> </span><span class="kn">import</span> <span class="n">StatLats</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.diagnostics</span><span class="w"> </span><span class="kn">import</span> <span class="n">StatLatsSetMember</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.diagnostics</span><span class="w"> </span><span class="kn">import</span> <span class="n">Moments</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.diagnostics</span><span class="w"> </span><span class="kn">import</span> <span class="n">MomentsSetMember</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.diagnostics</span><span class="w"> </span><span class="kn">import</span> <span class="n">BPMSignal</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.matrix</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_norm_matrix_from_cov</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.matrix</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_norm_matrix_from_tmat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.matrix</span><span class="w"> </span><span class="kn">import</span> <span class="n">TransferMatrixAnalysis</span>
 
 
 <div class="viewcode-block" id="TeapotStatLatsNode"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotStatLatsNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    The statlats node class for TEAPOT lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;statlats no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor. Creates the StatLats TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"statlats no name"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">statlats</span> <span class="o">=</span> <span class="n">StatLats</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;statlats teapot&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"statlats teapot"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
 
-<div class="viewcode-block" id="TeapotStatLatsNode.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        The statlats-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">statlats</span><span class="o">.</span><span class="n">writeStatLats</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span><span class="p">)</span></div>
+<div class="viewcode-block" id="TeapotStatLatsNode.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">params_dict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">statlats</span><span class="o">.</span><span class="n">writeStatLats</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNode.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">pos</span></div>
+<div class="viewcode-block" id="TeapotStatLatsNode.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNode.closeStatLats"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.closeStatLats">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">closeStatLats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotStatLatsNode.closeStatLats"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.closeStatLats">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">closeStatLats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNode.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattlength</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="n">lattlength</span></div></div>
+<div class="viewcode-block" id="TeapotStatLatsNode.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNode/#orbit.diagnostics.TeapotStatLatsNode.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="n">length</span></div></div>
 
 
 <div class="viewcode-block" id="TeapotStatLatsNodeSetMember"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotStatLatsNodeSetMember</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    The statlats node class for TEAPOT lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;statlats no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor. Creates the StatLats TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">IO</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"statlats no name"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">statlats</span> <span class="o">=</span> <span class="n">StatLatsSetMember</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;statlats teapot&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"statlats teapot"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">file</span>
 
-<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        The statlats-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="p">:</span>
-            <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-            <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">statlats</span><span class="o">.</span><span class="n">writeStatLats</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span><span class="p">)</span></div>
+            <span class="n">bunch</span> <span class="o">=</span> <span class="n">params_dict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">statlats</span><span class="o">.</span><span class="n">writeStatLats</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">pos</span></div>
+<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattlength</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="n">lattlength</span></div>
+<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="n">length</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.activate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.activate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">activate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.activate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.activate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">activate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.deactivate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.deactivate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.deactivate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.deactivate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.resetFile"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.resetFile">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotStatLatsNodeSetMember.resetFile"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.resetFile">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">IO</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">file</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">statlats</span><span class="o">.</span><span class="n">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="TeapotMomentsNode"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotMomentsNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    The moments node class for TEAPOT lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">nodispersion</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">emitnorm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;moments no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor. Creates the StatLats TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">order</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">no_dispersion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">emit_norm</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"moments no name"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">moments</span> <span class="o">=</span> <span class="n">Moments</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">nodispersion</span><span class="p">,</span> <span class="n">emitnorm</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;moments teapot&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">moments</span> <span class="o">=</span> <span class="n">Moments</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">no_dispersion</span><span class="p">,</span> <span class="n">emit_norm</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"moments teapot"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
 
-<div class="viewcode-block" id="TeapotMomentsNode.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        The moments-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">moments</span><span class="o">.</span><span class="n">writeMoments</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span><span class="p">)</span></div>
+<div class="viewcode-block" id="TeapotMomentsNode.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">params_dict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">moments</span><span class="o">.</span><span class="n">writeMoments</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNode.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">pos</span></div>
+<div class="viewcode-block" id="TeapotMomentsNode.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNode.closeMoments"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.closeMoments">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">closeMoments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotMomentsNode.closeMoments"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.closeMoments">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">closeMoments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNode.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattlength</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="n">lattlength</span></div></div>
+<div class="viewcode-block" id="TeapotMomentsNode.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNode/#orbit.diagnostics.TeapotMomentsNode.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="n">length</span></div></div>
 
 
 <div class="viewcode-block" id="TeapotMomentsNodeSetMember"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotMomentsNodeSetMember</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    The moments node class for TEAPOT lattice</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">nodispersion</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">emitnorm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;moments no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor. Creates the Moments TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">IO</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">order</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">no_dispersion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">emit_norm</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"moments no name"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">file</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">moments</span> <span class="o">=</span> <span class="n">MomentsSetMember</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">nodispersion</span><span class="p">,</span> <span class="n">emitnorm</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;moments teapot&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">moments</span> <span class="o">=</span> <span class="n">MomentsSetMember</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">no_dispersion</span><span class="p">,</span> <span class="n">emit_norm</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"moments teapot"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span>
 
-<div class="viewcode-block" id="TeapotMomentsNodeSetMember.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        The moments-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="TeapotMomentsNodeSetMember.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="p">:</span>
-            <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-            <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">moments</span><span class="o">.</span><span class="n">writeMoments</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span><span class="p">)</span></div>
+            <span class="n">bunch</span> <span class="o">=</span> <span class="n">params_dict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">moments</span><span class="o">.</span><span class="n">writeMoments</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNodeSetMember.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">pos</span></div>
+<div class="viewcode-block" id="TeapotMomentsNodeSetMember.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNodeSetMember.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattlength</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="n">lattlength</span></div>
+<div class="viewcode-block" id="TeapotMomentsNodeSetMember.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lattice_length</span> <span class="o">=</span> <span class="n">length</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNodeSetMember.activate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.activate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">activate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotMomentsNodeSetMember.activate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.activate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">activate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNodeSetMember.deactivate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.deactivate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotMomentsNodeSetMember.deactivate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.deactivate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TeapotMomentsNodeSetMember.resetFile"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.resetFile">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+<div class="viewcode-block" id="TeapotMomentsNodeSetMember.resetFile"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotMomentsNodeSetMember/#orbit.diagnostics.TeapotMomentsNodeSetMember.resetFile">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">IO</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">file</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">moments</span><span class="o">.</span><span class="n">resetFile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="TeapotTuneAnalysisNode"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeapotTuneAnalysisNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;tuneanalysis no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor. Creates the StatLats TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Estimates tunes from coordinates on neighboring turns.</span>
+
+<span class="sd">    This node computes the tunes and actions of each particle in the bunch.</span>
+<span class="sd">    We use the Average Phase Advance (APA) method to estimate the tunes [1].</span>
+<span class="sd">    We use only a single turn rather than the average of multiple turns.</span>
+
+<span class="sd">    [1] https://cds.cern.ch/record/292773/files/p147.pdf</span>
+<span class="sd">    [2] https://arxiv.org/pdf/1207.5526</span>
+<span class="sd">    [3] S. Y. Lee, *Accelerator Physics*</span>
+<span class="sd">    """</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"TeapotTuneAnalysis no name"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bunchtune</span> <span class="o">=</span> <span class="n">BunchTuneAnalysis</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;tune calculator teapot&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tune_calc</span> <span class="o">=</span> <span class="n">BunchTuneAnalysis</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"tune calculator teapot"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"phase_1"</span><span class="p">,</span> <span class="s2">"phase_2"</span><span class="p">,</span> <span class="s2">"tune_1"</span><span class="p">,</span> <span class="s2">"tune_2"</span><span class="p">,</span> <span class="s2">"action_1"</span><span class="p">,</span> <span class="s2">"action_2"</span><span class="p">]</span>
 
-<div class="viewcode-block" id="TeapotTuneAnalysisNode.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        The bunchtuneanalysis-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bunchtune</span><span class="o">.</span><span class="n">analyzeBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span></div>
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.track"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tune_calc</span><span class="o">.</span><span class="n">analyzeBunch</span><span class="p">(</span><span class="n">params_dict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="TeapotTuneAnalysisNode.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">pos</span></div>
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.activate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.activate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">activate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="TeapotTuneAnalysisNode.setLatticeLength"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setLatticeLength">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattlength</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="n">lattlength</span></div>
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.deactivate"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.deactivate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TeapotTuneAnalysisNode.assignTwiss"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.assignTwiss">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">assignTwiss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">betax</span><span class="p">,</span> <span class="n">alphax</span><span class="p">,</span> <span class="n">etax</span><span class="p">,</span> <span class="n">etapx</span><span class="p">,</span> <span class="n">betay</span><span class="p">,</span> <span class="n">alphay</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bunchtune</span><span class="o">.</span><span class="n">assignTwiss</span><span class="p">(</span><span class="n">betax</span><span class="p">,</span> <span class="n">alphax</span><span class="p">,</span> <span class="n">etax</span><span class="p">,</span> <span class="n">etapx</span><span class="p">,</span> <span class="n">betay</span><span class="p">,</span> <span class="n">alphay</span><span class="p">)</span></div></div>
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.setPosition"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.setNormMatrix"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNormMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">norm_matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ndim</span> <span class="o">=</span> <span class="n">norm_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ndim</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ndim</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tune_calc</span><span class="o">.</span><span class="n">setNormMatrixElement</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">norm_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.getNormMatrix"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getNormMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNormMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="n">norm_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+                <span class="n">norm_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tune_calc</span><span class="o">.</span><span class="n">getNormMatrixElement</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">norm_matrix</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.setNormMatrixFromTwiss"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTwiss">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNormMatrixFromTwiss</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> 
+        <span class="n">betax</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> 
+        <span class="n">alphax</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> 
+        <span class="n">etax</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> 
+        <span class="n">etapx</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> 
+        <span class="n">betay</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> 
+        <span class="n">alphay</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Set normalization matrix from Twiss parameters (x, y) and dispersion.</span>
+<span class="sd">        </span>
+<span class="sd">        betax{y}: Beta parameter in x{y} plane.</span>
+<span class="sd">        alphax{y}: Alpha parameter in x{y} plane.</span>
+<span class="sd">        etax: Dispersion in x plane.</span>
+<span class="sd">        etapx: Disperion prime in x plane.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tune_calc</span><span class="o">.</span><span class="n">setNormMatrixFromTwiss</span><span class="p">(</span><span class="n">betax</span><span class="p">,</span> <span class="n">alphax</span><span class="p">,</span> <span class="n">etax</span><span class="p">,</span> <span class="n">etapx</span><span class="p">,</span> <span class="n">betay</span><span class="p">,</span> <span class="n">alphay</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNormMatrixFromTransferMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transfer_matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Set normalization matrix from transfer matrix.</span>
+
+<span class="sd">        Assumes transfer matrix is periodic and stable.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            transfer_matrix: 4x4 or 6x6 transfer matrix.</span>
+<span class="sd">        """</span>
+        <span class="k">assert</span> <span class="n">transfer_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">transfer_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">transfer_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="n">norm_matrix</span> <span class="o">=</span> <span class="n">build_norm_matrix_from_tmat</span><span class="p">(</span><span class="n">transfer_matrix</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setNormMatrix</span><span class="p">(</span><span class="n">norm_matrix</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNormMatrixFromCovMatrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cov_matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Set normalization matrix from covariance matrix.</span>
+
+<span class="sd">        Assume that S = M S M^T, where S is the covariance matrix</span>
+<span class="sd">        and M is the transfer matrix. Then M and SU (U is the Poisson matrix)</span>
+<span class="sd">        have different eigenvalues but the same eigenvectors So we can compute</span>
+<span class="sd">        the normalization matrix directly from SU, without knowing M.</span>
+
+<span class="sd">        I'm not sure how to order the eigenvectors of SU as there is no</span>
+<span class="sd">        guaranteed ordering from np.linalg.eig. By default, we sort the</span>
+<span class="sd">        eigenvectors of SU by their eigenvalues (eigenemittances), so the</span>
+<span class="sd">        smallest eigenemittance is mode 1, the next is mode 2, and so on.</span>
+<span class="sd">        So if you compare this method to `setNormMatrixFromTransferMatrix`,</span>
+<span class="sd">        you may get {nu1, nu2} -&gt; {nu2, nu1}.</span>
+
+<span class="sd">        This is only a problem in coupled lattices with 4D normalization.</span>
+<span class="sd">        With 2D normalization there is no ambiguity. This function will</span>
+<span class="sd">        check if there are off-block-diagonal terms in the covariance</span>
+<span class="sd">        matrix to determine whether to use 2D or 4D normalization.</span>
+<span class="sd">        norm_matrix = build_norm_matrix_from_cov(cov_matrix)</span>
+<span class="sd">        self.setNormMatrix(norm_matrix)</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cov_matrix: 4x4 or 6x6 covariance matrix.</span>
+<span class="sd">        """</span>
+        <span class="k">assert</span> <span class="n">cov_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">cov_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">cov_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="n">norm_matrix</span> <span class="o">=</span> <span class="n">build_norm_matrix_from_cov</span><span class="p">(</span><span class="n">cov_matrix</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setNormMatrix</span><span class="p">(</span><span class="n">norm_matrix</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.setNormMatrixFromBunch"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromBunch">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setNormMatrixFromBunch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">:</span> <span class="n">Bunch</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Set normalization matrix from bunch covariance matrix.</span>
+
+<span class="sd">        The bunch covariance matrix is calculated from the macroparticles.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            bunch: Bunch object with at least one macroparticle.</span>
+<span class="sd">        """</span>
+        <span class="k">assert</span> <span class="n">dim</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSizeGlobal</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="n">twiss_calc</span> <span class="o">=</span> <span class="n">BunchTwissAnalysis</span><span class="p">()</span>
+        <span class="n">twiss_calc</span><span class="o">.</span><span class="n">analyzeBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+        <span class="n">cov_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dim</span><span class="p">,</span> <span class="n">dim</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim</span><span class="p">):</span>
+                <span class="n">cov_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">cov_matrix</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">twiss_calc</span><span class="o">.</span><span class="n">getCorrelation</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setNormMatrixFromCovMatrix</span><span class="p">(</span><span class="n">cov_matrix</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.getData"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getData">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">:</span> <span class="n">Bunch</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""Return tune and action data.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            bunch: A Bunch object.</span>
+<span class="sd">            index: Particle index. If None, return data for all particles.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            data: Dictionary with the following keys:</span>
+<span class="sd">                - "phase_1"</span>
+<span class="sd">                - "phase_2"</span>
+<span class="sd">                - "tune_1"</span>
+<span class="sd">                - "tune_2"</span>
+<span class="sd">                - "action_1"</span>
+<span class="sd">                - "action_2"</span>
+<span class="sd">                - "action_3"</span>
+
+<span class="sd">                If `index` is provided, each value is a float. Otherwise each value</span>
+<span class="sd">                is a list of floats. If the lattice is uncoupled, 1-&gt;x and 2-&gt;y.</span>
+<span class="sd">        """</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">):</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bunch</span><span class="o">.</span><span class="n">getSize</span><span class="p">()):</span>            
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">partAttrValue</span><span class="p">(</span><span class="s2">"ParticlePhaseAttributes"</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">bunch_size</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">bunch_size</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"particle index &lt; 0"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&gt;</span> <span class="n">bunch_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"particle index &gt; bunch.getSize() - 1"</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">):</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">partAttrValue</span><span class="p">(</span><span class="s2">"ParticlePhaseAttributes"</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+    
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.getTunes"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getTunes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTunes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">:</span> <span class="n">Bunch</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""Return fractional tunes (nu_1, nu_2).</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            bunch: A Bunch object.</span>
+<span class="sd">            index: Particle index (not ID).</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            tune_1: Fractional tune (mode 1).</span>
+<span class="sd">            tune_2: Fractional tune (mode 2).</span>
+<span class="sd">        """</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"tune_1"</span><span class="p">,</span> <span class="s2">"tune_2"</span><span class="p">]])</span></div>
+
+<div class="viewcode-block" id="TeapotTuneAnalysisNode.getActions"><a class="viewcode-back" href="../../../../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getActions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getActions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">:</span> <span class="n">Bunch</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""Return actions (J_1, J_2).</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            bunch: Bunch object.</span>
+<span class="sd">            index: Particle index (not ID).</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            J_1: Action (mode 1).</span>
+<span class="sd">            J_2: Action (mode 2).</span>
+<span class="sd">        """</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"action_1"</span><span class="p">,</span> <span class="s2">"action_2"</span><span class="p">]])</span></div></div>
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">TeapotBPMSignalNode</span><span class="p">(</span><span class="n">DriftTEAPOT</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;BPMSignal no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor. Creates the StatLats TEAPOT element.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"BPMSignal no name"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">DriftTEAPOT</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bpm</span> <span class="o">=</span> <span class="n">BPMSignal</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">&quot;BPMSignal&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="s2">"BPMSignal"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        The bunchtuneanalysis-teapot class implementation of the AccNodeBunchTracker class track(probe) method.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getLength</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getActivePartIndex</span><span class="p">())</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bpm</span><span class="o">.</span><span class="n">analyzeSignal</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">params_dict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bpm</span><span class="o">.</span><span class="n">analyzeSignal</span><span class="p">(</span><span class="n">params_dict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">])</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setLatticeLength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lattlength</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lattlength</span> <span class="o">=</span> <span class="n">lattlength</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">getSignal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">xAvg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm</span><span class="o">.</span><span class="n">getSignalX</span><span class="p">()</span>
-        <span class="n">yAvg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm</span><span class="o">.</span><span class="n">getSignalY</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">xAvg</span><span class="p">,</span> <span class="n">yAvg</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getSignal</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="n">x_avg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm</span><span class="o">.</span><span class="n">getSignalX</span><span class="p">()</span>
+        <span class="n">y_avg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bpm</span><span class="o">.</span><span class="n">getSignalY</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">x_avg</span><span class="p">,</span> <span class="n">y_avg</span>
 </pre></div>
 
                 </article>

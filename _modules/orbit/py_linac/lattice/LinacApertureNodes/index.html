@@ -388,7 +388,7 @@ document.write(`
 
 
 <div class="viewcode-block" id="LinacApertureNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacApertureNode/#orbit.py_linac.lattice.LinacApertureNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LinacApertureNode</span><span class="p">(</span><span class="n">BaseLinacNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The aperture classes removes particles from bunch and places them in the lostbunch</span>
 <span class="sd">    if their coordinates are not inside the aperture:</span>
 <span class="sd">    The shape variable could be:</span>
@@ -396,9 +396,9 @@ document.write(`
 <span class="sd">    2 is elipse (a and b are a half-axises)</span>
 <span class="sd">    3 is rectangle (a and b are a half-horizontal and vertical sizes)</span>
 <span class="sd">    c and d parameters are x and y offsets of the center</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;aperture&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"aperture"</span><span class="p">):</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">shape</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
@@ -410,43 +410,43 @@ document.write(`
         <span class="n">apertureShape</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="n">shape</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="n">radius</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
-            <span class="n">apertureShape</span> <span class="o">=</span> <span class="n">PrimitiveApertureShape</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
+            <span class="n">apertureShape</span> <span class="o">=</span> <span class="n">PrimitiveApertureShape</span><span class="p">(</span><span class="s2">"circle"</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">shape</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
             <span class="n">x_half_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
             <span class="n">y_half_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
-            <span class="n">apertureShape</span> <span class="o">=</span> <span class="n">PrimitiveApertureShape</span><span class="p">(</span><span class="s2">&quot;ellipse&quot;</span><span class="p">,</span> <span class="n">x_half_size</span><span class="p">,</span> <span class="n">y_half_size</span><span class="p">)</span>
+            <span class="n">apertureShape</span> <span class="o">=</span> <span class="n">PrimitiveApertureShape</span><span class="p">(</span><span class="s2">"ellipse"</span><span class="p">,</span> <span class="n">x_half_size</span><span class="p">,</span> <span class="n">y_half_size</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">shape</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
             <span class="n">x_half_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
             <span class="n">y_half_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
-            <span class="n">apertureShape</span> <span class="o">=</span> <span class="n">PrimitiveApertureShape</span><span class="p">(</span><span class="s2">&quot;rectangular&quot;</span><span class="p">,</span> <span class="n">x_half_size</span><span class="p">,</span> <span class="n">y_half_size</span><span class="p">)</span>
+            <span class="n">apertureShape</span> <span class="o">=</span> <span class="n">PrimitiveApertureShape</span><span class="p">(</span><span class="s2">"rectangular"</span><span class="p">,</span> <span class="n">x_half_size</span><span class="p">,</span> <span class="n">y_half_size</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">apertureShape</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">&quot;LinacApertureNode constructor. shape parameter should be 1,2,3 only.Stop&quot;</span><span class="p">)</span>
+            <span class="n">orbitFinalize</span><span class="p">(</span><span class="s2">"LinacApertureNode constructor. shape parameter should be 1,2,3 only.Stop"</span><span class="p">)</span>
         <span class="c1"># ------------------------------</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">setApertureShape</span><span class="p">(</span><span class="n">apertureShape</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lost_particles_n</span> <span class="o">=</span> <span class="mi">0</span>
 
-<div class="viewcode-block" id="LinacApertureNode.setName"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacApertureNode/#orbit.py_linac.lattice.LinacApertureNode.setName">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;no name&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="LinacApertureNode.setName"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacApertureNode/#orbit.py_linac.lattice.LinacApertureNode.setName">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"no name"</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Sets the name.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="LinacApertureNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacApertureNode/#orbit.py_linac.lattice.LinacApertureNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s2">&quot;lostbunch&quot;</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
-            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;lostbunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">"lostbunch"</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
+            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"lostbunch"</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">checkBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">checkBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lost_particles_n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">getNumberOfLost</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="LinacApertureNode.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacApertureNode/#orbit.py_linac.lattice.LinacApertureNode.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method does nothing for the aperture case.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="LinacApertureNode.setPosition"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacApertureNode/#orbit.py_linac.lattice.LinacApertureNode.setPosition">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
@@ -457,47 +457,47 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lost_particles_n</span></div>
 
 <div class="viewcode-block" id="LinacApertureNode.getBaseAperture"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacApertureNode/#orbit.py_linac.lattice.LinacApertureNode.getBaseAperture">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBaseAperture</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Retirns BaseAperture that allow accsess to aperture shape through getApertureShape,</span>
 <span class="sd">        or replacing the shape with setApertureShape(newApertureShape)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span></div></div>
 
 
 <div class="viewcode-block" id="CircleLinacApertureNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.CircleLinacApertureNode/#orbit.py_linac.lattice.CircleLinacApertureNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CircleLinacApertureNode</span><span class="p">(</span><span class="n">LinacApertureNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The curcular aperture shape = 1</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;aperture&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"aperture"</span><span class="p">):</span>
         <span class="n">LinacApertureNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="EllipseLinacApertureNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.EllipseLinacApertureNode/#orbit.py_linac.lattice.EllipseLinacApertureNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">EllipseLinacApertureNode</span><span class="p">(</span><span class="n">LinacApertureNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The ellipse aperture shape = 2</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;aperture&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"aperture"</span><span class="p">):</span>
         <span class="n">LinacApertureNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="RectangleLinacApertureNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RectangleLinacApertureNode/#orbit.py_linac.lattice.RectangleLinacApertureNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">RectangleLinacApertureNode</span><span class="p">(</span><span class="n">LinacApertureNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The rectangle aperture shape = 3</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;aperture&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"aperture"</span><span class="p">):</span>
         <span class="n">LinacApertureNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="LinacPhaseApertureNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacPhaseApertureNode/#orbit.py_linac.lattice.LinacPhaseApertureNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LinacPhaseApertureNode</span><span class="p">(</span><span class="n">BaseLinacNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The phase aperture classes removes particles from bunch and places them in the lostbunch</span>
 <span class="sd">    if their phases are not inside the min-max phases.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="mf">402.5e6</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;phase_aperture&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="mf">402.5e6</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"phase_aperture"</span><span class="p">):</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span> <span class="o">=</span> <span class="n">PhaseAperture</span><span class="p">(</span><span class="n">frequency</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lost_particles_n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -519,19 +519,19 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="LinacPhaseApertureNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacPhaseApertureNode/#orbit.py_linac.lattice.LinacPhaseApertureNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="n">n_parts</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span>
-        <span class="k">if</span> <span class="s2">&quot;lostbunch&quot;</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
-            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;lostbunch&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">"lostbunch"</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
+            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"lostbunch"</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">checkBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">checkBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lost_particles_n</span> <span class="o">=</span> <span class="n">n_parts</span> <span class="o">-</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="LinacPhaseApertureNode.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacPhaseApertureNode/#orbit.py_linac.lattice.LinacPhaseApertureNode.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method does nothing for the aperture case.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="LinacPhaseApertureNode.getNumberOfLostParticles"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacPhaseApertureNode/#orbit.py_linac.lattice.LinacPhaseApertureNode.getNumberOfLostParticles">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfLostParticles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -539,12 +539,12 @@ document.write(`
 
 
 <div class="viewcode-block" id="LinacEnergyApertureNode"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacEnergyApertureNode/#orbit.py_linac.lattice.LinacEnergyApertureNode">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LinacEnergyApertureNode</span><span class="p">(</span><span class="n">BaseLinacNode</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The phase aperture classes removes particles from bunch and places them in the lostbunch</span>
 <span class="sd">    if their phases are not inside the min-max energy.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;energy_aperture&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"energy_aperture"</span><span class="p">):</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span> <span class="o">=</span> <span class="n">EnergyAperture</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lost_particles_n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -561,20 +561,20 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="LinacEnergyApertureNode.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacEnergyApertureNode/#orbit.py_linac.lattice.LinacEnergyApertureNode.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="n">n_parts</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span>
-        <span class="k">if</span> <span class="s2">&quot;lostbunch&quot;</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
-            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;lostbunch&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">"lostbunch"</span> <span class="ow">in</span> <span class="n">paramsDict</span><span class="p">:</span>
+            <span class="n">lostbunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"lostbunch"</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">checkBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">lostbunch</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">aperture</span><span class="o">.</span><span class="n">checkBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lost_particles_n</span> <span class="o">=</span> <span class="n">n_parts</span> <span class="o">-</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSize</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="LinacEnergyApertureNode.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacEnergyApertureNode/#orbit.py_linac.lattice.LinacEnergyApertureNode.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method memorizes the kinetic energy of the synchronous particle.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;bunch&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">bunch</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"bunch"</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">eKin_design</span> <span class="o">=</span> <span class="n">bunch</span><span class="o">.</span><span class="n">getSyncParticle</span><span class="p">()</span><span class="o">.</span><span class="n">kinEnergy</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="LinacEnergyApertureNode.getNumberOfLostParticles"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.LinacEnergyApertureNode/#orbit.py_linac.lattice.LinacEnergyApertureNode.getNumberOfLostParticles">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getNumberOfLostParticles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

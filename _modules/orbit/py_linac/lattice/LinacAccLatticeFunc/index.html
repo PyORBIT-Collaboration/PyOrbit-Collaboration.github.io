@@ -365,11 +365,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <h1>Source code for orbit.py_linac.lattice.LinacAccLatticeFunc</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span></span><span class="sd">"""</span>
 <span class="sd">This package is a collection of the lattice functions.</span>
 <span class="sd">Some of these functions could be lattice class methods,</span>
 <span class="sd">but I think they are too specific. So they will be functions.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -392,15 +392,15 @@ document.write(`
 
 
 <div class="viewcode-block" id="GetGlobalQuadGradient"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.GetGlobalQuadGradient/#orbit.py_linac.lattice.GetGlobalQuadGradient">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">GetGlobalQuadGradient</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The service function for the overlapping fields package.</span>
 <span class="sd">    Returns the quad field for certain position in the lattice that</span>
 <span class="sd">    has usual and overlapping quads.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">G</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodeForPosition</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;dB/dr&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"dB/dr"</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">OverlappingQuadsNode</span><span class="p">):</span>
         <span class="n">G</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getTotalField</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="p">(</span><span class="n">posBefore</span> <span class="o">+</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">G</span>
@@ -412,11 +412,11 @@ document.write(`
 
 
 <div class="viewcode-block" id="GetGlobalQuadGradientDerivative"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.GetGlobalQuadGradientDerivative/#orbit.py_linac.lattice.GetGlobalQuadGradientDerivative">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">GetGlobalQuadGradientDerivative</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The service function for the overlapping fields package.</span>
 <span class="sd">    Returns the quad field derivative for certain position in the lattice that</span>
 <span class="sd">    has usual and overlapping quads.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">GP</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodeForPosition</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Quad</span><span class="p">):</span>
@@ -432,41 +432,41 @@ document.write(`
 
 
 <div class="viewcode-block" id="GetGlobalRF_AxisField"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.GetGlobalRF_AxisField/#orbit.py_linac.lattice.GetGlobalRF_AxisField">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">GetGlobalRF_AxisField</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The service function for the overlapping RF fields package.</span>
 <span class="sd">    Returns the RF field on the axis of the RF cavities</span>
 <span class="sd">    for certain position in the lattice. If we have</span>
 <span class="sd">    the BaseRF_Gap instance we will get 0, because it is</span>
 <span class="sd">    an element with zero length.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">Ez</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">posBefore</span><span class="p">,</span> <span class="n">posAfter</span><span class="p">)</span> <span class="o">=</span> <span class="n">accLattice</span><span class="o">.</span><span class="n">getNodeForPosition</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">AxisField_and_Quad_RF_Gap</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">AxisFieldRF_Gap</span><span class="p">):</span>
         <span class="p">(</span><span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">)</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getZ_Min_Max</span><span class="p">()</span>
         <span class="n">Ez</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getEzFiled</span><span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">posBefore</span> <span class="o">+</span> <span class="n">z_min</span><span class="p">)</span>
-        <span class="n">modePhase</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">modePhase</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"mode"</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
         <span class="n">Ez</span> <span class="o">=</span> <span class="n">Ez</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">modePhase</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Ez</span></div>
 
 
 <div class="viewcode-block" id="getNodeForNameFromWholeLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.getNodeForNameFromWholeLattice/#orbit.py_linac.lattice.getNodeForNameFromWholeLattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">getNodeForNameFromWholeLattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Returns the accelerator node or an array of nodes with the same name.</span>
 <span class="sd">    This function could be replaced later by the method in the AccLattice class.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">actions</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">accNodeExitAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Non-bound function. Finds the node in the lattice</span>
 <span class="sd">        with the specified name.</span>
 <span class="sd">        positions. This is a closure (well, maybe not</span>
 <span class="sd">        exactly). It uses external objects.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
             <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
@@ -481,31 +481,31 @@ document.write(`
 
 
 <div class="viewcode-block" id="getNodePosDictForWholeLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.getNodePosDictForWholeLattice/#orbit.py_linac.lattice.getNodePosDictForWholeLattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">getNodePosDictForWholeLattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Returns the dict[node] = (posStart,posEnd) for all nodes (not only for the firts level).</span>
 <span class="sd">    This function could be replaced later by the method in the AccLattice class.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">actions</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
     <span class="n">posStartDict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">posStopDict</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">accNodeEntranceAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Non-bound function. Sets node&#39;s end positions.</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Non-bound function. Sets node's end positions.</span>
 <span class="sd">        This is a closure (well, maybe not exactly). .</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
-        <span class="n">pos</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;path_length&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"path_length"</span><span class="p">]</span>
         <span class="n">posStartDict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">pos</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">accNodeExitAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Non-bound function. Sets node&#39;s end positions.</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Non-bound function. Sets node's end positions.</span>
 <span class="sd">        This is a closure (well, maybe not exactly). .</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
-        <span class="n">pos</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;path_length&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"path_length"</span><span class="p">]</span>
         <span class="n">posStopDict</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">pos</span>
 
     <span class="n">actions</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">accNodeEntranceAction</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
@@ -522,22 +522,22 @@ document.write(`
 
 
 <div class="viewcode-block" id="getAllNodesInLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.getAllNodesInLattice/#orbit.py_linac.lattice.getAllNodesInLattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">getAllNodesInLattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Returns the array with all nodes on all levels (even sub-child).</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">actions</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">accNodeEntranceAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Non-bound function. Add the node to the nodes array</span>
 <span class="sd">        at the entrance inside the node.</span>
 <span class="sd">        This is a closure (well, maybe not</span>
 <span class="sd">        exactly). It uses external objects.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
         <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
     <span class="n">actions</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">accNodeEntranceAction</span><span class="p">,</span> <span class="n">AccNode</span><span class="o">.</span><span class="n">ENTRANCE</span><span class="p">)</span>
@@ -546,22 +546,22 @@ document.write(`
 
 
 <div class="viewcode-block" id="getAllMagnetsInLattice"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.getAllMagnetsInLattice/#orbit.py_linac.lattice.getAllMagnetsInLattice">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">getAllMagnetsInLattice</span><span class="p">(</span><span class="n">accLattice</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Returns the array with all magnets including magnets on all levels (e.g correctors)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">magnets</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">paramsDict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">actions</span> <span class="o">=</span> <span class="n">AccActionsContainer</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">accNodeExitAction</span><span class="p">(</span><span class="n">paramsDict</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Non-bound function. Finds the node in the lattice</span>
 <span class="sd">        which is a magnet.</span>
 <span class="sd">        This is a closure (well, maybe not</span>
 <span class="sd">        exactly). It uses external objects.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span>
+<span class="sd">        """</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">paramsDict</span><span class="p">[</span><span class="s2">"node"</span><span class="p">]</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">LinacMagnetNode</span><span class="p">):</span>
             <span class="n">magnets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 

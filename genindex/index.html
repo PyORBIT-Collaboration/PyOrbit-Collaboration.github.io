@@ -403,6 +403,8 @@ document.write(`
       <ul>
         <li><a href="../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.activate">(orbit.diagnostics.TeapotStatLatsNodeSetMember method)</a>
 </li>
+        <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.activate">(orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+</li>
       </ul></li>
       <li><a href="../reference/orbit.matching.Optics/#orbit.matching.Optics.add">add() (orbit.matching.Optics method)</a>
 </li>
@@ -559,8 +561,6 @@ document.write(`
       <li><a href="../reference/classAperture/#_CPPv4N8Aperture6shape_E">Aperture::shape_ (C++ member)</a>
 </li>
       <li><a href="../reference/orbit.injection.ArbitraryLongDist/#orbit.injection.ArbitraryLongDist">ArbitraryLongDist (class in orbit.injection)</a>
-</li>
-      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.assignTwiss">assignTwiss() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
 </li>
       <li><a href="../reference/classAtomPopulations/#_CPPv415AtomPopulations">AtomPopulations (C++ class)</a>
 </li>
@@ -1030,11 +1030,13 @@ document.write(`
 </li>
       <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysis12analyzeBunchEP5Bunch">BunchTuneAnalysis::analyzeBunch (C++ function)</a>
 </li>
-      <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysis11assignTwissEdddddd">BunchTuneAnalysis::assignTwiss (C++ function)</a>
-</li>
       <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysis17BunchTuneAnalysisEv">BunchTuneAnalysis::BunchTuneAnalysis (C++ function)</a>
 </li>
-      <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysis7getTuneEi">BunchTuneAnalysis::getTune (C++ function)</a>
+      <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysis20getNormMatrixElementEii">BunchTuneAnalysis::getNormMatrixElement (C++ function)</a>
+</li>
+      <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysis20setNormMatrixElementEiid">BunchTuneAnalysis::setNormMatrixElement (C++ function)</a>
+</li>
+      <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysis22setNormMatrixFromTwissEdddddd">BunchTuneAnalysis::setNormMatrixFromTwiss (C++ function)</a>
 </li>
       <li><a href="../reference/classBunchTuneAnalysis/#_CPPv4N17BunchTuneAnalysisD0Ev">BunchTuneAnalysis::~BunchTuneAnalysis (C++ function)</a>
 </li>
@@ -1255,6 +1257,8 @@ document.write(`
       <ul>
         <li><a href="../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.deactivate">(orbit.diagnostics.TeapotStatLatsNodeSetMember method)</a>
 </li>
+        <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.deactivate">(orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+</li>
       </ul></li>
       <li><a href="../reference/orbit.matching.EnvelopeSolver/#orbit.matching.EnvelopeSolver.Dfunc_odeint">Dfunc_odeint() (orbit.matching.EnvelopeSolver method)</a>
 </li>
@@ -1274,10 +1278,10 @@ document.write(`
 </li>
       <li><a href="../reference/classDual__Harmonic__Cav/#_CPPv4N17Dual_Harmonic_Cav10getRFPhaseEv">Dual_Harmonic_Cav::getRFPhase (C++ function)</a>
 </li>
-      <li><a href="../reference/classDual__Harmonic__Cav/#_CPPv4N17Dual_Harmonic_Cav11getRFPhase2Ev">Dual_Harmonic_Cav::getRFPhase2 (C++ function)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../reference/classDual__Harmonic__Cav/#_CPPv4N17Dual_Harmonic_Cav11getRFPhase2Ev">Dual_Harmonic_Cav::getRFPhase2 (C++ function)</a>
+</li>
       <li><a href="../reference/classDual__Harmonic__Cav/#_CPPv4N17Dual_Harmonic_Cav12getRFVoltageEv">Dual_Harmonic_Cav::getRFVoltage (C++ function)</a>
 </li>
       <li><a href="../reference/classDual__Harmonic__Cav/#_CPPv4N17Dual_Harmonic_Cav9getZtoPhiEv">Dual_Harmonic_Cav::getZtoPhi (C++ function)</a>
@@ -1828,8 +1832,12 @@ document.write(`
       </ul></li>
       <li><a href="../reference/orbit.bumps.close_orbit_bumps/#orbit.bumps.close_orbit_bumps.get_xp">get_xp() (orbit.bumps.close_orbit_bumps method)</a>
 </li>
-      <li><a href="../reference/orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer.getActions">getActions() (orbit.lattice.AccActionsContainer method)</a>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getActions">getActions() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+
+      <ul>
+        <li><a href="../reference/orbit.lattice.AccActionsContainer/#orbit.lattice.AccActionsContainer.getActions">(orbit.lattice.AccActionsContainer method)</a>
 </li>
+      </ul></li>
       <li><a href="../reference/orbit.lattice.AccNode/#orbit.lattice.AccNode.getActivePartIndex">getActivePartIndex() (orbit.lattice.AccNode method)</a>
 </li>
       <li><a href="../reference/orbit.lattice.AccNode/#orbit.lattice.AccNode.getAllChildren">getAllChildren() (orbit.lattice.AccNode method)</a>
@@ -1943,6 +1951,8 @@ document.write(`
       <li><a href="../reference/orbit.py_linac.lattice.LinacTrMatricesController/#orbit.py_linac.lattice.LinacTrMatricesController.getCount">getCount() (orbit.py_linac.lattice.LinacTrMatricesController method)</a>
 </li>
       <li><a href="../reference/orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction.getCuttOffZ">getCuttOffZ() (orbit.py_linac.overlapping_fields.EngeFunction method)</a>
+</li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getData">getData() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
 </li>
       <li><a href="../reference/orbit.py_linac.lattice.BaseLinacNode/#orbit.py_linac.lattice.BaseLinacNode.getDataAdaptor">getDataAdaptor() (orbit.py_linac.lattice.BaseLinacNode method)</a>
 </li>
@@ -2270,6 +2280,8 @@ document.write(`
 </li>
       <li><a href="../reference/orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis/#orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis.getNormilizedSpline">getNormilizedSpline() (orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis method)</a>
 </li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getNormMatrix">getNormMatrix() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+</li>
       <li><a href="../reference/orbit.lattice.AccNode/#orbit.lattice.AccNode.getnParts">getnParts() (orbit.lattice.AccNode method)</a>
 </li>
       <li><a href="../reference/orbit.lattice.AccNode/#orbit.lattice.AccNode.getNumberOfBodyChildren">getNumberOfBodyChildren() (orbit.lattice.AccNode method)</a>
@@ -2537,6 +2549,8 @@ document.write(`
       <li><a href="../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getTTF_Polynimials">getTTF_Polynimials() (orbit.py_linac.lattice.BaseRF_Gap method)</a>
 </li>
       <li><a href="../reference/orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis/#orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis.getTTPandSSP_Values">getTTPandSSP_Values() (orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis method)</a>
+</li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.getTunes">getTunes() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
 </li>
       <li><a href="../reference/orbit.bunch_generators.TwissAnalysis/#orbit.bunch_generators.TwissAnalysis.getTwiss">getTwiss() (orbit.bunch_generators.TwissAnalysis method)</a>
 </li>
@@ -5332,8 +5346,6 @@ document.write(`
 </li>
         <li><a href="../reference/orbit.diagnostics.TeapotStatLatsNodeSetMember/#orbit.diagnostics.TeapotStatLatsNodeSetMember.setLatticeLength">(orbit.diagnostics.TeapotStatLatsNodeSetMember method)</a>
 </li>
-        <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setLatticeLength">(orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
-</li>
       </ul></li>
       <li><a href="../reference/orbit.time_dep.TIME_DEP_Lattice/#orbit.time_dep.TIME_DEP_Lattice.setLatticeOrder">setLatticeOrder() (orbit.time_dep.TIME_DEP_Lattice method)</a>
 </li>
@@ -5380,6 +5392,16 @@ document.write(`
 </li>
       </ul></li>
       <li><a href="../reference/orbit.py_linac.lattice.LinacBPM/#orbit.py_linac.lattice.LinacBPM.setNormalizationCoefficient">setNormalizationCoefficient() (orbit.py_linac.lattice.LinacBPM method)</a>
+</li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrix">setNormMatrix() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+</li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromBunch">setNormMatrixFromBunch() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+</li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromCovMatrix">setNormMatrixFromCovMatrix() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+</li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTransferMatrix">setNormMatrixFromTransferMatrix() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
+</li>
+      <li><a href="../reference/orbit.diagnostics.TeapotTuneAnalysisNode/#orbit.diagnostics.TeapotTuneAnalysisNode.setNormMatrixFromTwiss">setNormMatrixFromTwiss() (orbit.diagnostics.TeapotTuneAnalysisNode method)</a>
 </li>
       <li><a href="../reference/orbit.injection.InjectParts/#orbit.injection.InjectParts.setnparts">setnparts() (orbit.injection.InjectParts method)</a>
 
@@ -5617,12 +5639,12 @@ document.write(`
 </li>
       <li><a href="../reference/classSpaceChargeCalc2p5D/#_CPPv4N19SpaceChargeCalc2p5D7phiGridE">SpaceChargeCalc2p5D::phiGrid (C++ member)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../reference/classSpaceChargeCalc2p5D/#_CPPv4N19SpaceChargeCalc2p5D13poissonSolverE">SpaceChargeCalc2p5D::poissonSolver (C++ member)</a>
 </li>
       <li><a href="../reference/classSpaceChargeCalc2p5D/#_CPPv4N19SpaceChargeCalc2p5D7rhoGridE">SpaceChargeCalc2p5D::rhoGrid (C++ member)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../reference/classSpaceChargeCalc2p5D/#_CPPv4N19SpaceChargeCalc2p5D19SpaceChargeCalc2p5DEiii">SpaceChargeCalc2p5D::SpaceChargeCalc2p5D (C++ function)</a>, <a href="../reference/classSpaceChargeCalc2p5D/#_CPPv4N19SpaceChargeCalc2p5D19SpaceChargeCalc2p5DEiiid">[1]</a>
 </li>
       <li><a href="../reference/classSpaceChargeCalc2p5D/#_CPPv4N19SpaceChargeCalc2p5D10trackBunchEP5BunchdP14BaseBoundary2D">SpaceChargeCalc2p5D::trackBunch (C++ function)</a>

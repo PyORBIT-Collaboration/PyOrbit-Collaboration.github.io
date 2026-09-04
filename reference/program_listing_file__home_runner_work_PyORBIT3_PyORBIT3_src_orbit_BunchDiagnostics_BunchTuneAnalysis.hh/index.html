@@ -383,11 +383,10 @@ document.write(`
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef BUNCH_TUNE_ANALYSIS_H</span>
 <span class="cp">#define BUNCH_TUNE_ANALYSIS_H</span>
 
-<span class="c1">//pyORBIT utils</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CppPyWrapper.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"CppPyWrapper.hh"</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Bunch.hh&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BunchTwissAnalysis.hh&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"Bunch.hh"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"BunchTwissAnalysis.hh"</span>
 
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
 
@@ -395,29 +394,26 @@ document.write(`
 <span class="k">class</span><span class="w"> </span><span class="nc">BunchTuneAnalysis</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">OrbitUtils</span><span class="o">::</span><span class="n">CppPyWrapper</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
-
 <span class="w">        </span><span class="n">BunchTuneAnalysis</span><span class="p">();</span>
 
 <span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">BunchTuneAnalysis</span><span class="p">();</span>
 
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">analyzeBunch</span><span class="p">(</span><span class="n">Bunch</span><span class="o">*</span><span class="w"> </span><span class="n">bunch</span><span class="p">);</span>
 
-<span class="w">        </span><span class="c1">//** Assigns Twiss values at location of calculator */</span>
-<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">assignTwiss</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">bx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ax</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dpx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">by</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ay</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNormMatrixElement</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
 
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">getTune</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ic</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">getNormMatrixElement</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
 
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNormMatrixFromTwiss</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">betax</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">alphax</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">etax</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">etapx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">betay</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">alphay</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">private</span><span class="o">:</span>
-<span class="w">        </span><span class="c1">//** Twiss */</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">betax</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">alphax</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">etax</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">etapx</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">betay</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">alphay</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// Normalization matrix V^{-1}</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">6</span><span class="p">];</span>
 
+<span class="w">        </span><span class="c1">// Flag to erase stored phase/amplitude info.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">erase</span><span class="p">;</span>
 <span class="p">};</span>
+
 
 <span class="cp">#endif</span>
 <span class="c1">//endif for BUNCH_TUNE_ANALYSIS_H</span>
