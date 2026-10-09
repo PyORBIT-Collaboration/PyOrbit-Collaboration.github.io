@@ -692,164 +692,258 @@
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.teapot.</span></span><span class="sig-name descname"><span class="pre">TEAPOT_MATRIX_Lattice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">teapot_lattice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bunch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../orbit.matrix_lattice.MATRIX_Lattice/#orbit.matrix_lattice.MATRIX_Lattice" title="orbit.matrix_lattice.MATRIX_Lattice.MATRIX_Lattice"><code class="xref py py-class docutils literal notranslate"><span class="pre">MATRIX_Lattice</span></code></a></p>
-<p>The subclass of the MATRIX_Lattice class. Shell class for the BaseMATRIX nodes collection.
-The TEAPOT_Lattice instance is needed to create the TEAPOT_MATRIX_Lattice instance.
-The nodes for RF elements are the usual TEAPOT RingRFTEAPOT nodes. The Bunch instance
-is needed for the MATRIX_Lattice constructor to specify the particle’s energy and
-other parameters.</p>
+<p>Subclass of the <cite>MATRIX_Lattice</cite> class. Shell class for the BaseMATRIX nodes collection.</p>
+<p>A <cite>TEAPOT_Lattice</cite> and <cite>Bunch</cite> instance are needed to construct the transfer matrices
+for specified beam parameters.</p>
 <p class="rubric">Methods Summary</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getChromaticitiesXY" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getChromaticitiesXY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChromaticitiesXY</span></code></a>()</p></td>
-<td><p>Calculates chromaticities for X,Y planes for the whole ring</p></td>
+<td><p>Calculates chromaticities for x and y planes.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getKinEnergy" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getKinEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKinEnergy</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataX" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRingDispersionDataX</span></code></a>()</p></td>
-<td><p>Returns the tuple  ([(position, dispX),...],[(position,disp_pX),...] ).</p></td>
+<td><p>Returns tuple  ([(s, disp_x), ...], [(s, disp_prime_x), ...]).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataY" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRingDispersionDataY</span></code></a>()</p></td>
-<td><p>Returns the tuple  ([(position, dispY),...],[(position,disp_pY),...] ).</p></td>
+<td><p>Returns tuple  ([(s, disp_y), ...], [(s, disp_prime_y), ...]).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingMatrix" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRingMatrix</span></code></a>()</p></td>
-<td><p>Returns the dictionary with different ring parametrs calculated from the one turn transport matrix.</p></td>
+<td><p>Returns one-turn matrix.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingOrbit" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingOrbit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRingOrbit</span></code></a>(z0)</p></td>
-<td><p>Returns the tuple ([(position, X),...],[(position,Y),...] ).</p></td>
+<td><p>Returns tuple ([(s, x),...],[(s, y),...] ).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingParametersDict" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingParametersDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRingParametersDict</span></code></a>()</p></td>
-<td><p>Returns the dictionary with different ring parametrs calculated from the one turn transport matrix.</p></td>
+<td><p>Returns dictionary of ring parameters from one-turn matrix.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataX" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRingTwissDataX</span></code></a>()</p></td>
-<td><p>Returns the tuple (tuneX, [(position, alphaX),...],[(position,betaX),...] ).</p></td>
+<td><p>Returns tuple ([(s, tune_x), ...], [(s, alpha_x),...], [(s, beta_x),...]).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataY" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRingTwissDataY</span></code></a>()</p></td>
-<td><p>Returns the tuple (tuneY, [(position, alphaY),...],[(position,betaY),...] ).</p></td>
+<td><p>Returns tuple ([(s, tune_y), ...], [(s, alpha_y),...], [(s, beta_y),...]).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataX" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransferDispersionDataX</span></code></a>(disp, disp_p)</p></td>
-<td><p>Returns the tuple  ([(position, dispX),...],[(position,disp_pX),...] ).</p></td>
+<td><p>Propagates x dispersion and dispersion prime (x) through lattice.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataY" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransferDispersionDataY</span></code></a>(disp, disp_p)</p></td>
-<td><p>Returns the tuple  ([(position, dispY),...],[(position,disp_pY),...] ).</p></td>
+<td><p>Propagates y dispersion and dispersion prime through lattice.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataX" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransferTwissDataX</span></code></a>(alpha_x, beta_x)</p></td>
-<td><p>Returns the tuple (tuneX, [(position, alphaX),...],[(position,betaX),...] ).</p></td>
+<td><p>Propagates Twiss parameters (alpha_x, beta) through the lattice.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataY" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransferTwissDataY</span></code></a>(alpha_y, beta_y)</p></td>
-<td><p>Returns the tuple (tuneY, [(position, alphaY),...],[(position,betaY),...] ).</p></td>
+<td><p>Propagates Twiss parameters (alpha_y, beta_y) through lattice.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild" title="orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rebuild</span></code></a>([Ekin])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTunes" title="orbit.teapot.TEAPOT_MATRIX_Lattice.getTunes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTunes</span></code></a>()</p></td>
+<td><p>Return total phase advance / 2pi (not fractional tunes)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild" title="orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rebuild</span></code></a>([kin_energy])</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p class="rubric">Methods Documentation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>teapot_lattice</strong> (<a class="reference internal" href="../orbit.teapot.TEAPOT_Lattice/#orbit.teapot.TEAPOT_Lattice" title="orbit.teapot.teapot.TEAPOT_Lattice"><em>TEAPOT_Lattice</em></a>)</p></li>
+<li><p><strong>bunch</strong> (<em>Bunch</em>)</p></li>
+<li><p><strong>name</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getChromaticitiesXY">
 <span class="sig-name descname"><span class="pre">getChromaticitiesXY</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getChromaticitiesXY"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getChromaticitiesXY" title="Link to this definition">#</a></dt>
-<dd><p>Calculates chromaticities for X,Y planes for the whole ring</p>
+<dd><p>Calculates chromaticities for x and y planes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getKinEnergy">
 <span class="sig-name descname"><span class="pre">getKinEnergy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getKinEnergy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getKinEnergy" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataX">
 <span class="sig-name descname"><span class="pre">getRingDispersionDataX</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getRingDispersionDataX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataX" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple  ([(position, dispX),…],[(position,disp_pX),…] ).
-It overloads the getRingDispersionDataX(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Returns tuple  ([(s, disp_x), …], [(s, disp_prime_x), …]).</p>
+<p>Overloads <cite>getRingDispersionDataX(p,m)</cite> method from <cite>MATRIX_Lattice</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataY">
 <span class="sig-name descname"><span class="pre">getRingDispersionDataY</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getRingDispersionDataY"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingDispersionDataY" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple  ([(position, dispY),…],[(position,disp_pY),…] ).
-It overloads the getRingDispersionDataY(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Returns tuple  ([(s, disp_y), …], [(s, disp_prime_y), …]).</p>
+<p>Overloads <cite>getRingDispersionDataX(p,m)</cite> method from <cite>MATRIX_Lattice</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingMatrix">
 <span class="sig-name descname"><span class="pre">getRingMatrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getRingMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingMatrix" title="Link to this definition">#</a></dt>
-<dd><p>Returns the dictionary with different ring parametrs
-calculated from the one turn transport matrix. It overloads the
-getRingParametersDict(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Returns one-turn matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../orbit.matrix_lattice.BaseMATRIX/#orbit.matrix_lattice.BaseMATRIX" title="orbit.matrix_lattice.BaseMATRIX.BaseMATRIX"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseMATRIX</span></code></a></span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingOrbit">
 <span class="sig-name descname"><span class="pre">getRingOrbit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getRingOrbit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingOrbit" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple ([(position, X),…],[(position,Y),…] ).
-It overloads the getRingTwissDataX(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Returns tuple ([(s, x),…],[(s, y),…] ).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>z0</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>)</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingParametersDict">
 <span class="sig-name descname"><span class="pre">getRingParametersDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getRingParametersDict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingParametersDict" title="Link to this definition">#</a></dt>
-<dd><p>Returns the dictionary with different ring parametrs
-calculated from the one turn transport matrix. It overloads the
-getRingParametersDict(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Returns dictionary of ring parameters from one-turn matrix.</p>
+<p>Overloads <cite>getRingParametersDict(p,m)</cite> method from <cite>MATRIX_Lattice</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataX">
 <span class="sig-name descname"><span class="pre">getRingTwissDataX</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getRingTwissDataX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataX" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple (tuneX, [(position, alphaX),…],[(position,betaX),…] ).
-It overloads the getRingTwissDataX(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Returns tuple ([(s, tune_x), …], [(s, alpha_x),…], [(s, beta_x),…]).</p>
+<p>Overloads the <cite>getRingTwissDataX(p,m)</cite> method from <cite>MATRIX_Lattice</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataY">
 <span class="sig-name descname"><span class="pre">getRingTwissDataY</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getRingTwissDataY"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getRingTwissDataY" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple (tuneY, [(position, alphaY),…],[(position,betaY),…] ).
-It overloads the getRingTwissDataY(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Returns tuple ([(s, tune_y), …], [(s, alpha_y),…], [(s, beta_y),…]).</p>
+<p>Overloads the <cite>getRingTwissDataY(p,m)</cite> method from <cite>MATRIX_Lattice</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataX">
 <span class="sig-name descname"><span class="pre">getTransferDispersionDataX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">disp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disp_p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getTransferDispersionDataX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataX" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple  ([(position, dispX),…],[(position,disp_pX),…] ).
-It overloads the getRingDispersionDataX(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Propagates x dispersion and dispersion prime (x) through lattice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>disp</strong> (<em>float</em>)</p></li>
+<li><p><strong>disp_p</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataY">
 <span class="sig-name descname"><span class="pre">getTransferDispersionDataY</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">disp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disp_p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getTransferDispersionDataY"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataY" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple  ([(position, dispY),…],[(position,disp_pY),…] ).
-It overloads the getRingDispersionDataY(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Propagates y dispersion and dispersion prime through lattice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>disp</strong> (<em>float</em>)</p></li>
+<li><p><strong>disp_p</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataX">
 <span class="sig-name descname"><span class="pre">getTransferTwissDataX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getTransferTwissDataX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataX" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple (tuneX, [(position, alphaX),…],[(position,betaX),…] ).
-It overloads the getRingTwissDataX(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Propagates Twiss parameters (alpha_x, beta) through the lattice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>alpha_x</strong> (<em>float</em>)</p></li>
+<li><p><strong>beta_x</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataY">
 <span class="sig-name descname"><span class="pre">getTransferTwissDataY</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getTransferTwissDataY"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataY" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tuple (tuneY, [(position, alphaY),…],[(position,betaY),…] ).
-It overloads the getRingTwissDataY(p,m) method from the parent MATRIX_Lattice
-class.</p>
+<dd><p>Propagates Twiss parameters (alpha_y, beta_y) through lattice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>alpha_y</strong> (<em>float</em>)</p></li>
+<li><p><strong>beta_y</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.getTunes">
+<span class="sig-name descname"><span class="pre">getTunes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.getTunes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTunes" title="Link to this definition">#</a></dt>
+<dd><p>Return total phase advance / 2pi (not fractional tunes)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild">
-<span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Ekin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.rebuild"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kin_energy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/teapot/teapot_matrix_lattice/#TEAPOT_MATRIX_Lattice.rebuild"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -917,6 +1011,7 @@ class.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferDispersionDataY"><code class="docutils literal notranslate"><span class="pre">TEAPOT_MATRIX_Lattice.getTransferDispersionDataY()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataX"><code class="docutils literal notranslate"><span class="pre">TEAPOT_MATRIX_Lattice.getTransferTwissDataX()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTransferTwissDataY"><code class="docutils literal notranslate"><span class="pre">TEAPOT_MATRIX_Lattice.getTransferTwissDataY()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.getTunes"><code class="docutils literal notranslate"><span class="pre">TEAPOT_MATRIX_Lattice.getTunes()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.teapot.TEAPOT_MATRIX_Lattice.rebuild"><code class="docutils literal notranslate"><span class="pre">TEAPOT_MATRIX_Lattice.rebuild()</span></code></a></li>
 </ul>
 </li>

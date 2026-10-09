@@ -23,6 +23,7 @@ TEAPOT_MATRIX_Lattice
       ~TEAPOT_MATRIX_Lattice.getTransferDispersionDataY
       ~TEAPOT_MATRIX_Lattice.getTransferTwissDataX
       ~TEAPOT_MATRIX_Lattice.getTransferTwissDataY
+      ~TEAPOT_MATRIX_Lattice.getTunes
       ~TEAPOT_MATRIX_Lattice.rebuild
 
    .. rubric:: Methods Documentation
@@ -40,4 +41,5 @@ TEAPOT_MATRIX_Lattice
    .. automethod:: getTransferDispersionDataY
    .. automethod:: getTransferTwissDataX
    .. automethod:: getTransferTwissDataY
+   .. automethod:: getTunes
    .. automethod:: rebuild

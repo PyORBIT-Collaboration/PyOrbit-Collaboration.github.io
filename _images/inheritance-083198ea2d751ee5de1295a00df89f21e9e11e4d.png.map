@@ -20,6 +20,6 @@
 <area shape="rect" id="node17" href="../orbit.teapot.QuadTEAPOT/#orbit.teapot.QuadTEAPOT" target="_top" title="Quad Combined Function TEAPOT element." alt="" coords="654,202,721,220"/>
 <area shape="rect" id="node18" href="../orbit.teapot.RingRFTEAPOT/#orbit.teapot.RingRFTEAPOT" target="_top" title="Ring RF TEAPOT element." alt="" coords="650,235,725,253"/>
 <area shape="rect" id="node19" href="../orbit.teapot.SolenoidTEAPOT/#orbit.teapot.SolenoidTEAPOT" target="_top" title="Solenoid TEAPOT element." alt="" coords="647,268,728,286"/>
-<area shape="rect" id="node21" href="../orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice" target="_top" title="The subclass of the MATRIX_Lattice class. Shell class for the BaseMATRIX nodes collection." alt="" coords="343,136,458,153"/>
+<area shape="rect" id="node21" href="../orbit.teapot.TEAPOT_MATRIX_Lattice/#orbit.teapot.TEAPOT_MATRIX_Lattice" target="_top" title="Subclass of the `MATRIX_Lattice` class. Shell class for the BaseMATRIX nodes collection." alt="" coords="343,136,458,153"/>
 <area shape="rect" id="node22" href="../orbit.teapot.TEAPOT_Ring/#orbit.teapot.TEAPOT_Ring" target="_top" title="The subclass of the TEAPOT_Lattice class. Shell class for the TEAPOT nodes" alt="" coords="366,103,435,120"/>
 </map>
