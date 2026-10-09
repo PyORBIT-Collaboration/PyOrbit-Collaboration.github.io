@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class Grid1D &#8212; PyORBIT3 v3.0.1 documentation</title>
   
@@ -15,68 +13,73 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../../_static/documentation_options.js?v=9c59d525"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/classGrid1D';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="Class Grid2D" href="../classGrid2D/" />
     <link rel="prev" title="Class Frequency_Cav" href="../classFrequency__Cav/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search/"
       method="get">
@@ -84,7 +87,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -92,21 +94,31 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../">
+  
   
   
   
@@ -118,47 +130,41 @@
     
   </div>
   
-  
   <div class="col-lg-9 navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -169,28 +175,31 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -201,8 +210,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -212,29 +220,32 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -243,44 +254,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -289,17 +298,21 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -310,8 +323,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -320,7 +332,16 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button type="button" id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
@@ -456,7 +477,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../classFrequency__Cav/">Class Frequency_Cav</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Class Grid1D</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Class Grid1D</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../classGrid2D/">Class Grid2D</a></li>
@@ -1406,30 +1427,33 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../" class="nav-link" aria-label="Home">
@@ -1439,7 +1463,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../cpp/" class="nav-link">C++ API Reference</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class Grid1D</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Class Grid1D</span></li>
   </ul>
 </nav>
 </div>
@@ -1454,254 +1478,254 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="class-grid1d">
-<span id="exhale-class-classgrid1d"></span><h1>Class Grid1D<a class="headerlink" href="#class-grid1d" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classgrid1d"></span><h1>Class Grid1D<a class="headerlink" href="#class-grid1d" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid1D.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-spacecharge-grid1d-hh"><span class="std std-ref">File Grid1D.hh</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">OrbitUtils::CppPyWrapper</span></code> (<a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#exhale-class-classorbitutils-1-1cpppywrapper"><span class="std std-ref">Class CppPyWrapper</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv46Grid1D">
-<span id="_CPPv36Grid1D"></span><span id="_CPPv26Grid1D"></span><span id="Grid1D"></span><span class="target" id="classGrid1D"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#_CPPv4N10OrbitUtils12CppPyWrapperE" title="OrbitUtils::CppPyWrapper"><span class="n"><span class="pre">CppPyWrapper</span></span></a><a class="headerlink" href="#_CPPv46Grid1D" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv36Grid1D"></span><span id="_CPPv26Grid1D"></span><span id="Grid1D"></span><span class="target" id="classGrid1D"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#_CPPv4N10OrbitUtils12CppPyWrapperE" title="OrbitUtils::CppPyWrapper"><span class="n"><span class="pre">CppPyWrapper</span></span></a><a class="headerlink" href="#_CPPv46Grid1D" title="Link to this definition">#</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D6Grid1DEi">
-<span id="_CPPv3N6Grid1D6Grid1DEi"></span><span id="_CPPv2N6Grid1D6Grid1DEi"></span><span id="Grid1D::Grid1D__i"></span><span class="target" id="classGrid1D_1ac230de34ff528380d249cf83890fb9ea"></span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6Grid1DEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D6Grid1DEi"></span><span id="_CPPv2N6Grid1D6Grid1DEi"></span><span id="Grid1D::Grid1D__i"></span><span class="target" id="classGrid1D_1ac230de34ff528380d249cf83890fb9ea"></span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6Grid1DEi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Constructor with grid size only </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D6Grid1DEid">
-<span id="_CPPv3N6Grid1D6Grid1DEid"></span><span id="_CPPv2N6Grid1D6Grid1DEid"></span><span id="Grid1D::Grid1D__i.double"></span><span class="target" id="classGrid1D_1aa922fd69847982dbd83d5f78ad873d98"></span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zSize</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6Grid1DEid" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D6Grid1DEid"></span><span id="_CPPv2N6Grid1D6Grid1DEid"></span><span id="Grid1D::Grid1D__i.double"></span><span class="target" id="classGrid1D_1aa922fd69847982dbd83d5f78ad873d98"></span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zSize</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6Grid1DEid" title="Link to this definition">#</a><br /></dt>
 <dd><p>Constructor with lattice length</p>
 <p>Constructor with grid size and grid physical length </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D6Grid1DEidd">
-<span id="_CPPv3N6Grid1D6Grid1DEidd"></span><span id="_CPPv2N6Grid1D6Grid1DEidd"></span><span id="Grid1D::Grid1D__i.double.double"></span><span class="target" id="classGrid1D_1a558bfec2d40523a1b03293ef07bdc048"></span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zSize</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMin</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMax</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6Grid1DEidd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D6Grid1DEidd"></span><span id="_CPPv2N6Grid1D6Grid1DEidd"></span><span id="Grid1D::Grid1D__i.double.double"></span><span class="target" id="classGrid1D_1a558bfec2d40523a1b03293ef07bdc048"></span><span class="sig-name descname"><span class="n"><span class="pre">Grid1D</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zSize</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMin</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMax</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6Grid1DEidd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Constructor with grid size and spatial limits </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1DD0Ev">
-<span id="_CPPv3N6Grid1DD0Ev"></span><span id="_CPPv2N6Grid1DD0Ev"></span><span id="Grid1D::~Grid1D"></span><span class="target" id="classGrid1D_1a2218ae236db75225f340589261e8ea79"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Grid1D</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1DD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1DD0Ev"></span><span id="_CPPv2N6Grid1DD0Ev"></span><span id="Grid1D::~Grid1D"></span><span class="target" id="classGrid1D_1a2218ae236db75225f340589261e8ea79"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Grid1D</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1DD0Ev" title="Link to this definition">#</a><br /></dt>
 <dd><p>Destructor </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8setGridZEdd">
-<span id="_CPPv3N6Grid1D8setGridZEdd"></span><span id="_CPPv2N6Grid1D8setGridZEdd"></span><span id="Grid1D::setGridZ__double.double"></span><span class="target" id="classGrid1D_1a2c6d1e5090ffe23e8bbc66014c6aabe7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGridZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMin</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMax</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8setGridZEdd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8setGridZEdd"></span><span id="_CPPv2N6Grid1D8setGridZEdd"></span><span id="Grid1D::setGridZ__double.double"></span><span class="target" id="classGrid1D_1a2c6d1e5090ffe23e8bbc66014c6aabe7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGridZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMin</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zMax</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8setGridZEdd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Sets z-grid </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D6getArrEv">
-<span id="_CPPv3N6Grid1D6getArrEv"></span><span id="_CPPv2N6Grid1D6getArrEv"></span><span id="Grid1D::getArr"></span><span class="target" id="classGrid1D_1a555f0119417ff0d9ae3138defe4fdeb5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getArr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6getArrEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D6getArrEv"></span><span id="_CPPv2N6Grid1D6getArrEv"></span><span id="Grid1D::getArr"></span><span class="target" id="classGrid1D_1a555f0119417ff0d9ae3138defe4fdeb5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getArr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6getArrEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the reference to the 1D array </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D7getMinZEv">
-<span id="_CPPv3N6Grid1D7getMinZEv"></span><span id="_CPPv2N6Grid1D7getMinZEv"></span><span id="Grid1D::getMinZ"></span><span class="target" id="classGrid1D_1ad3a17e94cead6cde3fd92561087ff90a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D7getMinZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D7getMinZEv"></span><span id="_CPPv2N6Grid1D7getMinZEv"></span><span id="Grid1D::getMinZ"></span><span class="target" id="classGrid1D_1ad3a17e94cead6cde3fd92561087ff90a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D7getMinZEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the min z grid point value </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D7getMaxZEv">
-<span id="_CPPv3N6Grid1D7getMaxZEv"></span><span id="_CPPv2N6Grid1D7getMaxZEv"></span><span id="Grid1D::getMaxZ"></span><span class="target" id="classGrid1D_1a33aee084f9526b9f928fdb7d5183ada9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMaxZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D7getMaxZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D7getMaxZEv"></span><span id="_CPPv2N6Grid1D7getMaxZEv"></span><span id="Grid1D::getMaxZ"></span><span class="target" id="classGrid1D_1a33aee084f9526b9f928fdb7d5183ada9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMaxZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D7getMaxZEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the max z grid point value </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8getSizeZEv">
-<span id="_CPPv3N6Grid1D8getSizeZEv"></span><span id="_CPPv2N6Grid1D8getSizeZEv"></span><span id="Grid1D::getSizeZ"></span><span class="target" id="classGrid1D_1a197ce93e61e7a7abd0dae116aabd771e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSizeZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getSizeZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8getSizeZEv"></span><span id="_CPPv2N6Grid1D8getSizeZEv"></span><span id="Grid1D::getSizeZ"></span><span class="target" id="classGrid1D_1a197ce93e61e7a7abd0dae116aabd771e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSizeZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getSizeZEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the number of grid points </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D6getSumEv">
-<span id="_CPPv3N6Grid1D6getSumEv"></span><span id="_CPPv2N6Grid1D6getSumEv"></span><span id="Grid1D::getSum"></span><span class="target" id="classGrid1D_1a46c0b87b01c3e3bdd3e3961382fc16fc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6getSumEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D6getSumEv"></span><span id="_CPPv2N6Grid1D6getSumEv"></span><span id="Grid1D::getSum"></span><span class="target" id="classGrid1D_1a46c0b87b01c3e3bdd3e3961382fc16fc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D6getSumEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the sum of all grid points</p>
 <p>Returns the sum of all grid point values </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8getStepZEv">
-<span id="_CPPv3N6Grid1D8getStepZEv"></span><span id="_CPPv2N6Grid1D8getStepZEv"></span><span id="Grid1D::getStepZ"></span><span class="target" id="classGrid1D_1a90bec9ec479a07a4794cbdfc4c25ed41"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStepZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getStepZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8getStepZEv"></span><span id="_CPPv2N6Grid1D8getStepZEv"></span><span id="Grid1D::getStepZ"></span><span class="target" id="classGrid1D_1a90bec9ec479a07a4794cbdfc4c25ed41"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStepZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getStepZEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the grid step size </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8getGridZEi">
-<span id="_CPPv3N6Grid1D8getGridZEi"></span><span id="_CPPv2N6Grid1D8getGridZEi"></span><span id="Grid1D::getGridZ__i"></span><span class="target" id="classGrid1D_1a812059e4da30002b5d7dbd86a0fedb81"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGridZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getGridZEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8getGridZEi"></span><span id="_CPPv2N6Grid1D8getGridZEi"></span><span id="Grid1D::getGridZ__i"></span><span class="target" id="classGrid1D_1a812059e4da30002b5d7dbd86a0fedb81"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGridZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getGridZEi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the grid point for index </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8isInsideEd">
-<span id="_CPPv3N6Grid1D8isInsideEd"></span><span id="_CPPv2N6Grid1D8isInsideEd"></span><span id="Grid1D::isInside__double"></span><span class="target" id="classGrid1D_1a899b72c35e01fcae91a8a49d7d7b2c34"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isInside</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8isInsideEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8isInsideEd"></span><span id="_CPPv2N6Grid1D8isInsideEd"></span><span id="Grid1D::isInside__double"></span><span class="target" id="classGrid1D_1a899b72c35e01fcae91a8a49d7d7b2c34"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isInside</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8isInsideEd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns 1 if (z) is inside the grid region, and 0 otherwise </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D7setZeroEv">
-<span id="_CPPv3N6Grid1D7setZeroEv"></span><span id="_CPPv2N6Grid1D7setZeroEv"></span><span id="Grid1D::setZero"></span><span class="target" id="classGrid1D_1a692f7f338218b6ffc9fdc3b706075822"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setZero</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D7setZeroEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D7setZeroEv"></span><span id="_CPPv2N6Grid1D7setZeroEv"></span><span id="Grid1D::setZero"></span><span class="target" id="classGrid1D_1a692f7f338218b6ffc9fdc3b706075822"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setZero</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D7setZeroEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Sets arr_ at all grid points to zero </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8multiplyEd">
-<span id="_CPPv3N6Grid1D8multiplyEd"></span><span id="_CPPv2N6Grid1D8multiplyEd"></span><span id="Grid1D::multiply__double"></span><span class="target" id="classGrid1D_1adeafdc4140e894dca8858b03a1b67eb9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">multiply</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">coeff</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8multiplyEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8multiplyEd"></span><span id="_CPPv2N6Grid1D8multiplyEd"></span><span id="Grid1D::multiply__double"></span><span class="target" id="classGrid1D_1adeafdc4140e894dca8858b03a1b67eb9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">multiply</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">coeff</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8multiplyEd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Multiply all elements of <a class="reference internal" href="#classGrid1D"><span class="std std-ref">Grid1D</span></a> by constant coefficient</p>
 <p>Multiply all elements of <a class="reference internal" href="../classGrid3D/#classGrid3D"><span class="std std-ref">Grid3D</span></a> by constant coefficient </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8setValueEdi">
-<span id="_CPPv3N6Grid1D8setValueEdi"></span><span id="_CPPv2N6Grid1D8setValueEdi"></span><span id="Grid1D::setValue__double.i"></span><span class="target" id="classGrid1D_1ac37071a4543556d1617faaa1bff80eea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iZ</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8setValueEdi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8setValueEdi"></span><span id="_CPPv2N6Grid1D8setValueEdi"></span><span id="Grid1D::setValue__double.i"></span><span class="target" id="classGrid1D_1ac37071a4543556d1617faaa1bff80eea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iZ</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8setValueEdi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Sets value of arr_ at one point on the grid </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D14getValueOnGridEi">
-<span id="_CPPv3N6Grid1D14getValueOnGridEi"></span><span id="_CPPv2N6Grid1D14getValueOnGridEi"></span><span id="Grid1D::getValueOnGrid__i"></span><span class="target" id="classGrid1D_1adbef703d0243579b90f803a1de190191"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValueOnGrid</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iZ</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D14getValueOnGridEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D14getValueOnGridEi"></span><span id="_CPPv2N6Grid1D14getValueOnGridEi"></span><span id="Grid1D::getValueOnGrid__i"></span><span class="target" id="classGrid1D_1adbef703d0243579b90f803a1de190191"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValueOnGrid</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iZ</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D14getValueOnGridEi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns value of arr_ at one point on the grid </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8getValueEd">
-<span id="_CPPv3N6Grid1D8getValueEd"></span><span id="_CPPv2N6Grid1D8getValueEd"></span><span id="Grid1D::getValue__double"></span><span class="target" id="classGrid1D_1aec3209e2d10840fbb667511c6df70c34"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getValueEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8getValueEd"></span><span id="_CPPv2N6Grid1D8getValueEd"></span><span id="Grid1D::getValue__double"></span><span class="target" id="classGrid1D_1aec3209e2d10840fbb667511c6df70c34"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8getValueEd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns interpolated value of arr_ </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D16getValueSmoothedEd">
-<span id="_CPPv3N6Grid1D16getValueSmoothedEd"></span><span id="_CPPv2N6Grid1D16getValueSmoothedEd"></span><span id="Grid1D::getValueSmoothed__double"></span><span class="target" id="classGrid1D_1a0900ddd8bea8ffe605bfb67434e03e13"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValueSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16getValueSmoothedEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D16getValueSmoothedEd"></span><span id="_CPPv2N6Grid1D16getValueSmoothedEd"></span><span id="Grid1D::getValueSmoothed__double"></span><span class="target" id="classGrid1D_1a0900ddd8bea8ffe605bfb67434e03e13"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValueSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16getValueSmoothedEd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns smoothed interpolated value of arr_ </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8binBunchEP5Bunch">
-<span id="_CPPv3N6Grid1D8binBunchEP5Bunch"></span><span id="_CPPv2N6Grid1D8binBunchEP5Bunch"></span><span id="Grid1D::binBunch__BunchP"></span><span class="target" id="classGrid1D_1ad48e2820b74ff418cc9a30fa7ce5ba74"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8binBunchEP5Bunch" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8binBunchEP5Bunch"></span><span id="_CPPv2N6Grid1D8binBunchEP5Bunch"></span><span id="Grid1D::binBunch__BunchP"></span><span class="target" id="classGrid1D_1ad48e2820b74ff418cc9a30fa7ce5ba74"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8binBunchEP5Bunch" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid incorporating macrosize</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the longitudinal coordinate using macro-size for each particle. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8binBunchEP5Bunchi">
-<span id="_CPPv3N6Grid1D8binBunchEP5Bunchi"></span><span id="_CPPv2N6Grid1D8binBunchEP5Bunchi"></span><span id="Grid1D::binBunch__BunchP.i"></span><span class="target" id="classGrid1D_1a11a955bcb527111d0c9acee957f6df25"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8binBunchEP5Bunchi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8binBunchEP5Bunchi"></span><span id="_CPPv2N6Grid1D8binBunchEP5Bunchi"></span><span id="Grid1D::binBunch__BunchP.i"></span><span class="target" id="classGrid1D_1a11a955bcb527111d0c9acee957f6df25"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8binBunchEP5Bunchi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid along any axis</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along any coordinate using macro-size for each particle. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D16binBunchSmoothedEP5Bunch">
-<span id="_CPPv3N6Grid1D16binBunchSmoothedEP5Bunch"></span><span id="_CPPv2N6Grid1D16binBunchSmoothedEP5Bunch"></span><span id="Grid1D::binBunchSmoothed__BunchP"></span><span class="target" id="classGrid1D_1a48548c44d95e64ff5d9f2e5f382aaefa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16binBunchSmoothedEP5Bunch" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D16binBunchSmoothedEP5Bunch"></span><span id="_CPPv2N6Grid1D16binBunchSmoothedEP5Bunch"></span><span id="Grid1D::binBunchSmoothed__BunchP"></span><span class="target" id="classGrid1D_1a48548c44d95e64ff5d9f2e5f382aaefa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16binBunchSmoothedEP5Bunch" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid using a smoothing algorithm and incorporating macrosize</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the longitudinal coordinate using a smoothing algorithm and macro-size for each particle. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D16binBunchSmoothedEP5Bunchi">
-<span id="_CPPv3N6Grid1D16binBunchSmoothedEP5Bunchi"></span><span id="_CPPv2N6Grid1D16binBunchSmoothedEP5Bunchi"></span><span id="Grid1D::binBunchSmoothed__BunchP.i"></span><span class="target" id="classGrid1D_1a2021bc5b9c79876eea05d58d4e072ff5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16binBunchSmoothedEP5Bunchi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D16binBunchSmoothedEP5Bunchi"></span><span id="_CPPv2N6Grid1D16binBunchSmoothedEP5Bunchi"></span><span id="Grid1D::binBunchSmoothed__BunchP.i"></span><span class="target" id="classGrid1D_1a2021bc5b9c79876eea05d58d4e072ff5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16binBunchSmoothedEP5Bunchi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid along any axis using a smoothing algorithm and incorporating macrosize</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along any coordinate using a smoothing algorithm and macro-size for each particle. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D18binBunchByParticleEP5Bunch">
-<span id="_CPPv3N6Grid1D18binBunchByParticleEP5Bunch"></span><span id="_CPPv2N6Grid1D18binBunchByParticleEP5Bunch"></span><span id="Grid1D::binBunchByParticle__BunchP"></span><span class="target" id="classGrid1D_1acabc44fd3c009a2f73f8581db90a5437"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D18binBunchByParticleEP5Bunch" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D18binBunchByParticleEP5Bunch"></span><span id="_CPPv2N6Grid1D18binBunchByParticleEP5Bunch"></span><span id="Grid1D::binBunchByParticle__BunchP"></span><span class="target" id="classGrid1D_1acabc44fd3c009a2f73f8581db90a5437"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D18binBunchByParticleEP5Bunch" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid giving each macroparticle unit weight</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the longitudinal coordinate giving each macroparticle an unit weight </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D18binBunchByParticleEP5Bunchi">
-<span id="_CPPv3N6Grid1D18binBunchByParticleEP5Bunchi"></span><span id="_CPPv2N6Grid1D18binBunchByParticleEP5Bunchi"></span><span id="Grid1D::binBunchByParticle__BunchP.i"></span><span class="target" id="classGrid1D_1ad3d1589e5b0394a20ed69bdb2170149e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D18binBunchByParticleEP5Bunchi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D18binBunchByParticleEP5Bunchi"></span><span id="_CPPv2N6Grid1D18binBunchByParticleEP5Bunchi"></span><span id="Grid1D::binBunchByParticle__BunchP.i"></span><span class="target" id="classGrid1D_1ad3d1589e5b0394a20ed69bdb2170149e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D18binBunchByParticleEP5Bunchi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the particular coordinate to the grid giving each macro-particle unit weight</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the particular coordinate giving each macroparticle an unit weight </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunch">
-<span id="_CPPv3N6Grid1D26binBunchSmoothedByParticleEP5Bunch"></span><span id="_CPPv2N6Grid1D26binBunchSmoothedByParticleEP5Bunch"></span><span id="Grid1D::binBunchSmoothedByParticle__BunchP"></span><span class="target" id="classGrid1D_1aee83fa41a8a7250b284300bcaa749bc7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothedByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunch" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D26binBunchSmoothedByParticleEP5Bunch"></span><span id="_CPPv2N6Grid1D26binBunchSmoothedByParticleEP5Bunch"></span><span id="Grid1D::binBunchSmoothedByParticle__BunchP"></span><span class="target" id="classGrid1D_1aee83fa41a8a7250b284300bcaa749bc7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothedByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunch" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid using a smoothing algorithm and giving each macroparticle unit weight</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the longitudinal coordinate using a smoothing algorithm and giving each macroparticle unit weight </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunchi">
-<span id="_CPPv3N6Grid1D26binBunchSmoothedByParticleEP5Bunchi"></span><span id="_CPPv2N6Grid1D26binBunchSmoothedByParticleEP5Bunchi"></span><span id="Grid1D::binBunchSmoothedByParticle__BunchP.i"></span><span class="target" id="classGrid1D_1a7e2f8caedd9a5d8989f6e3ff6f3d3c69"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothedByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunchi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D26binBunchSmoothedByParticleEP5Bunchi"></span><span id="_CPPv2N6Grid1D26binBunchSmoothedByParticleEP5Bunchi"></span><span id="Grid1D::binBunchSmoothedByParticle__BunchP.i"></span><span class="target" id="classGrid1D_1a7e2f8caedd9a5d8989f6e3ff6f3d3c69"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothedByParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axis_ind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunchi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the particular coordinate to the grid using a smoothing algorithm and giving each macroparticle unit weight</p>
 <p>Bins the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> along the particular coordinate using a smoothing algorithm and giving each macroparticle unit weight </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D14binBunchMomentEiP5BunchPd">
-<span id="_CPPv3N6Grid1D14binBunchMomentEiP5BunchPd"></span><span id="_CPPv2N6Grid1D14binBunchMomentEiP5BunchPd"></span><span id="Grid1D::binBunchMoment__i.BunchP.doubleP"></span><span class="target" id="classGrid1D_1a20632ce826aea01422f307777abdecfd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchMoment</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">propindex</span></span>, <a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D14binBunchMomentEiP5BunchPd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D14binBunchMomentEiP5BunchPd"></span><span id="_CPPv2N6Grid1D14binBunchMomentEiP5BunchPd"></span><span id="Grid1D::binBunchMoment__i.BunchP.doubleP"></span><span class="target" id="classGrid1D_1a20632ce826aea01422f307777abdecfd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchMoment</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">propindex</span></span>, <a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D14binBunchMomentEiP5BunchPd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins moment of the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid giving each macroparticle unit weight</p>
 <p>Bins property of the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid giving each macroparticle unit weight </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D22binBunchSmoothedMomentEiP5BunchPd">
-<span id="_CPPv3N6Grid1D22binBunchSmoothedMomentEiP5BunchPd"></span><span id="_CPPv2N6Grid1D22binBunchSmoothedMomentEiP5BunchPd"></span><span id="Grid1D::binBunchSmoothedMoment__i.BunchP.doubleP"></span><span class="target" id="classGrid1D_1a0ad8570ea0dc53eb3c873f4f1bb77c02"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothedMoment</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">propindex</span></span>, <a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D22binBunchSmoothedMomentEiP5BunchPd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D22binBunchSmoothedMomentEiP5BunchPd"></span><span id="_CPPv2N6Grid1D22binBunchSmoothedMomentEiP5BunchPd"></span><span id="Grid1D::binBunchSmoothedMoment__i.BunchP.doubleP"></span><span class="target" id="classGrid1D_1a0ad8570ea0dc53eb3c873f4f1bb77c02"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binBunchSmoothedMoment</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">propindex</span></span>, <a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D22binBunchSmoothedMomentEiP5BunchPd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins moment of the <a class="reference internal" href="../classBunch/#classBunch"><span class="std std-ref">Bunch</span></a> to the grid using a smoothing algorithm and giving each macroparticle unit weight </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D8binValueEdd">
-<span id="_CPPv3N6Grid1D8binValueEdd"></span><span id="_CPPv2N6Grid1D8binValueEdd"></span><span id="Grid1D::binValue__double.double"></span><span class="target" id="classGrid1D_1ac0eb6ea9da519b18d8b7ad79afef0014"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8binValueEdd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D8binValueEdd"></span><span id="_CPPv2N6Grid1D8binValueEdd"></span><span id="Grid1D::binValue__double.double"></span><span class="target" id="classGrid1D_1ac0eb6ea9da519b18d8b7ad79afef0014"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D8binValueEdd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins a value to the grid </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D16binValueSmoothedEdd">
-<span id="_CPPv3N6Grid1D16binValueSmoothedEdd"></span><span id="_CPPv2N6Grid1D16binValueSmoothedEdd"></span><span id="Grid1D::binValueSmoothed__double.double"></span><span class="target" id="classGrid1D_1a2b1292e3ab24dac10530977e4dd06e09"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binValueSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16binValueSmoothedEdd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D16binValueSmoothedEdd"></span><span id="_CPPv2N6Grid1D16binValueSmoothedEdd"></span><span id="Grid1D::binValueSmoothed__double.double"></span><span class="target" id="classGrid1D_1a2b1292e3ab24dac10530977e4dd06e09"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binValueSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D16binValueSmoothedEdd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins a value to the grid with smoothing </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D9binMomentEddPd">
-<span id="_CPPv3N6Grid1D9binMomentEddPd"></span><span id="_CPPv2N6Grid1D9binMomentEddPd"></span><span id="Grid1D::binMoment__double.double.doubleP"></span><span class="target" id="classGrid1D_1a53d8890726bf4fdc2e6a998c887b5cee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binMoment</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D9binMomentEddPd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D9binMomentEddPd"></span><span id="_CPPv2N6Grid1D9binMomentEddPd"></span><span id="Grid1D::binMoment__double.double.doubleP"></span><span class="target" id="classGrid1D_1a53d8890726bf4fdc2e6a998c887b5cee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binMoment</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D9binMomentEddPd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins a moment to the grid </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D17binMomentSmoothedEddPd">
-<span id="_CPPv3N6Grid1D17binMomentSmoothedEddPd"></span><span id="_CPPv2N6Grid1D17binMomentSmoothedEddPd"></span><span id="Grid1D::binMomentSmoothed__double.double.doubleP"></span><span class="target" id="classGrid1D_1a6019fe6bad31466557684b8761eeabaa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binMomentSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D17binMomentSmoothedEddPd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D17binMomentSmoothedEddPd"></span><span id="_CPPv2N6Grid1D17binMomentSmoothedEddPd"></span><span id="Grid1D::binMomentSmoothed__double.double.doubleP"></span><span class="target" id="classGrid1D_1a6019fe6bad31466557684b8761eeabaa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binMomentSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Moment</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D17binMomentSmoothedEddPd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Bins a moment to the grid with smoothing </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D12calcGradientEdRd">
-<span id="_CPPv3N6Grid1D12calcGradientEdRd"></span><span id="_CPPv2N6Grid1D12calcGradientEdRd"></span><span id="Grid1D::calcGradient__double.doubleR"></span><span class="target" id="classGrid1D_1afb2f42650d23ce60d2c5229e35c212cf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcGradient</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ez</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D12calcGradientEdRd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D12calcGradientEdRd"></span><span id="_CPPv2N6Grid1D12calcGradientEdRd"></span><span id="Grid1D::calcGradient__double.doubleR"></span><span class="target" id="classGrid1D_1afb2f42650d23ce60d2c5229e35c212cf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcGradient</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ez</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D12calcGradientEdRd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Calculates gradient at a position (z) </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D20calcGradientSmoothedEdRd">
-<span id="_CPPv3N6Grid1D20calcGradientSmoothedEdRd"></span><span id="_CPPv2N6Grid1D20calcGradientSmoothedEdRd"></span><span id="Grid1D::calcGradientSmoothed__double.doubleR"></span><span class="target" id="classGrid1D_1a4568d2ebd4b96e0690f13f9c6693cbca"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcGradientSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ez</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D20calcGradientSmoothedEdRd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D20calcGradientSmoothedEdRd"></span><span id="_CPPv2N6Grid1D20calcGradientSmoothedEdRd"></span><span id="Grid1D::calcGradientSmoothed__double.doubleR"></span><span class="target" id="classGrid1D_1a4568d2ebd4b96e0690f13f9c6693cbca"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcGradientSmoothed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ez</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D20calcGradientSmoothedEdRd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Calculates smoothed gradient at a position (z) </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm">
-<span id="_CPPv3N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm"></span><span id="_CPPv2N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm"></span><span id="Grid1D::synchronizeMPI__pyORBIT_MPI_CommP"></span><span class="target" id="classGrid1D_1ae63703cb1cc661ad2836ccc5cd45171f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">synchronizeMPI</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../structpyORBIT__MPI__Comm/#_CPPv416pyORBIT_MPI_Comm" title="pyORBIT_MPI_Comm"><span class="n"><span class="pre">pyORBIT_MPI_Comm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">comm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm"></span><span id="_CPPv2N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm"></span><span id="Grid1D::synchronizeMPI__pyORBIT_MPI_CommP"></span><span class="target" id="classGrid1D_1ae63703cb1cc661ad2836ccc5cd45171f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">synchronizeMPI</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../structpyORBIT__MPI__Comm/#_CPPv416pyORBIT_MPI_Comm" title="pyORBIT_MPI_Comm"><span class="n"><span class="pre">pyORBIT_MPI_Comm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">comm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm" title="Link to this definition">#</a><br /></dt>
 <dd><p>synchronizeMPI </p>
 </dd></dl>
 
@@ -1710,30 +1734,30 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D4arr_E">
-<span id="_CPPv3N6Grid1D4arr_E"></span><span id="_CPPv2N6Grid1D4arr_E"></span><span id="Grid1D::arr___doubleP"></span><span class="target" id="classGrid1D_1aac09a1be2919b0f3b7ffd15e114c4b68"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">arr_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D4arr_E" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D4arr_E"></span><span id="_CPPv2N6Grid1D4arr_E"></span><span id="Grid1D::arr___doubleP"></span><span class="target" id="classGrid1D_1aac09a1be2919b0f3b7ffd15e114c4b68"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">arr_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D4arr_E" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D6zSize_E">
-<span id="_CPPv3N6Grid1D6zSize_E"></span><span id="_CPPv2N6Grid1D6zSize_E"></span><span id="Grid1D::zSize___i"></span><span class="target" id="classGrid1D_1a17dc2af8714ce0e15b10a7d411ed52e5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zSize_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D6zSize_E" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D6zSize_E"></span><span id="_CPPv2N6Grid1D6zSize_E"></span><span id="Grid1D::zSize___i"></span><span class="target" id="classGrid1D_1a17dc2af8714ce0e15b10a7d411ed52e5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zSize_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D6zSize_E" title="Link to this definition">#</a><br /></dt>
 <dd><p>Grid size </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D3dz_E">
-<span id="_CPPv3N6Grid1D3dz_E"></span><span id="_CPPv2N6Grid1D3dz_E"></span><span id="Grid1D::dz___double"></span><span class="target" id="classGrid1D_1a5966e4f812d229d2707028ed9ad77df6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dz_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D3dz_E" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D3dz_E"></span><span id="_CPPv2N6Grid1D3dz_E"></span><span id="Grid1D::dz___double"></span><span class="target" id="classGrid1D_1a5966e4f812d229d2707028ed9ad77df6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dz_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D3dz_E" title="Link to this definition">#</a><br /></dt>
 <dd><p>Grid steps </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D5zMin_E">
-<span id="_CPPv3N6Grid1D5zMin_E"></span><span id="_CPPv2N6Grid1D5zMin_E"></span><span id="Grid1D::zMin___double"></span><span class="target" id="classGrid1D_1a6d42ec46931ef5a5ea47272a7cb26621"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zMin_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D5zMin_E" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D5zMin_E"></span><span id="_CPPv2N6Grid1D5zMin_E"></span><span id="Grid1D::zMin___double"></span><span class="target" id="classGrid1D_1a6d42ec46931ef5a5ea47272a7cb26621"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zMin_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D5zMin_E" title="Link to this definition">#</a><br /></dt>
 <dd><p>grid limits </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6Grid1D5zMax_E">
-<span id="_CPPv3N6Grid1D5zMax_E"></span><span id="_CPPv2N6Grid1D5zMax_E"></span><span id="Grid1D::zMax___double"></span><span class="target" id="classGrid1D_1a2f1c2b345e5b5092753f0d529d060fe9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zMax_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D5zMax_E" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N6Grid1D5zMax_E"></span><span id="_CPPv2N6Grid1D5zMax_E"></span><span id="Grid1D::zMax___double"></span><span class="target" id="classGrid1D_1a2f1c2b345e5b5092753f0d529d060fe9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zMax_</span></span></span><a class="headerlink" href="#_CPPv4N6Grid1D5zMax_E" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -1747,11 +1771,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../classFrequency__Cav/"
@@ -1771,33 +1794,81 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv46Grid1D"><code class="docutils literal notranslate"><span class="pre">Grid1D</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D6Grid1DEi"><code class="docutils literal notranslate"><span class="pre">Grid1D()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D6Grid1DEid"><code class="docutils literal notranslate"><span class="pre">Grid1D()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D6Grid1DEidd"><code class="docutils literal notranslate"><span class="pre">Grid1D()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1DD0Ev"><code class="docutils literal notranslate"><span class="pre">~Grid1D()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8setGridZEdd"><code class="docutils literal notranslate"><span class="pre">setGridZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D6getArrEv"><code class="docutils literal notranslate"><span class="pre">getArr()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D7getMinZEv"><code class="docutils literal notranslate"><span class="pre">getMinZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D7getMaxZEv"><code class="docutils literal notranslate"><span class="pre">getMaxZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8getSizeZEv"><code class="docutils literal notranslate"><span class="pre">getSizeZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D6getSumEv"><code class="docutils literal notranslate"><span class="pre">getSum()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8getStepZEv"><code class="docutils literal notranslate"><span class="pre">getStepZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8getGridZEi"><code class="docutils literal notranslate"><span class="pre">getGridZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8isInsideEd"><code class="docutils literal notranslate"><span class="pre">isInside()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D7setZeroEv"><code class="docutils literal notranslate"><span class="pre">setZero()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8multiplyEd"><code class="docutils literal notranslate"><span class="pre">multiply()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8setValueEdi"><code class="docutils literal notranslate"><span class="pre">setValue()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D14getValueOnGridEi"><code class="docutils literal notranslate"><span class="pre">getValueOnGrid()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8getValueEd"><code class="docutils literal notranslate"><span class="pre">getValue()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D16getValueSmoothedEd"><code class="docutils literal notranslate"><span class="pre">getValueSmoothed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8binBunchEP5Bunch"><code class="docutils literal notranslate"><span class="pre">binBunch()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8binBunchEP5Bunchi"><code class="docutils literal notranslate"><span class="pre">binBunch()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D16binBunchSmoothedEP5Bunch"><code class="docutils literal notranslate"><span class="pre">binBunchSmoothed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D16binBunchSmoothedEP5Bunchi"><code class="docutils literal notranslate"><span class="pre">binBunchSmoothed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D18binBunchByParticleEP5Bunch"><code class="docutils literal notranslate"><span class="pre">binBunchByParticle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D18binBunchByParticleEP5Bunchi"><code class="docutils literal notranslate"><span class="pre">binBunchByParticle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunch"><code class="docutils literal notranslate"><span class="pre">binBunchSmoothedByParticle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D26binBunchSmoothedByParticleEP5Bunchi"><code class="docutils literal notranslate"><span class="pre">binBunchSmoothedByParticle()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D14binBunchMomentEiP5BunchPd"><code class="docutils literal notranslate"><span class="pre">binBunchMoment()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D22binBunchSmoothedMomentEiP5BunchPd"><code class="docutils literal notranslate"><span class="pre">binBunchSmoothedMoment()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D8binValueEdd"><code class="docutils literal notranslate"><span class="pre">binValue()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D16binValueSmoothedEdd"><code class="docutils literal notranslate"><span class="pre">binValueSmoothed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D9binMomentEddPd"><code class="docutils literal notranslate"><span class="pre">binMoment()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D17binMomentSmoothedEddPd"><code class="docutils literal notranslate"><span class="pre">binMomentSmoothed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D12calcGradientEdRd"><code class="docutils literal notranslate"><span class="pre">calcGradient()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D20calcGradientSmoothedEdRd"><code class="docutils literal notranslate"><span class="pre">calcGradientSmoothed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D14synchronizeMPIEP16pyORBIT_MPI_Comm"><code class="docutils literal notranslate"><span class="pre">synchronizeMPI()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D4arr_E"><code class="docutils literal notranslate"><span class="pre">arr_</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D6zSize_E"><code class="docutils literal notranslate"><span class="pre">zSize_</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D3dz_E"><code class="docutils literal notranslate"><span class="pre">dz_</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D5zMin_E"><code class="docutils literal notranslate"><span class="pre">zMin_</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N6Grid1D5zMax_E"><code class="docutils literal notranslate"><span class="pre">zMax_</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../_sources/reference/classGrid1D.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1818,8 +1889,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1827,6 +1898,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2025, PyORBIT Collaboration.
@@ -1836,19 +1908,22 @@ document.write(`
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
-    <br/>
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
   </p>
 </div>
       
     </div>
   
   
+  
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
 </p></div>
       
     </div>

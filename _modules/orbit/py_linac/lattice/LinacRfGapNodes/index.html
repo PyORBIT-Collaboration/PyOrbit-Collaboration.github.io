@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../../../../" >
 
   <head>
     <meta charset="utf-8" />
@@ -14,66 +12,71 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
   
-  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/collapsible-lists/css/tree_view.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
-    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../../_static/copybutton.js"></script>
-    <script src="../../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../../../../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../../../../../_static/documentation_options.js?v=9c59d525"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../../../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/orbit/py_linac/lattice/LinacRfGapNodes';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../../../../genindex/" />
     <link rel="search" title="Search" href="../../../../../search/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../../../_static/searchtools.js"></script>
+    <script src="../../../../../_static/language_data.js"></script>
+    <script src="../../../../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../../../search/"
       method="get">
@@ -81,7 +84,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -89,21 +91,31 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../../../">
+  
   
   
   
@@ -115,47 +127,41 @@
     
   </div>
   
-  
   <div class="col-lg-9 navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reference/py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -166,28 +172,31 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -198,8 +207,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -209,25 +217,30 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -236,44 +249,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../reference/py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reference/py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../reference/cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -282,17 +293,21 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -303,8 +318,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -314,30 +328,33 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../../../../" class="nav-link" aria-label="Home">
@@ -347,7 +364,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../../../../" class="nav-link">Module code</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac.lattice.LinacRfGapNodes</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">orbit.py_linac.lattice.LinacRfGapNodes</span></li>
   </ul>
 </nav>
 </div>
@@ -362,7 +379,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <h1>Source code for orbit.py_linac.lattice.LinacRfGapNodes</h1><div class="highlight"><pre>
 <span></span><span class="sd">"""</span>
@@ -404,7 +421,9 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.bunch</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bunch</span>
 
 
-<div class="viewcode-block" id="BaseRF_Gap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BaseRF_Gap</span><span class="p">(</span><span class="n">AbstractRF_Gap</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseRF_Gap">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BaseRF_Gap</span><span class="p">(</span><span class="n">AbstractRF_Gap</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The simplest RF gap representation. The only E0*T*L or E0*L and TTFs define</span>
 <span class="sd">    all effects of the node. By default the Matrix RF Gap model is used.</span>
@@ -452,7 +471,9 @@ document.write(`
         <span class="c1"># self.cppGapModel = BaseRfGap()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span> <span class="o">=</span> <span class="n">RfGapTTF</span><span class="p">()</span>
 
-<div class="viewcode-block" id="BaseRF_Gap.setLinacTracker"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setLinacTracker">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseRF_Gap.setLinacTracker">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setLinacTracker">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method will switch RF gap model to slower one where transformations</span>
 <span class="sd">        coefficients are calculated for each particle in the bunch.</span>
@@ -469,21 +490,30 @@ document.write(`
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="p">,</span> <span class="n">RfGapTTF</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="p">,</span> <span class="n">RfGapTTF_slow</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span> <span class="o">=</span> <span class="n">RfGapTTF</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.setnParts"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setnParts">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setnParts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.setnParts">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setnParts">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setnParts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Sets the number of body parts of the node.</span>
 <span class="sd">        For the RF gap with zero length it will be only 1.</span>
 <span class="sd">        """</span>
         <span class="n">BaseLinacNode</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.setCppGapModel"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setCppGapModel">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setCppGapModel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cppGapModel</span><span class="o">=</span><span class="n">MatrixRfGap</span><span class="p">()):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.setCppGapModel">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setCppGapModel">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setCppGapModel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cppGapModel</span><span class="o">=</span><span class="n">MatrixRfGap</span><span class="p">()):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method will set the fast c++ simple model for the RF Gap.</span>
 <span class="sd">        By default it is Matrix RF Gap model which is a linear transport matrix.</span>
 <span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span> <span class="o">=</span> <span class="n">cppGapModel</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.initialize"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.initialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.initialize">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.initialize">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The BaseRF_Gap  class implementation</span>
 <span class="sd">        of the AccNode class initialize() method.</span>
@@ -504,62 +534,92 @@ document.write(`
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.isFirstRFGap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.isFirstRFGap">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isFirstRFGap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.isFirstRFGap">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.isFirstRFGap">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">isFirstRFGap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns True if it is the first gap in RF cavity.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__isFirstGap</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.setAsFirstRFGap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setAsFirstRFGap">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setAsFirstRFGap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">isFirst</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.setAsFirstRFGap">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setAsFirstRFGap">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setAsFirstRFGap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">isFirst</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets if it is the first gap in RF cavity.</span>
 <span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__isFirstGap</span> <span class="o">=</span> <span class="n">isFirst</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.setRF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setRF_Cavity">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rf_cav</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.setRF_Cavity">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setRF_Cavity">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rf_cav</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the parent RF Cavity.</span>
 <span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addParam</span><span class="p">(</span><span class="s2">"rfCavity"</span><span class="p">,</span> <span class="n">rf_cav</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.getRF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getRF_Cavity">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.getRF_Cavity">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getRF_Cavity">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the parent RF Cavity.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"rfCavity"</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.setGapPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setGapPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setGapPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gap_phase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.setGapPhase">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setGapPhase">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setGapPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gap_phase</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the rf gap phase.</span>
 <span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"gap_phase"</span><span class="p">,</span> <span class="n">gap_phase</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.getGapPhase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getGapPhase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getGapPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.getGapPhase">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getGapPhase">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getGapPhase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the rf gap phase.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"gap_phase"</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.getTTF_Polynimials"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getTTF_Polynimials">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getTTF_Polynimials</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.getTTF_Polynimials">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getTTF_Polynimials">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getTTF_Polynimials</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the T,S,Tp,Sp, polynomials in the TTF model.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polyT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyTp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polySp</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.getBetaMinMax"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getBetaMinMax">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getBetaMinMax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.getBetaMinMax">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.getBetaMinMax">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getBetaMinMax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns beta min and max for TTF model polynomials.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"beta_min"</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"beta_max"</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.setBetaMinMax"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setBetaMinMax">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setBetaMinMax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">beta_min</span><span class="p">,</span> <span class="n">beta_max</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.setBetaMinMax">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.setBetaMinMax">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setBetaMinMax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">beta_min</span><span class="p">,</span> <span class="n">beta_max</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets beta min and max for TTF model polynomials.</span>
 <span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"beta_min"</span><span class="p">,</span> <span class="n">beta_min</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setParam</span><span class="p">(</span><span class="s2">"beta_max"</span><span class="p">,</span> <span class="n">beta_max</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseRF_Gap.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BaseRF_Gap.track">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.track">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The simplest RF gap class implementation of</span>
 <span class="sd">        the AccNode class track(probe) method.</span>
@@ -615,10 +675,13 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0TL</span> <span class="o">*</span> <span class="n">rf_ampl</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ttf_track_bunch__</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0L</span> <span class="o">*</span> <span class="n">rf_ampl</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span></div>
+
         <span class="c1"># print "debug delta_time in deg=",frequency*(arrival_time - designArrivalTime)*380.</span>
         <span class="c1"># print "debug RF =",self.getName()," E0TL=",E0TL," phase=",(phase*180./math.pi - 180.)," eKin[MeV]=",bunch.getSyncParticle().kinEnergy()*1.0e+3</span>
 
-<div class="viewcode-block" id="BaseRF_Gap.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseRF_Gap.trackDesign">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.trackDesign">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The RF First Gap node setups the design time of passage</span>
 <span class="sd">        of the bunch through this node.</span>
@@ -658,10 +721,13 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0TL</span> <span class="o">*</span> <span class="n">rf_ampl</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ttf_track_bunch__</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0L</span> <span class="o">*</span> <span class="n">rf_ampl</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span></div>
+
         <span class="c1"># eKin_out = bunch.getSyncParticle().kinEnergy()</span>
         <span class="c1"># print "debug name=",self.getName()," phase=",(phase*180./math.pi-180.)," Ein=",eKin_in*1000.,"  Eout=",eKin_out*1000.," dE=",(eKin_out-eKin_in)*1000.</span>
 
-<div class="viewcode-block" id="BaseRF_Gap.ttf_track_bunch__"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.ttf_track_bunch__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">ttf_track_bunch__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0L</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseRF_Gap.ttf_track_bunch__">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.BaseRF_Gap/#orbit.py_linac.lattice.BaseRF_Gap.ttf_track_bunch__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ttf_track_bunch__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0L</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Tracks the bunch through the TTF thin gap model. This private method was</span>
 <span class="sd">        introduced to to check the beta TTF limits in the polynomial representation</span>
@@ -695,7 +761,9 @@ document.write(`
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">"beta max="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">beta_max</span><span class="p">)</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
             <span class="n">orbitFinalize</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0L</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyTp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polySp</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span><span class="o">.</span><span class="n">trackBunch</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">E0L</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polyTp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polySp</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># -----------------------------------------------------------------------</span>
@@ -705,7 +773,9 @@ document.write(`
 <span class="c1"># ------------------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="RF_AxisFieldsStore"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">RF_AxisFieldsStore</span><span class="p">:</span>
+<div class="viewcode-block" id="RF_AxisFieldsStore">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">RF_AxisFieldsStore</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The dictionary with the axis field Functions</span>
@@ -719,7 +789,9 @@ document.write(`
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="RF_AxisFieldsStore.addAxisFieldsForAccSeq"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.addAxisFieldsForAccSeq">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="RF_AxisFieldsStore.addAxisFieldsForAccSeq">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.addAxisFieldsForAccSeq">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">addAxisFieldsForAccSeq</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">accLattice</span><span class="p">,</span> <span class="n">accSeqNamesList</span><span class="p">,</span> <span class="n">dir_location</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method add to the store the axis RF fields of all RF gap nodes</span>
@@ -735,7 +807,10 @@ document.write(`
                 <span class="k">for</span> <span class="n">rf_gap</span> <span class="ow">in</span> <span class="n">rf_gaps</span><span class="p">:</span>
                     <span class="bp">cls</span><span class="o">.</span><span class="n">addAxisField</span><span class="p">(</span><span class="n">rf_gap</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"EzFile"</span><span class="p">),</span> <span class="n">dir_location</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="RF_AxisFieldsStore.addAxisField"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.addAxisField">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="RF_AxisFieldsStore.addAxisField">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.addAxisField">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">addAxisField</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fl_name</span><span class="p">,</span> <span class="n">dir_location</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method add to the store the axis RF field for the RF gap node.</span>
@@ -773,7 +848,10 @@ document.write(`
         <span class="bp">cls</span><span class="o">.</span><span class="n">static_axis_field_dict</span><span class="p">[</span><span class="n">fl_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">function</span>
         <span class="k">return</span> <span class="n">function</span></div>
 
-<div class="viewcode-block" id="RF_AxisFieldsStore.getAxisFieldFunction"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.getAxisFieldFunction">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="RF_AxisFieldsStore.getAxisFieldFunction">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.getAxisFieldFunction">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">getAxisFieldFunction</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fl_name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method returns the Function with the RF axis field for a particular</span>
@@ -785,16 +863,23 @@ document.write(`
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="RF_AxisFieldsStore.getSize"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.getSize">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="RF_AxisFieldsStore.getSize">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore.getSize">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">getSize</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method returns the number of Functions with the RF axis fields in this</span>
 <span class="sd">        store.</span>
 <span class="sd">        """</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">static_axis_field_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div></div>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">static_axis_field_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+</div>
 
 
-<div class="viewcode-block" id="AxisFieldRF_Gap"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AxisFieldRF_Gap</span><span class="p">(</span><span class="n">AbstractRF_Gap</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AxisFieldRF_Gap</span><span class="p">(</span><span class="n">AbstractRF_Gap</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    The RF gap representation that uses the RF axis field. User have to provide the</span>
 <span class="sd">    input file with this field. This function should be normalized to the integral of 1.</span>
@@ -846,7 +931,9 @@ document.write(`
         <span class="c1"># ---- The RF gap model - three points model</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span> <span class="o">=</span> <span class="n">RfGapThreePointTTF</span><span class="p">()</span>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.setLinacTracker"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setLinacTracker">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="AxisFieldRF_Gap.setLinacTracker">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setLinacTracker">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setLinacTracker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switch</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        This method will switch RF gap model to slower one where transformations</span>
 <span class="sd">        coefficients are calculated for each particle in the bunch.</span>
@@ -857,7 +944,10 @@ document.write(`
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cppGapModel</span> <span class="o">=</span> <span class="n">RfGapThreePointTTF</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.readAxisFieldFile"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.readAxisFieldFile">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">readAxisFieldFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dir_location</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">z_step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.readAxisFieldFile">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.readAxisFieldFile">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">readAxisFieldFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dir_location</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">z_step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Method. Reads the axis field from the file. User have to call this method.</span>
 <span class="sd">        There is no other source of information about the axis field.</span>
@@ -871,13 +961,19 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span> <span class="o">=</span> <span class="n">z_step</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setZ_Min_Max</span><span class="p">(</span><span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.getAxisFieldFunction"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getAxisFieldFunction">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getAxisFieldFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.getAxisFieldFunction">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getAxisFieldFunction">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getAxisFieldFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It returns the axis field function.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_func</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.setAxisFieldFunction"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setAxisFieldFunction">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setAxisFieldFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis_field_func</span><span class="p">,</span> <span class="n">z_step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.setAxisFieldFunction">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setAxisFieldFunction">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setAxisFieldFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis_field_func</span><span class="p">,</span> <span class="n">z_step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        It sets the axis field function.</span>
 <span class="sd">        """</span>
@@ -887,13 +983,19 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span> <span class="o">=</span> <span class="n">z_step</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setZ_Min_Max</span><span class="p">(</span><span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.getZ_Step"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getZ_Step">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.getZ_Step">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getZ_Step">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the longitudinal step during the tracking.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_step</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.setZ_Step"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setZ_Step">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_step</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.setZ_Step">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setZ_Step">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_step</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_func</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Class AxisFieldRF_Gap: You have to get the axis field from a file first!"</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
@@ -907,7 +1009,10 @@ document.write(`
         <span class="c1"># ---- this will set the even distribution of the lengths between parts</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setnParts</span><span class="p">(</span><span class="n">nParts</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.getZ_Min_Max"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getZ_Min_Max">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Min_Max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.getZ_Min_Max">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getZ_Min_Max">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getZ_Min_Max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the tuple (z_min,z_max) with the limits of the axis field.</span>
 <span class="sd">        These parameters define the length of the node. The center of the node</span>
@@ -915,7 +1020,10 @@ document.write(`
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_max</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.setZ_Min_Max"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setZ_Min_Max">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setZ_Min_Max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.setZ_Min_Max">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.setZ_Min_Max">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setZ_Min_Max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the actual longitudinal sizes of the node. It is used for small correction</span>
 <span class="sd">        of the length to avoid fields overlapping from neighbouring gaps.</span>
@@ -926,7 +1034,10 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">setLength</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setZ_Step</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_step</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.getEzFiled"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getEzFiled">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getEzFiled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.getEzFiled">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getEzFiled">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getEzFiled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the Ez field on the axis of the RF gap in V/m.</span>
 <span class="sd">        """</span>
@@ -936,13 +1047,19 @@ document.write(`
         <span class="n">Ez</span> <span class="o">=</span> <span class="n">E0L</span> <span class="o">*</span> <span class="n">rf_ampl</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_field_func</span><span class="o">.</span><span class="n">getY</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Ez</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.getRF_Cavity"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getRF_Cavity">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.getRF_Cavity">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getRF_Cavity">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getRF_Cavity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Returns the parent RF Cavity.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">getParam</span><span class="p">(</span><span class="s2">"rfCavity"</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.track"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.track">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.track">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.track">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The AxisFieldRF_Gap class implementation of</span>
 <span class="sd">        the AccNode class track(probe) method.</span>
@@ -1032,6 +1149,7 @@ document.write(`
         <span class="c1"># ---- Calculate the phase at the center</span>
         <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_phase_gap_func_analysis</span><span class="p">()</span></div>
+
             
     <span class="k">def</span><span class="w"> </span><span class="nf">_phase_gap_func_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
@@ -1055,13 +1173,18 @@ document.write(`
                 <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span><span class="o">.</span><span class="n">updatePoint</span><span class="p">(</span><span class="n">pos_ind</span><span class="p">,</span><span class="n">phase_gap</span> <span class="o">-</span> <span class="n">phase_gap_shift</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setGapPhase</span><span class="p">(</span><span class="n">phase_gap_center</span><span class="p">)</span>
         
-<div class="viewcode-block" id="AxisFieldRF_Gap.getPhaseVsPositionFuncion"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getPhaseVsPositionFuncion">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getPhaseVsPositionFuncion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AxisFieldRF_Gap.getPhaseVsPositionFuncion">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.getPhaseVsPositionFuncion">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getPhaseVsPositionFuncion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Retuns the RF gap function phase vs. postion.</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap_pos_phase_func</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.trackDesign"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.trackDesign">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.trackDesign">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.trackDesign">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">trackDesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paramsDict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The method is tracking the design synchronous particle through the RF Gap.</span>
 <span class="sd">        If the gap is a first gap in the cavity we put the arrival time as</span>
@@ -1145,12 +1268,16 @@ document.write(`
         <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="p">(</span><span class="n">nParts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_phase_gap_func_analysis</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="AxisFieldRF_Gap.calculate_first_part_phase"><a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.calculate_first_part_phase">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_first_part_phase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_in</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AxisFieldRF_Gap.calculate_first_part_phase">
+<a class="viewcode-back" href="../../../../../reference/orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap.calculate_first_part_phase">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_first_part_phase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_in</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        The privat method should be exposed to the AxisField_and_Quad_RF_Gap class</span>
 <span class="sd">        """</span>
         <span class="n">phase_start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__calculate_first_part_phase</span><span class="p">(</span><span class="n">bunch_in</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">phase_start</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__calculate_first_part_phase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bunch_in</span><span class="p">):</span>
         <span class="n">rfCavity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getRF_Cavity</span><span class="p">()</span>
@@ -1226,22 +1353,19 @@ document.write(`
         <span class="n">phase_start</span> <span class="o">+=</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="p">(</span><span class="n">phase_cavity_new</span> <span class="o">-</span> <span class="n">phase_cavity</span><span class="p">)</span>
         <span class="c1">#print ("debug phase_start=",phase_start*180./math.pi)</span>
         <span class="k">return</span> <span class="n">phase_start</span></div>
+
 </pre></div>
 
                 </article>
               
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1259,8 +1383,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../../../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1268,6 +1392,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2025, PyORBIT Collaboration.
@@ -1277,19 +1402,22 @@ document.write(`
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
-    <br/>
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
   </p>
 </div>
       
     </div>
   
   
+  
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
 </p></div>
       
     </div>

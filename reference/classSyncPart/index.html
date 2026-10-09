@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class SyncPart &#8212; PyORBIT3 v3.0.1 documentation</title>
   
@@ -15,68 +13,73 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../../_static/documentation_options.js?v=9c59d525"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/classSyncPart';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="Class MatrixGenerator" href="../classteapot__base_1_1MatrixGenerator/" />
     <link rel="prev" title="Class SynchPartRedefinitionZdE" href="../classSynchPartRedefinitionZdE/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search/"
       method="get">
@@ -84,7 +87,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -92,21 +94,31 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../">
+  
   
   
   
@@ -118,47 +130,41 @@
     
   </div>
   
-  
   <div class="col-lg-9 navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -169,28 +175,31 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -201,8 +210,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -212,29 +220,32 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -243,44 +254,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -289,17 +298,21 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -310,8 +323,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -320,7 +332,16 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button type="button" id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
@@ -639,7 +660,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../classSynchPartRedefinitionZdE/">Class SynchPartRedefinitionZdE</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Class SyncPart</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Class SyncPart</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../classteapot__base_1_1MatrixGenerator/">Class MatrixGenerator</a></li>
@@ -1406,30 +1427,33 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../" class="nav-link" aria-label="Home">
@@ -1439,7 +1463,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../cpp/" class="nav-link">C++ API Reference</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class SyncPart</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Class SyncPart</span></li>
   </ul>
 </nav>
 </div>
@@ -1454,204 +1478,204 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="class-syncpart">
-<span id="exhale-class-classsyncpart"></span><h1>Class SyncPart<a class="headerlink" href="#class-syncpart" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classsyncpart"></span><h1>Class SyncPart<a class="headerlink" href="#class-syncpart" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_SyncPart.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-syncpart-hh"><span class="std std-ref">File SyncPart.hh</span></a></p></li>
 </ul>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv48SyncPart">
-<span id="_CPPv38SyncPart"></span><span id="_CPPv28SyncPart"></span><span id="SyncPart"></span><span class="target" id="classSyncPart"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SyncPart</span></span></span><a class="headerlink" href="#_CPPv48SyncPart" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv38SyncPart"></span><span id="_CPPv28SyncPart"></span><span id="SyncPart"></span><span class="target" id="classSyncPart"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SyncPart</span></span></span><a class="headerlink" href="#_CPPv48SyncPart" title="Link to this definition">#</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPartD0Ev">
-<span id="_CPPv3N8SyncPartD0Ev"></span><span id="_CPPv2N8SyncPartD0Ev"></span><span id="SyncPart::~SyncPart"></span><span class="target" id="classSyncPart_1a6f277b4546a7aed83fdee567ccf7bec3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SyncPart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPartD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPartD0Ev"></span><span id="_CPPv2N8SyncPartD0Ev"></span><span id="SyncPart::~SyncPart"></span><span class="target" id="classSyncPart_1a6f277b4546a7aed83fdee567ccf7bec3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SyncPart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPartD0Ev" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart12setPyWrapperEP8PyObject">
-<span id="_CPPv3N8SyncPart12setPyWrapperEP8PyObject"></span><span id="_CPPv2N8SyncPart12setPyWrapperEP8PyObject"></span><span id="SyncPart::setPyWrapper__PyObjectP"></span><span class="target" id="classSyncPart_1a1b52b013b3bea860d636ef0b176912b4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPyWrapper</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">py_wrapper_In</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart12setPyWrapperEP8PyObject" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart12setPyWrapperEP8PyObject"></span><span id="_CPPv2N8SyncPart12setPyWrapperEP8PyObject"></span><span id="SyncPart::setPyWrapper__PyObjectP"></span><span class="target" id="classSyncPart_1a1b52b013b3bea860d636ef0b176912b4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPyWrapper</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">py_wrapper_In</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart12setPyWrapperEP8PyObject" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart12getPyWrapperEv">
-<span id="_CPPv3N8SyncPart12getPyWrapperEv"></span><span id="_CPPv2N8SyncPart12getPyWrapperEv"></span><span id="SyncPart::getPyWrapper"></span><span class="target" id="classSyncPart_1ae238f279443a72f80cdb82c385bb7b85"></span><span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getPyWrapper</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart12getPyWrapperEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart12getPyWrapperEv"></span><span id="_CPPv2N8SyncPart12getPyWrapperEv"></span><span id="SyncPart::getPyWrapper"></span><span class="target" id="classSyncPart_1ae238f279443a72f80cdb82c385bb7b85"></span><span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getPyWrapper</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart12getPyWrapperEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart9getEnergyEv">
-<span id="_CPPv3N8SyncPart9getEnergyEv"></span><span id="_CPPv2N8SyncPart9getEnergyEv"></span><span id="SyncPart::getEnergy"></span><span class="target" id="classSyncPart_1af3095930c635ace60be79f0237ebad6d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEnergy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart9getEnergyEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart9getEnergyEv"></span><span id="_CPPv2N8SyncPart9getEnergyEv"></span><span id="SyncPart::getEnergy"></span><span class="target" id="classSyncPart_1af3095930c635ace60be79f0237ebad6d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEnergy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart9getEnergyEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Kinetic energy in GeV </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart7getMassEv">
-<span id="_CPPv3N8SyncPart7getMassEv"></span><span id="_CPPv2N8SyncPart7getMassEv"></span><span id="SyncPart::getMass"></span><span class="target" id="classSyncPart_1acbf077d7228afc05694acc397fca95f7"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7getMassEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart7getMassEv"></span><span id="_CPPv2N8SyncPart7getMassEv"></span><span id="SyncPart::getMass"></span><span class="target" id="classSyncPart_1acbf077d7228afc05694acc397fca95f7"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7getMassEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Rest mass in GeV </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart7setTimeEd">
-<span id="_CPPv3N8SyncPart7setTimeEd"></span><span id="_CPPv2N8SyncPart7setTimeEd"></span><span id="SyncPart::setTime__double"></span><span class="target" id="classSyncPart_1a05beaafae0f22e8383d631fd24e3983d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTime</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7setTimeEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart7setTimeEd"></span><span id="_CPPv2N8SyncPart7setTimeEd"></span><span id="SyncPart::setTime__double"></span><span class="target" id="classSyncPart_1a05beaafae0f22e8383d631fd24e3983d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTime</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7setTimeEd" title="Link to this definition">#</a><br /></dt>
 <dd><p>time in seconds </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart7getTimeEv">
-<span id="_CPPv3N8SyncPart7getTimeEv"></span><span id="_CPPv2N8SyncPart7getTimeEv"></span><span id="SyncPart::getTime"></span><span class="target" id="classSyncPart_1a837c5d4d800f0f16b4d5aadc6f2f8adb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7getTimeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart7getTimeEv"></span><span id="_CPPv2N8SyncPart7getTimeEv"></span><span id="SyncPart::getTime"></span><span class="target" id="classSyncPart_1a837c5d4d800f0f16b4d5aadc6f2f8adb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7getTimeEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart6setXYZEPKd">
-<span id="_CPPv3N8SyncPart6setXYZEPKd"></span><span id="_CPPv2N8SyncPart6setXYZEPKd"></span><span id="SyncPart::setXYZ__doubleCP"></span><span class="target" id="classSyncPart_1a9859eb49f739d03dfbb4716ca8324de3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setXYZ</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">xyz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart6setXYZEPKd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart6setXYZEPKd"></span><span id="_CPPv2N8SyncPart6setXYZEPKd"></span><span id="SyncPart::setXYZ__doubleCP"></span><span class="target" id="classSyncPart_1a9859eb49f739d03dfbb4716ca8324de3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setXYZ</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">xyz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart6setXYZEPKd" title="Link to this definition">#</a><br /></dt>
 <dd><p>positions in meters </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart6setXYZEddd">
-<span id="_CPPv3N8SyncPart6setXYZEddd"></span><span id="_CPPv2N8SyncPart6setXYZEddd"></span><span id="SyncPart::setXYZ__double.double.double"></span><span class="target" id="classSyncPart_1a79b58529a1d6bb80764bbee5ae76d88c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setXYZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart6setXYZEddd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart6setXYZEddd"></span><span id="_CPPv2N8SyncPart6setXYZEddd"></span><span id="SyncPart::setXYZ__double.double.double"></span><span class="target" id="classSyncPart_1a79b58529a1d6bb80764bbee5ae76d88c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setXYZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart6setXYZEddd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart4setXEd">
-<span id="_CPPv3N8SyncPart4setXEd"></span><span id="_CPPv2N8SyncPart4setXEd"></span><span id="SyncPart::setX__double"></span><span class="target" id="classSyncPart_1a2714849a11093906c0e5b0199ed0e443"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4setXEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart4setXEd"></span><span id="_CPPv2N8SyncPart4setXEd"></span><span id="SyncPart::setX__double"></span><span class="target" id="classSyncPart_1a2714849a11093906c0e5b0199ed0e443"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4setXEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart4setYEd">
-<span id="_CPPv3N8SyncPart4setYEd"></span><span id="_CPPv2N8SyncPart4setYEd"></span><span id="SyncPart::setY__double"></span><span class="target" id="classSyncPart_1addc4a6f0ec7f37166f26c6839bfe721e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setY</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4setYEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart4setYEd"></span><span id="_CPPv2N8SyncPart4setYEd"></span><span id="SyncPart::setY__double"></span><span class="target" id="classSyncPart_1addc4a6f0ec7f37166f26c6839bfe721e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setY</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4setYEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart4setZEd">
-<span id="_CPPv3N8SyncPart4setZEd"></span><span id="_CPPv2N8SyncPart4setZEd"></span><span id="SyncPart::setZ__double"></span><span class="target" id="classSyncPart_1acdfa393b4f3e47c76324842fd62e3106"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4setZEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart4setZEd"></span><span id="_CPPv2N8SyncPart4setZEd"></span><span id="SyncPart::setZ__double"></span><span class="target" id="classSyncPart_1acdfa393b4f3e47c76324842fd62e3106"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4setZEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart4getXEv">
-<span id="_CPPv3N8SyncPart4getXEv"></span><span id="_CPPv2N8SyncPart4getXEv"></span><span id="SyncPart::getX"></span><span class="target" id="classSyncPart_1a8319a63c013375318d8e163635d728ff"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4getXEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart4getXEv"></span><span id="_CPPv2N8SyncPart4getXEv"></span><span id="SyncPart::getX"></span><span class="target" id="classSyncPart_1a8319a63c013375318d8e163635d728ff"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4getXEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart4getYEv">
-<span id="_CPPv3N8SyncPart4getYEv"></span><span id="_CPPv2N8SyncPart4getYEv"></span><span id="SyncPart::getY"></span><span class="target" id="classSyncPart_1a7782694e4b2476ddd90f24dc66463f3a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4getYEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart4getYEv"></span><span id="_CPPv2N8SyncPart4getYEv"></span><span id="SyncPart::getY"></span><span class="target" id="classSyncPart_1a7782694e4b2476ddd90f24dc66463f3a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4getYEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart4getZEv">
-<span id="_CPPv3N8SyncPart4getZEv"></span><span id="_CPPv2N8SyncPart4getZEv"></span><span id="SyncPart::getZ"></span><span class="target" id="classSyncPart_1adf9e5692cadf9ec9ba7647bb291b31f1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4getZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart4getZEv"></span><span id="_CPPv2N8SyncPart4getZEv"></span><span id="SyncPart::getZ"></span><span class="target" id="classSyncPart_1adf9e5692cadf9ec9ba7647bb291b31f1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4getZEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart7setPXYZEPKd">
-<span id="_CPPv3N8SyncPart7setPXYZEPKd"></span><span id="_CPPv2N8SyncPart7setPXYZEPKd"></span><span id="SyncPart::setPXYZ__doubleCP"></span><span class="target" id="classSyncPart_1a632a896f322519e91477762c59c5161c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPXYZ</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pxyz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7setPXYZEPKd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart7setPXYZEPKd"></span><span id="_CPPv2N8SyncPart7setPXYZEPKd"></span><span id="SyncPart::setPXYZ__doubleCP"></span><span class="target" id="classSyncPart_1a632a896f322519e91477762c59c5161c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPXYZ</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pxyz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7setPXYZEPKd" title="Link to this definition">#</a><br /></dt>
 <dd><p>momentum in GeV/c </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart7setPXYZEddd">
-<span id="_CPPv3N8SyncPart7setPXYZEddd"></span><span id="_CPPv2N8SyncPart7setPXYZEddd"></span><span id="SyncPart::setPXYZ__double.double.double"></span><span class="target" id="classSyncPart_1a00872322f11ac52157d7efc371ac5f00"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPXYZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">px</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">py</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7setPXYZEddd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart7setPXYZEddd"></span><span id="_CPPv2N8SyncPart7setPXYZEddd"></span><span id="SyncPart::setPXYZ__double.double.double"></span><span class="target" id="classSyncPart_1a00872322f11ac52157d7efc371ac5f00"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPXYZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">px</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">py</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7setPXYZEddd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart5setPXEd">
-<span id="_CPPv3N8SyncPart5setPXEd"></span><span id="_CPPv2N8SyncPart5setPXEd"></span><span id="SyncPart::setPX__double"></span><span class="target" id="classSyncPart_1aa5fe2a044df387c201a05394d0881639"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">px</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5setPXEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart5setPXEd"></span><span id="_CPPv2N8SyncPart5setPXEd"></span><span id="SyncPart::setPX__double"></span><span class="target" id="classSyncPart_1aa5fe2a044df387c201a05394d0881639"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">px</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5setPXEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart5setPYEd">
-<span id="_CPPv3N8SyncPart5setPYEd"></span><span id="_CPPv2N8SyncPart5setPYEd"></span><span id="SyncPart::setPY__double"></span><span class="target" id="classSyncPart_1a128a014d31a983101c5f28aa1a958c53"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPY</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">py</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5setPYEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart5setPYEd"></span><span id="_CPPv2N8SyncPart5setPYEd"></span><span id="SyncPart::setPY__double"></span><span class="target" id="classSyncPart_1a128a014d31a983101c5f28aa1a958c53"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPY</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">py</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5setPYEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart5setPZEd">
-<span id="_CPPv3N8SyncPart5setPZEd"></span><span id="_CPPv2N8SyncPart5setPZEd"></span><span id="SyncPart::setPZ__double"></span><span class="target" id="classSyncPart_1aa6a1c1e0d730c5b5b37646ab05742216"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5setPZEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart5setPZEd"></span><span id="_CPPv2N8SyncPart5setPZEd"></span><span id="SyncPart::setPZ__double"></span><span class="target" id="classSyncPart_1aa6a1c1e0d730c5b5b37646ab05742216"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPZ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5setPZEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11setMomentumEd">
-<span id="_CPPv3N8SyncPart11setMomentumEd"></span><span id="_CPPv2N8SyncPart11setMomentumEd"></span><span id="SyncPart::setMomentum__double"></span><span class="target" id="classSyncPart_1aecb167383310bc340a27654b30150ec2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMomentum</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11setMomentumEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11setMomentumEd"></span><span id="_CPPv2N8SyncPart11setMomentumEd"></span><span id="SyncPart::setMomentum__double"></span><span class="target" id="classSyncPart_1aecb167383310bc340a27654b30150ec2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMomentum</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11setMomentumEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart5getPXEv">
-<span id="_CPPv3N8SyncPart5getPXEv"></span><span id="_CPPv2N8SyncPart5getPXEv"></span><span id="SyncPart::getPX"></span><span class="target" id="classSyncPart_1a7008473f077ffe3fb018146883915c55"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5getPXEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart5getPXEv"></span><span id="_CPPv2N8SyncPart5getPXEv"></span><span id="SyncPart::getPX"></span><span class="target" id="classSyncPart_1a7008473f077ffe3fb018146883915c55"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5getPXEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart5getPYEv">
-<span id="_CPPv3N8SyncPart5getPYEv"></span><span id="_CPPv2N8SyncPart5getPYEv"></span><span id="SyncPart::getPY"></span><span class="target" id="classSyncPart_1ada6c9b06ac777194a6a9ede42c2d919e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5getPYEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart5getPYEv"></span><span id="_CPPv2N8SyncPart5getPYEv"></span><span id="SyncPart::getPY"></span><span class="target" id="classSyncPart_1ada6c9b06ac777194a6a9ede42c2d919e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5getPYEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart5getPZEv">
-<span id="_CPPv3N8SyncPart5getPZEv"></span><span id="_CPPv2N8SyncPart5getPZEv"></span><span id="SyncPart::getPZ"></span><span class="target" id="classSyncPart_1adbd99c353f073fd39be3bef30b85afe1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5getPZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart5getPZEv"></span><span id="_CPPv2N8SyncPart5getPZEv"></span><span id="SyncPart::getPZ"></span><span class="target" id="classSyncPart_1adbd99c353f073fd39be3bef30b85afe1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart5getPZEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11getMomentumEv">
-<span id="_CPPv3N8SyncPart11getMomentumEv"></span><span id="_CPPv2N8SyncPart11getMomentumEv"></span><span id="SyncPart::getMomentum"></span><span class="target" id="classSyncPart_1af0f11f8cc2f66f19e8477717828dcb0d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMomentum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getMomentumEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11getMomentumEv"></span><span id="_CPPv2N8SyncPart11getMomentumEv"></span><span id="SyncPart::getMomentum"></span><span class="target" id="classSyncPart_1af0f11f8cc2f66f19e8477717828dcb0d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMomentum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getMomentumEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart10setNormalXEddd">
-<span id="_CPPv3N8SyncPart10setNormalXEddd"></span><span id="_CPPv2N8SyncPart10setNormalXEddd"></span><span id="SyncPart::setNormalX__double.double.double"></span><span class="target" id="classSyncPart_1aff7bdd77bb1efca555f6baf3ba6f1288"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setNormalX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart10setNormalXEddd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart10setNormalXEddd"></span><span id="_CPPv2N8SyncPart10setNormalXEddd"></span><span id="SyncPart::setNormalX__double.double.double"></span><span class="target" id="classSyncPart_1aff7bdd77bb1efca555f6baf3ba6f1288"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setNormalX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart10setNormalXEddd" title="Link to this definition">#</a><br /></dt>
 <dd><p>normal unit vector of x-axis and y-axis </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11getNormalXXEv">
-<span id="_CPPv3N8SyncPart11getNormalXXEv"></span><span id="_CPPv2N8SyncPart11getNormalXXEv"></span><span id="SyncPart::getNormalXX"></span><span class="target" id="classSyncPart_1adf521a2c7b489d4490d12a9343eef22c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalXX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalXXEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11getNormalXXEv"></span><span id="_CPPv2N8SyncPart11getNormalXXEv"></span><span id="SyncPart::getNormalXX"></span><span class="target" id="classSyncPart_1adf521a2c7b489d4490d12a9343eef22c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalXX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalXXEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11getNormalXYEv">
-<span id="_CPPv3N8SyncPart11getNormalXYEv"></span><span id="_CPPv2N8SyncPart11getNormalXYEv"></span><span id="SyncPart::getNormalXY"></span><span class="target" id="classSyncPart_1a6e2e4ba9ee3a24af1ac54218d725f162"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalXY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalXYEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11getNormalXYEv"></span><span id="_CPPv2N8SyncPart11getNormalXYEv"></span><span id="SyncPart::getNormalXY"></span><span class="target" id="classSyncPart_1a6e2e4ba9ee3a24af1ac54218d725f162"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalXY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalXYEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11getNormalXZEv">
-<span id="_CPPv3N8SyncPart11getNormalXZEv"></span><span id="_CPPv2N8SyncPart11getNormalXZEv"></span><span id="SyncPart::getNormalXZ"></span><span class="target" id="classSyncPart_1ab45f14e17c9cd65fd972269361067e50"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalXZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalXZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11getNormalXZEv"></span><span id="_CPPv2N8SyncPart11getNormalXZEv"></span><span id="SyncPart::getNormalXZ"></span><span class="target" id="classSyncPart_1ab45f14e17c9cd65fd972269361067e50"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalXZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalXZEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11getNormalYXEv">
-<span id="_CPPv3N8SyncPart11getNormalYXEv"></span><span id="_CPPv2N8SyncPart11getNormalYXEv"></span><span id="SyncPart::getNormalYX"></span><span class="target" id="classSyncPart_1a000e84ee44bacb9e78c8c675060a4905"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalYX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalYXEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11getNormalYXEv"></span><span id="_CPPv2N8SyncPart11getNormalYXEv"></span><span id="SyncPart::getNormalYX"></span><span class="target" id="classSyncPart_1a000e84ee44bacb9e78c8c675060a4905"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalYX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalYXEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11getNormalYYEv">
-<span id="_CPPv3N8SyncPart11getNormalYYEv"></span><span id="_CPPv2N8SyncPart11getNormalYYEv"></span><span id="SyncPart::getNormalYY"></span><span class="target" id="classSyncPart_1a002f29d353b3eb12be3fe7958e4fc67e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalYY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalYYEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11getNormalYYEv"></span><span id="_CPPv2N8SyncPart11getNormalYYEv"></span><span id="SyncPart::getNormalYY"></span><span class="target" id="classSyncPart_1a002f29d353b3eb12be3fe7958e4fc67e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalYY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalYYEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart11getNormalYZEv">
-<span id="_CPPv3N8SyncPart11getNormalYZEv"></span><span id="_CPPv2N8SyncPart11getNormalYZEv"></span><span id="SyncPart::getNormalYZ"></span><span class="target" id="classSyncPart_1ad6463bb081ae3fb8e5e48c16394e53ae"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalYZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalYZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart11getNormalYZEv"></span><span id="_CPPv2N8SyncPart11getNormalYZEv"></span><span id="SyncPart::getNormalYZ"></span><span class="target" id="classSyncPart_1ad6463bb081ae3fb8e5e48c16394e53ae"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalYZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart11getNormalYZEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart7getBetaEv">
-<span id="_CPPv3N8SyncPart7getBetaEv"></span><span id="_CPPv2N8SyncPart7getBetaEv"></span><span id="SyncPart::getBeta"></span><span class="target" id="classSyncPart_1aaac92bf641ad23cd692988a52b273be5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBeta</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7getBetaEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart7getBetaEv"></span><span id="_CPPv2N8SyncPart7getBetaEv"></span><span id="SyncPart::getBeta"></span><span class="target" id="classSyncPart_1aaac92bf641ad23cd692988a52b273be5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBeta</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart7getBetaEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart8getGammaEv">
-<span id="_CPPv3N8SyncPart8getGammaEv"></span><span id="_CPPv2N8SyncPart8getGammaEv"></span><span id="SyncPart::getGamma"></span><span class="target" id="classSyncPart_1a8429099e49cafb05b30304ad0e0aff65"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGamma</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart8getGammaEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart8getGammaEv"></span><span id="_CPPv2N8SyncPart8getGammaEv"></span><span id="SyncPart::getGamma"></span><span class="target" id="classSyncPart_1a8429099e49cafb05b30304ad0e0aff65"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGamma</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart8getGammaEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart16momentumToEnergyEd">
-<span id="_CPPv3N8SyncPart16momentumToEnergyEd"></span><span id="_CPPv2N8SyncPart16momentumToEnergyEd"></span><span id="SyncPart::momentumToEnergy__double"></span><span class="target" id="classSyncPart_1a3cb59c53146d3a6177c7133efc7d4a2c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">momentumToEnergy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart16momentumToEnergyEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart16momentumToEnergyEd"></span><span id="_CPPv2N8SyncPart16momentumToEnergyEd"></span><span id="SyncPart::momentumToEnergy__double"></span><span class="target" id="classSyncPart_1a3cb59c53146d3a6177c7133efc7d4a2c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">momentumToEnergy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart16momentumToEnergyEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart16energyToMomentumEd">
-<span id="_CPPv3N8SyncPart16energyToMomentumEd"></span><span id="_CPPv2N8SyncPart16energyToMomentumEd"></span><span id="SyncPart::energyToMomentum__double"></span><span class="target" id="classSyncPart_1a5372d85aafe28f20d861f571f08b8ad5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">energyToMomentum</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ek</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart16energyToMomentumEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart16energyToMomentumEd"></span><span id="_CPPv2N8SyncPart16energyToMomentumEd"></span><span id="SyncPart::energyToMomentum__double"></span><span class="target" id="classSyncPart_1a5372d85aafe28f20d861f571f08b8ad5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">energyToMomentum</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ek</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart16energyToMomentumEd" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -1659,7 +1683,7 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SyncPart4initEv">
-<span id="_CPPv3N8SyncPart4initEv"></span><span id="_CPPv2N8SyncPart4initEv"></span><span id="SyncPart::init"></span><span class="target" id="classSyncPart_1ac114a6b9b7b0c7d6be95bd5f99f872b4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4initEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N8SyncPart4initEv"></span><span id="_CPPv2N8SyncPart4initEv"></span><span id="SyncPart::init"></span><span class="target" id="classSyncPart_1ac114a6b9b7b0c7d6be95bd5f99f872b4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SyncPart4initEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -1673,11 +1697,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../classSynchPartRedefinitionZdE/"
@@ -1697,29 +1720,73 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv48SyncPart"><code class="docutils literal notranslate"><span class="pre">SyncPart</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPartD0Ev"><code class="docutils literal notranslate"><span class="pre">~SyncPart()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart12setPyWrapperEP8PyObject"><code class="docutils literal notranslate"><span class="pre">setPyWrapper()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart12getPyWrapperEv"><code class="docutils literal notranslate"><span class="pre">getPyWrapper()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart9getEnergyEv"><code class="docutils literal notranslate"><span class="pre">getEnergy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart7getMassEv"><code class="docutils literal notranslate"><span class="pre">getMass()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart7setTimeEd"><code class="docutils literal notranslate"><span class="pre">setTime()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart7getTimeEv"><code class="docutils literal notranslate"><span class="pre">getTime()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart6setXYZEPKd"><code class="docutils literal notranslate"><span class="pre">setXYZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart6setXYZEddd"><code class="docutils literal notranslate"><span class="pre">setXYZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart4setXEd"><code class="docutils literal notranslate"><span class="pre">setX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart4setYEd"><code class="docutils literal notranslate"><span class="pre">setY()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart4setZEd"><code class="docutils literal notranslate"><span class="pre">setZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart4getXEv"><code class="docutils literal notranslate"><span class="pre">getX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart4getYEv"><code class="docutils literal notranslate"><span class="pre">getY()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart4getZEv"><code class="docutils literal notranslate"><span class="pre">getZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart7setPXYZEPKd"><code class="docutils literal notranslate"><span class="pre">setPXYZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart7setPXYZEddd"><code class="docutils literal notranslate"><span class="pre">setPXYZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart5setPXEd"><code class="docutils literal notranslate"><span class="pre">setPX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart5setPYEd"><code class="docutils literal notranslate"><span class="pre">setPY()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart5setPZEd"><code class="docutils literal notranslate"><span class="pre">setPZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11setMomentumEd"><code class="docutils literal notranslate"><span class="pre">setMomentum()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart5getPXEv"><code class="docutils literal notranslate"><span class="pre">getPX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart5getPYEv"><code class="docutils literal notranslate"><span class="pre">getPY()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart5getPZEv"><code class="docutils literal notranslate"><span class="pre">getPZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11getMomentumEv"><code class="docutils literal notranslate"><span class="pre">getMomentum()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart10setNormalXEddd"><code class="docutils literal notranslate"><span class="pre">setNormalX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11getNormalXXEv"><code class="docutils literal notranslate"><span class="pre">getNormalXX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11getNormalXYEv"><code class="docutils literal notranslate"><span class="pre">getNormalXY()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11getNormalXZEv"><code class="docutils literal notranslate"><span class="pre">getNormalXZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11getNormalYXEv"><code class="docutils literal notranslate"><span class="pre">getNormalYX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11getNormalYYEv"><code class="docutils literal notranslate"><span class="pre">getNormalYY()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart11getNormalYZEv"><code class="docutils literal notranslate"><span class="pre">getNormalYZ()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart7getBetaEv"><code class="docutils literal notranslate"><span class="pre">getBeta()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart8getGammaEv"><code class="docutils literal notranslate"><span class="pre">getGamma()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart16momentumToEnergyEd"><code class="docutils literal notranslate"><span class="pre">momentumToEnergy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart16energyToMomentumEd"><code class="docutils literal notranslate"><span class="pre">energyToMomentum()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N8SyncPart4initEv"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../_sources/reference/classSyncPart.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1740,8 +1807,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1749,6 +1816,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2025, PyORBIT Collaboration.
@@ -1758,19 +1826,22 @@ document.write(`
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
-    <br/>
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
   </p>
 </div>
       
     </div>
   
   
+  
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
 </p></div>
       
     </div>

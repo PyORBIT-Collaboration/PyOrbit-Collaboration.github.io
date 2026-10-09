@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>orbit.py_linac &#8212; PyORBIT3 v3.0.1 documentation</title>
   
@@ -15,68 +13,73 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../../_static/documentation_options.js?v=9c59d525"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/orbit.py_linac';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="AccErrorNode" href="../orbit.py_linac.errors.AccErrorNode/" />
     <link rel="prev" title="Field_Parser3D" href="../orbit.parsers.Field_Parser3D/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search/"
       method="get">
@@ -84,7 +87,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -92,21 +94,31 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../">
+  
   
   
   
@@ -118,47 +130,41 @@
     
   </div>
   
-  
   <div class="col-lg-9 navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -169,28 +175,31 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -201,8 +210,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -212,29 +220,32 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -243,44 +254,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -289,17 +298,21 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -310,8 +323,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -320,15 +332,24 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button type="button" id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.aperture/">orbit.aperture</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.aperture/">orbit.aperture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.aperture.Aperture/">Aperture</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.bumps/">orbit.bumps</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.bumps/">orbit.bumps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bumps.addTeapotBumpNode/">addTeapotBumpNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bumps.TeapotSimpleBumpNode/">TeapotSimpleBumpNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bumps.TDTeapotSimpleBumpNode/">TDTeapotSimpleBumpNode</a></li>
@@ -336,8 +357,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bumps.close_orbit_bumps/">close_orbit_bumps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bumps.TDsimpleBump/">TDsimpleBump</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.bunch_generators/">orbit.bunch_generators</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.bunch_generators/">orbit.bunch_generators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_generators.TwissContainer/">TwissContainer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_generators.TwissAnalysis/">TwissAnalysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_generators.GaussDist1D/">GaussDist1D</a></li>
@@ -350,8 +371,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_generators.WaterBagDist2D/">WaterBagDist2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_generators.WaterBagDist3D/">WaterBagDist3D</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.bunch_utils/">orbit.bunch_utils</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.bunch_utils/">orbit.bunch_utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.collect_bunch/">collect_bunch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.save_bunch/">save_bunch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.load_bunch/">load_bunch</a></li>
@@ -361,14 +382,14 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.FileHandler/">FileHandler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.bunch_utils.NumPyHandler/">NumPyHandler</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.collimation/">orbit.collimation</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.collimation/">orbit.collimation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.collimation.addTeapotCollimatorNode/">addTeapotCollimatorNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.collimation.TeapotCollimatorNode/">TeapotCollimatorNode</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../orbit.core/">orbit.core</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.diagnostics/">orbit.diagnostics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.diagnostics/">orbit.diagnostics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.diagnostics.addTeapotDiagnosticsNode/">addTeapotDiagnosticsNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.diagnostics.addTeapotDiagnosticsNodeAsChild/">addTeapotDiagnosticsNodeAsChild</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.diagnostics.addTeapotStatLatsNodeSet/">addTeapotStatLatsNodeSet</a></li>
@@ -384,29 +405,29 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.diagnostics.TeapotMomentsNodeSetMember/">TeapotMomentsNodeSetMember</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.diagnostics.TeapotTuneAnalysisNode/">TeapotTuneAnalysisNode</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.errors/">orbit.errors</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.errors/">orbit.errors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.errors.addErrorNode/">addErrorNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.errors.addErrorNodeAsChild/">addErrorNodeAsChild</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.errors.addErrorNodeAsChild_I/">addErrorNodeAsChild_I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.errors.addErrorNodeAsChild_F/">addErrorNodeAsChild_F</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.fieldtracker/">orbit.fieldtracker</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.fieldtracker/">orbit.fieldtracker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.fieldtracker.FieldTracker/">FieldTracker</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.foils/">orbit.foils</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.foils/">orbit.foils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.foils.addTeapotFoilNode/">addTeapotFoilNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.foils.TeapotFoilNode/">TeapotFoilNode</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.impedances/">orbit.impedances</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.impedances/">orbit.impedances</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.impedances.addImpedanceNode/">addImpedanceNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.impedances.addImpedanceNodeAsChild/">addImpedanceNodeAsChild</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.injection/">orbit.injection</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.injection/">orbit.injection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.injection.addTeapotInjectionNode/">addTeapotInjectionNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.injection.TeapotInjectionNode/">TeapotInjectionNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.injection.InjectParts/">InjectParts</a></li>
@@ -419,8 +440,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.injection.SNSESpreadDistPaint/">SNSESpreadDistPaint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.injection.ArbitraryLongDist/">ArbitraryLongDist</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.kickernodes/">orbit.kickernodes</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.kickernodes/">orbit.kickernodes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.kickernodes.addTeapotKickerNode/">addTeapotKickerNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.kickernodes.TeapotXKickerNode/">TeapotXKickerNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.kickernodes.TeapotYKickerNode/">TeapotYKickerNode</a></li>
@@ -430,30 +451,30 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.kickernodes.XKicker/">XKicker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.kickernodes.YKicker/">YKicker</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.lattice/">orbit.lattice</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.lattice/">orbit.lattice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.lattice.AccActionsContainer/">AccActionsContainer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.lattice.AccNode/">AccNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.lattice.AccLattice/">AccLattice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.lattice.AccNodeBunchTracker/">AccNodeBunchTracker</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.matching/">orbit.matching</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.matching/">orbit.matching</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.matching.Optics/">Optics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.matching.EnvelopeSolver/">EnvelopeSolver</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.matrix_lattice/">orbit.matrix_lattice</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.matrix_lattice/">orbit.matrix_lattice</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.matrix_lattice.MATRIX_Lattice/">MATRIX_Lattice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.matrix_lattice.BaseMATRIX/">BaseMATRIX</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.orbit_correction/">orbit.orbit_correction</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.orbit_correction/">orbit.orbit_correction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.orbit_correction.orbit/">orbit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.orbit_correction.correction/">correction</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.parsers/">orbit.parsers</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.parsers/">orbit.parsers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.parsers.MAD_Parser/">MAD_Parser</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.parsers.MAD_LattElement/">MAD_LattElement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.parsers.MAD_LattLine/">MAD_LattLine</a></li>
@@ -464,8 +485,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.parsers.SAD_LattLine/">SAD_LattLine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.parsers.Field_Parser3D/">Field_Parser3D</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">orbit.py_linac</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a aria-current="page" class="current reference internal" href="#">orbit.py_linac</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.py_linac.errors.AccErrorNode/">AccErrorNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.py_linac.errors.ErrorLongitudinalDisplacementNode/">ErrorLongitudinalDisplacementNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.py_linac.errors.ErrorCoordDisplacementNode/">ErrorCoordDisplacementNode</a></li>
@@ -548,8 +569,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis/">RF_AxisFieldAnalysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/">SuperFish_3D_RF_FieldReader</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.rf_cavities/">orbit.rf_cavities</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.rf_cavities/">orbit.rf_cavities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.rf_cavities.addRFNode/">addRFNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.rf_cavities.Frequency_RFNode/">Frequency_RFNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.rf_cavities.Harmonic_RFNode/">Harmonic_RFNode</a></li>
@@ -557,14 +578,14 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.rf_cavities.SyncPhaseDep_Harmonic_RFNode/">SyncPhaseDep_Harmonic_RFNode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.rf_cavities.Barrier_RFNode/">Barrier_RFNode</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.space_charge/">orbit.space_charge</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.space_charge/">orbit.space_charge</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.space_charge.setSC_General_AccNodes/">setSC_General_AccNodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.space_charge.setSC_Centered_AccNodes/">setSC_Centered_AccNodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.space_charge.SC_Base_AccNode/">SC_Base_AccNode</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.teapot/">orbit.teapot</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.teapot/">orbit.teapot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.teapot.TEAPOT_Lattice/">TEAPOT_Lattice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.teapot.TEAPOT_Ring/">TEAPOT_Ring</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.teapot.BaseTEAPOT/">BaseTEAPOT</a></li>
@@ -582,16 +603,16 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.teapot.ContinuousLinearFocusingTEAPOT/">ContinuousLinearFocusingTEAPOT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.teapot.TEAPOT_MATRIX_Lattice/">TEAPOT_MATRIX_Lattice</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.teapot_base/">orbit.teapot_base</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.teapot_base/">orbit.teapot_base</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.teapot_base.MatrixGenerator/">MatrixGenerator</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.time_dep/">orbit.time_dep</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.time_dep/">orbit.time_dep</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.time_dep.TIME_DEP_Lattice/">TIME_DEP_Lattice</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.utils/">orbit.utils</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orbit.utils/">orbit.utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.utils.multiDimDoubleArray/">multiDimDoubleArray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.utils.multiDimIntArray/">multiDimIntArray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.utils.orbitFinalize/">orbitFinalize</a></li>
@@ -601,7 +622,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../orbit.utils.TypedObject/">TypedObject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbit.utils.ParamsDictObject/">ParamsDictObject</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -609,30 +630,33 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../" class="nav-link" aria-label="Home">
@@ -642,7 +666,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../py/" class="nav-link">Python API Reference</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">orbit.py_linac</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">orbit.py_linac</span></li>
   </ul>
 </nav>
 </div>
@@ -657,17 +681,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="module-orbit.py_linac.errors">
-<span id="orbit-py-linac"></span><h1>orbit.py_linac<a class="headerlink" href="#module-orbit.py_linac.errors" title="Permalink to this headline">#</a></h1>
+<span id="orbit-py-linac"></span><h1>orbit.py_linac<a class="headerlink" href="#module-orbit.py_linac.errors" title="Link to this heading">#</a></h1>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.errors.AccErrorNode/#orbit.py_linac.errors.AccErrorNode" title="orbit.py_linac.errors.AccErrorNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AccErrorNode</span></code></a>([name, type_in])</p></td>
 <td><p>This is an abstract base class for Error nodes hierarchy.</p></td>
@@ -713,10 +733,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="class-inheritance-diagram">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-35077b31a8bcce1da5634fb3375c633aba467297.png" alt="Inheritance diagram of orbit.py_linac.errors.ErrorNodesAndControllersLib.AccErrorNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorLongitudinalDisplacementNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCoordDisplacementNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorBendFieldNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorStraightRotationZNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorStraightRotationXNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorStraightRotationYNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.BaseErrorController, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlLongitudinalDisplacement, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlCoordDisplacement, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlBendField, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlStraightRotationZ, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlStraightRotationX, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlStraightRotationY" usemap="#inheritance89d346bfc0" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-3ad1e46e2fb9d6ce77b039cdc177490840267277.png" alt="Inheritance diagram of orbit.py_linac.errors.ErrorNodesAndControllersLib.AccErrorNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorLongitudinalDisplacementNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCoordDisplacementNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorBendFieldNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorStraightRotationZNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorStraightRotationXNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorStraightRotationYNode, orbit.py_linac.errors.ErrorNodesAndControllersLib.BaseErrorController, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlLongitudinalDisplacement, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlCoordDisplacement, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlBendField, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlStraightRotationZ, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlStraightRotationX, orbit.py_linac.errors.ErrorNodesAndControllersLib.ErrorCntrlStraightRotationY" usemap="#inheritance89d346bfc0" class="inheritance graphviz" /></div>
 <map id="inheritance89d346bfc0" name="inheritance89d346bfc0">
 <area shape="rect" id="node1" href="../orbit.py_linac.errors.AccErrorNode/#orbit.py_linac.errors.AccErrorNode" target="_top" title="This is an abstract base class for Error nodes hierarchy. The sub&#45;classes" alt="" coords="477,94,553,114"/>
 <area shape="rect" id="node8" href="../orbit.py_linac.errors.ErrorBendFieldNode/#orbit.py_linac.errors.ErrorBendFieldNode" target="_top" title="The subclass of AccErrorNode. It changes of the energy of each particle" alt="" coords="623,4,728,23"/>
@@ -737,14 +758,10 @@ document.write(`
 <area shape="rect" id="node12" href="../orbit.py_linac.errors.ErrorCntrlStraightRotationX/#orbit.py_linac.errors.ErrorCntrlStraightRotationX" target="_top" title="Subclass of BaseErrorController. It defines the error controller for" alt="" coords="287,130,425,150"/>
 <area shape="rect" id="node13" href="../orbit.py_linac.errors.ErrorCntrlStraightRotationY/#orbit.py_linac.errors.ErrorCntrlStraightRotationY" target="_top" title="Subclass of BaseErrorController. It defines the error controller for" alt="" coords="288,166,425,186"/>
 <area shape="rect" id="node14" href="../orbit.py_linac.errors.ErrorCntrlStraightRotationZ/#orbit.py_linac.errors.ErrorCntrlStraightRotationZ" target="_top" title="Subclass of BaseErrorController. It defines the error controller for" alt="" coords="287,203,425,222"/>
-</map><span class="target" id="module-orbit.py_linac.lattice"></span></section>
+</map></section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<span id="module-orbit.py_linac.lattice"></span><h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.lattice.GetGlobalQuadGradient/#orbit.py_linac.lattice.GetGlobalQuadGradient" title="orbit.py_linac.lattice.GetGlobalQuadGradient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetGlobalQuadGradient</span></code></a>(accLattice, z)</p></td>
 <td><p>The service function for the overlapping fields package.</p></td>
@@ -769,14 +786,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id1">
-<h2>Classes<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Classes<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.lattice.LinacAccLattice/#orbit.py_linac.lattice.LinacAccLattice" title="orbit.py_linac.lattice.LinacAccLattice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LinacAccLattice</span></code></a>([name])</p></td>
 <td><p>The subclass of the AccLattice class.</p></td>
@@ -867,10 +881,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id2">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-447de2677e4ef613f68b1d459796b6e7de2c4f9f.png" alt="Inheritance diagram of orbit.py_linac.lattice.LinacAccLatticeLib.LinacAccLattice, orbit.py_linac.lattice.LinacAccNodes.BaseLinacNode, orbit.py_linac.lattice.LinacAccNodes.LinacNode, orbit.py_linac.lattice.LinacAccNodes.LinacMagnetNode, orbit.py_linac.lattice.LinacAccNodes.MarkerLinacNode, orbit.py_linac.lattice.LinacAccNodes.Drift, orbit.py_linac.lattice.LinacAccNodes.Quad, orbit.py_linac.lattice.LinacAccNodes.AbstractRF_Gap, orbit.py_linac.lattice.LinacAccNodes.DCorrectorH, orbit.py_linac.lattice.LinacAccNodes.DCorrectorV, orbit.py_linac.lattice.LinacAccNodes.ThickKick, orbit.py_linac.lattice.LinacAccNodes.Bend, orbit.py_linac.lattice.LinacAccNodes.Solenoid, orbit.py_linac.lattice.LinacApertureNodes.LinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.CircleLinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.EllipseLinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.RectangleLinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.LinacPhaseApertureNode, orbit.py_linac.lattice.LinacApertureNodes.LinacEnergyApertureNode, orbit.py_linac.lattice.LinacAccLatticeLib.RF_Cavity, orbit.py_linac.lattice.LinacAccLatticeLib.Sequence, orbit.py_linac.lattice.LinacRfGapNodes.BaseRF_Gap, orbit.py_linac.lattice.LinacRfGapNodes.AxisFieldRF_Gap, orbit.py_linac.lattice.LinacRfGapNodes.RF_AxisFieldsStore, orbit.py_linac.lattice.LinacFieldOverlappingNodes.AxisField_and_Quad_RF_Gap, orbit.py_linac.lattice.LinacFieldOverlappingNodes.OverlappingQuadsNode, orbit.py_linac.lattice.LinacTransportMatrixGenNodes.LinacTrMatrixGenNode, orbit.py_linac.lattice.LinacTransportMatrixGenNodes.LinacTrMatricesController, orbit.py_linac.lattice.LinacDiagnosticsNodes.LinacBPM" usemap="#inheritance2a5ce611f3" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-d4c395032556c7e6589d446a6826a063b7f87999.png" alt="Inheritance diagram of orbit.py_linac.lattice.LinacAccLatticeLib.LinacAccLattice, orbit.py_linac.lattice.LinacAccNodes.BaseLinacNode, orbit.py_linac.lattice.LinacAccNodes.LinacNode, orbit.py_linac.lattice.LinacAccNodes.LinacMagnetNode, orbit.py_linac.lattice.LinacAccNodes.MarkerLinacNode, orbit.py_linac.lattice.LinacAccNodes.Drift, orbit.py_linac.lattice.LinacAccNodes.Quad, orbit.py_linac.lattice.LinacAccNodes.AbstractRF_Gap, orbit.py_linac.lattice.LinacAccNodes.DCorrectorH, orbit.py_linac.lattice.LinacAccNodes.DCorrectorV, orbit.py_linac.lattice.LinacAccNodes.ThickKick, orbit.py_linac.lattice.LinacAccNodes.Bend, orbit.py_linac.lattice.LinacAccNodes.Solenoid, orbit.py_linac.lattice.LinacApertureNodes.LinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.CircleLinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.EllipseLinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.RectangleLinacApertureNode, orbit.py_linac.lattice.LinacApertureNodes.LinacPhaseApertureNode, orbit.py_linac.lattice.LinacApertureNodes.LinacEnergyApertureNode, orbit.py_linac.lattice.LinacAccLatticeLib.RF_Cavity, orbit.py_linac.lattice.LinacAccLatticeLib.Sequence, orbit.py_linac.lattice.LinacRfGapNodes.BaseRF_Gap, orbit.py_linac.lattice.LinacRfGapNodes.AxisFieldRF_Gap, orbit.py_linac.lattice.LinacRfGapNodes.RF_AxisFieldsStore, orbit.py_linac.lattice.LinacFieldOverlappingNodes.AxisField_and_Quad_RF_Gap, orbit.py_linac.lattice.LinacFieldOverlappingNodes.OverlappingQuadsNode, orbit.py_linac.lattice.LinacTransportMatrixGenNodes.LinacTrMatrixGenNode, orbit.py_linac.lattice.LinacTransportMatrixGenNodes.LinacTrMatricesController, orbit.py_linac.lattice.LinacDiagnosticsNodes.LinacBPM" usemap="#inheritance2a5ce611f3" class="inheritance graphviz" /></div>
 <map id="inheritance2a5ce611f3" name="inheritance2a5ce611f3">
 <area shape="rect" id="node1" href="../orbit.py_linac.lattice.AbstractRF_Gap/#orbit.py_linac.lattice.AbstractRF_Gap" target="_top" title="This is an abstarct class for all RF Gap classes." alt="" coords="446,47,517,62"/>
 <area shape="rect" id="node9" href="../orbit.py_linac.lattice.AxisFieldRF_Gap/#orbit.py_linac.lattice.AxisFieldRF_Gap" target="_top" title="The RF gap representation that uses the RF axis field. User have to provide the" alt="" coords="585,3,658,19"/>
@@ -907,14 +922,10 @@ document.write(`
 <area shape="rect" id="node25" href="../orbit.py_linac.lattice.LinacTrMatricesController/#orbit.py_linac.lattice.LinacTrMatricesController" target="_top" title="LinacTrMatricesController keeps the references to the LinacTrMatrixGenNode" alt="" coords="3,150,108,165"/>
 <area shape="rect" id="node26" href="../orbit.py_linac.lattice.LinacTrMatrixGenNode/#orbit.py_linac.lattice.LinacTrMatrixGenNode" target="_top" title="Linac Accelerator Nodes for Transport Matrices generation." alt="" coords="574,281,669,297"/>
 <area shape="rect" id="node30" href="../orbit.py_linac.lattice.RF_AxisFieldsStore/#orbit.py_linac.lattice.RF_AxisFieldsStore" target="_top" title="The dictionary with the axis field Functions" alt="" coords="15,120,97,136"/>
-</map><span class="target" id="module-orbit.py_linac.lattice_modifications"></span></section>
-<section id="id3">
-<h2>Functions<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+</map></section>
+<section id="module-orbit.py_linac.lattice_modifications">
+<span id="id3"></span><h2>Functions<a class="headerlink" href="#module-orbit.py_linac.lattice_modifications" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.lattice_modifications.Add_quad_apertures_to_lattice/#orbit.py_linac.lattice_modifications.Add_quad_apertures_to_lattice" title="orbit.py_linac.lattice_modifications.Add_quad_apertures_to_lattice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Add_quad_apertures_to_lattice</span></code></a>(accLattice[, ...])</p></td>
 <td><p>Function will add Aperture nodes at the entrance and exit of quads.</p></td>
@@ -948,14 +959,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id4">
-<h2>Classes<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Classes<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.lattice_modifications.ErrorForNodesModification/#orbit.py_linac.lattice_modifications.ErrorForNodesModification" title="orbit.py_linac.lattice_modifications.ErrorForNodesModification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ErrorForNodesModification</span></code></a>([name, type_in])</p></td>
 <td><p>The base abstract class for set of separate nodes modification with two error nodes: one at the entrance and one at the exit of the lattice node.</p></td>
@@ -983,10 +991,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id5">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-8ace55eb3b0eeda492f568328d3d73a383135b01.png" alt="Inheritance diagram of orbit.py_linac.lattice_modifications.errors_modifications_lib.ErrorForNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.CoordinateDisplacementNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.BendFieldNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.LongitudinalDisplacementNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.StraightRotationZ_NodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.StraightRotationX_NodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.StraightRotationY_NodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.QuadFieldsErrorsDeployment" usemap="#inheritance0e94daf7ee" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-828f8320fbdf3d329a27cc5a414f4923113a5af5.png" alt="Inheritance diagram of orbit.py_linac.lattice_modifications.errors_modifications_lib.ErrorForNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.CoordinateDisplacementNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.BendFieldNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.LongitudinalDisplacementNodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.StraightRotationZ_NodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.StraightRotationX_NodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.StraightRotationY_NodesModification, orbit.py_linac.lattice_modifications.errors_modifications_lib.QuadFieldsErrorsDeployment" usemap="#inheritance0e94daf7ee" class="inheritance graphviz" /></div>
 <map id="inheritance0e94daf7ee" name="inheritance0e94daf7ee">
 <area shape="rect" id="node1" href="../orbit.py_linac.lattice_modifications.BendFieldNodesModification/#orbit.py_linac.lattice_modifications.BendFieldNodesModification" target="_top" title="This class will apply the errors to the fields of the bends using energy shift" alt="" coords="476,5,682,33"/>
 <area shape="rect" id="node2" href="../orbit.py_linac.lattice_modifications.ErrorForNodesModification/#orbit.py_linac.lattice_modifications.ErrorForNodesModification" target="_top" title="The base abstract class for set of separate nodes modification" alt="" coords="173,136,366,164"/>
@@ -998,14 +1007,10 @@ document.write(`
 <area shape="rect" id="node4" href="../orbit.utils.NamedObject/#orbit.utils.NamedObject" target="_top" title="Class. An object that has a name." alt="" coords="5,136,116,164"/>
 <area shape="rect" id="node7" href="../orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment/#orbit.py_linac.lattice_modifications.QuadFieldsErrorsDeployment" target="_top" title="Class will apply the errors to the fields of the quads" alt="" coords="164,188,375,216"/>
 <area shape="rect" id="node5" href="../orbit.utils.TypedObject/#orbit.utils.TypedObject" target="_top" title="Class. Object that has a type." alt="" coords="10,188,111,216"/>
-</map><span class="target" id="module-orbit.py_linac.linac_parsers"></span></section>
-<section id="id6">
-<h2>Classes<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+</map></section>
+<section id="module-orbit.py_linac.linac_parsers">
+<span id="id6"></span><h2>Classes<a class="headerlink" href="#module-orbit.py_linac.linac_parsers" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory" title="orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SNS_LinacLatticeFactory</span></code></a>()</p></td>
 <td><p>The SNS Linac Lattice Factory generates the Linac Accelerator Lattice from the XML file of the specific structure.</p></td>
@@ -1015,31 +1020,29 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id7">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-6191ca2e066e8ffe192ec02a48fba42eeb4c5791.png" alt="Inheritance diagram of orbit.py_linac.linac_parsers.sns_linac_lattice_factory.SNS_LinacLatticeFactory, orbit.py_linac.linac_parsers.jparc_linac_lattice_factory.JPARC_LinacLatticeFactory" usemap="#inheritanceaabcd33ed4" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-dc8b86d505c2dbe47b9e696187a8a3613e3e4c2e.png" alt="Inheritance diagram of orbit.py_linac.linac_parsers.sns_linac_lattice_factory.SNS_LinacLatticeFactory, orbit.py_linac.linac_parsers.jparc_linac_lattice_factory.JPARC_LinacLatticeFactory" usemap="#inheritanceaabcd33ed4" class="inheritance graphviz" /></div>
 <map id="inheritanceaabcd33ed4" name="inheritanceaabcd33ed4">
 <area shape="rect" id="node1" href="../orbit.py_linac.linac_parsers.JPARC_LinacLatticeFactory/#orbit.py_linac.linac_parsers.JPARC_LinacLatticeFactory" target="_top" title="The JPARC Linac Lattice Factory generates the Linac Accelerator Lattice" alt="" coords="233,5,424,33"/>
 <area shape="rect" id="node2" href="../orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory/#orbit.py_linac.linac_parsers.SNS_LinacLatticeFactory" target="_top" title="The SNS Linac Lattice Factory generates the Linac Accelerator Lattice" alt="" coords="5,5,185,33"/>
-</map><span class="target" id="module-orbit.py_linac.materials"></span></section>
-<section id="id8">
-<h2>Classes<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+</map></section>
+<section id="module-orbit.py_linac.materials">
+<span id="id8"></span><h2>Classes<a class="headerlink" href="#module-orbit.py_linac.materials" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode" title="orbit.py_linac.materials.VacuumWindowNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VacuumWindowNode</span></code></a>(length, ma[, density_fac, ...])</p></td>
 <td><p>The vacuum window node class for linac lattice</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id9">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-4e23b45d24736c0aecbc03a530f94d657e0c3d95.png" alt="Inheritance diagram of orbit.py_linac.materials.VacuumWindowLinacNode.VacuumWindowNode" usemap="#inheritanced09899a5c3" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-eb468f2233824f51b7d47acf6b01da0b6c85befa.png" alt="Inheritance diagram of orbit.py_linac.materials.VacuumWindowLinacNode.VacuumWindowNode" usemap="#inheritanced09899a5c3" class="inheritance graphviz" /></div>
 <map id="inheritanced09899a5c3" name="inheritanced09899a5c3">
 <area shape="rect" id="node1" href="../orbit.lattice.AccNode/#orbit.lattice.AccNode" target="_top" title="Class. Base class of the accelerator nodes hierarchy." alt="" coords="170,51,239,76"/>
 <area shape="rect" id="node5" href="../orbit.lattice.AccNodeBunchTracker/#orbit.lattice.AccNodeBunchTracker" target="_top" title="Class. Base class of the accelerator nodes that track the pyORBIT bunch." alt="" coords="282,51,428,76"/>
@@ -1048,14 +1051,10 @@ document.write(`
 <area shape="rect" id="node4" href="../orbit.utils.ParamsDictObject/#orbit.utils.ParamsDictObject" target="_top" title="Class. Object that has a parameters dictionary." alt="" coords="5,97,127,122"/>
 <area shape="rect" id="node6" href="../orbit.py_linac.lattice.BaseLinacNode/#orbit.py_linac.lattice.BaseLinacNode" target="_top" title="The base abstract class of the linac accelerator elements hierarchy." alt="" coords="471,51,579,76"/>
 <area shape="rect" id="node7" href="../orbit.py_linac.materials.VacuumWindowNode/#orbit.py_linac.materials.VacuumWindowNode" target="_top" title="The vacuum window node class for linac lattice" alt="" coords="622,51,763,76"/>
-</map><span class="target" id="module-orbit.py_linac.orbit_correction"></span></section>
-<section id="id10">
-<h2>Classes<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+</map></section>
+<section id="module-orbit.py_linac.orbit_correction">
+<span id="id10"></span><h2>Classes<a class="headerlink" href="#module-orbit.py_linac.orbit_correction" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.orbit_correction.TransverseBPM/#orbit.py_linac.orbit_correction.TransverseBPM" title="orbit.py_linac.orbit_correction.TransverseBPM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransverseBPM</span></code></a>(trajCorrection, bpm_marker_node)</p></td>
 <td><p>BPM node for transverse position report</p></td>
@@ -1065,10 +1064,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id11">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-0d8e1151126c9ef4b9d5d0557c4aa9c81ff34a7c.png" alt="Inheritance diagram of orbit.py_linac.orbit_correction.transport_lines_orbit_correction.TransverseBPM, orbit.py_linac.orbit_correction.transport_lines_orbit_correction.TrajectoryCorrection" usemap="#inheritancec44aa1bd53" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-a63ba5241a5510c2e5e63b0e472c0680415afcfb.png" alt="Inheritance diagram of orbit.py_linac.orbit_correction.transport_lines_orbit_correction.TransverseBPM, orbit.py_linac.orbit_correction.transport_lines_orbit_correction.TrajectoryCorrection" usemap="#inheritancec44aa1bd53" class="inheritance graphviz" /></div>
 <map id="inheritancec44aa1bd53" name="inheritancec44aa1bd53">
 <area shape="rect" id="node1" href="../orbit.lattice.AccNode/#orbit.lattice.AccNode" target="_top" title="Class. Base class of the accelerator nodes hierarchy." alt="" coords="188,100,260,125"/>
 <area shape="rect" id="node5" href="../orbit.lattice.AccNodeBunchTracker/#orbit.lattice.AccNodeBunchTracker" target="_top" title="Class. Base class of the accelerator nodes that track the pyORBIT bunch." alt="" coords="304,100,454,125"/>
@@ -1078,14 +1078,10 @@ document.write(`
 <area shape="rect" id="node6" href="../orbit.py_linac.lattice.BaseLinacNode/#orbit.py_linac.lattice.BaseLinacNode" target="_top" title="The base abstract class of the linac accelerator elements hierarchy." alt="" coords="498,100,609,125"/>
 <area shape="rect" id="node8" href="../orbit.py_linac.orbit_correction.TransverseBPM/#orbit.py_linac.orbit_correction.TransverseBPM" target="_top" title="BPM node for transverse position report" alt="" coords="653,100,763,125"/>
 <area shape="rect" id="node7" href="../orbit.py_linac.orbit_correction.TrajectoryCorrection/#orbit.py_linac.orbit_correction.TrajectoryCorrection" target="_top" title="Class to perform correction of the trajectory in the linac type lattice" alt="" coords="5,5,144,30"/>
-</map><span class="target" id="module-orbit.py_linac.overlapping_fields"></span></section>
-<section id="id12">
-<h2>Functions<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+</map></section>
+<section id="module-orbit.py_linac.overlapping_fields">
+<span id="id12"></span><h2>Functions<a class="headerlink" href="#module-orbit.py_linac.overlapping_fields" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.overlapping_fields.SNS_EngeFunctionFactory/#orbit.py_linac.overlapping_fields.SNS_EngeFunctionFactory" title="orbit.py_linac.overlapping_fields.SNS_EngeFunctionFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SNS_EngeFunctionFactory</span></code></a>(quad)</p></td>
 <td><p>It generates the Enge's Function for SNS quads.</p></td>
@@ -1095,14 +1091,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id13">
-<h2>Classes<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<h2>Classes<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction" title="orbit.py_linac.overlapping_fields.EngeFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EngeFunction</span></code></a>(length_param, ...[, cutoff_level])</p></td>
 <td><p>The Enge function with parameters from Berz's paper <a href="#id1"><span class="problematic" id="id14">[1]_</span></a>.</p></td>
@@ -1114,27 +1107,24 @@ document.write(`
 <td><p>It is an implementation of the QuadFieldSourceFunction class for a simple quad with constant field between (-L/2;+L/2).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function" title="orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PMQ_Trace3D_Function</span></code></a>(length_param, rad_in, ...)</p></td>
-<td><p>The PMQ Function is a represenatation of the field of permanent quad from Trace3D documantation (p 77): <a class="reference external" href="http://laacg.lanl.gov/laacg/services/traceman.pdf">http://laacg.lanl.gov/laacg/services/traceman.pdf</a></p></td>
+<td><p>The PMQ Function is a represenatation of the field of permanent quad from Trace3D documantation (p 77): <a class="reference external" href="https://inis.iaea.org/records/7awtr-mr708">https://inis.iaea.org/records/7awtr-mr708</a></p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id15">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-42115848135a27c26b54df343332ea3abe8ac98e.png" alt="Inheritance diagram of orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.EngeFunction, orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.AbstractQuadFieldSourceFunction, orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.SimpleQuadFieldFunc, orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.PMQ_Trace3D_Function" usemap="#inheritancea8a39bf745" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-316fcf20ce4c0007512088cef9476d92e0589ac4.png" alt="Inheritance diagram of orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.EngeFunction, orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.AbstractQuadFieldSourceFunction, orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.SimpleQuadFieldFunc, orbit.py_linac.overlapping_fields.overlapping_quad_fields_lib.PMQ_Trace3D_Function" usemap="#inheritancea8a39bf745" class="inheritance graphviz" /></div>
 <map id="inheritancea8a39bf745" name="inheritancea8a39bf745">
 <area shape="rect" id="node1" href="../orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction/#orbit.py_linac.overlapping_fields.AbstractQuadFieldSourceFunction" target="_top" title="It is an abstract class describing the quadrupole magnetic" alt="" coords="5,57,245,85"/>
 <area shape="rect" id="node2" href="../orbit.py_linac.overlapping_fields.EngeFunction/#orbit.py_linac.overlapping_fields.EngeFunction" target="_top" title="The Enge function with parameters from Berz&#39;s paper [1]_." alt="" coords="325,5,433,33"/>
 <area shape="rect" id="node3" href="../orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function/#orbit.py_linac.overlapping_fields.PMQ_Trace3D_Function" target="_top" title="The PMQ Function is a represenatation of the field of permanent quad" alt="" coords="293,57,465,85"/>
 <area shape="rect" id="node4" href="../orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc/#orbit.py_linac.overlapping_fields.SimpleQuadFieldFunc" target="_top" title="It is an implementation of the QuadFieldSourceFunction class for" alt="" coords="298,109,460,137"/>
-</map><span class="target" id="module-orbit.py_linac.rf_field_readers"></span></section>
-<section id="id16">
-<h2>Classes<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+</map></section>
+<section id="module-orbit.py_linac.rf_field_readers">
+<span id="id16"></span><h2>Classes<a class="headerlink" href="#module-orbit.py_linac.rf_field_readers" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis/#orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis" title="orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RF_AxisFieldAnalysis</span></code></a>(splineFiled[, zeroIsCenter])</p></td>
 <td><p>This class analyzes the RF electric field on the axis of a whole cavity.</p></td>
@@ -1144,15 +1134,15 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id17">
-<h2>Class Inheritance Diagram<a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-2315b61ac0bdab166d27d42fb1557d16beffc1b2.png" alt="Inheritance diagram of orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis.RF_AxisFieldAnalysis, orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.SuperFish_3D_RF_FieldReader" usemap="#inheritance0fdb869441" class="inheritance graphviz" /></div>
+<h2>Class Inheritance Diagram<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-c598aa430f46395359ca0f998dec607644efe6de.png" alt="Inheritance diagram of orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis.RF_AxisFieldAnalysis, orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader.SuperFish_3D_RF_FieldReader" usemap="#inheritance0fdb869441" class="inheritance graphviz" /></div>
 <map id="inheritance0fdb869441" name="inheritance0fdb869441">
 <area shape="rect" id="node1" href="../orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis/#orbit.py_linac.rf_field_readers.RF_AxisFieldAnalysis" target="_top" title="This class analyzes the RF electric field on the axis of a whole cavity." alt="" coords="34,57,194,85"/>
 <area shape="rect" id="node2" href="../orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader/#orbit.py_linac.rf_field_readers.SuperFish_3D_RF_FieldReader" target="_top" title="This class reads the SuperFish file with the 3D axial symmetric RF field." alt="" coords="5,5,223,33"/>
 </map></section>
-<hr class="footnotes docutils" />
 </section>
 
 
@@ -1160,11 +1150,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../orbit.parsers.Field_Parser3D/"
@@ -1184,47 +1173,49 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-inheritance-diagram">Class Inheritance Diagram</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Class Inheritance Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-orbit.py_linac.lattice_modifications">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Class Inheritance Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-orbit.py_linac.linac_parsers">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Class Inheritance Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-orbit.py_linac.materials">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Class Inheritance Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-orbit.py_linac.orbit_correction">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Class Inheritance Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-orbit.py_linac.overlapping_fields">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Class Inheritance Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-orbit.py_linac.rf_field_readers">Classes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Class Inheritance Diagram</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../_sources/reference/orbit.py_linac.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1245,8 +1236,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1254,6 +1245,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2025, PyORBIT Collaboration.
@@ -1263,19 +1255,22 @@ document.write(`
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
-    <br/>
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
   </p>
 </div>
       
     </div>
   
   
+  
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
 </p></div>
       
     </div>

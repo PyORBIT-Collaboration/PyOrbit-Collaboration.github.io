@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class FieldTracker &#8212; PyORBIT3 v3.0.1 documentation</title>
   
@@ -15,68 +13,73 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../../_static/documentation_options.js?v=9c59d525"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/classFieldTracker';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="Class Foil" href="../classFoil/" />
     <link rel="prev" title="Class ExtEffectsContainer" href="../classExtEffectsContainer/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search/"
       method="get">
@@ -84,7 +87,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -92,21 +94,31 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../">
+  
   
   
   
@@ -118,47 +130,41 @@
     
   </div>
   
-  
   <div class="col-lg-9 navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -169,28 +175,31 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -201,8 +210,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -212,29 +220,32 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -243,44 +254,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -289,17 +298,21 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -310,8 +323,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -320,7 +332,16 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button type="button" id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
@@ -441,7 +462,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../classExtEffectsContainer/">Class ExtEffectsContainer</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Class FieldTracker</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Class FieldTracker</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../classFoil/">Class Foil</a></li>
@@ -1406,30 +1427,33 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../" class="nav-link" aria-label="Home">
@@ -1439,7 +1463,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../cpp/" class="nav-link">C++ API Reference</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class FieldTracker</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Class FieldTracker</span></li>
   </ul>
 </nav>
 </div>
@@ -1454,65 +1478,65 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="class-fieldtracker">
-<span id="exhale-class-classfieldtracker"></span><h1>Class FieldTracker<a class="headerlink" href="#class-fieldtracker" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classfieldtracker"></span><h1>Class FieldTracker<a class="headerlink" href="#class-fieldtracker" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_FieldTracker_FieldTracker.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-fieldtracker-fieldtracker-hh"><span class="std std-ref">File FieldTracker.hh</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">OrbitUtils::CppPyWrapper</span></code> (<a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#exhale-class-classorbitutils-1-1cpppywrapper"><span class="std std-ref">Class CppPyWrapper</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv412FieldTracker">
-<span id="_CPPv312FieldTracker"></span><span id="_CPPv212FieldTracker"></span><span id="FieldTracker"></span><span class="target" id="classFieldTracker"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FieldTracker</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#_CPPv4N10OrbitUtils12CppPyWrapperE" title="OrbitUtils::CppPyWrapper"><span class="n"><span class="pre">CppPyWrapper</span></span></a><a class="headerlink" href="#_CPPv412FieldTracker" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv312FieldTracker"></span><span id="_CPPv212FieldTracker"></span><span id="FieldTracker"></span><span class="target" id="classFieldTracker"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FieldTracker</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#_CPPv4N10OrbitUtils12CppPyWrapperE" title="OrbitUtils::CppPyWrapper"><span class="n"><span class="pre">CppPyWrapper</span></span></a><a class="headerlink" href="#_CPPv412FieldTracker" title="Link to this definition">#</a><br /></dt>
 <dd><p>The <a class="reference internal" href="#classFieldTracker"><span class="std std-ref">FieldTracker</span></a> class is used to define how a particle/bunch propogates through an 3-dimensional magnetic field </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string">
-<span id="_CPPv3N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string"></span><span id="_CPPv2N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string"></span><span id="FieldTracker::FieldTracker__doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.iCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.BunchP.stringR"></span><span class="target" id="classFieldTracker_1a61ee2f2313f2e679663c6541dc9c8ee9"></span><span class="sig-name descname"><span class="n"><span class="pre">FieldTracker</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bx</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">by</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ay</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">epx</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">l</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zf</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ds</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">niters</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">resid</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xrefi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">yrefi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">eulerai</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">eulerbi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">eulergi</span></span>, <a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string"></span><span id="_CPPv2N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string"></span><span id="FieldTracker::FieldTracker__doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.iCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.BunchP.stringR"></span><span class="target" id="classFieldTracker_1a61ee2f2313f2e679663c6541dc9c8ee9"></span><span class="sig-name descname"><span class="n"><span class="pre">FieldTracker</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bx</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">by</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ay</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">epx</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">l</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zf</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ds</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">niters</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">resid</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xrefi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">yrefi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">eulerai</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">eulerbi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">eulergi</span></span>, <a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string" title="Link to this definition">#</a><br /></dt>
 <dd><p><a class="reference internal" href="#classFieldTracker"><span class="std std-ref">FieldTracker</span></a></p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker10trackBunchEP5Bunch">
-<span id="_CPPv3N12FieldTracker10trackBunchEP5Bunch"></span><span id="_CPPv2N12FieldTracker10trackBunchEP5Bunch"></span><span id="FieldTracker::trackBunch__BunchP"></span><span class="target" id="classFieldTracker_1a284185db867d3f92fdb39ce686077533"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trackBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker10trackBunchEP5Bunch" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker10trackBunchEP5Bunch"></span><span id="_CPPv2N12FieldTracker10trackBunchEP5Bunch"></span><span id="FieldTracker::trackBunch__BunchP"></span><span class="target" id="classFieldTracker_1a284185db867d3f92fdb39ce686077533"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trackBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker10trackBunchEP5Bunch" title="Link to this definition">#</a><br /></dt>
 <dd><p>Routine for transfering particles through a aperture </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker7BGrid3DEv">
-<span id="_CPPv3N12FieldTracker7BGrid3DEv"></span><span id="_CPPv2N12FieldTracker7BGrid3DEv"></span><span id="FieldTracker::BGrid3D"></span><span class="target" id="classFieldTracker_1a4a432c5e0ea71ad4867611fdc0148ae9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BGrid3D</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker7BGrid3DEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker7BGrid3DEv"></span><span id="_CPPv2N12FieldTracker7BGrid3DEv"></span><span id="FieldTracker::BGrid3D"></span><span class="target" id="classFieldTracker_1a4a432c5e0ea71ad4867611fdc0148ae9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BGrid3D</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker7BGrid3DEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi">
-<span id="_CPPv3N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi"></span><span id="_CPPv2N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi"></span><span id="FieldTracker::ParseGrid3D__stringCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.iCR.iCR.iCR"></span><span class="target" id="classFieldTracker_1a725323f5f7d517c7fca9e6d3c1d09701"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ParseGrid3D</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xmin</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xmax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ymin</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ymax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zmin</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zmax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">skipX</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">skipY</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">skipZ</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi"></span><span id="_CPPv2N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi"></span><span id="FieldTracker::ParseGrid3D__stringCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.iCR.iCR.iCR"></span><span class="target" id="classFieldTracker_1a725323f5f7d517c7fca9e6d3c1d09701"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ParseGrid3D</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xmin</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xmax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ymin</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ymax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zmin</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">zmax</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">skipX</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">skipY</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">skipZ</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8initVarsEv">
-<span id="_CPPv3N12FieldTracker8initVarsEv"></span><span id="_CPPv2N12FieldTracker8initVarsEv"></span><span id="FieldTracker::initVars"></span><span class="target" id="classFieldTracker_1abc54cb70236b5ae34f71fb1dfc8bd56f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initVars</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker8initVarsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8initVarsEv"></span><span id="_CPPv2N12FieldTracker8initVarsEv"></span><span id="FieldTracker::initVars"></span><span class="target" id="classFieldTracker_1abc54cb70236b5ae34f71fb1dfc8bd56f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initVars</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker8initVarsEv" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker14nodeCalculatorEP5Bunch">
-<span id="_CPPv3N12FieldTracker14nodeCalculatorEP5Bunch"></span><span id="_CPPv2N12FieldTracker14nodeCalculatorEP5Bunch"></span><span id="FieldTracker::nodeCalculator__BunchP"></span><span class="target" id="classFieldTracker_1ad40f7c818f49dd87e3ca9c535e7d5118"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nodeCalculator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker14nodeCalculatorEP5Bunch" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker14nodeCalculatorEP5Bunch"></span><span id="_CPPv2N12FieldTracker14nodeCalculatorEP5Bunch"></span><span id="FieldTracker::nodeCalculator__BunchP"></span><span class="target" id="classFieldTracker_1ad40f7c818f49dd87e3ca9c535e7d5118"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nodeCalculator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker14nodeCalculatorEP5Bunch" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker15setPathVariableEi">
-<span id="_CPPv3N12FieldTracker15setPathVariableEi"></span><span id="_CPPv2N12FieldTracker15setPathVariableEi"></span><span id="FieldTracker::setPathVariable__i"></span><span class="target" id="classFieldTracker_1ae363b1027206d7e0a7e9cecf681af17e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPathVariable</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker15setPathVariableEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker15setPathVariableEi"></span><span id="_CPPv2N12FieldTracker15setPathVariableEi"></span><span id="FieldTracker::setPathVariable__i"></span><span class="target" id="classFieldTracker_1ae363b1027206d7e0a7e9cecf681af17e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPathVariable</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12FieldTracker15setPathVariableEi" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -1520,267 +1544,267 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker5XGridE">
-<span id="_CPPv3N12FieldTracker5XGridE"></span><span id="_CPPv2N12FieldTracker5XGridE"></span><span id="FieldTracker::XGrid__doubleP"></span><span class="target" id="classFieldTracker_1a99df43d66ed853f80e88c4d03122654d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">XGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5XGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker5XGridE"></span><span id="_CPPv2N12FieldTracker5XGridE"></span><span id="FieldTracker::XGrid__doubleP"></span><span class="target" id="classFieldTracker_1a99df43d66ed853f80e88c4d03122654d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">XGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5XGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker5YGridE">
-<span id="_CPPv3N12FieldTracker5YGridE"></span><span id="_CPPv2N12FieldTracker5YGridE"></span><span id="FieldTracker::YGrid__doubleP"></span><span class="target" id="classFieldTracker_1aaf88859130187a48801f2bc41677c87b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">YGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5YGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker5YGridE"></span><span id="_CPPv2N12FieldTracker5YGridE"></span><span id="FieldTracker::YGrid__doubleP"></span><span class="target" id="classFieldTracker_1aaf88859130187a48801f2bc41677c87b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">YGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5YGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker5ZGridE">
-<span id="_CPPv3N12FieldTracker5ZGridE"></span><span id="_CPPv2N12FieldTracker5ZGridE"></span><span id="FieldTracker::ZGrid__doubleP"></span><span class="target" id="classFieldTracker_1a784971b802edcbb3a4b3c34481693556"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ZGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5ZGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker5ZGridE"></span><span id="_CPPv2N12FieldTracker5ZGridE"></span><span id="FieldTracker::ZGrid__doubleP"></span><span class="target" id="classFieldTracker_1a784971b802edcbb3a4b3c34481693556"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ZGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5ZGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6BXGridE">
-<span id="_CPPv3N12FieldTracker6BXGridE"></span><span id="_CPPv2N12FieldTracker6BXGridE"></span><span id="FieldTracker::BXGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1a73fb2f6f382702f904edb4c481535ab4"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BXGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BXGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6BXGridE"></span><span id="_CPPv2N12FieldTracker6BXGridE"></span><span id="FieldTracker::BXGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1a73fb2f6f382702f904edb4c481535ab4"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BXGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BXGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6BYGridE">
-<span id="_CPPv3N12FieldTracker6BYGridE"></span><span id="_CPPv2N12FieldTracker6BYGridE"></span><span id="FieldTracker::BYGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1af86d0d6a2c13bae47ae1658f253658dd"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BYGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BYGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6BYGridE"></span><span id="_CPPv2N12FieldTracker6BYGridE"></span><span id="FieldTracker::BYGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1af86d0d6a2c13bae47ae1658f253658dd"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BYGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BYGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6BZGridE">
-<span id="_CPPv3N12FieldTracker6BZGridE"></span><span id="_CPPv2N12FieldTracker6BZGridE"></span><span id="FieldTracker::BZGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1affcbe59ff4a22f3c330854ce8e3a16fc"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BZGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BZGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6BZGridE"></span><span id="_CPPv2N12FieldTracker6BZGridE"></span><span id="FieldTracker::BZGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1affcbe59ff4a22f3c330854ce8e3a16fc"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BZGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BZGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8BMagGridE">
-<span id="_CPPv3N12FieldTracker8BMagGridE"></span><span id="_CPPv2N12FieldTracker8BMagGridE"></span><span id="FieldTracker::BMagGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1a3bdac90cd4dbb5eb24c913365c0140dd"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BMagGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8BMagGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8BMagGridE"></span><span id="_CPPv2N12FieldTracker8BMagGridE"></span><span id="FieldTracker::BMagGrid__Grid3DP"></span><span class="target" id="classFieldTracker_1a3bdac90cd4dbb5eb24c913365c0140dd"></span><a class="reference internal" href="../classGrid3D/#_CPPv46Grid3D" title="Grid3D"><span class="n"><span class="pre">Grid3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BMagGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8BMagGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6nXGridE">
-<span id="_CPPv3N12FieldTracker6nXGridE"></span><span id="_CPPv2N12FieldTracker6nXGridE"></span><span id="FieldTracker::nXGrid__i"></span><span class="target" id="classFieldTracker_1a12938aa7443e9494eb88ec8334e27f58"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nXGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6nXGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6nXGridE"></span><span id="_CPPv2N12FieldTracker6nXGridE"></span><span id="FieldTracker::nXGrid__i"></span><span class="target" id="classFieldTracker_1a12938aa7443e9494eb88ec8334e27f58"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nXGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6nXGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6nYGridE">
-<span id="_CPPv3N12FieldTracker6nYGridE"></span><span id="_CPPv2N12FieldTracker6nYGridE"></span><span id="FieldTracker::nYGrid__i"></span><span class="target" id="classFieldTracker_1a0370a93e8230f8fd74ae6b2500dfea45"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nYGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6nYGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6nYGridE"></span><span id="_CPPv2N12FieldTracker6nYGridE"></span><span id="FieldTracker::nYGrid__i"></span><span class="target" id="classFieldTracker_1a0370a93e8230f8fd74ae6b2500dfea45"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nYGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6nYGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6nZGridE">
-<span id="_CPPv3N12FieldTracker6nZGridE"></span><span id="_CPPv2N12FieldTracker6nZGridE"></span><span id="FieldTracker::nZGrid__i"></span><span class="target" id="classFieldTracker_1a228802d0fe6e9a88f2b4456d2cf1d0ff"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nZGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6nZGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6nZGridE"></span><span id="_CPPv2N12FieldTracker6nZGridE"></span><span id="FieldTracker::nZGrid__i"></span><span class="target" id="classFieldTracker_1a228802d0fe6e9a88f2b4456d2cf1d0ff"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nZGrid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6nZGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker9BxField3DE">
-<span id="_CPPv3N12FieldTracker9BxField3DE"></span><span id="_CPPv2N12FieldTracker9BxField3DE"></span><span id="FieldTracker::BxField3D__double"></span><span class="target" id="classFieldTracker_1aed25c689a78829505e76c18b05325ecd"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BxField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9BxField3DE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker9BxField3DE"></span><span id="_CPPv2N12FieldTracker9BxField3DE"></span><span id="FieldTracker::BxField3D__double"></span><span class="target" id="classFieldTracker_1aed25c689a78829505e76c18b05325ecd"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BxField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9BxField3DE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker9ByField3DE">
-<span id="_CPPv3N12FieldTracker9ByField3DE"></span><span id="_CPPv2N12FieldTracker9ByField3DE"></span><span id="FieldTracker::ByField3D__double"></span><span class="target" id="classFieldTracker_1a5e97143f878be2bfaf19a04fe845ed2e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ByField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9ByField3DE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker9ByField3DE"></span><span id="_CPPv2N12FieldTracker9ByField3DE"></span><span id="FieldTracker::ByField3D__double"></span><span class="target" id="classFieldTracker_1a5e97143f878be2bfaf19a04fe845ed2e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ByField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9ByField3DE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker9BzField3DE">
-<span id="_CPPv3N12FieldTracker9BzField3DE"></span><span id="_CPPv2N12FieldTracker9BzField3DE"></span><span id="FieldTracker::BzField3D__double"></span><span class="target" id="classFieldTracker_1a6a946556639255c69bb0d2ded27e9e62"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BzField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9BzField3DE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker9BzField3DE"></span><span id="_CPPv2N12FieldTracker9BzField3DE"></span><span id="FieldTracker::BzField3D__double"></span><span class="target" id="classFieldTracker_1a6a946556639255c69bb0d2ded27e9e62"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BzField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9BzField3DE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8xField3DE">
-<span id="_CPPv3N12FieldTracker8xField3DE"></span><span id="_CPPv2N12FieldTracker8xField3DE"></span><span id="FieldTracker::xField3D__double"></span><span class="target" id="classFieldTracker_1ac7d9625582bce0a1902bb7f7dadef6df"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8xField3DE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8xField3DE"></span><span id="_CPPv2N12FieldTracker8xField3DE"></span><span id="FieldTracker::xField3D__double"></span><span class="target" id="classFieldTracker_1ac7d9625582bce0a1902bb7f7dadef6df"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8xField3DE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8yField3DE">
-<span id="_CPPv3N12FieldTracker8yField3DE"></span><span id="_CPPv2N12FieldTracker8yField3DE"></span><span id="FieldTracker::yField3D__double"></span><span class="target" id="classFieldTracker_1a72cfa268242dd0edf891f97999d06f0e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8yField3DE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8yField3DE"></span><span id="_CPPv2N12FieldTracker8yField3DE"></span><span id="FieldTracker::yField3D__double"></span><span class="target" id="classFieldTracker_1a72cfa268242dd0edf891f97999d06f0e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8yField3DE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8zField3DE">
-<span id="_CPPv3N12FieldTracker8zField3DE"></span><span id="_CPPv2N12FieldTracker8zField3DE"></span><span id="FieldTracker::zField3D__double"></span><span class="target" id="classFieldTracker_1a787a6c04b5a7633aaee1fde7d0108494"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8zField3DE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8zField3DE"></span><span id="_CPPv2N12FieldTracker8zField3DE"></span><span id="FieldTracker::zField3D__double"></span><span class="target" id="classFieldTracker_1a787a6c04b5a7633aaee1fde7d0108494"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zField3D</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8zField3DE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker7_lengthE">
-<span id="_CPPv3N12FieldTracker7_lengthE"></span><span id="_CPPv2N12FieldTracker7_lengthE"></span><span id="FieldTracker::_length__double"></span><span class="target" id="classFieldTracker_1abef6fe492bec495a3b695bfdabf6553e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_length</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_lengthE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker7_lengthE"></span><span id="_CPPv2N12FieldTracker7_lengthE"></span><span id="FieldTracker::_length__double"></span><span class="target" id="classFieldTracker_1abef6fe492bec495a3b695bfdabf6553e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_length</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_lengthE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_xrefiE">
-<span id="_CPPv3N12FieldTracker6_xrefiE"></span><span id="_CPPv2N12FieldTracker6_xrefiE"></span><span id="FieldTracker::_xrefi__double"></span><span class="target" id="classFieldTracker_1ad4f9cd38e52d77bbb2614df5f5da350f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_xrefi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_xrefiE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_xrefiE"></span><span id="_CPPv2N12FieldTracker6_xrefiE"></span><span id="FieldTracker::_xrefi__double"></span><span class="target" id="classFieldTracker_1ad4f9cd38e52d77bbb2614df5f5da350f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_xrefi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_xrefiE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_xreffE">
-<span id="_CPPv3N12FieldTracker6_xreffE"></span><span id="_CPPv2N12FieldTracker6_xreffE"></span><span id="FieldTracker::_xreff__double"></span><span class="target" id="classFieldTracker_1af468ef4263642754bcbd8f10aa467446"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_xreff</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_xreffE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_xreffE"></span><span id="_CPPv2N12FieldTracker6_xreffE"></span><span id="FieldTracker::_xreff__double"></span><span class="target" id="classFieldTracker_1af468ef4263642754bcbd8f10aa467446"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_xreff</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_xreffE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_yrefiE">
-<span id="_CPPv3N12FieldTracker6_yrefiE"></span><span id="_CPPv2N12FieldTracker6_yrefiE"></span><span id="FieldTracker::_yrefi__double"></span><span class="target" id="classFieldTracker_1a1946b26debb1138bdc0cbd0709447bbb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_yrefi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_yrefiE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_yrefiE"></span><span id="_CPPv2N12FieldTracker6_yrefiE"></span><span id="FieldTracker::_yrefi__double"></span><span class="target" id="classFieldTracker_1a1946b26debb1138bdc0cbd0709447bbb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_yrefi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_yrefiE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_yreffE">
-<span id="_CPPv3N12FieldTracker6_yreffE"></span><span id="_CPPv2N12FieldTracker6_yreffE"></span><span id="FieldTracker::_yreff__double"></span><span class="target" id="classFieldTracker_1a642b96c62ba6e81085733b315d0922ca"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_yreff</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_yreffE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_yreffE"></span><span id="_CPPv2N12FieldTracker6_yreffE"></span><span id="FieldTracker::_yreff__double"></span><span class="target" id="classFieldTracker_1a642b96c62ba6e81085733b315d0922ca"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_yreff</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_yreffE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8_euleraiE">
-<span id="_CPPv3N12FieldTracker8_euleraiE"></span><span id="_CPPv2N12FieldTracker8_euleraiE"></span><span id="FieldTracker::_eulerai__double"></span><span class="target" id="classFieldTracker_1ace3109c67a305cc436f34a4ad1b98d1e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulerai</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_euleraiE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8_euleraiE"></span><span id="_CPPv2N12FieldTracker8_euleraiE"></span><span id="FieldTracker::_eulerai__double"></span><span class="target" id="classFieldTracker_1ace3109c67a305cc436f34a4ad1b98d1e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulerai</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_euleraiE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8_eulerbiE">
-<span id="_CPPv3N12FieldTracker8_eulerbiE"></span><span id="_CPPv2N12FieldTracker8_eulerbiE"></span><span id="FieldTracker::_eulerbi__double"></span><span class="target" id="classFieldTracker_1ad808f7aa1afb717778425e12612bfa7d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulerbi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulerbiE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8_eulerbiE"></span><span id="_CPPv2N12FieldTracker8_eulerbiE"></span><span id="FieldTracker::_eulerbi__double"></span><span class="target" id="classFieldTracker_1ad808f7aa1afb717778425e12612bfa7d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulerbi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulerbiE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8_eulergiE">
-<span id="_CPPv3N12FieldTracker8_eulergiE"></span><span id="_CPPv2N12FieldTracker8_eulergiE"></span><span id="FieldTracker::_eulergi__double"></span><span class="target" id="classFieldTracker_1af91987034940a43729c915b439def3b5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulergi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulergiE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8_eulergiE"></span><span id="_CPPv2N12FieldTracker8_eulergiE"></span><span id="FieldTracker::_eulergi__double"></span><span class="target" id="classFieldTracker_1af91987034940a43729c915b439def3b5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulergi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulergiE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8_eulerafE">
-<span id="_CPPv3N12FieldTracker8_eulerafE"></span><span id="_CPPv2N12FieldTracker8_eulerafE"></span><span id="FieldTracker::_euleraf__double"></span><span class="target" id="classFieldTracker_1a403169f1f97533f30093c608a602c794"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_euleraf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulerafE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8_eulerafE"></span><span id="_CPPv2N12FieldTracker8_eulerafE"></span><span id="FieldTracker::_euleraf__double"></span><span class="target" id="classFieldTracker_1a403169f1f97533f30093c608a602c794"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_euleraf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulerafE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8_eulerbfE">
-<span id="_CPPv3N12FieldTracker8_eulerbfE"></span><span id="_CPPv2N12FieldTracker8_eulerbfE"></span><span id="FieldTracker::_eulerbf__double"></span><span class="target" id="classFieldTracker_1a8a97e2450ad23da31bfb8f4da4645a98"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulerbf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulerbfE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8_eulerbfE"></span><span id="_CPPv2N12FieldTracker8_eulerbfE"></span><span id="FieldTracker::_eulerbf__double"></span><span class="target" id="classFieldTracker_1a8a97e2450ad23da31bfb8f4da4645a98"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulerbf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulerbfE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8_eulergfE">
-<span id="_CPPv3N12FieldTracker8_eulergfE"></span><span id="_CPPv2N12FieldTracker8_eulergfE"></span><span id="FieldTracker::_eulergf__double"></span><span class="target" id="classFieldTracker_1ab82e0a27463d83d3bef09d03bb913f03"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulergf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulergfE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8_eulergfE"></span><span id="_CPPv2N12FieldTracker8_eulergfE"></span><span id="FieldTracker::_eulergf__double"></span><span class="target" id="classFieldTracker_1ab82e0a27463d83d3bef09d03bb913f03"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_eulergf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8_eulergfE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker3_ziE">
-<span id="_CPPv3N12FieldTracker3_ziE"></span><span id="_CPPv2N12FieldTracker3_ziE"></span><span id="FieldTracker::_zi__double"></span><span class="target" id="classFieldTracker_1a303894dea6381675502c149d898a2302"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_zi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker3_ziE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker3_ziE"></span><span id="_CPPv2N12FieldTracker3_ziE"></span><span id="FieldTracker::_zi__double"></span><span class="target" id="classFieldTracker_1a303894dea6381675502c149d898a2302"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_zi</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker3_ziE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker3_zfE">
-<span id="_CPPv3N12FieldTracker3_zfE"></span><span id="_CPPv2N12FieldTracker3_zfE"></span><span id="FieldTracker::_zf__double"></span><span class="target" id="classFieldTracker_1a62efbe17ae9959e7b0100a2f7c12e78b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_zf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker3_zfE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker3_zfE"></span><span id="_CPPv2N12FieldTracker3_zfE"></span><span id="FieldTracker::_zf__double"></span><span class="target" id="classFieldTracker_1a62efbe17ae9959e7b0100a2f7c12e78b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_zf</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker3_zfE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker3_dsE">
-<span id="_CPPv3N12FieldTracker3_dsE"></span><span id="_CPPv2N12FieldTracker3_dsE"></span><span id="FieldTracker::_ds__double"></span><span class="target" id="classFieldTracker_1a5fdbd99bb1e9cf17b2600fd735eba609"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_ds</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker3_dsE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker3_dsE"></span><span id="_CPPv2N12FieldTracker3_dsE"></span><span id="FieldTracker::_ds__double"></span><span class="target" id="classFieldTracker_1a5fdbd99bb1e9cf17b2600fd735eba609"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_ds</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker3_dsE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker5_srefE">
-<span id="_CPPv3N12FieldTracker5_srefE"></span><span id="_CPPv2N12FieldTracker5_srefE"></span><span id="FieldTracker::_sref__double"></span><span class="target" id="classFieldTracker_1a4abac7fa61d0a221a67041625fa8c6dc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_sref</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5_srefE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker5_srefE"></span><span id="_CPPv2N12FieldTracker5_srefE"></span><span id="FieldTracker::_sref__double"></span><span class="target" id="classFieldTracker_1a4abac7fa61d0a221a67041625fa8c6dc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_sref</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5_srefE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker4rmaxE">
-<span id="_CPPv3N12FieldTracker4rmaxE"></span><span id="_CPPv2N12FieldTracker4rmaxE"></span><span id="FieldTracker::rmax__double"></span><span class="target" id="classFieldTracker_1a8493ecbae7f2021fd505e645960fc02f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rmax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker4rmaxE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker4rmaxE"></span><span id="_CPPv2N12FieldTracker4rmaxE"></span><span id="FieldTracker::rmax__double"></span><span class="target" id="classFieldTracker_1a8493ecbae7f2021fd505e645960fc02f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rmax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker4rmaxE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_betaXE">
-<span id="_CPPv3N12FieldTracker6_betaXE"></span><span id="_CPPv2N12FieldTracker6_betaXE"></span><span id="FieldTracker::_betaX__double"></span><span class="target" id="classFieldTracker_1ad9030a4349b915bb35a66cf71d50bc54"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_betaXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_betaXE"></span><span id="_CPPv2N12FieldTracker6_betaXE"></span><span id="FieldTracker::_betaX__double"></span><span class="target" id="classFieldTracker_1ad9030a4349b915bb35a66cf71d50bc54"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_betaXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_betaYE">
-<span id="_CPPv3N12FieldTracker6_betaYE"></span><span id="_CPPv2N12FieldTracker6_betaYE"></span><span id="FieldTracker::_betaY__double"></span><span class="target" id="classFieldTracker_1acd9148839ec38c67b1cc497154e9d23a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaY</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_betaYE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_betaYE"></span><span id="_CPPv2N12FieldTracker6_betaYE"></span><span id="FieldTracker::_betaY__double"></span><span class="target" id="classFieldTracker_1acd9148839ec38c67b1cc497154e9d23a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaY</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_betaYE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker7_alphaXE">
-<span id="_CPPv3N12FieldTracker7_alphaXE"></span><span id="_CPPv2N12FieldTracker7_alphaXE"></span><span id="FieldTracker::_alphaX__double"></span><span class="target" id="classFieldTracker_1ad741e9de488c6a5712eed9802513cd87"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_alphaXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker7_alphaXE"></span><span id="_CPPv2N12FieldTracker7_alphaXE"></span><span id="FieldTracker::_alphaX__double"></span><span class="target" id="classFieldTracker_1ad741e9de488c6a5712eed9802513cd87"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_alphaXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker7_alphaYE">
-<span id="_CPPv3N12FieldTracker7_alphaYE"></span><span id="_CPPv2N12FieldTracker7_alphaYE"></span><span id="FieldTracker::_alphaY__double"></span><span class="target" id="classFieldTracker_1a51144ba7d01131ff636ee2e58aca4557"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaY</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_alphaYE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker7_alphaYE"></span><span id="_CPPv2N12FieldTracker7_alphaYE"></span><span id="FieldTracker::_alphaY__double"></span><span class="target" id="classFieldTracker_1a51144ba7d01131ff636ee2e58aca4557"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaY</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_alphaYE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker5_etaXE">
-<span id="_CPPv3N12FieldTracker5_etaXE"></span><span id="_CPPv2N12FieldTracker5_etaXE"></span><span id="FieldTracker::_etaX__double"></span><span class="target" id="classFieldTracker_1a98adc4c8acf6d381d0ad4ed8d8d0faae"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_etaX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5_etaXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker5_etaXE"></span><span id="_CPPv2N12FieldTracker5_etaXE"></span><span id="FieldTracker::_etaX__double"></span><span class="target" id="classFieldTracker_1a98adc4c8acf6d381d0ad4ed8d8d0faae"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_etaX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker5_etaXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_etaPXE">
-<span id="_CPPv3N12FieldTracker6_etaPXE"></span><span id="_CPPv2N12FieldTracker6_etaPXE"></span><span id="FieldTracker::_etaPX__double"></span><span class="target" id="classFieldTracker_1ad00ac145573dd196e593180213473fa6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_etaPX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_etaPXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_etaPXE"></span><span id="_CPPv2N12FieldTracker6_etaPXE"></span><span id="FieldTracker::_etaPX__double"></span><span class="target" id="classFieldTracker_1ad00ac145573dd196e593180213473fa6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_etaPX</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_etaPXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8xFoilMinE">
-<span id="_CPPv3N12FieldTracker8xFoilMinE"></span><span id="_CPPv2N12FieldTracker8xFoilMinE"></span><span id="FieldTracker::xFoilMin__double"></span><span class="target" id="classFieldTracker_1acb9b9bdb7e60cfe2e44eb47fbd2fa9b8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xFoilMin</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8xFoilMinE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8xFoilMinE"></span><span id="_CPPv2N12FieldTracker8xFoilMinE"></span><span id="FieldTracker::xFoilMin__double"></span><span class="target" id="classFieldTracker_1acb9b9bdb7e60cfe2e44eb47fbd2fa9b8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xFoilMin</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8xFoilMinE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8xFoilMaxE">
-<span id="_CPPv3N12FieldTracker8xFoilMaxE"></span><span id="_CPPv2N12FieldTracker8xFoilMaxE"></span><span id="FieldTracker::xFoilMax__double"></span><span class="target" id="classFieldTracker_1a8722ab0801408f5314bf41e01f7870a3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xFoilMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8xFoilMaxE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8xFoilMaxE"></span><span id="_CPPv2N12FieldTracker8xFoilMaxE"></span><span id="FieldTracker::xFoilMax__double"></span><span class="target" id="classFieldTracker_1a8722ab0801408f5314bf41e01f7870a3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xFoilMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8xFoilMaxE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8yFoilMinE">
-<span id="_CPPv3N12FieldTracker8yFoilMinE"></span><span id="_CPPv2N12FieldTracker8yFoilMinE"></span><span id="FieldTracker::yFoilMin__double"></span><span class="target" id="classFieldTracker_1a1ba6e46b1026a8dfc6f005f23cba54a0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yFoilMin</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8yFoilMinE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8yFoilMinE"></span><span id="_CPPv2N12FieldTracker8yFoilMinE"></span><span id="FieldTracker::yFoilMin__double"></span><span class="target" id="classFieldTracker_1a1ba6e46b1026a8dfc6f005f23cba54a0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yFoilMin</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8yFoilMinE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8yFoilMaxE">
-<span id="_CPPv3N12FieldTracker8yFoilMaxE"></span><span id="_CPPv2N12FieldTracker8yFoilMaxE"></span><span id="FieldTracker::yFoilMax__double"></span><span class="target" id="classFieldTracker_1a09b8d4ecc4542ec6dd130eeb14a82dbb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yFoilMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8yFoilMaxE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8yFoilMaxE"></span><span id="_CPPv2N12FieldTracker8yFoilMaxE"></span><span id="FieldTracker::yFoilMax__double"></span><span class="target" id="classFieldTracker_1a09b8d4ecc4542ec6dd130eeb14a82dbb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yFoilMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8yFoilMaxE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8zFoilMinE">
-<span id="_CPPv3N12FieldTracker8zFoilMinE"></span><span id="_CPPv2N12FieldTracker8zFoilMinE"></span><span id="FieldTracker::zFoilMin__double"></span><span class="target" id="classFieldTracker_1a232e3461de6918ba501effc06f5819fc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zFoilMin</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8zFoilMinE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8zFoilMinE"></span><span id="_CPPv2N12FieldTracker8zFoilMinE"></span><span id="FieldTracker::zFoilMin__double"></span><span class="target" id="classFieldTracker_1a232e3461de6918ba501effc06f5819fc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zFoilMin</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8zFoilMinE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker8zFoilMaxE">
-<span id="_CPPv3N12FieldTracker8zFoilMaxE"></span><span id="_CPPv2N12FieldTracker8zFoilMaxE"></span><span id="FieldTracker::zFoilMax__double"></span><span class="target" id="classFieldTracker_1a7e683d7eaaade0ca9fce79ea5f19c121"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zFoilMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8zFoilMaxE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker8zFoilMaxE"></span><span id="_CPPv2N12FieldTracker8zFoilMaxE"></span><span id="FieldTracker::zFoilMax__double"></span><span class="target" id="classFieldTracker_1a7e683d7eaaade0ca9fce79ea5f19c121"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zFoilMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker8zFoilMaxE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker9doRefPathE">
-<span id="_CPPv3N12FieldTracker9doRefPathE"></span><span id="_CPPv2N12FieldTracker9doRefPathE"></span><span id="FieldTracker::doRefPath__i"></span><span class="target" id="classFieldTracker_1a379aaa202cefafee1fe122db15f4713a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">doRefPath</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9doRefPathE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker9doRefPathE"></span><span id="_CPPv2N12FieldTracker9doRefPathE"></span><span id="FieldTracker::doRefPath__i"></span><span class="target" id="classFieldTracker_1a379aaa202cefafee1fe122db15f4713a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">doRefPath</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9doRefPathE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker7_nitersE">
-<span id="_CPPv3N12FieldTracker7_nitersE"></span><span id="_CPPv2N12FieldTracker7_nitersE"></span><span id="FieldTracker::_niters__double"></span><span class="target" id="classFieldTracker_1a18712b4821dbd8105d1bca7ae1d60a5b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_niters</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_nitersE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker7_nitersE"></span><span id="_CPPv2N12FieldTracker7_nitersE"></span><span id="FieldTracker::_niters__double"></span><span class="target" id="classFieldTracker_1a18712b4821dbd8105d1bca7ae1d60a5b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_niters</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7_nitersE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker4rMaxE">
-<span id="_CPPv3N12FieldTracker4rMaxE"></span><span id="_CPPv2N12FieldTracker4rMaxE"></span><span id="FieldTracker::rMax__double"></span><span class="target" id="classFieldTracker_1a817483ca004a81625fdea7a6aef9d909"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker4rMaxE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker4rMaxE"></span><span id="_CPPv2N12FieldTracker4rMaxE"></span><span id="FieldTracker::rMax__double"></span><span class="target" id="classFieldTracker_1a817483ca004a81625fdea7a6aef9d909"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker4rMaxE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker9foilAngleE">
-<span id="_CPPv3N12FieldTracker9foilAngleE"></span><span id="_CPPv2N12FieldTracker9foilAngleE"></span><span id="FieldTracker::foilAngle__double"></span><span class="target" id="classFieldTracker_1af3de4d93b4b354057f002645dbbd00b2"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foilAngle</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9foilAngleE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker9foilAngleE"></span><span id="_CPPv2N12FieldTracker9foilAngleE"></span><span id="FieldTracker::foilAngle__double"></span><span class="target" id="classFieldTracker_1af3de4d93b4b354057f002645dbbd00b2"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foilAngle</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9foilAngleE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6_residE">
-<span id="_CPPv3N12FieldTracker6_residE"></span><span id="_CPPv2N12FieldTracker6_residE"></span><span id="FieldTracker::_resid__double"></span><span class="target" id="classFieldTracker_1ac34f328c0c8c11432a06cb1f8a01571c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_resid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_residE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6_residE"></span><span id="_CPPv2N12FieldTracker6_residE"></span><span id="FieldTracker::_resid__double"></span><span class="target" id="classFieldTracker_1ac34f328c0c8c11432a06cb1f8a01571c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_resid</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6_residE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker4sMaxE">
-<span id="_CPPv3N12FieldTracker4sMaxE"></span><span id="_CPPv2N12FieldTracker4sMaxE"></span><span id="FieldTracker::sMax__double"></span><span class="target" id="classFieldTracker_1ae0261d0f600c481288333839707c89bb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker4sMaxE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker4sMaxE"></span><span id="_CPPv2N12FieldTracker4sMaxE"></span><span id="FieldTracker::sMax__double"></span><span class="target" id="classFieldTracker_1ae0261d0f600c481288333839707c89bb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sMax</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker4sMaxE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker7getPathE">
-<span id="_CPPv3N12FieldTracker7getPathE"></span><span id="_CPPv2N12FieldTracker7getPathE"></span><span id="FieldTracker::getPath__i"></span><span class="target" id="classFieldTracker_1ade3c2adbac7fa2643e2a4f5f421505f5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPath</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7getPathE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker7getPathE"></span><span id="_CPPv2N12FieldTracker7getPathE"></span><span id="FieldTracker::getPath__i"></span><span class="target" id="classFieldTracker_1ade3c2adbac7fa2643e2a4f5f421505f5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPath</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker7getPathE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker6BScaleE">
-<span id="_CPPv3N12FieldTracker6BScaleE"></span><span id="_CPPv2N12FieldTracker6BScaleE"></span><span id="FieldTracker::BScale__double"></span><span class="target" id="classFieldTracker_1a08c18bee7a2294e0a07eca1c7c7770a9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BScale</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BScaleE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker6BScaleE"></span><span id="_CPPv2N12FieldTracker6BScaleE"></span><span id="FieldTracker::BScale__double"></span><span class="target" id="classFieldTracker_1a08c18bee7a2294e0a07eca1c7c7770a9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BScale</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker6BScaleE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12FieldTracker9zsymmetryE">
-<span id="_CPPv3N12FieldTracker9zsymmetryE"></span><span id="_CPPv2N12FieldTracker9zsymmetryE"></span><span id="FieldTracker::zsymmetry__i"></span><span class="target" id="classFieldTracker_1aad7b68d0eca0f837b7c45985a669bfec"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zsymmetry</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9zsymmetryE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N12FieldTracker9zsymmetryE"></span><span id="_CPPv2N12FieldTracker9zsymmetryE"></span><span id="FieldTracker::zsymmetry__i"></span><span class="target" id="classFieldTracker_1aad7b68d0eca0f837b7c45985a669bfec"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zsymmetry</span></span></span><a class="headerlink" href="#_CPPv4N12FieldTracker9zsymmetryE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -1794,11 +1818,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../classExtEffectsContainer/"
@@ -1818,33 +1841,100 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv412FieldTracker"><code class="docutils literal notranslate"><span class="pre">FieldTracker</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker12FieldTrackerERKdRKdRKdRKdRKdRKdRKdRKdRKdRKdRKiRKdRKdRKdRKdRKdRKdP5BunchR6string"><code class="docutils literal notranslate"><span class="pre">FieldTracker()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker10trackBunchEP5Bunch"><code class="docutils literal notranslate"><span class="pre">trackBunch()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker7BGrid3DEv"><code class="docutils literal notranslate"><span class="pre">BGrid3D()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker11ParseGrid3DERK6stringRKdRKdRKdRKdRKdRKdRKiRKiRKi"><code class="docutils literal notranslate"><span class="pre">ParseGrid3D()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8initVarsEv"><code class="docutils literal notranslate"><span class="pre">initVars()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker14nodeCalculatorEP5Bunch"><code class="docutils literal notranslate"><span class="pre">nodeCalculator()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker15setPathVariableEi"><code class="docutils literal notranslate"><span class="pre">setPathVariable()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker5XGridE"><code class="docutils literal notranslate"><span class="pre">XGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker5YGridE"><code class="docutils literal notranslate"><span class="pre">YGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker5ZGridE"><code class="docutils literal notranslate"><span class="pre">ZGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6BXGridE"><code class="docutils literal notranslate"><span class="pre">BXGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6BYGridE"><code class="docutils literal notranslate"><span class="pre">BYGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6BZGridE"><code class="docutils literal notranslate"><span class="pre">BZGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8BMagGridE"><code class="docutils literal notranslate"><span class="pre">BMagGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6nXGridE"><code class="docutils literal notranslate"><span class="pre">nXGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6nYGridE"><code class="docutils literal notranslate"><span class="pre">nYGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6nZGridE"><code class="docutils literal notranslate"><span class="pre">nZGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker9BxField3DE"><code class="docutils literal notranslate"><span class="pre">BxField3D</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker9ByField3DE"><code class="docutils literal notranslate"><span class="pre">ByField3D</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker9BzField3DE"><code class="docutils literal notranslate"><span class="pre">BzField3D</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8xField3DE"><code class="docutils literal notranslate"><span class="pre">xField3D</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8yField3DE"><code class="docutils literal notranslate"><span class="pre">yField3D</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8zField3DE"><code class="docutils literal notranslate"><span class="pre">zField3D</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker7_lengthE"><code class="docutils literal notranslate"><span class="pre">_length</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_xrefiE"><code class="docutils literal notranslate"><span class="pre">_xrefi</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_xreffE"><code class="docutils literal notranslate"><span class="pre">_xreff</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_yrefiE"><code class="docutils literal notranslate"><span class="pre">_yrefi</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_yreffE"><code class="docutils literal notranslate"><span class="pre">_yreff</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8_euleraiE"><code class="docutils literal notranslate"><span class="pre">_eulerai</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8_eulerbiE"><code class="docutils literal notranslate"><span class="pre">_eulerbi</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8_eulergiE"><code class="docutils literal notranslate"><span class="pre">_eulergi</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8_eulerafE"><code class="docutils literal notranslate"><span class="pre">_euleraf</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8_eulerbfE"><code class="docutils literal notranslate"><span class="pre">_eulerbf</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8_eulergfE"><code class="docutils literal notranslate"><span class="pre">_eulergf</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker3_ziE"><code class="docutils literal notranslate"><span class="pre">_zi</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker3_zfE"><code class="docutils literal notranslate"><span class="pre">_zf</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker3_dsE"><code class="docutils literal notranslate"><span class="pre">_ds</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker5_srefE"><code class="docutils literal notranslate"><span class="pre">_sref</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker4rmaxE"><code class="docutils literal notranslate"><span class="pre">rmax</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_betaXE"><code class="docutils literal notranslate"><span class="pre">_betaX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_betaYE"><code class="docutils literal notranslate"><span class="pre">_betaY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker7_alphaXE"><code class="docutils literal notranslate"><span class="pre">_alphaX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker7_alphaYE"><code class="docutils literal notranslate"><span class="pre">_alphaY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker5_etaXE"><code class="docutils literal notranslate"><span class="pre">_etaX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_etaPXE"><code class="docutils literal notranslate"><span class="pre">_etaPX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8xFoilMinE"><code class="docutils literal notranslate"><span class="pre">xFoilMin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8xFoilMaxE"><code class="docutils literal notranslate"><span class="pre">xFoilMax</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8yFoilMinE"><code class="docutils literal notranslate"><span class="pre">yFoilMin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8yFoilMaxE"><code class="docutils literal notranslate"><span class="pre">yFoilMax</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8zFoilMinE"><code class="docutils literal notranslate"><span class="pre">zFoilMin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker8zFoilMaxE"><code class="docutils literal notranslate"><span class="pre">zFoilMax</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker9doRefPathE"><code class="docutils literal notranslate"><span class="pre">doRefPath</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker7_nitersE"><code class="docutils literal notranslate"><span class="pre">_niters</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker4rMaxE"><code class="docutils literal notranslate"><span class="pre">rMax</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker9foilAngleE"><code class="docutils literal notranslate"><span class="pre">foilAngle</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6_residE"><code class="docutils literal notranslate"><span class="pre">_resid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker4sMaxE"><code class="docutils literal notranslate"><span class="pre">sMax</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker7getPathE"><code class="docutils literal notranslate"><span class="pre">getPath</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker6BScaleE"><code class="docutils literal notranslate"><span class="pre">BScale</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N12FieldTracker9zsymmetryE"><code class="docutils literal notranslate"><span class="pre">zsymmetry</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../_sources/reference/classFieldTracker.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1865,8 +1955,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1874,6 +1964,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2025, PyORBIT Collaboration.
@@ -1883,19 +1974,22 @@ document.write(`
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
-    <br/>
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
   </p>
 </div>
       
     </div>
   
   
+  
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
 </p></div>
       
     </div>

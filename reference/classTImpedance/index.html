@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class TImpedance &#8212; PyORBIT3 v3.0.1 documentation</title>
   
@@ -15,68 +13,73 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
-    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../../_static/documentation_options.js?v=9c59d525"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/classTImpedance';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="Class ExternalEffects" href="../classTrackerRK4_1_1ExternalEffects/" />
     <link rel="prev" title="Class MatrixGenerator" href="../classteapot__base_1_1MatrixGenerator/" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search/"
       method="get">
@@ -84,7 +87,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -92,21 +94,31 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../../">
+  
   
   
   
@@ -118,47 +130,41 @@
     
   </div>
   
-  
   <div class="col-lg-9 navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -169,28 +175,31 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -201,8 +210,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -212,29 +220,32 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -243,44 +254,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../install/">
-                        Installation Guide
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install/">
+    Installation Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing/">
-                        Contributor Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../py/">
-                        Python API Reference
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/">
+    Contributor Guide
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../cpp/">
-                        C++ API Reference
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../py/">
+    Python API Reference
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../cpp/">
+    C++ API Reference
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -289,17 +298,21 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -310,8 +323,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -320,7 +332,16 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button type="button" id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
@@ -645,7 +666,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="../classteapot__base_1_1MatrixGenerator/">Class MatrixGenerator</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Class TImpedance</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Class TImpedance</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../classTrackerRK4_1_1ExternalEffects/">Class ExternalEffects</a></li>
@@ -1406,30 +1427,33 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../" class="nav-link" aria-label="Home">
@@ -1439,7 +1463,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../cpp/" class="nav-link">C++ API Reference</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Class TImpedance</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Class TImpedance</span></li>
   </ul>
 </nav>
 </div>
@@ -1454,74 +1478,74 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="class-timpedance">
-<span id="exhale-class-classtimpedance"></span><h1>Class TImpedance<a class="headerlink" href="#class-timpedance" title="Permalink to this headline">#</a></h1>
+<span id="exhale-class-classtimpedance"></span><h1>Class TImpedance<a class="headerlink" href="#class-timpedance" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="../file__home_runner_work_PyORBIT3_PyORBIT3_src_orbit_Impedances_TImpedance.hh/#file-home-runner-work-pyorbit3-pyorbit3-src-orbit-impedances-timpedance-hh"><span class="std std-ref">File TImpedance.hh</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">#</a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">OrbitUtils::CppPyWrapper</span></code> (<a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#exhale-class-classorbitutils-1-1cpppywrapper"><span class="std std-ref">Class CppPyWrapper</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv410TImpedance">
-<span id="_CPPv310TImpedance"></span><span id="_CPPv210TImpedance"></span><span id="TImpedance"></span><span class="target" id="classTImpedance"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TImpedance</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#_CPPv4N10OrbitUtils12CppPyWrapperE" title="OrbitUtils::CppPyWrapper"><span class="n"><span class="pre">CppPyWrapper</span></span></a><a class="headerlink" href="#_CPPv410TImpedance" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv310TImpedance"></span><span id="_CPPv210TImpedance"></span><span id="TImpedance"></span><span class="target" id="classTImpedance"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TImpedance</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1CppPyWrapper/#_CPPv4N10OrbitUtils12CppPyWrapperE" title="OrbitUtils::CppPyWrapper"><span class="n"><span class="pre">CppPyWrapper</span></span></a><a class="headerlink" href="#_CPPv410TImpedance" title="Link to this definition">#</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance10TImpedanceEdiiii">
-<span id="_CPPv3N10TImpedance10TImpedanceEdiiii"></span><span id="_CPPv2N10TImpedance10TImpedanceEdiiii"></span><span id="TImpedance::TImpedance__double.i.i.i.i"></span><span class="target" id="classTImpedance_1a75373f91051fc49ee7076b1d782a94e7"></span><span class="sig-name descname"><span class="n"><span class="pre">TImpedance</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nMacrosMin</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nBins</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">useX</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">useY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance10TImpedanceEdiiii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance10TImpedanceEdiiii"></span><span id="_CPPv2N10TImpedance10TImpedanceEdiiii"></span><span id="TImpedance::TImpedance__double.i.i.i.i"></span><span class="target" id="classTImpedance_1a75373f91051fc49ee7076b1d782a94e7"></span><span class="sig-name descname"><span class="n"><span class="pre">TImpedance</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nMacrosMin</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nBins</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">useX</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">useY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance10TImpedanceEdiiii" title="Link to this definition">#</a><br /></dt>
 <dd><p>Constructor </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedanceD0Ev">
-<span id="_CPPv3N10TImpedanceD0Ev"></span><span id="_CPPv2N10TImpedanceD0Ev"></span><span id="TImpedance::~TImpedance"></span><span class="target" id="classTImpedance_1ab2630a12ce64c6e5f0527ec20a9f4341"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~TImpedance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedanceD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedanceD0Ev"></span><span id="_CPPv2N10TImpedanceD0Ev"></span><span id="TImpedance::~TImpedance"></span><span class="target" id="classTImpedance_1ab2630a12ce64c6e5f0527ec20a9f4341"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~TImpedance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedanceD0Ev" title="Link to this definition">#</a><br /></dt>
 <dd><p>Destructor </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance14assignLatFuncsEdddddd">
-<span id="_CPPv3N10TImpedance14assignLatFuncsEdddddd"></span><span id="_CPPv2N10TImpedance14assignLatFuncsEdddddd"></span><span id="TImpedance::assignLatFuncs__double.double.double.double.double.double"></span><span class="target" id="classTImpedance_1a964b422d535ed88ed634490f060722a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignLatFuncs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alphaX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">betaX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qY</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alphaY</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">betaY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance14assignLatFuncsEdddddd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance14assignLatFuncsEdddddd"></span><span id="_CPPv2N10TImpedance14assignLatFuncsEdddddd"></span><span id="TImpedance::assignLatFuncs__double.double.double.double.double.double"></span><span class="target" id="classTImpedance_1a964b422d535ed88ed634490f060722a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignLatFuncs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alphaX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">betaX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qY</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alphaY</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">betaY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance14assignLatFuncsEdddddd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Assigns the needed lattice functions </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance16assignImpedanceXEidddd">
-<span id="_CPPv3N10TImpedance16assignImpedanceXEidddd"></span><span id="_CPPv2N10TImpedance16assignImpedanceXEidddd"></span><span id="TImpedance::assignImpedanceX__i.double.double.double.double"></span><span class="target" id="classTImpedance_1a516c07c721d576aef4df549dfabacdcb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignImpedanceX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realm</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance16assignImpedanceXEidddd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance16assignImpedanceXEidddd"></span><span id="_CPPv2N10TImpedance16assignImpedanceXEidddd"></span><span id="TImpedance::assignImpedanceX__i.double.double.double.double"></span><span class="target" id="classTImpedance_1a516c07c721d576aef4df549dfabacdcb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignImpedanceX</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realm</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance16assignImpedanceXEidddd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Assigns the real and imaginary parts of the horizontal impedance for index n </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance16assignImpedanceYEidddd">
-<span id="_CPPv3N10TImpedance16assignImpedanceYEidddd"></span><span id="_CPPv2N10TImpedance16assignImpedanceYEidddd"></span><span id="TImpedance::assignImpedanceY__i.double.double.double.double"></span><span class="target" id="classTImpedance_1ad9b08c7663c21211a2cbe1f944284202"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignImpedanceY</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realm</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance16assignImpedanceYEidddd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance16assignImpedanceYEidddd"></span><span id="_CPPv2N10TImpedance16assignImpedanceYEidddd"></span><span id="TImpedance::assignImpedanceY__i.double.double.double.double"></span><span class="target" id="classTImpedance_1ad9b08c7663c21211a2cbe1f944284202"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignImpedanceY</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">realm</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">imagm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance16assignImpedanceYEidddd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Assigns the real and imaginary parts of the vertical impedance for index n </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance10trackBunchEP5Bunch">
-<span id="_CPPv3N10TImpedance10trackBunchEP5Bunch"></span><span id="_CPPv2N10TImpedance10trackBunchEP5Bunch"></span><span id="TImpedance::trackBunch__BunchP"></span><span class="target" id="classTImpedance_1adaa90409b3f057a7856f5a0b3e99bf23"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trackBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance10trackBunchEP5Bunch" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance10trackBunchEP5Bunch"></span><span id="_CPPv2N10TImpedance10trackBunchEP5Bunch"></span><span id="TImpedance::trackBunch__BunchP"></span><span class="target" id="classTImpedance_1adaa90409b3f057a7856f5a0b3e99bf23"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trackBunch</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../classBunch/#_CPPv45Bunch" title="Bunch"><span class="n"><span class="pre">Bunch</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bunch</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance10trackBunchEP5Bunch" title="Link to this definition">#</a><br /></dt>
 <dd><p>Calculates the transverse kick to the macro-particles in the bunch </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance14_prepareToKickEv">
-<span id="_CPPv3N10TImpedance14_prepareToKickEv"></span><span id="_CPPv2N10TImpedance14_prepareToKickEv"></span><span id="TImpedance::_prepareToKick"></span><span class="target" id="classTImpedance_1acc4cc199a774f125833d0b24eeb3d3de"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_prepareToKick</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance14_prepareToKickEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance14_prepareToKickEv"></span><span id="_CPPv2N10TImpedance14_prepareToKickEv"></span><span id="TImpedance::_prepareToKick"></span><span class="target" id="classTImpedance_1acc4cc199a774f125833d0b24eeb3d3de"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_prepareToKick</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance14_prepareToKickEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Does FFTs in preparation for kick </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance5_kickEd">
-<span id="_CPPv3N10TImpedance5_kickEd"></span><span id="_CPPv2N10TImpedance5_kickEd"></span><span id="TImpedance::_kick__double"></span><span class="target" id="classTImpedance_1a1f0957b3fde4edbb3acf99fd54a05bae"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_kick</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">macrophase</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance5_kickEd" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance5_kickEd"></span><span id="_CPPv2N10TImpedance5_kickEd"></span><span id="TImpedance::_kick__double"></span><span class="target" id="classTImpedance_1a1f0957b3fde4edbb3acf99fd54a05bae"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_kick</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">macrophase</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10TImpedance5_kickEd" title="Link to this definition">#</a><br /></dt>
 <dd><p>Routine for calculating the transverse kick to the particle </p>
 </dd></dl>
 
@@ -1530,182 +1554,182 @@ document.write(`
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance7_lengthE">
-<span id="_CPPv3N10TImpedance7_lengthE"></span><span id="_CPPv2N10TImpedance7_lengthE"></span><span id="TImpedance::_length__double"></span><span class="target" id="classTImpedance_1a15c4ca5c1cc48c7c3c544500ce13f367"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_length</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance7_lengthE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance7_lengthE"></span><span id="_CPPv2N10TImpedance7_lengthE"></span><span id="TImpedance::_length__double"></span><span class="target" id="classTImpedance_1a15c4ca5c1cc48c7c3c544500ce13f367"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_length</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance7_lengthE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance11_nMacrosMinE">
-<span id="_CPPv3N10TImpedance11_nMacrosMinE"></span><span id="_CPPv2N10TImpedance11_nMacrosMinE"></span><span id="TImpedance::_nMacrosMin__i"></span><span class="target" id="classTImpedance_1a1f2005bf12fc491e3e6dc02eb3c8e9ca"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_nMacrosMin</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_nMacrosMinE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance11_nMacrosMinE"></span><span id="_CPPv2N10TImpedance11_nMacrosMinE"></span><span id="TImpedance::_nMacrosMin__i"></span><span class="target" id="classTImpedance_1a1f2005bf12fc491e3e6dc02eb3c8e9ca"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_nMacrosMin</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_nMacrosMinE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance6_nBinsE">
-<span id="_CPPv3N10TImpedance6_nBinsE"></span><span id="_CPPv2N10TImpedance6_nBinsE"></span><span id="TImpedance::_nBins__i"></span><span class="target" id="classTImpedance_1aaf97ecf9a07d9e7b4a2039e38f963bad"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_nBins</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_nBinsE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance6_nBinsE"></span><span id="_CPPv2N10TImpedance6_nBinsE"></span><span id="TImpedance::_nBins__i"></span><span class="target" id="classTImpedance_1aaf97ecf9a07d9e7b4a2039e38f963bad"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_nBins</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_nBinsE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance5_useXE">
-<span id="_CPPv3N10TImpedance5_useXE"></span><span id="_CPPv2N10TImpedance5_useXE"></span><span id="TImpedance::_useX__i"></span><span class="target" id="classTImpedance_1ac471410ed7e1657fedef665ac8f9da3f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_useX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_useXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance5_useXE"></span><span id="_CPPv2N10TImpedance5_useXE"></span><span id="TImpedance::_useX__i"></span><span class="target" id="classTImpedance_1ac471410ed7e1657fedef665ac8f9da3f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_useX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_useXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance5_useYE">
-<span id="_CPPv3N10TImpedance5_useYE"></span><span id="_CPPv2N10TImpedance5_useYE"></span><span id="TImpedance::_useY__i"></span><span class="target" id="classTImpedance_1af2fed9dc2eae8f8a9b21ffbb8b90a2d0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_useY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_useYE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance5_useYE"></span><span id="_CPPv2N10TImpedance5_useYE"></span><span id="TImpedance::_useY__i"></span><span class="target" id="classTImpedance_1af2fed9dc2eae8f8a9b21ffbb8b90a2d0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_useY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_useYE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance3_qXE">
-<span id="_CPPv3N10TImpedance3_qXE"></span><span id="_CPPv2N10TImpedance3_qXE"></span><span id="TImpedance::_qX__double"></span><span class="target" id="classTImpedance_1a39aaa248b4195d1ce7a779b79c492608"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_qX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance3_qXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance3_qXE"></span><span id="_CPPv2N10TImpedance3_qXE"></span><span id="TImpedance::_qX__double"></span><span class="target" id="classTImpedance_1a39aaa248b4195d1ce7a779b79c492608"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_qX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance3_qXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance7_alphaXE">
-<span id="_CPPv3N10TImpedance7_alphaXE"></span><span id="_CPPv2N10TImpedance7_alphaXE"></span><span id="TImpedance::_alphaX__double"></span><span class="target" id="classTImpedance_1a2faa47be9cb8a5057e6cfc9bf5a3ad92"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance7_alphaXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance7_alphaXE"></span><span id="_CPPv2N10TImpedance7_alphaXE"></span><span id="TImpedance::_alphaX__double"></span><span class="target" id="classTImpedance_1a2faa47be9cb8a5057e6cfc9bf5a3ad92"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance7_alphaXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance6_betaXE">
-<span id="_CPPv3N10TImpedance6_betaXE"></span><span id="_CPPv2N10TImpedance6_betaXE"></span><span id="TImpedance::_betaX__double"></span><span class="target" id="classTImpedance_1a65927d916a6e8528169c62d70963b29d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_betaXE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance6_betaXE"></span><span id="_CPPv2N10TImpedance6_betaXE"></span><span id="TImpedance::_betaX__double"></span><span class="target" id="classTImpedance_1a65927d916a6e8528169c62d70963b29d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaX</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_betaXE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance3_qYE">
-<span id="_CPPv3N10TImpedance3_qYE"></span><span id="_CPPv2N10TImpedance3_qYE"></span><span id="TImpedance::_qY__double"></span><span class="target" id="classTImpedance_1aafaf097cf0979a612088e33440c32465"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_qY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance3_qYE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance3_qYE"></span><span id="_CPPv2N10TImpedance3_qYE"></span><span id="TImpedance::_qY__double"></span><span class="target" id="classTImpedance_1aafaf097cf0979a612088e33440c32465"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_qY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance3_qYE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance7_alphaYE">
-<span id="_CPPv3N10TImpedance7_alphaYE"></span><span id="_CPPv2N10TImpedance7_alphaYE"></span><span id="TImpedance::_alphaY__double"></span><span class="target" id="classTImpedance_1a15fb945957f373880c0d59c5bac06a2d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance7_alphaYE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance7_alphaYE"></span><span id="_CPPv2N10TImpedance7_alphaYE"></span><span id="TImpedance::_alphaY__double"></span><span class="target" id="classTImpedance_1a15fb945957f373880c0d59c5bac06a2d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alphaY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance7_alphaYE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance6_betaYE">
-<span id="_CPPv3N10TImpedance6_betaYE"></span><span id="_CPPv2N10TImpedance6_betaYE"></span><span id="TImpedance::_betaY__double"></span><span class="target" id="classTImpedance_1a6763a0e4efd7a40bbc3b1bd49bb6e336"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_betaYE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance6_betaYE"></span><span id="_CPPv2N10TImpedance6_betaYE"></span><span id="TImpedance::_betaY__double"></span><span class="target" id="classTImpedance_1a6763a0e4efd7a40bbc3b1bd49bb6e336"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_betaY</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_betaYE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance13_charge2TKickE">
-<span id="_CPPv3N10TImpedance13_charge2TKickE"></span><span id="_CPPv2N10TImpedance13_charge2TKickE"></span><span id="TImpedance::_charge2TKick__double"></span><span class="target" id="classTImpedance_1a6352c9150e4b7ca46d577717872e4b98"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_charge2TKick</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance13_charge2TKickE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance13_charge2TKickE"></span><span id="_CPPv2N10TImpedance13_charge2TKickE"></span><span id="TImpedance::_charge2TKick__double"></span><span class="target" id="classTImpedance_1a6352c9150e4b7ca46d577717872e4b98"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_charge2TKick</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance13_charge2TKickE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance6_TurnsE">
-<span id="_CPPv3N10TImpedance6_TurnsE"></span><span id="_CPPv2N10TImpedance6_TurnsE"></span><span id="TImpedance::_Turns__i"></span><span class="target" id="classTImpedance_1a43431459c105c25773d8100e73e78ea0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_Turns</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_TurnsE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance6_TurnsE"></span><span id="_CPPv2N10TImpedance6_TurnsE"></span><span id="TImpedance::_Turns__i"></span><span class="target" id="classTImpedance_1a43431459c105c25773d8100e73e78ea0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_Turns</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_TurnsE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance5zGridE">
-<span id="_CPPv3N10TImpedance5zGridE"></span><span id="_CPPv2N10TImpedance5zGridE"></span><span id="TImpedance::zGrid__Grid1DP"></span><span class="target" id="classTImpedance_1a4f57a61014f641200d924937cf46fe50"></span><a class="reference internal" href="../classGrid1D/#_CPPv46Grid1D" title="Grid1D"><span class="n"><span class="pre">Grid1D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">zGrid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5zGridE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance5zGridE"></span><span id="_CPPv2N10TImpedance5zGridE"></span><span id="TImpedance::zGrid__Grid1DP"></span><span class="target" id="classTImpedance_1a4f57a61014f641200d924937cf46fe50"></span><a class="reference internal" href="../classGrid1D/#_CPPv46Grid1D" title="Grid1D"><span class="n"><span class="pre">Grid1D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">zGrid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5zGridE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance16bunchExtremaCalcE">
-<span id="_CPPv3N10TImpedance16bunchExtremaCalcE"></span><span id="_CPPv2N10TImpedance16bunchExtremaCalcE"></span><span id="TImpedance::bunchExtremaCalc__OrbitUtils::BunchExtremaCalculatorP"></span><span class="target" id="classTImpedance_1af83f173e506495cf023b952a18976cc2"></span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1BunchExtremaCalculator/#_CPPv4N10OrbitUtils22BunchExtremaCalculatorE" title="OrbitUtils::BunchExtremaCalculator"><span class="n"><span class="pre">BunchExtremaCalculator</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bunchExtremaCalc</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance16bunchExtremaCalcE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance16bunchExtremaCalcE"></span><span id="_CPPv2N10TImpedance16bunchExtremaCalcE"></span><span id="TImpedance::bunchExtremaCalc__OrbitUtils::BunchExtremaCalculatorP"></span><span class="target" id="classTImpedance_1af83f173e506495cf023b952a18976cc2"></span><span class="n"><span class="pre">OrbitUtils</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../classOrbitUtils_1_1BunchExtremaCalculator/#_CPPv4N10OrbitUtils22BunchExtremaCalculatorE" title="OrbitUtils::BunchExtremaCalculator"><span class="n"><span class="pre">BunchExtremaCalculator</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bunchExtremaCalc</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance16bunchExtremaCalcE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance10_xCentroidE">
-<span id="_CPPv3N10TImpedance10_xCentroidE"></span><span id="_CPPv2N10TImpedance10_xCentroidE"></span><span id="TImpedance::_xCentroid__doubleP"></span><span class="target" id="classTImpedance_1a00b6ee8d07b1d289ed884d4fcfd95768"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_xCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance10_xCentroidE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance10_xCentroidE"></span><span id="_CPPv2N10TImpedance10_xCentroidE"></span><span id="TImpedance::_xCentroid__doubleP"></span><span class="target" id="classTImpedance_1a00b6ee8d07b1d289ed884d4fcfd95768"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_xCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance10_xCentroidE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance11_xpCentroidE">
-<span id="_CPPv3N10TImpedance11_xpCentroidE"></span><span id="_CPPv2N10TImpedance11_xpCentroidE"></span><span id="TImpedance::_xpCentroid__doubleP"></span><span class="target" id="classTImpedance_1a34ba710be09e41ab98b24a2c52da8db8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_xpCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_xpCentroidE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance11_xpCentroidE"></span><span id="_CPPv2N10TImpedance11_xpCentroidE"></span><span id="TImpedance::_xpCentroid__doubleP"></span><span class="target" id="classTImpedance_1a34ba710be09e41ab98b24a2c52da8db8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_xpCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_xpCentroidE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance10_yCentroidE">
-<span id="_CPPv3N10TImpedance10_yCentroidE"></span><span id="_CPPv2N10TImpedance10_yCentroidE"></span><span id="TImpedance::_yCentroid__doubleP"></span><span class="target" id="classTImpedance_1a0e59043b0ec357d38276ab6deefd34c1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_yCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance10_yCentroidE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance10_yCentroidE"></span><span id="_CPPv2N10TImpedance10_yCentroidE"></span><span id="TImpedance::_yCentroid__doubleP"></span><span class="target" id="classTImpedance_1a0e59043b0ec357d38276ab6deefd34c1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_yCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance10_yCentroidE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance11_ypCentroidE">
-<span id="_CPPv3N10TImpedance11_ypCentroidE"></span><span id="_CPPv2N10TImpedance11_ypCentroidE"></span><span id="TImpedance::_ypCentroid__doubleP"></span><span class="target" id="classTImpedance_1a87507d74dba1ce3d1ea6bdc2fee86bbe"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_ypCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_ypCentroidE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance11_ypCentroidE"></span><span id="_CPPv2N10TImpedance11_ypCentroidE"></span><span id="TImpedance::_ypCentroid__doubleP"></span><span class="target" id="classTImpedance_1a87507d74dba1ce3d1ea6bdc2fee86bbe"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_ypCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_ypCentroidE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance9_phiCountE">
-<span id="_CPPv3N10TImpedance9_phiCountE"></span><span id="_CPPv2N10TImpedance9_phiCountE"></span><span id="TImpedance::_phiCount__doubleP"></span><span class="target" id="classTImpedance_1a9bf197e9fafac812f4a0582119723f90"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_phiCount</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance9_phiCountE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance9_phiCountE"></span><span id="_CPPv2N10TImpedance9_phiCountE"></span><span id="TImpedance::_phiCount__doubleP"></span><span class="target" id="classTImpedance_1a9bf197e9fafac812f4a0582119723f90"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_phiCount</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance9_phiCountE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance14_zXImped_nplusE">
-<span id="_CPPv3N10TImpedance14_zXImped_nplusE"></span><span id="_CPPv2N10TImpedance14_zXImped_nplusE"></span><span id="TImpedance::_zXImped_nplus__std::complex:double:P"></span><span class="target" id="classTImpedance_1ae40b5a2d212a5f7f7e3cdef77e448331"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zXImped_nplus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance14_zXImped_nplusE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance14_zXImped_nplusE"></span><span id="_CPPv2N10TImpedance14_zXImped_nplusE"></span><span id="TImpedance::_zXImped_nplus__std::complex:double:P"></span><span class="target" id="classTImpedance_1ae40b5a2d212a5f7f7e3cdef77e448331"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zXImped_nplus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance14_zXImped_nplusE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance15_zXImped_nminusE">
-<span id="_CPPv3N10TImpedance15_zXImped_nminusE"></span><span id="_CPPv2N10TImpedance15_zXImped_nminusE"></span><span id="TImpedance::_zXImped_nminus__std::complex:double:P"></span><span class="target" id="classTImpedance_1a36ee0da34371f612baae940b7d5a5179"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zXImped_nminus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance15_zXImped_nminusE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance15_zXImped_nminusE"></span><span id="_CPPv2N10TImpedance15_zXImped_nminusE"></span><span id="TImpedance::_zXImped_nminus__std::complex:double:P"></span><span class="target" id="classTImpedance_1a36ee0da34371f612baae940b7d5a5179"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zXImped_nminus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance15_zXImped_nminusE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance14_zYImped_nplusE">
-<span id="_CPPv3N10TImpedance14_zYImped_nplusE"></span><span id="_CPPv2N10TImpedance14_zYImped_nplusE"></span><span id="TImpedance::_zYImped_nplus__std::complex:double:P"></span><span class="target" id="classTImpedance_1ad6f4dcfa9cdd5c92ef78440ae02a7c4b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zYImped_nplus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance14_zYImped_nplusE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance14_zYImped_nplusE"></span><span id="_CPPv2N10TImpedance14_zYImped_nplusE"></span><span id="TImpedance::_zYImped_nplus__std::complex:double:P"></span><span class="target" id="classTImpedance_1ad6f4dcfa9cdd5c92ef78440ae02a7c4b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zYImped_nplus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance14_zYImped_nplusE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance15_zYImped_nminusE">
-<span id="_CPPv3N10TImpedance15_zYImped_nminusE"></span><span id="_CPPv2N10TImpedance15_zYImped_nminusE"></span><span id="TImpedance::_zYImped_nminus__std::complex:double:P"></span><span class="target" id="classTImpedance_1aaf4f7244308dc94b306a9b7295f9728c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zYImped_nminus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance15_zYImped_nminusE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance15_zYImped_nminusE"></span><span id="_CPPv2N10TImpedance15_zYImped_nminusE"></span><span id="TImpedance::_zYImped_nminus__std::complex:double:P"></span><span class="target" id="classTImpedance_1aaf4f7244308dc94b306a9b7295f9728c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zYImped_nminus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance15_zYImped_nminusE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance11_FFTResult1E">
-<span id="_CPPv3N10TImpedance11_FFTResult1E"></span><span id="_CPPv2N10TImpedance11_FFTResult1E"></span><span id="TImpedance::_FFTResult1__std::complex:double:P"></span><span class="target" id="classTImpedance_1a6edaec655deb1f1e118d1708e8092a03"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_FFTResult1</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_FFTResult1E" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance11_FFTResult1E"></span><span id="_CPPv2N10TImpedance11_FFTResult1E"></span><span id="TImpedance::_FFTResult1__std::complex:double:P"></span><span class="target" id="classTImpedance_1a6edaec655deb1f1e118d1708e8092a03"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_FFTResult1</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_FFTResult1E" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance11_FFTResult2E">
-<span id="_CPPv3N10TImpedance11_FFTResult2E"></span><span id="_CPPv2N10TImpedance11_FFTResult2E"></span><span id="TImpedance::_FFTResult2__std::complex:double:P"></span><span class="target" id="classTImpedance_1a93be70cf073b5dbf8c4cc3be7a6e7a18"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_FFTResult2</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_FFTResult2E" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance11_FFTResult2E"></span><span id="_CPPv2N10TImpedance11_FFTResult2E"></span><span id="TImpedance::_FFTResult2__std::complex:double:P"></span><span class="target" id="classTImpedance_1a93be70cf073b5dbf8c4cc3be7a6e7a18"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_FFTResult2</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance11_FFTResult2E" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance2_qE">
-<span id="_CPPv3N10TImpedance2_qE"></span><span id="_CPPv2N10TImpedance2_qE"></span><span id="TImpedance::_q__double"></span><span class="target" id="classTImpedance_1a0dd6a0a0fab50448553686c19d258600"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_q</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance2_qE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance2_qE"></span><span id="_CPPv2N10TImpedance2_qE"></span><span id="TImpedance::_q__double"></span><span class="target" id="classTImpedance_1a0dd6a0a0fab50448553686c19d258600"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_q</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance2_qE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance6_alphaE">
-<span id="_CPPv3N10TImpedance6_alphaE"></span><span id="_CPPv2N10TImpedance6_alphaE"></span><span id="TImpedance::_alpha__double"></span><span class="target" id="classTImpedance_1a2cbb4148d6ff9ba143a3eef0fb1bf9fb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alpha</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_alphaE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance6_alphaE"></span><span id="_CPPv2N10TImpedance6_alphaE"></span><span id="TImpedance::_alpha__double"></span><span class="target" id="classTImpedance_1a2cbb4148d6ff9ba143a3eef0fb1bf9fb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_alpha</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance6_alphaE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance5_betaE">
-<span id="_CPPv3N10TImpedance5_betaE"></span><span id="_CPPv2N10TImpedance5_betaE"></span><span id="TImpedance::_beta__double"></span><span class="target" id="classTImpedance_1a85e0d0e1ed701cb9590fbbb1e6769ac3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_beta</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_betaE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance5_betaE"></span><span id="_CPPv2N10TImpedance5_betaE"></span><span id="TImpedance::_beta__double"></span><span class="target" id="classTImpedance_1a85e0d0e1ed701cb9590fbbb1e6769ac3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_beta</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_betaE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance9_CentroidE">
-<span id="_CPPv3N10TImpedance9_CentroidE"></span><span id="_CPPv2N10TImpedance9_CentroidE"></span><span id="TImpedance::_Centroid__doubleP"></span><span class="target" id="classTImpedance_1af4c6de48e8afcb588dec0161cc09f61d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_Centroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance9_CentroidE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance9_CentroidE"></span><span id="_CPPv2N10TImpedance9_CentroidE"></span><span id="TImpedance::_Centroid__doubleP"></span><span class="target" id="classTImpedance_1af4c6de48e8afcb588dec0161cc09f61d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_Centroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance9_CentroidE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance10_pCentroidE">
-<span id="_CPPv3N10TImpedance10_pCentroidE"></span><span id="_CPPv2N10TImpedance10_pCentroidE"></span><span id="TImpedance::_pCentroid__doubleP"></span><span class="target" id="classTImpedance_1a531c25cd1173395ebd18d16afbe05476"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_pCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance10_pCentroidE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance10_pCentroidE"></span><span id="_CPPv2N10TImpedance10_pCentroidE"></span><span id="TImpedance::_pCentroid__doubleP"></span><span class="target" id="classTImpedance_1a531c25cd1173395ebd18d16afbe05476"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_pCentroid</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance10_pCentroidE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance13_zImped_nplusE">
-<span id="_CPPv3N10TImpedance13_zImped_nplusE"></span><span id="_CPPv2N10TImpedance13_zImped_nplusE"></span><span id="TImpedance::_zImped_nplus__std::complex:double:P"></span><span class="target" id="classTImpedance_1a647b71c5a3e96b6ff2f47eb77f0dac4c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zImped_nplus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance13_zImped_nplusE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance13_zImped_nplusE"></span><span id="_CPPv2N10TImpedance13_zImped_nplusE"></span><span id="TImpedance::_zImped_nplus__std::complex:double:P"></span><span class="target" id="classTImpedance_1a647b71c5a3e96b6ff2f47eb77f0dac4c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zImped_nplus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance13_zImped_nplusE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance14_zImped_nminusE">
-<span id="_CPPv3N10TImpedance14_zImped_nminusE"></span><span id="_CPPv2N10TImpedance14_zImped_nminusE"></span><span id="TImpedance::_zImped_nminus__std::complex:double:P"></span><span class="target" id="classTImpedance_1ac19ad51f3987d056fa8fb1e5adf12508"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zImped_nminus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance14_zImped_nminusE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance14_zImped_nminusE"></span><span id="_CPPv2N10TImpedance14_zImped_nminusE"></span><span id="TImpedance::_zImped_nminus__std::complex:double:P"></span><span class="target" id="classTImpedance_1ac19ad51f3987d056fa8fb1e5adf12508"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_zImped_nminus</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance14_zImped_nminusE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance3_inE">
-<span id="_CPPv3N10TImpedance3_inE"></span><span id="_CPPv2N10TImpedance3_inE"></span><span id="TImpedance::_in__fftw_complexP"></span><span class="target" id="classTImpedance_1ad371484f60d68716512736fdb998e075"></span><span class="n"><span class="pre">fftw_complex</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_in</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance3_inE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance3_inE"></span><span id="_CPPv2N10TImpedance3_inE"></span><span id="TImpedance::_in__fftw_complexP"></span><span class="target" id="classTImpedance_1ad371484f60d68716512736fdb998e075"></span><span class="n"><span class="pre">fftw_complex</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_in</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance3_inE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance4_outE">
-<span id="_CPPv3N10TImpedance4_outE"></span><span id="_CPPv2N10TImpedance4_outE"></span><span id="TImpedance::_out__fftw_complexP"></span><span class="target" id="classTImpedance_1a2457743f8330161544dbde78d252e1e4"></span><span class="n"><span class="pre">fftw_complex</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_out</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance4_outE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance4_outE"></span><span id="_CPPv2N10TImpedance4_outE"></span><span id="TImpedance::_out__fftw_complexP"></span><span class="target" id="classTImpedance_1a2457743f8330161544dbde78d252e1e4"></span><span class="n"><span class="pre">fftw_complex</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_out</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance4_outE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10TImpedance5_planE">
-<span id="_CPPv3N10TImpedance5_planE"></span><span id="_CPPv2N10TImpedance5_planE"></span><span id="TImpedance::_plan__fftw_plan"></span><span class="target" id="classTImpedance_1a5ce8534ad8fc6f60f0f91846a3c834eb"></span><span class="n"><span class="pre">fftw_plan</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_plan</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_planE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N10TImpedance5_planE"></span><span id="_CPPv2N10TImpedance5_planE"></span><span id="TImpedance::_plan__fftw_plan"></span><span class="target" id="classTImpedance_1a5ce8534ad8fc6f60f0f91846a3c834eb"></span><span class="n"><span class="pre">fftw_plan</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_plan</span></span></span><a class="headerlink" href="#_CPPv4N10TImpedance5_planE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -1719,11 +1743,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../classteapot__base_1_1MatrixGenerator/"
@@ -1743,33 +1766,84 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance-relationships">Inheritance Relationships</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-type">Base Type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-documentation">Class Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv410TImpedance"><code class="docutils literal notranslate"><span class="pre">TImpedance</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance10TImpedanceEdiiii"><code class="docutils literal notranslate"><span class="pre">TImpedance()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedanceD0Ev"><code class="docutils literal notranslate"><span class="pre">~TImpedance()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance14assignLatFuncsEdddddd"><code class="docutils literal notranslate"><span class="pre">assignLatFuncs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance16assignImpedanceXEidddd"><code class="docutils literal notranslate"><span class="pre">assignImpedanceX()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance16assignImpedanceYEidddd"><code class="docutils literal notranslate"><span class="pre">assignImpedanceY()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance10trackBunchEP5Bunch"><code class="docutils literal notranslate"><span class="pre">trackBunch()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance14_prepareToKickEv"><code class="docutils literal notranslate"><span class="pre">_prepareToKick()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance5_kickEd"><code class="docutils literal notranslate"><span class="pre">_kick()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance7_lengthE"><code class="docutils literal notranslate"><span class="pre">_length</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance11_nMacrosMinE"><code class="docutils literal notranslate"><span class="pre">_nMacrosMin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance6_nBinsE"><code class="docutils literal notranslate"><span class="pre">_nBins</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance5_useXE"><code class="docutils literal notranslate"><span class="pre">_useX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance5_useYE"><code class="docutils literal notranslate"><span class="pre">_useY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance3_qXE"><code class="docutils literal notranslate"><span class="pre">_qX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance7_alphaXE"><code class="docutils literal notranslate"><span class="pre">_alphaX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance6_betaXE"><code class="docutils literal notranslate"><span class="pre">_betaX</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance3_qYE"><code class="docutils literal notranslate"><span class="pre">_qY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance7_alphaYE"><code class="docutils literal notranslate"><span class="pre">_alphaY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance6_betaYE"><code class="docutils literal notranslate"><span class="pre">_betaY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance13_charge2TKickE"><code class="docutils literal notranslate"><span class="pre">_charge2TKick</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance6_TurnsE"><code class="docutils literal notranslate"><span class="pre">_Turns</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance5zGridE"><code class="docutils literal notranslate"><span class="pre">zGrid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance16bunchExtremaCalcE"><code class="docutils literal notranslate"><span class="pre">bunchExtremaCalc</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance10_xCentroidE"><code class="docutils literal notranslate"><span class="pre">_xCentroid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance11_xpCentroidE"><code class="docutils literal notranslate"><span class="pre">_xpCentroid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance10_yCentroidE"><code class="docutils literal notranslate"><span class="pre">_yCentroid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance11_ypCentroidE"><code class="docutils literal notranslate"><span class="pre">_ypCentroid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance9_phiCountE"><code class="docutils literal notranslate"><span class="pre">_phiCount</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance14_zXImped_nplusE"><code class="docutils literal notranslate"><span class="pre">_zXImped_nplus</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance15_zXImped_nminusE"><code class="docutils literal notranslate"><span class="pre">_zXImped_nminus</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance14_zYImped_nplusE"><code class="docutils literal notranslate"><span class="pre">_zYImped_nplus</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance15_zYImped_nminusE"><code class="docutils literal notranslate"><span class="pre">_zYImped_nminus</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance11_FFTResult1E"><code class="docutils literal notranslate"><span class="pre">_FFTResult1</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance11_FFTResult2E"><code class="docutils literal notranslate"><span class="pre">_FFTResult2</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance2_qE"><code class="docutils literal notranslate"><span class="pre">_q</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance6_alphaE"><code class="docutils literal notranslate"><span class="pre">_alpha</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance5_betaE"><code class="docutils literal notranslate"><span class="pre">_beta</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance9_CentroidE"><code class="docutils literal notranslate"><span class="pre">_Centroid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance10_pCentroidE"><code class="docutils literal notranslate"><span class="pre">_pCentroid</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance13_zImped_nplusE"><code class="docutils literal notranslate"><span class="pre">_zImped_nplus</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance14_zImped_nminusE"><code class="docutils literal notranslate"><span class="pre">_zImped_nminus</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance3_inE"><code class="docutils literal notranslate"><span class="pre">_in</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance4_outE"><code class="docutils literal notranslate"><span class="pre">_out</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N10TImpedance5_planE"><code class="docutils literal notranslate"><span class="pre">_plan</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../_sources/reference/classTImpedance.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1790,8 +1864,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1799,6 +1873,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2025, PyORBIT Collaboration.
@@ -1808,19 +1883,22 @@ document.write(`
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
-    <br/>
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
   </p>
 </div>
       
     </div>
   
   
+  
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.23.0.
 </p></div>
       
     </div>
