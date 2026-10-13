@@ -393,7 +393,7 @@
 <span class="sd">"""</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># import bunch</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">orbit.core.bunch</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bunch</span>
@@ -514,6 +514,8 @@
         <span class="n">mt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">oneTurnMatrix</span>
         <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune x"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune y"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune 1"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune 2"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">res_dict</span><span class="p">[</span><span class="s2">"alpha x"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">res_dict</span><span class="p">[</span><span class="s2">"alpha y"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">res_dict</span><span class="p">[</span><span class="s2">"beta x [m]"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -544,6 +546,17 @@
         <span class="n">nuy</span> <span class="o">%=</span> <span class="mf">1.0</span>
         <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune x"</span><span class="p">]</span> <span class="o">=</span> <span class="n">nux</span>
         <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune y"</span><span class="p">]</span> <span class="o">=</span> <span class="n">nuy</span>
+
+        <span class="c1"># Eigentunes</span>
+        <span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
+        <span class="n">eigvals</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+        <span class="n">eigvals</span> <span class="o">=</span> <span class="n">eigvals</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+        <span class="n">cos_phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">eigvals</span><span class="p">)</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_phi</span><span class="p">)</span>
+        <span class="n">nu</span> <span class="o">=</span> <span class="n">phi</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+        <span class="n">nu</span> <span class="o">%=</span> <span class="mf">1.0</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune 1"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">nu</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">res_dict</span><span class="p">[</span><span class="s2">"fractional tune 2"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">nu</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
         <span class="c1"># Alpha, beta, gamma</span>
         <span class="n">beta_x</span> <span class="o">=</span> <span class="n">mt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">sin_phi_x</span>
