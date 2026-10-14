@@ -434,13 +434,30 @@
 <span class="p">}</span>
 <span class="cp">#endif</span>
 
+<span class="cp">#if USE_MPI &gt; 0</span>
+<span class="c1">// MPI_Finalize hook for Py_AtExit to propagate error codes.</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ORBIT_MPI_Finalize_AtExit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">MPI_Initialized</span><span class="p">(</span><span class="o">&amp;</span><span class="n">initialized</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">initialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">finalized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">MPI_Finalized</span><span class="p">(</span><span class="o">&amp;</span><span class="n">finalized</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">finalized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">MPI_Finalize</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+
 <span class="kt">int</span><span class="w"> </span><span class="nf">ORBIT_MPI_Init</span><span class="p">(){</span>
 <span class="cp">#if USE_MPI &gt; 0</span>
 <span class="w">  </span><span class="c1">// Ignoring result; if it fails, the proc is doomed anyway.</span>
 <span class="w">  </span><span class="n">MPI_Init</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Registering MPI finalize method at cleanup stage</span>
-<span class="w">  </span><span class="n">Py_AtExit</span><span class="p">(</span><span class="n">ORBIT_MPI_Finalize</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Py_AtExit</span><span class="p">(</span><span class="n">ORBIT_MPI_Finalize_AtExit</span><span class="p">);</span>
 <span class="cp">#endif</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
 <span class="p">}</span>
@@ -922,6 +939,39 @@
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="n">ar2</span><span class="p">,</span><span class="w"> </span><span class="n">ar1</span><span class="p">,</span><span class="w"> </span><span class="n">nbytes</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">ORBIT_MPI_Gather</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sendcount</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_Datatype</span><span class="w"> </span><span class="n">sendtype</span><span class="p">,</span>
+<span class="w">                     </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">recvcount</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_Datatype</span><span class="w"> </span><span class="n">recvtype</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_Comm</span><span class="w"> </span><span class="n">comm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#if USE_MPI &gt; 0</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_Gather</span><span class="p">(</span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="n">sendcount</span><span class="p">,</span><span class="w"> </span><span class="n">sendtype</span><span class="p">,</span><span class="w"> </span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="n">recvcount</span><span class="p">,</span><span class="w"> </span><span class="n">recvtype</span><span class="p">,</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">comm</span><span class="p">);</span>
+<span class="cp">#else</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sendbuf</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ORBIT_MPI_IN_PLACE</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">sendbuf</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">recvbuf</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sendcount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">sendcount</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ORBIT_MPI_Type_size</span><span class="p">(</span><span class="n">sendtype</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">ORBIT_MPI_Allgather</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sendcount</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_Datatype</span><span class="w"> </span><span class="n">sendtype</span><span class="p">,</span>
+<span class="w">                         </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">recvcount</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_Datatype</span><span class="w"> </span><span class="n">recvtype</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_Comm</span><span class="w"> </span><span class="n">comm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#if USE_MPI &gt; 0</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_Allgather</span><span class="p">(</span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="n">sendcount</span><span class="p">,</span><span class="w"> </span><span class="n">sendtype</span><span class="p">,</span><span class="w"> </span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="n">recvcount</span><span class="p">,</span><span class="w"> </span><span class="n">recvtype</span><span class="p">,</span><span class="w"> </span><span class="n">comm</span><span class="p">);</span>
+<span class="cp">#else</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sendbuf</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ORBIT_MPI_IN_PLACE</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">sendbuf</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">recvbuf</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sendcount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">sendcount</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ORBIT_MPI_Type_size</span><span class="p">(</span><span class="n">sendtype</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">MPI_SUCCESS</span><span class="p">;</span>
 <span class="cp">#endif</span>
 <span class="p">}</span>

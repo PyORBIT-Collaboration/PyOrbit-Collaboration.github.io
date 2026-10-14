@@ -188,6 +188,8 @@ Functions
 ---------
 
 
+- :ref:`exhale_function_orbit__mpi_8hh_1a476eedff89eb1923a18458630ce1af6e`
+
 - :ref:`exhale_function_orbit__mpi_8hh_1a88d8a4fe5021ee59b3291d29d7a998c9`
 
 - :ref:`exhale_function_orbit__mpi_8hh_1ac45117960db64985a092d67515d24813`
@@ -223,6 +225,8 @@ Functions
 - :ref:`exhale_function_orbit__mpi_8hh_1aeaa6bbc00b8a3fdf5a1cb0767600d3dd`
 
 - :ref:`exhale_function_orbit__mpi_8hh_1a88a4f8f4bc43a7b01a4ce981a9a2f435`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a7ba01c8aad046cc4a9843e4d9776f1e3`
 
 - :ref:`exhale_function_orbit__mpi_8hh_1acf1bbe8fdfb1fa4c23645f8ccc6f8026`
 
