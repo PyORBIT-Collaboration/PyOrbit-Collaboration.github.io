@@ -484,6 +484,7 @@
 <span class="w">        </span><span class="c1">//sqrt(fabs(p_z2)) - fabs function is a protection for case when xp and yp are too big for dE</span>
 <span class="w">        </span><span class="c1">//It means the particles are nonphysical and simulations do not make sense</span>
 <span class="w">        </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
+<span class="w">        </span><span class="cp">#pragma omp parallel for private(dE, xp, yp, Ekin, Etotal, p2, beta_x, beta_y, p_z2, beta_z)</span>
 <span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
@@ -569,6 +570,10 @@
 
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">kqc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
 
+<span class="w">    </span><span class="cp">#pragma omp parallel for private( \</span>
+<span class="cp">        dE, Ekin, Etotal, p2, p, kqc, beta_z, sqrt_kq, kqlength, \</span>
+<span class="cp">        cx, sx, cy, sy, m11, m12, m21, m22, m33, m34, m43, m44, \</span>
+<span class="cp">        xp_init, yp_init, coeff, x_init, y_init)</span>
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 
@@ -688,6 +693,7 @@
 
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">coef_xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
 
+<span class="w">    </span><span class="cp">#pragma omp parallel for private(coef_xy)</span>
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
 <span class="w">        </span><span class="n">coef_xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kick_coeff</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
 <span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w">  </span><span class="o">+=</span><span class="w">  </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">coef_xy</span><span class="p">;</span>
@@ -729,6 +735,7 @@
 <span class="w">        </span><span class="kt">double</span><span class="o">**</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">coordArr</span><span class="p">();</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">kx</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="cp">#pragma omp parallel for private(dE, Ekin, p2, p_z, coeff)</span>
 <span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
@@ -741,6 +748,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">ky</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="cp">#pragma omp parallel for private(dE, Ekin, p2, p_z, coeff)</span>
 <span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="n">dE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
@@ -753,6 +761,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">kE</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="cp">#pragma omp parallel for</span>
 <span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bunch</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">kE</span><span class="p">;</span>

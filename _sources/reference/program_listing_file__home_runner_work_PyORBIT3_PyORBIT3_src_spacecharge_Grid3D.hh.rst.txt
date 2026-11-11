@@ -59,35 +59,35 @@ Program Listing for File Grid3D.hh
    
      Grid2D* getGrid2D(int zInd);
    
-     int getSizeX();
+     int getSizeX() const;
    
-     int getSizeY();
+     int getSizeY() const;
    
-     int getSizeZ();
+     int getSizeZ() const;
    
-     double getGridX(int index);
+     double getGridX(int index) const;
    
-     double getGridY(int index);
+     double getGridY(int index) const;
    
-     double getGridZ(int index);
+     double getGridZ(int index) const;
    
-     double getStepX();
+     double getStepX() const;
    
-     double getStepY();
+     double getStepY() const;
    
-     double getStepZ();
+     double getStepZ() const;
    
-     double getMaxX();
+     double getMaxX() const;
    
-     double getMinX();
+     double getMinX() const;
    
-     double getMaxY();
+     double getMaxY() const;
    
-     double getMinY();
+     double getMinY() const;
    
-     double getMaxZ();
+     double getMaxZ() const;
    
-     double getMinZ();
+     double getMinZ() const;
    
      void setGridX(double xMin, double xMax);
    
@@ -115,11 +115,15 @@ Program Listing for File Grid3D.hh
        
        void binValueSlice2D(double macroSize, double x, double y, double z);    
    
+     std::size_t array_index(int iz, int ix, int iy) const;
+   
+     void binValue(double* arr, double macroSize, double x, double y, double z) const;
+   
      void binValue(double macroSize, double x, double y, double z);
    
      void calcGradient(double x,double& gradX,
              double y,double& gradY,
-               double z,double& gradZ);
+               double z,double& gradZ) const;
    
      double getValue(double x,double y,double z);
    
@@ -130,6 +134,10 @@ Program Listing for File Grid3D.hh
      double getSliceSum(double z);
    
      void synchronizeMPI(pyORBIT_MPI_Comm* pyComm);
+   
+   #ifdef WITH_OPENMP
+     std::vector<double> rho;
+   #endif
    
    protected:
      //---------------------------------------
@@ -144,15 +152,15 @@ Program Listing for File Grid3D.hh
    
      double calcSheetGradient(int iZ,int iX,int iY,
                   double xm,double x0,double xp,
-                  double ym,double y0,double yp);
+                  double ym,double y0,double yp) const;
    
-       void getIndAndFracX(double x, int& ind, double& frac);
+       void getIndAndFracX(double x, int& ind, double& frac) const;
    
-       void getIndAndFracY(double y, int& ind, double& frac);
+       void getIndAndFracY(double y, int& ind, double& frac) const;
    
      void getGridIndAndFrac(double x, int& xInd, double& xFrac,
                 double y, int& yInd, double& yFrac,
-                double z, int& zInd, double& zFrac);
+                double z, int& zInd, double& zFrac) const;
    
    protected:
      //---------------------------------------

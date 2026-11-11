@@ -1,0 +1,53 @@
+
+.. _file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.hh:
+
+File orbit_openmp.hh
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_PyORBIT3_PyORBIT3_src_openmp>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/openmp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/PyORBIT3/PyORBIT3/src/openmp/orbit_openmp.hh``)
+-------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.hh.rst
+
+
+
+
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_Grid3D.cc`
+
+- :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT3D.cc`
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_orbit__openmp_8hh_1a84eb4b3650ed1bbac6220382eb3f2312`
+
+- :ref:`exhale_function_orbit__openmp_8hh_1a062ed5fec8a746dda4fcb89a0a635023`
+
+- :ref:`exhale_function_orbit__openmp_8hh_1a425729570a51c36d37d6b49e96140d4a`
+

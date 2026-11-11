@@ -222,9 +222,9 @@ Functions
 
 - :ref:`exhale_function_orbit__mpi_8hh_1a2709cb3c7623065c9acfd44790b062fc`
 
-- :ref:`exhale_function_orbit__mpi_8hh_1a88a4f8f4bc43a7b01a4ce981a9a2f435`
-
 - :ref:`exhale_function_orbit__mpi_8hh_1aeaa6bbc00b8a3fdf5a1cb0767600d3dd`
+
+- :ref:`exhale_function_orbit__mpi_8hh_1a88a4f8f4bc43a7b01a4ce981a9a2f435`
 
 - :ref:`exhale_function_orbit__mpi_8hh_1a7ba01c8aad046cc4a9843e4d9776f1e3`
 

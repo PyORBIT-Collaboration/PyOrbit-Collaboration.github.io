@@ -1,0 +1,14 @@
+.. _exhale_function_orbit__openmp_8hh_1a425729570a51c36d37d6b49e96140d4a:
+
+Function orbit_omp_get_thread_num()
+===================================
+
+- Defined in :ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.hh`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: orbit_omp_get_thread_num()
+   :project: PyORBIT3

@@ -1,0 +1,50 @@
+
+.. _program_listing_file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.cc:
+
+Program Listing for File orbit_openmp.cc
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.cc>` (``/home/runner/work/PyORBIT3/PyORBIT3/src/openmp/orbit_openmp.cc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include "orbit_openmp.hh"
+   
+   #ifdef WITH_OPENMP
+   #include <omp.h>
+   
+   int orbit_omp_get_max_threads()
+   {
+     return omp_get_max_threads();
+   }
+   
+   int orbit_omp_get_num_threads()
+   {
+     return omp_get_num_threads();
+   }
+   
+   int orbit_omp_get_thread_num()
+   {
+     return omp_get_thread_num();
+   }
+   
+   #else
+   
+   int orbit_omp_get_max_threads()
+   {
+     return 1;
+   }
+   
+   int orbit_omp_get_thread_num()
+   {
+     return 0;
+   }
+   
+   int orbit_omp_get_num_threads()
+   {
+     return 1;
+   }
+   
+   #endif

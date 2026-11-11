@@ -41,6 +41,11 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir__home_runner_work_PyORBIT3_PyORBIT3_src_openmp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir__home_runner_work_PyORBIT3_PyORBIT3_src_orbit.rst
 
 .. toctree::
@@ -736,6 +741,16 @@ Files
    :maxdepth: 5
 
    file__home_runner_work_PyORBIT3_PyORBIT3_src_mpi_orbit_mpi.hh.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.cc.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.hh.rst
 
 .. toctree::
    :maxdepth: 5

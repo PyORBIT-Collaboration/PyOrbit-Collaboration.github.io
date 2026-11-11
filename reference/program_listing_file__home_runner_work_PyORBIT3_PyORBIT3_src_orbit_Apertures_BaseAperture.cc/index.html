@@ -552,6 +552,7 @@
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">//Loop over all particles in the bunch</span>
+<span class="w">    </span><span class="cp">#pragma parallel for if(lostbunch == NULL)</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nParts</span><span class="p">;</span><span class="w"> </span><span class="n">count</span><span class="o">++</span><span class="p">){</span>
 <span class="w">        </span><span class="c1">//if particle is not inside the shape we remove it from bunch</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">apertureShape</span><span class="o">-&gt;</span><span class="n">inside</span><span class="p">(</span><span class="n">bunch</span><span class="p">,</span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>

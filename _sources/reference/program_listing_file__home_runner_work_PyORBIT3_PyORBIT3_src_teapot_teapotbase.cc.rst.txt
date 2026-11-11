@@ -91,6 +91,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(xtemp, pxtemp, ytemp, pytemp)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            xtemp  = arr[i][0];
@@ -171,6 +172,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(KNL, phifac, dp_p) shared(dp_p_coeff, length, gamma2i)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p = arr[i][5] * dp_p_coeff;
@@ -233,6 +235,7 @@ Program Listing for File teapotbase.cc
        double** arr = bunch->coordArr();
        if(kx != 0.)
        {
+           #pragma omp parallel for
            for(int i = 0; i < bunch->getSize(); i++)
            {
                arr[i][1] += kx;
@@ -240,6 +243,7 @@ Program Listing for File teapotbase.cc
        }
        if(ky != 0.)
        {
+           #pragma omp parallel for
            for(int i = 0; i < bunch->getSize(); i++)
            {
                arr[i][3] += ky;
@@ -247,6 +251,7 @@ Program Listing for File teapotbase.cc
        }
        if(kE != 0.)
        {
+           #pragma omp parallel for
            for(int i = 0; i < bunch->getSize(); i++)
            {
                arr[i][5] += kE;
@@ -341,6 +346,7 @@ Program Listing for File teapotbase.cc
    
        kl1 = klc / factorial[pole];
    
+       #pragma omp parallel for private(z, zn)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            z = std::complex<double>(arr[i][0], arr[i][2]);
@@ -424,6 +430,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            double x = arr[i][0];
@@ -535,6 +542,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            double x = arr[i][0];
@@ -671,6 +679,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, x_init, xp_init, y_init, yp_init)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p    = arr[i][5] * dp_p_coeff;
@@ -714,6 +723,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL, phifac) 
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p = arr[i][5] * dp_p_coeff;
@@ -779,6 +789,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL, x_init, xp_init, y_init, yp_init, detM)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p    = arr[i][5] * dp_p_coeff;
@@ -847,6 +858,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL, x_init, xp_init, y_init, yp_init, detM)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p    = arr[i][5] * dp_p_coeff;
@@ -913,6 +925,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma parallel for private(dp_p, xp_temp, p0_temp, p0, dp_p)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            if(frinout == 0)
@@ -973,6 +986,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, tn, s)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            if(inout == 0)
@@ -1025,6 +1039,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(s, dp_p, tn, sm, sm2)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            if(inout == 0)
@@ -1103,6 +1118,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, x_init, xp_init)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p   = arr[i][5] * dp_p_coeff;
@@ -1143,6 +1159,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL, phifac)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p = arr[i][5] * dp_p_coeff;
@@ -1185,6 +1202,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL, phifac)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p = arr[i][5] * dp_p_coeff;
@@ -1225,6 +1243,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL, xfac, phifac)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p = arr[i][5] * dp_p_coeff;
@@ -1262,6 +1281,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(dp_p, KNL)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            dp_p    = arr[i][5] * dp_p_coeff;
@@ -1425,6 +1445,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(s, dp_p, tn, sm, sm2, klint)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            if(inout == 0)
@@ -1511,6 +1532,7 @@ Program Listing for File teapotbase.cc
        //coordinate array [part. index][x,xp,y,yp,z,dE]
        double** arr = bunch->coordArr();
    
+       #pragma omp parallel for private(deltaV)
        for(int i = 0; i < bunch->getSize(); i++)
        {
            deltaV = voltage * ( sin(harmonic_numb*Factor*arr[i][4] + phase_s));

@@ -32,7 +32,11 @@ Includes
 
 - ``PoissonSolverFFT3D.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_spacecharge_PoissonSolverFFT3D.hh`)
 
+- ``cstring``
+
 - ``iostream``
+
+- ``orbit_openmp.hh`` (:ref:`file__home_runner_work_PyORBIT3_PyORBIT3_src_openmp_orbit_openmp.hh`)
 
 
 
