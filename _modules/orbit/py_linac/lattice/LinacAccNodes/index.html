@@ -479,7 +479,11 @@
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the seqence.</span>
 <span class="sd">        """</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__linacSeqence</span> <span class="o">=</span> <span class="n">seq</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__linacSeqence</span> <span class="o">=</span> <span class="n">seq</span>
+        <span class="n">child_nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getAllChildren</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">child_node</span> <span class="ow">in</span> <span class="n">child_nodes</span><span class="p">:</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">child_node</span><span class="p">,</span><span class="n">BaseLinacNode</span><span class="p">)):</span>
+                <span class="n">child_node</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getSequence</span><span class="p">())</span></div>
 
 
 <div class="viewcode-block" id="BaseLinacNode.setPosition">
