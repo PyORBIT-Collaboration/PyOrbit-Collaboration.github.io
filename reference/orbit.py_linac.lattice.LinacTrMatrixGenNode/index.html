@@ -690,7 +690,7 @@
 <h1>LinacTrMatrixGenNode<a class="headerlink" href="#linactrmatrixgennode" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="orbit.py_linac.lattice.LinacTrMatrixGenNode">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.py_linac.lattice.</span></span><span class="sig-name descname"><span class="pre">LinacTrMatrixGenNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trMatricesController</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TrMatrixGen'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">orbit.py_linac.lattice.</span></span><span class="sig-name descname"><span class="pre">LinacTrMatrixGenNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trMatricesController</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TrMatrixGen'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../orbit.py_linac.lattice.MarkerLinacNode/#orbit.py_linac.lattice.MarkerLinacNode" title="orbit.py_linac.lattice.LinacAccNodes.MarkerLinacNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">MarkerLinacNode</span></code></a></p>
 <p>Linac Accelerator Nodes for Transport Matrices generation.
 These nodes are using thethe Initial Coordinates particles Attrubutes.
@@ -713,11 +713,17 @@ coordinates to the final ones that are in the bu</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getNormDetXYZ" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getNormDetXYZ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNormDetXYZ</span></code></a>()</p></td>
 <td><p>Returns the normalized determinants of the transformations in (x,y,z) directions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrMatricesController</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getPhaseAdvances" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getPhaseAdvances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPhaseAdvances</span></code></a>()</p></td>
+<td><p>Returns the betatron phase advances list for X, Y, or Z axises in degrees</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrMatricesController</span></code></a>()</p></td>
 <td><p>Returns the LinacTrMatricesController that keeps the references to the TrMatrxGenNodes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransportMatrix</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTransportMatrix</span></code></a>()</p></td>
 <td><p>Return transport matrix (7x7).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissParams" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissParams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTwissParams</span></code></a>(axis_ind)</p></td>
+<td><p>Returns [alpha, beta, gamma, emittance] for X, Y, or Z axises axis_ind = 0 for X , 1 for Y, 2 for Z</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissWeightUse" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissWeightUse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTwissWeightUse</span></code></a>()</p></td>
 <td><p>Returns (use_x,use,use_z) tuple where use_{} == 1 means the Twiss weights will be used.</p></td>
@@ -728,16 +734,19 @@ coordinates to the final ones that are in the bu</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.printMatrix" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.printMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">printMatrix</span></code></a>()</p></td>
 <td><p>Print the matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.setInternalIndex" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.setInternalIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInternalIndex</span></code></a>(ind)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.removeFromParent" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.removeFromParent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeFromParent</span></code></a>()</p></td>
+<td><p>It removes itself from the parent node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.setInternalIndex" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.setInternalIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInternalIndex</span></code></a>(ind)</p></td>
 <td><p>Sets the index of the TrMatrxGenNode in the controller</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.setTwissWeightUse" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.setTwissWeightUse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTwissWeightUse</span></code></a>(use_twiss_weight_x, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.setTwissWeightUse" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.setTwissWeightUse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTwissWeightUse</span></code></a>(use_twiss_weight_x, ...)</p></td>
 <td><p>Sets (use_x,use,use_z) tuple where use_{} == 1 means the Twiss weights will be used.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.track" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.track"><code class="xref py py-obj docutils literal notranslate"><span class="pre">track</span></code></a>(paramsDict)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.track" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.track"><code class="xref py py-obj docutils literal notranslate"><span class="pre">track</span></code></a>(paramsDict)</p></td>
 <td><p>It is tracking the bunch through the element.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.trackDesign" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.trackDesign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackDesign</span></code></a>(paramsDict)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.trackDesign" title="orbit.py_linac.lattice.LinacTrMatrixGenNode.trackDesign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackDesign</span></code></a>(paramsDict)</p></td>
 <td><p>This method does nothing for the aperture case.</p></td>
 </tr>
 </tbody>
@@ -769,6 +778,13 @@ coordinates to the final ones that are in the bu</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.LinacTrMatrixGenNode.getPhaseAdvances">
+<span class="sig-name descname"><span class="pre">getPhaseAdvances</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode.getPhaseAdvances"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getPhaseAdvances" title="Link to this definition">#</a></dt>
+<dd><p>Returns the betatron phase advances list for X, Y, or Z axises
+in degrees</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController">
 <span class="sig-name descname"><span class="pre">getTrMatricesController</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode.getTrMatricesController"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController" title="Link to this definition">#</a></dt>
 <dd><p>Returns the LinacTrMatricesController that keeps the references to the TrMatrxGenNodes.</p>
@@ -778,6 +794,13 @@ coordinates to the final ones that are in the bu</p>
 <dt class="sig sig-object py" id="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix">
 <span class="sig-name descname"><span class="pre">getTransportMatrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode.getTransportMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix" title="Link to this definition">#</a></dt>
 <dd><p>Return transport matrix (7x7).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissParams">
+<span class="sig-name descname"><span class="pre">getTwissParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_ind</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode.getTwissParams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissParams" title="Link to this definition">#</a></dt>
+<dd><p>Returns [alpha, beta, gamma, emittance] for X, Y, or Z axises
+axis_ind = 0 for X , 1 for Y, 2 for Z</p>
 </dd></dl>
 
 <dl class="py method">
@@ -796,6 +819,14 @@ coordinates to the final ones that are in the bu</p>
 <dt class="sig sig-object py" id="orbit.py_linac.lattice.LinacTrMatrixGenNode.printMatrix">
 <span class="sig-name descname"><span class="pre">printMatrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode.printMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.printMatrix" title="Link to this definition">#</a></dt>
 <dd><p>Print the matrix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orbit.py_linac.lattice.LinacTrMatrixGenNode.removeFromParent">
+<span class="sig-name descname"><span class="pre">removeFromParent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/orbit/py_linac/lattice/LinacTransportMatrixGenNodes/#LinacTrMatrixGenNode.removeFromParent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.removeFromParent" title="Link to this definition">#</a></dt>
+<dd><p>It removes itself from the parent node.
+It is used when we do not want to slow down Bunch tracking
+after we got and processed necessary transport matrix information.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -879,11 +910,14 @@ should implement this method.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getDetXYZ"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getDetXYZ()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getGamma"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getGamma()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getNormDetXYZ"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getNormDetXYZ()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getPhaseAdvances"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getPhaseAdvances()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTrMatricesController"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getTrMatricesController()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTransportMatrix"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getTransportMatrix()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissParams"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getTwissParams()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwissWeightUse"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getTwissWeightUse()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.getTwoNodes"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.getTwoNodes()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.printMatrix"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.printMatrix()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.removeFromParent"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.removeFromParent()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.setInternalIndex"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.setInternalIndex()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.setTwissWeightUse"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.setTwissWeightUse()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbit.py_linac.lattice.LinacTrMatrixGenNode.track"><code class="docutils literal notranslate"><span class="pre">LinacTrMatrixGenNode.track()</span></code></a></li>

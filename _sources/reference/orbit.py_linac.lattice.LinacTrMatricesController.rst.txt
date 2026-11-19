@@ -17,7 +17,9 @@ LinacTrMatricesController
       ~LinacTrMatricesController.getCount
       ~LinacTrMatricesController.getNode
       ~LinacTrMatricesController.getNodes
+      ~LinacTrMatricesController.getTwissAnalysis
       ~LinacTrMatricesController.init
+      ~LinacTrMatricesController.removeAllNodes
 
    .. rubric:: Methods Documentation
 
@@ -28,4 +30,6 @@ LinacTrMatricesController
    .. automethod:: getCount
    .. automethod:: getNode
    .. automethod:: getNodes
+   .. automethod:: getTwissAnalysis
    .. automethod:: init
+   .. automethod:: removeAllNodes

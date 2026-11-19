@@ -14,11 +14,14 @@ LinacTrMatrixGenNode
       ~LinacTrMatrixGenNode.getDetXYZ
       ~LinacTrMatrixGenNode.getGamma
       ~LinacTrMatrixGenNode.getNormDetXYZ
+      ~LinacTrMatrixGenNode.getPhaseAdvances
       ~LinacTrMatrixGenNode.getTrMatricesController
       ~LinacTrMatrixGenNode.getTransportMatrix
+      ~LinacTrMatrixGenNode.getTwissParams
       ~LinacTrMatrixGenNode.getTwissWeightUse
       ~LinacTrMatrixGenNode.getTwoNodes
       ~LinacTrMatrixGenNode.printMatrix
+      ~LinacTrMatrixGenNode.removeFromParent
       ~LinacTrMatrixGenNode.setInternalIndex
       ~LinacTrMatrixGenNode.setTwissWeightUse
       ~LinacTrMatrixGenNode.track
@@ -30,11 +33,14 @@ LinacTrMatrixGenNode
    .. automethod:: getDetXYZ
    .. automethod:: getGamma
    .. automethod:: getNormDetXYZ
+   .. automethod:: getPhaseAdvances
    .. automethod:: getTrMatricesController
    .. automethod:: getTransportMatrix
+   .. automethod:: getTwissParams
    .. automethod:: getTwissWeightUse
    .. automethod:: getTwoNodes
    .. automethod:: printMatrix
+   .. automethod:: removeFromParent
    .. automethod:: setInternalIndex
    .. automethod:: setTwissWeightUse
    .. automethod:: track
